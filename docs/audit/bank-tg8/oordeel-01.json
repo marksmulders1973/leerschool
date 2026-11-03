@@ -1,0 +1,497 @@
+[
+ {
+  "nr": 1,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 1",
+  "eigenKeuze": "Zo hard gerend dat je nauwelijks kunt ademen",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 2,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 2",
+  "eigenKeuze": "Heel groot",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 3,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 3",
+  "eigenKeuze": "Niet kunnen bewegen",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 4,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 4",
+  "eigenKeuze": "Blij met de situatie",
+  "oordeel": "fout",
+  "reden": "twee wrongHints noemden het antwoord ('tevreden = blij'); telegramstijl; basis gaf alleen het antwoord (telegramstijl); telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints, basis, simpeler herschreven"
+ },
+ {
+  "nr": 5,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 5",
+  "eigenKeuze": "Een uitleg",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 6,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 6",
+  "eigenKeuze": "Kalm",
+  "oordeel": "twijfel",
+  "reden": "basis gaf (bijna) het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 7,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 7",
+  "eigenKeuze": "Gierig",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; hints sturen zonder het antwoord te noemen",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 8,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 8",
+  "eigenKeuze": "Onzeker / gevaarlijk",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 9,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 9",
+  "eigenKeuze": "Ongevraagd bemoeien",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 10,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 10",
+  "eigenKeuze": "Druk en snel",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 11,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "eigenKeuze": "Dapper",
+  "oordeel": "twijfel",
+  "reden": "getal in lopende tekst voluit (drie); telegramstijl + getal voluit; basis gaf alleen het antwoord",
+  "hersteld": true,
+  "wijziging": "q, uitlegPad-stap, basis herschreven"
+ },
+ {
+  "nr": 12,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 12",
+  "eigenKeuze": "Formeel",
+  "oordeel": "twijfel",
+  "reden": "basis gaf (bijna) het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 13,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 13",
+  "eigenKeuze": "Winst",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 14,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 14",
+  "eigenKeuze": "Mank",
+  "oordeel": "twijfel",
+  "reden": "basis gaf alleen de betekenis; onnauwkeurige omschrijving",
+  "hersteld": true,
+  "wijziging": "basis, nogSimpeler herschreven"
+ },
+ {
+  "nr": 15,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 15",
+  "eigenKeuze": "Starten",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 16,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 18",
+  "eigenKeuze": "Heel moe",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 17,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 19",
+  "eigenKeuze": "Roekeloos",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 18,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 20",
+  "eigenKeuze": "Iets wat niet waar is",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 19,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 24",
+  "eigenKeuze": "Moe",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; 'moe' zit in 'vermoeid' (woordfamilie), makkelijk maar verdedigbaar",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 20,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 32",
+  "eigenKeuze": "Snel, want hij heeft weinig tijd",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 21,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 40",
+  "eigenKeuze": "Eindelijk een beslissing nemen",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 22,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 44",
+  "eigenKeuze": "Wie aan het eind wint, heeft echt gewonnen",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 23,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 46",
+  "eigenKeuze": "Het werd weer opgeknapt",
+  "oordeel": "twijfel",
+  "reden": "basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "basis herschreven"
+ },
+ {
+  "nr": 24,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 48",
+  "eigenKeuze": "De mensen die kijken",
+  "oordeel": "twijfel",
+  "reden": "goede optie was de enige omschrijving (raadbaar door vorm)",
+  "hersteld": true,
+  "wijziging": "options herschreven"
+ },
+ {
+  "nr": 25,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 49",
+  "eigenKeuze": "Reusachtig",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 26,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 51",
+  "eigenKeuze": "Het later doen dan gepland",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 27,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 13",
+  "eigenKeuze": "Een voorbeeld",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 28,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+  "eigenKeuze": "Zoals",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 29,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 45",
+  "eigenKeuze": "'Maar' — een tegenstelling",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 30,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 1",
+  "eigenKeuze": "Hij wordt boos.",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl ('t, schuine strepen)",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 31,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 2",
+  "eigenKeuze": "fietste",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl; basis gaf het antwoord",
+  "hersteld": true,
+  "wijziging": "wrongHints, basis herschreven"
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 3",
+  "eigenKeuze": "boeken kast",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 4",
+  "eigenKeuze": "Aan begin van zin of bij namen",
+  "oordeel": "fout",
+  "reden": "telegramzin in de goede optie; wrongHints noemden het antwoord ('vooraan', 'aan het begin')",
+  "hersteld": true,
+  "wijziging": "options, wrongHints herschreven"
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 6",
+  "eigenKeuze": "las",
+  "oordeel": "twijfel",
+  "reden": "vet stond verkeerd + telegramvraag; telegramstijl",
+  "hersteld": true,
+  "wijziging": "q, wrongHints herschreven"
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 7",
+  "eigenKeuze": "dinsdag",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 11",
+  "eigenKeuze": "zonnebloem",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 16",
+  "eigenKeuze": "beschuit",
+  "oordeel": "fout",
+  "reden": "wrongHints spelden het antwoord voor (be-SCH-uit, 'sch')",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "eigenKeuze": "wandelden",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 19",
+  "eigenKeuze": "computer",
+  "oordeel": "fout",
+  "reden": "wrongHint gaf de juiste letters (geen k, m voor de p)",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 20",
+  "eigenKeuze": "heeft",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 23",
+  "eigenKeuze": "eiland",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 30",
+  "eigenKeuze": "politie",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 1",
+  "eigenKeuze": "Met een vraagteken (?)",
+  "oordeel": "twijfel",
+  "reden": "antwoord stond in de vraag (vraag → vraagteken); te makkelijk voor groep 8; telegramstijl; past bij nieuwe vraag",
+  "hersteld": true,
+  "wijziging": "q, wrongHints herschreven"
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 2",
+  "eigenKeuze": "Ik kocht appels, peren en druiven.",
+  "oordeel": "twijfel",
+  "reden": "eerste wrongHint paste niet bij de gekozen optie; 'items'; telegramstijl, 'items'",
+  "hersteld": true,
+  "wijziging": "wrongHints, basis herschreven"
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 3",
+  "eigenKeuze": "Om aan te geven wat iemand zegt",
+  "oordeel": "twijfel",
+  "reden": "hint over aankondigen klopte niet (dat is de dubbele punt)",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 5",
+  "eigenKeuze": "maar",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 6",
+  "eigenKeuze": "dubbele punt :",
+  "oordeel": "twijfel",
+  "reden": "telegramzin",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 7",
+  "eigenKeuze": "Ik wandel en, ik fiets.",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl; komma vóór 'omdat' is niet verplicht",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 8",
+  "eigenKeuze": "Jan, Piet en Klaas spelen.",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl ('NL', '=')",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 9",
+  "eigenKeuze": "Waar is mijn jas",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 51,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 10",
+  "eigenKeuze": "De kat slaapt.",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 52,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 11",
+  "eigenKeuze": "amsterdam",
+  "oordeel": "goed",
+  "reden": "antwoord klopt; afleiders en hints in orde",
+  "hersteld": false,
+  "wijziging": ""
+ },
+ {
+  "nr": 53,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 12",
+  "eigenKeuze": "Hij zei: 'Hallo.'",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl",
+  "hersteld": true,
+  "wijziging": "wrongHints herschreven"
+ },
+ {
+  "nr": 54,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 13",
+  "eigenKeuze": "De kat",
+  "oordeel": "twijfel",
+  "reden": "telegramstijl; telegramstijl; echte hulpstap",
+  "hersteld": true,
+  "wijziging": "wrongHints, basis herschreven"
+ },
+ {
+  "nr": 55,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 14",
+  "eigenKeuze": "rent",
+  "oordeel": "fout",
+  "reden": "basis noemde het antwoord ('rent') letterlijk; 'hij' klopte niet (Lisa); telegramstijl",
+  "hersteld": true,
+  "wijziging": "basis, simpeler herschreven"
+ }
+]

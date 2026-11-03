@@ -1,0 +1,1481 @@
+[
+ {
+  "nr": 1,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **3/8 + 4/8**?",
+  "options": [
+   "7/8",
+   "12/8",
+   "7/16",
+   "3/32"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tellers + noemers samen? Of alleen tellers, noemer blijft?",
+   "Wat doe je met de noemer als die hetzelfde is?",
+   "Tellers vermenigvuldigen helpt niet bij optellen."
+  ],
+  "niveaus": {
+   "basis": "Tellers optellen, noemer blijft.",
+   "simpeler": "3 + 4 = 7. Noemer blijft 8. Antwoord = 7/8.",
+   "nogSimpeler": "7/8"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 2,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **1/3 + 1/4**?",
+  "options": [
+   "7/12",
+   "2/7",
+   "1/12",
+   "2/12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mag je echt tellers EN noemers gewoon optellen?",
+   "Eerst gelijknamig maken. KGN van 3 en 4?",
+   "Vereenvoudig pas aan einde — nu eerst KGN zoeken."
+  ],
+  "niveaus": {
+   "basis": "KGN=12, dan 4/12+3/12=7/12.",
+   "simpeler": "Stap 1: gelijke noemer. 3×4=12. Stap 2: 1/3=4/12 en 1/4=3/12. Stap 3: 4+3=7. Antwoord 7/12.",
+   "nogSimpeler": "7/12"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 3,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke is **groter**: 3/5 of 2/3?",
+  "options": [
+   "2/3",
+   "3/5",
+   "Allebei gelijk",
+   "Kan niet weten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk door gelijknamig te maken — KGN van 5 en 3?",
+   "Maak ze gelijknamig en vergelijk de tellers — zijn die echt gelijk?",
+   "Wel te bepalen — maak ze gelijknamig of decimaal."
+  ],
+  "niveaus": {
+   "basis": "2/3 (KGN=15: 10>9).",
+   "simpeler": "Maak gelijk: 3/5=9/15, 2/3=10/15. 10>9 dus 2/3 groter.",
+   "nogSimpeler": "2/3"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 4,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "**3/4** als decimaal getal is:",
+  "options": [
+   "0,75",
+   "3,4",
+   "0,34",
+   "0,43"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "3/4 is geen 'drie komma vier'. Deel 3 door 4.",
+   "Cijfers staan in de verkeerde volgorde — denk: hoeveel is 3 van 4 stukken?",
+   "Cijfers omdraaien is geen deling — wat is 3 gedeeld door 4?"
+  ],
+  "niveaus": {
+   "basis": "0,75.",
+   "simpeler": "3/4 = 3 gedeeld door 4 = 0,75. Of: 3 van 4 kwartjes = 75 cent.",
+   "nogSimpeler": "0,75"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 5,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Vereenvoudig **6/9** zo ver mogelijk. Wat krijg je?",
+  "options": [
+   "2/3",
+   "3/4",
+   "6/9 kan niet kleiner",
+   "1/3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken terug: 3/4 is 9/12 — is dat hetzelfde als 6/9?",
+   "Het kan wél kleiner. Zoek een getal waar je 6 én 9 allebei door kunt delen.",
+   "1/3 is 3/9 — dat is maar de helft van 6/9."
+  ],
+  "niveaus": {
+   "basis": "2/3 (door 3 delen).",
+   "simpeler": "6 en 9 delen beide door 3. 6/9 = 2/3.",
+   "nogSimpeler": "2/3"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 6,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **2/5 + 1/10**?",
+  "options": [
+   "1/2",
+   "3/15",
+   "3/10",
+   "1/7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telde tellers én noemers op — dat mag niet. Maak eerst gelijke noemers.",
+   "Heb je 2/5 wel omgerekend naar tienden voordat je optelde?",
+   "Waar komt die 7 vandaan? Maak eerst tienden van 2/5."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 7,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "**1,25 als breuk** (eenvoudigst)?",
+  "options": [
+   "5/4",
+   "1 1/5",
+   "125/10",
+   "12/5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1 1/5 is 1,2 — net te weinig.",
+   "125/10 is 12,5 — tien keer te groot. Hoeveel honderdsten is 1,25?",
+   "12/5 is 2,4 — te groot."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 8,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **helft van 0,8**?",
+  "options": [
+   "0,4",
+   "1,6",
+   "0,08",
+   "0,5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 2× zo veel.",
+   "10x te weinig.",
+   "0,5 is de helft van 1 — maar je begint met 0,8."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 9,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk getal is **kleiner**: 0,25 of 1/3?",
+  "options": [
+   "0,25",
+   "1/3",
+   "Even groot",
+   "Niet te bepalen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schrijf 1/3 als kommagetal en vergelijk het met 0,25.",
+   "0,25 is een kwart. Is een kwart evenveel als een derde?",
+   "Je kunt 1/3 ook als kommagetal schrijven — dan kun je ze wél vergelijken."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 10,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Vereenvoudig **12/16** zo ver mogelijk.",
+  "options": [
+   "3/4",
+   "6/8",
+   "1/2",
+   "4/3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Klopt qua waarde, maar kun je 6 en 8 nog door hetzelfde getal delen?",
+   "1/2 is 8/16 — maar je hebt 12/16.",
+   "Teller en noemer omgedraaid — 4/3 is meer dan 1, en 12/16 is minder dan 1."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 11,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel is **3/4 van 20**?",
+  "options": [
+   "15",
+   "5",
+   "12",
+   "60"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 1/4.",
+   "12 is 3/5 van 20 — deel 20 eerst door 4.",
+   "Dat is 3 × 20 — je moet eerst door 4 delen."
+  ],
+  "niveaus": {
+   "basis": "Getal ÷ noemer × teller.",
+   "simpeler": "1/4 van 20 = 5. 3/4 = 3 × 5 = 15.",
+   "nogSimpeler": "1/4 = 5, dus 3/4 = 15."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 12,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **5/6 − 1/2**?",
+  "options": [
+   "1/3",
+   "4/4",
+   "1/6",
+   "2/3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 1 heel — meer dan waar je mee begon.",
+   "Te klein — schrijf 1/2 eerst als zesden.",
+   "Je trok maar 1/6 af — 1/2 is meer dan 1/6."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 13,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 43",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Breuken & decimalen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk kommagetal hoort bij **3/8**?",
+  "options": [
+   "0,375",
+   "0,38",
+   "3,8",
+   "0,335"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een schatting — deel 3 echt door 8 en ga door tot er geen rest meer is.",
+   "Dat is bijna 4 — kan dat als 3/8 minder dan een half is?",
+   "Reken stap voor stap: als je weet hoeveel 1/8 is, hoeveel is dan 3/8?"
+  ],
+  "niveaus": {
+   "basis": "3 ÷ 8 = 0,375.",
+   "simpeler": "1/8 = 0,125. Drie keer zoveel: 0,375.",
+   "nogSimpeler": "0,375"
+  },
+  "explanation": "1/8 = 0,125 → 3/8 = 3 × 0,125 = **0,375**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 14,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "**20% van €60** is:",
+  "options": [
+   "€12",
+   "€20",
+   "€80",
+   "€3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "20% is geen 20 euro — het is een fractie van het bedrag.",
+   "20% is veel minder dan 100% — dus minder dan €60.",
+   "Heb je 60 door 20 gedeeld? 20% betekent 20 per honderd."
+  ],
+  "niveaus": {
+   "basis": "€12 (10%=€6, ×2).",
+   "simpeler": "10% van €60 = €6. 20% = 2 keer dat = €12.",
+   "nogSimpeler": "€12"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 15,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Anouk haalt **12 van de 60 vragen** goed. Hoeveel procent heeft ze goed?",
+  "options": [
+   "20%",
+   "12%",
+   "60%",
+   "5%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12% zou betekenen 'op elke 100 vragen, 12 goed'. Klopt dat?",
+   "60% is meer dan de helft — Anouk had veel minder.",
+   "5% is veel te laag — Anouk had niet 3 vragen goed."
+  ],
+  "niveaus": {
+   "basis": "20% (12÷60×100).",
+   "simpeler": "12 ÷ 60 = 0,2. × 100 = 20%.",
+   "nogSimpeler": "20%"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 16,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een klas heeft **24 leerlingen**. De verhouding meiden : jongens is **3 : 5**. Hoeveel meiden zitten er in de klas?",
+  "options": [
+   "9",
+   "12",
+   "15",
+   "8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 = de helft. 3:5 betekent niet 50:50.",
+   "15 is meer dan helft. Bij 3:5 zijn jongens in meerderheid.",
+   "8 zou één deel zijn — maar tel de delen: 3 plus 5. Welk deel daarvan is meiden?"
+  ],
+  "niveaus": {
+   "basis": "9 meiden (24÷8×3).",
+   "simpeler": "3+5=8 delen. 24÷8=3 per deel. Meiden=3×3=9.",
+   "nogSimpeler": "9"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 17,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel is **80% van 50**?",
+  "options": [
+   "40",
+   "30",
+   "20",
+   "100"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "30 is 60% van 50 — reken eerst 10% uit.",
+   "20 is 40% van 50. Je zoekt een groter percentage.",
+   "100 is meer dan 50 — kan 80% van 50 groter zijn dan 50?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 18,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "De verhouding **jongens : meisjes is 3 : 2**. Er zijn 25 leerlingen. Hoeveel jongens zijn er?",
+  "options": [
+   "15",
+   "10",
+   "12",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je rekende met de 2 delen uit de verhouding. Hoeveel delen horen bij de jongens?",
+   "Tel de delen op: 3 + 2. Hoeveel leerlingen zijn er per deel?",
+   "Dat is het aantal leerlingen in één deel. De jongens hebben meer dan één deel."
+  ],
+  "niveaus": {
+   "basis": "Tel eerst de delen van de verhouding op. Hoeveel leerlingen horen dan bij één deel?",
+   "simpeler": "3+2=5 delen, 25÷5=5 per deel, jongens 3×5=15.",
+   "nogSimpeler": "15"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 19,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Procenten & verhoudingen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een jas kost **€80** en gaat **25% in de uitverkoop**. Wat is de **korting in euro's**?",
+  "options": [
+   "€20",
+   "€25",
+   "€60",
+   "€100"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€25 is het percentage als bedrag — 25% van €80 is iets anders.",
+   "Dat is de prijs na korting, geen korting.",
+   "Je telde de korting bij de prijs op — maar gevraagd is alleen hoeveel euro eraf gaat."
+  ],
+  "niveaus": {
+   "basis": "25% is hetzelfde als een kwart. Hoeveel is een kwart van €80?",
+   "simpeler": "25% = 1/4. €80 ÷ 4 = €20.",
+   "nogSimpeler": "Kwart van €80 = €20"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 20,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel meter is **2,5 km**?",
+  "options": [
+   "2500 m",
+   "250 m",
+   "25.000 m",
+   "25 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — 2,5 km is meer dan 0,25 km.",
+   "Te veel — heb je 4 plekken verschoven?",
+   "Veel te weinig — 25 m is een schoolplein, niet 2,5 km."
+  ],
+  "niveaus": {
+   "basis": "2500 m.",
+   "simpeler": "km × 1000 = m. 2,5 × 1000 = 2500.",
+   "nogSimpeler": "2500"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 21,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel kg is **350 g**?",
+  "options": [
+   "0,35 kg",
+   "3,5 kg",
+   "35 kg",
+   "0,035 kg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — 3,5 kg is 3500 g.",
+   "Veel te veel — 35 kg weegt ongeveer een kind van 10 jaar.",
+   "Te weinig — hoeveel gram is 0,035 kg?"
+  ],
+  "niveaus": {
+   "basis": "0,35 kg.",
+   "simpeler": "350 g ÷ 1000 = 0,35 kg.",
+   "nogSimpeler": "0,35"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 22,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een kaart met **schaal 1 : 50.000** is een afstand **4 cm**. Hoe ver is dat in het echt?",
+  "options": [
+   "2 km",
+   "20 km",
+   "200 m",
+   "200 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "20 km zou 40 cm op kaart zijn.",
+   "200 m is te weinig — hoeveel cm gaan er in één meter?",
+   "Veel te veel — 200 km is een lange reis."
+  ],
+  "niveaus": {
+   "basis": "2 km.",
+   "simpeler": "4 cm × 50.000 = 200.000 cm = 2 km.",
+   "nogSimpeler": "2 km"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 23,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **mL** zit in **2,5 L**?",
+  "options": [
+   "2500 mL",
+   "250 mL",
+   "25 mL",
+   "25.000 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel liter is 250 mL?",
+   "Veel te weinig — 25 mL is nog geen twee eetlepels.",
+   "Te veel — heb je 4 stappen verschoven?"
+  ],
+  "niveaus": {
+   "basis": "2500 mL.",
+   "simpeler": "2,5 L × 1000 = 2500 mL.",
+   "nogSimpeler": "2500"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 24,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een rechthoekige tuin is **6 m × 4 m**. Wat is de oppervlakte?",
+  "options": [
+   "24 m²",
+   "10 m²",
+   "20 m²",
+   "12 m²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 = lengte + breedte. Voor opp moet je vermenigvuldigen.",
+   "20 = omtrek (2× lengte + 2× breedte). Geen oppervlakte.",
+   "12 m² is 6 × 2 of 3 × 4 — reken lengte × breedte."
+  ],
+  "niveaus": {
+   "basis": "24 m².",
+   "simpeler": "6 m × 4 m = 24 m².",
+   "nogSimpeler": "24"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 25,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **cm** is **1,2 m**?",
+  "options": [
+   "120 cm",
+   "12 cm",
+   "12.000 cm",
+   "1200 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — 12 cm is een gum.",
+   "Je schoof de komma vier plekken — hoeveel cm zitten er in 1 m?",
+   "Te veel — komma 1 plek te ver."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 26,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een doos is **10 cm** lang, **10 cm** breed en **10 cm** hoog. Wat is de **inhoud** (het volume)?",
+  "options": [
+   "1000 cm³",
+   "100 cm³",
+   "30 cm³",
+   "300 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "100 cm³ is maar één laagje van 1 cm hoog — de doos is 10 cm hoog.",
+   "30 is 10 + 10 + 10 — bij inhoud tel je niet op.",
+   "300 is drie zijvlakken opgeteld — inhoud is geen optelsom."
+  ],
+  "niveaus": {
+   "basis": "1000 cm³ (10³).",
+   "simpeler": "10 × 10 × 10 = 1000. Eenheid is cm³.",
+   "nogSimpeler": "1000"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 27,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een tuin is **5 m × 8 m**. Hoeveel meter **hek** heb je nodig om de hele tuin heen (de omtrek)?",
+  "options": [
+   "26 m",
+   "40 m",
+   "13 m",
+   "20 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is oppervlakte, niet omtrek.",
+   "13 m is 5 + 8 — dat zijn maar twee van de vier kanten.",
+   "Tel alle vier de kanten: zitten de twee kanten van 8 m erbij?"
+  ],
+  "niveaus": {
+   "basis": "Omtrek rechthoek = 2 × (lengte + breedte).",
+   "simpeler": "5+5+8+8 = 26 m hek nodig.",
+   "nogSimpeler": "Rondom = optellen alles."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 28,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel gram is **3,5 kg**?",
+  "options": [
+   "3500 g",
+   "350 g",
+   "35 g",
+   "35.000 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoeveel gram zit er in 1 kg? 350 g is nog geen halve kilo.",
+   "35 g is ongeveer een handje snoep — veel minder dan 3,5 kg.",
+   "Dat is 35 kg — 1 kg is 1000 g, niet 10.000 g."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 29,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een atlaskaart heeft **schaal 1 : 1.000.000**. Hoe ver is **3 cm** op de kaart in het echt?",
+  "options": [
+   "30 km",
+   "3 km",
+   "300 m",
+   "300 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1 cm op deze kaart is 1.000.000 cm. Hoeveel km is dat?",
+   "300 m is 30.000 cm — tel de nullen van 3 × 1.000.000 nog eens.",
+   "Tel de nullen: 3 × 1.000.000 cm — hoeveel km is dat? Zit je niet een nul te ver?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 30,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een driehoek heeft een **basis van 6 cm** en een **hoogte van 4 cm**. Wat is de oppervlakte?",
+  "options": [
+   "12 cm²",
+   "24 cm²",
+   "10 cm²",
+   "6 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een driehoek is kleiner dan de rechthoek van 6 bij 4 — wat vergeet je?",
+   "10 is 6 + 4 — bij oppervlakte vermenigvuldig je.",
+   "Je deelde door 4 — de driehoek is de helft van de rechthoek, geen kwart."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 31,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **mL** zit er in een **halve liter**?",
+  "options": [
+   "500 mL",
+   "50 mL",
+   "5 mL",
+   "5000 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "50 mL is een klein slokje — hoeveel mL is 1 liter?",
+   "5 mL is één theelepel — een halve liter is veel meer.",
+   "5000 mL is 5 liter — meer dan een hele liter."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een vierkant heeft een **omtrek van 24 cm**. Hoe lang is één zijde?",
+  "options": [
+   "6 cm",
+   "12 cm",
+   "24 cm",
+   "4 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 cm is de helft van de omtrek — een vierkant heeft 4 zijden.",
+   "24 cm is alle vier de zijden samen.",
+   "Reken na: 4 × 4 cm = 16 cm. Is dat 24 cm?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel kg is **0,5 ton**?",
+  "options": [
+   "500 kg",
+   "50 kg",
+   "5000 kg",
+   "5 kg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1 ton = 1000 kg. Is 50 kg de helft daarvan?",
+   "5000 kg is 5 ton — tien keer te veel.",
+   "5 kg is een zak aardappels — een halve ton is veel zwaarder."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel meter is **1500 mm**?",
+  "options": [
+   "1,5 m",
+   "15 m",
+   "0,15 m",
+   "150 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "15 m is 15.000 mm — hoeveel mm zitten er in 1 m?",
+   "Kijk nog eens hoeveel plekken je de komma moet schuiven. Hoeveel mm zitten er in 1 m?",
+   "150 m is langer dan een voetbalveld. Past dat bij 1500 mm? Reken na hoeveel mm er in 1 m zitten."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **kubus** heeft zijden van **5 cm**. Wat is de inhoud?",
+  "options": [
+   "125 cm³",
+   "25 cm³",
+   "15 cm³",
+   "75 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "25 is 5 × 5: dat is één zijvlak, geen inhoud.",
+   "15 is 5 + 5 + 5 — bij inhoud vermenigvuldig je.",
+   "75 is 3 × 5 × 5 — heb je wel drie keer 5 gebruikt?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **omtrek** van een cirkel met een diameter van 10 cm? *(π ≈ 3,14)*",
+  "options": [
+   "31,4 cm",
+   "78,5 cm",
+   "10 cm",
+   "100 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "78,5 is de oppervlakte — de omtrek is de rand.",
+   "10 cm is de diameter, dwars door het midden — de rand is langer.",
+   "100 is 10 × 10 — gebruik π (3,14)."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel gram is **2,5 kg**?",
+  "options": [
+   "2500 g",
+   "250 g",
+   "25 g",
+   "25.000 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te weinig — kg → g is × 1000.",
+   "100× te weinig.",
+   "10× te veel."
+  ],
+  "niveaus": {
+   "basis": "2500 g.",
+   "simpeler": "2,5 × 1000 = 2500.",
+   "nogSimpeler": "2500"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een **kaart met schaal 1 : 50.000** is iets **2 cm**. Hoe ver is dat in het echt?",
+  "options": [
+   "1 km",
+   "100 m",
+   "5 km",
+   "20 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel cm zitten er in één meter?",
+   "5 km zou 10 cm op deze kaart zijn.",
+   "20 km zou 40 cm op deze kaart zijn."
+  ],
+  "niveaus": {
+   "basis": "1 km.",
+   "simpeler": "2 cm × 50.000 = 100.000 cm = 1 km.",
+   "nogSimpeler": "100.000 cm = 1 km"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **rechthoek** is **8 cm lang** en **5 cm breed**. Wat is de **oppervlakte**?",
+  "options": [
+   "40 cm²",
+   "13 cm²",
+   "26 cm²",
+   "45 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Optellen, dat is geen oppervlakte.",
+   "Omtrek, geen oppervlakte.",
+   "45 is 9 × 5 — de lengte is 8 cm, niet 9."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel milliliter is **3 liter**?",
+  "options": [
+   "3000 mL",
+   "300 mL",
+   "30 mL",
+   "30.000 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te weinig.",
+   "100× te weinig.",
+   "10× te veel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **vierkant** heeft een **omtrek van 24 cm**. Hoe lang is **één zijde**?",
+  "options": [
+   "6 cm",
+   "12 cm",
+   "4 cm",
+   "8 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Helft — maar vierkant heeft 4 zijden, geen 2.",
+   "Reken na: 4 × 4 cm = 16 cm. Is dat 24 cm?",
+   "Niet — controleer 4 × 8; kom je op 24 uit?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "**75 cL** is hoeveel **liter**?",
+  "options": [
+   "0,75 L",
+   "7,5 L",
+   "0,075 L",
+   "75 L"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te veel.",
+   "10× te weinig.",
+   "75 L is een flinke emmer vol water — 1 cL is maar een honderdste liter."
+  ],
+  "niveaus": {
+   "basis": "0,75 L.",
+   "simpeler": "75 / 100 = 0,75.",
+   "nogSimpeler": "0,75 L"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel uur is **45 minuten**? Schrijf het als kommagetal.",
+  "options": [
+   "0,75 uur",
+   "0,45 uur",
+   "1,45 uur",
+   "4,5 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — direct delen door 100 werkt niet bij tijd (60 min/uur).",
+   "Veel te veel — 45 minuten is minder dan 1 uur.",
+   "4,5 uur is meer dan een halve schooldag — 45 minuten is minder dan een uur."
+  ],
+  "niveaus": {
+   "basis": "0,75 uur.",
+   "simpeler": "45 / 60 = 0,75. Of 3 kwartier = 0,75.",
+   "nogSimpeler": "3 × 0,25 = 0,75"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **omtrek** van een rechthoek van 8 m bij 3 m?",
+  "options": [
+   "22 m",
+   "11 m",
+   "24 m",
+   "16 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is maar de helft van de rand — een rechthoek heeft vier zijden.",
+   "Dat is de oppervlakte.",
+   "Dat is 2 × 8."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **volume** van een doos van **3 cm × 4 cm × 5 cm**?",
+  "options": [
+   "60 cm³",
+   "12 cm³",
+   "15 cm³",
+   "47 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 is 3 × 4 — de hoogte van 5 cm doet ook mee.",
+   "15 is 3 × 5 — de 4 cm doet ook mee.",
+   "Dat zijn drie zijvlakken opgeteld (12 + 15 + 20) — voor inhoud vermenigvuldig je alle drie de maten."
+  ],
+  "niveaus": {
+   "basis": "60 cm³.",
+   "simpeler": "3 × 4 × 5 = 60.",
+   "nogSimpeler": "60"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 29",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **graden** zit in een **rechte hoek**?",
+  "options": [
+   "90°",
+   "180°",
+   "45°",
+   "360°"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een gestrekte hoek.",
+   "Halve rechte.",
+   "Hele cirkel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **seconden** zitten er in **1 minuut**?",
+  "options": [
+   "60",
+   "100",
+   "10",
+   "30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij tijd tel je niet in honderdtallen — hoe vaak tikt de secondewijzer in één rondje?",
+   "Tel 10 seconden af — is er dan al een minuut voorbij?",
+   "30 seconden is een halve minuut."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 31",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **driehoek** heeft hoeken die samen **___** graden zijn.",
+  "options": [
+   "180°",
+   "90°",
+   "360°",
+   "270°"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is één rechte hoek.",
+   "360° is een heel rondje — of alle hoeken van een vierhoek samen.",
+   "Knip de drie hoeken uit en leg ze tegen elkaar — wat voor lijn krijg je?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel meter is **0,5 km**?",
+  "options": [
+   "500 m",
+   "50 m",
+   "5 m",
+   "5000 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te weinig.",
+   "100× te weinig.",
+   "10× te veel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 33",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **vierkant** heeft een oppervlakte van **64 cm²**. Hoe lang is één **zijde**?",
+  "options": [
+   "8 cm",
+   "16 cm",
+   "4 cm",
+   "64 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "16 cm × 16 cm is veel meer dan 64 cm². Reken na.",
+   "Reken na: 4 × 4 = 16. Is dat 64?",
+   "64 is de oppervlakte — de zijde is veel korter."
+  ],
+  "niveaus": {
+   "basis": "8 cm.",
+   "simpeler": "√64 = 8.",
+   "nogSimpeler": "8 × 8 = 64"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 51,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 34",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel m² is **1 hectare**?",
+  "options": [
+   "10.000 m²",
+   "1.000 m²",
+   "100 m²",
+   "100.000 m²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10× te weinig.",
+   "100× te weinig.",
+   "10× te veel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 52,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 35",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "De klok wijst **14:30**. Hoeveel uur is dat na 12:00?",
+  "options": [
+   "2,5 uur",
+   "2 uur",
+   "30 min",
+   "14,5 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Van 12:00 tot 14:00 is 2 uur — en de 30 minuten?",
+   "Je telt alleen de minuten — vergeet de hele uren niet.",
+   "Niet — vanaf 12:00, niet 0:00."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 53,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 36",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een **cilinder** (de vorm van een blik soep) is een ___?",
+  "options": [
+   "Ruimtefiguur (3D)",
+   "Vlakke figuur (2D)",
+   "Cirkel (2D)",
+   "Rechthoek (2D)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een blik soep kun je vullen — heeft een plat figuur een inhoud?",
+   "Van bovenaf zie je een cirkel — maar het blik heeft ook een hoogte.",
+   "Van opzij lijkt het een rechthoek — maar kun je zo'n blik ook vullen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 54,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 37",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "**3,5 km** = hoeveel meter?",
+  "options": [
+   "3.500 m",
+   "350 m",
+   "35.000 m",
+   "35 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 1 km zitten 1.000 m — je schuift drie plekken, niet twee.",
+   "35.000 m is meer dan 30 km. Is 3,5 km echt zo ver? Kijk hoeveel plekken je de komma schuift.",
+   "Dat is maar 35 meter — korter dan een voetbalveld."
+  ],
+  "niveaus": null,
+  "explanation": "1 km = 1.000 m → 3,5 km = 3,5 × 1.000 = **3.500 m**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 55,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 38",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een rechthoekige tuin is **8 m lang en 5 m breed**. Wat is de **oppervlakte**?",
+  "options": [
+   "40 m²",
+   "26 m²",
+   "13 m²",
+   "40 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de omtrek (8+5+8+5) — oppervlakte is lengte × breedte.",
+   "Dat is 8 + 5 — je moet vermenigvuldigen.",
+   "Het getal klopt, maar oppervlakte meet je in vierkante meters (m²)."
+  ],
+  "niveaus": {
+   "basis": "8 × 5 = 40 m².",
+   "simpeler": "Oppervlakte = lengte keer breedte. 8 keer 5 is 40, in m².",
+   "nogSimpeler": "40 m²"
+  },
+  "explanation": "Oppervlakte = lengte × breedte = 8 m × 5 m = **40 m²**. Let op de eenheid: m² (vierkante meter)!",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ }
+]

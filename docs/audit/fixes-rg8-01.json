@@ -1,0 +1,260 @@
+[
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+    "oud": "basis: \"KGN=12, dan 4/12+3/12=7/12.\"",
+    "nieuw": "basis: \"Maak eerst gelijke noemers: zoek het kleinste getal waar 3 én 4 allebei in passen. Schrijf dan beide breuken met die noemer.\"",
+    "reden": "basis rekende de som voor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+    "oud": "\"Vereenvoudig pas aan einde — nu eerst KGN zoeken.\"",
+    "nieuw": "\"De noemer 12 klopt, maar zijn de tellers mee veranderd? Hoeveel twaalfden is 1/3?\"",
+    "reden": "hint paste niet bij afleider 2/12"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 3",
+    "oud": "basis: \"2/3 (KGN=15: 10>9).\"",
+    "nieuw": "basis: \"Maak van beide breuken vijftienden (of kommagetallen). Vergelijk daarna de tellers.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 4",
+    "oud": "basis: \"0,75.\"",
+    "nieuw": "basis: \"Een breuk is een deling: teller gedeeld door noemer. Hoeveel is 3 gedeeld door 4?\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 5",
+    "oud": "basis: \"2/3 (door 3 delen).\"",
+    "nieuw": "basis: \"Zoek het grootste getal waar 6 én 9 allebei door te delen zijn. Deel de teller en de noemer door dat getal.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 12",
+    "oud": "q: \"**1,25 als breuk** (eenvoudigst)?\",",
+    "nieuw": "q: \"Schrijf **1,25** als breuk, zo eenvoudig mogelijk. Welke breuk is het?\",",
+    "reden": "telegramzin"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 12",
+    "oud": "\"125/10 is 12,5 — tien keer te groot. Hoeveel honderdsten is 1,25?\"",
+    "nieuw": "\"Reken 125/10 terug naar een kommagetal: is dat echt 1,25? Hoeveel honderdsten is 1,25?\"",
+    "reden": "hint noemde de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 13",
+    "oud": "wrongHints: [null, \"Dat is 2× zo veel.\", \"10x te weinig.\", \"0,5 is de helft van 1 — maar je begint met 0,8.\"],",
+    "nieuw": "wrongHints: [null, \"Je hebt verdubbeld in plaats van gehalveerd. Is de helft van iets groter of kleiner dan dat iets?\", \"Halveren is iets anders dan de komma schuiven. Schrijf 0,8 als tienden en neem daar de helft van.\", \"0,5 is de helft van 1 — maar je begint met 0,8.\"],",
+    "reden": "\"10x te weinig\" klopte niet (0,08 is 5x te weinig) + telegramzinnen"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 16",
+    "oud": "wrongHints: [null, \"Dat is 1/4.\",",
+    "nieuw": "wrongHints: [null, \"Dat is maar één van de vier gelijke stukken van 20. Hoeveel van die stukken heb je nodig bij 3/4?\",",
+    "reden": "telegram-hint die bijna voorrekende"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 43",
+    "oud": "basis: \"3 ÷ 8 = 0,375.\",",
+    "nieuw": "basis: \"Een breuk is een deling: teller gedeeld door noemer. Je kunt ook beginnen bij 1/8 als kommagetal.\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 1",
+    "oud": "basis: \"€12 (10%=€6, ×2).\"",
+    "nieuw": "basis: \"Reken eerst 10% van €60 uit (delen door 10). Hoe vaak past 10% in 20%?\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 3",
+    "oud": "basis: \"20% (12÷60×100).\"",
+    "nieuw": "basis: \"Schrijf het als breuk: 12 van de 60 is 12/60. Vereenvoudig die breuk en zet hem om naar procenten.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 4",
+    "oud": "wrongHints: [null, \"12 = de helft. 3:5 betekent niet 50:50.\", \"15 is meer dan helft. Bij 3:5 zijn jongens in meerderheid.\", \"8 zou één deel zijn — maar tel de delen: 3 plus 5. Welk deel daarvan is meiden?\"],",
+    "nieuw": "wrongHints: [null, \"12 is de helft. Bij 3 : 5 zijn er niet evenveel meiden als jongens.\", \"15 is meer dan de helft. Bij 3 : 5 zijn juist de jongens in de meerderheid.\", \"8 is het aantal delen (3 + 5), niet het aantal meiden. Hoeveel leerlingen horen bij één deel?\"],",
+    "reden": "hint \"8 zou één deel zijn\" was onjuist (één deel = 3)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 4",
+    "oud": "basis: \"9 meiden (24÷8×3).\"",
+    "nieuw": "basis: \"Tel de delen van de verhouding op. Hoeveel leerlingen horen bij één deel? Hoeveel delen zijn meiden?\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 1",
+    "oud": "basis: \"2500 m.\"",
+    "nieuw": "basis: \"Hoeveel meter zit er in 1 km? Neem dat 2,5 keer.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 2",
+    "oud": "basis: \"0,35 kg.\"",
+    "nieuw": "basis: \"In 1 kg zit 1000 g. Deel 350 door 1000: hoeveel plekken schuift de komma?\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 3",
+    "oud": "basis: \"2 km.\"",
+    "nieuw": "basis: \"Op deze kaart is 1 cm in het echt 50.000 cm. Reken uit hoeveel cm 4 cm in het echt is en zet dat om naar meters en kilometers.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 4",
+    "oud": "basis: \"2500 mL.\"",
+    "nieuw": "basis: \"In 1 liter zit 1000 mL. Neem dat 2,5 keer.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 5",
+    "oud": "basis: \"24 m².\"",
+    "nieuw": "basis: \"Oppervlakte van een rechthoek = lengte × breedte. Let op de eenheid: m².\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 6",
+    "oud": "\"Te veel — komma 1 plek te ver.\"",
+    "nieuw": "\"Te veel — 1200 cm is 12 meter. Hoeveel cm zitten er in 1 meter?\"",
+    "reden": "hint noemde de factor, telegramzin"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 7",
+    "oud": "basis: \"1000 cm³ (10³).\"",
+    "nieuw": "basis: \"Inhoud van een doos = lengte × breedte × hoogte. De eenheid wordt cm³.\"",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 14",
+    "oud": "\"5000 kg is 5 ton — tien keer te veel.\"",
+    "nieuw": "\"5000 kg is 5 ton. Is een halve ton meer of minder dan 1 ton?\"",
+    "reden": "hint noemde de factor (antwoord direct terug te rekenen)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 18",
+    "oud": "wrongHints: [null, \"10× te weinig — kg → g is × 1000.\", \"100× te weinig.\", \"10× te veel.\"],",
+    "nieuw": "wrongHints: [null, \"250 g is nog geen kwart kilo. Hoeveel gram zit er in 1 kg?\", \"25 g is een handje snoep — veel minder dan 2,5 kg. Hoeveel gram zit er in 1 kg?\", \"25.000 g is 25 kg — dat is meer dan 2,5 kg. Hoeveel gram zit er in 1 kg?\"],",
+    "reden": "hints noemden alleen de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 18",
+    "oud": "basis: \"2500 g.\",",
+    "nieuw": "basis: \"In 1 kg zit 1000 g. Neem dat 2,5 keer.\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 19",
+    "oud": "basis: \"1 km.\",",
+    "nieuw": "basis: \"Op deze kaart is 1 cm in het echt 50.000 cm. Reken uit hoeveel cm 2 cm in het echt is en zet dat om naar kilometers.\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 20",
+    "oud": "wrongHints: [null, \"Optellen, dat is geen oppervlakte.\", \"Omtrek, geen oppervlakte.\",",
+    "nieuw": "wrongHints: [null, \"13 is 8 + 5 — bij oppervlakte tel je niet op.\", \"26 is de omtrek (8 + 5 + 8 + 5): de rand, niet de oppervlakte.\",",
+    "reden": "telegramzinnen"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 21",
+    "oud": "options: [\"3000 mL\", \"300 mL\", \"30 mL\", \"30.000 mL\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"10× te weinig.\", \"100× te weinig.\", \"10× te veel.\"],",
+    "nieuw": "options: [\"3000 mL\", \"300 mL\", \"30 mL\", \"30.000 mL\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"300 mL is ongeveer een groot glas — 3 liter is veel meer. Hoeveel mL zit er in 1 liter?\", \"30 mL is maar een paar slokjes. Hoeveel mL zit er in 1 liter?\", \"30.000 mL is 30 liter — een flinke emmer vol. Hoeveel mL zit er in 1 liter?\"],",
+    "reden": "hints noemden alleen de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 22",
+    "oud": "wrongHints: [null, \"Helft — maar vierkant heeft 4 zijden, geen 2.\", \"Reken na: 4 × 4 cm = 16 cm. Is dat 24 cm?\", \"Niet — controleer 4 × 8; kom je op 24 uit?\"],",
+    "nieuw": "wrongHints: [null, \"12 cm is de helft van de omtrek — maar een vierkant heeft 4 zijden, geen 2.\", \"Reken na: 4 × 4 cm = 16 cm. Is dat 24 cm?\", \"Reken na: 4 × 8 cm = 32 cm. Is dat 24 cm?\"],",
+    "reden": "telegramzinnen"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 23",
+    "oud": "wrongHints: [null, \"10× te veel.\", \"10× te weinig.\", \"75 L",
+    "nieuw": "wrongHints: [null, \"7,5 L is meer dan 7 pakken melk. Hoeveel cL zitten er in 1 liter?\", \"0,075 L is nog geen 8 cL. Hoeveel cL zitten er in 1 liter?\", \"75 L",
+    "reden": "hints noemden alleen de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 23",
+    "oud": "basis: \"0,75 L.\",",
+    "nieuw": "basis: \"In 1 liter zitten 100 cL. Welk deel van 100 cL is 75 cL?\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 26",
+    "oud": "\"Niet — direct delen door 100 werkt niet bij tijd (60 min/uur).\"",
+    "nieuw": "\"Een uur heeft 60 minuten, niet 100. Welk deel van 60 minuten is 45 minuten?\"",
+    "reden": "telegramzin"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 26",
+    "oud": "basis: \"0,75 uur.\",",
+    "nieuw": "basis: \"Een uur heeft 60 minuten. Hoeveel kwartier is 45 minuten? En hoeveel uur is één kwartier als kommagetal?\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 27",
+    "oud": "\"Dat is de oppervlakte.\", \"Dat is 2 × 8.\"],",
+    "nieuw": "\"Dat is de oppervlakte.\", \"16 is 8 + 8 — de twee kanten van 3 m tellen ook mee.\"],",
+    "reden": "telegramzin"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+    "oud": "basis: \"60 cm³.\",",
+    "nieuw": "basis: \"Inhoud van een doos = lengte × breedte × hoogte.\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 29",
+    "oud": "wrongHints: [null, \"Dat is een gestrekte hoek.\", \"Halve rechte.\", \"Hele cirkel.\"],",
+    "nieuw": "wrongHints: [null, \"180° is een gestrekte hoek: een rechte lijn. Is de hoek van je schrift zo plat?\", \"45° is een scherpe hoek, spitser dan de hoek van je schrift.\", \"360° is een heel rondje. Een rechte hoek is maar een stukje daarvan.\"],",
+    "reden": "\"Halve rechte\" bij 45° verraadde 90°; telegramzinnen"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 30",
+    "oud": "q: \"Hoeveel **seconden** zitten er in **1 minuut**?\",\r\n        options: [\"60\", \"100\", \"10\", \"30\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"Bij tijd tel je niet in honderdtallen — hoe vaak tikt de secondewijzer in één rondje?\", \"Tel 10 seconden af — is er dan al een minuut voorbij?\", \"30 seconden is een halve minuut.\"],",
+    "nieuw": "q: \"Hoeveel **seconden** zitten er in **2,5 minuut**?\",\r\n        options: [\"150\", \"250\", \"25\", \"120\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"Bij tijd tel je niet in honderdtallen — hoeveel seconden zitten er in één minuut?\", \"25 seconden is nog geen halve minuut. Hoeveel seconden zitten er in één minuut?\", \"120 seconden is 2 minuten. Is dat al 2,5 minuut?\"],",
+    "reden": "te makkelijk voor groep 8 (1 min = 60 s); nu omrekenen met kommagetal"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 32",
+    "oud": "options: [\"500 m\", \"50 m\", \"5 m\", \"5000 m\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"10× te weinig.\", \"100× te weinig.\", \"10× te veel.\"],",
+    "nieuw": "options: [\"500 m\", \"50 m\", \"5 m\", \"5000 m\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"50 m is een half voetbalveld — 0,5 km is veel verder. Hoeveel meter zit er in 1 km?\", \"5 m is zo lang als een auto. Hoeveel meter zit er in 1 km?\", \"5000 m is 5 km. Is een halve kilometer meer of minder dan 1 km?\"],",
+    "reden": "hints noemden alleen de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 33",
+    "oud": "basis: \"8 cm.\",",
+    "nieuw": "basis: \"Bij een vierkant is de oppervlakte zijde × zijde. Welk getal keer zichzelf is 64?\",",
+    "reden": "basis gaf antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 34",
+    "oud": "options: [\"10.000 m²\", \"1.000 m²\", \"100 m²\", \"100.000 m²\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"10× te weinig.\", \"100× te weinig.\", \"10× te veel.\"],",
+    "nieuw": "options: [\"10.000 m²\", \"1.000 m²\", \"100 m²\", \"100.000 m²\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"1.000 m² is een rechthoek van 10 m bij 100 m. Een hectare is een vierkant met zijden van 100 m — reken die oppervlakte na.\", \"100 m² is een vierkant van 10 m bij 10 m, ongeveer twee klaslokalen. Een hectare heeft zijden van 100 m.\", \"100.000 m² is een vierkant van ruim 300 m bij 300 m. Een hectare heeft zijden van 100 m — reken die oppervlakte na.\"],",
+    "reden": "hints noemden alleen de factor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 35",
+    "oud": "\"Niet — vanaf 12:00, niet 0:00.\"",
+    "nieuw": "\"14,5 uur is de tijd vanaf middernacht (0:00). Hoeveel uur is het vanaf 12:00?\"",
+    "reden": "telegramzin"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 36",
+    "oud": "q: \"Een **cilinder** (de vorm van een blik soep) is een ___?\",\r\n        options: [\"Ruimtefiguur (3D)\", \"Vlakke figuur (2D)\", \"Cirkel (2D)\", \"Rechthoek (2D)\"],",
+    "nieuw": "q: \"Wat voor figuur is een **cilinder** (de vorm van een blik soep)?\",\r\n        options: [\"Ruimtefiguur\", \"Vlakke figuur\", \"Cirkel\", \"Rechthoek\"],",
+    "reden": "raadbaar: enige optie met (3D) tegenover drie keer (2D)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 38",
+    "oud": "\"Het getal klopt, maar oppervlakte meet je in vierkante meters (m²).\"",
+    "nieuw": "\"Kijk naar de eenheid: meet je een oppervlakte in meters of in vierkante meters?\"",
+    "reden": "hint noemde het goede antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 38",
+    "oud": "basis: \"8 × 5 = 40 m².\",",
+    "nieuw": "basis: \"Oppervlakte = lengte × breedte. Let ook op de eenheid.\",",
+    "reden": "basis gaf antwoord"
+  }
+]

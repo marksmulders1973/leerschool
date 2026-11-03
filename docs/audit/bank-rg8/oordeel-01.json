@@ -1,0 +1,497 @@
+[
+  {
+    "nr": 1,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 1",
+    "eigenKeuze": "7/8",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 2,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+    "eigenKeuze": "7/12",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis rekende de som helemaal voor; hint bij 2/12 paste niet bij de denkfout",
+    "hersteld": true,
+    "wijziging": "basis rekende de som voor → basis: \"Maak eerst gelijke noemers: zoek het kleinste getal waar 3 én 4 allebei in passen. Schrijf dan beide breuken met die noemer.\" | hint paste niet bij afleider 2/12 → \"De noemer 12 klopt, maar zijn de tellers mee veranderd? Hoeveel twaalfden is 1/3?\""
+  },
+  {
+    "nr": 3,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 3",
+    "eigenKeuze": "2/3",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord; afleider 'Kan niet weten' zwak (gelaten)",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Maak van beide breuken vijftienden (of kommagetallen). Vergelijk daarna de tellers.\""
+  },
+  {
+    "nr": 4,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 4",
+    "eigenKeuze": "0,75",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Een breuk is een deling: teller gedeeld door noemer. Hoeveel is 3 gedeeld door 4?\""
+  },
+  {
+    "nr": 5,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 5",
+    "eigenKeuze": "2/3",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Zoek het grootste getal waar 6 én 9 allebei door te delen zijn. Deel de teller en de noemer door dat getal.\""
+  },
+  {
+    "nr": 6,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 11",
+    "eigenKeuze": "1/2",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 7,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 12",
+    "eigenKeuze": "5/4",
+    "oordeel": "twijfel",
+    "reden": "vraag was telegramzin; hint '125/10 ... tien keer te groot' noemde factor",
+    "hersteld": true,
+    "wijziging": "telegramzin → q: \"Schrijf **1,25** als breuk, zo eenvoudig mogelijk. Welke breuk is het?\", | hint noemde de factor → \"Reken 125/10 terug naar een kommagetal: is dat echt 1,25? Hoeveel honderdsten is 1,25?\""
+  },
+  {
+    "nr": 8,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 13",
+    "eigenKeuze": "0,4",
+    "oordeel": "fout",
+    "reden": "wrongHint '10x te weinig' bij 0,08 klopt niet (5x te weinig t.o.v. 0,4) en noemt factor; telegramzinnen",
+    "hersteld": true,
+    "wijziging": "\"10x te weinig\" klopte niet (0,08 is 5x te weinig) + telegramzinnen → wrongHints: [null, \"Je hebt verdubbeld in plaats van gehalveerd. Is de helft van iets groter of kleiner dan dat iets?\", \"Halveren is iets anders dan de komma schuiven. Schrijf 0,8 als tienden en neem "
+  },
+  {
+    "nr": 9,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 14",
+    "eigenKeuze": "0,25",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 10,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 15",
+    "eigenKeuze": "3/4",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 11,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 16",
+    "eigenKeuze": "15",
+    "oordeel": "twijfel",
+    "reden": "wrongHint 'Dat is 1/4.' telegram en bijna voorrekenend (×3 = antwoord)",
+    "hersteld": true,
+    "wijziging": "telegram-hint die bijna voorrekende → wrongHints: [null, \"Dat is maar één van de vier gelijke stukken van 20. Hoeveel van die stukken heb je nodig bij 3/4?\","
+  },
+  {
+    "nr": 12,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 17",
+    "eigenKeuze": "1/3",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 13,
+    "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 43",
+    "eigenKeuze": "0,375",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Een breuk is een deling: teller gedeeld door noemer. Je kunt ook beginnen bij 1/8 als kommagetal.\","
+  },
+  {
+    "nr": 14,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 1",
+    "eigenKeuze": "€12",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Reken eerst 10% van €60 uit (delen door 10). Hoe vaak past 10% in 20%?\""
+  },
+  {
+    "nr": 15,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 3",
+    "eigenKeuze": "20%",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Schrijf het als breuk: 12 van de 60 is 12/60. Vereenvoudig die breuk en zet hem om naar procenten.\""
+  },
+  {
+    "nr": 16,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 4",
+    "eigenKeuze": "9",
+    "oordeel": "fout",
+    "reden": "wrongHint '8 zou één deel zijn' is onjuist (8 = aantal delen, één deel = 3 leerlingen); basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "hint \"8 zou één deel zijn\" was onjuist (één deel = 3) → wrongHints: [null, \"12 is de helft. Bij 3 : 5 zijn er niet evenveel meiden als jongens.\", \"15 is meer dan de helft. Bij 3 : 5 zijn juist de jongens in de meerderheid.\", \"8 is het aantal delen (3 + 5), | basis gaf antwoord → basis: \"Tel de delen van de verhouding op. Hoeveel leerlingen horen bij één deel? Hoeveel delen zijn meiden?\""
+  },
+  {
+    "nr": 17,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 14",
+    "eigenKeuze": "40",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 18,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 16",
+    "eigenKeuze": "15",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 19,
+    "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 22",
+    "eigenKeuze": "€20",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 20,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 1",
+    "eigenKeuze": "2500 m",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Hoeveel meter zit er in 1 km? Neem dat 2,5 keer.\""
+  },
+  {
+    "nr": 21,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 2",
+    "eigenKeuze": "0,35 kg",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"In 1 kg zit 1000 g. Deel 350 door 1000: hoeveel plekken schuift de komma?\""
+  },
+  {
+    "nr": 22,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 3",
+    "eigenKeuze": "2 km",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Op deze kaart is 1 cm in het echt 50.000 cm. Reken uit hoeveel cm 4 cm in het echt is en zet dat om naar meters en kilometers.\""
+  },
+  {
+    "nr": 23,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 4",
+    "eigenKeuze": "2500 mL",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"In 1 liter zit 1000 mL. Neem dat 2,5 keer.\""
+  },
+  {
+    "nr": 24,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 5",
+    "eigenKeuze": "24 m²",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Oppervlakte van een rechthoek = lengte × breedte. Let op de eenheid: m².\""
+  },
+  {
+    "nr": 25,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 6",
+    "eigenKeuze": "120 cm",
+    "oordeel": "twijfel",
+    "reden": "wrongHint 'komma 1 plek te ver' noemt factor, telegramzin",
+    "hersteld": true,
+    "wijziging": "hint noemde de factor, telegramzin → \"Te veel — 1200 cm is 12 meter. Hoeveel cm zitten er in 1 meter?\""
+  },
+  {
+    "nr": 26,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 7",
+    "eigenKeuze": "1000 cm³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Inhoud van een doos = lengte × breedte × hoogte. De eenheid wordt cm³.\""
+  },
+  {
+    "nr": 27,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 8",
+    "eigenKeuze": "26 m",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 28,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 9",
+    "eigenKeuze": "3500 g",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 29,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 10",
+    "eigenKeuze": "30 km",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 30,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 11",
+    "eigenKeuze": "12 cm²",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 31,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 12",
+    "eigenKeuze": "500 mL",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 32,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 13",
+    "eigenKeuze": "6 cm",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 33,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 14",
+    "eigenKeuze": "500 kg",
+    "oordeel": "fout",
+    "reden": "wrongHint '5000 kg ... tien keer te veel' noemt de factor: antwoord direct terug te rekenen",
+    "hersteld": true,
+    "wijziging": "hint noemde de factor (antwoord direct terug te rekenen) → \"5000 kg is 5 ton. Is een halve ton meer of minder dan 1 ton?\""
+  },
+  {
+    "nr": 34,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 15",
+    "eigenKeuze": "1,5 m",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 35,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 16",
+    "eigenKeuze": "125 cm³",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 36,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 17",
+    "eigenKeuze": "31,4 cm",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 37,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 18",
+    "eigenKeuze": "2500 g",
+    "oordeel": "fout",
+    "reden": "wrongHints alleen factoren ('10× te weinig', '100× te weinig', '10× te veel') — antwoord direct terug te rekenen; basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "hints noemden alleen de factor → wrongHints: [null, \"250 g is nog geen kwart kilo. Hoeveel gram zit er in 1 kg?\", \"25 g is een handje snoep — veel minder dan 2,5 kg. Hoeveel gram zit er in 1 kg?\", \"25.000 g is 25 kg — dat is meer dan | basis gaf antwoord → basis: \"In 1 kg zit 1000 g. Neem dat 2,5 keer.\","
+  },
+  {
+    "nr": 38,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 19",
+    "eigenKeuze": "1 km",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Op deze kaart is 1 cm in het echt 50.000 cm. Reken uit hoeveel cm 2 cm in het echt is en zet dat om naar kilometers.\","
+  },
+  {
+    "nr": 39,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 20",
+    "eigenKeuze": "40 cm²",
+    "oordeel": "twijfel",
+    "reden": "wrongHints telegramzinnen ('Optellen, dat is geen oppervlakte.')",
+    "hersteld": true,
+    "wijziging": "telegramzinnen → wrongHints: [null, \"13 is 8 + 5 — bij oppervlakte tel je niet op.\", \"26 is de omtrek (8 + 5 + 8 + 5): de rand, niet de oppervlakte.\","
+  },
+  {
+    "nr": 40,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 21",
+    "eigenKeuze": "3000 mL",
+    "oordeel": "fout",
+    "reden": "wrongHints alleen factoren — antwoord direct terug te rekenen",
+    "hersteld": true,
+    "wijziging": "hints noemden alleen de factor → options: [\"3000 mL\", \"300 mL\", \"30 mL\", \"30.000 mL\"], answer: 0, wrongHints: [null, \"300 mL is ongeveer een groot glas — 3 liter is veel meer. Hoeveel mL zit er in 1 liter?\", \"30 mL is maar een paar s"
+  },
+  {
+    "nr": 41,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 22",
+    "eigenKeuze": "6 cm",
+    "oordeel": "twijfel",
+    "reden": "wrongHints telegramzinnen ('Helft — ...', 'Niet — controleer 4 × 8; kom je op 24 uit?' rekent niet af); zelfde vraag als stap 3 vraag 13 (dubbel, gelaten)",
+    "hersteld": true,
+    "wijziging": "telegramzinnen → wrongHints: [null, \"12 cm is de helft van de omtrek — maar een vierkant heeft 4 zijden, geen 2.\", \"Reken na: 4 × 4 cm = 16 cm. Is dat 24 cm?\", \"Reken na: 4 × 8 cm = 32 cm. Is dat 24 cm?\"],"
+  },
+  {
+    "nr": 42,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 23",
+    "eigenKeuze": "0,75 L",
+    "oordeel": "fout",
+    "reden": "wrongHints '10× te veel/weinig' noemen de factor; basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "hints noemden alleen de factor → wrongHints: [null, \"7,5 L is meer dan 7 pakken melk. Hoeveel cL zitten er in 1 liter?\", \"0,075 L is nog geen 8 cL. Hoeveel cL zitten er in 1 liter?\", \"75 L | basis gaf antwoord → basis: \"In 1 liter zitten 100 cL. Welk deel van 100 cL is 75 cL?\","
+  },
+  {
+    "nr": 43,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 26",
+    "eigenKeuze": "0,75 uur",
+    "oordeel": "twijfel",
+    "reden": "wrongHint telegram 'Niet — ...'; niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "telegramzin → \"Een uur heeft 60 minuten, niet 100. Welk deel van 60 minuten is 45 minuten?\" | basis gaf antwoord → basis: \"Een uur heeft 60 minuten. Hoeveel kwartier is 45 minuten? En hoeveel uur is één kwartier als kommagetal?\","
+  },
+  {
+    "nr": 44,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 27",
+    "eigenKeuze": "22 m",
+    "oordeel": "twijfel",
+    "reden": "wrongHint 'Dat is 2 × 8.' telegramzin",
+    "hersteld": true,
+    "wijziging": "telegramzin → \"Dat is de oppervlakte.\", \"16 is 8 + 8 — de twee kanten van 3 m tellen ook mee.\"],"
+  },
+  {
+    "nr": 45,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+    "eigenKeuze": "60 cm³",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Inhoud van een doos = lengte × breedte × hoogte.\","
+  },
+  {
+    "nr": 46,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 29",
+    "eigenKeuze": "90°",
+    "oordeel": "fout",
+    "reden": "wrongHint 'Halve rechte' bij 45° verraadt 90°; telegramzinnen",
+    "hersteld": true,
+    "wijziging": "\"Halve rechte\" bij 45° verraadde 90°; telegramzinnen → wrongHints: [null, \"180° is een gestrekte hoek: een rechte lijn. Is de hoek van je schrift zo plat?\", \"45° is een scherpe hoek, spitser dan de hoek van je schrift.\", \"360° is een heel rondje. Een rech"
+  },
+  {
+    "nr": 47,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 30",
+    "eigenKeuze": "60",
+    "oordeel": "twijfel",
+    "reden": "te makkelijk voor groep 8 (seconden in 1 minuut)",
+    "hersteld": true,
+    "wijziging": "te makkelijk voor groep 8 (1 min = 60 s); nu omrekenen met kommagetal → q: \"Hoeveel **seconden** zitten er in **2,5 minuut**?\", options: [\"150\", \"250\", \"25\", \"120\"], answer: 0, wrongHints: [null, \"Bij tijd tel je niet in honderdtallen — hoeveel seconden zitten er in één m"
+  },
+  {
+    "nr": 48,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 31",
+    "eigenKeuze": "180°",
+    "oordeel": "goed",
+    "reden": "",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 49,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 32",
+    "eigenKeuze": "500 m",
+    "oordeel": "fout",
+    "reden": "wrongHints alleen factoren — antwoord direct terug te rekenen",
+    "hersteld": true,
+    "wijziging": "hints noemden alleen de factor → options: [\"500 m\", \"50 m\", \"5 m\", \"5000 m\"], answer: 0, wrongHints: [null, \"50 m is een half voetbalveld — 0,5 km is veel verder. Hoeveel meter zit er in 1 km?\", \"5 m is zo lang als een auto. Hoeveel "
+  },
+  {
+    "nr": 50,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 33",
+    "eigenKeuze": "8 cm",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis gaf alleen antwoord",
+    "hersteld": true,
+    "wijziging": "basis gaf antwoord → basis: \"Bij een vierkant is de oppervlakte zijde × zijde. Welk getal keer zichzelf is 64?\","
+  },
+  {
+    "nr": 51,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 34",
+    "eigenKeuze": "10.000 m²",
+    "oordeel": "fout",
+    "reden": "wrongHints alleen factoren — antwoord direct terug te rekenen",
+    "hersteld": true,
+    "wijziging": "hints noemden alleen de factor → options: [\"10.000 m²\", \"1.000 m²\", \"100 m²\", \"100.000 m²\"], answer: 0, wrongHints: [null, \"1.000 m² is een rechthoek van 10 m bij 100 m. Een hectare is een vierkant met zijden van 100 m — reken die op"
+  },
+  {
+    "nr": 52,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 35",
+    "eigenKeuze": "2,5 uur",
+    "oordeel": "twijfel",
+    "reden": "wrongHint 'Niet — vanaf 12:00, niet 0:00.' telegramzin",
+    "hersteld": true,
+    "wijziging": "telegramzin → \"14,5 uur is de tijd vanaf middernacht (0:00). Hoeveel uur is het vanaf 12:00?\""
+  },
+  {
+    "nr": 53,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 36",
+    "eigenKeuze": "Ruimtefiguur (3D)",
+    "oordeel": "twijfel",
+    "reden": "raadbaar door vorm: enige optie met (3D) tegenover drie keer (2D); vraag eindigde op '___?'",
+    "hersteld": true,
+    "wijziging": "raadbaar: enige optie met (3D) tegenover drie keer (2D) → q: \"Wat voor figuur is een **cilinder** (de vorm van een blik soep)?\", options: [\"Ruimtefiguur\", \"Vlakke figuur\", \"Cirkel\", \"Rechthoek\"],"
+  },
+  {
+    "nr": 54,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 37",
+    "eigenKeuze": "3.500 m",
+    "oordeel": "goed",
+    "reden": "sterk lijkend op stap 3 vraag 1/9/18 (dubbel-achtig, gelaten)",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 55,
+    "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 38",
+    "eigenKeuze": "40 m²",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij '40 m' noemde het goede antwoord (getal klopt + m²); niveaus.basis gaf antwoord",
+    "hersteld": true,
+    "wijziging": "hint noemde het goede antwoord → \"Kijk naar de eenheid: meet je een oppervlakte in meters of in vierkante meters?\" | basis gaf antwoord → basis: \"Oppervlakte = lengte × breedte. Let ook op de eenheid.\","
+  }
+]

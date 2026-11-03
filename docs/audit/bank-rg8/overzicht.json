@@ -1,0 +1,28 @@
+{
+ "pad": "doorstroomtoets-rekenen-g8",
+ "file": "./doorstroomtoetsRekenenG8.js",
+ "totaal": 264,
+ "alGoedgekeurd": 89,
+ "uitgeschakeld": 14,
+ "open": 161,
+ "pakketten": [
+  {
+   "nr": 1,
+   "aantal": 55,
+   "van": "doorstroomtoets-rekenen-g8 stap 1 vraag 1",
+   "tot": "doorstroomtoets-rekenen-g8 stap 3 vraag 38"
+  },
+  {
+   "nr": 2,
+   "aantal": 55,
+   "van": "doorstroomtoets-rekenen-g8 stap 3 vraag 39",
+   "tot": "doorstroomtoets-rekenen-g8 stap 4 vraag 52"
+  },
+  {
+   "nr": 3,
+   "aantal": 51,
+   "van": "doorstroomtoets-rekenen-g8 stap 4 vraag 53",
+   "tot": "doorstroomtoets-rekenen-g8 stap 6 vraag 24"
+  }
+ ]
+}

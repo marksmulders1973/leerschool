@@ -1,0 +1,102 @@
+[
+ {
+  "nr": 111,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De juf **...** gisteren extra goed op.'* Welke verleden tijd van *letten* hoort op de puntjes?",
+  "options": [
+   "lette",
+   "lete",
+   "letde",
+   "let"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het hele werkwoord heeft dubbel-t in het midden — verdwijnt die zomaar?",
+   "De stam eindigt op t — 't kofschip! Dus geen -de.",
+   "Dat is de tegenwoordige tijd. 'Gisteren' vraagt om verleden tijd."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'let' + te ('t kofschip) = **lette**. Net als: zetten → zette, zitten → (pas op, sterk werkwoord: zat!).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 112,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De kinderen **...** om drie uur opgehaald.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "worden",
+   "wordt",
+   "word",
+   "worde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'De kinderen' = zij (meervoud). Welke vorm hoort bij een meervoud?",
+   "Stam + t is voor één persoon (hij/zij/het) — hier zijn het er meer.",
+   "Deze vorm bestaat niet — kijk nog eens naar het meervoud."
+  ],
+  "niveaus": null,
+  "explanation": "'De kinderen' = meervoud → **worden**. Bij een meervoud is de persoonsvorm gelijk aan het hele werkwoord.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 113,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin (een **bevel**) is goed gespeld?",
+  "options": [
+   "Meld je hier aan voor de sportdag.",
+   "Meldt je hier aan voor de sportdag.",
+   "Melt je hier aan voor de sportdag.",
+   "Melden je hier aan voor de sportdag."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een bevel krijgt alleen de stam — geen t erachter, ook al klinkt het zo.",
+   "Zeg 'ik ... me aan' — hoor je aan het eind van de stam een d of een t?",
+   "Een bevel begint niet met het hele werkwoord."
+  ],
+  "niveaus": null,
+  "explanation": "Gebiedende wijs = stam: '**Meld** je aan'. De stam van melden eindigt op een d.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 114,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De brandweerman **...** gisteren een kat uit de boom.'* Welke verleden tijd van *redden* hoort op de puntjes?",
+  "options": [
+   "redde",
+   "redte",
+   "red",
+   "rede"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zit de d van de stam in 't kofschip? Nee — dus welke uitgang krijgt hij?",
+   "Dat is de tegenwoordige tijd of een bevel — 'gisteren' vraagt om verleden tijd.",
+   "Er mist een letter: het hele werkwoord heeft dubbel-d in het midden."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'red' eindigt op d (niet in 't kofschip) → +de: **redde**. Vergelijk: hij zette (t = kofschip), hij redde (d = niet).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

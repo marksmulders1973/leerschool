@@ -1,0 +1,28 @@
+{
+ "pad": "doorstroomtoets-taal-g8",
+ "file": "./doorstroomtoetsTaalG8.js",
+ "totaal": 237,
+ "alGoedgekeurd": 117,
+ "uitgeschakeld": 6,
+ "open": 114,
+ "pakketten": [
+  {
+   "nr": 1,
+   "aantal": 55,
+   "van": "doorstroomtoets-taal-g8 stap 1 vraag 1",
+   "tot": "doorstroomtoets-taal-g8 stap 4 vraag 14"
+  },
+  {
+   "nr": 2,
+   "aantal": 55,
+   "van": "doorstroomtoets-taal-g8 stap 4 vraag 15",
+   "tot": "doorstroomtoets-taal-g8 stap 5 vraag 20"
+  },
+  {
+   "nr": 3,
+   "aantal": 4,
+   "van": "doorstroomtoets-taal-g8 stap 5 vraag 21",
+   "tot": "doorstroomtoets-taal-g8 stap 5 vraag 24"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 54",
+    "oud": "wrongHints: [null, \"Eerst de prijs per flesje uit de doos: €6 ÷ 24.\", \"Vergelijk de prijs van één flesje uit de doos met €2,50 — het verschil is groter.\", \"Vergelijk per flesje, niet per doos.\"],",
+    "nieuw": "wrongHints: [null, \"Reken eerst uit wat één flesje uit de doos kost.\", \"Vergelijk de prijs van één flesje uit de doos met €2,50 — het verschil is groter.\", \"Vergelijk per flesje, niet per doos.\"],",
+    "reden": "hint rekende de deelsom voor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 55",
+    "oud": "wrongHints: [null, \"Dat is alleen het inchecken — de reis naar het vliegveld moet er nog vanaf.\", \"Twee stappen terug: trek eerst 2:30 van 14:20 af, en dan nóg de reistijd.\", \"Te vroeg — tel vanaf 14:20 de twee stappen nog eens precies terug.\"],",
+    "nieuw": "wrongHints: [null, \"Dat is alleen het inchecken — de reis naar het vliegveld moet er nog vanaf.\", \"Twee stappen terug: eerst de incheck-tijd eraf, en dan nóg de reistijd.\", \"Te vroeg — tel vanaf 14:20 de twee stappen nog eens precies terug.\"],",
+    "reden": "hint rekende de aftreksom voor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 56",
+    "oud": "wrongHints: [null, \"Reken eerst per persoon (300 ÷ 4 gram), keer dan 6.\", \"Dat zou voor 8 personen zijn.\", \"Te weinig — voor 2 personen extra heb je meer dan 50 gram nodig. Reken per persoon.\"],",
+    "nieuw": "wrongHints: [null, \"Reken eerst uit hoeveel gram pasta één persoon krijgt.\", \"Dat zou voor 8 personen zijn.\", \"Te weinig — voor 2 personen extra heb je meer dan 50 gram nodig. Reken per persoon.\"],",
+    "reden": "hint rekende de hele som voor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 2",
+    "oud": "wrongHints: [null, \"Eén euro te veel — vul aan van €3,60 naar €4, dan naar €5.\", \"60 cent terug klopt niet — hoeveel is er van €3,60 tot €4,00?\", \"Dat is te veel — check je aftrekking met aanvullen.\"],",
+    "nieuw": "wrongHints: [null, \"Controleer met aanvullen: tel vanaf €3,60 op tot €5.\", \"60 cent terug klopt niet — hoeveel is er van €3,60 tot €4,00?\", \"Dat is te veel — check je aftrekking met aanvullen.\"],",
+    "reden": "'één euro te veel' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 7",
+    "oud": "wrongHints: [null, \"Reken de kiloprijs van het kleine pak uit: €4,40 hoort bij 400 gram — wat kost 1000 gram dan?\", \"€4,40 × 2,5 komt niet uit op €12 — reken het na.\", \"Jawel: reken beide om naar de prijs per kilo.\"],",
+    "nieuw": "wrongHints: [null, \"Reken de kiloprijs van het kleine pak uit: €4,40 hoort bij 400 gram — wat kost 1000 gram dan?\", \"Reken uit wat 1 kilo van het kleine pak zou kosten en vergelijk dat met €12.\", \"Jawel: reken beide om naar de prijs per kilo.\"],",
+    "reden": "hint noemde de factor 2,5"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 8",
+    "oud": "wrongHints: [null, \"Je hebt vermenigvuldigd — voor de literprijs moet je juist delen door 1,5.\", \"Dat is de prijs van een halve liter.\", \"Dat is de helft van de flesprijs — maar de fles is geen 2 liter.\"],",
+    "nieuw": "wrongHints: [null, \"Je hebt vermenigvuldigd — voor de literprijs moet je juist delen door 1,5.\", \"Je hebt €2,10 door 3 gedeeld — kijk nog eens hoeveel liter er in de fles zit.\", \"Dat is de helft van de flesprijs — maar de fles is geen 2 liter.\"],",
+    "reden": "'halve liter' verraadt het antwoord (verdubbelen)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 9",
+    "oud": "q: \"Een spijkerbroek van **€26** is afgeprijsd met **€4 korting**. Wat betaal je?\",\r\n        ref: \"1F\",\r\n        options: [\"€22\", \"€30\", \"€4\", \"€21\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"Korting gaat er vanáf, niet erbij.\", \"Dat is de korting zelf, niet de nieuwe prijs.\", \"Reken 26 − 4 nog eens na.\"],\r\n        explanation: \"€26 − €4 korting = **€22**.\",",
+    "nieuw": "q: \"Een spijkerbroek van **€26,50** is afgeprijsd met **€4,75 korting**. Wat betaal je?\",\r\n        ref: \"1F\",\r\n        options: [\"€21,75\", \"€31,25\", \"€4,75\", \"€22,25\"],\r\n        answer: 0,\r\n        wrongHints: [null, \"Korting gaat er vanáf, niet erbij.\", \"Dat is de korting zelf, niet de nieuwe prijs.\", \"Kijk goed naar de centen: van 50 cent kun je geen 75 cent aftrekken zonder een euro te 'lenen'.\"],\r\n        explanation: \"€26,50 − €4,75: eerst €26,50 − €4 = €22,50, dan nog €0,75 eraf = **€21,75**.\",",
+    "reden": "te makkelijk voor groep 8 (26 − 4); nu kommagetal met lenen"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 11",
+    "oud": "wrongHints: [null, \"Zet de komma's recht onder elkaar — 4,8 is 4,80, niet 0,48.\", \"De 5 honderdsten zijn kwijtgeraakt — 4,80 + 3,45 heeft óók honderdsten.\", \"Check 4 + 3 nog eens, en vergeet het 'onthouden' bij 8 + 4 tienden niet.\"],",
+    "nieuw": "wrongHints: [null, \"Zet de komma's recht onder elkaar — 4,8 is 4,80, niet 0,48.\", \"Zet beide getallen met evenveel cijfers achter de komma onder elkaar en tel elke kolom op.\", \"Check 4 + 3 nog eens, en vergeet het 'onthouden' bij 8 + 4 tienden niet.\"],",
+    "reden": "hint noemde het ontbrekende cijfer (antwoord 8,25)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 12",
+    "oud": "wrongHints: [null, \"Eén euro te veel — vul aan van €7,35 naar €8, dan naar €10.\", \"Tien cent te veel — van €7,35 naar €7,40 is maar 5 cent... klopt je aanvulling?\", \"Je hebt 35 cent teruggegeven in plaats van aangevuld tot de hele euro.\"],",
+    "nieuw": "wrongHints: [null, \"Controleer met aanvullen: tel vanaf €7,35 op tot €10.\", \"Kijk goed naar de centen: hoeveel cent is het van €7,35 tot €8,00?\", \"Je hebt 35 cent teruggegeven in plaats van aangevuld tot de hele euro.\"],",
+    "reden": "'één euro te veel' verraadt het antwoord; 'tien cent te veel' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 13",
+    "oud": "wrongHints: [null, \"10 × €3,50 = €35 — dat is nog niet genoeg.\", \"Dan heeft hij meer dan €42 — hoeveel keer past €3,50 precies in €42?\", \"11 × €3,50 = €38,50 — net te weinig.\"],",
+    "nieuw": "wrongHints: [null, \"10 × €3,50 = €35 — dat is nog niet genoeg.\", \"Dan heeft hij meer dan €42 — hoeveel keer past €3,50 precies in €42?\", \"Controleer: hoeveel heeft Tom na 11 weken gespaard? Is dat genoeg voor €42?\"],",
+    "reden": "'net te weinig' verraadt dat het volgende getal (12) goed is"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 18",
+    "oud": "wrongHints: [null, \"48 cent ligt dichter bij 50 dan bij 45 — er wordt afgerond op het díchtstbijzijnde 5-tal.\", \"Contant rond je af op 5 cent, niet op hele euro's.\", \"Zo veel hoef je niet te betalen — afronden gaat op 5 cent.\"],",
+    "nieuw": "wrongHints: [null, \"Contant rond je af op het dichtstbijzijnde bedrag dat op 0 of 5 cent eindigt — welk bedrag ligt het dichtst bij €17,48?\", \"Contant rond je af op 5 cent, niet op hele euro's.\", \"Zo veel hoef je niet te betalen — afronden gaat op 5 cent.\"],",
+    "reden": "hint noemde 50 cent = het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 19",
+    "oud": "wrongHints: [null, \"Dat is de prijs van 6 schriften — er moet er nog 1 bij.\", \"Je hebt de prijs van 3 schriften met 7 vermenigvuldigd — reken eerst de prijs van 1 schrift uit.\", \"Mooi rond, maar reken het echt uit: eerst €2,85 ÷ 3.\"],",
+    "nieuw": "wrongHints: [null, \"Dat is de prijs van 6 schriften — er moet er nog 1 bij.\", \"Je hebt de prijs van 3 schriften met 7 vermenigvuldigd — reken eerst de prijs van 1 schrift uit.\", \"Mooi rond, maar reken het echt uit: wat kost één schrift?\"],",
+    "reden": "hint rekende de deelsom voor"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 20",
+    "oud": "wrongHints: [null, \"Een kortingsbon gaat er vanáf, niet erbij.\", \"Eén euro te veel — check €13,40 − €2,50 nog eens.\", \"Kijk goed naar de centen: 40 − 50 kan niet zomaar, je moet een euro 'lenen'.\"],",
+    "nieuw": "wrongHints: [null, \"Een kortingsbon gaat er vanáf, niet erbij.\", \"Controleer: tel je antwoord op bij €2,50 — kom je dan op €13,40?\", \"Kijk goed naar de centen: 40 − 50 kan niet zomaar, je moet een euro 'lenen'.\"],",
+    "reden": "'één euro te veel' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 22",
+    "oud": "wrongHints: [null, \"Check de centen van je optelling: 15 + 15 + 95.\", \"Je bent één brood vergeten — het zijn er 2.\", \"Eén euro verschil — reken de aftrekking van €10 nog eens na.\"],",
+    "nieuw": "wrongHints: [null, \"Check de centen van je optelling: 15 + 15 + 95.\", \"Je bent één brood vergeten — het zijn er 2.\", \"Controleer: tel je wisselgeld op bij het totaal van de boodschappen — kom je dan op €10?\"],",
+    "reden": "'één euro verschil' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 24",
+    "oud": "wrongHints: [null, \"Komma-plek mis: 300 gram is 0,3 kilo, geen 3 kilo.\", \"Je hebt de gewichten opgeteld bij de prijs — vermenigvuldig prijs × gewicht in kilo.\", \"0,3 × 14: check die vermenigvuldiging nog eens.\"],",
+    "nieuw": "wrongHints: [null, \"Komma-plek mis: 300 gram is 0,3 kilo, geen 3 kilo.\", \"Je hebt de gewichten opgeteld bij de prijs — vermenigvuldig prijs × gewicht in kilo.\", \"Je weet hoeveel kilo 300 gram is — reken de vermenigvuldiging met €14 nog eens precies na.\"],",
+    "reden": "hint gaf de som 0,3 × 14 kant-en-klaar"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 1",
+    "oud": "wrongHints: [null, \"Van 9:45 naar 10:00 is maar 15 minuten — tel in stapjes.\", \"Dat is te lang — van 9:45 naar 11:45 zou 2 uur zijn, en 11:20 is éérder.\", \"Tien minuten te weinig — check het stukje van 11:00 tot 11:20.\"],",
+    "nieuw": "wrongHints: [null, \"Van 9:45 naar 10:00 is maar 15 minuten — tel in stapjes.\", \"Dat is te lang — van 9:45 naar 11:45 zou 2 uur zijn, en 11:20 is éérder.\", \"Controleer het laatste stukje: hoeveel minuten zitten er tussen 11:00 en 11:20?\"],",
+    "reden": "'tien minuten te weinig' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 9",
+    "oud": "wrongHints: [null, \"Maart heeft maar 31 dagen — na 31 maart begint april.\", \"Dat is 2 weken later, geen 3.\", \"Eén dag te vroeg — tel nog eens precies 21 dagen door vanaf 12 maart.\"],",
+    "nieuw": "wrongHints: [null, \"Maart heeft maar 31 dagen — na 31 maart begint april.\", \"Dat is 2 weken later, geen 3.\", \"Tel nog eens precies 21 dagen door vanaf 12 maart — en let op hoeveel dagen maart heeft.\"],",
+    "reden": "'één dag te vroeg' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 10",
+    "oud": "wrongHints: [null, \"Denk aan het rijmpje van de maanden met 30 dagen — hoort november daarbij?\", \"Dat is februari in een gewoon jaar.\", \"Dat is februari in een schrikkeljaar.\"],",
+    "nieuw": "wrongHints: [null, \"Tel op je knokkels: een knokkel is een maand met 31 dagen, een kuiltje een maand met minder. Waar komt november uit?\", \"Dat is februari in een gewoon jaar.\", \"Dat is februari in een schrikkeljaar.\"],",
+    "reden": "hint gaf het antwoord bijna weg ('hoort november daarbij?')"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 12",
+    "oud": "wrongHints: [null, \"Een minuut heeft 60 seconden, geen 100.\", \"Dat is een halve minuut.\", \"Reken 3 × 60 nog eens uit.\"],",
+    "nieuw": "wrongHints: [null, \"Een minuut heeft 60 seconden, geen 100.\", \"Dat is een halve minuut.\", \"Hoeveel seconden zitten er in één minuut? Reken dan door naar 3 minuten.\"],",
+    "reden": "hint gaf de som 3 × 60 kant-en-klaar"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 16",
+    "oud": "wrongHints: [null, \"Na :60 begint een nieuw uur — 16:65 bestaat niet op de klok.\", \"Tien minuten te laat — check 20 + 45.\", \"Dat zou een les van meer dan een uur zijn.\"],",
+    "nieuw": "wrongHints: [null, \"Na :60 begint een nieuw uur — 16:65 bestaat niet op de klok.\", \"Tel de 45 minuten in stapjes op bij 16:20: eerst tot 17:00, dan de rest.\", \"Dat zou een les van meer dan een uur zijn.\"],",
+    "reden": "'tien minuten te laat' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 17",
+    "oud": "wrongHints: [null, \"De 13 minuten wachten op het overstapstation horen óók bij de reis.\", \"Veel te kort — de hele reis loopt van 10:24 tot 11:50, dat is meer dan een uur.\", \"Tien minuten te veel — tel van 10:24 via 11:00 naar 11:50.\"],",
+    "nieuw": "wrongHints: [null, \"De 13 minuten wachten op het overstapstation horen óók bij de reis.\", \"Veel te kort — de hele reis loopt van 10:24 tot 11:50, dat is meer dan een uur.\", \"Tel van 10:24 eerst een heel uur verder, en dan de minuten tot 11:50.\"],",
+    "reden": "'tien minuten te veel' verraadt het antwoord"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 18",
+    "oud": "wrongHints: [null, \"Een uur heeft 60 minuten, geen 100.\", \"Een half uur is 30 minuten, geen 5.\", \"Dat is precies 2 uur — het halve uur mist.\"],",
+    "nieuw": "wrongHints: [null, \"Een uur heeft 60 minuten, geen 100.\", \"0,5 uur is geen 5 minuten — hoeveel minuten duurt een half uur?\", \"Dat is precies 2 uur — het halve uur mist.\"],",
+    "reden": "hint gaf de laatste stap (30 min) kant-en-klaar"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 19",
+    "oud": "wrongHints: [null, \"Dat is een half uur rijden — 20 minuten is korter.\", \"20 minuten is een derde van een uur, geen vijfde.\", \"Dat zou een heel uur rijden zijn.\"],",
+    "nieuw": "wrongHints: [null, \"Dat is een half uur rijden — 20 minuten is korter.\", \"Je deelde door 5 — welk deel van een uur is 20 minuten?\", \"Dat zou een heel uur rijden zijn.\"],",
+    "reden": "hint noemde de factor (een derde)"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 21",
+    "oud": "wrongHints: [null, \"Check: 80 × 4 is geen 400.\", \"Dat is 80 ÷ 10 — je moet 400 ÷ 80 rekenen.\", \"Je hebt afgetrokken — deel de afstand door de tijd.\"],",
+    "nieuw": "wrongHints: [null, \"Check: 80 × 4 is geen 400.\", \"Je deelde de tijd door 10 — welk getal moet je door welk getal delen voor meter per seconde?\", \"Je hebt afgetrokken — deel de afstand door de tijd.\"],",
+    "reden": "hint gaf de som 400 ÷ 80 kant-en-klaar"
+  },
+  {
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 23",
+    "oud": "wrongHints: [null, \"Meer dan 60 minuten past niet achter de dubbele punt — wissel om naar een uur.\", \"Tien minuten te veel — check 40 + 55.\", \"Er mist een uur — het is bijna 3 uur vliegen.\"],",
+    "nieuw": "wrongHints: [null, \"Meer dan 60 minuten past niet achter de dubbele punt — wissel om naar een uur.\", \"Controleer de minuten: 40 + 55 is meer dan een uur — hoeveel minuten blijven er over na het hele uur?\", \"Tel eerst de 2 hele uren op bij 11:40, en daarna pas de 55 minuten.\"],",
+    "reden": "'tien minuten te veel' verraadt het antwoord; 'er mist een uur' verraadt het antwoord"
+  }
+]

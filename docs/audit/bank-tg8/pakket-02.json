@@ -1,0 +1,1413 @@
+[
+ {
+  "nr": 56,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
+  "options": [
+   "een appel",
+   "Ik",
+   "eet",
+   "Ik eet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onderwerp.",
+   "Werkwoord.",
+   "Dat zijn onderwerp en werkwoord samen. Welke woordgroep ondergaat de actie?"
+  ],
+  "niveaus": {
+   "basis": "Lijdend voorwerp = WAT ondergaat de actie. Vraag 'wat + werkwoord + onderwerp?'",
+   "simpeler": "'Ik eet een appel.' → wat eet ik? Een appel.",
+   "nogSimpeler": "WAT? → lijdend voorwerp."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 57,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft een **bijvoeglijk naamwoord**?",
+  "options": [
+   "De rode auto rijdt.",
+   "De auto rijdt.",
+   "Papa wast de auto.",
+   "De auto staat in de garage."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zegt een woord hier hoe de auto eruitziet?",
+   "Zegt een woord hier hoe de auto eruitziet?",
+   "Zegt een woord hier hoe de auto eruitziet?"
+  ],
+  "niveaus": {
+   "basis": "Bijvoeglijk naamwoord = beschrijft hoe iets is (rood, groot, klein).",
+   "simpeler": "'De rode auto' → 'rode' = welke kleur de auto is.",
+   "nogSimpeler": "Hoe is het? = bijvoeglijk!"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 58,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke is een **persoonlijk voornaamwoord**?",
+  "options": [
+   "ik",
+   "auto",
+   "snel",
+   "boos"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een zelfstandig naamwoord — een ding.",
+   "Dat is een bijwoord — zegt hoe iets gaat.",
+   "Dat is een bijvoeglijk naamwoord — beschrijft een gevoel."
+  ],
+  "niveaus": {
+   "basis": "Persoonlijk voornaamwoord = ik, jij, hij, zij, wij, jullie. Vervangt naam.",
+   "simpeler": "In plaats van 'Tom' kun je 'hij' zeggen. 'Hij' is een persoonlijk voornaamwoord.",
+   "nogSimpeler": "ik/jij/hij/zij = persoonlijk vnw."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 59,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin staat **goed** met komma's?",
+  "options": [
+   "In mijn tas zitten een boek, een pen en een appel.",
+   "In mijn tas zitten een boek een pen, en een appel.",
+   "In mijn tas, zitten een boek en een pen.",
+   "In mijn tas zitten een boek, een pen, en, een appel."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tussen 'een boek' en 'een pen' ontbreekt iets, en vóór 'en' staat er juist iets te veel.",
+   "Na 'In mijn tas' hoort geen komma: de zin loopt gewoon door.",
+   "Rond 'en' komen bij een opsomming geen komma's."
+  ],
+  "niveaus": {
+   "basis": "appels, peren en druiven — komma + komma + en.",
+   "simpeler": "Komma's tussen, geen komma voor 'en'.",
+   "nogSimpeler": "Geen komma voor 'en'"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 60,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is een **volledige zin**?",
+  "options": [
+   "De hond rent in het park.",
+   "De rennende hond in het park.",
+   "Rennen in het park.",
+   "Hond in het park."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen werkwoord — alleen 'rennende' (bijvoeglijk). Geen complete zin.",
+   "Geen onderwerp.",
+   "Waar is het werkwoord?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 61,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk leesteken hoort op de lege plek? *'Wat doe je daar___'*",
+  "options": [
+   "?",
+   ".",
+   "!",
+   ","
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is dit een mededeling, of wil iemand iets weten?",
+   "Roept iemand dit uit, of wil hij iets weten?",
+   "Komma sluit geen zin af."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 62,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin staat **goed** geschreven (directe rede)?",
+  "options": [
+   "Mama zei: 'Kom eten.'",
+   "Mama zei kom eten.",
+   "Mama: zei 'kom eten'.",
+   "'Mama zei kom eten.'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen aanhalingstekens om wat ze zegt.",
+   "Dubbele punt verkeerd geplaatst.",
+   "Hele zin tussen aanhalingstekens, dat klopt niet."
+  ],
+  "niveaus": {
+   "basis": "Mama zei: 'Kom eten.'",
+   "simpeler": "Zei + dubbele punt + 'Kom eten.'",
+   "nogSimpeler": "Aanhalingstekens om citaat"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 63,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Tom is moe ___ hij heeft hard gewerkt.'* Welk **voegwoord** past?",
+  "options": [
+   "omdat",
+   "maar",
+   "of",
+   "dus"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen tegenstelling — moe + hard gewerkt past samen.",
+   "'Of' gebruik je bij een keuze tussen twee dingen. Kiest Tom hier iets?",
+   "'Dus' leidt een gevolg in. Is 'hard gewerkt' het gevolg van moe zijn, of juist de reden?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 64,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin gebruikt een **hoofdletter goed**?",
+  "options": [
+   "Op zaterdag ga ik naar Amsterdam.",
+   "op zaterdag ga ik naar amsterdam.",
+   "Op Zaterdag ga ik naar Amsterdam.",
+   "Op zaterdag ga ik naar amsterdam."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Begin zin én plaatsnaam = hoofdletter.",
+   "Dagen krijgen géén hoofdletter.",
+   "Amsterdam = plaatsnaam = hoofdletter."
+  ],
+  "niveaus": {
+   "basis": "Op zaterdag ga ik naar Amsterdam.",
+   "simpeler": "Begin + plaats = hoofdletter. Dag = klein.",
+   "nogSimpeler": "Amsterdam met A, zaterdag met z"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 65,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De jongen ___ in het park.'* Welk werkwoord (verleden tijd, enkelvoud)?",
+  "options": [
+   "speelde",
+   "speelden",
+   "speelt",
+   "spelen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Meervoud-vorm.",
+   "Tegenwoordige tijd.",
+   "Dat is het hele werkwoord."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 66,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 25",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft een **fout** in werkwoordspelling?",
+  "options": [
+   "Hij vind het leuk.",
+   "Hij vindt het leuk.",
+   "Wij vinden het leuk.",
+   "Vinden jullie het leuk?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deze is goed — t hoort erbij.",
+   "Kijk nog eens: 'wij' met het hele werkwoord 'vinden'. Wat is daar mis aan?",
+   "'Jullie' staat achter het werkwoord, dan schrijf je 'vinden jullie'. Wat is daar mis aan?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 67,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **meervoud** van 'leerling'?",
+  "options": [
+   "leerlingen",
+   "leerlinges",
+   "leerling",
+   "leerlingens"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?",
+   "Enkelvoud.",
+   "Dubbel meervoud."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 68,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Ik vind ___ ijs lekker.'* Welk **bepaald lidwoord** past?",
+  "options": [
+   "het",
+   "de",
+   "een",
+   "die"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop: klinkt 'de ijs' goed?",
+   "'Een' is een onbepaald lidwoord — de vraag zoekt een bepaald lidwoord.",
+   "Aanwijzend, geen lidwoord."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 69,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 28",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De kat ___ van Marieke.'* Welk werkwoord (tegenwoordig)?",
+  "options": [
+   "is",
+   "zijn",
+   "ben",
+   "was"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Meervoud — hier 1 kat.",
+   "1e persoon.",
+   "Verleden."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 70,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 29",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk **leesteken** kondigt een opsomming aan (bv *'Tom kookte ___ pasta, pizza, pannenkoeken'*)?",
+  "options": [
+   "Dubbele punt",
+   "Vraagteken",
+   "Uitroepteken",
+   "Punt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vraagteken sluit alleen vragen af.",
+   "Een uitroepteken komt aan het eind van een uitroep.",
+   "Na een punt begint een nieuwe zin."
+  ],
+  "niveaus": {
+   "basis": "Dubbele punt.",
+   "simpeler": "`:` kondigt opsomming aan.",
+   "nogSimpeler": "Dubbele punt"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 71,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft een **uitroepteken** nodig?",
+  "options": [
+   "Wat een mooie dag!",
+   "Wat doe je",
+   "Hij komt thuis",
+   "Klaar voor de toets"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vraag — vraagteken.",
+   "Gewone zin — punt.",
+   "Geen sterke emotie/uitroep."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 72,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 31",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Tom ___ blij toen hij won.'* Welk werkwoord (verleden tijd)?",
+  "options": [
+   "was",
+   "is",
+   "zijn",
+   "ben"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tegenwoordig.",
+   "Meervoud.",
+   "1e persoon."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 73,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De wind woei, het regende ___ de zon scheen ook.'* Welk **voegwoord** past?",
+  "options": [
+   "maar",
+   "omdat",
+   "dus",
+   "of"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is het regenen de reden dat het waaide? Lees de zin met 'omdat' hardop.",
+   "Komt de zon dóór de regen? Lees de zin met 'dus' hardop.",
+   "'Of' gebruik je bij een keuze. Moet je hier kiezen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 74,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Tom rent. Hij rent snel.'* — Welk woord is een **bijwoord**?",
+  "options": [
+   "snel",
+   "Tom",
+   "rent",
+   "Hij"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eigennaam, geen bijwoord.",
+   "Werkwoord.",
+   "Persoonlijk voornaamwoord."
+  ],
+  "niveaus": {
+   "basis": "snel.",
+   "simpeler": "'Snel' beschrijft hoe Tom rent.",
+   "nogSimpeler": "snel"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 75,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 34",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Tom heeft **een** rode auto.'* Wat is **'een'**?",
+  "options": [
+   "Onbepaald lidwoord",
+   "Bijvoeglijk naamwoord",
+   "Werkwoord",
+   "Telwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beschrijft niet de auto.",
+   "Geen actie.",
+   "Hier niet — als getal had het 'één' moeten zijn met klemtoon."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 76,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 35",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **werkwoord**?",
+  "options": [
+   "lopen",
+   "auto",
+   "snel",
+   "hoog"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Auto is een ding: een zelfstandig naamwoord.",
+   "Snel zegt hoe iets gaat.",
+   "Hoog zegt hoe iets is."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 77,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 36",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Het **onderwerp** van zin *'De hond rent in het park.'* is...",
+  "options": [
+   "De hond",
+   "rent",
+   "in het park",
+   "het park"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Werkwoord.",
+   "Plaatsbepaling.",
+   "Plek-aanduiding."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 78,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 37",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Sinds hij verhuisde wonen we ___ uit elkaar.'* Welk **bijwoord** past?",
+  "options": [
+   "ver",
+   "veel",
+   "lang",
+   "vaak"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Veel' gaat over een hoeveelheid. Past dat bij 'uit elkaar wonen'?",
+   "'Lang' gaat over tijd. Past dat bij 'uit elkaar wonen'?",
+   "'Vaak' gaat over hoe vaak iets gebeurt. Past dat bij 'uit elkaar wonen'?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 79,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 38",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Wij hebben een ___ huis.'* Wat is een **passend bijvoeglijk naamwoord**?",
+  "options": [
+   "mooi",
+   "lopen",
+   "snel",
+   "hij"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Werkwoord.",
+   "Past bij actie, niet bij huis.",
+   "Voornaamwoord."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 80,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 42",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft de **leestekens** goed?",
+  "options": [
+   "Wat een mooie dag is het vandaag!",
+   "Wat een mooie dag is het vandaag.",
+   "Wat een mooie dag, is het vandaag!",
+   "wat een mooie dag is het vandaag!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een uitroep van verbazing of blijdschap krijgt een ander leesteken dan een punt.",
+   "De komma breekt de zin op een rare plek.",
+   "Vergeet het begin van de zin niet."
+  ],
+  "niveaus": null,
+  "explanation": "Een uitroep eindigt op een **uitroepteken** en begint met een hoofdletter: 'Wat een mooie dag is het vandaag!'",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 81,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 43",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **onderwerp** in: *'De kinderen van groep 8 oefenen elke dag.'*?",
+  "options": [
+   "De kinderen van groep 8",
+   "oefenen",
+   "elke dag",
+   "groep 8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de persoonsvorm (het werkwoord).",
+   "Dat zegt wannéér — niet wie.",
+   "Bijna — maar het hele zinsdeel hoort erbij. Wie oefenen er?"
+  ],
+  "niveaus": null,
+  "explanation": "Vraag: **wie** oefenen? → 'De kinderen van groep 8' (het hele zinsdeel). Het onderwerp is vaak meer dan één woord.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 82,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 44",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft de **komma** op de juiste plek?",
+  "options": [
+   "Als je klaar bent, mag je naar buiten.",
+   "Als je, klaar bent mag je naar buiten.",
+   "Als je klaar, bent mag je naar buiten.",
+   "Als je klaar bent mag, je naar buiten."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De komma splijt hier 'je' van 'klaar bent' — lees hardop: waar pauzeer je vanzelf?",
+   "De komma hoort tussen de twee delen van de zin, niet midden in een deel.",
+   "Lees hardop — pauzeer je écht na 'mag'?"
+  ],
+  "niveaus": null,
+  "explanation": "De komma komt tussen de bijzin ('Als je klaar bent') en de hoofdzin ('mag je naar buiten') — precies waar je hoort te pauzeren.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 83,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 45",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Lisa zei **...** ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
+  "options": [
+   "Dubbele punt en aanhalingstekens (: “…”)",
+   "Alleen een komma, geen aanhalingstekens (,)",
+   "Puntkomma en aanhalingstekens (; “…”)",
+   "Geen leestekens, alleen een punt aan het eind"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij iemand die létterlijk iets zegt, is een komma alleen niet genoeg.",
+   "Een puntkomma verbindt twee zinnen — hier kondig je gesproken woorden aan.",
+   "Zonder leestekens zie je niet waar het citaat begint."
+  ],
+  "niveaus": null,
+  "explanation": "Voor een **citaat** (letterlijke woorden) gebruik je een dubbele punt + aanhalingstekens: Lisa zei: “Ik kom morgen langs.”",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 84,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 46",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk **verwijswoord** hoort op de puntjes? *'Het meisje **...** daar fietst, is mijn zus.'*",
+  "options": [
+   "dat",
+   "die",
+   "wat",
+   "wie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Die' hoort bij de-woorden — is het 'de meisje' of 'het meisje'?",
+   "'Wat' verwijst naar iets onbepaalds ('alles wat...').",
+   "'Wie' gebruik je na een voorzetsel ('met wie')."
+  ],
+  "niveaus": {
+   "basis": "dat — want 'het meisje'.",
+   "simpeler": "Het-woord → dat. De-woord → die.",
+   "nogSimpeler": "dat"
+  },
+  "explanation": "**Het** meisje = een het-woord → verwijswoord **dat**. Bij de-woorden gebruik je 'die' (de jongen die...).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 85,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 47",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin staat in de **lijdende vorm** (passief)?",
+  "options": [
+   "De taart wordt door oma gebakken.",
+   "Oma bakt vandaag een grote taart.",
+   "Oma gaat morgen een taart bakken.",
+   "De taart van oma is heel lekker."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hier dóét oma het zelf — dat is de bedrijvende vorm.",
+   "Ook hier is oma zelf aan het werk.",
+   "Deze zin zegt alleen iets óver de taart, er gebeurt geen handeling."
+  ],
+  "niveaus": null,
+  "explanation": "Lijdende vorm: het onderwerp **ondergaat** de handeling. 'De taart wordt gebakken' — herken het aan 'worden' + door.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 86,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 48",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **lijdend voorwerp** in: *'Max leent een boek van de bieb.'*?",
+  "options": [
+   "een boek",
+   "Max",
+   "de bieb",
+   "leent"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Max is degene die leent — het onderwerp.",
+   "'Van de bieb' zegt waar het vandaan komt.",
+   "Dat is de persoonsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "Vraag: wat leent Max? → **een boek**. Het lijdend voorwerp vind je met 'wie/wat + persoonsvorm + onderwerp'.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 87,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 49",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is een **vraagzin** met het juiste leesteken?",
+  "options": [
+   "Weet jij hoe laat de bus komt?",
+   "Weet jij hoe laat de bus komt.",
+   "Jij weet hoe laat de bus komt.",
+   "Weet jij hoe laat de bus komt!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De zin vráágt iets — welk leesteken hoort daarbij?",
+   "De woordvolgorde is hier van een gewone zin, geen vraag.",
+   "Een uitroepteken is voor uitroepen, niet voor vragen."
+  ],
+  "niveaus": null,
+  "explanation": "Vraagzin: werkwoord vooraan ('Weet jij…') + **vraagteken** aan het eind.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 88,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 50",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'mijn broertje en ik gaan zaterdag naar artis in amsterdam'* — hoeveel **hoofdletters** mist deze zin?",
+  "options": [
+   "Drie",
+   "Eén",
+   "Twee",
+   "Vier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk ook naar namen van dierentuinen en steden.",
+   "Tel nog eens: kijk naar het begin van de zin én naar álle namen.",
+   "'Zaterdag' en 'broertje' krijgen er geen — tel alleen wat echt moet."
+  ],
+  "niveaus": null,
+  "explanation": "Drie: **M**ijn (zinsbegin), **A**rtis (naam) en **A**msterdam (plaatsnaam). Dagen van de week krijgen géén hoofdletter.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 89,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 52",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **meewerkend voorwerp** in: *'De juf geeft de klas een compliment.'*?",
+  "options": [
+   "de klas",
+   "De juf",
+   "een compliment",
+   "geeft"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De juf is degene die geeft — het onderwerp.",
+   "Dat is wát ze geeft — het lijdend voorwerp.",
+   "Dat is de persoonsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "Vraag: **aan wie** geeft de juf een compliment? → aan de klas. Truc: je kunt er 'aan' voor zetten.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 90,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 53",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **netjes geschreven** (geen spreektaal)?",
+  "options": [
+   "Dat heeft hij niet gedaan.",
+   "Dat heb die niet gedaan.",
+   "Dat hebbie niet gedaan.",
+   "Dattie niet heb gedaan."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Die' als onderwerp voor een persoon is spreektaal — wat hoort er in schrijftaal?",
+   "'Hebbie' is hoe je het zégt, niet hoe je het schrijft.",
+   "Twee spreektaal-vormen tegelijk."
+  ],
+  "niveaus": null,
+  "explanation": "Schrijftaal: 'Dat heeft **hij** niet gedaan.' Op de toets kiezen ze graag spreektaal-instinkers zoals 'hebbie' en 'dattie'.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 91,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Word je morgen opgehaald?",
+   "Wordt je morgen opgehaald?",
+   "Wort je morgen opgehaald?",
+   "Worden je morgen opgehaald?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat 'je' (= jij) áchter de persoonsvorm? Dan valt de t weg — net als bij 'loop je?'.",
+   "Zeg de ik-vorm hardop: 'ik ... ziek'. Welke letter hoor je aan het eind van de stam?",
+   "Eén persoon (je) — waarom zou je dan het meervoud gebruiken?"
+  ],
+  "niveaus": null,
+  "explanation": "Staat **je/jij achter** de persoonsvorm, dan vervalt de t: '**Word** je opgehaald?' Vergelijk: 'Loop je mee?' — ook geen t erbij.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 92,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Hij **...** de sleutel onder de mat.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "vindt",
+   "vind",
+   "vint",
+   "vinden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wie doet het? Hij — en bij hij/zij/het komt er iets achter de stam.",
+   "Vervang door 'lopen': zeg je 'hij loop' of 'hij loopt'? En de stam houdt zijn eigen slotletter.",
+   "Er is maar één 'hij' — kies geen meervoudsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "Hij = stam + t. De stam is 'vind' (van vinden), dus hij **vindt**. Truc: 'hij loopt' heeft een t → hier dus ook.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 93,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *verhuizen* (ik-vorm)?",
+  "options": [
+   "verhuisde",
+   "verhuiste",
+   "verhuizde",
+   "verhuisd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het hele werkwoord: ver-hui-ZEN. Zit de z in 't kofschip?",
+   "In de verleden tijd schrijf je nooit een z vlak vóór de uitgang — de spelling past zich aan.",
+   "Dat is het voltooid deelwoord ('ik ben ...') — de vraag is de verleden tijd ('gisteren ... ik')."
+  ],
+  "niveaus": null,
+  "explanation": "Kijk naar het hele werkwoord: verhui**z**en. De z staat níét in 't kofschip → -de: 'ik **verhuisde**'.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 94,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *praten* (hij-vorm)?",
+  "options": [
+   "praatte",
+   "praate",
+   "prate",
+   "praatde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De stam eindigt al op een t én er komt nog een uitgang achter. Hoeveel t's worden dat samen?",
+   "Waar is de lange aa gebleven? Zeg het woord hardop.",
+   "Staat de t van de stam in 't kofschip? Dan geen -de."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'praat' eindigt op t ('t kofschip) → +te. Samen: praat + te = **praatte**, met dubbel-t.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 95,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Het ongeluk is gisteren gebeurd.",
+   "Het ongeluk is gisteren gebeurt.",
+   "Het ongeluk is gisteren gebeurdt.",
+   "Het ongeluk is gisteren gebeuren."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Is' + werkwoord = voltooid deelwoord. Doe de verleng-truc: 'de gebeur...e dingen' — welke letter hoor je?",
+   "dt gebruik je alleen bij een persoonsvorm met hij/zij/het, niet bij een voltooid deelwoord.",
+   "Na 'is' hoort een voltooid deelwoord, niet het hele werkwoord."
+  ],
+  "niveaus": null,
+  "explanation": "'Is' + voltooid deelwoord → eindigt hier op d (verleng-truc: 'gebeur**d**e'). Vergelijk: 'het gebeurt vaak' = persoonsvorm met t.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 96,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Zoiets **...** wel vaker op school.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "gebeurt",
+   "gebeurd",
+   "gebeurdt",
+   "gebeuren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Wel vaker' gaat over nu, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?",
+   "Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.",
+   "'Zoiets' is enkelvoud — kies geen meervoudsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "'Zoiets' = het → persoonsvorm stam + t: **gebeurt**. Alleen mét 'is/heeft' ervoor schrijf je de d-vorm.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 97,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Wij zijn vorig jaar verhuisd.",
+   "Wij zijn vorig jaar verhuist.",
+   "Wij zijn vorig jaar verhuizd.",
+   "Wij zijn vorig jaar verhuisde."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Zijn' + werkwoord = voltooid deelwoord. Verleng: 'de verhuis...e spullen' — welke letter hoor je?",
+   "In een voltooid deelwoord schrijf je nooit een z vlak voor de slotletter.",
+   "Dat is de verleden tijd — na 'zijn' hoort een voltooid deelwoord zonder e."
+  ],
+  "niveaus": null,
+  "explanation": "Voltooid deelwoord van verhuizen: verleng-truc 'verhuis**d**e spullen' → eindigt op een d.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 98,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin (een **bevel**) is goed gespeld?",
+  "options": [
+   "Word eens wakker, slaapkop!",
+   "Wordt eens wakker, slaapkop!",
+   "Wort eens wakker, slaapkop!",
+   "Worden eens wakker, slaapkop!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een bevel (gebiedende wijs) gebruik je alleen de stam — geen extra letter erachter.",
+   "Zeg 'ik ... wakker' — de stam eindigt op een d, die verdwijnt niet.",
+   "Een bevel aan één slaapkop krijgt geen meervoudsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "Gebiedende wijs = **alleen de stam**: '**Word** wakker!' Bij een bevel komt er nooit een extra t bij.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 99,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin (een **bevel**) is goed gespeld?",
+  "options": [
+   "Houd rekening met je buren.",
+   "Houdt rekening met je buren.",
+   "Hout rekening met je buren.",
+   "Houden rekening met je buren."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gebiedende wijs = alleen de stam. Krijgt de stam hier nog een t erbij?",
+   "Dat is het spul waar planken van gemaakt worden! Zeg 'ik ... van jou' — welke letter hoor je aan het eind?",
+   "Een bevel begint met de stam, niet met het hele werkwoord."
+  ],
+  "niveaus": null,
+  "explanation": "Bevel = stam: '**Houd** rekening'. De stam van houden eindigt op een d (denk aan 'ik houd').",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 100,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *gamen* (ik-vorm)?",
+  "options": [
+   "gamede",
+   "gamete",
+   "gaamde",
+   "gamedde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hoort 'geem' — de laatste klank van de stam is een m. Staat de m in 't kofschip?",
+   "Engelse werkwoorden volgen de Nederlandse regels, maar de Engelse schrijfwijze van de stam blijft heel.",
+   "De stam eindigt niet op een d — waarom zou je er dan twee schrijven?"
+  ],
+  "niveaus": null,
+  "explanation": "Je hoort 'geem' → eindklank m, niet in 't kofschip → +de. De Engelse stam blijft staan: game + de = **gamede**. Ziet er gek uit, is toch goed!",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 101,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Ik heb de hele middag gegamed.",
+   "Ik heb de hele middag gegamet.",
+   "Ik heb de hele middag gegamede.",
+   "Ik heb de hele middag gegaamd."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De eindklank van de stam is een m — kijk in 't kofschip welke slotletter daarbij hoort.",
+   "Er staat een e te veel aan het eind — een voltooid deelwoord eindigt korter.",
+   "De Engelse schrijfwijze van de stam blijft heel; je plakt er alleen iets voor en achter."
+  ],
+  "niveaus": null,
+  "explanation": "Voltooid deelwoord: ge + game + d = **gegamed**. De m is geen 't kofschip-letter, dus een d aan het eind.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 102,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *appen* (zij-vorm, enkelvoud)?",
+  "options": [
+   "appte",
+   "apte",
+   "appde",
+   "apde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het hele werkwoord heeft dubbel-p — die raak je in de verleden tijd niet kwijt.",
+   "De stam eindigt op een p. Zit de p in 't kofschip?",
+   "Twee dingen tegelijk mis: tel de p's én check 't kofschip."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'app' eindigt op p ('t kofschip) → +te: zij **appte**. De dubbele p blijft staan.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 103,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Ze heeft me gisteren geappt.",
+   "Ze heeft me gisteren geapt.",
+   "Ze heeft me gisteren geappd.",
+   "Ze heeft me gisteren geapte."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoeveel p's heeft 'appen'? Die verdwijnen niet in het voltooid deelwoord.",
+   "De stam eindigt op p — 't kofschip! Welke slotletter hoort daarbij?",
+   "Dat lijkt op een verleden tijd. Na 'heeft' komt een voltooid deelwoord zonder e aan het eind."
+  ],
+  "niveaus": null,
+  "explanation": "Ge + app + t = **geappt**. De p staat in 't kofschip, dus een t aan het eind — en de dubbele p blijft.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 104,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *downloaden* (ik-vorm)?",
+  "options": [
+   "downloadde",
+   "downloade",
+   "downloadte",
+   "downloaden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De stam eindigt al op een d en er komt nog een uitgang achter. Hoeveel d's worden dat?",
+   "De laatste klank van de stam is een d — die zit niet in 't kofschip, dus geen -te.",
+   "Dat is het hele werkwoord, niet de verleden tijd van 'ik'."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'download' eindigt op d (niet 't kofschip) → +de: download + de = **downloadde**, met dubbel-d. Net als 'antwoordde'.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 105,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Ik heb het spel gedownload.",
+   "Ik heb het spel gedownloadt.",
+   "Ik heb het spel gedownloaded.",
+   "Ik heb het spel gedownloadd."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "dt schrijf je alleen bij een persoonsvorm (hij/zij/het + stam op d) — is dit een persoonsvorm?",
+   "Dat is de Engelse spelling — in een Nederlandse zin volg je de Nederlandse regels.",
+   "Dubbel-d aan het eind van een woord bestaat in het Nederlands niet."
+  ],
+  "niveaus": null,
+  "explanation": "Voltooid deelwoord: ge + download = **gedownload**. De stam eindigt al op d, er komt niets meer bij (nooit dt in een voltooid deelwoord).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 106,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Wat vind jij van de nieuwe gymleraar?",
+   "Wat vindt jij van de nieuwe gymleraar?",
+   "Wat find jij van de nieuwe gymleraar?",
+   "Wat vinden jij van de nieuwe gymleraar?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat 'jij' áchter de persoonsvorm? Dan geen t erbij — vergelijk: 'wat loop jij?'.",
+   "Dit werkwoord schrijf je met een v, ook al klinkt het bijna als een f.",
+   "'Jij' is één persoon — geen meervoud."
+  ],
+  "niveaus": null,
+  "explanation": "'Jij' staat achter de persoonsvorm → alleen de stam: 'wat **vind** jij?'. Truc: 'wat loop jij?' — ook zonder t.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 107,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is de **verleden tijd** van *antwoorden* (hij-vorm)?",
+  "options": [
+   "antwoordde",
+   "antwoorde",
+   "antwoordte",
+   "antwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De stam eindigt op een d én er komt een uitgang achter. Tel de d's.",
+   "Zit de d in 't kofschip (t, k, f, s, ch, p)? Nee — dus geen -te.",
+   "Dat is de stam (tegenwoordige tijd) — de vraag is verleden tijd."
+  ],
+  "niveaus": null,
+  "explanation": "Stam 'antwoord' + de = **antwoordde** met dubbel-d. Je hoort maar één d, maar je schrijft er twee.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 108,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "De brief wordt vandaag verstuurd.",
+   "De brief word vandaag verstuurd.",
+   "De brief wordt vandaag verstuurt.",
+   "De brief word vandaag verstuurt."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'De brief' = hij/het → persoonsvorm met stam + t.",
+   "Het tweede werkwoord is een voltooid deelwoord — verleng: 'de verstuur...e brief'. Welke letter hoor je?",
+   "Beide werkwoorden verdienen een tweede blik: wie is het onderwerp, en wat is het voltooid deelwoord?"
+  ],
+  "niveaus": null,
+  "explanation": "'De brief' = hij → '**wordt**' (stam + t). En 'verstuurd' is een voltooid deelwoord → d (verleng-truc: verstuur**d**e).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 109,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Zonder zonnebrandcrème **...** je huid snel.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "verbrandt",
+   "verbrand",
+   "verbrandd",
+   "verbranden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het onderwerp is 'je huid' (= hij), niet 'je'. Wat komt er dan achter de stam?",
+   "Dubbel-d als werkwoordsuitgang bestaat in het Nederlands niet.",
+   "'Je huid' is enkelvoud — geen meervoudsvorm."
+  ],
+  "niveaus": null,
+  "explanation": "Let op: het onderwerp is '**je huid**' (= hij), niet 'je'! Dus stam + t: je huid **verbrandt**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 110,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Werkwoordspelling — de lastige gevallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Hij heeft beterschap beloofd.",
+   "Hij heeft beterschap belooft.",
+   "Hij heeft beterschap beloovd.",
+   "Hij heeft beterschap beloofde."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verleng het deelwoord: 'de beloo...e beterschap' — hoor je een d of een t?",
+   "Een v kan niet aan het eind van een lettergreep blijven staan — maar welke slotletter komt erna?",
+   "Dat is een verleden tijd — na 'heeft' hoort een voltooid deelwoord zonder e."
+  ],
+  "niveaus": null,
+  "explanation": "Voltooid deelwoord van beloven: verleng-truc 'beloof**d**e' → eindigt op een d (de v wordt een f).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

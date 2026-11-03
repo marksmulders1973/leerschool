@@ -10,7 +10,9 @@ import { join } from "node:path";
 const root = process.cwd();
 const DOEL = { "sq-vo-": "src/data/sampleQuestions.js", "sq-": "src/data/sampleQuestions.js", "topics-": "src/data/topics.js", "tb-": "src/data/textbookQuestions.js",
   // bank-dump.mjs (3 nov 2026): integrale nakijkronde van één leerpad door meerdere nakijkers tegelijk
-  "svg8-": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js" };
+  "svg8-": "src/learnPaths/doorstroomtoetsStudievaardighedenG8.js",
+  "rg8-": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "tg8-": "src/learnPaths/doorstroomtoetsTaalG8.js" };
 const map = join(root, "docs", "audit");
 const alleen = process.argv[2] || null;
 const lijsten = readdirSync(map).filter((f) => f.startsWith("fixes-") && f.endsWith(".json") && (!alleen || f === `fixes-${alleen}.json`));

@@ -1,0 +1,1277 @@
+[
+ {
+  "nr": 111,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 53",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Opa is **3 keer zo oud** als Daan. Samen zijn ze **76 jaar**. Hoe oud is Daan?",
+  "options": [
+   "19",
+   "25",
+   "57",
+   "38"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daan is 1 deel, opa 3 delen — hoeveel delen zijn dat samen?",
+   "Dat is veel te oud voor Daan — opa is de oudste.",
+   "Dat is de helft — maar opa is geen 2 keer maar 3 keer zo oud."
+  ],
+  "niveaus": null,
+  "explanation": "Daan = 1 deel, opa = 3 delen → samen 4 delen = 76 jaar → 1 deel = **19 jaar** (opa is 57).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 112,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 54",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een doos met **24 flesjes** water kost **€6**. Op het festival kost één flesje **€2,50**. Hoeveel keer zo duur is een festival-flesje?",
+  "options": [
+   "10 keer",
+   "4 keer",
+   "2,5 keer",
+   "6 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eerst de prijs per flesje uit de doos: €6 ÷ 24.",
+   "Vergelijk de prijs van één flesje uit de doos met €2,50 — het verschil is groter.",
+   "Vergelijk per flesje, niet per doos."
+  ],
+  "niveaus": null,
+  "explanation": "Doos: €6 ÷ 24 = €0,25 per flesje. Festival: €2,50 ÷ €0,25 = **10 keer** zo duur.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 113,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 55",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Het vliegtuig vertrekt om **14:20**. Je moet **2,5 uur van tevoren** inchecken en de reis naar het vliegveld duurt **45 minuten**. Hoe laat moet je uiterlijk van huis?",
+  "options": [
+   "11:05",
+   "11:50",
+   "12:35",
+   "10:45"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is alleen het inchecken — de reis naar het vliegveld moet er nog vanaf.",
+   "Twee stappen terug: trek eerst 2:30 van 14:20 af, en dan nóg de reistijd.",
+   "Te vroeg — tel vanaf 14:20 de twee stappen nog eens precies terug."
+  ],
+  "niveaus": null,
+  "explanation": "Inchecken: 14:20 − 2:30 = 11:50. Van huis: 11:50 − 0:45 = **11:05**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 114,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 56",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een recept voor **4 personen** vraagt **300 gram** pasta. Hoeveel gram heb je nodig voor **6 personen**?",
+  "options": [
+   "450 gram",
+   "500 gram",
+   "600 gram",
+   "350 gram"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken eerst per persoon (300 ÷ 4 gram), keer dan 6.",
+   "Dat zou voor 8 personen zijn.",
+   "Te weinig — voor 2 personen extra heb je meer dan 50 gram nodig. Reken per persoon."
+  ],
+  "niveaus": null,
+  "explanation": "300 g ÷ 4 = 75 g per persoon → 6 × 75 g = **450 gram**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 115,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Sanne koopt bij de kantine een pakje **appelsap van €1,35** en een **koek van €0,85**. Hoeveel betaalt ze samen?",
+  "options": [
+   "€2,20",
+   "€2,10",
+   "€1,20",
+   "€2,30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk nog eens naar de centen: 35 + 85 is meer dan 100.",
+   "Dat is minder dan het sap alleen al — tel beide bedragen op.",
+   "Net iets te veel — reken 35 + 85 cent nog eens na."
+  ],
+  "niveaus": null,
+  "explanation": "€1,35 + €0,85: eerst de centen (35 + 85 = 120 cent = €1,20), dan €1 + €1,20 = **€2,20**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 116,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Job betaalt met een briefje van **€5** voor een tijdschrift van **€3,60**. Hoeveel **wisselgeld** krijgt hij?",
+  "options": [
+   "€1,40",
+   "€2,40",
+   "€1,60",
+   "€2,60"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eén euro te veel — vul aan van €3,60 naar €4, dan naar €5.",
+   "60 cent terug klopt niet — hoeveel is er van €3,60 tot €4,00?",
+   "Dat is te veel — check je aftrekking met aanvullen."
+  ],
+  "niveaus": null,
+  "explanation": "Aanvullen: €3,60 + €0,40 = €4,00, dan + €1,00 = €5,00. Wisselgeld = €0,40 + €1,00 = **€1,40**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 117,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **0,7 × 10**?",
+  "options": [
+   "7",
+   "0,07",
+   "70",
+   "0,7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij × 10 wordt het getal GROTER, niet kleiner — de komma schuift naar rechts.",
+   "Dat is × 100. Hoeveel plekken schuift de komma bij × 10?",
+   "Het getal moet veranderen — × 10 is niet × 1."
+  ],
+  "niveaus": null,
+  "explanation": "× 10 = komma 1 plek naar rechts: 0,7 → **7**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 118,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **3,45 × 100**?",
+  "options": [
+   "345",
+   "34,5",
+   "3450",
+   "0,0345"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is × 10. Bij × 100 schuift de komma 2 plekken.",
+   "Dat is × 1000 — tel de nullen in 100.",
+   "De komma schoof de verkeerde kant op — × 100 maakt groter."
+  ],
+  "niveaus": null,
+  "explanation": "× 100 = komma 2 plekken naar rechts: 3,45 → 34,5 → **345**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 119,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **62,5 ÷ 10**?",
+  "options": [
+   "6,25",
+   "625",
+   "0,625",
+   "62,05"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Delen door 10 maakt het getal KLEINER — de komma schuift naar links.",
+   "Dat is ÷ 100. Bij ÷ 10 schuift de komma maar 1 plek.",
+   "Er komt geen extra nul tussen — de komma schuift alleen op."
+  ],
+  "niveaus": null,
+  "explanation": "÷ 10 = komma 1 plek naar links: 62,5 → **6,25**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 120,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Appels kosten **€1,80 per kilo**. Mama koopt **2,5 kilo**. Wat betaalt ze?",
+  "options": [
+   "€4,50",
+   "€4,30",
+   "€3,60",
+   "€2,80"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Optellen in plaats van vermenigvuldigen? De prijs is per kilo.",
+   "Dat is precies 2 kilo — de halve kilo mist nog.",
+   "Te weinig — 2 kilo kost al meer dan dit."
+  ],
+  "niveaus": null,
+  "explanation": "2 kilo = 2 × €1,80 = €3,60. Halve kilo = €0,90. Samen €3,60 + €0,90 = **€4,50**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 121,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Kaas in de aanbieding: een pak van **400 gram voor €4,40** of een pak van **1 kilo voor €12,00**. Welk pak is per kilo het **voordeligst**?",
+  "options": [
+   "Het pak van 400 gram",
+   "Het kilopak",
+   "Ze zijn even duur per kilo",
+   "Dat kun je niet berekenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken de kiloprijs van het kleine pak uit: €4,40 hoort bij 400 gram — wat kost 1000 gram dan?",
+   "€4,40 × 2,5 komt niet uit op €12 — reken het na.",
+   "Jawel: reken beide om naar de prijs per kilo."
+  ],
+  "niveaus": null,
+  "explanation": "400 gram past 2,5 keer in een kilo → kiloprijs kleine pak = 2,5 × €4,40 = €11,00. Dat is minder dan €12,00, dus **het pak van 400 gram** is voordeliger.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 122,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een fles cola van **1,5 liter** kost **€2,10**. Wat is de prijs **per liter**?",
+  "options": [
+   "€1,40",
+   "€3,15",
+   "€0,70",
+   "€1,05"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt vermenigvuldigd — voor de literprijs moet je juist delen door 1,5.",
+   "Dat is de prijs van een halve liter.",
+   "Dat is de helft van de flesprijs — maar de fles is geen 2 liter."
+  ],
+  "niveaus": null,
+  "explanation": "€2,10 ÷ 1,5 = **€1,40** per liter. (Check: 1,5 × €1,40 = €2,10 ✓)",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 123,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een spijkerbroek van **€26** is afgeprijsd met **€4 korting**. Wat betaal je?",
+  "options": [
+   "€22",
+   "€30",
+   "€4",
+   "€21"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Korting gaat er vanáf, niet erbij.",
+   "Dat is de korting zelf, niet de nieuwe prijs.",
+   "Reken 26 − 4 nog eens na."
+  ],
+  "niveaus": null,
+  "explanation": "€26 − €4 korting = **€22**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 124,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een trui kost **€24**. Actie: **'2e trui halve prijs'**. Wat kosten 2 truien samen?",
+  "options": [
+   "€36",
+   "€48",
+   "€24",
+   "€12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 2 × €24 — zonder de actie.",
+   "Dat is maar één trui.",
+   "Dat is alleen de 2e trui — de eerste moet je ook betalen."
+  ],
+  "niveaus": null,
+  "explanation": "1e trui €24 + 2e trui €12 (halve prijs) = **€36**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 125,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **4,8 + 3,45**?",
+  "options": [
+   "8,25",
+   "3,93",
+   "8,2",
+   "7,25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zet de komma's recht onder elkaar — 4,8 is 4,80, niet 0,48.",
+   "De 5 honderdsten zijn kwijtgeraakt — 4,80 + 3,45 heeft óók honderdsten.",
+   "Check 4 + 3 nog eens, en vergeet het 'onthouden' bij 8 + 4 tienden niet."
+  ],
+  "niveaus": null,
+  "explanation": "Komma's uitlijnen: 4,80 + 3,45. Honderdsten: 0+5=5. Tienden: 8+4=12 → 2 opschrijven, 1 onthouden. Helen: 4+3+1=8. Antwoord: **8,25**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 126,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Lisa betaalt met **€10** voor boodschappen van **€7,35**. Hoeveel krijgt ze terug?",
+  "options": [
+   "€2,65",
+   "€3,65",
+   "€2,75",
+   "€3,35"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eén euro te veel — vul aan van €7,35 naar €8, dan naar €10.",
+   "Tien cent te veel — van €7,35 naar €7,40 is maar 5 cent... klopt je aanvulling?",
+   "Je hebt 35 cent teruggegeven in plaats van aangevuld tot de hele euro."
+  ],
+  "niveaus": null,
+  "explanation": "Aanvullen: €7,35 + €0,65 = €8,00, dan + €2,00 = €10,00. Terug: **€2,65**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 127,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Tom spaart **€3,50 zakgeld per week**. Hij wil een game van **€42**. Hoeveel weken moet hij sparen?",
+  "options": [
+   "12 weken",
+   "10 weken",
+   "14 weken",
+   "11 weken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 × €3,50 = €35 — dat is nog niet genoeg.",
+   "Dan heeft hij meer dan €42 — hoeveel keer past €3,50 precies in €42?",
+   "11 × €3,50 = €38,50 — net te weinig."
+  ],
+  "niveaus": null,
+  "explanation": "€42 ÷ €3,50 = **12 weken**. (Check: 12 × €3,50 = €42 ✓)",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 128,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **100 × 0,46**?",
+  "options": [
+   "46",
+   "4,6",
+   "460",
+   "0,0046"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is × 10 — bij × 100 schuift de komma 2 plekken.",
+   "Dat is × 1000. Tel de nullen: 100 heeft er 2.",
+   "× 100 maakt het getal groter, niet kleiner."
+  ],
+  "niveaus": null,
+  "explanation": "× 100 = komma 2 plekken naar rechts: 0,46 → 4,6 → **46**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 129,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **0,25 × 1000**?",
+  "options": [
+   "250",
+   "25",
+   "2500",
+   "0,00025"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is × 100. 1000 heeft 3 nullen — dus 3 komma-plekken.",
+   "Eén komma-plek te veel opgeschoven — tel de nullen nog eens.",
+   "De komma moet naar rechts bij vermenigvuldigen, niet naar links."
+  ],
+  "niveaus": null,
+  "explanation": "× 1000 = komma 3 plekken naar rechts: 0,25 → 2,5 → 25 → **250**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 130,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "In je portemonnee: **5 munten van €0,20** en **3 munten van €0,50**. Hoeveel heb je?",
+  "options": [
+   "€2,50",
+   "€1,50",
+   "€2,00",
+   "€0,70"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zijn alleen de drie 50-cent-munten — de 20-cent-munten tellen ook mee.",
+   "Kijk nog eens: 5 × €0,20 én 3 × €0,50, dan optellen.",
+   "Dat is één munt van elk — je hebt er meer."
+  ],
+  "niveaus": null,
+  "explanation": "5 × €0,20 = €1,00 en 3 × €0,50 = €1,50. Samen **€2,50**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 131,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Een sixpack met **6 flesjes** drinken kost **€4,20**. Wat kost **1 flesje**?",
+  "options": [
+   "€0,70",
+   "€0,60",
+   "€0,80",
+   "€1,40"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "6 × €0,60 = €3,60 — dat is minder dan de prijs van het sixpack.",
+   "6 × €0,80 = €4,80 — dat is meer dan het sixpack kost.",
+   "Dat zou de prijs van 2 flesjes zijn."
+  ],
+  "niveaus": null,
+  "explanation": "€4,20 ÷ 6 = **€0,70** per flesje.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 132,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je boodschappen kosten **€17,48**. Je betaalt **contant** (met munten en briefjes). Welk bedrag betaal je afgerond?",
+  "options": [
+   "€17,50",
+   "€17,45",
+   "€17,00",
+   "€18,00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "48 cent ligt dichter bij 50 dan bij 45 — er wordt afgerond op het díchtstbijzijnde 5-tal.",
+   "Contant rond je af op 5 cent, niet op hele euro's.",
+   "Zo veel hoef je niet te betalen — afronden gaat op 5 cent."
+  ],
+  "niveaus": null,
+  "explanation": "Contant wordt afgerond op 5 cent. €17,48 ligt het dichtst bij **€17,50**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 133,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "**3 dezelfde schriften** kosten samen **€2,85**. Wat kosten **7** van die schriften?",
+  "options": [
+   "€6,65",
+   "€5,70",
+   "€19,95",
+   "€7,00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de prijs van 6 schriften — er moet er nog 1 bij.",
+   "Je hebt de prijs van 3 schriften met 7 vermenigvuldigd — reken eerst de prijs van 1 schrift uit.",
+   "Mooi rond, maar reken het echt uit: eerst €2,85 ÷ 3."
+  ],
+  "niveaus": null,
+  "explanation": "1 schrift = €2,85 ÷ 3 = €0,95. Dan 7 × €0,95 = **€6,65**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 134,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Je boodschappen kosten **€13,40**. Je hebt een **kortingsbon van €2,50**. Wat betaal je?",
+  "options": [
+   "€10,90",
+   "€15,90",
+   "€11,90",
+   "€10,40"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een kortingsbon gaat er vanáf, niet erbij.",
+   "Eén euro te veel — check €13,40 − €2,50 nog eens.",
+   "Kijk goed naar de centen: 40 − 50 kan niet zomaar, je moet een euro 'lenen'."
+  ],
+  "niveaus": null,
+  "explanation": "€13,40 − €2,50 = **€10,90**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 135,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk getal is het **grootst**?",
+  "options": [
+   "0,8",
+   "0,75",
+   "0,699",
+   "0,08"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schrijf 0,75 en 0,8 allebei in honderdsten en vergelijk die eens.",
+   "Meer cijfers betekent niet groter — kijk naar de eerste plek achter de komma.",
+   "Let op de plaats van de nul: 0,08 is 8 hónderdsten."
+  ],
+  "niveaus": null,
+  "explanation": "Maak ze even lang: 0,800 / 0,750 / 0,699 / 0,080. Grootst is **0,8**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 136,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Bij de bakker: **2 broden van €2,15 per stuk** en **kaas voor €4,95**. Je betaalt met **€10**. Hoeveel krijg je terug?",
+  "options": [
+   "€0,75",
+   "€0,85",
+   "€2,90",
+   "€1,75"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Check de centen van je optelling: 15 + 15 + 95.",
+   "Je bent één brood vergeten — het zijn er 2.",
+   "Eén euro verschil — reken de aftrekking van €10 nog eens na."
+  ],
+  "niveaus": null,
+  "explanation": "2 × €2,15 = €4,30. Plus kaas: €4,30 + €4,95 = €9,25. Terug: €10,00 − €9,25 = **€0,75**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 137,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is **7,5 ÷ 100**?",
+  "options": [
+   "0,075",
+   "750",
+   "0,75",
+   "75"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Delen maakt kleiner — jouw komma schoof naar rechts.",
+   "Dat is ÷ 10. Bij ÷ 100 schuift de komma 2 plekken naar links.",
+   "Dat is × 10 in plaats van ÷ 100."
+  ],
+  "niveaus": null,
+  "explanation": "÷ 100 = komma 2 plekken naar links: 7,5 → 0,75 → **0,075**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 138,
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Geld & kommagetallen — ~20 min",
+  "vanafGroep": null,
+  "q": "Ham kost **€14 per kilo**. Je koopt **300 gram**. Wat betaal je?",
+  "options": [
+   "€4,20",
+   "€42,00",
+   "€14,30",
+   "€4,70"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Komma-plek mis: 300 gram is 0,3 kilo, geen 3 kilo.",
+   "Je hebt de gewichten opgeteld bij de prijs — vermenigvuldig prijs × gewicht in kilo.",
+   "0,3 × 14: check die vermenigvuldiging nog eens."
+  ],
+  "niveaus": null,
+  "explanation": "300 gram = 0,3 kilo. 0,3 × €14 = **€4,20**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 139,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "De gymles begint om **9:45** en eindigt om **11:20**. Hoe lang duurt de les?",
+  "options": [
+   "1 uur en 35 minuten",
+   "1 uur en 45 minuten",
+   "2 uur en 25 minuten",
+   "1 uur en 25 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Van 9:45 naar 10:00 is maar 15 minuten — tel in stapjes.",
+   "Dat is te lang — van 9:45 naar 11:45 zou 2 uur zijn, en 11:20 is éérder.",
+   "Tien minuten te weinig — check het stukje van 11:00 tot 11:20."
+  ],
+  "niveaus": null,
+  "explanation": "9:45 → 10:00 = 15 min. 10:00 → 11:00 = 1 uur. 11:00 → 11:20 = 20 min. Samen: **1 uur en 35 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 140,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "De film begint om **14:10** en duurt **1 uur en 50 minuten**. Hoe laat is de film afgelopen?",
+  "options": [
+   "16:00",
+   "15:60",
+   "16:10",
+   "15:50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een klok kent geen 60-minutenstand — 60 minuten is een heel uur erbij.",
+   "Dat zou een film van precies 2 uur zijn.",
+   "Je bent de 10 beginminuten vergeten mee te tellen."
+  ],
+  "niveaus": null,
+  "explanation": "14:10 + 1 uur = 15:10. Dan + 50 min: 15:10 + 50 = **16:00** (want 10 + 50 = 60 minuten = 1 heel uur).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 141,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Het is **10:50**. Over **drie kwartier** begint de training. Hoe laat begint de training?",
+  "options": [
+   "11:35",
+   "11:25",
+   "11:05",
+   "11:20"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Drie kwartier is 45 minuten, geen 35.",
+   "Dat is één kwartier — er staan er drie.",
+   "Twee kwartier is 30 minuten — er moet nog één kwartier bij."
+  ],
+  "niveaus": null,
+  "explanation": "Drie kwartier = 3 × 15 = 45 minuten. 10:50 + 10 min = 11:00, dan nog 35 min = **11:35**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 142,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "De trein vertrekt om **8:37** en komt aan om **9:12**. Hoe lang duurt de reis?",
+  "options": [
+   "35 minuten",
+   "45 minuten",
+   "25 minuten",
+   "75 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — tel eerst van 8:37 tot 9:00, en dan verder tot 9:12.",
+   "Te weinig — alleen van 8:37 naar 9:00 is al meer dan 20 minuten.",
+   "Je rekent alsof 100 minuten in een uur gaan — het zijn er 60."
+  ],
+  "niveaus": null,
+  "explanation": "8:37 → 9:00 = 23 min. 9:00 → 9:12 = 12 min. Samen **35 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 143,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Een auto rijdt **120 kilometer in 1,5 uur**. Wat is de **gemiddelde snelheid** in kilometer per uur?",
+  "options": [
+   "80 km per uur",
+   "180 km per uur",
+   "60 km per uur",
+   "90 km per uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt vermenigvuldigd — snelheid = afstand gedééld door tijd.",
+   "Dat zou kloppen bij 2 uur rijden, niet bij 1,5 uur.",
+   "Check: 1,5 × 90 is meer dan 120."
+  ],
+  "niveaus": null,
+  "explanation": "Snelheid = afstand ÷ tijd = 120 ÷ 1,5 = **80 km per uur**. (Check: 1,5 × 80 = 120 ✓)",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 144,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Een fietser rijdt **15 kilometer per uur**. Hoe ver komt hij in **3 uur**?",
+  "options": [
+   "45 kilometer",
+   "18 kilometer",
+   "5 kilometer",
+   "30 kilometer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt opgeteld — elk uur komen er 15 kilometer bíj, drie keer.",
+   "Je hebt gedeeld — de afstand wordt juist groter naarmate je langer fietst.",
+   "Dat is na 2 uur — er is nog een derde uur."
+  ],
+  "niveaus": null,
+  "explanation": "3 uur × 15 km per uur = **45 kilometer**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 145,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Papa rijdt **60 kilometer per uur**. Hoe lang doet hij over **90 kilometer**?",
+  "options": [
+   "1,5 uur",
+   "1 uur en 20 minuten",
+   "2 uur",
+   "30 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te kort — na 1 uur is hij 60 km ver; de overige 30 km kost meer dan 20 minuten.",
+   "In 2 uur zou hij 120 km rijden — dat is te ver.",
+   "In 30 minuten rijdt hij maar 30 km."
+  ],
+  "niveaus": null,
+  "explanation": "Eerste 60 km = 1 uur. Resterende 30 km = half uur. Samen **1,5 uur**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 146,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Vandaag is het **12 maart**. Het schoolkamp begint **precies 3 weken later**. Op welke datum begint het kamp?",
+  "options": [
+   "2 april",
+   "33 maart",
+   "26 maart",
+   "1 april"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Maart heeft maar 31 dagen — na 31 maart begint april.",
+   "Dat is 2 weken later, geen 3.",
+   "Eén dag te vroeg — tel nog eens precies 21 dagen door vanaf 12 maart."
+  ],
+  "niveaus": null,
+  "explanation": "3 weken = 21 dagen. 12 + 21 = 33, maar maart heeft 31 dagen → 33 − 31 = **2 april**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 147,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **dagen** heeft de maand **november**?",
+  "options": [
+   "30",
+   "31",
+   "28",
+   "29"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk aan het rijmpje van de maanden met 30 dagen — hoort november daarbij?",
+   "Dat is februari in een gewoon jaar.",
+   "Dat is februari in een schrikkeljaar."
+  ],
+  "niveaus": null,
+  "explanation": "November heeft **30** dagen (net als april, juni en september).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 148,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Dit jaar valt Lottes verjaardag op een **vrijdag**. Op welke dag valt haar verjaardag **volgend jaar**? (Er zit geen 29 februari tussen.)",
+  "options": [
+   "zaterdag",
+   "vrijdag",
+   "zondag",
+   "donderdag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "365 dagen is nét geen heel aantal weken — er blijft 1 dag over.",
+   "Dat zou bij een schrikkel-verschuiving van 2 dagen horen.",
+   "De dag schuift vooruit, niet achteruit."
+  ],
+  "niveaus": null,
+  "explanation": "365 dagen = 52 weken + 1 dag. De verjaardag schuift dus 1 dag op: vrijdag → **zaterdag**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 149,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **seconden** zijn **3 minuten**?",
+  "options": [
+   "180",
+   "300",
+   "30",
+   "130"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een minuut heeft 60 seconden, geen 100.",
+   "Dat is een halve minuut.",
+   "Reken 3 × 60 nog eens uit."
+  ],
+  "niveaus": null,
+  "explanation": "3 × 60 = **180** seconden.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 150,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "In New York is het **6 uur vroeger** dan in Nederland. In Nederland is het **20:00**. Hoe laat is het in New York?",
+  "options": [
+   "14:00",
+   "02:00",
+   "26:00",
+   "13:00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Vroeger' betekent eráf, niet erbij.",
+   "Een klok gaat niet verder dan 24 uur — en vroeger betekent terugrekenen.",
+   "Dat is 7 uur verschil — het zijn er 6."
+  ],
+  "niveaus": null,
+  "explanation": "6 uur vroeger = 6 uur eraf: 20:00 − 6 uur = **14:00**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 151,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Op de digitale klok staat **17:45**. Hoe zeg je dat?",
+  "options": [
+   "kwart voor 6",
+   "kwart over 6",
+   "kwart voor 5",
+   "half 6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "45 minuten ná het hele uur is 15 minuten vóór het volgende uur.",
+   "17:45 is ná 17:00, dus het gaat richting 6 uur, niet richting 5.",
+   "Half 6 zou 17:30 zijn."
+  ],
+  "niveaus": null,
+  "explanation": "17:45 = 15 minuten vóór 18:00 = **kwart voor 6** (aan het eind van de middag).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 152,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Yara fietst in **2 uur** naar oma: **24 kilometer**. Wat was haar gemiddelde snelheid?",
+  "options": [
+   "12 km per uur",
+   "48 km per uur",
+   "22 km per uur",
+   "6 km per uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt vermenigvuldigd — deel de afstand door de tijd.",
+   "Je hebt afgetrokken — snelheid is een deelsom.",
+   "Dan zou ze in 2 uur maar 12 km komen."
+  ],
+  "niveaus": null,
+  "explanation": "24 km ÷ 2 uur = **12 km per uur**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 153,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Zwemles duurt **45 minuten** en begint om **16:20**. Hoe laat is de les klaar?",
+  "options": [
+   "17:05",
+   "16:65",
+   "17:15",
+   "17:25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Na :60 begint een nieuw uur — 16:65 bestaat niet op de klok.",
+   "Tien minuten te laat — check 20 + 45.",
+   "Dat zou een les van meer dan een uur zijn."
+  ],
+  "niveaus": null,
+  "explanation": "16:20 + 45 min: 20 + 45 = 65 minuten = 1 uur + 5 min → **17:05**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 154,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Trein 1: vertrek **10:24**, aankomst overstapstation **11:02**. Trein 2: vertrek **11:15**, aankomst eindstation **11:50**. Hoe lang duurt de héle reis?",
+  "options": [
+   "1 uur en 26 minuten",
+   "1 uur en 13 minuten",
+   "48 minuten",
+   "1 uur en 36 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De 13 minuten wachten op het overstapstation horen óók bij de reis.",
+   "Veel te kort — de hele reis loopt van 10:24 tot 11:50, dat is meer dan een uur.",
+   "Tien minuten te veel — tel van 10:24 via 11:00 naar 11:50."
+  ],
+  "niveaus": null,
+  "explanation": "Van 10:24 tot 11:50: 10:24 → 11:24 = 1 uur, 11:24 → 11:50 = 26 min. Totaal **1 uur en 26 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 155,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **minuten** zijn **2,5 uur**?",
+  "options": [
+   "150",
+   "250",
+   "125",
+   "120"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een uur heeft 60 minuten, geen 100.",
+   "Een half uur is 30 minuten, geen 5.",
+   "Dat is precies 2 uur — het halve uur mist."
+  ],
+  "niveaus": null,
+  "explanation": "2,5 × 60 = **150** minuten.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 156,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Een auto rijdt **90 kilometer per uur**. Hoe ver komt hij in **20 minuten**?",
+  "options": [
+   "30 kilometer",
+   "45 kilometer",
+   "18 kilometer",
+   "90 kilometer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een half uur rijden — 20 minuten is korter.",
+   "20 minuten is een derde van een uur, geen vijfde.",
+   "Dat zou een heel uur rijden zijn."
+  ],
+  "niveaus": null,
+  "explanation": "20 minuten = een derde van een uur. 90 ÷ 3 = **30 kilometer**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 157,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Vandaag is het **dinsdag 14 juli**. Welke dag en datum is het **over 10 dagen**?",
+  "options": [
+   "vrijdag 24 juli",
+   "donderdag 24 juli",
+   "vrijdag 25 juli",
+   "zaterdag 24 juli"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 dagen is een hele week (zelfde dag) plus 3 dagen. Dinsdag plus 3 is niet donderdag.",
+   "De datum: 14 + 10 — reken nog eens.",
+   "Dinsdag + 3 dagen — tel nog eens precies op je vingers."
+  ],
+  "niveaus": null,
+  "explanation": "Datum: 14 + 10 = 24 juli. Dag: dinsdag + 7 = dinsdag, + 3 = **vrijdag 24 juli**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 158,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Een hardloper rent **400 meter in 80 seconden**. Hoeveel meter is dat **per seconde**?",
+  "options": [
+   "5 meter",
+   "4 meter",
+   "8 meter",
+   "320 meter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Check: 80 × 4 is geen 400.",
+   "Dat is 80 ÷ 10 — je moet 400 ÷ 80 rekenen.",
+   "Je hebt afgetrokken — deel de afstand door de tijd."
+  ],
+  "niveaus": null,
+  "explanation": "400 ÷ 80 = **5 meter** per seconde.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 159,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "**Kwart over 8 's ochtends** — hoe staat dat op een digitale klok?",
+  "options": [
+   "08:15",
+   "08:45",
+   "07:45",
+   "20:15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kwart óver, niet kwart vóór.",
+   "Dat is kwart voor 8 — een half uur eerder.",
+   "Dat is 's avonds — kijk naar 'ochtends'."
+  ],
+  "niveaus": null,
+  "explanation": "Kwart over 8 = 15 minuten na 8 uur 's ochtends = **08:15**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 160,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Een vliegtuig vertrekt om **11:40** en de vlucht duurt **2 uur en 55 minuten**. Hoe laat landt het (zelfde tijdzone)?",
+  "options": [
+   "14:35",
+   "13:95",
+   "14:45",
+   "13:35"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Meer dan 60 minuten past niet achter de dubbele punt — wissel om naar een uur.",
+   "Tien minuten te veel — check 40 + 55.",
+   "Er mist een uur — het is bijna 3 uur vliegen."
+  ],
+  "niveaus": null,
+  "explanation": "11:40 + 2 uur = 13:40. Dan + 55 min: 13:40 + 20 = 14:00, + 35 = **14:35**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 161,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Tijd, snelheid & kalender — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoeveel **weken** zijn **63 dagen**?",
+  "options": [
+   "9",
+   "7",
+   "8",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "7 weken zou 49 dagen zijn.",
+   "Reken 8 × 7 — is dat al genoeg?",
+   "Dat is 42 dagen."
+  ],
+  "niveaus": null,
+  "explanation": "63 ÷ 7 = **9** weken.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

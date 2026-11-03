@@ -1,0 +1,1449 @@
+[
+ {
+  "nr": 56,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 39",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Op een kaart met **schaal 1 : 50.000** meet je 6 cm. Hoeveel km is dat in het echt?",
+  "options": [
+   "3 km",
+   "30 km",
+   "300 m",
+   "6 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken 6 × 50.000 cm uit en zet dat om naar km.",
+   "Bij het omrekenen heb je één nul te veel weggehaald.",
+   "De schaal vergroot — 6 cm op de kaart is niet 6 km in het echt."
+  ],
+  "niveaus": null,
+  "explanation": "6 cm × 50.000 = 300.000 cm = 3.000 m = **3 km**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 57,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 40",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "**2,5 liter** = hoeveel milliliter?",
+  "options": [
+   "2.500 ml",
+   "250 ml",
+   "25 ml",
+   "25.000 ml"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 1 liter zit 1.000 ml — schuif drie plekken.",
+   "Dat is een klein glaasje — past 2,5 liter daarin?",
+   "Eén nul te veel."
+  ],
+  "niveaus": null,
+  "explanation": "1 liter = 1.000 ml → 2,5 liter = **2.500 ml**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 58,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 41",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een pak melk weegt **1,03 kg**. Hoeveel **gram** is dat?",
+  "options": [
+   "1.030 gram",
+   "103 gram",
+   "10.300 gram",
+   "1.003 gram"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 1 kg zit 1.000 gram — vermenigvuldig 1,03 daarmee.",
+   "Dat zou ruim 10 kg zijn.",
+   "Let op de komma: hoeveel gram is 0,03 kg?"
+  ],
+  "niveaus": null,
+  "explanation": "1,03 kg × 1.000 = **1.030 gram**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 59,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 42",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "De school begint om **8:45** en de les duurt **70 minuten**. Hoe laat is de les afgelopen?",
+  "options": [
+   "9:55",
+   "9:15",
+   "10:15",
+   "9:45"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "70 minuten is meer dan een half uur.",
+   "Dat zou 90 minuten zijn.",
+   "Dat is precies één uur later — maar de les duurt langer dan een uur."
+  ],
+  "niveaus": null,
+  "explanation": "8:45 + 60 min = 9:45, + 10 min = **9:55**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 60,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 43",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een kubus heeft ribben van **3 cm**. Wat is de **inhoud**?",
+  "options": [
+   "27 cm³",
+   "9 cm³",
+   "18 cm³",
+   "27 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 3 × 3 — voor inhoud reken je lengte × breedte × hoogte.",
+   "Dat is 3 × 6 — tel je vlakken?",
+   "Het getal klopt, maar inhoud meet je in kubieke centimeters (cm³)."
+  ],
+  "niveaus": null,
+  "explanation": "Inhoud kubus = ribbe × ribbe × ribbe = 3 × 3 × 3 = **27 cm³**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 61,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 44",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "**0,75 uur** = hoeveel minuten?",
+  "options": [
+   "45 minuten",
+   "75 minuten",
+   "30 minuten",
+   "55 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Pas op: 0,75 uur is geen 75 minuten — een uur heeft 60 minuten.",
+   "Dat is een half uur (0,5 uur).",
+   "Te veel — 0,75 is driekwart, niet bijna een heel uur."
+  ],
+  "niveaus": null,
+  "explanation": "0,75 = driekwart → driekwart van 60 minuten = **45 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 62,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 45",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een hardloper doet **12 km in 1 uur**. Hoe lang doet hij over 3 km (zelfde tempo)?",
+  "options": [
+   "15 minuten",
+   "12 minuten",
+   "20 minuten",
+   "30 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna — welk deel van 12 km is 3 km? Neem datzelfde deel van een uur.",
+   "Dan zou hij 9 km in een uur lopen.",
+   "Dat is voor 6 km."
+  ],
+  "niveaus": null,
+  "explanation": "3 km = 1/4 van 12 km → 1/4 van 60 minuten = **15 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 63,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 46",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke eenheid gebruik je voor de **afstand Amsterdam–Parijs**?",
+  "options": [
+   "kilometer",
+   "meter",
+   "centimeter",
+   "hectometer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou een getal van honderdduizenden geven — onhandig groot.",
+   "Daarmee meet je een potlood.",
+   "Hectometers zie je alleen op bordjes langs de snelweg."
+  ],
+  "niveaus": null,
+  "explanation": "Lange afstanden meet je in **kilometers** (Amsterdam–Parijs ≈ 500 km).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 64,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 47",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een aquarium is **60 cm lang, 30 cm breed en 40 cm hoog**. Hoeveel **liter** past erin? (1 liter = 1.000 cm³)",
+  "options": [
+   "72 liter",
+   "130 liter",
+   "7,2 liter",
+   "720 liter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.",
+   "Eén komma-plek mis — hoeveel cm³ gaat er in één liter?",
+   "Tien keer te veel — check de nullen."
+  ],
+  "niveaus": null,
+  "explanation": "Inhoud = 60 × 30 × 40 = 72.000 cm³ = 72.000 ÷ 1.000 = **72 liter**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 65,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 48",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Het is **kwart voor vier 's middags**. Hoe schrijf je dat in 24-uurs notatie?",
+  "options": [
+   "15:45",
+   "16:45",
+   "3:45",
+   "16:15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kwart vóór vier is 15 minuten vóór 16:00.",
+   "Dat is de 12-uurs schrijfwijze — 's middags tel je er 12 bij op.",
+   "Dat is kwart óver vier."
+  ],
+  "niveaus": null,
+  "explanation": "Kwart voor vier 's middags = 3:45 + 12 uur = **15:45**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 66,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 49",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Meten & schaal — ~20 min",
+  "vanafGroep": null,
+  "q": "Een muur is **4 m breed**. Op de bouwtekening (schaal 1 : 100) is die muur dus ___?",
+  "options": [
+   "4 cm",
+   "40 cm",
+   "4 mm",
+   "1 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou bij schaal 1 : 10 horen — check je nullen.",
+   "Dat zou schaal 1 : 1.000 zijn.",
+   "Dan was de schaal 1 : 400."
+  ],
+  "niveaus": null,
+  "explanation": "4 m = 400 cm. Op schaal 1 : 100: 400 ÷ 100 = **4 cm**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 67,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Mike koopt **3 boeken** van €12,50 per stuk. Hij betaalt met **€50**. Hoeveel wisselgeld?",
+  "options": [
+   "€12,50",
+   "€37,50",
+   "€25",
+   "€50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€37,50 = totaal kosten, niet wisselgeld.",
+   "€25 is de helft van €50 — wat kosten de 3 boeken samen?",
+   "€50 = wat je betaalde, niet wat je terugkrijgt."
+  ],
+  "niveaus": {
+   "basis": "€12,50.",
+   "simpeler": "3×€12,50=€37,50. €50-€37,50=€12,50 wisselgeld.",
+   "nogSimpeler": "€12,50"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 68,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Lisa heeft toets-cijfers **6,5 / 7 / 7,5 / 8**. Wat is haar **gemiddelde**?",
+  "options": [
+   "7,25",
+   "7",
+   "7,5",
+   "29"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "7 zou betekenen alle cijfers waren 7. Klopt niet.",
+   "Niet alle cijfers zijn 7,5 of hoger — tel eerst alles op en deel door 4.",
+   "29 = som, niet gemiddelde."
+  ],
+  "niveaus": {
+   "basis": "7,25.",
+   "simpeler": "Totaal=29. ÷ 4 cijfers = 7,25.",
+   "nogSimpeler": "7,25"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 69,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een trui kost **€32**. In de uitverkoop krijg je **25% korting**. Wat betaal je?",
+  "options": [
+   "€24",
+   "€8",
+   "€28",
+   "€40"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€8 = de korting, niet de prijs.",
+   "Je haalde €4 eraf — maar een kwart van €32 is meer dan €4.",
+   "€40 zou betekenen 25% MEER, niet korting."
+  ],
+  "niveaus": {
+   "basis": "€24.",
+   "simpeler": "Korting=€8 (25% van €32). Te betalen=€32-€8=€24.",
+   "nogSimpeler": "€24"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 70,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een auto rijdt **90 km per uur**. Hoe ver komt hij in **20 minuten**?",
+  "options": [
+   "30 km",
+   "45 km",
+   "20 km",
+   "60 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "45 = een half uur. 20 min is minder dan een half uur.",
+   "20 = de minuten, niet km. Andere eenheid.",
+   "60 km zou bij ongeveer 40 minuten horen — en 20 minuten is minder. Te veel."
+  ],
+  "niveaus": {
+   "basis": "30 km (1/3 × 90).",
+   "simpeler": "20 min = 1/3 u. 1/3 × 90 km/u = 30 km.",
+   "nogSimpeler": "30"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 71,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "In een klas van **28 leerlingen** haalt **75% een voldoende**. Hoeveel leerlingen hebben een **onvoldoende**?",
+  "options": [
+   "7",
+   "21",
+   "14",
+   "4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "21 = aantal VOLDOENDES (75% van 28).",
+   "14 is de helft van de klas — 25% is minder dan de helft.",
+   "4 van de 28 is maar een klein deel — hoeveel procent heeft een onvoldoende?"
+  ],
+  "niveaus": {
+   "basis": "7 onvoldoendes (25% × 28).",
+   "simpeler": "75% voldoende = 25% onvoldoende. 25% × 28 = 7.",
+   "nogSimpeler": "7"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 72,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een glas frisdrank kost €1,80. Hoeveel betaal je voor **5 glazen**?",
+  "options": [
+   "€9,00",
+   "€7,20",
+   "€10,00",
+   "€1,80"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 4 × €1,80.",
+   "Te veel — heb je €1,80 afgerond naar €2?",
+   "Dat is 1 glas."
+  ],
+  "niveaus": {
+   "basis": "€9,00 (5 × €1,80).",
+   "simpeler": "5 × €1,80 = 5 + 4 = €9.",
+   "nogSimpeler": "€9"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 73,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Tom zet om de **15 minuten** een nieuwe pot bloemen neer. Hoeveel potten zet hij in **een uur** neer?",
+  "options": [
+   "4 potten",
+   "15 potten",
+   "60 potten",
+   "1 pot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "15 is het aantal minuten tussen twee potten, niet het aantal potten.",
+   "60 potten zou elke minuut een pot zijn.",
+   "Te weinig — hoeveel keer past een kwartier in een uur?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 74,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een lege fietstas weegt **800 g**. Er gaat **2 kg** boodschappen in. Hoeveel weegt de tas nu in totaal?",
+  "options": [
+   "2,8 kg",
+   "2,2 kg",
+   "802 g",
+   "2,08 kg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "2,2 kg is 2 kg + 200 g — de tas weegt 800 g.",
+   "Je telde 800 g en 2 kg op alsof het dezelfde eenheid is — zet eerst om.",
+   "Te weinig — 800 g ≠ 0,08 kg."
+  ],
+  "niveaus": {
+   "basis": "2,8 kg (0,8 + 2).",
+   "simpeler": "800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.",
+   "nogSimpeler": "2,8"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 75,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Anne spaart **€5 per week** voor een fiets van **€60**. Hoeveel weken moet ze sparen?",
+  "options": [
+   "12 weken",
+   "10 weken",
+   "6 weken",
+   "300 weken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken na: 10 × €5 = €50. Is dat genoeg?",
+   "Reken na: 6 × €5 = €30. Is dat genoeg?",
+   "300 is €60 × 5 — je moet delen, niet vermenigvuldigen."
+  ],
+  "niveaus": {
+   "basis": "12 weken (€60 ÷ €5).",
+   "simpeler": "Hoeveel keer €5 in €60? €60 ÷ €5 = 12.",
+   "nogSimpeler": "12"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 76,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een trein vertrekt om **08:45** en rijdt **2 uur en 15 minuten**. Hoe laat komt hij aan?",
+  "options": [
+   "11:00",
+   "10:45",
+   "11:30",
+   "10:00"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10:45 is precies 2 uur na het vertrek. Ben je een deel van de reistijd vergeten?",
+   "Tel eerst 2 uur op en dan 15 minuten: kom je dan op 11:30?",
+   "10:00 is maar 1 uur en 15 minuten later."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 77,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Je rijdt **240 km** met een snelheid van **80 km per uur**. Hoe lang duurt de reis?",
+  "options": [
+   "3 uur",
+   "2 uur",
+   "4 uur",
+   "2,5 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 2 uur rijd je 160 km — dat is nog geen 240 km.",
+   "In 4 uur rijd je 320 km — dat is meer dan 240 km.",
+   "In 2,5 uur rijd je 200 km — is dat 240 km?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 78,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een klas van **24 kinderen** maakt een toets. **18 kinderen** halen een voldoende. Hoeveel procent is dat?",
+  "options": [
+   "75%",
+   "60%",
+   "80%",
+   "70%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "60% van 24 is ongeveer 14 — er haalden er meer een voldoende.",
+   "80% van 24 is ongeveer 19 — dat zijn er net te veel.",
+   "Schrijf 18 van de 24 als breuk en vereenvoudig — welke breuk krijg je?"
+  ],
+  "niveaus": {
+   "basis": "% = (deel ÷ geheel) × 100.",
+   "simpeler": "18 ÷ 24 = 0,75 = 75%.",
+   "nogSimpeler": "18 van 24 = 3/4 = 75%."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 79,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een fles bevat **1,5 L**. Een glas houdt **250 mL**. Hoeveel glazen kun je vullen?",
+  "options": [
+   "6",
+   "4",
+   "5",
+   "10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "4 glazen is 1000 mL = 1 liter — de fles bevat meer.",
+   "5 glazen is 1250 mL — de fles bevat 1500 mL.",
+   "10 glazen is 2,5 liter — dat zit niet in de fles."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 80,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Tom werkt **3 uur** en verdient daarmee **€18**. Hoeveel verdient hij **per uur**?",
+  "options": [
+   "€6",
+   "€21",
+   "€54",
+   "€9"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€21 is €18 + 3 — wat verdient hij in één uur?",
+   "€54 is 3 × €18 — dan zou hij per uur meer verdienen dan in totaal.",
+   "€9 is €18 gedeeld door 2 — hij werkte 3 uur."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 81,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een receptenboek kost **€25**. Je krijgt **20% korting**. Wat betaal je?",
+  "options": [
+   "€20",
+   "€5",
+   "€30",
+   "€22"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€5 is de korting — wat betaal je nog?",
+   "Bij korting gaat de prijs omlaag, niet omhoog.",
+   "€3 korting is geen 20% — reken 10% van €25 uit en neem dat twee keer."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 82,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 17",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een bus rijdt **60 km** met een snelheid van **45 km per uur**. Hoe lang duurt de rit?",
+  "options": [
+   "1 uur 20 min",
+   "1 uur 15 min",
+   "1 uur 45 min",
+   "45 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Na het eerste uur moet de bus nog 15 km. Hoe lang duurt 15 km als 45 km een uur duurt?",
+   "In 1 uur 45 min rijdt de bus bijna 80 km — meer dan 60 km.",
+   "In 45 minuten komt de bus nog geen 45 km ver."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 83,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**3 vrienden** delen **€27** eerlijk. Hoeveel krijgt ieder?",
+  "options": [
+   "€9",
+   "€3",
+   "€10",
+   "€24"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — drie vrienden, niet negen.",
+   "Niet — 3 × €10 = €30, niet €27.",
+   "€24 is €27 − 3 — je moet delen, niet aftrekken."
+  ],
+  "niveaus": {
+   "basis": "€9 per persoon.",
+   "simpeler": "€27 ÷ 3 = €9.",
+   "nogSimpeler": "Delen = €9"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 84,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **klas heeft 24 leerlingen**. **6 leerlingen zijn ziek**. Welk **percentage is ziek**?",
+  "options": [
+   "25%",
+   "6%",
+   "20%",
+   "30%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "6 is het aantal zieke kinderen, niet het percentage.",
+   "20% van 24 is ongeveer 5 — er zijn 6 kinderen ziek.",
+   "30% van 24 is ongeveer 7 — welk deel van 24 is 6?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 85,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Iemand heeft de cijfers **7, 8, 6 en 9**. Wat is het **gemiddelde**?",
+  "options": [
+   "7,5",
+   "30",
+   "8",
+   "6,5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de som, niet het gemiddelde.",
+   "Niet — controleer: (7+8+6+9)/4.",
+   "6,5 is lager dan bijna alle cijfers — het gemiddelde ligt ergens in het midden."
+  ],
+  "niveaus": {
+   "basis": "Gemiddelde = 7,5.",
+   "simpeler": "(7+8+6+9)/4 = 30/4 = 7,5.",
+   "nogSimpeler": "30 ÷ 4 = 7,5"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 86,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 21",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een fles bevat **1,5 L** sap. Je schenkt **glazen** van **250 mL**. Hoeveel glazen kun je helemaal vullen?",
+  "options": [
+   "6",
+   "5",
+   "4",
+   "7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — zet 1,5 L om naar mL en deel door 250.",
+   "4 glazen is 1 liter — er zit meer in de fles.",
+   "7 glazen is 1750 mL — past dat in 1,5 L?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 87,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **fietsenwinkel** verkocht in **maart 80 fietsen** en in **april 100**. Met hoeveel **procent** is de verkoop gestegen?",
+  "options": [
+   "25%",
+   "20%",
+   "80%",
+   "100%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna — let op: (nieuw − oud) / OUD × 100.",
+   "80 is het aantal fietsen in maart, geen percentage.",
+   "100% stijging zou betekenen dat er twee keer zoveel fietsen verkocht zijn."
+  ],
+  "niveaus": {
+   "basis": "25% stijging.",
+   "simpeler": "Verschil 20. Oud was 80. 20/80 = 0,25 = 25%.",
+   "nogSimpeler": "20/80 = 25%"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 88,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Sanne** spaart **€5 per week** voor een fiets van **€120**. Hoeveel **weken** moet ze sparen?",
+  "options": [
+   "24 weken",
+   "30 weken",
+   "12 weken",
+   "20 weken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — reken 30 × 5 nog eens na.",
+   "Te weinig — reken 12 × 5 nog eens na.",
+   "Te weinig — reken 20 × 5 nog eens na."
+  ],
+  "niveaus": {
+   "basis": "24 weken.",
+   "simpeler": "120 ÷ 5 = 24.",
+   "nogSimpeler": "120 / 5 = 24"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 89,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een auto verbruikt **6 L benzine per 100 km**. Hoeveel liter verbruikt hij op **250 km**?",
+  "options": [
+   "15 L",
+   "12 L",
+   "20 L",
+   "10 L"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel keer 100 km is 250 km?",
+   "Reken in stapjes: 100 km = 6 L, 200 km = ?, en de laatste 50 km = ?",
+   "10 L is minder dan 2 × 6 L — en 250 km is meer dan 200 km."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 90,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 25",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **klas** heeft **30 leerlingen**. **2/3** doet mee met gym. Hoeveel **leerlingen** doen mee?",
+  "options": [
+   "20",
+   "10",
+   "15",
+   "25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 is 1/3 van 30 — er doen 2 van de 3 delen mee.",
+   "15 is de helft — 2/3 is meer dan de helft.",
+   "Reken eerst 1/3 van 30 uit — hoeveel is dan 2/3?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 91,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **rechthoek** heeft **oppervlakte 24 m²** en **breedte 4 m**. Wat is de **lengte**?",
+  "options": [
+   "6 m",
+   "20 m",
+   "12 m",
+   "8 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "20 is 24 − 4 — aftrekken helpt hier niet. Welk getal keer 4 is 24?",
+   "Deel 24 door 4 — kom je op 12 uit?",
+   "Reken na: 8 × 4 = 32. Is dat 24?"
+  ],
+  "niveaus": {
+   "basis": "6 m.",
+   "simpeler": "24 / 4 = 6 m.",
+   "nogSimpeler": "Opp / breedte = lengte = 6"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 92,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 27",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **trein vertrekt om 8:15** en **rijdt 1 uur en 30 minuten**. Hoe laat komt hij aan?",
+  "options": [
+   "9:45",
+   "9:15",
+   "9:30",
+   "10:15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "9:15 is 1 uur later — de 30 minuten moeten er nog bij.",
+   "9:30 is maar 1 uur en 15 minuten later.",
+   "10:15 is 2 uur later — de rit duurt anderhalf uur."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 93,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 28",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Tom heeft 240 stuiters**. Hij **geeft 1/4** weg. Hoeveel **houdt hij over**?",
+  "options": [
+   "180",
+   "60",
+   "120",
+   "200"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wat hij wegGAF, niet wat overblijft.",
+   "120 is de helft — hij gaf maar een kwart weg.",
+   "Hij gaf er geen 40 weg — hoeveel is 1/4 van 240?"
+  ],
+  "niveaus": {
+   "basis": "180.",
+   "simpeler": "240 − 60 = 180.",
+   "nogSimpeler": "3/4 = 180"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 94,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 29",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Een kraan staat 5 minuten open**. Er stroomt **0,5 L per minuut** uit. Hoeveel **water** is er in totaal uitgestroomd?",
+  "options": [
+   "2,5 L",
+   "5 L",
+   "0,5 L",
+   "10 L"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "5 L zou 1 L per minuut zijn — er stroomt maar een halve liter per minuut uit.",
+   "0,5 L is wat er in één minuut uitstroomt.",
+   "10 L is 5 ÷ 0,5 — hier moet je vermenigvuldigen."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 95,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Boekjes** kosten **€3 per stuk**. Tom koopt er **8**. Wie 5 of meer boekjes koopt, krijgt in totaal **€5 korting**. Wat **betaalt** Tom?",
+  "options": [
+   "€19",
+   "€24",
+   "€15",
+   "€20"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€24 is de prijs zonder korting — de korting moet er nog af.",
+   "€15 is 5 × €3 — heb je alle 8 boekjes geteld?",
+   "Dan haalde je €4 eraf — de korting is €5."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 96,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 31",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Drie vrienden** delen **€18 eerlijk**. Hoeveel krijgt **ieder**?",
+  "options": [
+   "€6",
+   "€9",
+   "€18",
+   "€3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is €18 gedeeld door 2 — het zijn er drie.",
+   "Dat is het hele bedrag, nog niet gedeeld.",
+   "Dat is €18 gedeeld door 6 — het zijn er drie."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 97,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **rekening** is **€12,50**. Je geeft **10% fooi**. Hoeveel **fooi** is dat?",
+  "options": [
+   "€1,25",
+   "€1,50",
+   "€2,50",
+   "€12,50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna — reken nog eens 10% × €12,50 uit.",
+   "Te veel — 20% i.p.v. 10%?",
+   "Dat is het hele bedrag, niet alleen de fooi."
+  ],
+  "niveaus": {
+   "basis": "€1,25.",
+   "simpeler": "10% van €12,50 = €1,25.",
+   "nogSimpeler": "€1,25"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 98,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 33",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "In een klas zitten 12 jongens en 18 meisjes. Er wordt één naam geloot. Hoeveel procent **kans** is er dat het een **meisje** is?",
+  "options": [
+   "60%",
+   "40%",
+   "30%",
+   "50%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "40% is de kans op een jongen.",
+   "30 is het aantal kinderen in de klas, geen percentage.",
+   "Er zijn niet evenveel jongens als meisjes — dus geen 50%."
+  ],
+  "niveaus": {
+   "basis": "60%.",
+   "simpeler": "18/30 × 100 = 60.",
+   "nogSimpeler": "60%"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 99,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 34",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Je **leent €25** en **betaalt €30 terug** (dus €5 rente). Hoeveel **procent rente** is dat?",
+  "options": [
+   "20%",
+   "5%",
+   "30%",
+   "25%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€5 is het rentebedrag, geen percentage.",
+   "€30 is wat je terugbetaalt — hoeveel procent van €25 is de €5 rente?",
+   "€25 is het geleende bedrag, geen percentage."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 100,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 35",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "**Drie boeken** kosten samen **€45**. Wat kost **één** boek gemiddeld?",
+  "options": [
+   "€15",
+   "€10",
+   "€20",
+   "€45"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken na: 3 × €10 = €30. Is dat €45?",
+   "Reken na: 3 × €20 = €60. Is dat €45?",
+   "€45 is wat de drie boeken samen kosten."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 101,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 36",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een **rondje** om het schoolplein is **150 m**. Hoeveel **meter** loop je als je **8 rondjes** wandelt?",
+  "options": [
+   "1200 m",
+   "1500 m",
+   "800 m",
+   "158 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1500 m zou 10 rondjes zijn.",
+   "800 m zou bij rondjes van 100 m horen.",
+   "Je telde 8 bij 150 op — je loopt 8 keer 150 m."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 102,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 44",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Noor koopt 3 schriften van **€1,25** per stuk en betaalt met **€5**. Hoeveel krijgt ze terug?",
+  "options": [
+   "€1,25",
+   "€3,75",
+   "€2,25",
+   "€0,75"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wat de schriften sámen kosten — de vraag is wat ze terugkrijgt.",
+   "Reken de aftrekking nog eens na: €5,00 min de totale prijs van de schriften.",
+   "Net te weinig — check de aftrekking nog eens."
+  ],
+  "niveaus": null,
+  "explanation": "3 × €1,25 = €3,75. Terug: €5,00 − €3,75 = **€1,25**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 103,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 45",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Groep 8 gaat met **53 kinderen** op kamp. In elke tent passen **6** kinderen. Hoeveel tenten zijn er nodig?",
+  "options": [
+   "9",
+   "8",
+   "10",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deel 53 door 6: er blijven kinderen over — waar slapen die?",
+   "Eén te veel — tel na hoeveel plekken je dan hebt; dat is meer dan nodig.",
+   "Dan passen er maar 36 kinderen."
+  ],
+  "niveaus": {
+   "basis": "8 tenten zitten vol, de rest (5 kinderen) heeft tent 9 nodig.",
+   "simpeler": "53 ÷ 6 = 8 en er blijven 5 kinderen over. Dus 9 tenten.",
+   "nogSimpeler": "9 tenten"
+  },
+  "explanation": "53 ÷ 6 = 8 rest 5 → je hebt een **9e tent** nodig voor de laatste 5 kinderen. Bij 'hoeveel nodig' rond je áltijd naar boven af.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 104,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 46",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een bioscoopkaartje kost **€11,50**. Met de familiekorting betaal je **€2 minder** per kaartje. Wat kosten **4 kaartjes** met korting?",
+  "options": [
+   "€38",
+   "€46",
+   "€44",
+   "€36"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 4 × €11,50 — je vergeet de korting.",
+   "Je hebt maar één keer €2 korting afgetrokken — maar elk van de 4 kaartjes krijgt €2 korting.",
+   "Net te weinig — het kaartje kost €9,50, niet €9."
+  ],
+  "niveaus": null,
+  "explanation": "Per kaartje: €11,50 − €2 = €9,50. Dan 4 × €9,50 = **€38**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 105,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 47",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Op het schoolplein staan fietsen en steps: samen **20 voertuigen met 46 wielen**. Een fiets heeft 2 wielen, een step ook 2... behalve de 6 driewielers van de kleuters. Hoeveel wielen hebben de 14 gewone voertuigen samen?",
+  "options": [
+   "28",
+   "46",
+   "18",
+   "40"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het totaal — de vraag gaat alleen over de gewone tweewielers.",
+   "Dat zijn de wielen van de driewielers (6 × 3) — de vraag gaat over de andere 14.",
+   "Te veel — elk gewoon voertuig heeft maar 2 wielen."
+  ],
+  "niveaus": null,
+  "explanation": "14 gewone voertuigen × 2 wielen = **28 wielen**. (Controle: 28 + 6 × 3 = 28 + 18 = 46 ✓)",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 106,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 48",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Drie vrienden verdelen **€45** zó dat ieder evenveel krijgt, maar Jin krijgt **€6 extra** omdat hij het langst hielp. Eerst de €6 eraf — hoeveel krijgt ieder van de rest?",
+  "options": [
+   "€13",
+   "€15",
+   "€19",
+   "€11"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€45 ÷ 3 — maar haal eerst Jins extra €6 van het totaal af.",
+   "Dat is het bedrag mét Jins extra — de vraag is het basisbedrag.",
+   "Check: 3 × €11 + €6 = €39, geen €45."
+  ],
+  "niveaus": null,
+  "explanation": "€45 − €6 = €39 → €39 ÷ 3 = **€13** per persoon (Jin krijgt €13 + €6 = €19).",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 107,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 49",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een trein vertrekt om **10:48** en komt aan om **12:15**. Hoe lang duurt de reis?",
+  "options": [
+   "1 uur en 27 minuten",
+   "1 uur en 33 minuten",
+   "2 uur en 27 minuten",
+   "1 uur en 67 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken in stappen: eerst van 10:48 tot 11:00, dan verder tot 12:15.",
+   "Van 10:48 tot 12:48 zou 2 uur zijn — de trein is er eerder.",
+   "Een uur heeft 60 minuten — je rekende alsof het er 100 zijn."
+  ],
+  "niveaus": null,
+  "explanation": "10:48 → 11:00 = 12 min. 11:00 → 12:15 = 1 uur 15 min. Samen: **1 uur en 27 minuten**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 108,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 50",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Bij de bakker kost een brood **€2,80**. Vandaag: **'2e brood halve prijs'**. Wat kosten 2 broden vandaag?",
+  "options": [
+   "€4,20",
+   "€5,60",
+   "€2,80",
+   "€4,90"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 2 × €2,80 — zonder de actie.",
+   "Dat is maar één brood.",
+   "Halve prijs is de hélft van €2,80 — niet driekwart."
+  ],
+  "niveaus": null,
+  "explanation": "1e brood €2,80 + 2e brood €1,40 (halve prijs) = **€4,20**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 109,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 51",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Mila leest elke avond **25 bladzijden**. Haar boek heeft **180 bladzijden**. Na hoeveel avonden heeft ze het uit?",
+  "options": [
+   "8",
+   "7",
+   "9",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deel 180 door 25: er blijven bladzijden over — die tellen ook mee.",
+   "Te veel — reken na hoeveel bladzijden ze dan al gelezen zou hebben.",
+   "Dan heeft ze pas 150 bladzijden gelezen."
+  ],
+  "niveaus": null,
+  "explanation": "7 avonden × 25 = 175 bladzijden — nog 5 over → avond **8** leest ze het uit.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 110,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 52",
+  "file": "src/learnPaths/doorstroomtoetsRekenenG8.js",
+  "stapTitel": "Redactiesommen — eindopdracht ~20 min",
+  "vanafGroep": null,
+  "q": "Een klas spaart voor het schoolreisje: ze hebben al **€78** en er moet **€195** komen. De resterende kosten verdelen ze over **26 kinderen**. Hoeveel betaalt elk kind?",
+  "options": [
+   "€4,50",
+   "€7,50",
+   "€3,00",
+   "€117"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eerst het tekort: €195 − €78. Deel dát door 26.",
+   "Dat is €78 ÷ 26 — maar je moet het tekort verdelen, niet wat al gespaard is.",
+   "Dat is het tekort zélf, niet het bedrag per kind."
+  ],
+  "niveaus": null,
+  "explanation": "Tekort: €195 − €78 = €117. Per kind: €117 ÷ 26 = **€4,50**.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ }
+]

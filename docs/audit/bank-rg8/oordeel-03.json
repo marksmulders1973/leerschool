@@ -1,0 +1,461 @@
+[
+  {
+    "nr": 111,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 53",
+    "eigenKeuze": "19",
+    "oordeel": "goed",
+    "reden": "76 ÷ 4 = 19; hints geven richting",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 112,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 54",
+    "eigenKeuze": "10 keer",
+    "oordeel": "twijfel",
+    "reden": "hint \"€6 ÷ 24\" rekende de eerste stap voor",
+    "hersteld": true,
+    "wijziging": "hint rekende de deelsom voor"
+  },
+  {
+    "nr": 113,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 55",
+    "eigenKeuze": "11:05",
+    "oordeel": "twijfel",
+    "reden": "hint \"trek 2:30 van 14:20 af\" rekende de stap voor",
+    "hersteld": true,
+    "wijziging": "hint rekende de aftreksom voor"
+  },
+  {
+    "nr": 114,
+    "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 56",
+    "eigenKeuze": "450 gram",
+    "oordeel": "twijfel",
+    "reden": "hint \"(300 ÷ 4), keer dan 6\" rekende de hele som voor",
+    "hersteld": true,
+    "wijziging": "hint rekende de hele som voor"
+  },
+  {
+    "nr": 115,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 1",
+    "eigenKeuze": "€2,20",
+    "oordeel": "goed",
+    "reden": "1,35 + 0,85 = 2,20",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 116,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 2",
+    "eigenKeuze": "€1,40",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Eén euro te veel\" bij €2,40 verraadt €1,40",
+    "hersteld": true,
+    "wijziging": "'één euro te veel' verraadt het antwoord"
+  },
+  {
+    "nr": 117,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 3",
+    "eigenKeuze": "7",
+    "oordeel": "goed",
+    "reden": "0,7 × 10 = 7",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 118,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 4",
+    "eigenKeuze": "345",
+    "oordeel": "goed",
+    "reden": "3,45 × 100 = 345",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 119,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 5",
+    "eigenKeuze": "6,25",
+    "oordeel": "goed",
+    "reden": "62,5 ÷ 10 = 6,25",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 120,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 6",
+    "eigenKeuze": "€4,50",
+    "oordeel": "goed",
+    "reden": "1,80 × 2,5 = 4,50",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 121,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 7",
+    "eigenKeuze": "Het pak van 400 gram",
+    "oordeel": "twijfel",
+    "reden": "hint noemde de factor 2,5 (€4,40 × 2,5)",
+    "hersteld": true,
+    "wijziging": "hint noemde de factor 2,5"
+  },
+  {
+    "nr": 122,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 8",
+    "eigenKeuze": "€1,40",
+    "oordeel": "twijfel",
+    "reden": "hint \"prijs van een halve liter\" bij €0,70 → verdubbelen geeft het antwoord",
+    "hersteld": true,
+    "wijziging": "'halve liter' verraadt het antwoord (verdubbelen)"
+  },
+  {
+    "nr": 123,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 9",
+    "eigenKeuze": "€22",
+    "oordeel": "twijfel",
+    "reden": "te makkelijk voor groep 8 (26 − 4)",
+    "hersteld": true,
+    "wijziging": "te makkelijk voor groep 8 (26 − 4); nu kommagetal met lenen"
+  },
+  {
+    "nr": 124,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 10",
+    "eigenKeuze": "€36",
+    "oordeel": "goed",
+    "reden": "24 + 12 = 36",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 125,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 11",
+    "eigenKeuze": "8,25",
+    "oordeel": "fout",
+    "reden": "wrongHint \"De 5 honderdsten zijn kwijtgeraakt\" bij 8,2 noemt het antwoord 8,25",
+    "hersteld": true,
+    "wijziging": "hint noemde het ontbrekende cijfer (antwoord 8,25)"
+  },
+  {
+    "nr": 126,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 12",
+    "eigenKeuze": "€2,65",
+    "oordeel": "fout",
+    "reden": "\"Eén euro te veel\" (3,65) en \"Tien cent te veel\" (2,75) verraden €2,65",
+    "hersteld": true,
+    "wijziging": "'één euro te veel' verraadt het antwoord; 'tien cent te veel' verraadt het antwoord"
+  },
+  {
+    "nr": 127,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 13",
+    "eigenKeuze": "12 weken",
+    "oordeel": "twijfel",
+    "reden": "hint \"11 weken = net te weinig\" wijst het volgende getal (12) aan",
+    "hersteld": true,
+    "wijziging": "'net te weinig' verraadt dat het volgende getal (12) goed is"
+  },
+  {
+    "nr": 128,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 14",
+    "eigenKeuze": "46",
+    "oordeel": "goed",
+    "reden": "100 × 0,46 = 46",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 129,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 15",
+    "eigenKeuze": "250",
+    "oordeel": "goed",
+    "reden": "0,25 × 1000 = 250",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 130,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 16",
+    "eigenKeuze": "€2,50",
+    "oordeel": "goed",
+    "reden": "1,00 + 1,50 = 2,50",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 131,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 17",
+    "eigenKeuze": "€0,70",
+    "oordeel": "goed",
+    "reden": "4,20 ÷ 6 = 0,70",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 132,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 18",
+    "eigenKeuze": "€17,50",
+    "oordeel": "fout",
+    "reden": "wrongHint noemt \"dichter bij 50\" = het antwoord €17,50",
+    "hersteld": true,
+    "wijziging": "hint noemde 50 cent = het antwoord"
+  },
+  {
+    "nr": 133,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 19",
+    "eigenKeuze": "€6,65",
+    "oordeel": "twijfel",
+    "reden": "hint \"eerst €2,85 ÷ 3\" rekende de stap voor",
+    "hersteld": true,
+    "wijziging": "hint rekende de deelsom voor"
+  },
+  {
+    "nr": 134,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 20",
+    "eigenKeuze": "€10,90",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Eén euro te veel\" bij €11,90 verraadt €10,90",
+    "hersteld": true,
+    "wijziging": "'één euro te veel' verraadt het antwoord"
+  },
+  {
+    "nr": 135,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 21",
+    "eigenKeuze": "0,8",
+    "oordeel": "goed",
+    "reden": "0,8 > 0,75 > 0,699 > 0,08",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 136,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 22",
+    "eigenKeuze": "€0,75",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Eén euro verschil\" bij €1,75 verraadt €0,75",
+    "hersteld": true,
+    "wijziging": "'één euro verschil' verraadt het antwoord"
+  },
+  {
+    "nr": 137,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 23",
+    "eigenKeuze": "0,075",
+    "oordeel": "goed",
+    "reden": "7,5 ÷ 100 = 0,075",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 138,
+    "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 24",
+    "eigenKeuze": "€4,20",
+    "oordeel": "twijfel",
+    "reden": "hint gaf de som \"0,3 × 14\" kant-en-klaar",
+    "hersteld": true,
+    "wijziging": "hint gaf de som 0,3 × 14 kant-en-klaar"
+  },
+  {
+    "nr": 139,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 1",
+    "eigenKeuze": "1 uur en 35 minuten",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Tien minuten te weinig\" bij 1u25 verraadt 1u35",
+    "hersteld": true,
+    "wijziging": "'tien minuten te weinig' verraadt het antwoord"
+  },
+  {
+    "nr": 140,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 2",
+    "eigenKeuze": "16:00",
+    "oordeel": "goed",
+    "reden": "14:10 + 1:50 = 16:00",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 141,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 3",
+    "eigenKeuze": "11:35",
+    "oordeel": "goed",
+    "reden": "10:50 + 45 min = 11:35",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 142,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 5",
+    "eigenKeuze": "35 minuten",
+    "oordeel": "goed",
+    "reden": "8:37 → 9:12 = 35 min",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 143,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 6",
+    "eigenKeuze": "80 km per uur",
+    "oordeel": "goed",
+    "reden": "120 ÷ 1,5 = 80",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 144,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 7",
+    "eigenKeuze": "45 kilometer",
+    "oordeel": "goed",
+    "reden": "3 × 15 = 45",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 145,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 8",
+    "eigenKeuze": "1,5 uur",
+    "oordeel": "goed",
+    "reden": "90 ÷ 60 = 1,5 uur",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 146,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 9",
+    "eigenKeuze": "2 april",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Eén dag te vroeg\" bij 1 april verraadt 2 april",
+    "hersteld": true,
+    "wijziging": "'één dag te vroeg' verraadt het antwoord"
+  },
+  {
+    "nr": 147,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 10",
+    "eigenKeuze": "30",
+    "oordeel": "twijfel",
+    "reden": "hint \"hoort november daarbij?\" gaf het antwoord bijna weg",
+    "hersteld": true,
+    "wijziging": "hint gaf het antwoord bijna weg ('hoort november daarbij?')"
+  },
+  {
+    "nr": 148,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 11",
+    "eigenKeuze": "zaterdag",
+    "oordeel": "goed",
+    "reden": "365 = 52 weken + 1 dag → zaterdag",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 149,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 12",
+    "eigenKeuze": "180",
+    "oordeel": "twijfel",
+    "reden": "hint gaf de som \"3 × 60\" kant-en-klaar",
+    "hersteld": true,
+    "wijziging": "hint gaf de som 3 × 60 kant-en-klaar"
+  },
+  {
+    "nr": 150,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 13",
+    "eigenKeuze": "14:00",
+    "oordeel": "goed",
+    "reden": "20:00 − 6 = 14:00",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 151,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 14",
+    "eigenKeuze": "kwart voor 6",
+    "oordeel": "goed",
+    "reden": "17:45 = kwart voor 6",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 152,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 15",
+    "eigenKeuze": "12 km per uur",
+    "oordeel": "goed",
+    "reden": "24 ÷ 2 = 12",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 153,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 16",
+    "eigenKeuze": "17:05",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Tien minuten te laat\" bij 17:15 verraadt 17:05",
+    "hersteld": true,
+    "wijziging": "'tien minuten te laat' verraadt het antwoord"
+  },
+  {
+    "nr": 154,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 17",
+    "eigenKeuze": "1 uur en 26 minuten",
+    "oordeel": "fout",
+    "reden": "wrongHint \"Tien minuten te veel\" bij 1u36 verraadt 1u26",
+    "hersteld": true,
+    "wijziging": "'tien minuten te veel' verraadt het antwoord"
+  },
+  {
+    "nr": 155,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 18",
+    "eigenKeuze": "150",
+    "oordeel": "twijfel",
+    "reden": "hint \"half uur is 30 minuten\" gaf de laatste stap (120 + 30)",
+    "hersteld": true,
+    "wijziging": "hint gaf de laatste stap (30 min) kant-en-klaar"
+  },
+  {
+    "nr": 156,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 19",
+    "eigenKeuze": "30 kilometer",
+    "oordeel": "twijfel",
+    "reden": "hint noemde de factor \"een derde van een uur\"",
+    "hersteld": true,
+    "wijziging": "hint noemde de factor (een derde)"
+  },
+  {
+    "nr": 157,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 20",
+    "eigenKeuze": "vrijdag 24 juli",
+    "oordeel": "goed",
+    "reden": "14+10 = 24; di + 10 dagen = vrijdag (klopt ook met kalender 2026)",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 158,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 21",
+    "eigenKeuze": "5 meter",
+    "oordeel": "twijfel",
+    "reden": "hint gaf de som \"400 ÷ 80\" kant-en-klaar",
+    "hersteld": true,
+    "wijziging": "hint gaf de som 400 ÷ 80 kant-en-klaar"
+  },
+  {
+    "nr": 159,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 22",
+    "eigenKeuze": "08:15",
+    "oordeel": "goed",
+    "reden": "kwart over 8 ochtend = 08:15",
+    "hersteld": false,
+    "wijziging": ""
+  },
+  {
+    "nr": 160,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 23",
+    "eigenKeuze": "14:35",
+    "oordeel": "fout",
+    "reden": "\"Tien minuten te veel\" (14:45) en \"Er mist een uur\" (13:35) verraden 14:35",
+    "hersteld": true,
+    "wijziging": "'tien minuten te veel' verraadt het antwoord; 'er mist een uur' verraadt het antwoord"
+  },
+  {
+    "nr": 161,
+    "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 24",
+    "eigenKeuze": "9",
+    "oordeel": "goed",
+    "reden": "63 ÷ 7 = 9",
+    "hersteld": false,
+    "wijziging": ""
+  }
+]

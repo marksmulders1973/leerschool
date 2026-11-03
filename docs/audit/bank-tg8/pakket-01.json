@@ -1,0 +1,1477 @@
+[
+ {
+  "nr": 1,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De jongen rende **buiten adem** naar huis.'* Wat betekent **buiten adem**?",
+  "options": [
+   "Zo hard gerend dat je nauwelijks kunt ademen",
+   "Naar buiten gaan om frisse lucht te halen",
+   "Rustig stilstaan om even uit te rusten",
+   "Expres je adem inhouden tijdens het rennen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Letterlijk lijkt het zo, maar het is een uitdrukking — hij rent juist hard.",
+   "Hij rent. Stilstaan past niet.",
+   "Je adem lang inhouden lukt niet als je rent. Wat gebeurt er met je adem na hard rennen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 2,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **synoniem** van **'enorm'**?",
+  "options": [
+   "Heel groot",
+   "Heel klein",
+   "Heel zwaar",
+   "Heel oud"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is juist het tegenovergestelde. Denk aan 'een enorme olifant'.",
+   "Iets enorms kan zwaar zijn, maar 'enorm' zegt iets over de maat, niet over het gewicht.",
+   "Over leeftijd zegt 'enorm' niets. Denk aan 'een enorme olifant': wat valt je op?"
+  ],
+  "niveaus": {
+   "basis": "Heel groot.",
+   "simpeler": "Enorm betekent hetzelfde als 'heel groot'.",
+   "nogSimpeler": "Heel groot"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 3,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Het **verlamde** dier kon niet meer lopen.'* Wat betekent verlamd?",
+  "options": [
+   "Niet kunnen bewegen",
+   "Heel erg moe zijn",
+   "Heel erg bang zijn",
+   "Gewond aan een poot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een moe dier kan na wat rust weer lopen. Welk woordje zit er in ver-LAM-d?",
+   "Van schrik sta je soms even stil, maar 'verlamd' gaat over je lichaam. Wat betekent 'lam'?",
+   "Een wond is een verwonding. Welk woordje zit er in ver-LAM-d, en wat betekent dat?"
+  ],
+  "niveaus": {
+   "basis": "Niet kunnen bewegen.",
+   "simpeler": "De zin zegt dat het dier niet meer kan lopen. Verlamd = niet bewegen.",
+   "nogSimpeler": "Niet bewegen"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 4,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord betekent **hetzelfde als** **'tevreden'**?",
+  "options": [
+   "Blij met de situatie",
+   "Boos over de situatie",
+   "Verbaasd over de situatie",
+   "Bang voor de situatie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.",
+   "Verbaasd = verrast zijn; tevreden = blij. Andere emotie.",
+   "Bang = angstig; tevreden = blij. Andere emotie."
+  ],
+  "niveaus": {
+   "basis": "Blij met situatie.",
+   "simpeler": "Tevreden = blij + akkoord. 'Blij met de situatie' = juist.",
+   "nogSimpeler": "Blij"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 5,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De docent gaf een **toelichting** bij de som.'* Wat is een toelichting?",
+  "options": [
+   "Een uitleg",
+   "Een cijfer",
+   "Een opdracht",
+   "Het antwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een cijfer is een beoordeling. Welk woordje zit er in 'toeLICHTing'?",
+   "Een opdracht zegt wat je moet dóén. Welk woordje zit er verstopt in 'toeLICHTing'?",
+   "Het antwoord is alleen de uitkomst. Wat doe je als je iets 'toelicht'?"
+  ],
+  "niveaus": {
+   "basis": "Een uitleg.",
+   "simpeler": "Toelichting = uitleg. De docent gaf uitleg bij de som.",
+   "nogSimpeler": "Uitleg"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 6,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Zij was **onverstoorbaar** tijdens de toets.'* Wat betekent onverstoorbaar?",
+  "options": [
+   "Kalm",
+   "Zenuwachtig",
+   "Afgeleid",
+   "Vermoeid"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zenuwachtig is juist het tegenovergestelde: dan raak je snel van slag. Wat betekent 'on-' vooraan?",
+   "Afgeleid ben je als iets je stoort. On-VERSTOOR-baar: kon iets haar storen?",
+   "Moe zijn heeft niets met storen te maken. Zie je het woord 'storen' in onverstoorbaar?"
+  ],
+  "niveaus": {
+   "basis": "Rustig en niet uit balans.",
+   "simpeler": "On- = niet. Niet-verstoorbaar = niet uit balans.",
+   "nogSimpeler": "Rustig"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 7,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **tegenstelling** van **'genereus'**?",
+  "options": [
+   "Gierig",
+   "Gul",
+   "Arm",
+   "Streng"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gul betekent juist hetzelfde als genereus. Je zoekt het tegenovergestelde.",
+   "Arm zegt hoeveel geld je hébt, niet of je graag iets weggeeft.",
+   "Streng gaat over regels, niet over geven en delen."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 8,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De situatie was uiterst **precair**.'* Wat betekent precair?",
+  "options": [
+   "Onzeker / gevaarlijk",
+   "Saai / niet spannend",
+   "Vrolijk / gezellig",
+   "Druk / lawaaiig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Saai betekent dat er weinig gebeurt — klinkt een 'uiterst precaire' situatie zo?",
+   "Klinkt 'precair' als iets fijns?",
+   "Druk gaat over veel mensen of veel te doen — waar gaat precair over?"
+  ],
+  "niveaus": {
+   "basis": "Onzeker / gevaarlijk.",
+   "simpeler": "Precair = riskant. Een precaire situatie = situatie waar snel iets mis kan gaan.",
+   "nogSimpeler": "Onzeker"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 9,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De vergadering werd door zijn **inmenging** verstoord.'* Wat is inmenging?",
+  "options": [
+   "Ongevraagd bemoeien",
+   "Hulp aanbieden",
+   "Te laat binnenkomen",
+   "Hard lachen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zou hulp de vergadering 'verstoren'?",
+   "Te laat komen kan storen, maar heet dat 'inmenging'? Welk woord zit erin: in-MENG-ing.",
+   "Lachen kan ook storen. Maar zit 'lachen' in het woord? Kijk naar het stukje 'meng'."
+  ],
+  "niveaus": {
+   "basis": "Bemoeien met wat je niet aangaat.",
+   "simpeler": "In + mengen = ergens in mengen waar het niet hoort.",
+   "nogSimpeler": "Bemoeien"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 10,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord betekent **hetzelfde als** **'gehaast'**?",
+  "options": [
+   "Druk en snel",
+   "Rustig en kalm",
+   "Moe en sloom",
+   "Boos en kortaf"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rustig is juist het tegenovergestelde. Welk woord zit er in 'gehaast'?",
+   "Sloom is juist langzaam. Denk aan het woord 'haast'.",
+   "Gehaast zegt niets over boos zijn. Welk woord zit erin verstopt?"
+  ],
+  "niveaus": {
+   "basis": "Druk en snel.",
+   "simpeler": "Gehaast = haast hebben = druk en snel.",
+   "nogSimpeler": "Snel"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 11,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?",
+  "options": [
+   "Dapper",
+   "Bang",
+   "Sterk",
+   "Behulpzaam"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bang is juist het tegenovergestelde. Durfde de soldaat iets of niet?",
+   "Sterke spieren zijn iets anders dan durven. Waar gaat 'moed' over?",
+   "Helpen deed hij wel, maar 'moedig' zegt iets over durven. Wat betekent 'moed'?"
+  ],
+  "niveaus": {
+   "basis": "Dapper, niet bang.",
+   "simpeler": "Moedig = met moed = durft = niet bang.",
+   "nogSimpeler": "Dapper"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 12,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De koningin sprak **plechtig**.'* Wat betekent plechtig?",
+  "options": [
+   "Formeel",
+   "Vrolijk",
+   "Boos",
+   "Gefluisterd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een plechtige ceremonie wordt niet veel gelachen. Past vrolijk dan?",
+   "Boos is een gevoel — plechtig gaat over hoe ernstig en officieel iets klinkt.",
+   "Plechtig zegt niets over hoe hard of zacht je praat."
+  ],
+  "niveaus": {
+   "basis": "Met respect / serieus.",
+   "simpeler": "Plechtig = formeel, niet luchtig.",
+   "nogSimpeler": "Serieus"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 13,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **tegenstelling** van **'verlies'**?",
+  "options": [
+   "Winst",
+   "Nederlaag",
+   "Schade",
+   "Gelijkspel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een nederlaag is juist hetzelfde als een verlies. Je zoekt het tegenovergestelde.",
+   "Schade lijkt op verlies. Je zoekt juist de andere kant.",
+   "Een gelijkspel ligt er tussenin. Wat is de echte andere kant van verliezen?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 14,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De jongen liep **kreupel**.'* Wat betekent kreupel?",
+  "options": [
+   "Mank",
+   "Sloom",
+   "Krom",
+   "Stoer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Sloom gaat over je tempo. Kreupel zegt iets over hóé je stapt.",
+   "Krom lopen gaat over je houding. Bij kreupel lopen is er iets anders aan de hand.",
+   "Stoer lopen doe je expres. Kreupel lopen doe je niet expres."
+  ],
+  "niveaus": {
+   "basis": "Kreupel = niet goed kunnen lopen (door wond).",
+   "simpeler": "Kreupel = mank = met moeite lopen.",
+   "nogSimpeler": "Kreupel = pijnlijk lopen."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 15,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 15",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **synoniem** voor **'beginnen'**?",
+  "options": [
+   "Starten",
+   "Eindigen",
+   "Proberen",
+   "Doorgaan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eindigen is juist het tegenovergestelde.",
+   "Proberen kan ook halverwege. Je zoekt een woord voor het allereerste moment.",
+   "Doorgaan doe je als je al bezig bent."
+  ],
+  "niveaus": {
+   "basis": "Synoniem = woord met dezelfde betekenis. Beginnen = starten.",
+   "simpeler": "Vraag: 'kun je dit woord vervangen?' Ja, met starten. Eindigen is tegenovergesteld.",
+   "nogSimpeler": "Hetzelfde = synoniem."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 16,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
+  "options": [
+   "Heel moe",
+   "Hongerig",
+   "Boos",
+   "Verbaasd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Honger heeft met eten te maken. Staat er iets over eten in de zin?",
+   "Boos ben je op iemand of iets. Daar staat niets over in de zin.",
+   "Verbaasd ben je als er iets onverwachts gebeurt. Is een race onverwacht?"
+  ],
+  "niveaus": {
+   "basis": "Denk aan een put die leeg is: er zit niets meer in. Zo voelt de jongen zich na de race.",
+   "simpeler": "Uitgeput betekent dat je energie helemaal op is: je bent heel moe.",
+   "nogSimpeler": "Heel moe."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 17,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **tegenstelling** van **'voorzichtig'**?",
+  "options": [
+   "Roekeloos",
+   "Behoedzaam",
+   "Langzaam",
+   "Bang"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Behoedzaam betekent juist hetzelfde als voorzichtig.",
+   "Langzaam past juist bij voorzichtig zijn. Je zoekt de andere kant.",
+   "Bang zijn hoort eerder bij voorzichtig dan bij het tegenovergestelde ervan."
+  ],
+  "niveaus": {
+   "basis": "Het tegenovergestelde van voorzichtig is roekeloos.",
+   "simpeler": "Voorzichtig is goed oppassen; roekeloos is helemaal niet oppassen.",
+   "nogSimpeler": "Een tegenstelling is het omgekeerde."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 18,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
+  "options": [
+   "Iets wat niet waar is",
+   "Iets wat geheim is",
+   "Iets wat grappig is",
+   "Iets van lang geleden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een geheim is iets wat je niet vertelt. Dat is iets anders dan iets verzinnen.",
+   "Een grap is bedoeld om te lachen. Zegt de zin iets grappigs?",
+   "Een leugen kan ook over vandaag gaan. Het woord zegt niets over hoelang geleden."
+  ],
+  "niveaus": {
+   "basis": "Kijk naar het werkwoord 'verzon': iets verzinnen is iets bedenken wat niet echt gebeurd is.",
+   "simpeler": "Verzon betekent bedacht. Een leugen is iets wat niet waar is.",
+   "nogSimpeler": "Niet waar."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 19,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 24",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is een **synoniem** van **'vermoeid'**?",
+  "options": [
+   "Moe",
+   "Uitgerust",
+   "Ziek",
+   "Verveeld"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Uitgerust is juist het tegenovergestelde.",
+   "Ziek gaat over een ziekte. Vermoeid zegt niets over ziek zijn.",
+   "Verveeld ben je als er niets te doen is."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 20,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 32",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De jongen liep **gehaast** naar school.'* Wat betekent **gehaast**?",
+  "options": [
+   "Snel, want hij heeft weinig tijd",
+   "Stil, want hij is verlegen",
+   "Handig, want hij is slim",
+   "Sloom, want hij verveelt zich"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verlegen gaat over hoe je je voelt bij andere mensen. Welk woord herken je in 'gehaast'?",
+   "Slim zijn heeft niets met dit woord te maken. Welk woord herken je in 'gehaast'?",
+   "Je vervelen heeft niets met dit woord te maken. Welk woord herken je in 'gehaast'?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 21,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 40",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat betekent de uitdrukking *'**de knoop doorhakken**'*?",
+  "options": [
+   "Eindelijk een beslissing nemen",
+   "Iets met een bijl kapotmaken",
+   "Een touw losmaken of doorsnijden",
+   "Een ruzie met iemand beginnen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is een uitdrukking — er gaat niets écht kapot. Waar twijfel je over vóór je 'doorhakt'?",
+   "Denk niet letterlijk aan touw. Wat 'zit vast' als je lang twijfelt?",
+   "Een knoop doorhakken doe je bij jezelf, niet tegen iemand anders. Het is geen ruzie."
+  ],
+  "niveaus": {
+   "basis": "Je neemt eindelijk een beslissing na lang twijfelen.",
+   "simpeler": "Je twijfelt lang en dán kies je: dat is de knoop doorhakken.",
+   "nogSimpeler": "Beslissen"
+  },
+  "explanation": "**De knoop doorhakken** = na lang twijfelen eindelijk kiezen. De 'knoop' is het lastige besluit.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 22,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 44",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat betekent het spreekwoord *'**Wie het laatst lacht, lacht het best**'*?",
+  "options": [
+   "Wie aan het eind wint, heeft echt gewonnen",
+   "Lachen is goed voor je gezondheid",
+   "De laatste grap is het grappigst",
+   "Je moet vaak lachen en vrolijk blijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het spreekwoord gaat niet over gezondheid — wannéér lach je 'het laatst'?",
+   "Het gaat niet om grappen. Een spreekwoord bedoel je niet letterlijk.",
+   "Het zegt niet dat je móét lachen. Een spreekwoord bedoel je niet letterlijk; let op het woordje 'laatst'."
+  ],
+  "niveaus": null,
+  "explanation": "Betekenis: juich niet te vroeg — wie aan het **einde** als winnaar overblijft, heeft pas echt gewonnen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 23,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 46",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Het oude kasteel werd **gerestaureerd**.'* Wat gebeurde er met het kasteel?",
+  "options": [
+   "Het werd weer opgeknapt",
+   "Het werd helemaal afgebroken",
+   "Het werd aan iemand verkocht",
+   "Het werd een restaurant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Afbreken is iets anders; een oud kasteel wil je juist bewaren.",
+   "Over geld of een koper zegt de zin niets.",
+   "Pas op: het lijkt op 'restaurant', maar dat is een ander woord. Kijk naar wat er met een oud kasteel kan gebeuren."
+  ],
+  "niveaus": {
+   "basis": "Het kasteel is hersteld, zodat het weer is zoals vroeger.",
+   "simpeler": "Gerestaureerd = gerepareerd zodat het weer als vroeger is.",
+   "nogSimpeler": "Hersteld"
+  },
+  "explanation": "**Restaureren** = een oud gebouw of voorwerp herstellen zodat het weer wordt zoals vroeger. Niet verwarren met 'restaurant'!",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 24,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 48",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "*'De **toeschouwers** klapten na de voorstelling.'* Wie zijn de **toeschouwers**?",
+  "options": [
+   "De mensen die kijken",
+   "De acteurs",
+   "De kaartverkopers",
+   "De regisseurs"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Acteurs spélen — wie zit er in de zaal?",
+   "Kaartverkopers staan bij de ingang. Welk oud woord herken je in 'toeSCHOUWers'?",
+   "De regisseur bedenkt de voorstelling — wie klapt er meestal?"
+  ],
+  "niveaus": null,
+  "explanation": "**Toeschouwers** = de mensen die toekijken (het publiek). 'Schouwen' is een oud woord voor kijken.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 25,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 49",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord betekent hetzelfde als **'gigantisch'**?",
+  "options": [
+   "Reusachtig",
+   "Piepklein",
+   "Gevaarlijk",
+   "Onzichtbaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Precies het tegenovergestelde. Denk aan het woord 'gigant': is dat iets kleins?",
+   "Groot is niet automatisch gevaarlijk.",
+   "Iets gigantisch zie je juist heel goed."
+  ],
+  "niveaus": null,
+  "explanation": "**Gigantisch** komt van 'gigant' = reus. Synoniem: reusachtig, enorm.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 26,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 51",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Woordenschat — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat betekent *'iets **uitstellen**'*?",
+  "options": [
+   "Het later doen dan gepland",
+   "Het meteen doen",
+   "Het aan iemand anders geven",
+   "Het vergeten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is juist het tegenovergestelde van uitstellen.",
+   "Dat heet 'uitbesteden' — let op het verschil.",
+   "Bij uitstellen vergeet je het niet; je kiest er zelf voor."
+  ],
+  "niveaus": null,
+  "explanation": "**Uitstellen** = naar een later moment verschuiven. Vergelijk: 'uitbesteden' = door een ander laten doen.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": true
+ },
+ {
+  "nr": 27,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Begrijpend lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat kondigt het signaalwoord **'zoals'** aan in de zin: 'Ik hou van fruit, zoals appels en peren.'?",
+  "options": [
+   "Een voorbeeld",
+   "Een tegenstelling",
+   "Een gevolg",
+   "Een conclusie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zet 'zoals' hier twee dingen tegenover elkaar? Kijk of fruit en appels elkaars tegendeel zijn.",
+   "Vertelt het woord wat er dóór iets gebeurt? Lees de zin nog eens.",
+   "Een conclusie vat alles samen aan het eind. Doet 'zoals' dat in deze zin?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 28,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Begrijpend lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk signaalwoord kondigt een **voorbeeld** aan?",
+  "options": [
+   "Zoals",
+   "Daardoor",
+   "Bovendien",
+   "Echter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?",
+   "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?",
+   "Probeer: 'Ik eet graag fruit, ... appels.' Past dit woord op de puntjes?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 29,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 45",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Begrijpend lezen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Het schoolreisje gaat dit jaar niet naar de Efteling maar naar een klimpark.'*\n\nWelk signaalwoord zit in deze zin en wat geeft het aan?",
+  "options": [
+   "'Maar' — een tegenstelling",
+   "'Maar' — een opsomming",
+   "'Niet' — een oorzaak",
+   "'Dit jaar' — een gevolg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een opsomming komen dingen erbíj — hier wordt iets juist vervangen.",
+   "'Niet' ontkent alleen iets. Zoek het woord dat de twee delen van de zin aan elkaar verbindt.",
+   "'Dit jaar' zegt alleen wanneer. Welk woord verbindt de twee delen van de zin?"
+  ],
+  "niveaus": null,
+  "explanation": "**Maar** zet twee dingen tegenover elkaar: niet de Efteling ↔ wél het klimpark. Dat heet een tegenstelling.",
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 30,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Hij wordt boos.",
+   "Hij word boos.",
+   "Hij wort boos.",
+   "Hij worden boos."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 'hij/zij/het' altijd stam + t.",
+   "De stam is 'word', met een d — die d blijft gewoon staan.",
+   "Meervoud, hier is 't enkelvoud (hij)."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 31,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Gisteren **...** ik naar school.'* Welke vorm van *fietsen* hoort op de puntjes?",
+  "options": [
+   "fietste",
+   "fietsde",
+   "fietsten",
+   "fiets"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?",
+   "Meervoud — vraag is 'ik' (enkelvoud).",
+   "Dat is tegenwoordige tijd — 'gisteren' vraagt om verleden tijd."
+  ],
+  "niveaus": {
+   "basis": "fietste (stam 'fiets' op s → -te).",
+   "simpeler": "Werkwoord: fietsen. Stam: fiets. Eindigt op s (zit in 't kofschip). Voor verleden tijd + -te. Dus: ik fietste.",
+   "nogSimpeler": "fietste"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke schrijfwijze is **fout**?",
+  "options": [
+   "boeken kast",
+   "boekenkast",
+   "een paar",
+   "zonnebrandcrème"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit woord staat aan elkaar. Is dat goed of fout bij een samenstelling?",
+   "'Een paar' zijn twee losse woorden, geen samenstelling. Dan klopt de spatie.",
+   "Dit is één samenstelling en staat aan elkaar: goed gespeld."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 4",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Wanneer schrijf je een **hoofdletter**?",
+  "options": [
+   "Aan begin van zin of bij namen",
+   "Bij elk werkwoord in de zin",
+   "Bij korte woorden als 'de' of 'en'",
+   "Bij elk woord in een vraagzin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Werkwoorden krijgen alleen een hoofdletter als ze vooraan in de zin staan.",
+   "Korte woorden krijgen normaal geen hoofdletter.",
+   "Vragen krijgen alleen een hoofdletter aan het begin."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
+  "options": [
+   "las",
+   "lees",
+   "laste",
+   "lazen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tegenwoordige tijd.",
+   "Die vorm bestaat niet: 'lezen' verandert van klank in de verleden tijd.",
+   "Meervoud — vraag is 'ik' (enkelvoud)."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Op ___ heb ik gym.'* Welk woord is **goed** geschreven?",
+  "options": [
+   "dinsdag",
+   "Dinsdag",
+   "dinstag",
+   "dingsdag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Midden in een zin krijgen dagen van de week geen hoofdletter.",
+   "Dit woord is een samenstelling met 'dag'. Hoe schrijf je 'dag'?",
+   "Zeg het langzaam: hoor je echt een g na 'din'?"
+  ],
+  "niveaus": {
+   "basis": "Staat het woord aan het begin van de zin? Zo nee: krijgt een dag van de week dan een hoofdletter?",
+   "simpeler": "Dagen van de week krijgen in het Nederlands geen hoofdletter, behalve aan het begin van een zin. Kijk daarna goed naar de letters na 'din'.",
+   "nogSimpeler": "dinsdag"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke **samenstelling** is goed geschreven?",
+  "options": [
+   "zonnebloem",
+   "zonne bloem",
+   "zonnenbloem",
+   "zonebloem"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een samenstelling schrijf je nooit met een spatie ertussen.",
+   "Bij dit woord geldt een uitzondering op de gewone regel van de tussen-n. Ken je die uitzondering?",
+   "Zon heeft een korte o. Hoeveel n's heb je dan nodig?"
+  ],
+  "niveaus": {
+   "basis": "Samenstelling = 2 woorden vast aan elkaar, geen spatie.",
+   "simpeler": "Schrijf de twee delen als één woord, zonder spatie of streepje. Kijk dan naar het stukje tussen 'zon' en 'bloem': welke letters horen daar?",
+   "nogSimpeler": "Plak ze vast: 1 woord!"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 16",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is **goed gespeld**?",
+  "options": [
+   "beschuit",
+   "beschuid",
+   "beshuit",
+   "bescuit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?",
+   "Zeg het langzaam: be-SCH-uit. Welke klank hoor je na de s?",
+   "Je hoort 'sch' zoals in 'school'. Hoe schrijf je die klank?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Gisteren **...** we naar opa.'* Welke vorm van *wandelen* hoort op de puntjes?",
+  "options": [
+   "wandelden",
+   "wandelde",
+   "wandelten",
+   "wandelt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Wandelde' is de vorm voor één persoon. 'We' zijn meer personen.",
+   "Kijk naar de laatste letter van de stam. Zit die letter in 't kofschip?",
+   "'Wandelt' is tegenwoordige tijd. 'Gisteren' vraagt om verleden tijd."
+  ],
+  "niveaus": {
+   "basis": "Zoek eerst de stam van 'wandelen'. Kijk dan: gaat de zin over één persoon of over meer?",
+   "simpeler": "De stam is 'wandel'. De l zit niet in 't kofschip, dus er komt -de achter. 'We' is meervoud: wat komt er dan nog bij?",
+   "nogSimpeler": "Meervoud verleden = +den."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 19",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is **goed gespeld**?",
+  "options": [
+   "computer",
+   "compjuter",
+   "konputer",
+   "computter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?",
+   "Twee dingen: het woord begint niet met een k, en voor de p hoort een m.",
+   "Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 20",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Het kind **...** drie ijsjes gegeten.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "heeft",
+   "hebben",
+   "hebt",
+   "heb"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Hebben' is het hele werkwoord of de meervoudsvorm. 'Het kind' is maar één kind.",
+   "'Hebt' hoort bij 'jij'. Over wie gaat deze zin?",
+   "'Heb' gebruik je bij 'ik'. Gaat deze zin over jezelf?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 23",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is **goed gespeld**?",
+  "options": [
+   "eiland",
+   "ijland",
+   "eilant",
+   "ijlant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit moet je uit je hoofd leren. Welke spelling zie je vaker in boeken?",
+   "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?",
+   "Twee dingen: ei of ij, en d of t aan het eind."
+  ],
+  "niveaus": {
+   "basis": "Of je ei of ij schrijft, moet je uit je hoofd kennen. Voor de laatste letter verleng je het woord.",
+   "simpeler": "Denk aan woorden als klein en plein: die schrijf je met ei. Verleng daarna het woord: hoor je een d of een t?",
+   "nogSimpeler": "eiland"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 30",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Spelling — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord is **goed gespeld**?",
+  "options": [
+   "politie",
+   "polisie",
+   "polietie",
+   "policie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je schrijft de s-klank zoals je hem hoort, maar bij dit soort woorden klopt dat niet. Denk aan 'vakantie'.",
+   "Je hoort een lange ie-klank. Schrijf je die in dit woord echt met 'ie'?",
+   "De sie-klank schrijf je in dit woord niet met een c."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 1",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Hoe **eindigt een vraag**?",
+  "options": [
+   "Met een vraagteken (?)",
+   "Met een punt (.)",
+   "Met een komma (,)",
+   "Met een uitroepteken (!)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een punt is voor een gewone zin.",
+   "Een komma zit binnen een zin.",
+   "Uitroepteken is voor verbazing of bevel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 2",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft **komma's op de goede plek**?",
+  "options": [
+   "Ik kocht appels, peren en druiven.",
+   "Ik kocht appels peren, en druiven.",
+   "Ik kocht appels, peren, en druiven.",
+   "Ik kocht, appels peren en druiven."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen komma's vóór elk woord — alleen tussen items.",
+   "Vóór 'en' komt bij een opsomming geen komma.",
+   "Geen komma ná het werkwoord."
+  ],
+  "niveaus": {
+   "basis": "Komma tussen items, geen komma vóór 'en'.",
+   "simpeler": "Bij een opsomming: appels, peren en druiven. Tussen losse items komma, vóór 'en' geen komma.",
+   "nogSimpeler": "Geen komma vóór 'en'."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 3",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat zijn **aanhalingstekens** voor?",
+  "options": [
+   "Om aan te geven wat iemand zegt",
+   "Om een opsomming aan te kondigen",
+   "Om een vraag af te sluiten",
+   "Om alinea's te scheiden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tussen de dingen van een opsomming zet je komma's. Waar staan aanhalingstekens omheen?",
+   "Een vraag sluit je af met een vraagteken.",
+   "Alinea's scheid je met een nieuwe regel."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 5",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*'Ik wil naar buiten, ___ het regent.'* Welk woord geeft hier een **tegenstelling** aan?",
+  "options": [
+   "maar",
+   "omdat",
+   "en",
+   "als"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin met 'omdat' hardop. Ga je naar buiten vanwege de regen?",
+   "'En' is opsommend, niet tegenstellend.",
+   "'Als' geeft voorwaarde. Voelt deze zin als een voorwaarde of als een tegenstelling?"
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 6",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
+  "options": [
+   "dubbele punt :",
+   "punt .",
+   "komma ,",
+   "uitroepteken !"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een punt sluit een zin af; het kondigt niets aan.",
+   "Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?",
+   "Geen sterke emotie hier."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 7",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft een **fout** met komma's?",
+  "options": [
+   "Ik wandel en, ik fiets.",
+   "Ik wandel en ik fiets.",
+   "Ik wandel, omdat het mooi weer is.",
+   "Ik wandel, maar ik fiets niet."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Goed — geen komma nodig.",
+   "Goed — komma vóór 'omdat' (samengestelde zin).",
+   "Goed — komma vóór 'maar' (tegenstelling)."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 8",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin is **goed**?",
+  "options": [
+   "Jan, Piet en Klaas spelen.",
+   "Jan Piet en Klaas spelen.",
+   "Jan, Piet, en Klaas spelen.",
+   "Jan, Piet en, Klaas spelen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen komma's — moeilijk te lezen.",
+   "Komma vóór 'en' = fout in NL-opsomming.",
+   "Komma op verkeerde plek."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 50,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 9",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft een **vraagteken** nodig?",
+  "options": [
+   "Waar is mijn jas",
+   "De jas is rood",
+   "Een jas in de kast",
+   "Mijn jas is hier"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mededelende zin → punt.",
+   "Geen werkwoord — niet eens een hele zin.",
+   "Mededelend."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 51,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 10",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke is een **complete zin**?",
+  "options": [
+   "De kat slaapt.",
+   "Slapende kat.",
+   "Op de bank.",
+   "De rode kat."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen werkwoord.",
+   "Geen onderwerp + werkwoord.",
+   "Geen werkwoord."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 52,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 11",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welk woord krijgt **een hoofdletter**?",
+  "options": [
+   "amsterdam",
+   "woensdag",
+   "herfst",
+   "februari"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Weekdagen schrijven we in het Nederlands klein (anders dan in het Engels).",
+   "Seizoenen krijgen geen hoofdletter.",
+   "Maanden schrijven we in het Nederlands klein."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 53,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 12",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Welke zin heeft **goede aanhalingstekens**?",
+  "options": [
+   "Hij zei: 'Hallo.'",
+   "Hij zei Hallo.",
+   "Hij zei: Hallo",
+   "'Hij zei Hallo'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen aanhalingstekens.",
+   "Mist aanhalingstekens.",
+   "Hele zin tussen aanhalingstekens = fout."
+  ],
+  "niveaus": null,
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 54,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 13",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **onderwerp** in 'De kat slaapt'?",
+  "options": [
+   "De kat",
+   "Slaapt",
+   "De",
+   "Slaapt de kat"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het werkwoord.",
+   "Lidwoord alleen.",
+   "Dat is de hele zin — welk deel doet de actie?"
+  ],
+  "niveaus": {
+   "basis": "Onderwerp = wie/wat de actie doet.",
+   "simpeler": "'De kat slaapt' → Wie slaapt? De kat. Dát is het onderwerp.",
+   "nogSimpeler": "Wie? = onderwerp."
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ },
+ {
+  "nr": 55,
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 14",
+  "file": "src/learnPaths/doorstroomtoetsTaalG8.js",
+  "stapTitel": "Taalverzorging — interpunctie & zinnen — ~20 min",
+  "vanafGroep": null,
+  "q": "Wat is het **werkwoord** in 'Lisa rent hard'?",
+  "options": [
+   "rent",
+   "Lisa",
+   "hard",
+   "Lisa rent"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het onderwerp (wie of wat doet iets).",
+   "Dat is een bijwoord (hoe iets gebeurt).",
+   "Dat zijn onderwerp en werkwoord samen. Welk ene woord is de actie?"
+  ],
+  "niveaus": {
+   "basis": "Werkwoord = actie-woord (rent, slaapt, eet).",
+   "simpeler": "Vraag 'wat doet hij?'. Antwoord = werkwoord.",
+   "nogSimpeler": "Werkwoord = doen!"
+  },
+  "explanation": null,
+  "heeftEigenSvg": false,
+  "stapHeeftSvg": false
+ }
+]

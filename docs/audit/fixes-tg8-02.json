@@ -1,0 +1,254 @@
+[
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 15",
+  "oud": "wrongHints: [null, \"Onderwerp.\", \"Werkwoord.\", \"Dat zijn onderwerp en werkwoord samen. Welke woordgroep ondergaat de actie?\"],",
+  "nieuw": "wrongHints: [null, \"'Ik' is degene die iets doet: het onderwerp. Wat ondergaat de actie?\", \"Dit woord zegt wat er gebeurt. Zoek het stuk dat de actie ondergaat.\", \"Dat zijn onderwerp en werkwoord samen. Welke woordgroep ondergaat de actie?\"],",
+  "reden": "telegram-hints vervangen door denkprikkels"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 15",
+  "oud": "simpeler: \"'Ik eet een appel.' → wat eet ik? Een appel.\",",
+  "nieuw": "simpeler: \"'Tom leest een boek.' → wat leest Tom? Een boek = lijdend voorwerp. Stel nu dezelfde wat-vraag bij jouw zin.\",",
+  "reden": "hulpstap gaf het antwoord; nu voorbeeld met andere zin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 16",
+  "oud": "simpeler: \"'De rode auto' → 'rode' = welke kleur de auto is.\",",
+  "nieuw": "simpeler: \"'Het grote huis' → 'grote' zegt hoe het huis is. Zoek in elke zin een woord dat zegt hoe de auto is.\",",
+  "reden": "hulpstap noemde letterlijk het goede antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 17",
+  "oud": "q: \"Welke is een **persoonlijk voornaamwoord**?\",",
+  "nieuw": "q: \"Welk woord is een **persoonlijk voornaamwoord**?\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 17",
+  "oud": "\"Dat is een bijwoord — zegt hoe iets gaat.\"",
+  "nieuw": "\"'Snel' zegt hoe iets gaat of is — het vervangt geen persoon.\"",
+  "reden": "'snel' los is niet per se bijwoord (ook bijv. nw.)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 18",
+  "oud": "basis: \"appels, peren en druiven — komma + komma + en.\",",
+  "nieuw": "basis: \"Bij een opsomming zet je een komma tussen de delen, maar vóór het laatste 'en' komt geen komma: appels, peren en druiven.\",",
+  "reden": "'komma + komma + en' klopte niet met het voorbeeld"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 18",
+  "oud": "nogSimpeler: \"Geen komma voor 'en'\",",
+  "nieuw": "nogSimpeler: \"Geen komma vóór 'en'.\",",
+  "reden": "punt ontbrak"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 19",
+  "oud": "wrongHints: [null, \"Geen werkwoord — alleen 'rennende' (bijvoeglijk). Geen complete zin.\", \"Geen onderwerp.\", \"Waar is het werkwoord?\"],",
+  "nieuw": "wrongHints: [null, \"'Rennende' zegt hoe de hond is, het is geen persoonsvorm. Een volledige zin heeft een persoonsvorm nodig.\", \"Wie rent er? Een volledige zin heeft een onderwerp én een persoonsvorm.\", \"Waar is de persoonsvorm? Wat doet de hond?\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "oud": "wrongHints: [null, \"Geen aanhalingstekens om wat ze zegt.\", \"Dubbele punt verkeerd geplaatst.\", \"Hele zin tussen aanhalingstekens, dat klopt niet.\"],",
+  "nieuw": "wrongHints: [null, \"Hoe zie je in deze zin welke woorden mama letterlijk zegt?\", \"Kijk waar de dubbele punt staat: hoort die vóór of ná 'zei'?\", \"Mama zegt niet 'Mama zei'. Welk stuk zegt ze letterlijk?\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "oud": "basis: \"Mama zei: 'Kom eten.'\",",
+  "nieuw": "basis: \"Wat iemand letterlijk zegt, zet je tussen aanhalingstekens. Ervoor komt een dubbele punt, en het citaat begint met een hoofdletter.\",",
+  "reden": "basis en simpeler gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "oud": "simpeler: \"Zei + dubbele punt + 'Kom eten.'\",",
+  "nieuw": "simpeler: \"Wie zegt het + dubbele punt + aanhalingstekens om de woorden die gezegd worden.\",",
+  "reden": "basis en simpeler gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 22",
+  "oud": "q: \"*'Tom is moe ___ hij heeft hard gewerkt.'* Welk **voegwoord** past?\",",
+  "nieuw": "q: \"*'Tom is moe ___ hij hard heeft gewerkt.'* Welk **voegwoord** past?\",",
+  "reden": "na 'omdat' staat de persoonsvorm achteraan; 'omdat hij heeft hard gewerkt' is geen schrijftaal"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 23",
+  "oud": "wrongHints: [null, \"Begin zin én plaatsnaam = hoofdletter.\", \"Dagen krijgen géén hoofdletter.\", \"Amsterdam = plaatsnaam = hoofdletter.\"],",
+  "nieuw": "wrongHints: [null, \"Kijk naar het begin van de zin en naar de plaatsnaam.\", \"Dagen krijgen géén hoofdletter.\", \"Kijk nog eens naar de plaatsnaam aan het eind.\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 23",
+  "oud": "basis: \"Op zaterdag ga ik naar Amsterdam.\",",
+  "nieuw": "basis: \"Een hoofdletter komt aan het begin van de zin en bij namen van plaatsen. Dagen van de week krijgen een kleine letter.\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 23",
+  "oud": "nogSimpeler: \"Amsterdam met A, zaterdag met z\",",
+  "nieuw": "nogSimpeler: \"Plaatsnaam groot, dag klein.\",",
+  "reden": "gaf letterlijk het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 24",
+  "oud": "wrongHints: [null, \"Meervoud-vorm.\", \"Tegenwoordige tijd.\", \"Dat is het hele werkwoord.\"],",
+  "nieuw": "wrongHints: [null, \"Hoeveel jongens zijn er? Kies de vorm voor één persoon.\", \"Dit gebeurt nu. De vraag vraagt naar de verleden tijd.\", \"Dat is het hele werkwoord. Na 'de jongen' komt een persoonsvorm.\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 26",
+  "oud": "wrongHints: [null, \"Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?\", \"Enkelvoud.\", \"Dubbel meervoud.\"],",
+  "nieuw": "wrongHints: [null, \"Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?\", \"Dat is nog maar één leerling. Hoe zeg je het bij twee?\", \"Hier staan twee meervoudsuitgangen achter elkaar. Eén is genoeg.\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 27",
+  "oud": "\"Aanwijzend, geen lidwoord.\"",
+  "nieuw": "\"'Die' is een aanwijzend voornaamwoord, geen lidwoord.\"",
+  "reden": "telegram-hint"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 28",
+  "oud": "wrongHints: [null, \"Meervoud — hier 1 kat.\", \"1e persoon.\", \"Verleden.\"],",
+  "nieuw": "wrongHints: [null, \"'Zijn' gebruik je bij meer dan één. Hoeveel katten zijn er?\", \"'Ben' hoort bij 'ik'. Gaat de zin over jezelf?\", \"'Was' is verleden tijd. De vraag vraagt naar nu.\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 29",
+  "oud": "q: \"Welk **leesteken** kondigt een opsomming aan (bv *'Tom kookte ___ pasta, pizza, pannenkoeken'*)?\",",
+  "nieuw": "q: \"Welk **leesteken** kondigt een opsomming aan (bijvoorbeeld *'Tom kookte ___ pasta, pizza en pannenkoeken.'*)?\",",
+  "reden": "voorbeeld-opsomming zonder 'en'/punt en afkorting 'bv'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 29",
+  "oud": "basis: \"Dubbele punt.\",",
+  "nieuw": "basis: \"Welk teken zet je vóór een rijtje, om aan te kondigen dat het rijtje nu komt? Denk aan: 'Je hebt nodig ... meel en eieren.'\",",
+  "reden": "basis en simpeler gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 29",
+  "oud": "simpeler: \"`:` kondigt opsomming aan.\",",
+  "nieuw": "simpeler: \"Het is het teken met twee puntjes boven elkaar.\",",
+  "reden": "basis en simpeler gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 30",
+  "oud": "options: [\"Wat een mooie dag!\", \"Wat doe je\", \"Hij komt thuis\", \"Klaar voor de toets\"],",
+  "nieuw": "options: [\"Wat een mooie dag\", \"Wat doe je\", \"Hij komt thuis\", \"Morgen hebben we een toets\"],",
+  "reden": "goede optie had het uitroepteken al (raadbaar); 'Klaar voor de toets' kon ook uitroep/vraag zijn"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 30",
+  "oud": "wrongHints: [null, \"Vraag — vraagteken.\", \"Gewone zin — punt.\", \"Geen sterke emotie/uitroep.\"],",
+  "nieuw": "wrongHints: [null, \"Wil iemand hier iets weten? Welk leesteken hoort daar dan bij?\", \"Is dit een uitroep, of gewoon een mededeling?\", \"Is dit een uitroep, of gewoon een mededeling?\"],",
+  "reden": "telegram-hints, passend bij nieuwe optie"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 31",
+  "oud": "wrongHints: [null, \"Tegenwoordig.\", \"Meervoud.\", \"1e persoon.\"],",
+  "nieuw": "wrongHints: [null, \"'Is' gaat over nu. 'Toen hij won' gaat over vroeger.\", \"'Zijn' gebruik je bij meer dan één. Over hoeveel personen gaat het?\", \"'Ben' hoort bij 'ik'. Gaat de zin over jezelf?\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "oud": "wrongHints: [null, \"Eigennaam, geen bijwoord.\", \"Werkwoord.\", \"Persoonlijk voornaamwoord.\"],",
+  "nieuw": "wrongHints: [null, \"'Tom' is een naam. Zegt die iets over het rennen?\", \"Dit is het werkwoord zelf. Welk woord zegt iets óver dat werkwoord?\", \"'Hij' vervangt Tom. Zegt dat iets over het rennen?\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "oud": "basis: \"snel.\",",
+  "nieuw": "basis: \"Een bijwoord zegt iets over het werkwoord: hoe, waar of wanneer iets gebeurt. Zoek eerst het werkwoord en vraag dan: hoe gebeurt het?\",",
+  "reden": "alle drie hulpstappen gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "oud": "simpeler: \"'Snel' beschrijft hoe Tom rent.\",",
+  "nieuw": "simpeler: \"'Ze loopt vlug.' → hoe loopt ze? Vlug = bijwoord. Stel dezelfde vraag bij 'rent'.\",",
+  "reden": "alle drie hulpstappen gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "oud": "nogSimpeler: \"snel\",",
+  "nieuw": "nogSimpeler: \"Hoe rent Tom?\",",
+  "reden": "alle drie hulpstappen gaven alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 34",
+  "oud": "wrongHints: [null, \"Beschrijft niet de auto.\", \"Geen actie.\",",
+  "nieuw": "wrongHints: [null, \"Zegt 'een' hoe de auto is? Welk woord doet dat wél?\", \"Is 'een' iets wat Tom doet?\",",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 36",
+  "oud": "q: \"Het **onderwerp** van zin *'De hond rent in het park.'* is...\",",
+  "nieuw": "q: \"Het **onderwerp** van de zin *'De hond rent in het park.'* is...\",",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 36",
+  "oud": "wrongHints: [null, \"Werkwoord.\", \"Plaatsbepaling.\", \"Plek-aanduiding.\"],",
+  "nieuw": "wrongHints: [null, \"Dat is wat er gebeurt: de persoonsvorm. Wie doet het?\", \"Dat zegt wáár het gebeurt, niet wie.\", \"Dat is een stukje van 'waar', niet wie er rent.\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 37",
+  "oud": "q: \"*'Sinds hij verhuisde wonen we ___ uit elkaar.'* Welk **bijwoord** past?\",",
+  "nieuw": "q: \"*'Sinds hij verhuisd is, wonen we ___ uit elkaar.'* Welk **bijwoord** past?\",",
+  "reden": "komma tussen bijzin en hoofdzin ontbrak (in een interpunctie-stap)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 38",
+  "oud": "wrongHints: [null, \"Werkwoord.\", \"Past bij actie, niet bij huis.\", \"Voornaamwoord.\"],",
+  "nieuw": "wrongHints: [null, \"'Lopen' is iets wat je doet. Kan een huis dat?\", \"Een huis staat stil. Past 'snel' bij een huis?\", \"'Hij' vervangt een persoon. Zegt dat hoe een huis is?\"],",
+  "reden": "telegram-hints"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 46",
+  "oud": "basis: \"dat — want 'het meisje'.\",",
+  "nieuw": "basis: \"Kijk naar het woord waar je naar terugwijst: is het een de-woord of een het-woord?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 46",
+  "oud": "nogSimpeler: \"dat\",",
+  "nieuw": "nogSimpeler: \"Zeg je 'de meisje' of 'het meisje'?\",",
+  "reden": "nogSimpeler was alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 1",
+  "oud": "\"Zeg de ik-vorm hardop: 'ik ... ziek'. Welke letter hoor je aan het eind van de stam?\"",
+  "nieuw": "\"Kijk naar het hele werkwoord: wor-den. Op welke letter eindigt de stam dan, ook al hoor je een t?\"",
+  "reden": "je hóórt juist een t; hint stuurde verkeerd"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 4",
+  "oud": "\"Waar is de lange aa gebleven? Zeg het woord hardop.\"",
+  "nieuw": "\"Schrijf eerst de stam: 'ik praat'. Blijft die stam heel in je antwoord?\"",
+  "reden": "'prate' klinkt hardop hetzelfde; hint hielp niet"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 6",
+  "oud": "\"Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.\"",
+  "nieuw": "\"Bekijk het hele werkwoord: ge-beu-ren. Zit er een d in de stam?\"",
+  "reden": "hint gaf de regel én daarmee het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 9",
+  "oud": "\"Dat is het spul waar planken van gemaakt worden! Zeg 'ik ... van jou' — welke letter hoor je aan het eind?\"",
+  "nieuw": "\"'Hout' is het spul waar planken van gemaakt worden! Kijk naar het hele werkwoord: hou-den. Op welke letter eindigt de stam?\"",
+  "reden": "'ik hou van jou' laat geen d horen; hint stuurde verkeerd"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 16",
+  "oud": "\"Staat 'jij' áchter de persoonsvorm? Dan geen t erbij — vergelijk: 'wat loop jij?'.\"",
+  "nieuw": "\"Staat 'jij' áchter de persoonsvorm? Dan geen t erbij — vergelijk: 'loop jij mee?'.\"",
+  "reden": "'wat loop jij?' is een rare zin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 16",
+  "oud": "Truc: 'wat loop jij?' — ook zonder t.\",",
+  "nieuw": "Truc: 'loop jij mee?' — ook zonder t.\",",
+  "reden": "idem in explanation"
+ }
+]

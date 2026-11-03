@@ -1,0 +1,272 @@
+[
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 2",
+  "oud": "basis: \"Heel groot.\",",
+  "nieuw": "basis: \"Zet het woord in een zin: 'een enorm huis'. Wat weet je dan over de maat van dat huis?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 3",
+  "oud": "basis: \"Niet kunnen bewegen.\",",
+  "nieuw": "basis: \"Welk woordje zit er in ver-LAM-d? Als je arm 'lam' is, wat kun je dan niet meer met die arm?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 4",
+  "oud": "wrongHints: [null, \"Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.\", \"Verbaasd = verrast zijn; tevreden = blij. Andere emotie.\", \"Bang = angstig; tevreden = blij. Andere emotie.\"],",
+  "nieuw": "wrongHints: [null, \"Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.\", \"Verbaasd ben je als er iets onverwachts gebeurt. Hoe voel je je als je tevreden bent met je rapport?\", \"Bang ben je als je iets eng vindt. Hoe voel je je als je tevreden bent met je rapport?\"],",
+  "reden": "twee wrongHints noemden het antwoord ('tevreden = blij'); telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 4",
+  "oud": "basis: \"Blij met situatie.\",",
+  "nieuw": "basis: \"Denk aan de zin 'Ik ben tevreden met mijn rapport.' Hoe voel je je dan: fijn of naar?\",",
+  "reden": "basis gaf alleen het antwoord (telegramstijl)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 4",
+  "oud": "simpeler: \"Tevreden = blij + akkoord. 'Blij met de situatie' = juist.\",",
+  "nieuw": "simpeler: \"Tevreden ben je als je niets te klagen hebt: je bent blij met hoe het gegaan is.\",",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 5",
+  "oud": "basis: \"Een uitleg.\",",
+  "nieuw": "basis: \"In 'toelichting' zit 'licht'. Als je iets toelicht, maak je het helder en duidelijk. Wat doet de docent dan bij de som?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 6",
+  "oud": "basis: \"Rustig en niet uit balans.\",",
+  "nieuw": "basis: \"On- betekent 'niet'. Onverstoorbaar = niet te verstoren. Hoe ben je als niets je van slag kan brengen?\",",
+  "reden": "basis gaf (bijna) het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 8",
+  "oud": "basis: \"Onzeker / gevaarlijk.\",",
+  "nieuw": "basis: \"'Uiterst' betekent 'heel erg'. Zeg je 'uiterst precair' als alles goed gaat, of als het elk moment mis kan gaan?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 9",
+  "oud": "basis: \"Bemoeien met wat je niet aangaat.\",",
+  "nieuw": "basis: \"In 'inmenging' zit 'mengen'. Wie zich ergens in mengt, doet mee terwijl niemand daarom vroeg. Waarom werd de vergadering daardoor verstoord?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 10",
+  "oud": "basis: \"Druk en snel.\",",
+  "nieuw": "basis: \"In 'gehaast' zit het woord 'haast'. Hoe beweeg je als je haast hebt?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "oud": "q: \"*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?\",",
+  "nieuw": "q: \"*'De **moedige** soldaat redde drie mensen.'* Wat betekent moedig?\",",
+  "reden": "getal in lopende tekst voluit (drie)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "oud": "{ titel: \"Context\", tekst: \"Soldaat redde 3 mensen → dat vraagt moed (gevaar trotseren).\" },",
+  "nieuw": "{ titel: \"Context\", tekst: \"De soldaat redde drie mensen. Dat vraagt moed: hij trotseerde gevaar.\" },",
+  "reden": "telegramstijl + getal voluit"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "oud": "basis: \"Dapper, niet bang.\",",
+  "nieuw": "basis: \"In 'moedig' zit 'moed'. Iemand met moed durft iets gevaarlijks te doen. Welk woord past daarbij?\",",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 12",
+  "oud": "basis: \"Met respect / serieus.\",",
+  "nieuw": "basis: \"Denk aan een koningin die een toespraak houdt bij een officiële gebeurtenis. Klinkt dat luchtig of juist ernstig en officieel?\",",
+  "reden": "basis gaf (bijna) het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 14",
+  "oud": "basis: \"Kreupel = niet goed kunnen lopen (door wond).\",",
+  "nieuw": "basis: \"Stel je voor dat je je enkel hebt verstuikt. Hoe loop je dan? Welk woord past daarbij?\",",
+  "reden": "basis gaf alleen de betekenis"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 14",
+  "oud": "nogSimpeler: \"Kreupel = pijnlijk lopen.\",",
+  "nieuw": "nogSimpeler: \"Kreupel = mank.\",",
+  "reden": "onnauwkeurige omschrijving"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 15",
+  "oud": "basis: \"Synoniem = woord met dezelfde betekenis. Beginnen = starten.\",",
+  "nieuw": "basis: \"Een synoniem is een woord met dezelfde betekenis. Probeer: 'De film begint om acht uur.' Welk woord kun je op de plek van 'begint' zetten zonder dat de betekenis verandert?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 19",
+  "oud": "basis: \"Het tegenovergestelde van voorzichtig is roekeloos.\",",
+  "nieuw": "basis: \"Voorzichtig = goed oppassen. Zoek het woord dat het omgekeerde zegt: helemaal níét oppassen en zomaar risico nemen.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 40",
+  "oud": "basis: \"Je neemt eindelijk een beslissing na lang twijfelen.\",",
+  "nieuw": "basis: \"Het is een uitdrukking: er is geen echte knoop. Denk aan iemand die lang twijfelt tussen twee keuzes. Wat doet die persoon als hij 'de knoop doorhakt'?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 46",
+  "oud": "basis: \"Het kasteel is hersteld, zodat het weer is zoals vroeger.\",",
+  "nieuw": "basis: \"Een oud kasteel raakt in de loop van de tijd beschadigd. Wat doe je ermee als je het wilt bewaren?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 48",
+  "oud": "options: [\"De mensen die kijken\", \"De acteurs\", \"De kaartverkopers\", \"De regisseurs\"],",
+  "nieuw": "options: [\"De kijkers\", \"De acteurs\", \"De kaartverkopers\", \"De regisseurs\"],",
+  "reden": "goede optie was de enige omschrijving (raadbaar door vorm)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 1",
+  "oud": "wrongHints: [null, \"Bij 'hij/zij/het' altijd stam + t.\", \"De stam is 'word', met een d — die d blijft gewoon staan.\", \"Meervoud, hier is 't enkelvoud (hij).\"],",
+  "nieuw": "wrongHints: [null, \"Kijk naar 'hij'. Welke regel geldt bij hij, zij en het in de tegenwoordige tijd?\", \"De stam is 'word', met een d — die d blijft gewoon staan.\", \"'Worden' is de meervoudsvorm. Gaat deze zin over één persoon of over meer?\"],",
+  "reden": "telegramstijl ('t, schuine strepen)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 2",
+  "oud": "wrongHints: [null, \"Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?\", \"Meervoud — vraag is 'ik' (enkelvoud).\", \"Dat is tegenwoordige tijd — 'gisteren' vraagt om verleden tijd.\"],",
+  "nieuw": "wrongHints: [null, \"Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?\", \"Dat is de meervoudsvorm. Gaat de zin over één persoon of over meer?\", \"Dat is tegenwoordige tijd — 'gisteren' vraagt om verleden tijd.\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 2",
+  "oud": "basis: \"fietste (stam 'fiets' op s → -te).\",",
+  "nieuw": "basis: \"Zoek de stam van 'fietsen'. Op welke letter eindigt die? Zit die letter in 't kofschip?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 4",
+  "oud": "options: [\"Aan begin van zin of bij namen\", \"Bij elk werkwoord in de zin\", \"Bij korte woorden als 'de' of 'en'\", \"Bij elk woord in een vraagzin\"],",
+  "nieuw": "options: [\"Aan het begin van een zin en bij namen\", \"Bij elk werkwoord in de zin\", \"Bij korte woorden als 'de' of 'en'\", \"Bij elk woord in een vraagzin\"],",
+  "reden": "telegramzin in de goede optie"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 4",
+  "oud": "wrongHints: [null, \"Werkwoorden krijgen alleen een hoofdletter als ze vooraan in de zin staan.\", \"Korte woorden krijgen normaal geen hoofdletter.\", \"Vragen krijgen alleen een hoofdletter aan het begin.\"],",
+  "nieuw": "wrongHints: [null, \"Kijk naar deze zin: 'Mijn broer fietst naar school.' Heeft 'fietst' een hoofdletter?\", \"Kijk naar een zin in je leesboek. Staan 'de' en 'en' daar met een hoofdletter?\", \"Kijk naar de vraag hierboven. Heeft daar elk woord een hoofdletter?\"],",
+  "reden": "wrongHints noemden het antwoord ('vooraan', 'aan het begin')"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 6",
+  "oud": "q: \"*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?\",",
+  "nieuw": "q: \"*'Ik **...** gisteren een mooi boek.'* Welke vorm van *lezen* hoort op de puntjes?\",",
+  "reden": "vet stond verkeerd + telegramvraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 6",
+  "oud": "wrongHints: [null, \"Tegenwoordige tijd.\", \"Die vorm bestaat niet: 'lezen' verandert van klank in de verleden tijd.\", \"Meervoud — vraag is 'ik' (enkelvoud).\"],",
+  "nieuw": "wrongHints: [null, \"Dat is de tegenwoordige tijd. Welk woord in de zin vertelt wanneer het gebeurde?\", \"Die vorm bestaat niet: 'lezen' verandert van klank in de verleden tijd.\", \"Dat is de meervoudsvorm. Gaat de zin over één persoon of over meer?\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 16",
+  "oud": "wrongHints: [null, \"Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?\", \"Zeg het langzaam: be-SCH-uit. Welke klank hoor je na de s?\", \"Je hoort 'sch' zoals in 'school'. Hoe schrijf je die klank?\"],",
+  "nieuw": "wrongHints: [null, \"Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?\", \"Zeg het woord langzaam. Welke klank hoor je na de s? Denk aan 'school' en 'schaap'.\", \"Welke klank hoor je na de s? Denk aan 'school' en 'schaap': hoe schrijf je die klank daar?\"],",
+  "reden": "wrongHints spelden het antwoord voor (be-SCH-uit, 'sch')"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 19",
+  "oud": "wrongHints: [null, \"Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?\", \"Twee dingen: het woord begint niet met een k, en voor de p hoort een m.\", \"Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?\"],",
+  "nieuw": "wrongHints: [null, \"Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?\", \"Twee letters kloppen niet: de eerste letter en de letter vóór de p. Het is een Engels leenwoord: hoe zie je het geschreven in een winkel of op een doos?\", \"Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?\"],",
+  "reden": "wrongHint gaf de juiste letters (geen k, m voor de p)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 1",
+  "oud": "q: \"Hoe **eindigt een vraag**?\",",
+  "nieuw": "q: \"Waarmee eindigt de zin *'Weet jij hoe laat de film begint'*?\",",
+  "reden": "antwoord stond in de vraag (vraag → vraagteken); te makkelijk voor groep 8"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 1",
+  "oud": "wrongHints: [null, \"Een punt is voor een gewone zin.\", \"Een komma zit binnen een zin.\", \"Uitroepteken is voor verbazing of bevel.\"],",
+  "nieuw": "wrongHints: [null, \"Een punt zet je achter een mededeling. Wil de spreker hier iets vertellen of iets weten?\", \"Een komma staat midden in een zin, niet aan het eind.\", \"Een uitroepteken zet je achter een uitroep of een bevel. Roept de spreker hier iets uit?\"],",
+  "reden": "telegramstijl; past bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 2",
+  "oud": "wrongHints: [null, \"Geen komma's vóór elk woord — alleen tussen items.\", \"Vóór 'en' komt bij een opsomming geen komma.\", \"Geen komma ná het werkwoord.\"],",
+  "nieuw": "wrongHints: [null, \"Kijk naar 'appels peren': hoe scheid je twee dingen in een opsomming? En wat doe je vlak vóór 'en'?\", \"Vóór 'en' komt bij een opsomming geen komma.\", \"Direct na 'kocht' hoort geen komma. Waar staan de komma's in een opsomming?\"],",
+  "reden": "eerste wrongHint paste niet bij de gekozen optie; 'items'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 2",
+  "oud": "basis: \"Komma tussen items, geen komma vóór 'en'.\",",
+  "nieuw": "basis: \"Bij een opsomming zet je een komma tussen de dingen. Wat doe je vlak vóór het woordje 'en'?\",",
+  "reden": "telegramstijl, 'items'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 3",
+  "oud": "wrongHints: [null, \"Tussen de dingen van een opsomming zet je komma's. Waar staan aanhalingstekens omheen?\", \"Een vraag sluit je af met een vraagteken.\", \"Alinea's scheid je met een nieuwe regel.\"],",
+  "nieuw": "wrongHints: [null, \"Een opsomming kondig je aan met een dubbele punt. Waar staan aanhalingstekens omheen?\", \"Een vraag sluit je af met een vraagteken.\", \"Alinea's scheid je met een nieuwe regel.\"],",
+  "reden": "hint over aankondigen klopte niet (dat is de dubbele punt)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 6",
+  "oud": "wrongHints: [null, \"Een punt sluit een zin af; het kondigt niets aan.\", \"Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?\", \"Geen sterke emotie hier.\"],",
+  "nieuw": "wrongHints: [null, \"Een punt sluit een zin af; het kondigt niets aan.\", \"Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?\", \"Een uitroepteken staat aan het eind van een uitroep, niet vóór wat iemand gaat zeggen.\"],",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 7",
+  "oud": "wrongHints: [null, \"Goed — geen komma nodig.\", \"Goed — komma vóór 'omdat' (samengestelde zin).\", \"Goed — komma vóór 'maar' (tegenstelling).\"],",
+  "nieuw": "wrongHints: [null, \"Deze zin is goed: met 'en' tussen twee korte zinnen hoeft geen komma. Zoek een zin waar de komma op een vreemde plek staat.\", \"Deze zin is goed: vóór 'omdat' mag een komma, want daar begint een nieuw zinsdeel. Zoek een zin waar de komma op een vreemde plek staat.\", \"Deze zin is goed: vóór 'maar' zet je meestal een komma. Zoek een zin waar de komma op een vreemde plek staat.\"],",
+  "reden": "telegramstijl; komma vóór 'omdat' is niet verplicht"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 8",
+  "oud": "wrongHints: [null, \"Geen komma's — moeilijk te lezen.\", \"Komma vóór 'en' = fout in NL-opsomming.\", \"Komma op verkeerde plek.\"],",
+  "nieuw": "wrongHints: [null, \"Zonder komma lopen de namen in elkaar over. Wat zet je tussen de dingen van een opsomming?\", \"Kijk naar de komma vlak vóór 'en'. Hoort die er in een Nederlandse opsomming?\", \"Hier staat de komma ná 'en'. Klopt die plek?\"],",
+  "reden": "telegramstijl ('NL', '=')"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 9",
+  "oud": "wrongHints: [null, \"Mededelende zin → punt.\", \"Geen werkwoord — niet eens een hele zin.\", \"Mededelend.\"],",
+  "nieuw": "wrongHints: [null, \"Deze zin vertelt iets. Zo'n mededeling sluit je af met een punt.\", \"Dit is niet eens een hele zin: er staat geen werkwoord in.\", \"Deze zin vertelt iets. Zo'n mededeling sluit je af met een punt.\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 10",
+  "oud": "wrongHints: [null, \"Geen werkwoord.\", \"Geen onderwerp + werkwoord.\", \"Geen werkwoord.\"],",
+  "nieuw": "wrongHints: [null, \"'Slapende' zegt alleen hoe de kat is. Staat er een woord dat zegt wat de kat doet?\", \"Wie doet hier iets, en wat doet die? Er staat geen onderwerp en geen werkwoord.\", \"Je weet wie het is, maar wat dóét de rode kat? Er mist een werkwoord.\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 12",
+  "oud": "wrongHints: [null, \"Geen aanhalingstekens.\", \"Mist aanhalingstekens.\", \"Hele zin tussen aanhalingstekens = fout.\"],",
+  "nieuw": "wrongHints: [null, \"Hier staan helemaal geen aanhalingstekens. Hoe laat je zien welke woorden hij precies zei?\", \"Na de dubbele punt komen de woorden die hij zei. Wat zet je daar omheen?\", \"Nu staat de hele zin tussen aanhalingstekens, ook 'Hij zei'. Zei hij die woorden zelf?\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 13",
+  "oud": "wrongHints: [null, \"Dat is het werkwoord.\", \"Lidwoord alleen.\", \"Dat is de hele zin — welk deel doet de actie?\"],",
+  "nieuw": "wrongHints: [null, \"Dat is het werkwoord: het zegt wat er gebeurt. Wie doet dat?\", \"'De' is alleen een lidwoord. Wie slaapt er?\", \"Hier staat ook het werkwoord bij. Welk deel zegt alleen wie er slaapt?\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 13",
+  "oud": "basis: \"Onderwerp = wie/wat de actie doet.\",",
+  "nieuw": "basis: \"Zoek eerst het werkwoord. Vraag dan: wie of wat doet dat? Het antwoord op die vraag is het onderwerp.\",",
+  "reden": "telegramstijl; echte hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 14",
+  "oud": "basis: \"Werkwoord = actie-woord (rent, slaapt, eet).\",",
+  "nieuw": "basis: \"Een werkwoord zegt wat iemand doet. Stel de vraag: wat doet Lisa?\",",
+  "reden": "basis noemde het antwoord ('rent') letterlijk"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 14",
+  "oud": "simpeler: \"Vraag 'wat doet hij?'. Antwoord = werkwoord.\",",
+  "nieuw": "simpeler: \"Vraag: wat doet Lisa? Het woord dat je dan antwoordt, is het werkwoord. 'Hard' zegt alleen hóé ze het doet.\",",
+  "reden": "'hij' klopte niet (Lisa); telegramstijl"
+ }
+]

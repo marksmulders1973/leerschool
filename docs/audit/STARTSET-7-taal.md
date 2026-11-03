@@ -4,65 +4,65 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 1)
 Vraag: Wat is de persoonsvorm? *De kinderen spelen buiten.*
+- ▫️ De
 - ▫️ kinderen
 - ✅ spelen
 - ▫️ buiten
-- ▫️ De
 
 ## 2. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 1)
 Vraag: Maak een vraag van *Tom fietst naar school.* Welk woord springt vooraan en is dus de persoonsvorm?
-- ✅ fietst
-- ▫️ Tom
-- ▫️ naar
 - ▫️ school
+- ▫️ Tom
+- ✅ fietst
+- ▫️ naar
 
 ## 3. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 1)
 Vraag: Wat is de persoonsvorm? *Gisteren regende het hard.*
+- ▫️ het
+- ▫️ hard
 - ▫️ Gisteren
 - ✅ regende
-- ▫️ hard
-- ▫️ het
 
 ## 4. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 2)
 Vraag: Wat is het onderwerp? *De hond blaft naar de poes.*
 - ▫️ de poes
-- ▫️ blaft
 - ✅ De hond
+- ▫️ blaft
 - ▫️ naar
 
 ## 5. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 2)
 Vraag: Wat is het onderwerp? *In de tuin spelen twee meisjes.*
-- ▫️ In
 - ▫️ de tuin
-- ✅ twee meisjes
+- ▫️ In
 - ▫️ spelen
+- ✅ twee meisjes
 
 ## 6. Zinsontleding: onderwerp & persoonsvorm (zinsontleding-onderwerp-persoonsvorm-po, stap 2)
 Vraag: Wat is het onderwerp? *Morgen komt oma op bezoek.*
-- ▫️ Morgen
+- ✅ oma
 - ▫️ komt
 - ▫️ bezoek
-- ✅ oma
+- ▫️ Morgen
 
 ## 7. Trappen van vergelijking (trappen-van-vergelijking-po, stap 2)
 Vraag: Vul in: *Tom is ___ dan Sara.* (lang)
+- ✅ langer
 - ▫️ lang
 - ▫️ lange
-- ✅ langer
 - ▫️ langst
 
 ## 8. Trappen van vergelijking (trappen-van-vergelijking-po, stap 2)
 Vraag: Bij de vergrotende trap hoort vaak het woordje...
-- ✅ dan
-- ▫️ als
 - ▫️ zeer
 - ▫️ het
+- ✅ dan
+- ▫️ als
 
 ## 9. Trappen van vergelijking (trappen-van-vergelijking-po, stap 3)
 Vraag: Vul in: *Dit is de ___ berg van Nederland.* (hoog)
-- ✅ hoogste
-- ▫️ hoogst
 - ▫️ hoog
+- ▫️ hoogst
+- ✅ hoogste
 - ▫️ hoger
 
 ## 10. Trappen van vergelijking (trappen-van-vergelijking-po, stap 3)
@@ -74,70 +74,70 @@ Vraag: Welke is de **overtreffende** trap?
 
 ## 11. Signaalwoorden & verbanden (signaalwoorden-verbanden-po, stap 1)
 Vraag: Welk woord past? *Ik wilde naar buiten, ___ het regende.*
-- ▫️ dus
-- ✅ maar
 - ▫️ omdat
+- ✅ maar
 - ▫️ en
+- ▫️ dus
 
 ## 12. Signaalwoorden & verbanden (signaalwoorden-verbanden-po, stap 1)
 Vraag: Welk woord geeft een **opsomming** aan (er komt iets bij)?
-- ✅ bovendien
-- ▫️ hoewel
 - ▫️ echter
+- ▫️ hoewel
+- ✅ bovendien
 - ▫️ maar
 
 ## 13. Signaalwoorden & verbanden (signaalwoorden-verbanden-po, stap 2)
 Vraag: Welk woord past? *De wedstrijd ging niet door, ___ het hard regende.*
-- ▫️ zodat
-- ▫️ of
 - ✅ omdat
 - ▫️ maar
+- ▫️ zodat
+- ▫️ of
 
 ## 14. Signaalwoorden & verbanden (signaalwoorden-verbanden-po, stap 2)
 Vraag: Welk woord past? *Het vroor hard, ___ was de sloot dichtgevroren.*
-- ✅ daardoor
-- ▫️ of
-- ▫️ maar
 - ▫️ hoewel
+- ▫️ maar
+- ▫️ of
+- ✅ daardoor
 
 ## 15. Verwijswoorden in een tekst (verwijswoorden-po, stap 2)
 Vraag: *Lisa leest een boek. Zij vindt het spannend.* Naar wie verwijst 'Zij'?
-- ▫️ haar vriendin
 - ✅ Lisa
 - ▫️ het boek
 - ▫️ de schrijver
+- ▫️ haar vriendin
 
 ## 16. Verwijswoorden in een tekst (verwijswoorden-po, stap 2)
 Vraag: *Lisa leest een boek. Zij vindt het spannend.* Waar verwijst 'het' naar?
-- ▫️ Lisa
 - ▫️ spannend
-- ✅ het boek
 - ▫️ de kaft
+- ▫️ Lisa
+- ✅ het boek
 
 ## 17. Feit & mening (feit-mening-po, stap 1)
 Vraag: Welke zin is een feit?
-- ▫️ De zomer is het mooiste seizoen.
 - ▫️ Zwemmen is de leukste sport.
-- ✅ Water kookt bij 100 graden.
 - ▫️ Soep is lekkerder dan water.
+- ✅ Water kookt bij 100 graden.
+- ▫️ De zomer is het mooiste seizoen.
 
 ## 18. Feit & mening (feit-mening-po, stap 2)
 Vraag: Welke zin is een mening?
-- ▫️ Een pizza is rond.
+- ✅ Pizza is het lekkerste eten.
 - ▫️ Op een pizza zit vaak kaas.
 - ▫️ Pizza komt oorspronkelijk uit Italië.
-- ✅ Pizza is het lekkerste eten.
+- ▫️ Een pizza is rond.
 
 ## 19. Lettergrepen & klemtoon (lettergrepen-klemtoon-po, stap 2)
 Vraag: Verdeel 'tafel' in lettergrepen.
-- ▫️ tafe-l
-- ✅ ta-fel
-- ▫️ t-afel
 - ▫️ taf-el
+- ▫️ tafe-l
+- ▫️ t-afel
+- ✅ ta-fel
 
 ## 20. Lettergrepen & klemtoon (lettergrepen-klemtoon-po, stap 2)
 Vraag: Verdeel 'kinderen' in lettergrepen.
-- ▫️ kinde-ren
 - ▫️ ki-nde-ren
-- ✅ kin-de-ren
 - ▫️ kind-er-en
+- ✅ kin-de-ren
+- ▫️ kinde-ren

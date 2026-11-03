@@ -5371,11 +5371,62 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 1",
+  "hash": "2ac33cfdf364bdb7",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 10",
   "hash": "86870e04a680a20e",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 11",
+  "hash": "44b644bf7b224eb3",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 12",
+  "hash": "8b87b2a3ffef676e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "vraag was telegramzin; hint '125/10 ... tien keer te groot' noemde factor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 14",
+  "hash": "e209654b9426adc9",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 15",
+  "hash": "a3a246521e27943e",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 16",
+  "hash": "6a3781ca02539ccd",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint 'Dat is 1/4.' telegram en bijna voorrekenend (×3 = antwoord)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 17",
+  "hash": "94f8ce149ef7f992",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 18",
@@ -5390,6 +5441,14 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+  "hash": "f9396c496e0db753",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis rekende de som helemaal voor; hint bij 2/12 paste niet bij de denkfout"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 20",
@@ -5465,6 +5524,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 3",
+  "hash": "19822fb6d1d6fa9d",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord; afleider 'Kan niet weten' zwak (gelaten)"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 30",
   "hash": "164f6d78399302fc",
   "oordeel": "twijfel",
@@ -5537,6 +5604,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 4",
+  "hash": "a88754cb015f009e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 40",
   "hash": "83a1b765792638c0",
   "oordeel": "goed",
@@ -5556,6 +5631,14 @@
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 43",
+  "hash": "1a0be13393b4e4ac",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 44",
@@ -5598,6 +5681,14 @@
   "oordeel": "goed",
   "bron": "vervolg B2 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 5",
+  "hash": "c937d6150aea549e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 50",
@@ -5643,6 +5734,14 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 1",
+  "hash": "d3d5cb66cda81cc3",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 10",
   "hash": "dbd6c30216703f7f",
   "oordeel": "twijfel",
@@ -5673,11 +5772,25 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 14",
+  "hash": "ab3b88a4705605a8",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 15",
   "hash": "e2f41f8816edb443",
   "oordeel": "goed",
   "bron": "vervolg B9 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 16",
+  "hash": "b58517a7e5f37908",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 17",
@@ -5722,6 +5835,13 @@
   "oordeel": "goed",
   "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 22",
+  "hash": "a8599193f55c01e1",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 23",
@@ -5775,6 +5895,14 @@
   "oordeel": "goed",
   "bron": "vervolg B10 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 3",
+  "hash": "cafba900220b1a5a",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 30",
@@ -5992,6 +6120,95 @@
   "reden": "niveaus.basis gaf alleen het antwoord (geen hulpstap)"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 1",
+  "hash": "aa260dae9e0de331",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 10",
+  "hash": "53f46b3594ff9377",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 11",
+  "hash": "94c74fa30089a008",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 12",
+  "hash": "3dea804ae222b12e",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 13",
+  "hash": "fc076c0276708e2d",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 15",
+  "hash": "2097be338ad22556",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 16",
+  "hash": "5d64b2661179259e",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 17",
+  "hash": "acd9d235271de98a",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 19",
+  "hash": "fbcba066c576f68e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 2",
+  "hash": "2e0c57225e963c2c",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 20",
+  "hash": "5684eba1bae391d8",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHints telegramzinnen ('Optellen, dat is geen oppervlakte.')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 22",
+  "hash": "2c51f7b520b6ef4b",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHints telegramzinnen ('Helft — ...', 'Niet — controleer 4 × 8; kom je op 24 uit?' rekent niet af); zelfde vraag als stap 3 vraag 13 (dubbel, gelaten)"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 24",
   "hash": "9597ccd5b50e9eab",
   "oordeel": "goed",
@@ -6006,11 +6223,782 @@
   "datum": "2026-10-27"
  },
  {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 26",
+  "hash": "e0196ceeb14f4e5f",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint telegram 'Niet — ...'; niveaus.basis gaf antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 27",
+  "hash": "5fea0aed6e26b70e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint 'Dat is 2 × 8.' telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 28",
+  "hash": "e67d0328c79f65ae",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 3",
+  "hash": "cd89b2ed279e82b6",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 30",
+  "hash": "ff6120c2929f24f3",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "te makkelijk voor groep 8 (seconden in 1 minuut)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 31",
+  "hash": "8a779cd9c454ffb7",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 33",
+  "hash": "787a06ea4cc1e44a",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 35",
+  "hash": "65b748987b6b5e01",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint 'Niet — vanaf 12:00, niet 0:00.' telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 36",
+  "hash": "2eec14127b7c41eb",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "raadbaar door vorm: enige optie met (3D) tegenover drie keer (2D); vraag eindigde op '___?'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 37",
+  "hash": "9ca057e46a58c9cb",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 38",
+  "hash": "3b0cbf968a5e9194",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint bij '40 m' noemde het goede antwoord (getal klopt + m²); niveaus.basis gaf antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 39",
+  "hash": "e41165170144a945",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij '6 km' zegt 'De schaal vergroot' — onjuist, kaart verkleint"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 4",
+  "hash": "c25d7ca96e52814d",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 40",
+  "hash": "466e52d5f2887438",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 41",
+  "hash": "7f4a604ca63f4199",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 42",
+  "hash": "00537211eb9f3dc3",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 44",
+  "hash": "adb5ac0ab264906d",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 45",
+  "hash": "b109ce7d2926f3b5",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 46",
+  "hash": "b2aea1ebf6bad793",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 48",
+  "hash": "72fc4b75775b8fd1",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hints rekenen 15:45 voor ('15 min vóór 16:00', '+12')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 49",
+  "hash": "e942c4eeb3e69a1c",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "telegramvraag 'is die muur dus ___?'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 5",
+  "hash": "6d4494b1f208c2b0",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 6",
+  "hash": "9aa0d3e158ba2997",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "wrongHint 'komma 1 plek te ver' noemt factor, telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 7",
+  "hash": "f65bdae0db616359",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "niveaus.basis gaf antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 8",
+  "hash": "5fef8322976b55eb",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 9",
+  "hash": "6ddfe393bc5e94ae",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 10",
+  "hash": "953b1b298dc6e17b",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 11",
+  "hash": "930addbf628a1c87",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 12",
+  "hash": "30a8a56e9688e224",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 13",
+  "hash": "ccd62864500ea436",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 14",
+  "hash": "10ac537b9715a291",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 15",
   "hash": "d6bd3c2436f6a80d",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 16",
+  "hash": "43f1ac11e2e60586",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 17",
+  "hash": "6f81a8e93dd59cb1",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "hash": "de4fb8150bd77118",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; hint 'Niet —' telegram"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 19",
+  "hash": "53f9e687f98b1c15",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+  "hash": "2b46da8799ec224a",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij 7 inhoudelijk onjuist + telegram; basis = alleen antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 20",
+  "hash": "7140458667b3037e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; hint rekent (7+8+6+9)/4 voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 21",
+  "hash": "f82653c76ce4fd68",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "zelfde getallen als stap 4 vraag 13 (1,5 L / 250 mL) — dubbele vraag; hint 'Niet —'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "hash": "bbae0c0bbb0f36f4",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; hint = formule in hoofdletters"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 23",
+  "hash": "2e915bd5ec7c2c47",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 24",
+  "hash": "d29da96c75377629",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 25",
+  "hash": "36e1ba872bc39e96",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 26",
+  "hash": "9b43b504c0a93818",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; hint 'Deel 24 door 4' rekent voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 27",
+  "hash": "913853d9149fa41c",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 28",
+  "hash": "e1136583a6fdce5e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; schrijfwijze 'wegGAF'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 29",
+  "hash": "2df76b6117b00ef0",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 3",
+  "hash": "7b8821b22901ae81",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis = alleen antwoord; telegramhints"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 30",
+  "hash": "1c3f72d4b8d37022",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 31",
+  "hash": "b93cdf26cb636b2d",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 32",
+  "hash": "d1060fef56e6cd73",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; 'i.p.v.' voor kinderen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 33",
+  "hash": "ff07e1ef1a4d912f",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 34",
+  "hash": "01ed3447983e2cbe",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 35",
+  "hash": "a955cc3478b1751e",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 36",
+  "hash": "ac7eb470cff00e05",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 4",
+  "hash": "14bda24b1de4b872",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; telegramhints"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 45",
+  "hash": "0d6a6c33a49e476e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint 'Eén te veel' bij 10 geeft 9 weg; basis geeft antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 46",
+  "hash": "c080ccfcf773761b",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij €36 noemt tussenuitkomst €9,50"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 48",
+  "hash": "9cbb65be12989588",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "vraag doet het werk ('Eerst de €6 eraf') en is tegenstrijdig ('ieder evenveel, maar')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 49",
+  "hash": "7dbfa089f2fa22e2",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 5",
+  "hash": "50ee44e453c72b95",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; hint in hoofdletters/telegram"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 50",
+  "hash": "d01c8cd645b3d4bc",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 51",
+  "hash": "58ccb9bc45cb5976",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 52",
+  "hash": "13341ce15ddbfaa8",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint bij €7,50 rekent de hele oplossing voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 53",
+  "hash": "06ff9735465dcd40",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 54",
+  "hash": "d482982e4a61ce9e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"€6 ÷ 24\" rekende de eerste stap voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 55",
+  "hash": "3d4afa90c837187f",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"trek 2:30 van 14:20 af\" rekende de stap voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 56",
+  "hash": "aa6c988ed9ff743d",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"(300 ÷ 4), keer dan 6\" rekende de hele som voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 6",
+  "hash": "c6e6e1d1f058d0e2",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord; simpeler '5 + 4' onduidelijk"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 7",
+  "hash": "02d847362b3abbde",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 8",
+  "hash": "6d1cd08f5d3799fd",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 9",
+  "hash": "4874b1f656ae209b",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "basis geeft antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 1",
+  "hash": "6e2fa1c4d57085f9",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 10",
+  "hash": "54a3f3366d3df51c",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 13",
+  "hash": "a26bb21b7af7a8a0",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"11 weken = net te weinig\" wijst het volgende getal (12) aan"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 14",
+  "hash": "393efabfec2c2649",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 15",
+  "hash": "0104c65308983097",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 16",
+  "hash": "961dbc7e3c1b6fd2",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 17",
+  "hash": "5882f37ec70e4621",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 19",
+  "hash": "be70b224342e2ff0",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"eerst €2,85 ÷ 3\" rekende de stap voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 21",
+  "hash": "0cf816442ef05bf6",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 23",
+  "hash": "a39d171a3085a801",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 24",
+  "hash": "a423e332886b9063",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint gaf de som \"0,3 × 14\" kant-en-klaar"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 3",
+  "hash": "de4ae40d40da5e78",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 4",
+  "hash": "4d40d64dd7fdc7ba",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 5",
+  "hash": "90a474c5a4ad547f",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 6",
+  "hash": "35bdbbf59565fdbd",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 7",
+  "hash": "6e4360fc0e15776d",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint noemde de factor 2,5 (€4,40 × 2,5)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 8",
+  "hash": "6416ed9ec56c54df",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"prijs van een halve liter\" bij €0,70 → verdubbelen geeft het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 5 vraag 9",
+  "hash": "f9ec217d75ac1d76",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "te makkelijk voor groep 8 (26 − 4)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 10",
+  "hash": "b34532d5db28cf6b",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"hoort november daarbij?\" gaf het antwoord bijna weg"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 11",
+  "hash": "c0d99ffbcf66df4d",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 12",
+  "hash": "177d94f7b1d0a59e",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint gaf de som \"3 × 60\" kant-en-klaar"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 13",
+  "hash": "8a5019396270ea16",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 14",
+  "hash": "220710632a6f3683",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 15",
+  "hash": "167ab2395d2ea2da",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 18",
+  "hash": "27f759deefa425c0",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint \"half uur is 30 minuten\" gaf de laatste stap (120 + 30)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 19",
+  "hash": "ee13b834301b38ed",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint noemde de factor \"een derde van een uur\""
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 2",
+  "hash": "c7519f0a8bf323ff",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 20",
+  "hash": "c283c8f0ec9a500b",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 21",
+  "hash": "64b0f9972f030499",
+  "oordeel": "twijfel",
+  "bron": "bank rg8",
+  "datum": "2026-11-03",
+  "reden": "hint gaf de som \"400 ÷ 80\" kant-en-klaar"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 22",
+  "hash": "7245040547335ee3",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 24",
+  "hash": "7f24251b040276e3",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 3",
+  "hash": "c7b28a32b3a80fb1",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 4",
@@ -6019,6 +7007,34 @@
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27",
   "reden": "Hints samen wijzen de bus van 10:12 aan en de hint bij '7 minuten' zet het interval 9:55-10:12 al klaar; tellen blijft wel over."
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 5",
+  "hash": "1c0d89836e55f544",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 6",
+  "hash": "fb13c3d3bea39ea4",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 7",
+  "hash": "9d3116969ace7ffe",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 8",
+  "hash": "1963e8cfa9bd5bd8",
+  "oordeel": "goed",
+  "bron": "bank rg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 1",
@@ -8260,6 +9276,60 @@
   "datum": "2026-11-03"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 1",
+  "hash": "c70bd32fbd6c09d0",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 10",
+  "hash": "ec901edb491c5eba",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 11",
+  "hash": "0c4c6b036f5047df",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "getal in lopende tekst voluit (drie); telegramstijl + getal voluit; basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 12",
+  "hash": "4ecbc455cfe83976",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf (bijna) het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 13",
+  "hash": "39c7c7da6ad0136c",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 14",
+  "hash": "8cd2b69d5440b2ee",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen de betekenis; onnauwkeurige omschrijving"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 15",
+  "hash": "709eb847f4447cb8",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 16",
   "hash": "cb7fdadce9fae98e",
   "oordeel": "twijfel",
@@ -8273,6 +9343,36 @@
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 18",
+  "hash": "39c7b977469b5032",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 19",
+  "hash": "74cfbaba4ca540a9",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 2",
+  "hash": "ed17b99137775f6a",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 20",
+  "hash": "0392ff4b2cd53c69",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 21",
@@ -8296,6 +9396,13 @@
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Hints goed; niveaus basis 'Bepalend / beslissend.' = antwoord, simpeler telegram."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 24",
+  "hash": "10bf258298b95fe4",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 25",
@@ -8336,6 +9443,14 @@
   "reden": "Hints goed; niveaus basis 'Pessimistisch.' = antwoord als los woord."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 3",
+  "hash": "3aa9b6dd7d925f25",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 30",
   "hash": "a8c572cf8a1fb6b8",
   "oordeel": "goed",
@@ -8348,6 +9463,13 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 32",
+  "hash": "b1af8557f70f6d97",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 33",
@@ -8403,6 +9525,14 @@
   "reden": "Hints B en D stuurden met leidende vragen naar 'nat' ('wat doet regen met een veld?')."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 40",
+  "hash": "e86eb129047cf4b7",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 41",
   "hash": "2eaba0b588f8056d",
   "oordeel": "goed",
@@ -8424,12 +9554,27 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 44",
+  "hash": "a23634cf6919b9fa",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 45",
   "hash": "9d1a2c6777653742",
   "oordeel": "twijfel",
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Afleider C 'Een beker warme chocomel' absurd (raadbaar); hint C omschreef het antwoord ('iets boven je hoofd')."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 46",
+  "hash": "dd7d3d3fa6aa8e91",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf het antwoord"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 47",
@@ -8440,11 +9585,41 @@
   "reden": "Alle drie hints zeiden 'het gaat over hoe je een gesprek begint' -> per uitsluiting wijst dat naar de enige optie over een gesprek."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 48",
+  "hash": "a036e27e342cbf35",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "goede optie was de enige omschrijving (raadbaar door vorm)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 49",
+  "hash": "c62b44523f604783",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 5",
+  "hash": "0e5f4e4598f5cbe5",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 50",
   "hash": "ffec342042cd784b",
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 51",
+  "hash": "6c282d8a51ab3557",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 1 vraag 52",
@@ -8459,6 +9634,37 @@
   "oordeel": "goed",
   "bron": "vervolg B1 pakket 03 (blind, 30 okt)",
   "datum": "2026-10-30"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 6",
+  "hash": "eee70bf075946afd",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf (bijna) het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 7",
+  "hash": "3c7d683ace48edfa",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 8",
+  "hash": "22e478977f306f83",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 9",
+  "hash": "182d96ebdb9547f5",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "basis gaf alleen het antwoord"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 1",
@@ -8489,6 +9695,13 @@
   "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Opties zonder lidwoord; niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 13",
+  "hash": "c978efc5a2aadaf3",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 14",
@@ -8587,6 +9800,13 @@
   "bron": "vervolg B5 pakket 01 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "niveaus.basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 26",
+  "hash": "2f2aa3462b1618fb",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 27",
@@ -8737,6 +9957,13 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 45",
+  "hash": "5c3a0db83dbd0c2f",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 2 vraag 46",
   "hash": "b3b4ffb89b30e206",
   "oordeel": "twijfel",
@@ -8837,12 +10064,27 @@
   "datum": "2026-10-30"
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 1",
+  "hash": "6046a62c284bf56b",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl ('t, schuine strepen)"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 10",
   "hash": "164addb1b5722925",
   "oordeel": "twijfel",
   "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Telegramstijl in vraag en hints ('Meervoud.', 'Voltooid deelwoord.')."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 11",
+  "hash": "f31f440b2eb2ab66",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 12",
@@ -8883,6 +10125,28 @@
   "reden": "Telegramstijl in vraag en hints ('Meervoud.', '1e persoon.')."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "hash": "66d2737e11dca8e8",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 2",
+  "hash": "18965a6f69588c15",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl; basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 20",
+  "hash": "2a5a78ee0d8ff7cb",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 21",
   "hash": "f77d6f2d1d061e3a",
   "oordeel": "twijfel",
@@ -8897,6 +10161,13 @@
   "bron": "vervolg B9 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Hint bij 't was kort ('geen NL')."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 23",
+  "hash": "554a67bad4f515b8",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 24",
@@ -8944,6 +10215,20 @@
   "bron": "vervolg B10 pakket 02 (blind, 30 okt)",
   "datum": "2026-10-30",
   "reden": "Antwoord klopt; wrongHints waren losse woorden (\"Verleden.\")."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 3",
+  "hash": "513a8cb1d630b5ca",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 30",
+  "hash": "bd6cfb80da60e9e8",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
  },
  {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 31",
@@ -9100,6 +10385,21 @@
   "reden": "Antwoord klopt; vraagzin \"de trui van ... (meervoud van dame)\" was vreemd."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 6",
+  "hash": "edfb12696f12594e",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "vet stond verkeerd + telegramvraag; telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 7",
+  "hash": "d088d3a18e29b254",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 3 vraag 8",
   "hash": "f26746d3f51aa7d9",
   "oordeel": "goed",
@@ -9115,6 +10415,233 @@
   "reden": "Basis noemde het antwoord (pauw = au); afleider 'boud' kennen de meeste kinderen niet."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 1",
+  "hash": "700b34dddf825889",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "antwoord stond in de vraag (vraag → vraagteken); te makkelijk voor groep 8; telegramstijl; past bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 10",
+  "hash": "fb8bc10f51972998",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 11",
+  "hash": "593d1bae4544e292",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 12",
+  "hash": "1a82ba0b7d017ab8",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 13",
+  "hash": "0beb365090ab5eff",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl; telegramstijl; echte hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 15",
+  "hash": "f24f236123f39e53",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Telegram-hints ('Onderwerp.', 'Werkwoord.'); simpeler gaf het antwoord; erg makkelijk voor groep 8."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 16",
+  "hash": "641ab2cfcba13fd5",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; simpeler noemde letterlijk 'rode' uit de goede optie."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 17",
+  "hash": "84bc43347ab8941d",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Telegramzin 'Welke is een'; hint noemt 'snel' stellig bijwoord (los kan ook bijv. nw.)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 18",
+  "hash": "73f600d5cb816c3d",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; basis 'komma + komma + en' klopt niet met het voorbeeld; punt mist."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 19",
+  "hash": "82d375a14c8674dc",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 2",
+  "hash": "3128364c36260048",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "eerste wrongHint paste niet bij de gekozen optie; 'items'; telegramstijl, 'items'"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 20",
+  "hash": "55664db94fbd5320",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 21",
+  "hash": "1bc71a23b9394e7b",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; niveaus.basis en simpeler gaven alleen het antwoord; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 23",
+  "hash": "858082a25c13e824",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; basis en nogSimpeler gaven het antwoord; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 24",
+  "hash": "533ef4ecd99a553c",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 25",
+  "hash": "7b59ed417e0ee59a",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 26",
+  "hash": "487afa65dbdcdb5e",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt maar erg makkelijk; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 27",
+  "hash": "fd456a055a5842bb",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; hint 'Aanwijzend, geen lidwoord.' telegram."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 28",
+  "hash": "9ea9c9f9956e0635",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 29",
+  "hash": "9f57096ddedfca9f",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; voorbeeld-opsomming zonder 'en' en 'bv'; niveaus gaven alleen het antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 3",
+  "hash": "961cc10068507a30",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "hint over aankondigen klopte niet (dat is de dubbele punt)"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 31",
+  "hash": "422f7d0cc91e0dae",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 32",
+  "hash": "e92fed846cdb844f",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 33",
+  "hash": "5a5f78273a1ea9b7",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; alle niveaus gaven alleen 'snel'; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 34",
+  "hash": "b6f899295b85b3a4",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 35",
+  "hash": "1bc1f55367198445",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 36",
+  "hash": "44724dbc959f786c",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints en 'van zin'."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 37",
+  "hash": "64997d7339d69c6e",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; komma na de bijzin ontbrak in een interpunctie-stap."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 38",
+  "hash": "d140fb2d99bf3e5b",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; telegram-hints; afleiders 'lopen'/'hij' zijn erg zwak (niet vervangen)."
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 4 vraag 4",
   "hash": "32ef7ca449ac51ea",
   "oordeel": "twijfel",
@@ -9123,11 +10650,295 @@
   "reden": "Goede optie valt op als enige zonder 'Het paard rent'; hints zeggen 'heeft een werkwoord', terwijl 'rennende' ook een werkwoordsvorm is (bedoeld: persoonsvorm)."
  },
  {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 42",
+  "hash": "d3e60eaef8a4a693",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 43",
+  "hash": "675936ab3af47bbc",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 44",
+  "hash": "76b310bc695d0a67",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 45",
+  "hash": "0311ef5ad60bbaca",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 46",
+  "hash": "681f83ec1b845261",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; niveaus.basis en nogSimpeler gaven alleen 'dat'."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 47",
+  "hash": "96e1ca30797e1e71",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 48",
+  "hash": "38d99b1ecd8098a8",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 49",
+  "hash": "1323576aeb168894",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 5",
+  "hash": "d50105687241294c",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 50",
+  "hash": "bbc9da9e0cd29c62",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
   "waar": "doorstroomtoets-taal-g8 stap 4 vraag 51",
   "hash": "1a65650d7ea525d7",
   "oordeel": "goed",
   "bron": "eindmeting basisschool 27 okt (4 nakijkers)",
   "datum": "2026-10-27"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 52",
+  "hash": "ea2bc9af05fb6d07",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 53",
+  "hash": "4e79d41ce9241fd1",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 6",
+  "hash": "2ddee1401c2716d4",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramzin"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 7",
+  "hash": "a18f2e637805e3f2",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl; komma vóór 'omdat' is niet verplicht"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 8",
+  "hash": "a0f783c2223f5191",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl ('NL', '=')"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 9",
+  "hash": "a9aa5a5d56f0a3cf",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 1",
+  "hash": "ca0dc12cf4afea65",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; hint bij 'Wort' vroeg welke letter je hóórt (je hoort een t)."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 10",
+  "hash": "1a67d3b5c4f74e54",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 11",
+  "hash": "b029f154c5ab8731",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 12",
+  "hash": "045d415bf365eaa5",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 13",
+  "hash": "972121747e2742fe",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 14",
+  "hash": "76a5bce25bf27fbe",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 15",
+  "hash": "193702cae52dc70b",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 16",
+  "hash": "c7ff30f3436af7e9",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; vergelijkzin 'wat loop jij?' is onnatuurlijk."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 17",
+  "hash": "978a2bb0a3e9a387",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 18",
+  "hash": "a90f354a6425b583",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 19",
+  "hash": "c5e0e9c27bf46168",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 2",
+  "hash": "f75e9ac34775ccd8",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 20",
+  "hash": "b94563b9e63b96e2",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 21",
+  "hash": "80d03acc0b962969",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 23",
+  "hash": "bcd97b5b5cbccf64",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Antwoord klopt, maar hint bij 'Melt' laat kind op het gehoor kiezen tussen d en t — je hoort een t, dus de hint duwt de verkeerde kant op."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 24",
+  "hash": "15aab1bdaee8ee50",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 3",
+  "hash": "ef9557e944ba89e0",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 4",
+  "hash": "6faf5c7695671e9b",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; hint bij 'prate' (hardop zeggen) helpt niet: klinkt hetzelfde."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 5",
+  "hash": "6c96dbcf3ddf823c",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 6",
+  "hash": "eb4d7899e4f330ec",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; hint bij 'gebeurdt' zei 'stam + t is genoeg' = antwoord."
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 7",
+  "hash": "1e8d00c8b7f240d1",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 8",
+  "hash": "53b46ce7d5f1985c",
+  "oordeel": "goed",
+  "bron": "bank tg8",
+  "datum": "2026-11-03"
+ },
+ {
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 9",
+  "hash": "4519ae6c89dd865d",
+  "oordeel": "twijfel",
+  "bron": "bank tg8",
+  "datum": "2026-11-03",
+  "reden": "Klopt; hint 'ik ... van jou' laat juist geen d horen ('ik hou')."
  },
  {
   "waar": "eetcultuur-nederland-po stap 4 vraag 6",

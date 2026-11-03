@@ -1,0 +1,338 @@
+[
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 39",
+  "oud": "wrongHints: [null, \"Reken 6 × 50.000 cm uit en zet dat om naar km.\", \"Bij het omrekenen heb je één nul te veel weggehaald.\", \"De schaal vergroot — 6 cm op de kaart is niet 6 km in het echt.\"],",
+  "nieuw": "wrongHints: [null, \"Reken 6 × 50.000 cm uit en zet dat om naar km.\", \"Bij het omrekenen heb je één nul te veel weggehaald.\", \"Bij schaal 1 : 50.000 is 1 cm op de kaart niet 1 km in het echt — hoeveel cm is het dan wel?\"],",
+  "reden": "hint 'De schaal vergroot' klopt niet (kaart verkleint)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 43",
+  "oud": "wrongHints: [null, \"Dat is 3 × 3 — voor inhoud reken je lengte × breedte × hoogte.\", \"Dat is 3 × 6 — tel je vlakken?\", \"Het getal klopt, maar inhoud meet je in kubieke centimeters (cm³).\"],",
+  "nieuw": "wrongHints: [null, \"Dat is 3 × 3 — voor inhoud reken je lengte × breedte × hoogte.\", \"Inhoud is geen 3 × 6 — een kubus heeft een lengte, een breedte én een hoogte.\", \"cm² is de eenheid voor oppervlakte — welke eenheid hoort bij inhoud?\"],",
+  "reden": "hint 3 gaf letterlijk het antwoord ('getal klopt' + cm³); hint 2 onduidelijk"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 47",
+  "oud": "wrongHints: [null, \"60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.\", \"Eén komma-plek mis — hoeveel cm³ gaat er in één liter?\", \"Tien keer te veel — check de nullen.\"],",
+  "nieuw": "wrongHints: [null, \"60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.\", \"Te weinig — reken 60 × 30 × 40 precies uit en tel de nullen. Hoeveel cm³ gaat er in één liter?\", \"Te veel — reken 60 × 30 × 40 precies uit en deel daarna door 1.000.\"],",
+  "reden": "'tien keer te veel' / 'één komma-plek' noemden de factor (antwoord per deling)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 48",
+  "oud": "wrongHints: [null, \"Kwart vóór vier is 15 minuten vóór 16:00.\", \"Dat is de 12-uurs schrijfwijze — 's middags tel je er 12 bij op.\", \"Dat is kwart óver vier.\"],",
+  "nieuw": "wrongHints: [null, \"Kwart vóór vier: is het dan al vier uur geweest, of nog niet?\", \"Dat is de 12-uurs schrijfwijze — hoe schrijf je de middaguren in 24-uurs notatie?\", \"Dat is kwart óver vier.\"],",
+  "reden": "hints 1 en 2 rekenden 15:45 voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 49",
+  "oud": "q: \"Een muur is **4 m breed**. Op de bouwtekening (schaal 1 : 100) is die muur dus ___?\",",
+  "nieuw": "q: \"Een muur is **4 m breed**. Hoe breed is die muur op de bouwtekening (schaal 1 : 100)?\",",
+  "reden": "telegramvraag met 'dus ___?'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "q: \"Mike koopt **3 boeken** van €12,50 per stuk. Hij betaalt met **€50**. Hoeveel wisselgeld?\",",
+  "nieuw": "q: \"Mike koopt **3 boeken** van €13,50 per stuk. Hij betaalt met **€50**. Hoeveel wisselgeld krijgt hij?\",",
+  "reden": "antwoord €12,50 stond letterlijk in de vraag (prijs per boek); nieuwe prijs"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "options: [\"€12,50\", \"€37,50\", \"€25\", \"€50\"],",
+  "nieuw": "options: [\"€9,50\", \"€40,50\", \"€25\", \"€50\"],",
+  "reden": "opties bij nieuwe prijs €13,50 (3 × 13,50 = 40,50; 50 − 40,50 = 9,50)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "wrongHints: [null, \"€37,50 = totaal kosten, niet wisselgeld.\", \"€25 is de helft van €50 — wat kosten de 3 boeken samen?\", \"€50 = wat je betaalde, niet wat je terugkrijgt.\"],",
+  "nieuw": "wrongHints: [null, \"€40,50 is wat de boeken samen kosten — hoeveel krijgt hij terug?\", \"€25 is de helft van €50 — wat kosten de 3 boeken samen?\", \"€50 is wat hij betaalde, niet wat hij terugkrijgt.\"],",
+  "reden": "hints bij nieuwe getallen, geen telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "{ titel: \"Kosten\", tekst: \"3 boeken × €12,50 = €37,50 totaal.\" },",
+  "nieuw": "{ titel: \"Kosten\", tekst: \"3 boeken × €13,50 = €40,50 totaal.\" },",
+  "reden": "uitlegPad bij nieuwe getallen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "{ titel: \"Wisselgeld\", tekst: \"Betaald €50, kosten €37,50. Wisselgeld = €50 - €37,50 = €12,50.\" },",
+  "nieuw": "{ titel: \"Wisselgeld\", tekst: \"Betaald €50, kosten €40,50. Wisselgeld = €50 - €40,50 = €9,50.\" },",
+  "reden": "uitlegPad bij nieuwe getallen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "voorbeelden: [{ type: \"check\", tekst: \"€37,50 + €12,50 = €50 ✓. Wisselgeld klopt.\" }],",
+  "nieuw": "voorbeelden: [{ type: \"check\", tekst: \"€40,50 + €9,50 = €50 ✓. Wisselgeld klopt.\" }],",
+  "reden": "uitlegPad bij nieuwe getallen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 1",
+  "oud": "niveaus: { basis: \"€12,50.\", simpeler: \"3×€12,50=€37,50. €50-€37,50=€12,50 wisselgeld.\", nogSimpeler: \"€12,50\" },",
+  "nieuw": "niveaus: { basis: \"Reken eerst uit wat de 3 boeken samen kosten. Haal dat daarna van €50 af.\", simpeler: \"3 × €13,50 = €40,50. Dan €50 − €40,50 = ?\", nogSimpeler: \"€50 − €40,50 = €9,50\" },",
+  "reden": "basis gaf alleen het antwoord; nu hulpstap"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+  "oud": "wrongHints: [null, \"7 zou betekenen alle cijfers waren 7. Klopt niet.\", \"Niet alle cijfers zijn 7,5 of hoger — tel eerst alles op en deel door 4.\", \"29 = som, niet gemiddelde.\"],",
+  "nieuw": "wrongHints: [null, \"Twee cijfers liggen boven de 7 en maar één eronder — kan het gemiddelde dan precies 7 zijn?\", \"Niet alle cijfers zijn 7,5 of hoger — tel eerst alles op en deel door 4.\", \"Dat is de som van alle cijfers — je moet nog delen door het aantal cijfers.\"],",
+  "reden": "hint 1 inhoudelijk onjuist + telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 2",
+  "oud": "niveaus: { basis: \"7,25.\", simpeler: \"Totaal=29. ÷ 4 cijfers = 7,25.\", nogSimpeler: \"7,25\" },",
+  "nieuw": "niveaus: { basis: \"Tel eerst alle cijfers bij elkaar op. Deel daarna door het aantal cijfers.\", simpeler: \"6,5 + 7 + 7,5 + 8 = 29. Deel 29 door 4.\", nogSimpeler: \"29 ÷ 4 = 7,25\" },",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 3",
+  "oud": "wrongHints: [null, \"€8 = de korting, niet de prijs.\", \"Je haalde €4 eraf — maar een kwart van €32 is meer dan €4.\", \"€40 zou betekenen 25% MEER, niet korting.\"],",
+  "nieuw": "wrongHints: [null, \"€8 is de korting — wat betaal je dan nog?\", \"Je haalde €4 eraf — maar een kwart van €32 is meer dan €4.\", \"€40 zou betekenen dat je 25% méér betaalt — je krijgt juist korting.\"],",
+  "reden": "telegramstijl/hoofdletters"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 3",
+  "oud": "niveaus: { basis: \"€24.\", simpeler: \"Korting=€8 (25% van €32). Te betalen=€32-€8=€24.\", nogSimpeler: \"€24\" },",
+  "nieuw": "niveaus: { basis: \"25% is een kwart. Reken eerst uit hoeveel een kwart van €32 is — dat gaat eraf.\", simpeler: \"Korting: 25% van €32 = €8. Je betaalt €32 − €8.\", nogSimpeler: \"€32 − €8 = €24\" },",
+  "reden": "basis gaf alleen het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 4",
+  "oud": "wrongHints: [null, \"45 = een half uur. 20 min is minder dan een half uur.\", \"20 = de minuten, niet km. Andere eenheid.\", \"60 km zou bij ongeveer 40 minuten horen — en 20 minuten is minder. Te veel.\"],",
+  "nieuw": "wrongHints: [null, \"45 km rijdt hij in een half uur — 20 minuten is korter.\", \"20 is het aantal minuten, geen afstand in km.\", \"60 km rijdt hij in 40 minuten — 20 minuten is korter.\"],",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 4",
+  "oud": "niveaus: { basis: \"30 km (1/3 × 90).\", simpeler: \"20 min = 1/3 u. 1/3 × 90 km/u = 30 km.\", nogSimpeler: \"30\" },",
+  "nieuw": "niveaus: { basis: \"Welk deel van een uur is 20 minuten? Neem datzelfde deel van 90 km.\", simpeler: \"20 minuten = 1/3 uur. Hoeveel is 1/3 van 90 km?\", nogSimpeler: \"90 ÷ 3 = 30 km\" },",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 5",
+  "oud": "wrongHints: [null, \"21 = aantal VOLDOENDES (75% van 28).\", \"14 is de helft van de klas — 25% is minder dan de helft.\", \"4 van de 28 is maar een klein deel — hoeveel procent heeft een onvoldoende?\"],",
+  "nieuw": "wrongHints: [null, \"21 is het aantal leerlingen mét een voldoende — de vraag gaat over de onvoldoendes.\", \"14 is de helft van de klas — 25% is minder dan de helft.\", \"4 van de 28 is maar een klein deel — hoeveel procent heeft een onvoldoende?\"],",
+  "reden": "telegramstijl/hoofdletters"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 5",
+  "oud": "niveaus: { basis: \"7 onvoldoendes (25% × 28).\", simpeler: \"75% voldoende = 25% onvoldoende. 25% × 28 = 7.\", nogSimpeler: \"7\" },",
+  "nieuw": "niveaus: { basis: \"Hoeveel procent heeft géén voldoende? Reken dat percentage van 28 uit.\", simpeler: \"100% − 75% = 25% onvoldoende. 25% is een kwart: hoeveel is een kwart van 28?\", nogSimpeler: \"28 ÷ 4 = 7\" },",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 6",
+  "oud": "basis: \"€9,00 (5 × €1,80).\",",
+  "nieuw": "basis: \"Splits €1,80 in €1 en €0,80. Reken voor elk deel 5 keer en tel op.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 6",
+  "oud": "simpeler: \"5 × €1,80 = 5 + 4 = €9.\",",
+  "nieuw": "simpeler: \"5 × €1 = €5 en 5 × €0,80 = €4. Samen?\",",
+  "reden": "'5 × €1,80 = 5 + 4' onduidelijk"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 8",
+  "oud": "niveaus: { basis: \"2,8 kg (0,8 + 2).\", simpeler: \"800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.\", nogSimpeler: \"2,8\" },",
+  "nieuw": "niveaus: { basis: \"Zet eerst alles in dezelfde eenheid: hoeveel kg is 800 g?\", simpeler: \"800 g = 0,8 kg. Tel daar 2 kg bij op.\", nogSimpeler: \"0,8 kg + 2 kg = 2,8 kg\" },",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 9",
+  "oud": "basis: \"12 weken (€60 ÷ €5).\",",
+  "nieuw": "basis: \"Hoeveel keer moet ze €5 opzij leggen om €60 te hebben?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "oud": "wrongHints: [null, \"Te weinig — drie vrienden, niet negen.\", \"Niet — 3 × €10 = €30, niet €27.\", \"€24 is €27 − 3 — je moet delen, niet aftrekken.\"],",
+  "nieuw": "wrongHints: [null, \"Te weinig — drie vrienden, niet negen.\", \"3 × €10 = €30 — dat is meer dan €27.\", \"€24 is €27 − 3 — je moet delen, niet aftrekken.\"],",
+  "reden": "telegramstijl 'Niet —'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "oud": "basis: \"€9 per persoon.\",",
+  "nieuw": "basis: \"Eerlijk delen betekent: €27 in 3 gelijke stukken verdelen.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "oud": "simpeler: \"€27 ÷ 3 = €9.\",",
+  "nieuw": "simpeler: \"Welk bedrag keer 3 is €27?\",",
+  "reden": "opbouw niveaus"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 18",
+  "oud": "nogSimpeler: \"Delen = €9\",",
+  "nieuw": "nogSimpeler: \"€27 ÷ 3 = €9\",",
+  "reden": "telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 20",
+  "oud": "wrongHints: [null, \"Dat is de som, niet het gemiddelde.\", \"Niet — controleer: (7+8+6+9)/4.\", \"6,5 is lager dan bijna alle cijfers — het gemiddelde ligt ergens in het midden.\"],",
+  "nieuw": "wrongHints: [null, \"Dat is de som, niet het gemiddelde.\", \"8 ligt te hoog — tel alle cijfers op en deel door het aantal cijfers.\", \"6,5 is lager dan bijna alle cijfers — het gemiddelde ligt ergens in het midden.\"],",
+  "reden": "hint rekende de som voor + telegramstijl"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 20",
+  "oud": "basis: \"Gemiddelde = 7,5.\",",
+  "nieuw": "basis: \"Tel alle cijfers bij elkaar op en deel door het aantal cijfers.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 21",
+  "oud": "q: \"Een fles bevat **1,5 L** sap. Je schenkt **glazen** van **250 mL**. Hoeveel glazen kun je helemaal vullen?\",",
+  "nieuw": "q: \"Een fles bevat **2 L** sap. Je schenkt **glazen** van **300 mL**. Hoeveel glazen kun je helemaal vullen?\",",
+  "reden": "zelfde getallen als stap 4 vraag 13 (dubbel); nu 2 L / 300 mL, antwoord blijft 6"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 21",
+  "oud": "wrongHints: [null, \"Niet — zet 1,5 L om naar mL en deel door 250.\", \"4 glazen is 1 liter — er zit meer in de fles.\", \"7 glazen is 1750 mL — past dat in 1,5 L?\"],",
+  "nieuw": "wrongHints: [null, \"Zet 2 L eerst om naar mL — hoeveel keer past 300 mL daarin?\", \"4 glazen is 1.200 mL — er zit meer in de fles.\", \"7 glazen is 2.100 mL — past dat in 2 L?\"],",
+  "reden": "hints bij nieuwe getallen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "oud": "wrongHints: [null, \"Bijna — let op: (nieuw − oud) / OUD × 100.\", \"80 is het aantal fietsen in maart, geen percentage.\", \"100% stijging zou betekenen dat er twee keer zoveel fietsen verkocht zijn.\"],",
+  "nieuw": "wrongHints: [null, \"Je deelde het verschil door het aantal in april — deel door het aantal van vóór de stijging.\", \"80 is het aantal fietsen in maart, geen percentage.\", \"100% stijging zou betekenen dat er twee keer zoveel fietsen verkocht zijn.\"],",
+  "reden": "hint was formule in hoofdletters"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "oud": "basis: \"25% stijging.\",",
+  "nieuw": "basis: \"Hoeveel fietsen zijn er méér verkocht? Hoeveel procent is dat van het aantal in maart?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "oud": "simpeler: \"Verschil 20. Oud was 80. 20/80 = 0,25 = 25%.\",",
+  "nieuw": "simpeler: \"Verschil: 100 − 80 = 20 fietsen. Deel door het aantal in maart: 20/80 = ?\",",
+  "reden": "telegramstijl, opbouw niveaus"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 23",
+  "oud": "basis: \"24 weken.\",",
+  "nieuw": "basis: \"Hoeveel keer past €5 in €120? Tip: hoeveel keer €5 is €100?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 26",
+  "oud": "wrongHints: [null, \"20 is 24 − 4 — aftrekken helpt hier niet. Welk getal keer 4 is 24?\", \"Deel 24 door 4 — kom je op 12 uit?\", \"Reken na: 8 × 4 = 32. Is dat 24?\"],",
+  "nieuw": "wrongHints: [null, \"20 is 24 − 4 — aftrekken helpt hier niet. Welk getal keer 4 is 24?\", \"Reken na: 12 × 4 = 48. Is dat 24?\", \"Reken na: 8 × 4 = 32. Is dat 24?\"],",
+  "reden": "hint 2 rekende de som (24 ÷ 4) voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 26",
+  "oud": "basis: \"6 m.\",",
+  "nieuw": "basis: \"Oppervlakte = lengte × breedte. Welk getal keer 4 m geeft 24 m²?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 28",
+  "oud": "wrongHints: [null, \"Dat is wat hij wegGAF, niet wat overblijft.\", \"120 is de helft — hij gaf maar een kwart weg.\", \"Hij gaf er geen 40 weg — hoeveel is 1/4 van 240?\"],",
+  "nieuw": "wrongHints: [null, \"Dat is wat hij weggeeft — hoeveel houdt hij zelf over?\", \"120 is de helft — hij gaf maar een kwart weg.\", \"Hij gaf er geen 40 weg — hoeveel is 1/4 van 240?\"],",
+  "reden": "schrijfwijze 'wegGAF'"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 28",
+  "oud": "basis: \"180.\",",
+  "nieuw": "basis: \"Reken eerst uit hoeveel 1/4 van 240 is — dat geeft hij weg.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 33",
+  "oud": "wrongHints: [null, \"Bijna — reken nog eens 10% × €12,50 uit.\", \"Te veel — 20% i.p.v. 10%?\", \"Dat is het hele bedrag, niet alleen de fooi.\"],",
+  "nieuw": "wrongHints: [null, \"Bijna — reken nog eens 10% van €12,50 uit.\", \"Te veel — is dat niet 20% in plaats van 10%?\", \"Dat is het hele bedrag, niet alleen de fooi.\"],",
+  "reden": "afkorting i.p.v. voor kinderen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 33",
+  "oud": "basis: \"€1,25.\",",
+  "nieuw": "basis: \"10% is het tiende deel: deel het bedrag door 10.\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 34",
+  "oud": "basis: \"60%.\",",
+  "nieuw": "basis: \"Kans = aantal meisjes gedeeld door het totale aantal kinderen. Hoeveel kinderen zijn er samen?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 44",
+  "oud": "q: \"Noor koopt 3 schriften van **€1,25** per stuk en betaalt met **€5**. Hoeveel krijgt ze terug?\",",
+  "nieuw": "q: \"Noor koopt 3 schriften van **€1,15** per stuk en betaalt met **€5**. Hoeveel krijgt ze terug?\",",
+  "reden": "antwoord €1,25 stond letterlijk in de vraag (prijs per schrift); nieuwe prijs"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 44",
+  "oud": "options: [\"€1,25\", \"€3,75\", \"€2,25\", \"€0,75\"],",
+  "nieuw": "options: [\"€1,55\", \"€3,45\", \"€2,45\", \"€1,45\"],",
+  "reden": "opties bij €1,15 (3 × 1,15 = 3,45; 5 − 3,45 = 1,55)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 44",
+  "oud": "explanation: \"3 × €1,25 = €3,75. Terug: €5,00 − €3,75 = **€1,25**.\",",
+  "nieuw": "explanation: \"3 × €1,15 = €3,45. Terug: €5,00 − €3,45 = **€1,55**.\",",
+  "reden": "uitleg bij nieuwe getallen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 45",
+  "oud": "wrongHints: [null, \"Deel 53 door 6: er blijven kinderen over — waar slapen die?\", \"Eén te veel — tel na hoeveel plekken je dan hebt; dat is meer dan nodig.\", \"Dan passen er maar 36 kinderen.\"],",
+  "nieuw": "wrongHints: [null, \"Deel 53 door 6: er blijven kinderen over — waar slapen die?\", \"Te veel — reken na hoeveel plekken je dan hebt en hoeveel kinderen er mee gaan.\", \"Dan passen er maar 36 kinderen.\"],",
+  "reden": "'één te veel' gaf het antwoord (9)"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 45",
+  "oud": "basis: \"8 tenten zitten vol, de rest (5 kinderen) heeft tent 9 nodig.\",",
+  "nieuw": "basis: \"Hoeveel tenten krijg je helemaal vol? En waar slapen de kinderen die overblijven?\",",
+  "reden": "basis gaf het antwoord"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 46",
+  "oud": "wrongHints: [null, \"Dat is 4 × €11,50 — je vergeet de korting.\", \"Je hebt maar één keer €2 korting afgetrokken — maar elk van de 4 kaartjes krijgt €2 korting.\", \"Net te weinig — het kaartje kost €9,50, niet €9.\"],",
+  "nieuw": "wrongHints: [null, \"Dat is 4 × €11,50 — je vergeet de korting.\", \"Je hebt maar één keer €2 korting afgetrokken — maar elk van de 4 kaartjes krijgt €2 korting.\", \"Te weinig — reken nog eens precies uit wat één kaartje met korting kost.\"],",
+  "reden": "hint gaf de tussenuitkomst €9,50"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 47",
+  "oud": "q: \"Op het schoolplein staan fietsen en steps: samen **20 voertuigen met 46 wielen**. Een fiets heeft 2 wielen, een step ook 2... behalve de 6 driewielers van de kleuters. Hoeveel wielen hebben de 14 gewone voertuigen samen?\",",
+  "nieuw": "q: \"Op het schoolplein staan **20 voertuigen**. **6** daarvan zijn driewielers van de kleuters (3 wielen). De rest zijn fietsen en steps (2 wielen). Hoeveel wielen hebben de fietsen en steps samen?\",",
+  "reden": "verwarrende vraag die het werk al deed (noemde '14 gewone voertuigen')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 47",
+  "oud": "wrongHints: [null, \"Dat is het totaal — de vraag gaat alleen over de gewone tweewielers.\", \"Dat zijn de wielen van de driewielers (6 × 3) — de vraag gaat over de andere 14.\", \"Te veel — elk gewoon voertuig heeft maar 2 wielen.\"],",
+  "nieuw": "wrongHints: [null, \"Dat zijn álle wielen samen, ook die van de driewielers — de vraag gaat alleen over de fietsen en steps.\", \"Dat zijn de wielen van de driewielers — de vraag gaat over de fietsen en steps.\", \"Je rekende alle 20 voertuigen met 2 wielen — hoeveel voertuigen zijn géén driewieler?\"],",
+  "reden": "hints bij nieuwe vraag, zonder '14' voor te zeggen"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 47",
+  "oud": "explanation: \"14 gewone voertuigen × 2 wielen = **28 wielen**. (Controle: 28 + 6 × 3 = 28 + 18 = 46 ✓)\",",
+  "nieuw": "explanation: \"20 − 6 = 14 fietsen en steps. 14 × 2 wielen = **28 wielen**. (Controle: samen met de driewielers 28 + 6 × 3 = 46 wielen.)\",",
+  "reden": "uitleg bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 48",
+  "oud": "q: \"Drie vrienden verdelen **€45** zó dat ieder evenveel krijgt, maar Jin krijgt **€6 extra** omdat hij het langst hielp. Eerst de €6 eraf — hoeveel krijgt ieder van de rest?\",",
+  "nieuw": "q: \"Drie vrienden verdelen **€45**. Jin krijgt **€6 meer** dan de andere twee, omdat hij het langst hielp. De andere twee krijgen evenveel. Hoeveel krijgen die twee ieder?\",",
+  "reden": "vraag deed het werk ('Eerst de €6 eraf') en was tegenstrijdig ('ieder evenveel, maar')"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 48",
+  "oud": "wrongHints: [null, \"€45 ÷ 3 — maar haal eerst Jins extra €6 van het totaal af.\", \"Dat is het bedrag mét Jins extra — de vraag is het basisbedrag.\", \"Check: 3 × €11 + €6 = €39, geen €45.\"],",
+  "nieuw": "wrongHints: [null, \"€45 ÷ 3 geeft iedereen evenveel — maar Jin krijgt €6 meer dan de anderen.\", \"Dat is wat Jin krijgt, mét zijn extra €6 — de vraag gaat over de andere twee.\", \"Check: €11 + €11 + €17 = €39, geen €45.\"],",
+  "reden": "hints bij nieuwe vraag; hint 1 zei de oplossingsstap voor"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 48",
+  "oud": "explanation: \"€45 − €6 = €39 → €39 ÷ 3 = **€13** per persoon (Jin krijgt €13 + €6 = €19).\",",
+  "nieuw": "explanation: \"Haal eerst Jins extra €6 eraf: €45 − €6 = €39. Verdeel dat over 3: €39 ÷ 3 = **€13**. De andere twee krijgen ieder €13, Jin €13 + €6 = €19 (controle: 13 + 13 + 19 = 45).\",",
+  "reden": "uitleg bij nieuwe vraag"
+ },
+ {
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 52",
+  "oud": "wrongHints: [null, \"Eerst het tekort: €195 − €78. Deel dát door 26.\", \"Dat is €78 ÷ 26 — maar je moet het tekort verdelen, niet wat al gespaard is.\", \"Dat is het tekort zélf, niet het bedrag per kind.\"],",
+  "nieuw": "wrongHints: [null, \"€7,50 is €195 ÷ 26 — maar een deel van het geld hebben ze al.\", \"Dat is €78 ÷ 26 — maar je moet het tekort verdelen, niet wat al gespaard is.\", \"Dat is het tekort zélf, niet het bedrag per kind.\"],",
+  "reden": "hint 1 rekende de hele oplossing voor"
+ }
+]

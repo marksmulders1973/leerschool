@@ -88,7 +88,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "blij = vrolijk. snel = vlug. mooi = prachtig. boos = woedend." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Het tegenovergestelde van een synoniem is een 'antoniem' — woord met juist andere betekenis." }],
           niveaus: {
-            basis: "Heel groot.",
+            basis: "Zet het woord in een zin: 'een enorm huis'. Wat weet je dan over de maat van dat huis?",
             simpeler: "Enorm betekent hetzelfde als 'heel groot'.",
             nogSimpeler: "Heel groot",
           },
@@ -108,7 +108,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Verlamd' lijkt op 'lam' = niet kunnen bewegen." }],
           basiskennis: [{ onderwerp: "Lees de hele zin", uitleg: "Niet alleen het woord — de zin om het woord heen geeft hints." }],
           niveaus: {
-            basis: "Niet kunnen bewegen.",
+            basis: "Welk woordje zit er in ver-LAM-d? Als je arm 'lam' is, wat kun je dan niet meer met die arm?",
             simpeler: "De zin zegt dat het dier niet meer kan lopen. Verlamd = niet bewegen.",
             nogSimpeler: "Niet bewegen",
           },
@@ -118,7 +118,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'tevreden'**?",
         options: ["Blij met de situatie", "Boos over de situatie", "Verbaasd over de situatie", "Bang voor de situatie"],
         answer: 0,
-        wrongHints: [null, "Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.", "Verbaasd = verrast zijn; tevreden = blij. Andere emotie.", "Bang = angstig; tevreden = blij. Andere emotie."],
+        wrongHints: [null, "Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.", "Verbaasd ben je als er iets onverwachts gebeurt. Hoe voel je je als je tevreden bent met je rapport?", "Bang ben je als je iets eng vindt. Hoe voel je je als je tevreden bent met je rapport?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'tevreden'?", tekst: "Tevreden = blij met hoe iets gegaan is. Geen klacht. Voorbeeld: tevreden met je rapport." },
@@ -128,8 +128,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "tevreden ↔ ontevreden. blij ↔ verdrietig. rustig ↔ druk." }],
           basiskennis: [{ onderwerp: "Positief vs negatief", uitleg: "Sorteer eerst opties: welke zijn positief? Tevreden is positief, dus zoek positief synoniem." }],
           niveaus: {
-            basis: "Blij met situatie.",
-            simpeler: "Tevreden = blij + akkoord. 'Blij met de situatie' = juist.",
+            basis: "Denk aan de zin 'Ik ben tevreden met mijn rapport.' Hoe voel je je dan: fijn of naar?",
+            simpeler: "Tevreden ben je als je niets te klagen hebt: je bent blij met hoe het gegaan is.",
             nogSimpeler: "Blij",
           },
         },
@@ -149,7 +149,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij gaf een toelichting bij zijn keuze' = hij legde uit waarom hij koos." }],
           basiskennis: [{ onderwerp: "Stam: licht", uitleg: "'Licht' kan ook 'helder/duidelijk' betekenen. Toelichten = duidelijk maken." }],
           niveaus: {
-            basis: "Een uitleg.",
+            basis: "In 'toelichting' zit 'licht'. Als je iets toelicht, maak je het helder en duidelijk. Wat doet de docent dan bij de som?",
             simpeler: "Toelichting = uitleg. De docent gaf uitleg bij de som.",
             nogSimpeler: "Uitleg",
           },
@@ -170,7 +170,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De kapitein bleef onverstoorbaar tijdens de storm' = hij bleef kalm onder zware omstandigheden." }],
           basiskennis: [{ onderwerp: "Toets-context", uitleg: "'Tijdens de toets' = stresssituatie. Onverstoorbaar past = rustig blijven." }],
           niveaus: {
-            basis: "Rustig en niet uit balans.",
+            basis: "On- betekent 'niet'. Onverstoorbaar = niet te verstoren. Hoe ben je als niets je van slag kan brengen?",
             simpeler: "On- = niet. Niet-verstoorbaar = niet uit balans.",
             nogSimpeler: "Rustig",
           },
@@ -196,7 +196,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'De gezondheid van de zieke baby was precair' = ernstige zorg. Daarom 'onzeker/gevaarlijk'" }],
           basiskennis: [{ onderwerp: "Context-hint", uitleg: "'Uiterst precair' = heel onzeker. 'Uiterst' versterkt alleen: heel erg onzeker." }],
           niveaus: {
-            basis: "Onzeker / gevaarlijk.",
+            basis: "'Uiterst' betekent 'heel erg'. Zeg je 'uiterst precair' als alles goed gaat, of als het elk moment mis kan gaan?",
             simpeler: "Precair = riskant. Een precaire situatie = situatie waar snel iets mis kan gaan.",
             nogSimpeler: "Onzeker",
           },
@@ -220,7 +220,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Inmenging in buitenlandse politiek' = ander land mengt zich (negatief). 'Inmenging van leerkracht' = leerkracht bemoeit zich ongewenst." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Inmenging ↔ afzijdig blijven / je er niet mee bemoeien." }],
           niveaus: {
-            basis: "Bemoeien met wat je niet aangaat.",
+            basis: "In 'inmenging' zit 'mengen'. Wie zich ergens in mengt, doet mee terwijl niemand daarom vroeg. Waarom werd de vergadering daardoor verstoord?",
             simpeler: "In + mengen = ergens in mengen waar het niet hoort.",
             nogSimpeler: "Bemoeien",
           },
@@ -240,28 +240,28 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij liep gehaast naar de tram' = hij rende bijna omdat hij laat was." }],
           basiskennis: [{ onderwerp: "Tegenstellingen", uitleg: "Gehaast ↔ rustig / kalm / op je gemak." }],
           niveaus: {
-            basis: "Druk en snel.",
+            basis: "In 'gehaast' zit het woord 'haast'. Hoe beweeg je als je haast hebt?",
             simpeler: "Gehaast = haast hebben = druk en snel.",
             nogSimpeler: "Snel",
           },
         },
       },
       {
-        q: "*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?",
+        q: "*'De **moedige** soldaat redde drie mensen.'* Wat betekent moedig?",
         options: ["Dapper", "Bang", "Sterk", "Behulpzaam"],
         answer: 0,
         wrongHints: [null, "Bang is juist het tegenovergestelde. Durfde de soldaat iets of niet?", "Sterke spieren zijn iets anders dan durven. Waar gaat 'moed' over?", "Helpen deed hij wel, maar 'moedig' zegt iets over durven. Wat betekent 'moed'?"],
         uitlegPad: {
           stappen: [
             { titel: "Stam 'moed'", tekst: "Moedig komt van 'moed' = durven, niet bang zijn. Iemand met moed durft iets gevaarlijks." },
-            { titel: "Context", tekst: "Soldaat redde 3 mensen → dat vraagt moed (gevaar trotseren)." },
+            { titel: "Context", tekst: "De soldaat redde drie mensen. Dat vraagt moed: hij trotseerde gevaar." },
           ],
           woorden: [{ woord: "moedig", uitleg: "Dapper, durft iets gevaarlijks, niet bang." }],
           theorie: "Toets-strategie bij woord met '-ig' achtervoegsel: kijk naar de stam vóór '-ig'. Moed-ig = met moed. Zonn-ig = met zon.",
           voorbeelden: [{ type: "stap", tekst: "Soortgelijke woorden: dapper, heldhaftig, onverschrokken — alle met-moed-doen." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Moedig ↔ bang/laf/vreesachtig." }],
           niveaus: {
-            basis: "Dapper, niet bang.",
+            basis: "In 'moedig' zit 'moed'. Iemand met moed durft iets gevaarlijks te doen. Welk woord past daarbij?",
             simpeler: "Moedig = met moed = durft = niet bang.",
             nogSimpeler: "Dapper",
           },
@@ -282,7 +282,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij beloofde plechtig' = beloofde serieus + formeel. 'Plechtige opening' = officiële opening." }],
           basiskennis: [{ onderwerp: "Verwant", uitleg: "Plechtigheid = de gebeurtenis zelf (bv huwelijksplechtigheid). Plechtig = de manier." }],
           niveaus: {
-            basis: "Met respect / serieus.",
+            basis: "Denk aan een koningin die een toespraak houdt bij een officiële gebeurtenis. Klinkt dat luchtig of juist ernstig en officieel?",
             simpeler: "Plechtig = formeel, niet luchtig.",
             nogSimpeler: "Serieus",
           },
@@ -316,9 +316,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij de Doorstroomtoets woordenschat: schrap eerst antwoorden die NIET in de context passen. Dan blijven 1-2 over." }],
           niveaus: {
-            basis: "Kreupel = niet goed kunnen lopen (door wond).",
+            basis: "Stel je voor dat je je enkel hebt verstuikt. Hoe loop je dan? Welk woord past daarbij?",
             simpeler: "Kreupel = mank = met moeite lopen.",
-            nogSimpeler: "Kreupel = pijnlijk lopen.",
+            nogSimpeler: "Kreupel = mank.",
           },
         },
       },
@@ -344,7 +344,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tegenstellingen herken je omdat ze het OMGEKEERDE betekenen. Schrap die eerst." }],
           niveaus: {
-            basis: "Synoniem = woord met dezelfde betekenis. Beginnen = starten.",
+            basis: "Een synoniem is een woord met dezelfde betekenis. Probeer: 'De film begint om acht uur.' Welk woord kun je op de plek van 'begint' zetten zonder dat de betekenis verandert?",
             simpeler: "Vraag: 'kun je dit woord vervangen?' Ja, met starten. Eindigen is tegenovergesteld.",
             nogSimpeler: "Hetzelfde = synoniem.",
           },
@@ -449,7 +449,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'het OMGEKEERDE van X is...?' Niet 'iets anders dan X'." }],
           niveaus: {
-            basis: "Het tegenovergestelde van voorzichtig is roekeloos.",
+            basis: "Voorzichtig = goed oppassen. Zoek het woord dat het omgekeerde zegt: helemaal níét oppassen en zomaar risico nemen.",
             simpeler: "Voorzichtig is goed oppassen; roekeloos is helemaal niet oppassen.",
             nogSimpeler: "Een tegenstelling is het omgekeerde.",
           },
@@ -700,7 +700,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Ik twijfel al weken over welke sport ik kies… nu hak ik de knoop door: voetbal!'" }],
           basiskennis: [{ onderwerp: "Figuurlijk", uitleg: "Figuurlijk = niet echt zo bedoeld. 'Het regent pijpenstelen' = geen echte pijpenstelen." }],
           niveaus: {
-            basis: "Je neemt eindelijk een beslissing na lang twijfelen.",
+            basis: "Het is een uitdrukking: er is geen echte knoop. Denk aan iemand die lang twijfelt tussen twee keuzes. Wat doet die persoon als hij 'de knoop doorhakt'?",
             simpeler: "Je twijfelt lang en dán kies je: dat is de knoop doorhakken.",
             nogSimpeler: "Beslissen",
           },
@@ -756,7 +756,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Het schilderij was beschadigd en werd gerestaureerd — nu ziet het er weer uit als 300 jaar geleden." }],
           basiskennis: [{ onderwerp: "Context", uitleg: "De woorden om een moeilijk woord heen geven bijna altijd een hint over de betekenis." }],
           niveaus: {
-            basis: "Het kasteel is hersteld, zodat het weer is zoals vroeger.",
+            basis: "Een oud kasteel raakt in de loop van de tijd beschadigd. Wat doe je ermee als je het wilt bewaren?",
             simpeler: "Gerestaureerd = gerepareerd zodat het weer als vroeger is.",
             nogSimpeler: "Hersteld",
           },
@@ -771,7 +771,7 @@ const steps = [
       },
       {
         q: "*'De **toeschouwers** klapten na de voorstelling.'* Wie zijn de **toeschouwers**?",
-        options: ["De mensen die kijken", "De acteurs", "De kaartverkopers", "De regisseurs"],
+        options: ["De kijkers", "De acteurs", "De kaartverkopers", "De regisseurs"],
         answer: 0,
         wrongHints: [null, "Acteurs spélen — wie zit er in de zaal?", "Kaartverkopers staan bij de ingang. Welk oud woord herken je in 'toeSCHOUWers'?", "De regisseur bedenkt de voorstelling — wie klapt er meestal?"],
         explanation: "**Toeschouwers** = de mensen die toekijken (het publiek). 'Schouwen' is een oud woord voor kijken.",
@@ -1537,13 +1537,13 @@ const steps = [
         q: "Welke zin is **goed gespeld**?",
         options: ["Hij wordt boos.", "Hij word boos.", "Hij wort boos.", "Hij worden boos."],
         answer: 0,
-        wrongHints: [null, "Bij 'hij/zij/het' altijd stam + t.", "De stam is 'word', met een d — die d blijft gewoon staan.", "Meervoud, hier is 't enkelvoud (hij)."],
+        wrongHints: [null, "Kijk naar 'hij'. Welke regel geldt bij hij, zij en het in de tegenwoordige tijd?", "De stam is 'word', met een d — die d blijft gewoon staan.", "'Worden' is de meervoudsvorm. Gaat deze zin over één persoon of over meer?"],
       },
       {
         q: "*'Gisteren **...** ik naar school.'* Welke vorm van *fietsen* hoort op de puntjes?",
         options: ["fietste", "fietsde", "fietsten", "fiets"],
         answer: 0,
-        wrongHints: [null, "Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?", "Meervoud — vraag is 'ik' (enkelvoud).", "Dat is tegenwoordige tijd — 'gisteren' vraagt om verleden tijd."],
+        wrongHints: [null, "Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?", "Dat is de meervoudsvorm. Gaat de zin over één persoon of over meer?", "Dat is tegenwoordige tijd — 'gisteren' vraagt om verleden tijd."],
         uitlegPad: {
           stappen: [
             { titel: "'t kofschip", tekst: "Stam 'fiets' eindigt op 's'. 's' zit in 't kofschip → krijgt '-te' voor verleden tijd. Dus 'ik fietste'." },
@@ -1553,7 +1553,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "fiets (op s) → fietste / wandel (op l) → wandelde." }],
           basiskennis: [{ onderwerp: "Persoonsvorm", uitleg: "'Ik' = enkelvoud, dus enkelvoudig werkwoord (-te, niet -ten)." }],
           niveaus: {
-            basis: "fietste (stam 'fiets' op s → -te).",
+            basis: "Zoek de stam van 'fietsen'. Op welke letter eindigt die? Zit die letter in 't kofschip?",
             simpeler: "Werkwoord: fietsen. Stam: fiets. Eindigt op s (zit in 't kofschip). Voor verleden tijd + -te. Dus: ik fietste.",
             nogSimpeler: "fietste",
           },
@@ -1567,9 +1567,9 @@ const steps = [
       },
       {
         q: "Wanneer schrijf je een **hoofdletter**?",
-        options: ["Aan begin van zin of bij namen", "Bij elk werkwoord in de zin", "Bij korte woorden als 'de' of 'en'", "Bij elk woord in een vraagzin"],
+        options: ["Aan het begin van een zin en bij namen", "Bij elk werkwoord in de zin", "Bij korte woorden als 'de' of 'en'", "Bij elk woord in een vraagzin"],
         answer: 0,
-        wrongHints: [null, "Werkwoorden krijgen alleen een hoofdletter als ze vooraan in de zin staan.", "Korte woorden krijgen normaal geen hoofdletter.", "Vragen krijgen alleen een hoofdletter aan het begin."],
+        wrongHints: [null, "Kijk naar deze zin: 'Mijn broer fietst naar school.' Heeft 'fietst' een hoofdletter?", "Kijk naar een zin in je leesboek. Staan 'de' en 'en' daar met een hoofdletter?", "Kijk naar de vraag hierboven. Heeft daar elk woord een hoofdletter?"],
       },
       {
         q: "Welk woord schrijf je **met 'ei'**?",
@@ -1596,10 +1596,10 @@ const steps = [
         },
       },
       {
-        q: "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
+        q: "*'Ik **...** gisteren een mooi boek.'* Welke vorm van *lezen* hoort op de puntjes?",
         options: ["las", "lees", "laste", "lazen"],
         answer: 0,
-        wrongHints: [null, "Tegenwoordige tijd.", "Die vorm bestaat niet: 'lezen' verandert van klank in de verleden tijd.", "Meervoud — vraag is 'ik' (enkelvoud)."],
+        wrongHints: [null, "Dat is de tegenwoordige tijd. Welk woord in de zin vertelt wanneer het gebeurde?", "Die vorm bestaat niet: 'lezen' verandert van klank in de verleden tijd.", "Dat is de meervoudsvorm. Gaat de zin over één persoon of over meer?"],
       },
       {
         q: "*'Op ___ heb ik gym.'* Welk woord is **goed** geschreven?",
@@ -1717,7 +1717,7 @@ const steps = [
         q: "Welk woord is **goed gespeld**?",
         options: ["beschuit", "beschuid", "beshuit", "bescuit"],
         answer: 0,
-        wrongHints: [null, "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?", "Zeg het langzaam: be-SCH-uit. Welke klank hoor je na de s?", "Je hoort 'sch' zoals in 'school'. Hoe schrijf je die klank?"],
+        wrongHints: [null, "Verleng het woord eens: maak er meer dan één van. Hoor je dan een t of een d?", "Zeg het woord langzaam. Welke klank hoor je na de s? Denk aan 'school' en 'schaap'.", "Welke klank hoor je na de s? Denk aan 'school' en 'schaap': hoe schrijf je die klank daar?"],
       },
       {
         q: "*'Het kind ___ blij.'* Welke vorm van *zijn* in de tegenwoordige tijd hoort op de puntjes?",
@@ -1753,7 +1753,7 @@ const steps = [
         q: "Welk woord is **goed gespeld**?",
         options: ["computer", "compjuter", "konputer", "computter"],
         answer: 0,
-        wrongHints: [null, "Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?", "Twee dingen: het woord begint niet met een k, en voor de p hoort een m.", "Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?"],
+        wrongHints: [null, "Dit is een leenwoord uit het Engels. Schrijf je de 'joe'-klank in dat woord ook met een j?", "Twee letters kloppen niet: de eerste letter en de letter vóór de p. Het is een Engels leenwoord: hoe zie je het geschreven in een winkel of op een doos?", "Kijk naar de t in het midden. Hoeveel t's schrijf je in dit Engelse woord?"],
       },
       {
         q: "*'Het kind **...** drie ijsjes gegeten.'* Welk woord hoort op de puntjes?",
@@ -2080,16 +2080,16 @@ const steps = [
       "**Wat verwacht je op de Doorstroomtoets?**\n\nTaalverzorging = **leestekens + zinsbouw**. 5-10 vragen.\n\n**Top-4 onderwerpen**:\n• **Punt of vraagteken?** Een vraag eindigt op **'?'**. Een zin op **'.'**\n• **Komma's** — bij opsommingen (appel, peer, druif **en** banaan) en tussen 2 zinnen met *omdat / maar / als*.\n• **Aanhalingstekens** *''*\\* — bij wat iemand zegt.\n• **Hoofdletter aan begin** — altijd.\n\n**Toets-truc 1 — opsomming**:\n• 'Ik kocht appels, peren, druiven **en** bananen.'\n• Tussen de laatste 2 staat **'en'** (geen komma).\n\n**Toets-truc 2 — zinnen verbinden**:\n• 'Ik ben moe, **omdat** ik laat opbleef.' *(één zin met 2 delen)*\n• Geen punt midden in — de komma scheidt de delen.\n\n**Toets-truc 3 — directe rede**:\n• Mama zei: '**Ga je tanden poetsen.**'\n• Aanhalingstekens om wat ze zegt + dubbele punt ervoor.\n\n**Toets-truc 4 — zin vs deelzin**:\nEen volledige zin heeft een **onderwerp** (wie?) + **werkwoord** (doet wat?). Anders is het geen complete zin.\n• ✓ 'De hond rent.' *(hond = onderwerp, rent = werkwoord)*\n• ✗ 'De rennende hond.' *(geen werkwoord — geen zin)*\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
       {
-        q: "Hoe **eindigt een vraag**?",
+        q: "Waarmee eindigt de zin *'Weet jij hoe laat de film begint'*?",
         options: ["Met een vraagteken (?)", "Met een punt (.)", "Met een komma (,)", "Met een uitroepteken (!)"],
         answer: 0,
-        wrongHints: [null, "Een punt is voor een gewone zin.", "Een komma zit binnen een zin.", "Uitroepteken is voor verbazing of bevel."],
+        wrongHints: [null, "Een punt zet je achter een mededeling. Wil de spreker hier iets vertellen of iets weten?", "Een komma staat midden in een zin, niet aan het eind.", "Een uitroepteken zet je achter een uitroep of een bevel. Roept de spreker hier iets uit?"],
       },
       {
         q: "Welke zin heeft **komma's op de goede plek**?",
         options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, en druiven.", "Ik kocht, appels peren en druiven."],
         answer: 0,
-        wrongHints: [null, "Geen komma's vóór elk woord — alleen tussen items.", "Vóór 'en' komt bij een opsomming geen komma.", "Geen komma ná het werkwoord."],
+        wrongHints: [null, "Kijk naar 'appels peren': hoe scheid je twee dingen in een opsomming? En wat doe je vlak vóór 'en'?", "Vóór 'en' komt bij een opsomming geen komma.", "Direct na 'kocht' hoort geen komma. Waar staan de komma's in een opsomming?"],
         uitlegPad: {
           stappen: [
             { titel: "Komma + en", tekst: "Bij een opsomming staat tussen de eerste items een komma, en vóór het laatste item gebruik je 'en' (zonder komma)." },
@@ -2099,7 +2099,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "appels, peren, druiven en bananen — komma's tussen items, niet vóór 'en'." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Een komma zegt: 'er komt nog meer'. Bij 'en' is dat al duidelijk." }],
           niveaus: {
-            basis: "Komma tussen items, geen komma vóór 'en'.",
+            basis: "Bij een opsomming zet je een komma tussen de dingen. Wat doe je vlak vóór het woordje 'en'?",
             simpeler: "Bij een opsomming: appels, peren en druiven. Tussen losse items komma, vóór 'en' geen komma.",
             nogSimpeler: "Geen komma vóór 'en'.",
           },
@@ -2109,7 +2109,7 @@ const steps = [
         q: "Wat zijn **aanhalingstekens** voor?",
         options: ["Om aan te geven wat iemand zegt", "Om een opsomming aan te kondigen", "Om een vraag af te sluiten", "Om alinea's te scheiden"],
         answer: 0,
-        wrongHints: [null, "Tussen de dingen van een opsomming zet je komma's. Waar staan aanhalingstekens omheen?", "Een vraag sluit je af met een vraagteken.", "Alinea's scheid je met een nieuwe regel."],
+        wrongHints: [null, "Een opsomming kondig je aan met een dubbele punt. Waar staan aanhalingstekens omheen?", "Een vraag sluit je af met een vraagteken.", "Alinea's scheid je met een nieuwe regel."],
       },
       {
         q: "Welke zin is **geen complete zin**?",
@@ -2127,31 +2127,31 @@ const steps = [
         q: "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
         options: ["dubbele punt :", "punt .", "komma ,", "uitroepteken !"],
         answer: 0,
-        wrongHints: [null, "Een punt sluit een zin af; het kondigt niets aan.", "Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?", "Geen sterke emotie hier."],
+        wrongHints: [null, "Een punt sluit een zin af; het kondigt niets aan.", "Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?", "Een uitroepteken staat aan het eind van een uitroep, niet vóór wat iemand gaat zeggen."],
       },
       {
         q: "Welke zin heeft een **fout** met komma's?",
         options: ["Ik wandel en, ik fiets.", "Ik wandel en ik fiets.", "Ik wandel, omdat het mooi weer is.", "Ik wandel, maar ik fiets niet."],
         answer: 0,
-        wrongHints: [null, "Goed — geen komma nodig.", "Goed — komma vóór 'omdat' (samengestelde zin).", "Goed — komma vóór 'maar' (tegenstelling)."],
+        wrongHints: [null, "Deze zin is goed: met 'en' tussen twee korte zinnen hoeft geen komma. Zoek een zin waar de komma op een vreemde plek staat.", "Deze zin is goed: vóór 'omdat' mag een komma, want daar begint een nieuw zinsdeel. Zoek een zin waar de komma op een vreemde plek staat.", "Deze zin is goed: vóór 'maar' zet je meestal een komma. Zoek een zin waar de komma op een vreemde plek staat."],
       },
       {
         q: "Welke zin is **goed**?",
         options: ["Jan, Piet en Klaas spelen.", "Jan Piet en Klaas spelen.", "Jan, Piet, en Klaas spelen.", "Jan, Piet en, Klaas spelen."],
         answer: 0,
-        wrongHints: [null, "Geen komma's — moeilijk te lezen.", "Komma vóór 'en' = fout in NL-opsomming.", "Komma op verkeerde plek."],
+        wrongHints: [null, "Zonder komma lopen de namen in elkaar over. Wat zet je tussen de dingen van een opsomming?", "Kijk naar de komma vlak vóór 'en'. Hoort die er in een Nederlandse opsomming?", "Hier staat de komma ná 'en'. Klopt die plek?"],
       },
       {
         q: "Welke zin heeft een **vraagteken** nodig?",
         options: ["Waar is mijn jas", "De jas is rood", "Een jas in de kast", "Mijn jas is hier"],
         answer: 0,
-        wrongHints: [null, "Mededelende zin → punt.", "Geen werkwoord — niet eens een hele zin.", "Mededelend."],
+        wrongHints: [null, "Deze zin vertelt iets. Zo'n mededeling sluit je af met een punt.", "Dit is niet eens een hele zin: er staat geen werkwoord in.", "Deze zin vertelt iets. Zo'n mededeling sluit je af met een punt."],
       },
       {
         q: "Welke is een **complete zin**?",
         options: ["De kat slaapt.", "Slapende kat.", "Op de bank.", "De rode kat."],
         answer: 0,
-        wrongHints: [null, "Geen werkwoord.", "Geen onderwerp + werkwoord.", "Geen werkwoord."],
+        wrongHints: [null, "'Slapende' zegt alleen hoe de kat is. Staat er een woord dat zegt wat de kat doet?", "Wie doet hier iets, en wat doet die? Er staat geen onderwerp en geen werkwoord.", "Je weet wie het is, maar wat dóét de rode kat? Er mist een werkwoord."],
       },
       {
         q: "Welk woord krijgt **een hoofdletter**?",
@@ -2163,13 +2163,13 @@ const steps = [
         q: "Welke zin heeft **goede aanhalingstekens**?",
         options: ["Hij zei: 'Hallo.'", "Hij zei Hallo.", "Hij zei: Hallo", "'Hij zei Hallo'"],
         answer: 0,
-        wrongHints: [null, "Geen aanhalingstekens.", "Mist aanhalingstekens.", "Hele zin tussen aanhalingstekens = fout."],
+        wrongHints: [null, "Hier staan helemaal geen aanhalingstekens. Hoe laat je zien welke woorden hij precies zei?", "Na de dubbele punt komen de woorden die hij zei. Wat zet je daar omheen?", "Nu staat de hele zin tussen aanhalingstekens, ook 'Hij zei'. Zei hij die woorden zelf?"],
       },
       {
         q: "Wat is het **onderwerp** in 'De kat slaapt'?",
         options: ["De kat", "Slaapt", "De", "Slaapt de kat"],
         answer: 0,
-        wrongHints: [null, "Dat is het werkwoord.", "Lidwoord alleen.", "Dat is de hele zin — welk deel doet de actie?"],
+        wrongHints: [null, "Dat is het werkwoord: het zegt wat er gebeurt. Wie doet dat?", "'De' is alleen een lidwoord. Wie slaapt er?", "Hier staat ook het werkwoord bij. Welk deel zegt alleen wie er slaapt?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is het onderwerp?", tekst: "Het onderwerp is **wie of wat de actie doet**. Vraag: 'Wie/wat slaapt?' → de kat." },
@@ -2188,7 +2188,7 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onderwerp staat meestal vooraan in de zin. Werkwoord komt erna." }],
           niveaus: {
-            basis: "Onderwerp = wie/wat de actie doet.",
+            basis: "Zoek eerst het werkwoord. Vraag dan: wie of wat doet dat? Het antwoord op die vraag is het onderwerp.",
             simpeler: "'De kat slaapt' → Wie slaapt? De kat. Dát is het onderwerp.",
             nogSimpeler: "Wie? = onderwerp.",
           },
@@ -2216,8 +2216,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Werkwoord = ding dat je kunt DOEN. Rennen kun je doen. 'Hard' kun je niet doen." }],
           niveaus: {
-            basis: "Werkwoord = actie-woord (rent, slaapt, eet).",
-            simpeler: "Vraag 'wat doet hij?'. Antwoord = werkwoord.",
+            basis: "Een werkwoord zegt wat iemand doet. Stel de vraag: wat doet Lisa?",
+            simpeler: "Vraag: wat doet Lisa? Het woord dat je dan antwoordt, is het werkwoord. 'Hard' zegt alleen hóé ze het doet.",
             nogSimpeler: "Werkwoord = doen!",
           },
         },
@@ -2226,7 +2226,7 @@ const steps = [
         q: "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
         options: ["een appel", "Ik", "eet", "Ik eet"],
         answer: 0,
-        wrongHints: [null, "Onderwerp.", "Werkwoord.", "Dat zijn onderwerp en werkwoord samen. Welke woordgroep ondergaat de actie?"],
+        wrongHints: [null, "'Ik' is degene die iets doet: het onderwerp. Wat ondergaat de actie?", "Dit woord zegt wat er gebeurt. Zoek het stuk dat de actie ondergaat.", "Dat zijn onderwerp en werkwoord samen. Welke woordgroep ondergaat de actie?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een lijdend voorwerp?", tekst: "Het lijdend voorwerp is het ding WAAROP de actie van het werkwoord gericht is. Met andere woorden: WAT wordt er gegeten/gezien/gepakt?" },
@@ -2245,7 +2245,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Wat + werkwoord + onderwerp? Antwoord = lijdend voorwerp." }],
           niveaus: {
             basis: "Lijdend voorwerp = WAT ondergaat de actie. Vraag 'wat + werkwoord + onderwerp?'",
-            simpeler: "'Ik eet een appel.' → wat eet ik? Een appel.",
+            simpeler: "'Tom leest een boek.' → wat leest Tom? Een boek = lijdend voorwerp. Stel nu dezelfde wat-vraag bij jouw zin.",
             nogSimpeler: "WAT? → lijdend voorwerp.",
           },
         },
@@ -2273,16 +2273,16 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Voor een 'ding'-woord (auto, kind, boek) staat vaak een bijvoeglijk naamwoord." }],
           niveaus: {
             basis: "Bijvoeglijk naamwoord = beschrijft hoe iets is (rood, groot, klein).",
-            simpeler: "'De rode auto' → 'rode' = welke kleur de auto is.",
+            simpeler: "'Het grote huis' → 'grote' zegt hoe het huis is. Zoek in elke zin een woord dat zegt hoe de auto is.",
             nogSimpeler: "Hoe is het? = bijvoeglijk!",
           },
         },
       },
       {
-        q: "Welke is een **persoonlijk voornaamwoord**?",
+        q: "Welk woord is een **persoonlijk voornaamwoord**?",
         options: ["ik", "auto", "snel", "boos"],
         answer: 0,
-        wrongHints: [null, "Dat is een zelfstandig naamwoord — een ding.", "Dat is een bijwoord — zegt hoe iets gaat.", "Dat is een bijvoeglijk naamwoord — beschrijft een gevoel."],
+        wrongHints: [null, "Dat is een zelfstandig naamwoord — een ding.", "'Snel' zegt hoe iets gaat of is — het vervangt geen persoon.", "Dat is een bijvoeglijk naamwoord — beschrijft een gevoel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een persoonlijk voornaamwoord?", tekst: "Een persoonlijk voornaamwoord vervangt een persoon (of ding) zodat je niet steeds de naam hoeft te zeggen." },
@@ -2321,9 +2321,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Drie items: 'A, B en C'. Vier items: 'A, B, C en D'." }],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Geen komma bij 2 items: 'rood en blauw' — geen komma." }],
           niveaus: {
-            basis: "appels, peren en druiven — komma + komma + en.",
+            basis: "Bij een opsomming zet je een komma tussen de delen, maar vóór het laatste 'en' komt geen komma: appels, peren en druiven.",
             simpeler: "Komma's tussen, geen komma voor 'en'.",
-            nogSimpeler: "Geen komma voor 'en'",
+            nogSimpeler: "Geen komma vóór 'en'.",
           },
         },
       },
@@ -2331,7 +2331,7 @@ const steps = [
         q: "Welke zin is een **volledige zin**?",
         options: ["De hond rent in het park.", "De rennende hond in het park.", "Rennen in het park.", "Hond in het park."],
         answer: 0,
-        wrongHints: [null, "Geen werkwoord — alleen 'rennende' (bijvoeglijk). Geen complete zin.", "Geen onderwerp.", "Waar is het werkwoord?"],
+        wrongHints: [null, "'Rennende' zegt hoe de hond is, het is geen persoonsvorm. Een volledige zin heeft een persoonsvorm nodig.", "Wie rent er? Een volledige zin heeft een onderwerp én een persoonsvorm.", "Waar is de persoonsvorm? Wat doet de hond?"],
       },
       {
         q: "Welk leesteken hoort op de lege plek? *'Wat doe je daar___'*",
@@ -2343,7 +2343,7 @@ const steps = [
         q: "Welke zin staat **goed** geschreven (directe rede)?",
         options: ["Mama zei: 'Kom eten.'", "Mama zei kom eten.", "Mama: zei 'kom eten'.", "'Mama zei kom eten.'"],
         answer: 0,
-        wrongHints: [null, "Geen aanhalingstekens om wat ze zegt.", "Dubbele punt verkeerd geplaatst.", "Hele zin tussen aanhalingstekens, dat klopt niet."],
+        wrongHints: [null, "Hoe zie je in deze zin welke woorden mama letterlijk zegt?", "Kijk waar de dubbele punt staat: hoort die vóór of ná 'zei'?", "Mama zegt niet 'Mama zei'. Welk stuk zegt ze letterlijk?"],
         uitlegPad: {
           stappen: [
             { titel: "Directe rede = letterlijk", tekst: "Als je opschrijft wat iemand letterlijk zegt: zet aanhalingstekens om dat stukje + dubbele punt ervoor." },
@@ -2354,14 +2354,14 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Indirect: 'Mama zei dat ik moest komen eten.' (geen aanhalingstekens nodig)." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Indirecte rede = navertellen. Geen aanhalingstekens. Directe rede = letterlijk citeren. Wel aanhalingstekens." }],
           niveaus: {
-            basis: "Mama zei: 'Kom eten.'",
-            simpeler: "Zei + dubbele punt + 'Kom eten.'",
+            basis: "Wat iemand letterlijk zegt, zet je tussen aanhalingstekens. Ervoor komt een dubbele punt, en het citaat begint met een hoofdletter.",
+            simpeler: "Wie zegt het + dubbele punt + aanhalingstekens om de woorden die gezegd worden.",
             nogSimpeler: "Aanhalingstekens om citaat",
           },
         },
       },
       {
-        q: "*'Tom is moe ___ hij heeft hard gewerkt.'* Welk **voegwoord** past?",
+        q: "*'Tom is moe ___ hij hard heeft gewerkt.'* Welk **voegwoord** past?",
         options: ["omdat", "maar", "of", "dus"],
         answer: 0,
         wrongHints: [null, "Geen tegenstelling — moe + hard gewerkt past samen.", "'Of' gebruik je bij een keuze tussen twee dingen. Kiest Tom hier iets?", "'Dus' leidt een gevolg in. Is 'hard gewerkt' het gevolg van moe zijn, of juist de reden?"],
@@ -2370,7 +2370,7 @@ const steps = [
         q: "Welke zin gebruikt een **hoofdletter goed**?",
         options: ["Op zaterdag ga ik naar Amsterdam.", "op zaterdag ga ik naar amsterdam.", "Op Zaterdag ga ik naar Amsterdam.", "Op zaterdag ga ik naar amsterdam."],
         answer: 0,
-        wrongHints: [null, "Begin zin én plaatsnaam = hoofdletter.", "Dagen krijgen géén hoofdletter.", "Amsterdam = plaatsnaam = hoofdletter."],
+        wrongHints: [null, "Kijk naar het begin van de zin en naar de plaatsnaam.", "Dagen krijgen géén hoofdletter.", "Kijk nog eens naar de plaatsnaam aan het eind."],
         uitlegPad: {
           stappen: [
             { titel: "Hoofdletter-regels", tekst: "Hoofdletter aan: 1) begin van zin, 2) eigennamen (personen + plaatsen + landen). NIET bij: dagen, maanden, vakken." },
@@ -2384,9 +2384,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Talen krijgen WEL hoofdletter (Engels, Nederlands, Frans). Dagen niet (maandag, dinsdag)." }],
           niveaus: {
-            basis: "Op zaterdag ga ik naar Amsterdam.",
+            basis: "Een hoofdletter komt aan het begin van de zin en bij namen van plaatsen. Dagen van de week krijgen een kleine letter.",
             simpeler: "Begin + plaats = hoofdletter. Dag = klein.",
-            nogSimpeler: "Amsterdam met A, zaterdag met z",
+            nogSimpeler: "Plaatsnaam groot, dag klein.",
           },
         },
       },
@@ -2394,7 +2394,7 @@ const steps = [
         q: "*'De jongen ___ in het park.'* Welk werkwoord (verleden tijd, enkelvoud)?",
         options: ["speelde", "speelden", "speelt", "spelen"],
         answer: 0,
-        wrongHints: [null, "Meervoud-vorm.", "Tegenwoordige tijd.", "Dat is het hele werkwoord."],
+        wrongHints: [null, "Hoeveel jongens zijn er? Kies de vorm voor één persoon.", "Dit gebeurt nu. De vraag vraagt naar de verleden tijd.", "Dat is het hele werkwoord. Na 'de jongen' komt een persoonsvorm."],
       },
       {
         q: "Welke zin heeft een **fout** in werkwoordspelling?",
@@ -2406,22 +2406,22 @@ const steps = [
         q: "Wat is het **meervoud** van 'leerling'?",
         options: ["leerlingen", "leerlinges", "leerling", "leerlingens"],
         answer: 0,
-        wrongHints: [null, "Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?", "Enkelvoud.", "Dubbel meervoud."],
+        wrongHints: [null, "Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?", "Dat is nog maar één leerling. Hoe zeg je het bij twee?", "Hier staan twee meervoudsuitgangen achter elkaar. Eén is genoeg."],
       },
       {
         q: "*'Ik vind ___ ijs lekker.'* Welk **bepaald lidwoord** past?",
         options: ["het", "de", "een", "die"],
         answer: 0,
-        wrongHints: [null, "Zeg het hardop: klinkt 'de ijs' goed?", "'Een' is een onbepaald lidwoord — de vraag zoekt een bepaald lidwoord.", "Aanwijzend, geen lidwoord."],
+        wrongHints: [null, "Zeg het hardop: klinkt 'de ijs' goed?", "'Een' is een onbepaald lidwoord — de vraag zoekt een bepaald lidwoord.", "'Die' is een aanwijzend voornaamwoord, geen lidwoord."],
       },
       {
         q: "*'De kat ___ van Marieke.'* Welk werkwoord (tegenwoordig)?",
         options: ["is", "zijn", "ben", "was"],
         answer: 0,
-        wrongHints: [null, "Meervoud — hier 1 kat.", "1e persoon.", "Verleden."],
+        wrongHints: [null, "'Zijn' gebruik je bij meer dan één. Hoeveel katten zijn er?", "'Ben' hoort bij 'ik'. Gaat de zin over jezelf?", "'Was' is verleden tijd. De vraag vraagt naar nu."],
       },
       {
-        q: "Welk **leesteken** kondigt een opsomming aan (bv *'Tom kookte ___ pasta, pizza, pannenkoeken'*)?",
+        q: "Welk **leesteken** kondigt een opsomming aan (bijvoorbeeld *'Tom kookte ___ pasta, pizza en pannenkoeken.'*)?",
         options: ["Dubbele punt", "Vraagteken", "Uitroepteken", "Punt"],
         answer: 0,
         wrongHints: [null, "Vraagteken sluit alleen vragen af.", "Een uitroepteken komt aan het eind van een uitroep.", "Na een punt begint een nieuwe zin."],
@@ -2435,23 +2435,23 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Je hebt nodig: 500 gram meel en 2 eieren.' De dubbele punt kondigt de lijst aan." }],
           basiskennis: [{ onderwerp: "Andere tekens", uitleg: "Komma = pauze. Punt = einde. Vraagteken = vraag. Uitroepteken = nadruk/emotie." }],
           niveaus: {
-            basis: "Dubbele punt.",
-            simpeler: "`:` kondigt opsomming aan.",
+            basis: "Welk teken zet je vóór een rijtje, om aan te kondigen dat het rijtje nu komt? Denk aan: 'Je hebt nodig ... meel en eieren.'",
+            simpeler: "Het is het teken met twee puntjes boven elkaar.",
             nogSimpeler: "Dubbele punt",
           },
         },
       },
       {
         q: "Welke zin heeft een **uitroepteken** nodig?",
-        options: ["Wat een mooie dag!", "Wat doe je", "Hij komt thuis", "Klaar voor de toets"],
+        options: ["Wat een mooie dag", "Wat doe je", "Hij komt thuis", "Morgen hebben we een toets"],
         answer: 0,
-        wrongHints: [null, "Vraag — vraagteken.", "Gewone zin — punt.", "Geen sterke emotie/uitroep."],
+        wrongHints: [null, "Wil iemand hier iets weten? Welk leesteken hoort daar dan bij?", "Is dit een uitroep, of gewoon een mededeling?", "Is dit een uitroep, of gewoon een mededeling?"],
       },
       {
         q: "*'Tom ___ blij toen hij won.'* Welk werkwoord (verleden tijd)?",
         options: ["was", "is", "zijn", "ben"],
         answer: 0,
-        wrongHints: [null, "Tegenwoordig.", "Meervoud.", "1e persoon."],
+        wrongHints: [null, "'Is' gaat over nu. 'Toen hij won' gaat over vroeger.", "'Zijn' gebruik je bij meer dan één. Over hoeveel personen gaat het?", "'Ben' hoort bij 'ik'. Gaat de zin over jezelf?"],
       },
       {
         q: "*'De wind woei, het regende ___ de zon scheen ook.'* Welk **voegwoord** past?",
@@ -2463,7 +2463,7 @@ const steps = [
         q: "*'Tom rent. Hij rent snel.'* — Welk woord is een **bijwoord**?",
         options: ["snel", "Tom", "rent", "Hij"],
         answer: 0,
-        wrongHints: [null, "Eigennaam, geen bijwoord.", "Werkwoord.", "Persoonlijk voornaamwoord."],
+        wrongHints: [null, "'Tom' is een naam. Zegt die iets over het rennen?", "Dit is het werkwoord zelf. Welk woord zegt iets óver dat werkwoord?", "'Hij' vervangt Tom. Zegt dat iets over het rennen?"],
         uitlegPad: {
           stappen: [
             { titel: "Bijwoord = bij werkwoord", tekst: "Een bijwoord vertelt HOE iets gebeurt. 'Rent SNEL' — 'snel' zegt iets over het rennen." },
@@ -2477,9 +2477,9 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Bijwoord vs bijvoeglijk", uitleg: "Bijwoord: bij werkwoord (rent snel). Bijvoeglijk: bij zelfst.nw (de snelle auto)." }],
           niveaus: {
-            basis: "snel.",
-            simpeler: "'Snel' beschrijft hoe Tom rent.",
-            nogSimpeler: "snel",
+            basis: "Een bijwoord zegt iets over het werkwoord: hoe, waar of wanneer iets gebeurt. Zoek eerst het werkwoord en vraag dan: hoe gebeurt het?",
+            simpeler: "'Ze loopt vlug.' → hoe loopt ze? Vlug = bijwoord. Stel dezelfde vraag bij 'rent'.",
+            nogSimpeler: "Hoe rent Tom?",
           },
         },
       },
@@ -2487,7 +2487,7 @@ const steps = [
         q: "*'Tom heeft **een** rode auto.'* Wat is **'een'**?",
         options: ["Onbepaald lidwoord", "Bijvoeglijk naamwoord", "Werkwoord", "Telwoord"],
         answer: 0,
-        wrongHints: [null, "Beschrijft niet de auto.", "Geen actie.", "Hier niet — als getal had het 'één' moeten zijn met klemtoon."],
+        wrongHints: [null, "Zegt 'een' hoe de auto is? Welk woord doet dat wél?", "Is 'een' iets wat Tom doet?", "Hier niet — als getal had het 'één' moeten zijn met klemtoon."],
       },
       {
         q: "Welk woord is een **werkwoord**?",
@@ -2496,13 +2496,13 @@ const steps = [
         wrongHints: [null, "Auto is een ding: een zelfstandig naamwoord.", "Snel zegt hoe iets gaat.", "Hoog zegt hoe iets is."],
       },
       {
-        q: "Het **onderwerp** van zin *'De hond rent in het park.'* is...",
+        q: "Het **onderwerp** van de zin *'De hond rent in het park.'* is...",
         options: ["De hond", "rent", "in het park", "het park"],
         answer: 0,
-        wrongHints: [null, "Werkwoord.", "Plaatsbepaling.", "Plek-aanduiding."],
+        wrongHints: [null, "Dat is wat er gebeurt: de persoonsvorm. Wie doet het?", "Dat zegt wáár het gebeurt, niet wie.", "Dat is een stukje van 'waar', niet wie er rent."],
       },
       {
-        q: "*'Sinds hij verhuisde wonen we ___ uit elkaar.'* Welk **bijwoord** past?",
+        q: "*'Sinds hij verhuisd is, wonen we ___ uit elkaar.'* Welk **bijwoord** past?",
         options: ["ver", "veel", "lang", "vaak"],
         answer: 0,
         wrongHints: [null, "'Veel' gaat over een hoeveelheid. Past dat bij 'uit elkaar wonen'?", "'Lang' gaat over tijd. Past dat bij 'uit elkaar wonen'?", "'Vaak' gaat over hoe vaak iets gebeurt. Past dat bij 'uit elkaar wonen'?"],
@@ -2511,7 +2511,7 @@ const steps = [
         q: "*'Wij hebben een ___ huis.'* Wat is een **passend bijvoeglijk naamwoord**?",
         options: ["mooi", "lopen", "snel", "hij"],
         answer: 0,
-        wrongHints: [null, "Werkwoord.", "Past bij actie, niet bij huis.", "Voornaamwoord."],
+        wrongHints: [null, "'Lopen' is iets wat je doet. Kan een huis dat?", "Een huis staat stil. Past 'snel' bij een huis?", "'Hij' vervangt een persoon. Zegt dat hoe een huis is?"],
       },
       {
         q: "*'Open vraag*': plak 'paard' en 'staart' aan elkaar tot één woord (een staart zoals bij een paard). Hoe schrijf je dat woord (zonder spatie of streepje)?",
@@ -2579,9 +2579,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "het huis dat te koop staat · de fiets die gestolen is · het boek dat ik lees" }],
           basiskennis: [{ onderwerp: "Twijfel?", uitleg: "Zet 'de' of 'het' voor het woord. Lukt 'het'? Dan is het 'dat'." }],
           niveaus: {
-            basis: "dat — want 'het meisje'.",
+            basis: "Kijk naar het woord waar je naar terugwijst: is het een de-woord of een het-woord?",
             simpeler: "Het-woord → dat. De-woord → die.",
-            nogSimpeler: "dat",
+            nogSimpeler: "Zeg je 'de meisje' of 'het meisje'?",
           },
         },
       },
@@ -2677,7 +2677,7 @@ const steps = [
         ref: "1F",
         options: ["Word je morgen opgehaald?", "Wordt je morgen opgehaald?", "Wort je morgen opgehaald?", "Worden je morgen opgehaald?"],
         answer: 0,
-        wrongHints: [null, "Staat 'je' (= jij) áchter de persoonsvorm? Dan valt de t weg — net als bij 'loop je?'.", "Zeg de ik-vorm hardop: 'ik ... ziek'. Welke letter hoor je aan het eind van de stam?", "Eén persoon (je) — waarom zou je dan het meervoud gebruiken?"],
+        wrongHints: [null, "Staat 'je' (= jij) áchter de persoonsvorm? Dan valt de t weg — net als bij 'loop je?'.", "Kijk naar het hele werkwoord: wor-den. Op welke letter eindigt de stam dan, ook al hoor je een t?", "Eén persoon (je) — waarom zou je dan het meervoud gebruiken?"],
         explanation: "Staat **je/jij achter** de persoonsvorm, dan vervalt de t: '**Word** je opgehaald?' Vergelijk: 'Loop je mee?' — ook geen t erbij.",
       },
       {
@@ -2701,7 +2701,7 @@ const steps = [
         ref: "1F",
         options: ["praatte", "praate", "prate", "praatde"],
         answer: 0,
-        wrongHints: [null, "De stam eindigt al op een t én er komt nog een uitgang achter. Hoeveel t's worden dat samen?", "Waar is de lange aa gebleven? Zeg het woord hardop.", "Staat de t van de stam in 't kofschip? Dan geen -de."],
+        wrongHints: [null, "De stam eindigt al op een t én er komt nog een uitgang achter. Hoeveel t's worden dat samen?", "Schrijf eerst de stam: 'ik praat'. Blijft die stam heel in je antwoord?", "Staat de t van de stam in 't kofschip? Dan geen -de."],
         explanation: "Stam 'praat' eindigt op t ('t kofschip) → +te. Samen: praat + te = **praatte**, met dubbel-t.",
       },
       {
@@ -2717,7 +2717,7 @@ const steps = [
         ref: "1F",
         options: ["gebeurt", "gebeurd", "gebeurdt", "gebeuren"],
         answer: 0,
-        wrongHints: [null, "'Wel vaker' gaat over nu, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?", "Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.", "'Zoiets' is enkelvoud — kies geen meervoudsvorm."],
+        wrongHints: [null, "'Wel vaker' gaat over nu, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?", "Bekijk het hele werkwoord: ge-beu-ren. Zit er een d in de stam?", "'Zoiets' is enkelvoud — kies geen meervoudsvorm."],
         explanation: "'Zoiets' = het → persoonsvorm stam + t: **gebeurt**. Alleen mét 'is/heeft' ervoor schrijf je de d-vorm.",
       },
       {
@@ -2741,7 +2741,7 @@ const steps = [
         ref: "S",
         options: ["Houd rekening met je buren.", "Houdt rekening met je buren.", "Hout rekening met je buren.", "Houden rekening met je buren."],
         answer: 0,
-        wrongHints: [null, "Gebiedende wijs = alleen de stam. Krijgt de stam hier nog een t erbij?", "Dat is het spul waar planken van gemaakt worden! Zeg 'ik ... van jou' — welke letter hoor je aan het eind?", "Een bevel begint met de stam, niet met het hele werkwoord."],
+        wrongHints: [null, "Gebiedende wijs = alleen de stam. Krijgt de stam hier nog een t erbij?", "'Hout' is het spul waar planken van gemaakt worden! Kijk naar het hele werkwoord: hou-den. Op welke letter eindigt de stam?", "Een bevel begint met de stam, niet met het hele werkwoord."],
         explanation: "Bevel = stam: '**Houd** rekening'. De stam van houden eindigt op een d (denk aan 'ik houd').",
       },
       {
@@ -2797,8 +2797,8 @@ const steps = [
         ref: "1F",
         options: ["Wat vind jij van de nieuwe gymleraar?", "Wat vindt jij van de nieuwe gymleraar?", "Wat find jij van de nieuwe gymleraar?", "Wat vinden jij van de nieuwe gymleraar?"],
         answer: 0,
-        wrongHints: [null, "Staat 'jij' áchter de persoonsvorm? Dan geen t erbij — vergelijk: 'wat loop jij?'.", "Dit werkwoord schrijf je met een v, ook al klinkt het bijna als een f.", "'Jij' is één persoon — geen meervoud."],
-        explanation: "'Jij' staat achter de persoonsvorm → alleen de stam: 'wat **vind** jij?'. Truc: 'wat loop jij?' — ook zonder t.",
+        wrongHints: [null, "Staat 'jij' áchter de persoonsvorm? Dan geen t erbij — vergelijk: 'loop jij mee?'.", "Dit werkwoord schrijf je met een v, ook al klinkt het bijna als een f.", "'Jij' is één persoon — geen meervoud."],
+        explanation: "'Jij' staat achter de persoonsvorm → alleen de stam: 'wat **vind** jij?'. Truc: 'loop jij mee?' — ook zonder t.",
       },
       {
         q: "Wat is de **verleden tijd** van *antwoorden* (hij-vorm)?",
@@ -2845,7 +2845,7 @@ const steps = [
         ref: "1F",
         options: ["worden", "wordt", "word", "worde"],
         answer: 0,
-        wrongHints: [null, "'De kinderen' = zij (meervoud). Welke vorm hoort bij een meervoud?", "Stam + t is voor één persoon (hij/zij/het) — hier zijn het er meer.", "Deze vorm bestaat niet — kijk nog eens naar het meervoud."],
+        wrongHints: [null, "'De kinderen' = zij (meervoud). Welke vorm hoort bij een meervoud?", "Alleen de stam hoort bij 'ik' (ik word). 'De kinderen' zijn er meer — welke vorm hoort daarbij?", "Deze vorm bestaat niet — kijk nog eens naar het meervoud."],
         explanation: "'De kinderen' = meervoud → **worden**. Bij een meervoud is de persoonsvorm gelijk aan het hele werkwoord.",
       },
       {
@@ -2853,7 +2853,7 @@ const steps = [
         ref: "S",
         options: ["Meld je hier aan voor de sportdag.", "Meldt je hier aan voor de sportdag.", "Melt je hier aan voor de sportdag.", "Melden je hier aan voor de sportdag."],
         answer: 0,
-        wrongHints: [null, "Een bevel krijgt alleen de stam — geen t erachter, ook al klinkt het zo.", "Zeg 'ik ... me aan' — hoor je aan het eind van de stam een d of een t?", "Een bevel begint niet met het hele werkwoord."],
+        wrongHints: [null, "Een bevel krijgt alleen de stam — geen t erachter, ook al klinkt het zo.", "Je hoort een t, maar schrijf je die ook? Neem het hele werkwoord (melden) en haal -en eraf: wat blijft er over?", "Een bevel begint niet met het hele werkwoord."],
         explanation: "Gebiedende wijs = stam: '**Meld** je aan'. De stam van melden eindigt op een d.",
       },
       {
