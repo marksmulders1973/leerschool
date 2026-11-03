@@ -475,7 +475,7 @@ const steps = [
         q: "In welke provincie vind je veel **hunebedden**?",
         options: ["Drenthe", "Zeeland", "Flevoland", "Noord-Holland"],
         answer: 0,
-        wrongHints: [null, "Zeeland is bekend om eilanden en de Deltawerken, niet om hunebedden.", "Deze provincie is heel jong. Hunebedden zijn heel oud.", "Noord-Holland is bekend om Amsterdam en tulpen. Hunebedden vind je in een bosrijke provincie in het noordoosten."],
+        wrongHints: [null, "Zeeland is bekend om eilanden en de Deltawerken, niet om hunebedden.", "Deze provincie is heel jong. Hunebedden zijn heel oud.", "Noord-Holland is bekend om Amsterdam en tulpen, niet om hunebedden."],
         uitlegPad: {
           stappen: [
             {
@@ -503,8 +503,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Drenthe.",
-            simpeler: "Hunebedden = Drenthe.",
+            basis: "Hunebedden zijn heel oude graven van grote stenen. Je vindt ze vooral in het noorden van Nederland. Welke van de vier provincies ligt in het noorden?",
+            simpeler: "Zeeland ligt in het zuidwesten, Noord-Holland in het westen en Flevoland is nieuw land. Welke provincie blijft over?",
             nogSimpeler: "Drenthe",
           },
         },

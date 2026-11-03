@@ -123,7 +123,7 @@ const OPTIES_STEUN = [
 // Vertalingen komen uit nieuwkomersSteun.js (vulSteun).
 const vg = (q, options, hint, extra = {}) => ({ q, options, answer: 0, wrongHints: options.map((_, i) => (i === 0 ? null : hint)), ...extra });
 const deel4 = [
-  vg("Je hoofd doet zeer. Wat zeg je tegen de juf?", ["Ik heb pijn.", "Ik ben blij.", "Ik heb honger.", "Ik ben klaar."], "Zeer doen = pijn. Zeg dat tegen de juf.", { uitlegPad: {
+  vg("Je hoofd doet zeer. Wat zeg je tegen de juf?", ["Ik heb pijn.", "Ik ben blij.", "Ik heb honger.", "Ik ben klaar."], null, { uitlegPad: { // Eindmeting 3 nov 2026: de oude extra hint noemde het antwoord; voegFoutUitlegToe zegt nu alleen waarom de gekozen zin niet past.
     stappen: [
       { titel: "Het mag altijd", tekst: "Zeggen hoe je je **voelt** mag altijd. De juf of meester wil het weten en helpt je." },
       { titel: "Zo zeg je het", tekst: "**Ik heb pijn.** **Ik voel me niet goed.** **Ik ben bang.** **Ik ben moe.**" },
@@ -133,7 +133,7 @@ const deel4 = [
     theorie: "Ik ben + gevoel. Ik heb + pijn of honger.",
     voorbeelden: [{ type: "stap", tekst: "Ik ben blij." }, { type: "stap", tekst: "Ik heb pijn in mijn buik." }],
     basiskennis: [{ onderwerp: "Truc", uitleg: "Ik ben bang, blij, boos, moe. Ik heb pijn, honger." }],
-    niveaus: { basis: "Zeg: Ik heb pijn.", simpeler: "Zeer = pijn.", nogSimpeler: "Ik heb pijn." },
+    niveaus: { basis: "Kijk bij de woorden. Welk woord betekent: het doet zeer?", simpeler: "Zeer = pijn.", nogSimpeler: "Ik heb pijn." },
   } }),
   vg("Je bent ziek. Wat zeg je tegen de juf?", ["Ik voel me niet goed.", "Ik ben blij.", "Mag ik meedoen?", "Tot morgen!"], "Ziek zijn = je voelt je niet goed."),
   vg("Een hond blaft heel hard. Je schrikt. Hoe voel je je?", ["Ik ben bang.", "Ik ben blij.", "Ik heb honger.", "Ik ben klaar."], "Schrikken van iets engs = bang."),

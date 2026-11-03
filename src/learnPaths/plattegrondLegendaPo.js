@@ -192,14 +192,14 @@ const steps = [
         },
       },
       {
-        q: "In de legenda staat 🍴 = restaurant. Je ziet 🍴 op de plattegrond. Wat is daar?",
+        q: "De legenda van een dierentuin: 🅿️ = parkeerplaats · 🚻 = toilet · 🍴 = restaurant · 🚪 = uitgang. Naast de apenrots staat een 🍴. Wat vind je daar?",
         options: ["een restaurant", "een toilet", "de uitgang", "een parkeerplaats"],
         answer: 0,
-        wrongHints: [null, "Het toilet heeft een ander symbool (🚻).", "De uitgang heeft een eigen teken.", "Parkeren heeft het 🅿️-teken."],
+        wrongHints: [null, "Zoek het teken van het toilet in de legenda. Is dat hetzelfde teken als bij de apenrots?", "Zoek het teken van de uitgang in de legenda. Is dat hetzelfde teken als bij de apenrots?", "Zoek het teken van de parkeerplaats in de legenda. Is dat hetzelfde teken als bij de apenrots?"],
         uitlegPad: {
-          stappen: [{ titel: "Symbool opzoeken in de legenda", tekst: "🍴 betekent volgens de legenda 'restaurant'. Waar je dat symbool ziet, is dus een eetplek." }],
+          stappen: [{ titel: "Symbool opzoeken in de legenda", tekst: "Zoek het teken uit de plattegrond op in de legenda en lees wat erachter staat. 🍴 betekent volgens deze legenda 'restaurant'. Waar je dat symbool ziet, is dus een eetplek." }],
           niveaus: {
-            basis: "🍴 = restaurant, dus daar kun je eten.",
+            basis: "Zoek het teken bij de apenrots op in de legenda. Lees wat er achter het =-teken staat.",
             simpeler: "Wat betekent het mes-en-vork-teken volgens de legenda?",
             nogSimpeler: "Mes en vork — waar denk je aan?",
           },
@@ -347,14 +347,14 @@ const steps = [
       "Een **route** lees je vanaf de 'je bent hier'-stip: rechtdoor, links, rechts — stap voor stap.",
     checks: [
       {
-        q: "Op een plattegrond wijst de pijl met de N naar boven. Welke windrichting is 'boven'?",
+        q: "Op een plattegrond staat een windroos. De pijl van de windroos wijst recht naar boven. Je wandelt naar de bovenkant van de kaart. In welke windrichting wandel je?",
         options: ["het noorden", "het zuiden", "het oosten", "het westen"],
         answer: 0,
-        wrongHints: [null, "Het zuiden is juist onder.", "Het oosten is rechts.", "Het westen is links."],
+        wrongHints: [null, "Naar welke windrichting wijst de pijl van een windroos? Kijk welke letter er meestal bij staat.", "Ligt deze windrichting boven op de kaart, of aan een zijkant?", "Ligt deze windrichting boven op de kaart, of aan een zijkant?"],
         uitlegPad: {
-          stappen: [{ titel: "N = noorden", tekst: "De N staat voor het noorden. Als de pijl naar boven wijst, is boven het noorden." }],
+          stappen: [{ titel: "N = noorden", tekst: "Bij de pijl van een windroos staat de letter N. De N staat voor het noorden. Als de pijl naar boven wijst, is boven het noorden." }],
           niveaus: {
-            basis: "N = noorden, en die wijst naar boven.",
+            basis: "De pijl van een windroos wijst altijd naar dezelfde windrichting. Welke letter staat er meestal bij die pijl?",
             simpeler: "Waar staat de letter N voor?",
             nogSimpeler: "N van … noord?",
           },

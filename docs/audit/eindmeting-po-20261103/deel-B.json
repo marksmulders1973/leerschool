@@ -1,0 +1,1252 @@
+[
+ {
+  "nr": 51,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 51",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'In de bieb is het stil. Mensen lezen of werken er. **Toch** hoor je soms gefluister bij de balie.'*\n\nWat doet het woord **toch** in deze tekst?",
+  "options": [
+   "Het kondigt iets onverwachts aan",
+   "Het somt een extra voordeel op",
+   "Het geeft de oorzaak van de stilte",
+   "Het geeft het einde van de tekst aan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een opsomming voegt iets toe; 'toch' botst juist met wat ervoor staat.",
+   "Vertelt 'toch' waaróm het stil is?",
+   "De tekst kan na 'toch' gewoon doorgaan. Het is geen slotwoord."
+  ],
+  "explanation": "**Toch** geeft aan dat er iets gebeurt dat je ná de vorige zin niet verwacht: het is stil, en tóch is er gefluister.",
+  "niveaus": null
+ },
+ {
+  "nr": 52,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 4",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Wanneer schrijf je een **hoofdletter**?",
+  "options": [
+   "Aan begin van zin of bij namen",
+   "Bij elk werkwoord in de zin",
+   "Bij korte woorden als 'de' of 'en'",
+   "Bij elk woord in een vraagzin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Werkwoorden krijgen alleen een hoofdletter als ze vooraan in de zin staan.",
+   "Korte woorden krijgen normaal geen hoofdletter.",
+   "Vragen krijgen alleen een hoofdletter aan het begin."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 53,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 17",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'Het kind ___ blij.'* Welke vorm van *zijn* in de tegenwoordige tijd hoort op de puntjes?",
+  "options": [
+   "is",
+   "zijn",
+   "was",
+   "ben"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Zijn' is het hele werkwoord of de meervoudsvorm. 'Het kind' is maar één kind.",
+   "'Was' is verleden tijd. Gevraagd is de tegenwoordige tijd.",
+   "'Ben' hoort bij 'ik'. Over wie gaat deze zin?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 54,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 4 vraag 51",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke zin zegt dat het feest **misschien** niet doorgaat?",
+  "options": [
+   "Het feest gaat mogelijk niet door.",
+   "Het feest gaat zeker niet door.",
+   "Het feest gaat nooit door.",
+   "Het feest ging niet door."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Zeker' laat geen twijfel over.",
+   "'Nooit' is nog stelliger.",
+   "Deze zin staat in de verleden tijd — het is al gebeurd."
+  ],
+  "explanation": "**Mogelijk** = misschien. Let op zulke nuance-woorden: zeker/mogelijk/nooit veranderen de hele betekenis.",
+  "niveaus": null
+ },
+ {
+  "nr": 55,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 6",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "*'Zoiets **...** wel vaker op school.'* Welk woord hoort op de puntjes?",
+  "options": [
+   "gebeurt",
+   "gebeurd",
+   "gebeurdt",
+   "gebeuren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Wel vaker' gaat over nu, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?",
+   "Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.",
+   "'Zoiets' is enkelvoud — kies geen meervoudsvorm."
+  ],
+  "explanation": "'Zoiets' = het → persoonsvorm stam + t: **gebeurt**. Alleen mét 'is/heeft' ervoor schrijf je de d-vorm.",
+  "niveaus": null
+ },
+ {
+  "nr": 56,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "level": "groep8",
+  "q": "Welke zin (een **bevel**) is goed gespeld?",
+  "options": [
+   "Word eens wakker, slaapkop!",
+   "Wordt eens wakker, slaapkop!",
+   "Wort eens wakker, slaapkop!",
+   "Worden eens wakker, slaapkop!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een bevel (gebiedende wijs) gebruik je alleen de stam — geen extra letter erachter.",
+   "Zeg 'ik ... wakker' — de stam eindigt op een d, die verdwijnt niet.",
+   "Een bevel aan één slaapkop krijgt geen meervoudsvorm."
+  ],
+  "explanation": "Gebiedende wijs = **alleen de stam**: '**Word** wakker!' Bij een bevel komt er nooit een extra t bij.",
+  "niveaus": null
+ },
+ {
+  "nr": 57,
+  "bron": "leerpaden",
+  "waar": "emoties-sociaal-po stap 4 vraag 10",
+  "file": "./emotiesSocialePo.js",
+  "level": "groep6-8",
+  "q": "Wat helpt bij **stress**?",
+  "options": [
+   "Diep ademen + praten met iemand",
+   "Heel veel snoepen en gamen",
+   "Niet erover praten met anderen",
+   "Hard schreeuwen naar anderen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Snoep en gamen leiden even af, maar de stress blijft. Wat helpt echt?",
+   "Als je het opkropt, hoopt de stress zich op. Wat zegt de les over praten?",
+   "Word je daar rustiger van?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 58,
+  "bron": "leerpaden",
+  "waar": "energiebronnen-po stap 6 vraag 16",
+  "file": "./energiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is een **kWh**?",
+  "options": [
+   "Eenheid voor elektrisch verbruik",
+   "Eenheid voor gewicht van spullen",
+   "Eenheid voor hoe lang iets duurt",
+   "Eenheid voor hoe warm het is"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gewicht meet je in kilogram.",
+   "Tijd alleen meet je in uren of seconden.",
+   "Temperatuur meet je in graden."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 59,
+  "bron": "leerpaden",
+  "waar": "energiebronnen-po stap 6 vraag 17",
+  "file": "./energiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Welke energiebronnen kosten geen brandstof, maar hangen wel af van het **weer**?",
+  "options": [
+   "Zon en wind",
+   "Olie en gas",
+   "Kolen en olie",
+   "Gas en kolen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Olie en gas moet je oppompen en kopen: dat is brandstof.",
+   "Kolen graaf je uit de grond en olie pomp je op: allebei brandstof.",
+   "Gas en kolen verbrand je in een centrale: dat is brandstof."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 60,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 1 vraag 1",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Wie schreef het beroemde boek over de **evolutietheorie**?",
+  "options": [
+   "Charles Darwin",
+   "Newton",
+   "Einstein",
+   "Mendel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Newton is van de zwaartekracht — natuurkunde, geen biologie.",
+   "Einstein is van de relativiteit — natuurkunde, geen biologie.",
+   "Mendel onderzocht erfelijkheid met erwten, maar schreef dit boek niet."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 61,
+  "bron": "leerpaden",
+  "waar": "evolutie-mens-po stap 4 vraag 12",
+  "file": "./evolutieMensPo.js",
+  "level": "groep6-8",
+  "q": "Op welke eilanden onderzocht Darwin **vinken**?",
+  "options": [
+   "Galapagos",
+   "Hawaï",
+   "IJsland",
+   "Cuba"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hawaï ligt midden in de Grote Oceaan bij Amerika — maar Darwin voer met de Beagle langs de kust van Zuid-Amerika. Klopt dat?",
+   "IJsland ligt koud in het hoge noorden — passen kleine zangvogeltjes bij zo'n ijzige plek?",
+   "Cuba ligt in de Caraïbische Zee — maar Darwins eilanden liggen vlak bij de evenaar aan de westkant van Zuid-Amerika. Welke groep is dat?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 62,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 4 vraag 1",
+  "file": "./financieleVormingPo.js",
+  "level": "groep6-8",
+  "q": "Wat is de **50/30/20-regel**?",
+  "options": [
+   "50% nodig, 30% leuk, 20% sparen",
+   "50% sparen, 30% leuk, 20% nodig",
+   "50% nodig, 30% sparen, 20% leuk",
+   "50% leuk, 30% sparen, 20% nodig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Moet het grootste deel naar sparen, of naar wat je echt nodig hebt?",
+   "Kijk naar de 30 en de 20: welke hoort bij leuk, welke bij sparen?",
+   "Welk deel moet het grootst zijn: wat je écht nodig hebt of wat leuk is?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 63,
+  "bron": "leerpaden",
+  "waar": "folder-bon-advertentie-po stap 2 vraag 5",
+  "file": "./folderBonAdvertentiePo.js",
+  "level": "groep7-8",
+  "q": "Er is 50% korting op een tas van €30. Hoeveel korting is dat in euro's?",
+  "options": [
+   "€15",
+   "€30",
+   "€10",
+   "€50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de volle prijs — er gaat juist iets af.",
+   "Dat is maar een derde eraf.",
+   "50% is geen 50 euro, maar de helft."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Helft van €30 = €15 korting.",
+   "simpeler": "Wat is de helft van €30?",
+   "nogSimpeler": "€30 ÷ 2 = ?"
+  }
+ },
+ {
+  "nr": 64,
+  "bron": "leerpaden",
+  "waar": "folder-bon-advertentie-po stap 4 vraag 4",
+  "file": "./folderBonAdvertentiePo.js",
+  "level": "groep7-8",
+  "q": "Een boek kost €30. Je krijgt 10% korting, maar betaalt €2 verzendkosten. Wat betaal je in totaal?",
+  "options": [
+   "€29",
+   "€27",
+   "€32",
+   "€28"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergeet de verzendkosten niet erbij op te tellen.",
+   "Je vergat de korting eraf te halen.",
+   "Reken de korting nog eens na: 10% van €30."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€30 − €3 (10%) = €27, plus €2 verzending = €29.",
+   "simpeler": "Eerst korting eraf (€3), dan verzendkosten erbij (€2).",
+   "nogSimpeler": "30 − 3 = 27, en 27 + 2 = ?"
+  }
+ },
+ {
+  "nr": 65,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 1 vraag 4",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "Welk zinnetje gaat over een **gemiddelde**?",
+  "options": [
+   "In juli was het per dag ongeveer 22 graden",
+   "Op maandag 6 juli was het 25 graden",
+   "De warmste dag van juli was 31 graden",
+   "In juli kwam 20 graden het vaakst voor"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit gaat over één dag. Gaat een gemiddelde over één dag of over een hele groep dagen?",
+   null,
+   "Het getal dat het vaakst voorkomt heeft een andere naam."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een gemiddelde gaat over alle dagen samen, niet over één dag.",
+   "simpeler": "Het hoogste getal en het getal dat het vaakst voorkomt, zijn geen gemiddelde. Welk zinnetje vat alle dagen samen?",
+   "nogSimpeler": "'In juli was het per dag ongeveer 22 graden' gaat over het gemiddelde."
+  }
+ },
+ {
+  "nr": 66,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 3 vraag 2",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "Stemmen kleur: rood 3, blauw 8, groen 2, geel 3. **Modus**?",
+  "options": [
+   "Blauw",
+   "Rood",
+   "Groen",
+   "Geel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rood is 3× — er is een kleur die nog vaker voorkomt.",
+   "Groen is maar 2× — dat is juist de minste.",
+   "Geel is 3× — er is een kleur met meer stemmen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Blauw (8 stemmen).",
+   "simpeler": "Tel hoe vaak elke kleur is gestemd. Blauw is 8×, meeste. Dus modus = blauw.",
+   "nogSimpeler": "Blauw"
+  }
+ },
+ {
+  "nr": 67,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 4 vraag 3",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "level": "groep7-8",
+  "q": "Wat is de **mediaan** van: 12, 5, 8, 3, 10, 7, 9 (7 getallen)?",
+  "options": [
+   "8",
+   "7",
+   "9",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — vergeet niet eerst te sorteren en daarna het middelste getal te pakken.",
+   "Te veel — controleer je sortering.",
+   "Zet de getallen op volgorde. Staat 5 dan in het midden?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Gesorteerd: 3,5,7,8,9,10,12. Middelste = 8.",
+   "simpeler": "Op volgorde zetten, dan 4e positie pakken (van 7 getallen). = 8.",
+   "nogSimpeler": "8"
+  }
+ },
+ {
+  "nr": 68,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 2",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "level": "groep5-6",
+  "q": "Waarom hadden kastelen **dikke muren**?",
+  "options": [
+   "om vijanden buiten te houden",
+   "omdat dat veel mooier stond",
+   "om er schilderijen aan te hangen",
+   "omdat dunne stenen niet bestonden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mooi was meegenomen — maar er was een belangrijkere reden.",
+   "Daarvoor was een dunne muur ook goed genoeg.",
+   "Dunne muren konden ze best bouwen — maar wilden ze dat?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Dikke muren = bescherming tegen vijanden.",
+   "simpeler": "Dikke muur, vijand komt er niet door.",
+   "nogSimpeler": "bescherming"
+  }
+ },
+ {
+  "nr": 69,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 6",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "level": "groep5-6",
+  "q": "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat **in het midden**?",
+  "options": [
+   "school met lei en griffel",
+   "de ridders",
+   "nu",
+   "dat kan overal staan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   null,
+   "Nu staat altijd helemaal rechts.",
+   "Op een tijdbalk ligt de volgorde vast: van oud naar nieuw."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lei en griffel staan in het midden.",
+   "simpeler": "Ridders → lei en griffel → nu.",
+   "nogSimpeler": "lei en griffel"
+  }
+ },
+ {
+  "nr": 70,
+  "bron": "leerpaden",
+  "waar": "gezonde-voeding-po stap 3 vraag 3",
+  "file": "./gezondeVoedingPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **suikerklontjes** zitten er in 1 glas frisdrank?",
+  "options": [
+   "~7",
+   "~2",
+   "~15",
+   "~25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Twee klontjes is maar 8 gram suiker. In een glas cola zit veel meer.",
+   "Een klontje is ongeveer 4 gram. Zoveel klontjes is meer dan in één glas zit.",
+   "Dat is 100 gram suiker — zoveel zit in een grote fles, niet in één glas."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 71,
+  "bron": "leerpaden",
+  "waar": "gezonde-voeding-po stap 4 vraag 4",
+  "file": "./gezondeVoedingPo.js",
+  "level": "groep6-8",
+  "q": "Wat betekent **veganistisch**?",
+  "options": [
+   "Geen dierlijke producten",
+   "Geen vlees en geen vis",
+   "Alleen biologisch eten",
+   "Geen melk, wel vlees"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is vegetarisch. Een veganist laat nog meer weg.",
+   "Biologisch gaat over hoe iets gekweekt is, niet over dieren.",
+   "Een veganist laat meer weg dan alleen melk."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 72,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 3 vraag 6",
+  "file": "./grafiekenLezenPo.js",
+  "level": "groep6-8",
+  "q": "Kijk naar de lijngrafiek van het water in een regenton. Wat gebeurde er tussen **woensdag en donderdag**?",
+  "options": [
+   "Het water daalde",
+   "Het water steeg",
+   "Het water bleef gelijk",
+   "Het water daalde tot 10 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is 25 meer of minder dan 35?",
+   "Dat gebeurde tussen dinsdag en woensdag.",
+   "Lees af: hoeveel cm water stond er op donderdag?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees af hoeveel water er op woensdag en op donderdag in de ton stond. Werd het meer of minder?",
+   "simpeler": "Woensdag 35 cm, donderdag 25 cm. Dat is minder, dus het water daalde.",
+   "nogSimpeler": "Daalde"
+  }
+ },
+ {
+  "nr": 73,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 6 vraag 2",
+  "file": "./grafiekenLezenPo.js",
+  "level": "groep6-8",
+  "q": "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. Hoeveel kg is de baby **aangekomen**?",
+  "options": [
+   "3 kg",
+   "6 kg",
+   "9 kg",
+   "2 kg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — dat is alleen het eind-gewicht.",
+   "Te veel — dat is opgeteld.",
+   "Te weinig — lees het begin- en eindgewicht nog eens af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "3 kg aangekomen (6 − 3 = 3).",
+   "simpeler": "Begin: 3 kg. Eind: 6 kg. Hoeveel ERBIJ gekomen? 6 − 3 = 3 kg.",
+   "nogSimpeler": "3 kg"
+  }
+ },
+ {
+  "nr": 74,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-2-nieuwkomers stap 1 vraag 5",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "De juf zegt: begin maar. Wat doe je?",
+  "options": [
+   "Ik begin met mijn werk.",
+   "Ik ga naar huis.",
+   "Ik ga spelen.",
+   "Ik doe niets."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 'Ik ga naar huis.' zeg je als de school uit is. Beginnen = nu gaan werken.",
+   "Beginnen = nu gaan werken.",
+   "Beginnen = nu gaan werken."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 75,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-2-nieuwkomers stap 2 vraag 5",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Jij bent klaar. Een ander kind nog niet. Wat doe je?",
+  "options": [
+   "Ik ben stil en wacht.",
+   "Ik praat heel hard.",
+   "Ik pak zijn werk af.",
+   "Ik loop door de klas."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het andere kind is nog aan het werk.",
+   "Het andere kind is nog aan het werk.",
+   "Het andere kind is nog aan het werk."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 76,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-2-nieuwkomers stap 4 vraag 5",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "De som was moeilijk, maar nu snap je hem. Hoe voel je je?",
+  "options": [
+   "Ik voel me goed.",
+   "Ik ben verdrietig.",
+   "Ik ben bang.",
+   "Ik ben boos."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eindelijk snap je het. Dat voelt fijn.",
+   "Eindelijk snap je het. Dat voelt fijn.",
+   "Nee, 'Ik ben boos.' zeg je als iemand iets doet wat niet mag. Eindelijk snap je het. Dat voelt fijn."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 77,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 4 vraag 1",
+  "file": "./inDeKlasNieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Je hoofd doet zeer. Wat zeg je tegen de juf?",
+  "options": [
+   "Ik heb pijn.",
+   "Ik ben blij.",
+   "Ik heb honger.",
+   "Ik ben klaar."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 'Ik ben blij.' zeg je als je je fijn voelt. Zeer doen = pijn. Zeg dat tegen de juf.",
+   "Nee, 'Ik heb honger.' zeg je als je wilt eten. Zeer doen = pijn. Zeg dat tegen de juf.",
+   "Nee, 'Ik ben klaar.' zeg je als je werk af is. Zeer doen = pijn. Zeg dat tegen de juf."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zeg: Ik heb pijn.",
+   "simpeler": "Zeer = pijn.",
+   "nogSimpeler": "Ik heb pijn."
+  }
+ },
+ {
+  "nr": 78,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 4 vraag 4",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "In welk jaar mochten vrouwen in Nederland voor het eerst **stemmen**?",
+  "options": [
+   "1919",
+   "1917",
+   "1945",
+   "1901"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 1917 mochten vrouwen gekozen worden — maar mochten ze toen al zelf stemmen?",
+   "Kijk in de les: vrouwen stemden al vóór de Tweede Wereldoorlog.",
+   "Kijk in de les bij het woord vrouwenkiesrecht."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 79,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 6 vraag 1",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "Waar ging de **Industriële Revolutie** vooral over?",
+  "options": [
+   "Machines en fabrieken",
+   "Computers en internet",
+   "Schepen en zeereizen",
+   "Oorlog en soldaten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Computers en internet kwamen pas in de 20e eeuw.",
+   "Schepen waren er al veel eerder.",
+   "Het ging niet om vechten."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 80,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 6 vraag 10",
+  "file": "./industrieleRevolutiePo.js",
+  "level": "groep6-8",
+  "q": "Wat was de eerste **spoorlijn** in Nederland?",
+  "options": [
+   "Amsterdam-Haarlem",
+   "Den Haag-Rotterdam",
+   "Utrecht-Arnhem",
+   "Groningen-Zwolle"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk in de les: tussen welke steden reed de Arend in 1839?",
+   "Zoek in de les waar de eerste trein reed.",
+   "Die lijn in het noorden kwam pas veel later."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 81,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 3 vraag 3",
+  "file": "./informatiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "*'Hoofdstuk 4 — Middeleeuwen ... blz 58'* — bij welk deel van een boek hoort dit?",
+  "options": [
+   "Inhoudsopgave",
+   "Index",
+   "Bibliografie",
+   "Voetnoot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De index staat op alfabet, niet op hoofdstuknummer.",
+   "Een bibliografie is een lijst van gebruikte boeken.",
+   "Een voetnoot is een korte uitleg onderaan een bladzijde."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een rij met hoofdstuknummers op volgorde en hun bladzijden staat vooraan in het boek.",
+   "simpeler": "'Hoofdstuk 4 ... blz 58' is een regel uit de inhoudsopgave.",
+   "nogSimpeler": "Inhoudsopgave"
+  }
+ },
+ {
+  "nr": 82,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 5 vraag 6",
+  "file": "./informatiebronnenPo.js",
+  "level": "groep6-8",
+  "q": "Welk woord staat in het woordenboek **tussen 'vis' en 'vlag'**?",
+  "options": [
+   "vitamine",
+   "vier",
+   "vlek",
+   "vork"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk 'vie' met 'vis': komt e vóór of na s?",
+   "Vergelijk 'vle' met 'vla': komt e vóór of na a?",
+   "Vergelijk de tweede letter met die van 'vlag'."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het woord moet ná 'vis' komen en vóór 'vlag'. Vergelijk bij elk woord letter voor letter met 'vis' en met 'vlag'.",
+   "simpeler": "Een woord dat begint met 'vi' en waarvan de 3e letter na de s komt, staat na 'vis'. En 'vi' komt altijd vóór 'vl'. Welk woord past?",
+   "nogSimpeler": "Vitamine staat tussen 'vis' en 'vlag'."
+  }
+ },
+ {
+  "nr": 83,
+  "bron": "leerpaden",
+  "waar": "inhoudsopgave-register-po stap 1 vraag 5",
+  "file": "./inhoudsopgaveRegisterPo.js",
+  "level": "groep7-8",
+  "q": "In de inhoudsopgave staat: 'Hoofdstuk 3. Het weer ... 40'. Op welke pagina begint dat hoofdstuk?",
+  "options": [
+   "pagina 40",
+   "pagina 3",
+   "pagina 1",
+   "de laatste pagina"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De 3 is het hoofdstuknummer, niet de pagina.",
+   "Vooraan staat hoofdstuk 1.",
+   "Het hoofdstuk staat niet achteraan."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Hoofdstuk 'Het weer' begint op pagina 40.",
+   "simpeler": "Welk getal is de pagina: 3 of 40?",
+   "nogSimpeler": "Op welke pagina begint het weer-hoofdstuk?"
+  }
+ },
+ {
+  "nr": 84,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 3 vraag 2",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "*'Heb je je tanden gepoetst'* — welk leesteken?",
+  "options": [
+   "?",
+   ".",
+   "!",
+   ","
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Punt is geen vraag.",
+   "Niet boos genoeg voor uitroep.",
+   "Komma sluit geen zin af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "? (vraagteken).",
+   "simpeler": "'Heb je...?' = vraag-opbouw. Vraagteken aan eind.",
+   "nogSimpeler": "?"
+  }
+ },
+ {
+  "nr": 85,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 4 vraag 6",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Welke zin heeft de komma op de **goede plek**?",
+  "options": [
+   "Ik blijf binnen, omdat ik ziek ben.",
+   "Ik blijf, binnen omdat ik ziek ben.",
+   "Ik blijf binnen omdat, ik ziek ben.",
+   "Ik, blijf binnen omdat ik ziek ben."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar maak je een pauze als je de zin hardop leest?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees de zin hardop. De komma staat waar je even pauzeert.",
+   "simpeler": "De komma staat vóór 'omdat'. Daar begint de reden.",
+   "nogSimpeler": "De komma komt vóór 'omdat': Ik blijf binnen, omdat ik ziek ben."
+  }
+ },
+ {
+  "nr": 86,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 5 vraag 6",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Welk woord zie je vaak vlak vóór de dubbele punt en de aanhalingstekens?",
+  "options": [
+   "roept",
+   "omdat",
+   "maar",
+   "en"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit woord geeft een reden. Kondigt het aan dat iemand praat?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek het woord dat vertelt dát iemand praat. Daarna komt de dubbele punt.",
+   "simpeler": "'Roept' vertelt dat iemand praat. Daarna komt de dubbele punt.",
+   "nogSimpeler": "roept:"
+  }
+ },
+ {
+  "nr": 87,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 6 vraag 1",
+  "file": "./interpunctiePo.js",
+  "level": "groep5-7",
+  "q": "Welke zin is **goed**?",
+  "options": [
+   "Anna woont in Amsterdam.",
+   "anna woont in amsterdam.",
+   "Anna woont in amsterdam",
+   "anna Woont in Amsterdam."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar de eerste letter van de zin en van de namen.",
+   "Kijk naar de plaatsnaam en naar het einde van de zin.",
+   "Krijgt 'woont' midden in de zin een hoofdletter?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 88,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 5 vraag 9",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Het is **28 november**. Pakjesavond is op **5 december**. Hoeveel nachtjes moet je nog slapen tot pakjesavond?",
+  "options": [
+   "7",
+   "8",
+   "6",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Telde je november als een maand van 31 dagen?",
+   null,
+   null
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "7.",
+   "simpeler": "Van 28 november naar 5 december is 7 dagen. Dus nog 7 nachtjes slapen.",
+   "nogSimpeler": "7"
+  }
+ },
+ {
+  "nr": 89,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 6 vraag 1",
+  "file": "./kalenderRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **dagen** heeft een **schrikkeljaar**?",
+  "options": [
+   "366",
+   "365",
+   "364",
+   "367"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gewoon jaar.",
+   "Een gewoon jaar heeft al meer dan 364 dagen. Komt er in een schrikkeljaar een dag bij of af?",
+   "Hoeveel extra dagen heeft een schrikkeljaar: één of twee?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 90,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 4 vraag 5",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "De grote wijzer staat op de **9**. Welke tijd hoort daarbij?",
+  "options": [
+   "Kwart voor",
+   "Kwart over",
+   "Half",
+   "Heel uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij kwart over staat de grote wijzer rechts.",
+   null,
+   "Bij een heel uur staat de grote wijzer bovenaan."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Kwart voor.",
+   "simpeler": "Op de 9 staat de grote wijzer links. Nog een kwartier tot het hele uur: kwart voor.",
+   "nogSimpeler": "Kwart voor"
+  }
+ },
+ {
+  "nr": 91,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 6 vraag 1",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "Hoe schrijf je **21:00** op een 12-uursklok (met AM en PM)?",
+  "options": [
+   "9:00 PM",
+   "9:00 AM",
+   "21:00 PM",
+   "12:00 PM"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "AM is 's ochtends.",
+   "PM klopt, maar op een 12-uursklok staat nooit een getal boven de 12: na de middag begint het tellen opnieuw bij 1.",
+   "12:00 PM is middag."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "9:00 PM.",
+   "simpeler": "21:00 = 21-12 = 9 's avonds = 9:00 PM.",
+   "nogSimpeler": "9 PM"
+  }
+ },
+ {
+  "nr": 92,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 8 vraag 2",
+  "file": "./klokkijken.js",
+  "level": "groep3-5",
+  "q": "De grote wijzer staat op de **6** en de kleine wijzer staat net voor de **8**. Hoe laat is het?",
+  "options": [
+   "Half 8",
+   "Half 9",
+   "8:30",
+   "9 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Halverwege naar 9 betekent dat de kleine wijzer al voorbij 8 is — maar is dat hier het geval?",
+   "Die tijd in cijfers hoort bij een andere halfstand — kijk waar de kleine wijzer staat.",
+   "Bij dat tijdstip staat de grote wijzer niet op 6."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Half 8.",
+   "simpeler": "Grote op 6 = halve uur. Klein tussen 7 en 8 → half 8 (= 7:30).",
+   "nogSimpeler": "Half 8"
+  }
+ },
+ {
+  "nr": 93,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 1 vraag 9",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "Welke som hoort bij **52,36**?",
+  "options": [
+   "50 + 2 + 0,3 + 0,06",
+   "50 + 2 + 3 + 6",
+   "50 + 2 + 0,3 + 0,6",
+   "5 + 2 + 0,3 + 0,06"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De cijfers ná de komma zijn stukjes, geen hele getallen.",
+   "Staat de 6 op de tienden- of op de honderdsten-plek?",
+   "Wat is de waarde van de 5 vóór de komma: eenheden of tientallen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "52,36 = 50 + 2 + 0,3 + 0,06.",
+   "simpeler": "De 5 is 50, de 2 is 2, de 3 ná de komma is 0,3 en de 6 is 0,06. Tel op: 52,36.",
+   "nogSimpeler": "50 + 2 + 0,3 + 0,06"
+  }
+ },
+ {
+  "nr": 94,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 3 vraag 4",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "Bij **0,5 × 0,2** tel je de **decimalen** (cijfers ná de komma) van beide getallen bij elkaar op. Hoeveel zijn dat er samen?",
+  "options": [
+   "2",
+   "1",
+   "0",
+   "3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — je keek maar naar één getal. Kijk naar allebei.",
+   "Allebei wél een komma — niet 0.",
+   "Te veel — tel per getal hoeveel cijfers er ná de komma staan."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 95,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 3 vraag 9",
+  "file": "./kommagetallenPo.js",
+  "level": "groep6-8",
+  "q": "**3,9 × 5** = ?",
+  "options": [
+   "19,5",
+   "1,95",
+   "195",
+   "8,9"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Schat eerst: 3,9 is bijna 4. Hoeveel is 4 × 5?",
+   "Komma vergeten?",
+   "Moet je hier optellen of keer doen?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Reken eerst zonder komma: 39 × 5. Hoeveel cijfers staan er ná de komma in 3,9? Zoveel krijgt het antwoord er ook.",
+   "simpeler": "Stap 1: zonder komma 39 × 5 = 195. Stap 2: 1 cijfer ná de komma. Stap 3: komma 1 plaats van rechts → 19,5. Schat: 4 × 5 = 20, dat klopt.",
+   "nogSimpeler": "19,5"
+  }
+ },
+ {
+  "nr": 96,
+  "bron": "leerpaden",
+  "waar": "koude-oorlog-modern-po stap 3 vraag 1",
+  "file": "./koudeOorlogModernPo.js",
+  "level": "groep7-8",
+  "q": "Wanneer **viel de Berlijnse Muur**?",
+  "options": [
+   "1989",
+   "1961",
+   "1979",
+   "1999"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In 1961 werd de muur juist gebouwd.",
+   "In 1979 stond de muur nog overeind.",
+   "Kijk in de les naar het jaartal bij de val van de muur."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 97,
+  "bron": "leerpaden",
+  "waar": "kritisch-denken-po stap 3 vraag 4",
+  "file": "./kritischDenkenPo.js",
+  "level": "groep6-8",
+  "q": "Wie maakte de **eerste lijst met drogredenen**?",
+  "options": [
+   "Aristoteles",
+   "Newton",
+   "Einstein",
+   "Galileï"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Newton onderzocht zwaartekracht.",
+   "Einstein leefde pas in de 20e eeuw — de lijst is veel ouder.",
+   "Galileï keek vooral naar de sterren."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 98,
+  "bron": "leerpaden",
+  "waar": "kritisch-denken-po stap 4 vraag 9",
+  "file": "./kritischDenkenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is een **logische fout** in: 'Alle vogels kunnen vliegen. Pinguïns zijn vogels. Dus pinguïns kunnen vliegen'?",
+  "options": [
+   "De eerste zin klopt niet",
+   "De conclusie is gewoon waar",
+   "De tweede zin klopt niet",
+   "Geen enkele zin klopt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kunnen pinguïns echt vliegen?",
+   "Zijn pinguïns vogels? Denk aan veren en eieren.",
+   "Klopt de zin 'Pinguïns zijn vogels' dan ook niet?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Premisse 1 klopt niet.",
+   "simpeler": "De eerste zin ('alle vogels vliegen') is FOUT — pinguïns/struisvogels vliegen niet. Daarom klopt de conclusie ook niet, ondanks goede logica.",
+   "nogSimpeler": "Premisse fout"
+  }
+ },
+ {
+  "nr": 99,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin heeft het goede eindteken?",
+  "options": [
+   "Ik ga morgen naar school.",
+   "Ik ga morgen naar school?",
+   "Ik ga morgen naar school!",
+   "Ik ga morgen naar school,"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is geen vraag — er wordt niets gevraagd.",
+   "Het is geen uitroep met nadruk.",
+   "Een komma sluit geen zin af."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Vraagt de zin iets, roept hij iets uit, of vertelt hij gewoon iets?",
+   "simpeler": "Wordt er iets gevraagd? Nee. Wordt er iets uitgeroepen? Nee. Welk teken hoort bij een gewone mededeling?",
+   "nogSimpeler": "Is het een rustige mededeling? Dan eindigt de zin op een punt."
+  }
+ },
+ {
+  "nr": 100,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 4 vraag 7",
+  "file": "./leestekensHoofdlettersPo.js",
+  "level": "groep7-8",
+  "q": "Welke zin is goed geschreven met directe rede?",
+  "options": [
+   "Pap riep: \"Kom eten!\"",
+   "Pap riep: \"kom eten!\"",
+   "Pap riep \"Kom eten!\"",
+   "Pap riep: Kom eten!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het eerste woord in de aanhalingstekens hoort een hoofdletter.",
+   "De dubbele punt vóór de woorden mist.",
+   "De aanhalingstekens missen."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Wie het zegt → : → \" \" met een hoofdletter binnenin.",
+   "simpeler": "Klopt alles? Controleer de : , de \" \" en de hoofdletter bij 'Kom'.",
+   "nogSimpeler": "Welke zin heeft : én \" \" én een hoofdletter bij 'Kom'?"
+  }
+ }
+]

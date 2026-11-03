@@ -3154,12 +3154,12 @@ const steps = [
         explanation: "De **kernzin** — meestal de eerste zin — vertelt waar de alinea over gaat. De rest legt uit of geeft voorbeelden.",
       },
       {
-        q: "**Woordweb 'VERKEER':** eromheen staan fiets, stoplicht, zebrapad en 'spruitjes'. Welk woord hoort er **niet** bij?",
+        q: "**Woordweb 'VERKEER':** het web heeft drie takken: *voertuigen*, *borden en lichten* en *oversteken*. Je wilt vier woorden een plek geven: *fiets*, *stoplicht*, *zebrapad* en *spruitjes*. Welk woord past aan **geen enkele** tak?",
         ref: "1F",
         options: ["spruitjes", "fiets", "stoplicht", "zebrapad"],
         answer: 0,
-        wrongHints: [null, "Daarmee rijd je zelf door het verkeer.", "Die vertelt je wanneer je mag oversteken.", "Daarop steek je veilig de straat over."],
-        explanation: "Fiets, stoplicht en zebrapad horen bij verkeer. **Spruitjes** horen bij eten — dat woord valt buiten het web.",
+        wrongHints: [null, "Lees de namen van de drie takken nog eens. Kan dit woord echt nergens bij?", "Ga de takken één voor één langs. Past dit woord echt bij geen enkele tak?", "Kijk niet alleen of een woord met verkeer te maken heeft, maar zoek ook de tak waar het bij hoort."],
+        explanation: "Fiets hoort bij *voertuigen*, stoplicht bij *borden en lichten* en zebrapad bij *oversteken*. Voor **spruitjes** is er geen tak: dat woord hoort bij eten en valt buiten het web.",
       },
       {
         q: "Je maakt een samenvatting van een hoofdstuk van **10 bladzijden**. Hoe lang wordt een goede samenvatting ongeveer?",

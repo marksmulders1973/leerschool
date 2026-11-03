@@ -1473,7 +1473,7 @@ const steps = [
         q: "Hoeveel meter is **1500 mm**?",
         options: ["1,5 m", "15 m", "0,15 m", "150 m"],
         answer: 0,
-        wrongHints: [null, "15 m is 15.000 mm — hoeveel mm zitten er in 1 m?", "0,15 m is 150 mm — tien keer te weinig.", "150 m is langer dan een voetbalveld — 1500 mm is ongeveer zo lang als een volwassene."],
+        wrongHints: [null, "15 m is 15.000 mm — hoeveel mm zitten er in 1 m?", "Kijk nog eens hoeveel plekken je de komma moet schuiven. Hoeveel mm zitten er in 1 m?", "150 m is langer dan een voetbalveld. Past dat bij 1500 mm? Reken na hoeveel mm er in 1 m zitten."],
       },
       {
         q: "Een **kubus** heeft zijden van **5 cm**. Wat is de inhoud?",
@@ -1704,7 +1704,7 @@ const steps = [
         ref: "1F",
         options: ["3.500 m", "350 m", "35.000 m", "35 m"],
         answer: 0,
-        wrongHints: [null, "In 1 km zitten 1.000 m — je schuift drie plekken, niet twee.", "Dat is tien keer te veel.", "Dat is maar 35 meter — korter dan een voetbalveld."],
+        wrongHints: [null, "In 1 km zitten 1.000 m — je schuift drie plekken, niet twee.", "35.000 m is meer dan 30 km. Is 3,5 km echt zo ver? Kijk hoeveel plekken je de komma schuift.", "Dat is maar 35 meter — korter dan een voetbalveld."],
         explanation: "1 km = 1.000 m → 3,5 km = 3,5 × 1.000 = **3.500 m**.",
       },
       {
@@ -2005,7 +2005,7 @@ const steps = [
         q: "Een trein vertrekt om **08:45** en rijdt **2 uur en 15 minuten**. Hoe laat komt hij aan?",
         options: ["11:00", "10:45", "11:30", "10:00"],
         answer: 0,
-        wrongHints: [null, "Dat is 2 uur later — de 15 minuten moeten er nog bij.", "Tel eerst 2 uur op en dan 15 minuten: kom je dan op 11:30?", "10:00 is maar 1 uur en 15 minuten later."],
+        wrongHints: [null, "10:45 is precies 2 uur na het vertrek. Ben je een deel van de reistijd vergeten?", "Tel eerst 2 uur op en dan 15 minuten: kom je dan op 11:30?", "10:00 is maar 1 uur en 15 minuten later."],
       },
       {
         q: "Je rijdt **240 km** met een snelheid van **80 km per uur**. Hoe lang duurt de reis?",

@@ -1,0 +1,1280 @@
+[
+ {
+  "nr": 151,
+  "bron": "leerpaden",
+  "waar": "taal-woorden-zinnen-g4 stap 2 vraag 7",
+  "file": "./taalWoordenZinnenG4.js",
+  "level": "groep4-5",
+  "q": "Wat is het meervoud van **jongen**?",
+  "options": [
+   "jongens",
+   "jongenen",
+   "jongense",
+   "jongen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop — zeg je 'twee jongenen'?",
+   "Zeg 'twee jongense' hardop. Hoor je die e aan het eind?",
+   "Dat is er maar één."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "jongen → jongens.",
+   "simpeler": "Doe -s erachter.",
+   "nogSimpeler": "jongens"
+  }
+ },
+ {
+  "nr": 152,
+  "bron": "leerpaden",
+  "waar": "taal-woorden-zinnen-g4 stap 5 vraag 3",
+  "file": "./taalWoordenZinnenG4.js",
+  "level": "groep4-5",
+  "q": "Zet de woorden in de goede volgorde: **rent — hond — de — hard**",
+  "options": [
+   "De hond rent hard.",
+   "Hond de rent hard.",
+   "Rent de hond hard.",
+   "Hard hond de rent."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg het hardop — klinkt dat goed?",
+   "Zo begint een vraag, geen gewone zin.",
+   "Zeg het hardop — klinkt dat goed?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Eerst wie, dan wat die doet.",
+   "simpeler": "Wie rent er? De hond. Dus: De hond rent…",
+   "nogSimpeler": "De hond rent hard."
+  }
+ },
+ {
+  "nr": 153,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 5 vraag 3",
+  "file": "./tabellenGrafieken.js",
+  "level": "groep6-8",
+  "q": "In een klas met **20 leerlingen** kiest **40%** rekenen als lievelingsvak. Hoeveel leerlingen zijn dat?",
+  "options": [
+   "8",
+   "12",
+   "4",
+   "10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 60% van 20. Hoeveel is 10% van 20?",
+   "Dat is 20% van 20. Hoeveel keer 10% heb je nodig?",
+   "Dat is de helft van de klas. Is 40% de helft?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "8 (40% × 20).",
+   "simpeler": "10% van 20 = 2. 40% = 4 × 2 = 8.",
+   "nogSimpeler": "8"
+  }
+ },
+ {
+  "nr": 154,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 5 vraag 9",
+  "file": "./tabellenGrafieken.js",
+  "level": "groep6-8",
+  "q": "Een cirkeldiagram heeft maar drie stukken: **40%, 30% en 20%**. Klopt dit diagram?",
+  "options": [
+   "Nee, er mist 10%",
+   "Ja, het klopt precies",
+   "Nee, het is 10% te veel",
+   "Nee, er mist 20%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel de drie percentages eens op. Is dat de hele cirkel?",
+   null,
+   "Reken na: 40 + 30 + 20 = ?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Nee, er mist 10%.",
+   "simpeler": "Samen 90%, dus 10% te weinig.",
+   "nogSimpeler": "Mist 10%"
+  }
+ },
+ {
+  "nr": 155,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 1 vraag 9",
+  "file": "./tafelsPo.js",
+  "level": "groep4-5",
+  "q": "Welk rijtje is het begin van de **tafel van 3**?",
+  "options": [
+   "3, 6, 9, 12",
+   "3, 4, 5, 6",
+   "3, 5, 7, 9",
+   "3, 6, 12, 24"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hier komt er steeds 1 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
+   "Hier komt er steeds 2 bij. Hoeveel komt er bij de tafel van 3 steeds bij?",
+   "Hier wordt het getal steeds dubbel. Komt er steeds hetzelfde bij?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "3, 6, 9, 12 — steeds 3 erbij.",
+   "simpeler": "Begin bij 3 en tel steeds 3 erbij.",
+   "nogSimpeler": "3, 6, 9, 12"
+  }
+ },
+ {
+  "nr": 156,
+  "bron": "leerpaden",
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 6",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "level": "groep6-8",
+  "q": "*\"Yusuf haalde zijn schouders op. Daarna at hij zijn bord leeg.\"* — Is dit oorzaak en gevolg?",
+  "options": [
+   "Nee — de twee dingen gebeuren alleen na elkaar",
+   "Ja — het schouderhalen veroorzaakte het eten",
+   "Ja — het eten veroorzaakte het schouderhalen",
+   "Dat kun je nooit zeggen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "At Yusuf zijn bord leeg dóór zijn schouders op te halen? Test: 'doordat hij zijn schouders ophaalde, at hij zijn bord leeg' — klinkt dat logisch?",
+   "Wat gebeurde er eerst? Kan iets wat later komt de oorzaak zijn van wat eerder gebeurde?",
+   "Jawel! Gebruik de invoeg-test met 'daardoor' en luister of de zin logisch klinkt."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Daarna' is een tijd-woord. Test of het schouders ophalen echt het eten veroorzaakte.",
+   "simpeler": "Kon Yusuf ook gewoon zijn bord leeg eten zónder eerst zijn schouders op te halen? Dan is er geen echt verband.",
+   "nogSimpeler": "Veroorzaakt schouders ophalen dat je gaat eten? Of gebeurden de twee dingen gewoon toevallig na elkaar?"
+  }
+ },
+ {
+  "nr": 157,
+  "bron": "leerpaden",
+  "waar": "tellen-kleuters-po stap 1 vraag 3",
+  "file": "./tellenKleutersPo.js",
+  "level": "groep1-2",
+  "q": "Tel maar: 1, 2, 3... Welk getal komt erna?",
+  "options": [
+   "4",
+   "2",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat getal had je al gehad — we tellen vooruit!",
+   "Je slaat er eentje over — tel rustig verder vanaf 3.",
+   "Je slaat er twee over — welk getal komt metéén na 3?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Na 3 komt 4.",
+   "simpeler": "1, 2, 3... 4!",
+   "nogSimpeler": "4"
+  }
+ },
+ {
+  "nr": 158,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 1 vraag 7",
+  "file": "./tijdSnelheidAfstandPo.js",
+  "level": "groep6-8",
+  "q": "**240 seconden** zijn hoeveel **minuten**?",
+  "options": [
+   "4 min",
+   "24 min",
+   "2 min",
+   "40 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deel je door 10 of door 60?",
+   null,
+   "Hoeveel seconden heeft 1 minuut?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "240/60=4.",
+   "simpeler": "Delen door 60.",
+   "nogSimpeler": "4 min"
+  }
+ },
+ {
+  "nr": 159,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 5",
+  "file": "./tijdSnelheidAfstandPo.js",
+  "level": "groep6-8",
+  "q": "Hoe snel gaat **licht** in de lege ruimte?",
+  "options": [
+   "300 000 km/s",
+   "300 000 km/h",
+   "300 m/s",
+   "30 000 km/s"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Per uur? Licht is véél sneller: in één seconde gaat het al zo'n 7 keer rond de aarde.",
+   "Zo snel gaat geluid ongeveer. Licht is véél sneller.",
+   "Te langzaam — tel de nullen nog eens. Licht is het snelste dat er bestaat."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Licht is het snelste wat er bestaat: in één seconde gaat het ruim 7 keer rond de aarde.",
+   "simpeler": "Bijna 300 000 km per seconde.",
+   "nogSimpeler": "300 000 km/s"
+  }
+ },
+ {
+  "nr": 160,
+  "bron": "leerpaden",
+  "waar": "tijdvakken-nederland-po stap 5 vraag 2",
+  "file": "./tijdvakkenNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Wie kwam **chronologisch eerst**?",
+  "options": [
+   "Floris V",
+   "Willem van Oranje",
+   "Willem I",
+   "Napoleon"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Willem van Oranje leefde rond 1568, in de Tachtigjarige Oorlog. Leefde een van de anderen nog eerder?",
+   "Willem I werd in 1815 koning. Dat is juist laat.",
+   "Napoleon leefde rond 1800. Leefde een van de anderen nog eerder?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Zoek bij elke persoon in welke tijd hij leefde. Wie leefde in de middeleeuwen, de tijd van ridders en kastelen?",
+   "simpeler": "Willem van Oranje leefde rond 1570, Napoleon rond 1800 en Willem I rond 1815. Wie leefde nog eerder, rond 1290?",
+   "nogSimpeler": "Floris V kwam als eerste: hij werd in 1296 vermoord."
+  }
+ },
+ {
+  "nr": 161,
+  "bron": "leerpaden",
+  "waar": "toestand-stoffen-po stap 5 vraag 6",
+  "file": "./toestandStoffenPo.js",
+  "level": "groep6-8",
+  "q": "Wat is **sublimeren**?",
+  "options": [
+   "Direct van vast naar gas",
+   "Van vast naar vloeibaar",
+   "Van vloeibaar naar vast",
+   "Van vast via vloeibaar naar gas"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is smelten.",
+   "Dat is stollen.",
+   "Dat zijn twee stappen: eerst smelten, dan verdampen."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 162,
+  "bron": "leerpaden",
+  "waar": "topografie-europa-landen-po stap 1 vraag 1",
+  "file": "./topografieEuropaPo.jsx",
+  "level": "groep8",
+  "q": "Welk land is het grote buurland van Nederland in het oosten?",
+  "options": [
+   "Duitsland",
+   "België",
+   "Frankrijk",
+   "Polen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de zuidbuur, kleiner.",
+   "Ligt verder naar het zuidwesten.",
+   "Ligt verder naar het oosten."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het oosterbuurland is Duitsland.",
+   "simpeler": "Welk groot land grenst rechts aan Nederland?",
+   "nogSimpeler": "Begint met Duits…?"
+  }
+ },
+ {
+  "nr": 163,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 2 vraag 4",
+  "file": "./topografieNederland.js",
+  "level": "groep6-8",
+  "q": "In welke provincie vind je veel **hunebedden**?",
+  "options": [
+   "Drenthe",
+   "Zeeland",
+   "Flevoland",
+   "Noord-Holland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeeland is bekend om eilanden en de Deltawerken, niet om hunebedden.",
+   "Deze provincie is heel jong. Hunebedden zijn heel oud.",
+   "Noord-Holland is bekend om Amsterdam en tulpen. Hunebedden vind je in een bosrijke provincie in het noordoosten."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Drenthe.",
+   "simpeler": "Hunebedden = Drenthe.",
+   "nogSimpeler": "Drenthe"
+  }
+ },
+ {
+  "nr": 164,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 3 vraag 4",
+  "file": "./topografieNederland.js",
+  "level": "groep6-8",
+  "q": "Wat is de hoofdstad van **Drenthe**?",
+  "options": [
+   "Assen",
+   "Emmen",
+   "Zwolle",
+   "Leeuwarden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deze stad ligt wel in Drenthe, maar is niet de hoofdstad.",
+   "Deze stad is de hoofdstad van Overijssel.",
+   "Leeuwarden is de hoofdstad van Friesland."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Assen.",
+   "simpeler": "Drenthe → Assen.",
+   "nogSimpeler": "Assen"
+  }
+ },
+ {
+  "nr": 165,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 9 vraag 11",
+  "file": "./topografieNederland.js",
+  "level": "groep6-8",
+  "q": "Welke twee **landen** grenzen aan Nederland?",
+  "options": [
+   "Duitsland en België",
+   "Frankrijk en Duitsland",
+   "Engeland en België",
+   "België en Luxemburg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Frankrijk grenst niet aan Nederland, wel aan België.",
+   "Engeland ligt aan de overkant van de Noordzee.",
+   "Luxemburg ligt ten zuidoosten van België en raakt Nederland niet."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 166,
+  "bron": "leerpaden",
+  "waar": "trappen-van-vergelijking-po stap 1 vraag 1",
+  "file": "./trappenVanVergelijkingPo.js",
+  "level": "groep7-8",
+  "q": "Wat zijn de drie trappen van 'snel'?",
+  "options": [
+   "snel – sneller – snelst",
+   "snel – snelst – sneller",
+   "snel – meer snel – meest snel",
+   "snelle – sneller – snelst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De vergrotende (-er) komt vóór de overtreffende (-st).",
+   "In het Nederlands plak je -er en -st aan het woord zelf; 'meer snel' zeggen we niet.",
+   "De stellende trap is gewoon 'snel', zonder -e."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "snel → sneller → snelst (gewoon, dan -er, dan -st).",
+   "simpeler": "Welke rij gaat van gewoon, naar meer, naar het meest?",
+   "nogSimpeler": "snel, dan snel-ler, dan snel-st."
+  }
+ },
+ {
+  "nr": 167,
+  "bron": "leerpaden",
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 4",
+  "file": "./verhaalDiepteLezenPo.js",
+  "level": "groep7-8",
+  "q": "Waarom zegt juf Karin dat ze 'tweeëndertig cadeautjes in plaats van één' krijgt?",
+  "options": [
+   "Ze wil Ties troosten na het ongelukje",
+   "Ze wil van iedereen een nieuw cadeautje",
+   "Ze vindt scherven echt mooier dan een hele vaas",
+   "Ze is boos en zegt het spottend"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vraagt juf om nieuwe cadeautjes? Wat doet ze met de scherven?",
+   "Zou iemand dat écht vinden — of zégt ze het met een bedoeling? Let op het woordje 'zacht' en naar wie ze daarna lacht.",
+   "Boze mensen praten zelden 'zacht' en lachen er niet bij. Wat wil juf bij Ties bereiken?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Kijk naar hóé juf het zegt ('zacht') en wat ze daarna doet (lachen naar Ties). Wat wil ze dat Ties gaat voelen?",
+   "simpeler": "Ties staart naar de grond en baalt vreselijk. Dan maakt juf van de scherven iets moois. Waarom zou ze dat doen, denk je?",
+   "nogSimpeler": "Wat zeg jij tegen een vriend die per ongeluk iets kapotmaakte en heel verdrietig kijkt?"
+  }
+ },
+ {
+  "nr": 168,
+  "bron": "leerpaden",
+  "waar": "verhoudingen-po stap 3 vraag 6",
+  "file": "./verhoudingenPo.js",
+  "level": "groep5-8",
+  "q": "Limonade is **1 : 4** (siroop : water). Je gebruikt **150 mL siroop**. Hoeveel **water** hoort erbij?",
+  "options": [
+   "600 mL",
+   "200 mL",
+   "450 mL",
+   "750 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je telde er iets bij op. Bij een verhouding doe je keer of gedeeld door.",
+   "Dat is 3 keer zoveel als de siroop. Kijk nog eens naar de verhouding 1 : 4.",
+   "Dat is siroop en water samen. De vraag is alleen het water."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Bij 1 deel siroop horen 4 delen water. Hoeveel mL is één deel hier?",
+   "simpeler": "Water is 4 × zoveel. 4 × 150 = 600 mL.",
+   "nogSimpeler": "600"
+  }
+ },
+ {
+  "nr": 169,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 9",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "level": "groep6-8",
+  "q": "*\"Toen ze de taart uit de oven haalde, rook Amira meteen dat hij aangebrand was.\"* — Naar wie verwijst 'ze'?",
+  "options": [
+   "Amira",
+   "De taart",
+   "De oven",
+   "De moeder van Amira"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kan een taart iets uit de oven halen? Zoek een persoon in de zin.",
+   "Kan een oven zichzelf leeghalen? Zoek een persoon in de zin.",
+   "Wordt er in deze zin een moeder genoemd? Lees de zin helemaal uit."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Vóór 'ze' staat niemand. Lees de hele zin: welke persoon wordt er verderop genoemd?",
+   "simpeler": "Wie haalt er iets uit de oven: een persoon of een ding? Welke persoon staat er in de zin?",
+   "nogSimpeler": "Welke naam staat er in de zin?"
+  }
+ },
+ {
+  "nr": 170,
+  "bron": "leerpaden",
+  "waar": "vlakke-figuren-po stap 5 vraag 3",
+  "file": "./vlakkeFigurenPo.js",
+  "level": "groep5-8",
+  "q": "Een driehoek heeft een **basis van 14 cm** en een **hoogte van 6 cm**. Wat is de oppervlakte?",
+  "options": [
+   "42 cm²",
+   "84 cm²",
+   "20 cm²",
+   "21 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — je bent het delen door 2 vergeten.",
+   "Dat is 14 + 6. Bij oppervlakte tel je niet op.",
+   "Heb je twee keer door 2 gedeeld?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een driehoek is de helft van een rechthoek. Reken basis keer hoogte en neem daar de helft van.",
+   "simpeler": "Driehoek = (14×6)÷2 = 84÷2 = 42 cm².",
+   "nogSimpeler": "42"
+  }
+ },
+ {
+  "nr": 171,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 6 vraag 1",
+  "file": "./volgordeBewerkingen.js",
+  "level": "groep5-7",
+  "q": "**18 ÷ (1 + 2) × 4** = ?",
+  "options": [
+   "24",
+   "6",
+   "2",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent er bijna — er komt ná de deling nog een × aan het einde.",
+   "Deelde je 18 door álles tegelijk? Alleen (1+2) hoort bij elkaar; daarna van links naar rechts.",
+   "Waar is de 18 gebleven? Begin met 18 ÷ (de uitkomst van de haakjes)."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "24.",
+   "simpeler": "Haakjes:1+2=3. Dan 18÷3=6. Dan 6×4=24.",
+   "nogSimpeler": "24"
+  }
+ },
+ {
+  "nr": 172,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 6 vraag 7",
+  "file": "./volgordeBewerkingen.js",
+  "level": "groep5-7",
+  "q": "**2 × 3² + (10 − 4) ÷ 2** = ?",
+  "options": [
+   "21",
+   "24",
+   "39",
+   "15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent de ÷ 2 aan het eind vergeten.",
+   "Hoort de ² bij 2 × 3 of alleen bij de 3?",
+   "Is 3² hetzelfde als 3 × 2?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "21.",
+   "simpeler": "18 + 3 = 21.",
+   "nogSimpeler": "21"
+  }
+ },
+ {
+  "nr": 173,
+  "bron": "leerpaden",
+  "waar": "vulkanen-po stap 2 vraag 4",
+  "file": "./vulkanenPo.js",
+  "level": "groep6-8",
+  "q": "Waar in het Koninkrijk der Nederlanden staat een (slapende) vulkaan?",
+  "options": [
+   "Op Saba: Mount Scenery",
+   "In Limburg: de Vaalserberg",
+   "In Gelderland: de Posbank",
+   "Op Texel: de Hoge Berg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De Vaalserberg is een gewone heuvel, geen vulkaan.",
+   "De Posbank is een heuvel van zand en stenen, opgeduwd door ijs in de ijstijd.",
+   "De Hoge Berg op Texel is een heuvel uit de ijstijd, geen vulkaan."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 174,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 1 vraag 5",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Een stuk land ligt op **-2 NAP**. Wat betekent dat?",
+  "options": [
+   "Het ligt 2 meter onder zeeniveau",
+   "Het ligt 2 meter boven zeeniveau",
+   "Het ligt 2 kilometer onder zeeniveau",
+   "Het ligt precies op zeeniveau"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk goed naar het teken dat vóór het getal staat.",
+   "2 kilometer is 2000 meter — zo diep ligt geen stuk land in Nederland. In welke eenheid meet NAP?",
+   "Precies op zeeniveau zou 0 NAP zijn. Hier staat −2."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 175,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 3 vraag 7",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Wat is de **grootste stad** van Flevoland?",
+  "options": [
+   "Almere",
+   "Lelystad",
+   "Emmeloord",
+   "Dronten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die stad is de hoofdstad van de provincie, maar niet de grootste.",
+   "Emmeloord is de hoofdplaats van de Noordoostpolder, maar klein.",
+   "Dronten is een kleinere plaats in Flevoland."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 176,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 3",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Hoeveel **doden** waren er ongeveer bij de Watersnoodramp van 1953?",
+  "options": [
+   "ongeveer 1.800",
+   "ongeveer 100",
+   "ongeveer 10.000",
+   "ongeveer 500"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Honderd? Er verdronken hele dorpen. Het waren veel meer mensen.",
+   "Tienduizend is te veel, al was het echte aantal al vreselijk genoeg.",
+   "Vijfhonderd is te weinig. Er verdronken hele dorpen."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 177,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 4 vraag 5",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Wat zorgde samen voor de **Watersnoodramp** van 1953?",
+  "options": [
+   "Storm en springtij",
+   "Aardbeving en regen",
+   "Droogte en hitte",
+   "Sneeuw en vorst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nederland heeft bijna nooit zware aardbevingen.",
+   "Droogte en hitte horen bij de zomer; de ramp was in de winter, met hoog water.",
+   "Sneeuw en vorst geven geen overstroming vanuit zee."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 178,
+  "bron": "leerpaden",
+  "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+  "file": "./waterErfgoedNederlandPo.js",
+  "level": "groep6-8",
+  "q": "Wat is een **terp**?",
+  "options": [
+   "Een opgehoogde woonheuvel",
+   "Een molen op een dijk",
+   "Een dijk langs de zee",
+   "Een sloot rond een boerderij"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een terp is geen gebouw.",
+   "Een dijk loopt in een lange lijn. Is een terp lang?",
+   "Een sloot is gegraven water. Is een terp water?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 179,
+  "bron": "leerpaden",
+  "waar": "weersvoorspelling-po stap 4 vraag 6",
+  "file": "./weersvoorspellingPo.js",
+  "level": "groep6-8",
+  "q": "Hoe ver vooruit kun je **redelijk voorspellen**?",
+  "options": [
+   "Ongeveer een week",
+   "Ongeveer een maand",
+   "Ongeveer een jaar",
+   "Hooguit één uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zo ver vooruit zie je alleen nog trends, geen dagweer.",
+   "Een jaar vooruit kan niemand het weer voorspellen.",
+   "Veel verder — voor morgen en overmorgen zit het KNMI er zelden naast."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 180,
+  "bron": "leerpaden",
+  "waar": "weersvoorspelling-po stap 4 vraag 20",
+  "file": "./weersvoorspellingPo.js",
+  "level": "groep6-8",
+  "q": "Wat doet een **anemometer**?",
+  "options": [
+   "Wind meten",
+   "Temperatuur meten",
+   "Luchtdruk meten",
+   "Vochtigheid meten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor gebruik je een thermometer.",
+   "Daarvoor gebruik je een barometer.",
+   "Daarvoor gebruik je een hygrometer."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 181,
+  "bron": "leerpaden",
+  "waar": "werelddelen-landen-po stap 2 vraag 2",
+  "file": "./werelddelenLandenPo.js",
+  "level": "groep6-8",
+  "q": "Welk land had in 2024 de **meeste inwoners**?",
+  "options": [
+   "India",
+   "China",
+   "Verenigde Staten",
+   "Rusland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit land stond lang op één, maar is in 2023 ingehaald.",
+   "De VS heeft ruim 330 miljoen inwoners. Twee landen in Azië hebben er meer dan een miljard.",
+   "Rusland is het grootste land qua oppervlakte, maar heeft maar zo'n 145 miljoen inwoners."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 182,
+  "bron": "leerpaden",
+  "waar": "werelddelen-landen-po stap 4 vraag 7",
+  "file": "./werelddelenLandenPo.js",
+  "level": "groep6-8",
+  "q": "Welke **rivier** stroomt door **Egypte**?",
+  "options": [
+   "Nijl",
+   "Tigris",
+   "Jordaan",
+   "Kongo"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De Tigris stroomt door Turkije en Irak, niet door Egypte.",
+   "De Jordaan stroomt langs Israël en Jordanië, niet door Egypte.",
+   "De Kongo stroomt door Midden-Afrika, ver ten zuiden van Egypte."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Nijl.",
+   "simpeler": "De Nijl is een lange rivier in Afrika die door Egypte stroomt. Belangrijk voor landbouw + oude beschaving.",
+   "nogSimpeler": "Nijl"
+  }
+ },
+ {
+  "nr": 183,
+  "bron": "leerpaden",
+  "waar": "wereldorientatie-mix-po stap 1 vraag 4",
+  "file": "./wereldorientatieMixPo.js",
+  "level": "groep7-8",
+  "q": "Wie was **Anne Frank**?",
+  "options": [
+   "Een Joods meisje dat onderdook",
+   "Een meisje uit het verzet",
+   "Een Nederlandse spionne",
+   "De eerste vrouwelijke arts van Nederland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verzetsstrijders werkten in het geheim tegen de Duitsers. Wat deed Anne met haar familie in het Achterhuis?",
+   "Een bekende Nederlandse spionne was Mata Hari, in de Eerste Wereldoorlog. Wanneer leefde Anne Frank?",
+   "De eerste vrouwelijke arts van Nederland was Aletta Jacobs, rond 1880. Wanneer leefde Anne Frank?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Joodse onderduikster.",
+   "simpeler": "Anne = onderduiken",
+   "nogSimpeler": "Onderduikster."
+  }
+ },
+ {
+  "nr": 184,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 1 vraag 2",
+  "file": "./werkwoordTijdenPo.js",
+  "level": "groep5-8",
+  "q": "Wat is het **hele werkwoord** van *'lopend'*?",
+  "options": [
+   "lopen",
+   "loopt",
+   "liep",
+   "gelopen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de hij-vorm tegenwoordige tijd.",
+   "Dat is verleden tijd.",
+   "Dat is het voltooid deelwoord (ik heb gelopen). Welke vorm staat in het woordenboek?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Het hele werkwoord is de vorm die in het woordenboek staat en eindigt meestal op -en.",
+   "simpeler": "Lopend komt van lopen. Het hele werkwoord eindigt op -en, dus het is lopen.",
+   "nogSimpeler": "Lopen."
+  }
+ },
+ {
+  "nr": 185,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 4 vraag 1",
+  "file": "./werkwoordTijdenPo.js",
+  "level": "groep5-8",
+  "q": "Wat is de verleden tijd van **'lopen'** bij 'ik'?",
+  "options": [
+   "liep",
+   "loopte",
+   "loopde",
+   "lopde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg je 'ik loopte'? Bij 'lopen' werkt de -te-regel niet.",
+   "Zeg je 'ik loopde'? Luister hoe het echt klinkt.",
+   "Hier verdwijnt een o, en ook de -de klopt niet. Hoe zeg je het?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "'Lopen' is een sterk werkwoord. Dan krijg je geen -de of -te erachter.",
+   "simpeler": "Bij een sterk werkwoord verandert de klinker. Hoe zeg je: 'Gisteren ... ik naar school'?",
+   "nogSimpeler": "Ik liep. De oo wordt ie."
+  }
+ },
+ {
+  "nr": 186,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 5 vraag 20",
+  "file": "./werkwoordTijdenPo.js",
+  "level": "groep5-8",
+  "q": "Wat is het voltooid deelwoord van 'lopen'?",
+  "options": [
+   "gelopen",
+   "gelopt",
+   "geloopt",
+   "lopen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg je 'ik heb gelopt'? 'Lopen' is een sterk werkwoord. Hoe klinkt het echt?",
+   "Zeg je 'ik heb geloopt'? Bij een sterk werkwoord eindigt het niet op -t.",
+   "Dat is het hele werkwoord. Hoe zeg je 'ik heb ...'?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 187,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 4 vraag 6",
+  "file": "./werkwoordsspellingDT.js",
+  "level": "groep5-8",
+  "q": "Kies de juiste vorm van **praten**: 'Oma ____ heel zacht.'",
+  "options": [
+   "praat",
+   "praatt",
+   "praten",
+   "prat"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar de laatste letter van de stam. Komt er dan nog een t bij?",
+   "-en is voor meervoud. Is oma één persoon?",
+   "Zeg pra-ten hardop: is de a kort of lang?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Oma praat.",
+   "simpeler": "Stam praat eindigt al op t. Geen t erbij: oma praat.",
+   "nogSimpeler": "Praat"
+  }
+ },
+ {
+  "nr": 188,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 8 vraag 4",
+  "file": "./werkwoordsspellingDT.js",
+  "level": "groep5-8",
+  "q": "Welk woord past op de puntjes: **'Werk ____ vandaag?'**",
+  "options": [
+   "jij",
+   "hij",
+   "zij",
+   "ze"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 'hij' zou het 'werkt hij?' zijn met t.",
+   "Bij 'zij' zou het ook 'werkt zij?' zijn.",
+   "Bij 'ze' zeg je 'Werkt ze?' of 'Werken ze?' — niet 'Werk ze?'."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Werk zonder t → jij.",
+   "simpeler": "'Werk' (geen t) = vorm bij 'jij' na werkwoord. Bij hij/zij zou er 'werkt' staan.",
+   "nogSimpeler": "Werk jij vandaag?"
+  }
+ },
+ {
+  "nr": 189,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 8 vraag 8",
+  "file": "./werkwoordsspellingDT.js",
+  "level": "groep5-8",
+  "q": "Vul in: 'Ik ___ je morgen.' (zien)",
+  "options": [
+   "zie",
+   "ziet",
+   "zien",
+   "gezien"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Ziet' hoort bij hij of jij. Welke vorm hoort bij ik?",
+   "'Zien' is het hele werkwoord. Welke vorm hoort bij ik?",
+   "'Gezien' gebruik je na 'heb'. Staat dat in de zin?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 190,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 8 vraag 9",
+  "file": "./werkwoordsspellingDT.js",
+  "level": "groep5-8",
+  "q": "Vul in: 'Hij ___ heel snel.' (lopen)",
+  "options": [
+   "loopt",
+   "loop",
+   "loopd",
+   "loopen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de ik-vorm. Past die bij hij?",
+   "Waar zou die d vandaan komen? Wat komt er bij hij achter de stam?",
+   "Zo schrijf je het hele werkwoord niet (lopen), en bij hij hoort geen -en."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 191,
+  "bron": "leerpaden",
+  "waar": "winst-rekenen-po stap 3 vraag 9",
+  "file": "./winstRekenenPo.js",
+  "level": "groep6-8",
+  "q": "Je verkoopt **7 notitieboekjes** met **€1,50 winst per stuk**. Hoeveel **totale winst**?",
+  "options": [
+   "€10,50",
+   "€8,50",
+   "€1,50",
+   "€7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Optellen klopt niet — gebruik vermenigvuldigen voor 'per stuk × aantal'.",
+   "Dat is de winst per stuk, niet de totale winst.",
+   "Dat is het aantal, niet de winst."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "€10,50 (€1,50 × 7).",
+   "simpeler": "Elk van de 7 stuks levert €1,50 op. 7 × €1,50 = €10,50.",
+   "nogSimpeler": "€10,50"
+  }
+ },
+ {
+  "nr": 192,
+  "bron": "leerpaden",
+  "waar": "woordbetekenis-context-po stap 2 vraag 8",
+  "file": "./woordbetekenisContextPo.js",
+  "level": "groep6-8",
+  "q": "Wat betekent *'aardedonker'* in deze tekst?",
+  "options": [
+   "Helemaal donker",
+   "Een beetje schemerig",
+   "Donker van de modder",
+   "Bruin, net als aarde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin erna: komt er nooit zonlicht, of een beetje?",
+   "Er zit wel 'aarde' in het woord, maar gaat de zin erna over modder of over licht?",
+   "Gaat de zin erna over een kleur, of over licht?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees de zin direct na 'aardedonker'. Hoeveel licht is er in de diepzee?",
+   "simpeler": "Er komt nooit zonlicht. Is het daar dan een beetje donker, of helemaal?",
+   "nogSimpeler": "Kun je daar zonder lamp iets zien?"
+  }
+ },
+ {
+  "nr": 193,
+  "bron": "leerpaden",
+  "waar": "woordbetekenis-context-po stap 3 vraag 2",
+  "file": "./woordbetekenisContextPo.js",
+  "level": "groep6-8",
+  "q": "Lees: *\"De veertjes van het kuiken zijn zo licht dat je ze nauwelijks in je hand voelt.\"* — Wat betekent 'licht' in deze zin?",
+  "options": [
+   "Bijna niets wegend",
+   "Helder, niet donker",
+   "Een lamp die schijnt",
+   "Gemakkelijk, niet moeilijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gaat de zin over kleur en donker, of over voelen en gewicht? Lees het stuk na 'zo licht dat...'.",
+   "Kun je een lamp in je hand voelen zoals een veertje? Kijk naar 'zo licht dat'.",
+   "Een 'lichte som' bestaat, maar kun je een veertje 'moeilijk of makkelijk' in je hand voelen? Wat vertelt het woord 'voelt'?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Lees wat er na 'zo licht dat' komt: je voelt ze nauwelijks in je hand. Waar gaat dat over?",
+   "simpeler": "Leg in gedachten een veertje op je hand. Merk je daar iets van? Dat komt door het gewicht — of eigenlijk: het gebrek eraan.",
+   "nogSimpeler": "Voelen in je hand — gaat dat over kleur of over gewicht?"
+  }
+ },
+ {
+  "nr": 194,
+  "bron": "leerpaden",
+  "waar": "woorden-3-nieuwkomers stap 1 vraag 3",
+  "file": "./woorden3Nieuwkomers.js",
+  "level": "groep3-4",
+  "q": "Rood en blauw samen. Welke kleur krijg je?",
+  "options": [
+   "Paars.",
+   "Groen.",
+   "Bruin.",
+   "Wit."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Meng rood met blauw.",
+   "Meng rood met blauw.",
+   "Meng rood met blauw."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 195,
+  "bron": "leerpaden",
+  "waar": "woordenschat-engels-po stap 5 vraag 1",
+  "file": "./woordenschatEngelsPo.js",
+  "level": "groep6-8",
+  "q": "Wat betekent **brother**?",
+  "options": [
+   "broer",
+   "zus",
+   "neef",
+   "oom"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "sister = zus.",
+   "cousin = neef/nicht.",
+   "uncle = oom."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 196,
+  "bron": "leerpaden",
+  "waar": "woordenschat-engels-po stap 8 vraag 4",
+  "file": "./woordenschatEngelsPo.js",
+  "level": "groep6-8",
+  "q": "Vertaal naar het Engels: *'mijn vader'*",
+  "options": [
+   "my father",
+   "my mother",
+   "my brother",
+   "your father"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "mother = moeder.",
+   "brother = broer.",
+   "your = jouw, niet mijn."
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 197,
+  "bron": "leerpaden",
+  "waar": "woordenschat-po stap 5 vraag 8",
+  "file": "./woordenschatPo.js",
+  "level": "groep5-8",
+  "q": "Wat betekent **'een open boek'** in 'Floor is een open boek voor mij'?",
+  "options": [
+   "Ik begrijp haar makkelijk, ze verbergt niets",
+   "Ik snap haar niet, ze houdt alles voor zichzelf",
+   "Ze heeft een boek open liggen om te lezen",
+   "Ze schrijft een boek over haar eigen leven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een open boek kun je zo lezen. Past 'ik snap haar niet' daarbij?",
+   "Dat is de letterlijke betekenis. Kan Floor zelf een boek zijn? Wat bedoel je dan?",
+   "Gaat het hier echt over een boek dat ze schrijft? Lees de zin nog eens."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Een open boek kun je zo lezen. Wat betekent het als je iemand 'zo kunt lezen'?",
+   "simpeler": "'Een open boek' is figuurlijk: je ziet meteen wat iemand denkt en voelt, want ze verbergt niets.",
+   "nogSimpeler": "Ik begrijp haar makkelijk."
+  }
+ },
+ {
+  "nr": 198,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 2 vraag 7",
+  "file": "./woordsoortenPo.js",
+  "level": "groep5-8",
+  "q": "*'Wij ___ elke dag naar school.'* — welke vorm van 'lopen' past?",
+  "options": [
+   "lopen",
+   "loopt",
+   "loop",
+   "lopend"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke vorm hoort bij 'hij'? En welke bij 'wij'?",
+   "'Ik loop', maar hier staat 'wij'. Welke vorm hoort bij 'wij'?",
+   "Probeer het hardop: 'wij lopend naar school'. Klinkt dat goed?"
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Wij → lopen.",
+   "simpeler": "Bij 'wij' hoort de vorm 'lopen': wij lopen naar school.",
+   "nogSimpeler": "Wij lopen"
+  }
+ },
+ {
+  "nr": 199,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 5 vraag 12",
+  "file": "./woordsoortenPo.js",
+  "level": "groep5-8",
+  "q": "*'**De** hond rent.'* — welke woordsoort is 'de'?",
+  "options": [
+   "Lidwoord",
+   "Zelfstandig naamwoord",
+   "Werkwoord",
+   "Voornaamwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Hond' is het dier. Is 'de' ook een ding, dier of persoon?",
+   "'Rent' zegt wat de hond doet. Doet 'de' dat ook?",
+   "Staat 'de' in de plaats van een naam, zoals 'hij'?"
+  ],
+  "explanation": null,
+  "niveaus": null
+ },
+ {
+  "nr": 200,
+  "bron": "leerpaden",
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 2",
+  "file": "./zinsontledingOnderwerpPersoonsvormPo.js",
+  "level": "groep7-8",
+  "q": "Vul goed in: *Het meisje en haar broer ___ in de tuin.*",
+  "options": [
+   "spelen",
+   "speelt",
+   "speelde",
+   "spelend"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Twee personen samen ('en') — is dat enkelvoud of meervoud?",
+   "Ook in de verleden tijd telt het aantal: is 'speelde' enkelvoud of meervoud?",
+   "Dat is geen persoonsvorm."
+  ],
+  "explanation": null,
+  "niveaus": {
+   "basis": "Twee personen met 'en' ertussen tellen als meervoud → 'spelen'.",
+   "simpeler": "Hoeveel personen spelen er? Twee. Dus meervoud.",
+   "nogSimpeler": "Meisje + broer = meer dan één → spelen."
+  }
+ }
+]

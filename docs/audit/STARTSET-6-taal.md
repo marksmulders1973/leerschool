@@ -4,59 +4,59 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 3)
 Vraag: Welk woord is een **bijvoeglijk naamwoord**?
-- ▫️ rijden
 - ✅ snel
-- ▫️ auto
 - ▫️ de
+- ▫️ rijden
+- ▫️ auto
 
 ## 2. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 3)
 Vraag: *'De **slimme** **leerling** maakte de **toets**.'* — welk woord is een bijvoeglijk naamwoord?
-- ▫️ leerling
-- ✅ slimme
 - ▫️ toets
+- ✅ slimme
 - ▫️ maakte
+- ▫️ leerling
 
 ## 3. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 3)
 Vraag: Wat is de vergrotende trap van **'snel'**?
-- ✅ sneller
-- ▫️ snelste
-- ▫️ meer snel
 - ▫️ snelheid
+- ▫️ meer snel
+- ▫️ snelste
+- ✅ sneller
 
 ## 4. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 4)
 Vraag: Welk woord is een **lidwoord**?
+- ▫️ wie
 - ▫️ mij
 - ✅ het
-- ▫️ wie
 - ▫️ mijn
 
 ## 5. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 4)
 Vraag: *'**Mijn** fiets is groen.'* — welk soort woord is 'mijn'?
-- ▫️ persoonlijk voornaamwoord
 - ▫️ lidwoord
 - ▫️ bijvoeglijk naamwoord
+- ▫️ persoonlijk voornaamwoord
 - ✅ bezittelijk voornaamwoord
 
 ## 6. Woordsoorten herkennen — groep 5-8, Doorstroomtoets-stof (woordsoorten-po, stap 4)
 Vraag: *'**Wie** zit daar?'* — welk soort woord is 'wie'?
-- ▫️ persoonlijk voornaamwoord
-- ▫️ aanwijzend voornaamwoord
 - ▫️ lidwoord
+- ▫️ aanwijzend voornaamwoord
+- ▫️ persoonlijk voornaamwoord
 - ✅ vragend voornaamwoord
 
 ## 7. Werkwoordsvervoeging T/V — groep 7-8, Doorstroomtoets-stof (werkwoord-tijden-po, stap 2)
 Vraag: Vervoeg *'spelen'* voor **'hij'** in tegenwoordige tijd:
-- ▫️ speel
-- ▫️ speelde
-- ▫️ spelen
 - ✅ speelt
+- ▫️ speelde
+- ▫️ speel
+- ▫️ spelen
 
 ## 8. Werkwoordsvervoeging T/V — groep 7-8, Doorstroomtoets-stof (werkwoord-tijden-po, stap 2)
 Vraag: Welke vorm is **goed**: 'praten' bij 'hij'?
-- ▫️ praaten
 - ✅ praat
-- ▫️ praats
 - ▫️ praatt
+- ▫️ praaten
+- ▫️ praats
 
 ## 9. Werkwoordsvervoeging T/V — groep 7-8, Doorstroomtoets-stof (werkwoord-tijden-po, stap 3)
 Vraag: Welke zin is goed: **'Hij stopte de auto'** of **'Hij stopde de auto'**?
@@ -68,76 +68,76 @@ Vraag: Welke zin is goed: **'Hij stopte de auto'** of **'Hij stopde de auto'**?
 ## 10. Werkwoordsvervoeging T/V — groep 7-8, Doorstroomtoets-stof (werkwoord-tijden-po, stap 3)
 Vraag: **'Wij ____ gisteren'** met 'horen' in verleden tijd:
 - ▫️ horen
-- ✅ hoorden
 - ▫️ hoorten
+- ✅ hoorden
 - ▫️ hoorde
 
 ## 11. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 2)
 Vraag: Welk woord is een synoniem van **'snel'**?
-- ▫️ Vroeg
-- ✅ Vlug
 - ▫️ Traag
 - ▫️ Druk
+- ▫️ Vroeg
+- ✅ Vlug
 
 ## 12. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 2)
 Vraag: Welk woord is een synoniem van **'aardig'**?
+- ▫️ Grappig
 - ✅ Vriendelijk
 - ▫️ Nieuwsgierig
-- ▫️ Grappig
 - ▫️ Eerlijk
 
 ## 13. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 4)
 Vraag: Welk woord past hier? *'De jongen rende zo ___ dat hij de bus nog haalde.'*
+- ✅ snel
+- ▫️ voorzichtig
 - ▫️ langzaam
 - ▫️ stil
-- ▫️ voorzichtig
-- ✅ snel
 
 ## 14. Synoniemen + tegenstellingen (groep 5-7) (synoniemen-tegenstellingen-po, stap 4)
 Vraag: Welk woord past? *'De ___ soep brandde mijn tong.'*
-- ▫️ lauwe
-- ▫️ dikke
 - ▫️ koude
 - ✅ hete
+- ▫️ lauwe
+- ▫️ dikke
 
 ## 15. Spreekwoorden + uitdrukkingen (groep 6-8, Doorstroomtoets-stof) (spreekwoorden-uitdrukkingen-po, stap 1)
 Vraag: Wat is **figuurlijk**?
 - ✅ Woorden betekenen iets anders dan er staat
-- ▫️ Woorden komen uit een andere taal
 - ▫️ Woorden zijn heel moeilijk gespeld
 - ▫️ Woorden betekenen precies wat er staat
+- ▫️ Woorden komen uit een andere taal
 
 ## 16. Spreekwoorden + uitdrukkingen (groep 6-8, Doorstroomtoets-stof) (spreekwoorden-uitdrukkingen-po, stap 1)
 Vraag: *'Het regent pijpenstelen'* — wat betekent dit?
-- ▫️ Het regent al heel lang
+- ✅ Het regent heel hard
 - ▫️ Het regent een klein beetje
 - ▫️ Er vallen pijpen uit de lucht
-- ✅ Het regent heel hard
+- ▫️ Het regent al heel lang
 
 ## 17. Spreekwoorden + uitdrukkingen (groep 6-8, Doorstroomtoets-stof) (spreekwoorden-uitdrukkingen-po, stap 2)
 Vraag: *'Een appeltje met iemand te schillen hebben'* — wat betekent dit?
-- ▫️ Iemand iets cadeau geven
 - ▫️ Samen een appel eten
-- ▫️ Iemand helpen met koken
 - ✅ Nog iets moeten uitpraten
+- ▫️ Iemand iets cadeau geven
+- ▫️ Iemand helpen met koken
 
 ## 18. Spreekwoorden + uitdrukkingen (groep 6-8, Doorstroomtoets-stof) (spreekwoorden-uitdrukkingen-po, stap 2)
 Vraag: *'In de rooie staan'* — wat betekent dit?
-- ▫️ Veel geld over hebben
-- ▫️ Voor een rood stoplicht wachten
-- ▫️ Boos zijn
 - ✅ Schulden hebben
+- ▫️ Boos zijn
+- ▫️ Voor een rood stoplicht wachten
+- ▫️ Veel geld over hebben
 
 ## 19. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 4)
 Vraag: Welke zin heeft komma's op de **juiste plek**?
-- ▫️ Ik kocht appels, peren, en druiven.
-- ✅ Ik kocht appels, peren en druiven.
 - ▫️ Ik kocht appels peren, en druiven.
+- ▫️ Ik kocht appels, peren, en druiven.
 - ▫️ Ik, kocht appels peren en druiven.
+- ✅ Ik kocht appels, peren en druiven.
 
 ## 20. Interpunctie & hoofdletters (groep 5-7) (interpunctie-po, stap 4)
 Vraag: *'Ik ga tóch naar buiten ___ het regent.'* Welke komma met welk woord past op de lege plek?
-- ▫️ , dus
 - ▫️ , omdat
-- ✅ , maar
 - ▫️ , en
+- ▫️ , dus
+- ✅ , maar

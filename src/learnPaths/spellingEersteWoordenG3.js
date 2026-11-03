@@ -154,10 +154,10 @@ const steps = [
         },
       },
       {
-        q: "Je hakt een woord in stukjes: **d - a - k**. Welk woord schrijf je?",
+        q: "Het zit boven op een huis en houdt de regen tegen. Welk woord is goed geschreven?",
         options: ["dak", "dek", "dok", "dakk"],
         answer: 0,
-        wrongHints: [null, "Luister naar de middelste klank: a of e?", "Luister naar de middelste klank: a of o?", "Hoor je twee k's aan het einde?"],
+        wrongHints: [null, "Zeg het woord hardop. Hoor je in het midden een e?", "Zeg het woord hardop. Hoor je in het midden een o?", "Hoor je aan het einde één k of twee?"],
         uitlegPad: {
           stappen: [
             {
@@ -166,17 +166,17 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: dak.",
-            simpeler: "d-a-k.",
+            basis: "Hak het woord in klanken: welke klank hoor je eerst, welke in het midden, welke aan het einde?",
+            simpeler: "Het begint met een d en eindigt met een k. Hoor je in het midden een a, een e of een o?",
             nogSimpeler: "dak",
           },
         },
       },
       {
-        q: "Zeg langzaam: **l - i - p**. Welk woord schrijf je?",
+        q: "Je hebt er twee: één boven en één onder je mond. Zeg het woord langzaam. Welk woord schrijf je?",
         options: ["lip", "lap", "lep", "lipp"],
         answer: 0,
-        wrongHints: [null, "Luister naar de middelste klank: i of a?", "Luister naar de middelste klank: i of e?", "Hoor je twee p's aan het einde?"],
+        wrongHints: [null, "Zeg het woord langzaam. Hoor je in het midden echt een a?", "Zeg het woord langzaam. Hoor je in het midden echt een e?", "Hoor je aan het einde één p of twee? Elke klank is één letter."],
         uitlegPad: {
           stappen: [
             {
@@ -185,8 +185,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Je schrijft: lip.",
-            simpeler: "l-i-p.",
+            basis: "Zeg het woord heel langzaam en hak het in stukjes. Elke klank is één letter.",
+            simpeler: "Het woord begint met een l en eindigt met een p. Welke klank hoor je in het midden?",
             nogSimpeler: "lip",
           },
         },

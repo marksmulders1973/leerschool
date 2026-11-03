@@ -4,140 +4,140 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: 'Hij ____ boos.' Welke vorm van **worden** past hier?
-- ▫️ word
-- ▫️ wort
 - ✅ wordt
 - ▫️ wordd
+- ▫️ word
+- ▫️ wort
 
 ## 2. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: 'Zij (meervoud) ____ een schat.' Welke vorm van **vinden** past hier?
-- ▫️ vind
 - ✅ vinden
-- ▫️ vindt
 - ▫️ vint
+- ▫️ vind
+- ▫️ vindt
 
 ## 3. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 3)
 Vraag: Welke zin is **goed**?
-- ✅ Hij houdt van pizza
 - ▫️ Hij hout van pizza
 - ▫️ Hij houden van pizza
 - ▫️ Hij houd van pizza
+- ✅ Hij houdt van pizza
 
 ## 4. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: Welke zin is **goed**?
 - ✅ Hij zit op de stoel
+- ▫️ Hij zitten op de stoel
 - ▫️ Hij zitte op de stoel
 - ▫️ Hij zitt op de stoel
-- ▫️ Hij zitten op de stoel
 
 ## 5. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: 'Zij (meervoud) ____ pizza.' Welke vorm van **eten** past hier?
-- ▫️ eet
-- ▫️ etten
-- ▫️ eett
 - ✅ eten
+- ▫️ eet
+- ▫️ eett
+- ▫️ etten
 
 ## 6. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 4)
 Vraag: Kies de juiste vorm van **wachten**: 'Hij ____ op de bus.'
-- ▫️ wachtt
-- ▫️ wachten
-- ✅ wacht
 - ▫️ wachtd
+- ▫️ wachtt
+- ✅ wacht
+- ▫️ wachten
 
 ## 7. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Welke medeklinkers zitten in **'t kofschip**?
-- ✅ t, k, f, s, ch, p
 - ▫️ t, k, o, f, s, ch, i, p
 - ▫️ t, k, f, s, g, p
 - ▫️ b, d, g, v, z, l
+- ✅ t, k, f, s, ch, p
 
 ## 8. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Wat is de verleden tijd van **werken** (bij ik)?
 - ▫️ werkt
-- ▫️ werken
 - ▫️ werkde
 - ✅ werkte
+- ▫️ werken
 
 ## 9. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 5)
 Vraag: Wat is de verleden tijd van **leren** (bij ik)?
-- ✅ leerde
-- ▫️ leren
-- ▫️ leert
 - ▫️ leerte
+- ✅ leerde
+- ▫️ leert
+- ▫️ leren
 
 ## 10. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **werken** in: 'Ik heb ____.'
 - ▫️ gewerk
 - ✅ gewerkt
-- ▫️ gewerken
 - ▫️ gewerkd
+- ▫️ gewerken
 
 ## 11. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **leren** in: 'Hij heeft ____.'
-- ▫️ geleert
-- ▫️ geleren
 - ▫️ gegelerd
+- ▫️ geleren
 - ✅ geleerd
+- ▫️ geleert
 
 ## 12. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **stoppen** in: 'Hij is vroeg ____.'
 - ▫️ gestop
+- ▫️ gestopd
 - ✅ gestopt
 - ▫️ gestoppt
-- ▫️ gestopd
 
 ## 13. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 6)
 Vraag: Vul het voltooid deelwoord van **dromen** in: 'Ik heb ____ over de zee.'
 - ▫️ gedromd
-- ▫️ gedroomt
-- ✅ gedroomd
 - ▫️ droomde
+- ✅ gedroomd
+- ▫️ gedroomt
 
 ## 14. Werkwoordsspelling — d/t en 't kofschip (werkwoordsspelling-dt, stap 7)
 Vraag: Kies de juiste vorm van **worden**: '____ jij vandaag jarig?'
 - ▫️ Wordt
 - ▫️ Wordd
-- ✅ Word
 - ▫️ Worden
+- ✅ Word
 
 ## 15. Samenstellingen & tussenletters (samenstellingen-tussenletters-po, stap 2)
 Vraag: Hoe schrijf je het woord voor een koek die je in een pan bakt?
-- ✅ pannenkoek
-- ▫️ pannekoek
 - ▫️ pannenkoeken
+- ▫️ pannekoek
 - ▫️ pankoek
+- ✅ pannenkoek
 
 ## 16. Samenstellingen & tussenletters (samenstellingen-tussenletters-po, stap 2)
 Vraag: De wijk waar iemand kranten bezorgt, heet de...
-- ▫️ krantwijk
 - ▫️ krantenwijken
-- ▫️ krantewijk
 - ✅ krantenwijk
+- ▫️ krantewijk
+- ▫️ krantwijk
 
 ## 17. Samenstellingen & tussenletters (samenstellingen-tussenletters-po, stap 3)
 Vraag: Het plein midden in een dorp heet het...
-- ▫️ dorpplein
 - ▫️ dorpenplein
 - ✅ dorpsplein
+- ▫️ dorpplein
 - ▫️ dorpesplein
 
 ## 18. Samenstellingen & tussenletters (samenstellingen-tussenletters-po, stap 3)
 Vraag: Het bord langs de weg voor het verkeer heet het...
 - ✅ verkeersbord
-- ▫️ verkeerenbord
 - ▫️ verkeerbord
+- ▫️ verkeerenbord
 - ▫️ verkeersborden
 
 ## 19. Leestekens & hoofdletters (leestekens-hoofdletters-po, stap 4)
 Vraag: Welke zin met directe rede is goed geschreven?
-- ▫️ De juf zei "pak je schrift."
 - ▫️ De juf zei: "pak je schrift".
 - ▫️ De juf zei: pak je schrift.
+- ▫️ De juf zei "pak je schrift."
 - ✅ De juf zei: "Pak je schrift."
 
 ## 20. Leestekens & hoofdletters (leestekens-hoofdletters-po, stap 4)
 Vraag: Waar hoort het vraagteken? *Hij vroeg: "Kom je vanavond___"*
-- ▫️ na de aanhalingstekens: "Kom je vanavond"?
 - ▫️ binnen én na de aanhalingstekens: "Kom je vanavond?"?
-- ✅ binnen de aanhalingstekens: "Kom je vanavond?"
 - ▫️ na 'vroeg': Hij vroeg?: "Kom je vanavond"
+- ▫️ na de aanhalingstekens: "Kom je vanavond"?
+- ✅ binnen de aanhalingstekens: "Kom je vanavond?"

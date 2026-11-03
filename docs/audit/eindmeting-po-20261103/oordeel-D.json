@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 151,
+    "waar": "taal-woorden-zinnen-g4 stap 2 vraag 7",
+    "eigenKeuze": "jongens",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (jongen → jongens)."
+  },
+  {
+    "nr": 152,
+    "waar": "taal-woorden-zinnen-g4 stap 5 vraag 3",
+    "eigenKeuze": "De hond rent hard.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 153,
+    "waar": "tabellen-grafieken stap 5 vraag 3",
+    "eigenKeuze": "8",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (8)."
+  },
+  {
+    "nr": 154,
+    "waar": "tabellen-grafieken stap 5 vraag 9",
+    "eigenKeuze": "Nee, er mist 10%",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Nee, er mist 10%)."
+  },
+  {
+    "nr": 155,
+    "waar": "tafels-po stap 1 vraag 9",
+    "eigenKeuze": "3, 6, 9, 12",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (3, 6, 9, 12)."
+  },
+  {
+    "nr": 156,
+    "waar": "tekstverbanden-oorzaak-gevolg-po stap 3 vraag 6",
+    "eigenKeuze": "Nee — de twee dingen gebeuren alleen na elkaar",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 157,
+    "waar": "tellen-kleuters-po stap 1 vraag 3",
+    "eigenKeuze": "4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 158,
+    "waar": "tijd-snelheid-afstand-po stap 1 vraag 7",
+    "eigenKeuze": "4 min",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (240/60=4)."
+  },
+  {
+    "nr": 159,
+    "waar": "tijd-snelheid-afstand-po stap 2 vraag 5",
+    "eigenKeuze": "300 000 km/s",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 160,
+    "waar": "tijdvakken-nederland-po stap 5 vraag 2",
+    "eigenKeuze": "Floris V",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 161,
+    "waar": "toestand-stoffen-po stap 5 vraag 6",
+    "eigenKeuze": "Direct van vast naar gas",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 162,
+    "waar": "topografie-europa-landen-po stap 1 vraag 1",
+    "eigenKeuze": "Duitsland",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Duitsland); niveau zeer licht voor groep 8."
+  },
+  {
+    "nr": 163,
+    "waar": "topografie-nederland stap 2 vraag 4",
+    "eigenKeuze": "Drenthe",
+    "oordeel": "fout",
+    "reden": "wrongHint bij Noord-Holland omschrijft het antwoord: \"bosrijke provincie in het noordoosten\" = Drenthe (enige overgebleven optie). Daarnaast geeft niveaus.basis alleen \"Drenthe.\"."
+  },
+  {
+    "nr": 164,
+    "waar": "topografie-nederland stap 3 vraag 4",
+    "eigenKeuze": "Assen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Assen)."
+  },
+  {
+    "nr": 165,
+    "waar": "topografie-nederland stap 9 vraag 11",
+    "eigenKeuze": "Duitsland en België",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 166,
+    "waar": "trappen-van-vergelijking-po stap 1 vraag 1",
+    "eigenKeuze": "snel – sneller – snelst",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (snel → sneller → snelst)."
+  },
+  {
+    "nr": 167,
+    "waar": "verhaal-diepte-lezen-po stap 4 vraag 4",
+    "eigenKeuze": "Ze wil Ties troosten na het ongelukje",
+    "oordeel": "twijfel",
+    "reden": "Verwijst naar een verhaal (juf Karin, Ties, vaas) dat niet in de vraag staat; zonder de tekst niet te controleren."
+  },
+  {
+    "nr": 168,
+    "waar": "verhoudingen-po stap 3 vraag 6",
+    "eigenKeuze": "600 mL",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 169,
+    "waar": "verwijswoorden-begrijpend-lezen-po stap 3 vraag 9",
+    "eigenKeuze": "Amira",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 170,
+    "waar": "vlakke-figuren-po stap 5 vraag 3",
+    "eigenKeuze": "42 cm²",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 171,
+    "waar": "volgorde-bewerkingen stap 6 vraag 1",
+    "eigenKeuze": "24",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (24)."
+  },
+  {
+    "nr": 172,
+    "waar": "volgorde-bewerkingen stap 6 vraag 7",
+    "eigenKeuze": "21",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (21)."
+  },
+  {
+    "nr": 173,
+    "waar": "vulkanen-po stap 2 vraag 4",
+    "eigenKeuze": "Op Saba: Mount Scenery",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 174,
+    "waar": "water-erfgoed-nederland-po stap 1 vraag 5",
+    "eigenKeuze": "Het ligt 2 meter onder zeeniveau",
+    "oordeel": "twijfel",
+    "reden": "Notatie \"-2 NAP\" zonder eenheid (gebruikelijk: NAP -2 m / 2 m onder NAP); kind moet zelf weten dat het om meters gaat."
+  },
+  {
+    "nr": 175,
+    "waar": "water-erfgoed-nederland-po stap 3 vraag 7",
+    "eigenKeuze": "Almere",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 176,
+    "waar": "water-erfgoed-nederland-po stap 4 vraag 3",
+    "eigenKeuze": "ongeveer 1.800",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 177,
+    "waar": "water-erfgoed-nederland-po stap 4 vraag 5",
+    "eigenKeuze": "Storm en springtij",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 178,
+    "waar": "water-erfgoed-nederland-po stap 6 vraag 11",
+    "eigenKeuze": "Een opgehoogde woonheuvel",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 179,
+    "waar": "weersvoorspelling-po stap 4 vraag 6",
+    "eigenKeuze": "Ongeveer een week",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 180,
+    "waar": "weersvoorspelling-po stap 4 vraag 20",
+    "eigenKeuze": "Wind meten",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 181,
+    "waar": "werelddelen-landen-po stap 2 vraag 2",
+    "eigenKeuze": "India",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 182,
+    "waar": "werelddelen-landen-po stap 4 vraag 7",
+    "eigenKeuze": "Nijl",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Nijl)."
+  },
+  {
+    "nr": 183,
+    "waar": "wereldorientatie-mix-po stap 1 vraag 4",
+    "eigenKeuze": "Een Joods meisje dat onderdook",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Joodse onderduikster)."
+  },
+  {
+    "nr": 184,
+    "waar": "werkwoord-tijden-po stap 1 vraag 2",
+    "eigenKeuze": "lopen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 185,
+    "waar": "werkwoord-tijden-po stap 4 vraag 1",
+    "eigenKeuze": "liep",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 186,
+    "waar": "werkwoord-tijden-po stap 5 vraag 20",
+    "eigenKeuze": "gelopen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 187,
+    "waar": "werkwoordsspelling-dt stap 4 vraag 6",
+    "eigenKeuze": "praat",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Oma praat.)."
+  },
+  {
+    "nr": 188,
+    "waar": "werkwoordsspelling-dt stap 8 vraag 4",
+    "eigenKeuze": "jij",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Werk zonder t → jij)."
+  },
+  {
+    "nr": 189,
+    "waar": "werkwoordsspelling-dt stap 8 vraag 8",
+    "eigenKeuze": "zie",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 190,
+    "waar": "werkwoordsspelling-dt stap 8 vraag 9",
+    "eigenKeuze": "loopt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 191,
+    "waar": "winst-rekenen-po stap 3 vraag 9",
+    "eigenKeuze": "€10,50",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (€10,50)."
+  },
+  {
+    "nr": 192,
+    "waar": "woordbetekenis-context-po stap 2 vraag 8",
+    "eigenKeuze": "Helemaal donker",
+    "oordeel": "twijfel",
+    "reden": "\"in deze tekst\": de tekst over de diepzee ontbreekt in de vraag; zonder tekst niet te controleren."
+  },
+  {
+    "nr": 193,
+    "waar": "woordbetekenis-context-po stap 3 vraag 2",
+    "eigenKeuze": "Bijna niets wegend",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 194,
+    "waar": "woorden-3-nieuwkomers stap 1 vraag 3",
+    "eigenKeuze": "Paars.",
+    "oordeel": "twijfel",
+    "reden": "Alle drie wrongHints zijn identiek (\"Meng rood met blauw.\") en herhalen alleen de vraag; geen richting."
+  },
+  {
+    "nr": 195,
+    "waar": "woordenschat-engels-po stap 5 vraag 1",
+    "eigenKeuze": "broer",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 196,
+    "waar": "woordenschat-engels-po stap 8 vraag 4",
+    "eigenKeuze": "my father",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 197,
+    "waar": "woordenschat-po stap 5 vraag 8",
+    "eigenKeuze": "Ik begrijp haar makkelijk, ze verbergt niets",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 198,
+    "waar": "woordsoorten-po stap 2 vraag 7",
+    "eigenKeuze": "lopen",
+    "oordeel": "twijfel",
+    "reden": "niveaus.basis geeft alleen het antwoord (Wij → lopen)."
+  },
+  {
+    "nr": 199,
+    "waar": "woordsoorten-po stap 5 vraag 12",
+    "eigenKeuze": "Lidwoord",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 200,
+    "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 3 vraag 2",
+    "eigenKeuze": "spelen",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]

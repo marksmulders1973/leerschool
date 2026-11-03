@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 101,
+    "waar": "lettergrepen-klemtoon-po stap 1 vraag 4",
+    "eigenKeuze": "hond",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('hond' = 1 lettergreep); bovendien erg makkelijk voor groep 7-8."
+  },
+  {
+    "nr": 102,
+    "waar": "maten-eenheden stap 6 vraag 3",
+    "eigenKeuze": "4,5 m",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('4,5 m.')."
+  },
+  {
+    "nr": 103,
+    "waar": "maten-eenheden stap 6 vraag 5",
+    "eigenKeuze": "600",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('600.')."
+  },
+  {
+    "nr": 104,
+    "waar": "maten-eenheden stap 8 vraag 3",
+    "eigenKeuze": "€ 0,0012",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('€0,0012.')."
+  },
+  {
+    "nr": 105,
+    "waar": "meetkunde-bouwsels stap 2 vraag 7",
+    "eigenKeuze": "8000 cm³",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 106,
+    "waar": "meetkunde-bouwsels stap 4 vraag 7",
+    "eigenKeuze": "7 dm³",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('7000 cm³ = 7 dm³')."
+  },
+  {
+    "nr": 107,
+    "waar": "meetkunde-bouwsels stap 6 vraag 10",
+    "eigenKeuze": "6",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 108,
+    "waar": "meten-gewicht-inhoud-tijd-po stap 3 vraag 4",
+    "eigenKeuze": "105 min",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 109,
+    "waar": "natuur-seizoenen-dieren-g4 stap 1 vraag 3",
+    "eigenKeuze": "jonge dieren worden geboren",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 110,
+    "waar": "natuur-seizoenen-dieren-g4 stap 4 vraag 3",
+    "eigenKeuze": "onder 0 graden",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('onder 0 graden'); strikt genomen bevriest water bij 0 graden, voor groep 4 verdedigbaar."
+  },
+  {
+    "nr": 111,
+    "waar": "negatieve-getallen-po stap 2 vraag 10",
+    "eigenKeuze": "1 − 4",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('1 − 4')."
+  },
+  {
+    "nr": 112,
+    "waar": "negatieve-getallen-po stap 5 vraag 4",
+    "eigenKeuze": "+10",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 113,
+    "waar": "olympische-spelen-po stap 4 vraag 6",
+    "eigenKeuze": "De wereldorganisatie tegen doping",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 114,
+    "waar": "onderwijs-niveaus-vmbo-havo-vwo stap 4 vraag 9",
+    "eigenKeuze": "Wetenschappelijk onderwijs",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 115,
+    "waar": "ontdekkingsreizen-po stap 4 vraag 4",
+    "eigenKeuze": "Nieuw-Zeeland en Tasmanië",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 116,
+    "waar": "oppervlakte-omtrek-po stap 2 vraag 9",
+    "eigenKeuze": "180 cm",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('4 × 45 = 180 cm')."
+  },
+  {
+    "nr": 117,
+    "waar": "oppervlakte-omtrek-po stap 3 vraag 6",
+    "eigenKeuze": "56 cm²",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('8 × 7 = 56 cm²')."
+  },
+  {
+    "nr": 118,
+    "waar": "plattegrond-legenda-po stap 1 vraag 2",
+    "eigenKeuze": "van bovenaf",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 119,
+    "waar": "plattegrond-legenda-po stap 2 vraag 2",
+    "eigenKeuze": "een restaurant",
+    "oordeel": "fout",
+    "reden": "Antwoord staat letterlijk in de vraag ('🍴 = restaurant' … wat is daar?); veel te makkelijk voor groep 7-8."
+  },
+  {
+    "nr": 120,
+    "waar": "plattegrond-legenda-po stap 2 vraag 8",
+    "eigenKeuze": "de rode lijn",
+    "oordeel": "twijfel",
+    "reden": "Legenda in de vraag zegt 'rode lijn = fietsroute', vraag gaat over fietstocht: puur opzoeken, erg makkelijk voor groep 7-8; basis geeft het antwoord."
+  },
+  {
+    "nr": 121,
+    "waar": "plattegrond-legenda-po stap 3 vraag 1",
+    "eigenKeuze": "het noorden",
+    "oordeel": "fout",
+    "reden": "Antwoord bijna letterlijk in de vraag ('pijl met de N naar boven' → noorden); basis geeft het antwoord."
+  },
+  {
+    "nr": 122,
+    "waar": "plattegrond-legenda-po stap 3 vraag 7",
+    "eigenKeuze": "naar het noorden",
+    "oordeel": "twijfel",
+    "reden": "Vraag zegt zelf 'het noorden is boven' en 'restaurant bovenaan': één stap; basis geeft het antwoord ('= naar het noorden')."
+  },
+  {
+    "nr": 123,
+    "waar": "politiek-democratie-po stap 3 vraag 2",
+    "eigenKeuze": "De koning leest de plannen voor",
+    "oordeel": "twijfel",
+    "reden": "basis is telegramzin en geeft het antwoord ('Koning leest plannen kabinet voor'); afleider 'feestdag voor alle prinsen' is weinig serieus."
+  },
+  {
+    "nr": 124,
+    "waar": "politiek-democratie-po stap 6 vraag 6",
+    "eigenKeuze": "2002",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 125,
+    "waar": "procenten-po stap 6 vraag 6",
+    "eigenKeuze": "20%",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 126,
+    "waar": "procenten-po stap 7 vraag 11",
+    "eigenKeuze": "10",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij 20 ('20 is 10% van 200. Is 5% meer of minder?') rekent bijna voor: helft van 20 = 10, en 5 is al uitgesloten."
+  },
+  {
+    "nr": 127,
+    "waar": "recyclen-afval-po stap 4 vraag 8",
+    "eigenKeuze": "Heel kleine stukjes plastic",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 128,
+    "waar": "redactiesommen-pad stap 5 vraag 20",
+    "eigenKeuze": "5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 129,
+    "waar": "rekenen-tot-100-nieuwkomers stap 4 vraag 3",
+    "eigenKeuze": "72",
+    "oordeel": "fout",
+    "reden": "wrongHints rekenen het antwoord voor: '71 is één te weinig', '62 is tien te weinig', '82 is tien te veel' → 72."
+  },
+  {
+    "nr": 130,
+    "waar": "rekenen-tot-100-nieuwkomers stap 5 vraag 2",
+    "eigenKeuze": "15",
+    "oordeel": "fout",
+    "reden": "wrongHints verraden het antwoord: '14 is één te weinig', '25 is tien te veel' → 15."
+  },
+  {
+    "nr": 131,
+    "waar": "rekenen-tot-20-nieuwkomers stap 3 vraag 4",
+    "eigenKeuze": "1",
+    "oordeel": "fout",
+    "reden": "wrongHints verraden het antwoord: '0 is één te weinig', '2 is één te veel' → 1."
+  },
+  {
+    "nr": 132,
+    "waar": "rekenverhaaltjes-nieuwkomers stap 1 vraag 4",
+    "eigenKeuze": "35",
+    "oordeel": "fout",
+    "reden": "wrongHints verraden het antwoord: '25 is tien te weinig', '36 is één te veel' → 35."
+  },
+  {
+    "nr": 133,
+    "waar": "ruimtevaart-po stap 4 vraag 4",
+    "eigenKeuze": "1969",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 134,
+    "waar": "schatten-afronden stap 2 vraag 10",
+    "eigenKeuze": "560",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('560 → 600, niet 500')."
+  },
+  {
+    "nr": 135,
+    "waar": "schatten-afronden stap 4 vraag 2",
+    "eigenKeuze": "2 uur 45 min",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 136,
+    "waar": "schatten-afronden stap 4 vraag 7",
+    "eigenKeuze": "€ 4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 137,
+    "waar": "schema-tekst-combi-po stap 2 vraag 4",
+    "eigenKeuze": "(niet op te lossen: tabel ontbreekt)",
+    "oordeel": "twijfel",
+    "reden": "Vraag verwijst naar een prijstabel (tarieven, 't/m 11 jaar', gezinskaart) die niet in q staat en er is geen svg-veld; € 4,50 niet te controleren."
+  },
+  {
+    "nr": 138,
+    "waar": "schemas-stappenplannen-po stap 5 vraag 17",
+    "eigenKeuze": "De namen van de rijen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 139,
+    "waar": "schrijven-teksten-po stap 1 vraag 9",
+    "eigenKeuze": "In de eerste en de laatste zin",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 140,
+    "waar": "schrijven-teksten-po stap 5 vraag 2",
+    "eigenKeuze": "Geachte heer/mevrouw",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 141,
+    "waar": "soorten-teksten-po stap 2 vraag 4",
+    "eigenKeuze": "instructieve",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij 'informatieve' omschrijft het goede antwoord ('ze zeggen wat je moet doen' = instructief)."
+  },
+  {
+    "nr": 142,
+    "waar": "spelling-eerste-woorden-g3 stap 1 vraag 10",
+    "eigenKeuze": "lip",
+    "oordeel": "fout",
+    "reden": "Antwoord staat letterlijk in de vraag: 'l - i - p' → lip; basis geeft ook het antwoord."
+  },
+  {
+    "nr": 143,
+    "waar": "spelling-eerste-woorden-g3 stap 3 vraag 4",
+    "eigenKeuze": "reus",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('… reus')."
+  },
+  {
+    "nr": 144,
+    "waar": "spelling-eerste-woorden-g3 stap 5 vraag 2",
+    "eigenKeuze": "kasteel",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('kas + teel = kasteel')."
+  },
+  {
+    "nr": 145,
+    "waar": "spelling-ei-ij-au-ou stap 1 vraag 2",
+    "eigenKeuze": "Ja, ze klinken precies hetzelfde",
+    "oordeel": "twijfel",
+    "reden": "Hulpstap niveaus.basis geeft alleen het antwoord ('Ja, ze klinken precies hetzelfde')."
+  },
+  {
+    "nr": 146,
+    "waar": "spelling-overige-po stap 2 vraag 1",
+    "eigenKeuze": "?",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 147,
+    "waar": "spelling-overige-po stap 5 vraag 12",
+    "eigenKeuze": "kritisch",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij 'kritis' klopt fonetisch niet: in 'kritische' hoor je geen sj-klank (-isch klinkt als 'ies'); verwarrend."
+  },
+  {
+    "nr": 148,
+    "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 1",
+    "eigenKeuze": "Twee dingen tegelijk bereiken",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 149,
+    "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 4",
+    "eigenKeuze": "Het heel goed hebben",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 150,
+    "waar": "synoniemen-tegenstellingen-po stap 3 vraag 3",
+    "eigenKeuze": "Onmogelijk",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]

@@ -4,73 +4,73 @@ Gegenereerd door src/features/learn/startsets.test.js op 2026-11-03. Bron: start
 
 ## 1. Alfabetisch opzoeken & woordenboek (alfabet-woordenboek-po, stap 1)
 Vraag: Welk woord komt het eerst in het alfabet?
-- ▫️ banaan
-- ✅ appel
 - ▫️ druif
+- ✅ appel
+- ▫️ banaan
 - ▫️ citroen
 
 ## 2. Alfabetisch opzoeken & woordenboek (alfabet-woordenboek-po, stap 1)
 Vraag: Welke letter komt direct ná de M?
-- ▫️ K
-- ▫️ O
 - ✅ N
+- ▫️ O
 - ▫️ L
+- ▫️ K
 
 ## 3. Alfabetisch opzoeken & woordenboek (alfabet-woordenboek-po, stap 3)
 Vraag: Welk woord komt het eerst: boom, bal, bus of beer?
-- ▫️ bus
+- ✅ bal
 - ▫️ boom
 - ▫️ beer
-- ✅ bal
+- ▫️ bus
 
 ## 4. Alfabetisch opzoeken & woordenboek (alfabet-woordenboek-po, stap 3)
 Vraag: Welk woord komt het eerst: stoel, school, stip of stam?
 - ▫️ stoel
-- ✅ school
 - ▫️ stip
 - ▫️ stam
+- ✅ school
 
 ## 5. Inhoudsopgave & register gebruiken (inhoudsopgave-register-po, stap 1)
 Vraag: Waar in een boek staat de inhoudsopgave meestal?
-- ▫️ achteraan
-- ✅ vooraan
 - ▫️ op de kaft
+- ✅ vooraan
+- ▫️ achteraan
 - ▫️ precies in het midden
 
 ## 6. Inhoudsopgave & register gebruiken (inhoudsopgave-register-po, stap 1)
 Vraag: Wat staat er in een inhoudsopgave?
-- ▫️ alle onderwerpen op alfabet met paginanummers
 - ▫️ de naam van de schrijver en de uitgever
-- ▫️ een korte samenvatting van elk hoofdstuk
 - ✅ de hoofdstukken met hun paginanummers
+- ▫️ alle onderwerpen op alfabet met paginanummers
+- ▫️ een korte samenvatting van elk hoofdstuk
 
 ## 7. Inhoudsopgave & register gebruiken (inhoudsopgave-register-po, stap 2)
 Vraag: Waar in een boek staat het register?
-- ✅ achteraan
-- ▫️ vooraan
-- ▫️ in het midden
 - ▫️ op de kaft
+- ✅ achteraan
+- ▫️ in het midden
+- ▫️ vooraan
 
 ## 8. Inhoudsopgave & register gebruiken (inhoudsopgave-register-po, stap 2)
 Vraag: Wat staat er in een register?
-- ▫️ de titel en de schrijver van het boek
-- ▫️ de hoofdstukken op boekvolgorde
 - ✅ onderwerpen op alfabet met paginanummers
+- ▫️ de hoofdstukken op boekvolgorde
 - ▫️ een korte samenvatting van het verhaal
+- ▫️ de titel en de schrijver van het boek
 
 ## 9. Dienstregeling & roosters lezen (dienstregeling-roosters-po, stap 1)
 Vraag: Trein A vertrekt om 9:10 uit Utrecht en komt om 10:00 aan in Zwolle. Hoe lang duurt die reis?
 - ▫️ 40 minuten
-- ▫️ 1 uur
-- ✅ 50 minuten
 - ▫️ 30 minuten
+- ✅ 50 minuten
+- ▫️ 1 uur
 
 ## 10. Dienstregeling & roosters lezen (dienstregeling-roosters-po, stap 1)
 Vraag: Je staat om 9:30 op het station Utrecht. De treinen vertrekken om 9:10, 9:40 en 10:10. Hoe lang moet je wachten op de volgende trein?
+- ▫️ 40 minuten
 - ✅ 10 minuten
 - ▫️ 20 minuten
 - ▫️ 30 minuten
-- ▫️ 40 minuten
 
 ## 11. Dienstregeling & roosters lezen (dienstregeling-roosters-po, stap 2)
 Vraag: In het rooster: maandag = rekenen, taal, gym · dinsdag = taal, rekenen, wereld. Welk vak heb je dinsdag het 1e uur?
@@ -81,63 +81,63 @@ Vraag: In het rooster: maandag = rekenen, taal, gym · dinsdag = taal, rekenen, 
 
 ## 12. Dienstregeling & roosters lezen (dienstregeling-roosters-po, stap 2)
 Vraag: 1e uur: maandag rekenen, dinsdag taal, woensdag gym. Op welke dag begin je met gym?
-- ▫️ maandag
-- ▫️ donderdag
 - ✅ woensdag
 - ▫️ dinsdag
+- ▫️ donderdag
+- ▫️ maandag
 
 ## 13. Plattegrond & legenda lezen (plattegrond-legenda-po, stap 2)
 Vraag: Wat is een legenda?
-- ✅ de uitleg van de tekens op de kaart
 - ▫️ de schaal onderaan de kaart
 - ▫️ de pijl die het noorden aanwijst
 - ▫️ de titel bovenaan de kaart
+- ✅ de uitleg van de tekens op de kaart
 
 ## 14. Plattegrond & legenda lezen (plattegrond-legenda-po, stap 2)
-Vraag: In de legenda staat 🍴 = restaurant. Je ziet 🍴 op de plattegrond. Wat is daar?
+Vraag: De legenda van een dierentuin: 🅿️ = parkeerplaats · 🚻 = toilet · 🍴 = restaurant · 🚪 = uitgang. Naast de apenrots staat een 🍴. Wat vind je daar?
 - ✅ een restaurant
-- ▫️ de uitgang
 - ▫️ een toilet
+- ▫️ de uitgang
 - ▫️ een parkeerplaats
 
 ## 15. Plattegrond & legenda lezen (plattegrond-legenda-po, stap 3)
-Vraag: Op een plattegrond wijst de pijl met de N naar boven. Welke windrichting is 'boven'?
+Vraag: Op een plattegrond staat een windroos. De pijl van de windroos wijst recht naar boven. Je wandelt naar de bovenkant van de kaart. In welke windrichting wandel je?
 - ▫️ het westen
-- ✅ het noorden
-- ▫️ het oosten
 - ▫️ het zuiden
+- ▫️ het oosten
+- ✅ het noorden
 
 ## 16. Plattegrond & legenda lezen (plattegrond-legenda-po, stap 3)
 Vraag: Het noorden is boven. Je moet naar het oosten. Welke kant op de kaart is dat?
 - ▫️ naar links
-- ▫️ naar onderen
 - ✅ naar rechts
+- ▫️ naar onderen
 - ▫️ naar boven
 
 ## 17. Folder, bon & advertentie lezen (folder-bon-advertentie-po, stap 1)
 Vraag: Je koopt 3 broden van €1,20 per stuk. Hoeveel kost het brood samen?
-- ▫️ €1,20
-- ▫️ €2,40
 - ✅ €3,60
 - ▫️ €3,00
+- ▫️ €2,40
+- ▫️ €1,20
 
 ## 18. Folder, bon & advertentie lezen (folder-bon-advertentie-po, stap 1)
 Vraag: Het totaalbedrag is €8,40. Je betaalt met een briefje van €10. Hoeveel wisselgeld krijg je terug?
-- ▫️ €2,60
-- ✅ €1,60
 - ▫️ €2,40
+- ▫️ €2,60
 - ▫️ €1,40
+- ✅ €1,60
 
 ## 19. Folder, bon & advertentie lezen (folder-bon-advertentie-po, stap 2)
 Vraag: Een aanbieding zegt '2 halen, 1 betalen'. Voor hoeveel stuks betaal je als je er 2 pakt?
 - ✅ 1
-- ▫️ 2
 - ▫️ 3
+- ▫️ 2
 - ▫️ 0
 
 ## 20. Folder, bon & advertentie lezen (folder-bon-advertentie-po, stap 2)
 Vraag: Er is 25% korting op een jas van €40. Hoeveel korting is dat in euro's?
-- ▫️ €4
-- ▫️ €25
 - ▫️ €15
 - ✅ €10
+- ▫️ €25
+- ▫️ €4
