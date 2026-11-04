@@ -146,6 +146,8 @@
 
 - **14 okt:** tester-oproep gemaild aan 35 Gmail-adressen (accounts + e-maillijst), allen vooraf op de Play-testerslijst (nu 50). Adreslijst + verzendlog: Desktop\Leerkwartier-dossiersndroid-testers (niet in git). Wacht op: aanmeldingen in Console (stand 9, nodig 12).
 
+- **📱 Google Play — nieuwe app app.leerkwartier.play INGEDIEND wo 4 nov 22:45** (organisatieaccount hallo@, app-ID 4974255246531748686, productie NL+BE). Wacht op: Google-beoordeling (meestal ≤7 dagen; mail naar hallo@). Nudge: niet; bij afwijzing eerst de reden lezen in Publicatieoverzicht/Beleidsstatus. Daarna links + oude app weghalen.
+
 ## 🔎 Gevonden bij de Gmail-nazoek 4 nov 2026 (open lussen die nog nergens stonden)
 - **🎫 Rotterdampas — aanbod ingediend wo 28 okt 09:22** ("onbeperkt gratis het Familie-pakket…", notificatie "wordt nu gecheckt"). Wacht op: goedkeuring partnerafdeling. Nudge: ~wo 11 nov via partnerportaal/mail als stil.
 - **🤝 Stichting Present Tilburg — Owen Vergeer, coördinator (owen.vergeer@presenttilburg.nl, 06-23114756)** · ma 2 nov 08:00 (mail zat in hun spam): gestart 1 aug 2026, nog geen nieuwsbrief, "goed om over na te denken… wordt vervolgd". Geen antwoord van ons. → kort bedankje (concept bij Mark) + opvolgen 1 feb 2027 (opvolgbronnen). Idee: Present is een landelijk netwerk (~70 lokale stichtingen, present.nl) → spoor-1-kandidaat.
