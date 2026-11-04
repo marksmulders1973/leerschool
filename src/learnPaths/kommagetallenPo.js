@@ -774,6 +774,22 @@ const steps = [
         options: ["0,08", "0,8", "8", "0,008"],
         answer: 0,
         wrongHints: [null, "Te veel — hoeveel decimalen heeft elk getal? Tel ze op.", "Komma vergeten — er moet er één in.", "Te ver naar links — 1 decimaal te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vermenigvuldig zonder komma", tekst: "Doe eerst 4 × 2 = 8." },
+            { titel: "Tel de cijfers achter de komma", tekst: "0,4 heeft 1 cijfer achter de komma, 0,2 ook 1. Samen 2." },
+            { titel: "Zet de komma terug", tekst: "8 met 2 cijfers achter de komma wordt 0,08." },
+          ],
+          woorden: [{ woord: "decimalen", uitleg: "De cijfers achter de komma. 0,4 heeft er één." }],
+          theorie: "Keer een getal kleiner dan 1 maakt de uitkomst kleiner. 0,4 × 0,2 is dus kleiner dan 0,4.",
+          voorbeelden: [{ type: "stap", tekst: "0,3 × 0,3: 3 × 3 = 9, twee decimalen, dus 0,09." }],
+          basiskennis: [{ onderwerp: "Komma tellen", uitleg: "Tel de decimalen van beide getallen bij elkaar op; zoveel cijfers staan er achter de komma in het antwoord." }],
+          niveaus: {
+            basis: "Reken eerst 4 × 2 uit. Tel dan hoeveel cijfers er in totaal achter de komma staan: 0,4 heeft er 1 en 0,2 ook 1. Zoveel cijfers zet je in het antwoord achter de komma.",
+            simpeler: "4 × 2 = 8. Twee cijfers achter de komma in de som, dus ook twee in het antwoord: 0,0_.",
+            nogSimpeler: "Keer een getal kleiner dan 1 maakt het antwoord kleiner dan 0,4.",
+          },
+        },
       },
       {
         q: "**3,2 × 5** = ?",

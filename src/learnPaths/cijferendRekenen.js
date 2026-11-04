@@ -63,17 +63,17 @@ const steps = [
         },
       },
       {
-        q: "Bij cijferend **optellen** werk je **van** ... **naar** ...",
-        options: ["Rechts naar links","Links naar rechts","Boven naar onder","Maakt niet uit"],
+        q: "Bij cijferend **optellen**: bij welke **kolom** begin je?",
+        options: ["Rechts, bij de eenheden","Links, bij het grootste getal","In het midden","Maakt niet uit"],
         answer: 0,
-        wrongHints: [null,"Waar staan de eenheden: links of rechts? En in welke kolom ontstaat het eerste onthoudje?","Het gaat om de volgorde van de kolommen: welke kolom pak je als eerste?","Als je links begint, waar laat je dan het onthoudje van de eenheden?"],
+        wrongHints: [null,"Als je links begint: waar laat je dan het onthoudje van de eenheden?","Het gaat om de volgorde van de kolommen. In welke kolom staan de eenheden?","Probeer 47 + 38 van links: 4 + 3 = 7, dan 7 + 8 = 15. Waar moet die 1 nu heen?"],
         uitlegPad: {
           stappen: [{ titel: "Rechts begint", tekst: "Eenheden eerst (rechts), dan tientallen, dan honderdtallen. Want onthoudje gaat naar links." }],
           woorden: [{ woord: "kolommen", uitleg: "Verticale 'banen' in cijferen: eenheden, tientallen, honderden." }],
           theorie: "Rechts → links omdat onthoudje van eenheden naar tientallen gaat. Andersom werkt niet.",
           voorbeelden: [{ type: "volgorde", tekst: "247+158: doe eerst 7+8 (eenheden), dan 4+5+1 (tientallen, +1 onthoud)." }],
           basiskennis: [{ onderwerp: "Onthoudje", uitleg: "Bij optelling >9 in een kolom: 1 onthouden voor links." }],
-          niveaus: { basis: "Rechts → links.", simpeler: "Cijferen begint bij de KLEINSTE getallen (eenheden, helemaal rechts) en gaat naar links toe.", nogSimpeler: "Rechts eerst" },
+          niveaus: { basis: "Een onthoudje gaat altijd naar de kolom links ervan. Bij welke kolom moet je dan beginnen, zodat je dat onthoudje nog mee kunt nemen?", simpeler: "Cijferen begint bij de KLEINSTE getallen (de eenheden, helemaal rechts) en gaat naar links toe.", nogSimpeler: "Rechts eerst, bij de eenheden." },
         },
       },
       {

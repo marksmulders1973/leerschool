@@ -96,9 +96,9 @@ const steps = [
       },
       {
         q: "*'Het **verlamde** dier kon niet meer lopen.'* Wat betekent verlamd?",
-        options: ["Niet kunnen bewegen", "Heel erg moe zijn", "Heel erg bang zijn", "Gewond aan een poot"],
+        options: ["Niet kunnen bewegen", "Heel erg moe zijn", "Heel erg bang zijn", "Heel oud geworden"],
         answer: 0,
-        wrongHints: [null, "Een moe dier kan na wat rust weer lopen. Welk woordje zit er in ver-LAM-d?", "Van schrik sta je soms even stil, maar 'verlamd' gaat over je lichaam. Wat betekent 'lam'?", "Een wond is een verwonding. Welk woordje zit er in ver-LAM-d, en wat betekent dat?"],
+        wrongHints: [null, "Een moe dier kan na wat rust weer lopen. Welk woordje zit er in ver-LAM-d?", "Van schrik sta je soms even stil, maar 'verlamd' gaat over je lichaam. Wat betekent 'lam'?", "Een oud dier loopt langzamer, maar kan nog wel bewegen. Welk woordje zit er in ver-LAM-d, en wat betekent dat?"],
         uitlegPad: {
           stappen: [
             { titel: "Context geeft betekenis", tekst: "De zin zegt: 'kon niet meer lopen'. Dus 'verlamd' moet 'niet kunnen bewegen' betekenen." },

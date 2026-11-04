@@ -190,6 +190,12 @@ function EerScherm({ code, onVerder }) {
             ? <>How wonderful that you found us through <strong style={{ color: "#0a7d43" }}>the Queen Wilhelmina Library</strong>.</>
             : <>Wat fijn dat je ons hebt gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
         </p>
+        {/* 4 nov 2026 (gebruiksanalyse): de vraag staat nu BOVEN de belofte-kaart. Meting 14 dagen
+            Apeldoorn: 128 zagen dit scherm, 60 beantwoordden de vraag — die stond op een telefoon onder
+            de vouw, achter logo + kop + belofte. Eerst doen, dan lezen (regel 29 sep "vraag eerst").
+            Meetpunt: partner_eer_vraag / partner_welkom_toon per code (Apeldoorn vóór: 47%). */}
+        <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 16 }}>{isEN ? "Try one question right away:" : "Probeer meteen één vraag:"}</div>
+        <EerVraag code={code} en={isEN} donker={donker} onVerder={onVerder} />
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
           <div style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
@@ -204,9 +210,6 @@ function EerScherm({ code, onVerder }) {
           </div>
           <FamilieLijst open={famOpen} en={isEN} donker={donker} voorNavigeren={() => { try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ } }} />
         </div>
-        {/* Weg 1: kind erbij → meteen één vraag (i.p.v. eerst een knop). */}
-        <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 24 }}>{isEN ? "Is your child with you? Try one question:" : "Is je kind erbij? Probeer meteen één vraag:"}</div>
-        <EerVraag code={code} en={isEN} donker={donker} onVerder={onVerder} />
         {/* Weg 2: ouder zonder kind → link met code bewaren. */}
         <EerBewaar code={code} en={isEN} donker={donker} />
         <button type="button" onClick={onVerder} style={{ marginTop: 20, width: "100%", border: "none", background: "transparent", font: "700 14px system-ui", color: donker ? "#b9c6d4" : "#5a6775", textDecoration: "underline", cursor: "pointer" }}>

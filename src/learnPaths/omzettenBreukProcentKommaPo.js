@@ -420,10 +420,10 @@ const steps = [
         },
       },
       {
-        q: "Hoe ga je van een kommagetal naar procent?",
-        options: ["keer 100", "deel door 100", "keer 10", "deel door 10"],
+        q: "**0,35** geschreven als **percentage** = ?",
+        options: ["35%", "3,5%", "0,35%", "350%"],
         answer: 0,
-        wrongHints: [null, "Dat is juist andersom (procent → kommagetal).", "Keer 10 schuift de komma maar één plaats. Is dat genoeg?", "Delen maakt het getal kleiner. Wordt een getal groter of kleiner als je naar procent gaat?"],
+        wrongHints: [null, "Te klein: 0,35 is meer dan een kwart, en een kwart is al 25%.", "Veel te klein: 0,35 is ruim een derde van het geheel.", "Te groot: 350% is drieënhalf keer het geheel, en 0,35 is kleiner dan 1."],
         uitlegPad: {
           stappen: [
             { titel: "Denk aan een voorbeeld", tekst: "Je weet dat 0,5 hetzelfde is als 50%. Bedenk welke rekenstap je nodig hebt om van 0,5 naar 50 te komen." },
@@ -434,7 +434,7 @@ const steps = [
           voorbeelden: [{ type: "geld", tekst: "0,25 euro extra spaargeld en 25% korting gebruiken allebei dezelfde soort rekenstap om van vorm te wisselen." }],
           basiskennis: [{ onderwerp: "Tegenovergestelde bewerkingen", uitleg: "Twee bewerkingen kunnen elkaars tegenovergestelde zijn, zoals optellen/aftrekken of vermenigvuldigen/delen." }],
           niveaus: {
-            basis: "Denk aan 0,5: dat is de helft, en de helft is 50%. Hoe kom je van 0,5 bij 50?",
+            basis: "Denk aan 0,5: dat is de helft, en de helft is 50%. Doe met 0,35 precies dezelfde stap.",
             simpeler: "0,3 wordt 30%. Wat deed je: × 100 of ÷ 100?",
             nogSimpeler: "Wordt het getal groter of kleiner als je naar procent gaat?",
           },
