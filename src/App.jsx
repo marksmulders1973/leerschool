@@ -1745,7 +1745,8 @@ export default function App() {
           ) : (
             <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
-              onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
+              onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")}
+              onWisselSpeler={() => { mijnTerugRef.current = false; setPage("mijn-pagina"); }} />
           )}
         </Suspense>
       )}

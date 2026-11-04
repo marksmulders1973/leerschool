@@ -7,6 +7,88 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
+// Kapsel per `stijl` (4 nov 2026, 30 poppetjes): kort (standaard), lang,
+// krullen, staartjes, knot, kaal, pet, hoofddoek, muts. Oude `pet: true` =
+// stijl "pet". Alles blokjes, zodat het bij de blok-wereld blijft passen.
+function Kapsel({ P }) {
+  const stijl = P.stijl || (P.pet ? "pet" : "kort");
+  const H = (props) => <meshStandardMaterial color={P.haar} roughness={1} {...props} />;
+  switch (stijl) {
+    case "kaal":
+      return null;
+    case "pet": {
+      const k = P.petKleur || P.haar;
+      return (
+        <>
+          <mesh position={[0, 0.26, -0.02]}><boxGeometry args={[0.54, 0.12, 0.54]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          <mesh position={[0, 0.22, 0.3]}><boxGeometry args={[0.46, 0.05, 0.2]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          {/* haar onder de pet, achter en opzij */}
+          <mesh position={[0, 0.12, -0.2]}><boxGeometry args={[0.52, 0.16, 0.14]} /><H /></mesh>
+        </>
+      );
+    }
+    case "muts": {
+      const k = P.muts || "#e53935";
+      return (
+        <>
+          <mesh position={[0, 0.3, 0]}><boxGeometry args={[0.56, 0.22, 0.56]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          <mesh position={[0, 0.17, 0]}><boxGeometry args={[0.58, 0.1, 0.58]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          <mesh position={[0, 0.47, 0]}><boxGeometry args={[0.18, 0.14, 0.18]} /><meshStandardMaterial color="#f5f5f5" roughness={1} /></mesh>
+        </>
+      );
+    }
+    case "hoofddoek": {
+      const k = P.doek || "#6a1b9a";
+      return (
+        <>
+          <mesh position={[0, 0.2, -0.01]}><boxGeometry args={[0.56, 0.2, 0.56]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          <mesh position={[0, -0.06, -0.08]}><boxGeometry args={[0.58, 0.44, 0.44]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+          <mesh position={[0, -0.4, -0.02]}><boxGeometry args={[0.46, 0.3, 0.46]} /><meshStandardMaterial color={k} roughness={1} /></mesh>
+        </>
+      );
+    }
+    case "lang":
+      return (
+        <>
+          <mesh position={[0, 0.23, -0.03]}><boxGeometry args={[0.54, 0.16, 0.5]} /><H /></mesh>
+          <mesh position={[0, -0.12, -0.2]}><boxGeometry args={[0.54, 0.62, 0.16]} /><H /></mesh>
+          <mesh position={[-0.27, -0.1, 0.02]}><boxGeometry args={[0.06, 0.5, 0.44]} /><H /></mesh>
+          <mesh position={[0.27, -0.1, 0.02]}><boxGeometry args={[0.06, 0.5, 0.44]} /><H /></mesh>
+        </>
+      );
+    case "krullen":
+      return (
+        <>
+          <mesh position={[0, 0.27, -0.02]}><boxGeometry args={[0.6, 0.24, 0.6]} /><H /></mesh>
+          <mesh position={[-0.2, 0.36, 0.1]}><boxGeometry args={[0.16, 0.14, 0.16]} /><H /></mesh>
+          <mesh position={[0.18, 0.37, -0.12]}><boxGeometry args={[0.16, 0.14, 0.16]} /><H /></mesh>
+          <mesh position={[0.02, 0.38, 0.14]}><boxGeometry args={[0.14, 0.12, 0.14]} /><H /></mesh>
+          <mesh position={[-0.29, 0.1, -0.05]}><boxGeometry args={[0.1, 0.24, 0.44]} /><H /></mesh>
+          <mesh position={[0.29, 0.1, -0.05]}><boxGeometry args={[0.1, 0.24, 0.44]} /><H /></mesh>
+        </>
+      );
+    case "staartjes":
+      return (
+        <>
+          <mesh position={[0, 0.23, -0.03]}><boxGeometry args={[0.54, 0.16, 0.5]} /><H /></mesh>
+          <mesh position={[-0.32, 0.02, -0.08]}><boxGeometry args={[0.12, 0.34, 0.14]} /><H /></mesh>
+          <mesh position={[0.32, 0.02, -0.08]}><boxGeometry args={[0.12, 0.34, 0.14]} /><H /></mesh>
+          <mesh position={[-0.32, 0.2, -0.08]}><boxGeometry args={[0.12, 0.08, 0.14]} /><meshStandardMaterial color="#ff4081" roughness={1} /></mesh>
+          <mesh position={[0.32, 0.2, -0.08]}><boxGeometry args={[0.12, 0.08, 0.14]} /><meshStandardMaterial color="#ff4081" roughness={1} /></mesh>
+        </>
+      );
+    case "knot":
+      return (
+        <>
+          <mesh position={[0, 0.23, -0.03]}><boxGeometry args={[0.54, 0.16, 0.5]} /><H /></mesh>
+          <mesh position={[0, 0.38, -0.08]}><boxGeometry args={[0.22, 0.18, 0.22]} /><H /></mesh>
+        </>
+      );
+    default: // kort
+      return <mesh position={[0, 0.23, -0.03]}><boxGeometry args={[0.54, 0.16, 0.5]} /><H /></mesh>;
+  }
+}
+
 // `bouwt`: het poppetje houdt een bouwhamer vast (rechterarm geheven, zachte
 // hamer-zwaai) — zo zie je meteen dat je in bouw-modus bent (Mark 2 jul).
 export default function BlockyCharacter({ palette = {}, movingRef, targetHeight = 1.65, bouwt = false }) {
@@ -69,16 +151,18 @@ export default function BlockyCharacter({ palette = {}, movingRef, targetHeight 
         <mesh position={[0, 1.05, 0]} castShadow><boxGeometry args={[0.52, 0.66, 0.3]} /><meshStandardMaterial color={P.shirt} roughness={1} /></mesh>
         <Arm eigenRef={la} x={-0.35} />
         <Arm eigenRef={ra} x={0.35} hamer={bouwt} />
-        {/* Hoofd: blok + haar of petje + gezicht op de +z-kant. */}
+        {/* Hoofd: blok + kapsel (stijl) + gezicht op de +z-kant. */}
         <group position={[0, 1.64, 0]}>
           <mesh castShadow><boxGeometry args={[0.5, 0.48, 0.5]} /><meshStandardMaterial color={P.huid} roughness={1} /></mesh>
-          {P.pet ? (
-            <>
-              <mesh position={[0, 0.26, -0.02]}><boxGeometry args={[0.54, 0.12, 0.54]} /><meshStandardMaterial color={P.haar} roughness={1} /></mesh>
-              <mesh position={[0, 0.22, 0.3]}><boxGeometry args={[0.46, 0.05, 0.2]} /><meshStandardMaterial color={P.haar} roughness={1} /></mesh>
-            </>
-          ) : (
-            <mesh position={[0, 0.23, -0.03]}><boxGeometry args={[0.54, 0.16, 0.5]} /><meshStandardMaterial color={P.haar} roughness={1} /></mesh>
+          <Kapsel P={P} />
+          {P.bril && (
+            <group position={[0, 0.02, 0.262]}>
+              <mesh position={[-0.11, 0, 0]}><boxGeometry args={[0.15, 0.14, 0.02]} /><meshStandardMaterial color="#1d2a45" roughness={0.6} /></mesh>
+              <mesh position={[0.11, 0, 0]}><boxGeometry args={[0.15, 0.14, 0.02]} /><meshStandardMaterial color="#1d2a45" roughness={0.6} /></mesh>
+              <mesh position={[0, 0, 0]}><boxGeometry args={[0.08, 0.025, 0.02]} /><meshStandardMaterial color="#1d2a45" roughness={0.6} /></mesh>
+              <mesh position={[-0.11, 0, 0.005]}><boxGeometry args={[0.1, 0.09, 0.02]} /><meshStandardMaterial color="#cfe6ff" roughness={0.3} transparent opacity={0.55} /></mesh>
+              <mesh position={[0.11, 0, 0.005]}><boxGeometry args={[0.1, 0.09, 0.02]} /><meshStandardMaterial color="#cfe6ff" roughness={0.3} transparent opacity={0.55} /></mesh>
+            </group>
           )}
           {/* Ogen (wit + pupil) en een klein mondje. */}
           <mesh position={[-0.11, 0.02, 0.253]}><boxGeometry args={[0.09, 0.1, 0.01]} /><meshStandardMaterial color="#ffffff" roughness={0.5} /></mesh>

@@ -11,6 +11,7 @@ import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode,
 import { meldParkAan } from "../data/repos/galerijRepo";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD, PARK_INKOMST_CAP_PER_DAG } from "../features/zoo/zooEconomy";
 import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, isManipuleerbaar, maatConfig, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import BlokPreview from "../features/zoo/BlokPreview.jsx";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
 import { computeWater, bronRaaktCel } from "../features/zoo/water";
@@ -426,7 +427,7 @@ function maakBouwplannen() {
   }));
 }
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij, roomCode = null }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij, onWisselSpeler = null, roomCode = null }) {
   const naam = (userName || "").trim();
   const userId = authUser?.id || null;
 
@@ -1004,7 +1005,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (!samen || !loaded || !room) return;
     const conn = verbindParkRoom({
       code: room.code,
-      me: { name: naam, avatar: avatarUrl, uid: userId },
+      me: { name: spelerNaam, avatar: avatarUrl, uid: userId },
       handlers: {
         onOps: (ops, info) => {
           if (info?.versie != null) roomVersieRef.current = Math.max(roomVersieRef.current || 0, info.versie);
@@ -1169,6 +1170,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const kiesAvatar = (id) => {
     setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatar: id } }; });
     flits("Poppetje gekozen ✓");
+  };
+  // Eigen naam voor je poppetje (Mark 4 nov 2026: "ze moeten ook een eigen naam
+  // kunnen geven"). Opgeslagen in meta.owned.avatarNaam; staat boven je poppetje
+  // in het park en is de naam die medespelers zien. Leeg = je eigen voornaam.
+  const avatarNaam = ((meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatarNaam) || "").trim();
+  const spelerNaam = avatarNaam || naam;
+  const zetAvatarNaam = (n) => {
+    const schoon = String(n || "").replace(/[<>]/g, "").slice(0, 16);
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatarNaam: schoon } }; });
   };
 
   // Verzorging is PER DIER: elk dier heeft een eigen `fed`-datum. Recent voeren →
@@ -2311,6 +2321,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={menuKop}>🏡 Mijn park</div>
             <div style={menuGrid}>
               <MenuTegel emoji="👤" label="Mijn poppetje kiezen" fn={() => setPanel("karakter")} />
+              {/* 4 nov 2026 (Mark): tijdens het spel van speler wisselen → "Wie oefent er?" op Mijn. */}
+              {onWisselSpeler && <MenuTegel emoji="🔁" label="Andere speler" fn={() => { setPanel(null); onWisselSpeler(); }} />}
               <MenuTegel emoji="🐾" label="Kies je maatje" fn={openBuddyPicker} />
               <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
@@ -2527,6 +2539,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           groundMode={groundMode}
           onGround={onGroundTik}
           avatarUrl={avatarUrl}
+          naam={spelerNaam}
           buddyId={buddyId}
           buddyGroei={geleerdeStappen}
           buddyNaam={buddyNaamEff}
@@ -3709,11 +3722,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>👤 Kies je poppetje</h2>
               <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
             </div>
-            <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Dit is het poppetje waarmee jij door je park loopt.</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))", gap: 8 }}>
+            <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Dit is het poppetje waarmee jij door je park loopt. Kies er een uit {CHARACTERS.length}.</p>
+            <label style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, font: "700 13px system-ui", color: "#234" }}>
+              Naam van je poppetje
+              <input
+                type="text"
+                value={avatarNaam}
+                maxLength={16}
+                placeholder={naam || "bijv. Yara"}
+                onChange={(e) => zetAvatarNaam(e.target.value)}
+                style={{ flex: 1, minWidth: 0, padding: "7px 10px", borderRadius: 10, border: "2px solid #d8d2c0", font: "600 14px system-ui", color: "#234", background: "#fff" }}
+              />
+            </label>
+            {/* 4 nov 2026: 30 poppetjes met echt voorbeeldplaatje (geen emoticon). */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(84px, 1fr))", gap: 8, maxHeight: "62vh", overflowY: "auto", paddingRight: 4 }}>
               {CHARACTERS.map((c) => (
-                <button key={c.id} onClick={() => kiesAvatar(c.id)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 12px", borderRadius: 12, border: avatarId === c.id ? "3px solid #2e7d32" : "2px solid #e7e3d6", background: avatarId === c.id ? "#eaf6e8" : "#f5f3ea", cursor: "pointer", font: "800 13px system-ui", color: "#234" }}>
-                  <span style={{ fontSize: 24 }}>{c.emoji}</span>{c.name}
+                <button key={c.id} onClick={() => kiesAvatar(c.id)} aria-label={`Poppetje ${c.name}`} aria-pressed={avatarId === c.id} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: "8px 4px 6px", borderRadius: 12, border: avatarId === c.id ? "3px solid #2e7d32" : "2px solid #e7e3d6", background: avatarId === c.id ? "#eaf6e8" : "#f5f3ea", cursor: "pointer", font: "800 12.5px system-ui", color: "#234" }}>
+                  {c.blocky ? <BlokPreview palette={c.blocky} size={38} /> : <span style={{ height: 61, display: "grid", placeItems: "center", font: "800 11px system-ui", color: "#5b3d00" }}>3D</span>}
+                  <span>{c.name}</span>
                 </button>
               ))}
             </div>

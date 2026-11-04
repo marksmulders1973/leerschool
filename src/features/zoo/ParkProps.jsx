@@ -499,7 +499,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null, teleportRef = null }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null, teleportRef = null, naam = "" }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -652,6 +652,12 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     // Begin gedraaid naar het parkmidden, zodat je meteen het park ziet.
     <group ref={g} position={start} rotation={[0, startYaw, 0]} visible={!firstPerson && !verborgen}>
       <CharacterModel key={url} url={url} movingRef={moving} bouwt={bouwt} />
+      {/* Naamkaartje boven je eigen poppetje (4 nov 2026: eigen poppetjesnaam). */}
+      {naam && !firstPerson && !verborgen && (
+        <Html position={[0, 2.0, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: "none", userSelect: "none" }}>
+          <div style={{ background: "rgba(255,255,255,.92)", borderRadius: 999, padding: "2px 9px", font: "800 12px system-ui", color: "#2a3340", whiteSpace: "nowrap", boxShadow: "0 2px 6px rgba(0,0,0,.25)" }}>{naam}</div>
+        </Html>
+      )}
     </group>
   );
 }

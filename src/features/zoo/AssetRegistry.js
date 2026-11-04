@@ -367,21 +367,45 @@ export function goudConfig(id) {
 export const CHARACTERS = [
   // 🧱 Blok-poppetjes (Mark 2 jul, blok-wereld): 100% procedureel — passen bij
   // de Minecraft-look. url "blocky:<id>" → CharacterModel rendert BlockyCharacter.
-  { id: "blokSem", name: "Sem (blok)", emoji: "🟥", url: "blocky:blokSem", blocky: { huid: "#f0c8a0", haar: "#1c1c1e", shirt: "#e2574c", broek: "#26292e", schoen: "#17181a", pet: true } },
-  { id: "blokMila", name: "Mila (blok)", emoji: "🟪", url: "blocky:blokMila", blocky: { huid: "#f2d2b0", haar: "#7a4a20", shirt: "#b06ad8", broek: "#37474f", schoen: "#3a2a25" } },
-  { id: "blokJoep", name: "Joep (blok)", emoji: "🟩", url: "blocky:blokJoep", blocky: { huid: "#e8bd93", haar: "#4a3320", shirt: "#3ba55d", broek: "#35485c", schoen: "#26292c" } },
-  { id: "blokNora", name: "Nora (blok)", emoji: "🟨", url: "blocky:blokNora", blocky: { huid: "#8d5a3a", haar: "#101418", shirt: "#f2b134", broek: "#3f3a55", schoen: "#2a2a2a" } },
-  { id: "blokKai", name: "Kai (blok)", emoji: "🟦", url: "blocky:blokKai", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#4a90d9", broek: "#2e3d33", schoen: "#1f2022" } },
-  { id: "blokLuna", name: "Luna (blok)", emoji: "🩵", url: "blocky:blokLuna", blocky: { huid: "#f5d9c4", haar: "#b8452c", shirt: "#3cb5a8", broek: "#57424e", schoen: "#332f2c" } },
-  // Extra hoofdpersonen (Mark 2 jul): meer meiden + jongens zodat elk kind
-  // een poppetje vindt dat bij zich past.
-  { id: "blokFleur", name: "Fleur (blok)", emoji: "🌸", url: "blocky:blokFleur", blocky: { huid: "#f2d2b0", haar: "#e8b830", shirt: "#f06292", broek: "#4a3f6b", schoen: "#2a2a2e" } },
-  { id: "blokZoe", name: "Zoë (blok)", emoji: "🐚", url: "blocky:blokZoe", blocky: { huid: "#b07248", haar: "#3a2415", shirt: "#26c6da", broek: "#37474f", schoen: "#1f2022", pet: true } },
-  { id: "blokFinn", name: "Finn (blok)", emoji: "🦖", url: "blocky:blokFinn", blocky: { huid: "#e8bd93", haar: "#c2452d", shirt: "#66bb6a", broek: "#263238", schoen: "#17181a" } },
-  { id: "blokTess", name: "Tess (blok)", emoji: "🍀", url: "blocky:blokTess", blocky: { huid: "#f0c8a0", haar: "#6a4228", shirt: "#9575cd", broek: "#2e4638", schoen: "#3a2a25" } },
+  // 4 nov 2026 (Rittal via Charley: "wil een ander poppetje kunnen kiezen/zijn";
+  // Mark: "ze hebben gelijk, maak er 30"): 30 poppetjes, divers in huid, haar,
+  // kapsel (kort/lang/krullen/staartjes/knot/kaal/pet/hoofddoek/muts), bril en
+  // kleding. `haar`-kleur + `stijl` sturen BlockyCharacter; `pet: true` blijft
+  // werken als oude vorm van stijl "pet". Namen = gewone Nederlandse kindernamen
+  // van nu, geen "(blok)" meer in de naam.
+  { id: "blokSem", name: "Sem", url: "blocky:blokSem", blocky: { huid: "#f0c8a0", haar: "#1c1c1e", shirt: "#e2574c", broek: "#26292e", schoen: "#17181a", stijl: "pet" } },
+  { id: "blokMila", name: "Mila", url: "blocky:blokMila", blocky: { huid: "#f2d2b0", haar: "#7a4a20", shirt: "#b06ad8", broek: "#37474f", schoen: "#3a2a25", stijl: "lang" } },
+  { id: "blokJoep", name: "Joep", url: "blocky:blokJoep", blocky: { huid: "#e8bd93", haar: "#4a3320", shirt: "#3ba55d", broek: "#35485c", schoen: "#26292c", stijl: "kort" } },
+  { id: "blokNora", name: "Nora", url: "blocky:blokNora", blocky: { huid: "#8d5a3a", haar: "#101418", shirt: "#f2b134", broek: "#3f3a55", schoen: "#2a2a2a", stijl: "krullen" } },
+  { id: "blokKai", name: "Kai", url: "blocky:blokKai", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#4a90d9", broek: "#2e3d33", schoen: "#1f2022", stijl: "kort" } },
+  { id: "blokLuna", name: "Luna", url: "blocky:blokLuna", blocky: { huid: "#f5d9c4", haar: "#b8452c", shirt: "#3cb5a8", broek: "#57424e", schoen: "#332f2c", stijl: "staartjes" } },
+  { id: "blokFleur", name: "Fleur", url: "blocky:blokFleur", blocky: { huid: "#f2d2b0", haar: "#e8b830", shirt: "#f06292", broek: "#4a3f6b", schoen: "#2a2a2e", stijl: "lang" } },
+  { id: "blokZoe", name: "Zoë", url: "blocky:blokZoe", blocky: { huid: "#b07248", haar: "#3a2415", shirt: "#26c6da", broek: "#37474f", schoen: "#1f2022", stijl: "pet" } },
+  { id: "blokFinn", name: "Finn", url: "blocky:blokFinn", blocky: { huid: "#e8bd93", haar: "#c2452d", shirt: "#66bb6a", broek: "#263238", schoen: "#17181a", stijl: "kort" } },
+  { id: "blokTess", name: "Tess", url: "blocky:blokTess", blocky: { huid: "#f0c8a0", haar: "#6a4228", shirt: "#9575cd", broek: "#2e4638", schoen: "#3a2a25", stijl: "knot" } },
+  { id: "blokAmir", name: "Amir", url: "blocky:blokAmir", blocky: { huid: "#b8865a", haar: "#15110d", shirt: "#ff8a3d", broek: "#2c3e50", schoen: "#1f2022", stijl: "kort" } },
+  { id: "blokYara", name: "Yara", url: "blocky:blokYara", blocky: { huid: "#c9956a", haar: "#2b1b12", shirt: "#7c4dff", broek: "#37474f", schoen: "#2a2a2e", stijl: "hoofddoek", doek: "#6a1b9a" } },
+  { id: "blokDaan", name: "Daan", url: "blocky:blokDaan", blocky: { huid: "#f5d9c4", haar: "#d6a94a", shirt: "#1e88e5", broek: "#263238", schoen: "#17181a", stijl: "kort", bril: true } },
+  { id: "blokSara", name: "Sara", url: "blocky:blokSara", blocky: { huid: "#f2d2b0", haar: "#3a2415", shirt: "#ff5252", broek: "#1b2e5b", schoen: "#2a2a2e", stijl: "lang", bril: true } },
+  { id: "blokJayden", name: "Jayden", url: "blocky:blokJayden", blocky: { huid: "#6b4226", haar: "#0d0b0a", shirt: "#ffd600", broek: "#2e3d33", schoen: "#1f2022", stijl: "krullen" } },
+  { id: "blokNoor", name: "Noor", url: "blocky:blokNoor", blocky: { huid: "#8d5a3a", haar: "#101418", shirt: "#00bfa5", broek: "#3f3a55", schoen: "#2a2a2a", stijl: "hoofddoek", doek: "#00897b" } },
+  { id: "blokLevi", name: "Levi", url: "blocky:blokLevi", blocky: { huid: "#f0c8a0", haar: "#7a4a20", shirt: "#8d6e63", broek: "#37474f", schoen: "#3a2a25", stijl: "muts", muts: "#e53935" } },
+  { id: "blokLiv", name: "Liv", url: "blocky:blokLiv", blocky: { huid: "#f5d9c4", haar: "#f1e4b5", shirt: "#ec407a", broek: "#4a3f6b", schoen: "#2a2a2e", stijl: "staartjes" } },
+  { id: "blokMohamed", name: "Mohamed", url: "blocky:blokMohamed", blocky: { huid: "#a66f44", haar: "#15110d", shirt: "#43a047", broek: "#263238", schoen: "#17181a", stijl: "kort" } },
+  { id: "blokEva", name: "Eva", url: "blocky:blokEva", blocky: { huid: "#f2d2b0", haar: "#c2452d", shirt: "#29b6f6", broek: "#37474f", schoen: "#2a2a2e", stijl: "krullen" } },
+  { id: "blokMees", name: "Mees", url: "blocky:blokMees", blocky: { huid: "#e8bd93", haar: "#4a3320", shirt: "#ff7043", broek: "#2e4638", schoen: "#26292c", stijl: "pet", petKleur: "#1b2e5b" } },
+  { id: "blokAisha", name: "Aisha", url: "blocky:blokAisha", blocky: { huid: "#5e3a25", haar: "#0d0b0a", shirt: "#ffca28", broek: "#3f3a55", schoen: "#2a2a2a", stijl: "knot" } },
+  { id: "blokThijs", name: "Thijs", url: "blocky:blokThijs", blocky: { huid: "#f0c8a0", haar: "#b8452c", shirt: "#5c6bc0", broek: "#35485c", schoen: "#1f2022", stijl: "kort" } },
+  { id: "blokLotte", name: "Lotte", url: "blocky:blokLotte", blocky: { huid: "#f5d9c4", haar: "#6a4228", shirt: "#26a69a", broek: "#4a3f6b", schoen: "#332f2c", stijl: "lang" } },
+  { id: "blokRayan", name: "Rayan", url: "blocky:blokRayan", blocky: { huid: "#b8865a", haar: "#1c1c1e", shirt: "#d81b60", broek: "#263238", schoen: "#17181a", stijl: "krullen", bril: true } },
+  { id: "blokIsa", name: "Isa", url: "blocky:blokIsa", blocky: { huid: "#f2d2b0", haar: "#101418", shirt: "#7cb342", broek: "#37474f", schoen: "#2a2a2e", stijl: "kort" } },
+  { id: "blokBram", name: "Bram", url: "blocky:blokBram", blocky: { huid: "#e8bd93", haar: "#e8b830", shirt: "#00acc1", broek: "#2e3d33", schoen: "#26292c", stijl: "kaal" } },
+  { id: "blokZara", name: "Zara", url: "blocky:blokZara", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#ab47bc", broek: "#1b2e5b", schoen: "#2a2a2e", stijl: "staartjes", bril: true } },
+  { id: "blokOlivier", name: "Olivier", url: "blocky:blokOlivier", blocky: { huid: "#f0c8a0", haar: "#3a2415", shirt: "#fb8c00", broek: "#35485c", schoen: "#1f2022", stijl: "muts", muts: "#1e88e5" } },
+  { id: "blokJasmijn", name: "Jasmijn", url: "blocky:blokJasmijn", blocky: { huid: "#8d5a3a", haar: "#15110d", shirt: "#ef5350", broek: "#3f3a55", schoen: "#2a2a2a", stijl: "lang" } },
   // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D,
   // gerigd via Mixamo (Walk + Idle). Blijft — Mark's eigen creatie.
-  { id: "heldMj", name: "Held", emoji: "🎩", url: "/models/zoo/people/held-mj.glb" },
+  { id: "heldMj", name: "Held", url: "/models/zoo/people/held-mj.glb" },
   // De Quaternius "echte" mens-modellen (girl1-4/boy1-4) zijn 2 jul verwijderd
   // (Mark: alles blok-stijl). Oude keuzes vallen automatisch terug op blok-Sem.
 ];
