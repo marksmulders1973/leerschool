@@ -1,1 +1,28 @@
-[{"relation":["delegate_permission/common.handle_all_urls"],"target":{"namespace":"android_app","package_name":"app.leerkwartier.twa","sha256_cert_fingerprints":["A6:53:BA:26:EA:D4:A3:7D:15:B1:4C:29:C0:B4:30:1F:D2:D1:06:8F:0E:04:FE:BE:AB:F6:1F:B4:F8:DC:47:FE","C2:14:07:9B:CB:EE:0A:60:B1:29:E3:39:5B:D5:A9:5C:46:3E:EC:BB:5B:0C:C1:F9:C0:5B:2C:C9:46:67:F9:74"]}}]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.leerkwartier.twa",
+      "sha256_cert_fingerprints": [
+        "A6:53:BA:26:EA:D4:A3:7D:15:B1:4C:29:C0:B4:30:1F:D2:D1:06:8F:0E:04:FE:BE:AB:F6:1F:B4:F8:DC:47:FE",
+        "C2:14:07:9B:CB:EE:0A:60:B1:29:E3:39:5B:D5:A9:5C:46:3E:EC:BB:5B:0C:C1:F9:C0:5B:2C:C9:46:67:F9:74"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.leerkwartier.play",
+      "sha256_cert_fingerprints": [
+        "CC:0A:B7:7B:7D:A7:9E:A1:00:5E:49:6F:47:9F:2A:C9:5A:6E:6D:E0:5F:1A:73:E7:DF:07:54:D7:25:B0:E1:A7",
+        "4E:3F:F2:70:F9:91:B8:3C:C0:9F:70:DD:19:53:16:9F:0F:18:01:A6:7E:BD:9E:89:5C:49:93:66:BD:12:69:33"
+      ]
+    }
+  }
+]
