@@ -32,4 +32,4 @@ vraag geven, nooit het antwoord of een eliminatie-hint die maar op één optie p
 
 ## Uitrol
 
-Zit in v1049 "104" (wo 4 nov ochtend, samen met de SEO-oefenvragenpagina's, sitemap en llms.txt — geen tweede uitrol op 3 nov).
+v1049 "104", gepusht di 3 nov 14:50 (Mark: "push nu"), samen met de SEO-oefenvragenpagina's, sitemap en llms.txt.

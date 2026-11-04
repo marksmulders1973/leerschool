@@ -1,36 +1,36 @@
 # Haagse scholen zonder vindbaar e-mailadres (30) — alternatieve route
 
-Bron: emails_chunk_*.tsv (agenten 3 nov). Route: contactformulier op de site (zelfde goedgekeurde tekst als de mail, zonder bijlage) of bellen. Nog NIET gedaan; wacht op Marks keuze.
+Bron: emails_chunk_*.tsv (agenten 3 nov). Route: contactformulier op de site (zelfde goedgekeurde tekst als de mail, zonder bijlage) of bellen. Mark koos 3 nov voor "formulieren". Ronde 3 nov (kolom Uitkomst): 0 formulieren verstuurd, want bij 27 van de 30 scholen bleek alsnog een algemeen adres vindbaar (vaak via de bestuurspagina's lucasonderwijs.nl/scholen, scoh.nl/scholen/vind-een-locatie en dehaagsescholen.nl/locaties-van-scholen); die kunnen via het mailscript mee. 3 blijven onbereikbaar (14 Waterlelie, 21 Bezuidenhout, 24 Margriet).
 
-| # | School | Plaats | Website | Waarom geen adres |
-|---|---|---|---|---|
-| 1 | Christelijke Basisschool De Vijverhof | LEIDSCHENDAM | http://www.nldata.nl/vijverhof | site onbereikbaar (connectie geweigerd) |
-| 2 | Rooms Katholieke Protestants Christelijke Samenwerkingsschool Emmaus | LEIDSCHENDAM | http://samenwerkingsschoolemmaus.nl | site onbereikbaar (domeinnaam niet te herleiden, DNS-fout) |
-| 3 | Katholieke Basisschool De Jonge Wereld | 'S-GRAVENHAGE | https://www.nldata.nl/djwereld | site onbereikbaar (connectie geweigerd) |
-| 4 | Jan V Nassauschool voor Protestants Christelijk Basisonderwijs | 'S-GRAVENHAGE | https://kindcentrumo3.nl/contact | site verwijst door naar kindcentrumo3.nl; e-mailadres verborgen achter spambot/javascript- |
-| 5 | Springbok International | 'S-GRAVENHAGE | https://obsdespringbok.nl | domein geparkeerd/te koop (Nameshift.com), geen echte schoolsite bereikbaar |
-| 6 | De Horizon Christelijke School voor Basisonderwijs | 'S-GRAVENHAGE | https://nldata.nl/horizon | site onbereikbaar (connectie geweigerd) |
-| 7 | Jeroen | 'S-GRAVENHAGE | https://nldata.nl/jeroen | site onbereikbaar (connectie geweigerd) |
-| 8 | Diamant | 'S-GRAVENHAGE | https://www.scolucas.nl/vuurvlinder | site onbereikbaar (connection timeout) |
-| 9 | Zuidwalschool | 'S-GRAVENHAGE | https://zuidwalschool.nl/home/contact/ | site levert geen leesbare inhoud (JS-pagina toont alleen skip-link, geen e-mailadres zicht |
-| 10 | Ds D.A. van den Boschschool voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | https://www.vdboschschool.nl/ | site onbereikbaar (SSL-certificaatfout: cert hoort bij *.troublefree.nl, niet bij vdboschs |
-| 11 | De Regenboog | 'S-GRAVENHAGE | http://www.nldata.nl/regenboog | site onbereikbaar (connectie geweigerd, meerdere pogingen http en https) |
-| 12 | Dr M M Den Hertogschool voor Christelijk Basis  Onderwijs | 'S-GRAVENHAGE | https://www.denhertogschool.nl/ | site onbereikbaar (DNS-fout, domein lost niet op) |
-| 13 | Prot Chr Basisschool De Vlieger | 'S-GRAVENHAGE | http://www.nldata.nl/devlieger | site onbereikbaar (timeout/connection refused, zowel http als https) |
-| 14 | IKEC De Waterlelie | LEIDSCHENDAM | https://www.ikecdewaterlelie.nl/contact/ | geen e-mail op homepage zichtbaar; alleen contactpagina-link gevonden, inhoud niet opgehaa |
-| 15 | Carolusschool | 'S-GRAVENHAGE | www.nldata.nl/carolus | site onbereikbaar (connection refused, meerdere keren + http geprobeerd) |
-| 16 | Anne Frank Wereldschool | 'S-GRAVENHAGE | https://www.obs-annefrank.nl/contact/ | site redirect naar obs-annefrank.nl; geen e-mail op homepage, alleen telefoon + link naar  |
-| 17 | De Triangel | 'S-GRAVENHAGE | https://www.triangeldenhaag.nl/ | geen e-mail zichtbaar op homepage; contactpagina kon niet worden opgehaald (herhaalde fout |
-| 18 | Paul Krugersch voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | www.nldata.nl/kruger | site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused) |
-| 19 | Startpunt International | 'S-GRAVENHAGE | www.obshetstartpunt.nl | site onbereikbaar (verlopen SSL-certificaat, herhaald geprobeerd) |
-| 20 | IC Basisschool Statenkwartier | 'S-GRAVENHAGE | www.nldata.nl/statenkwartier | site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused) |
-| 21 | Kindcentrum Bezuidenhout | 'S-GRAVENHAGE | www.kindcentrumbezuidenhout.nl | site onbereikbaar (verlopen SSL-certificaat) |
-| 22 | Oranje Nassauschool voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | www.scoh.nl/nassau-o | opgegeven pad geeft 404; juiste scoh.nl-pad niet teruggevonden via scoh.nl-navigatie |
-| 23 | KC Trampoline | LEIDSCHENDAM | https://www.kindcentrumtrampoline.nl/team | alleen persoonlijk e-mailadres directeur zichtbaar (clourier@trampoline.lucasonderwijs.nl) |
-| 24 | Openbare Basisschool de Margriet | LEIDSCHENDAM | https://www.obs-demargriet.nl/contact/ | alleen contactformulier en telefoonnummer, geen e-mailadres zichtbaar |
-| 25 | Christelijke Basisschool De Ark | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/deark, ook zonder www en via http g |
-| 26 | Christelijke Basisschool De Ontmoeting | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/ontmoeting, ook zonder www en via h |
-| 27 | Basisschool Grote Beer | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/grotebeer, ook zonder www en via ht |
-| 28 | Het Lichtbaken | 'S-GRAVENHAGE |  | site onbereikbaar (connectie geweigerd op www.nldata.nl/hetlichtbaken, http en zonder www  |
-| 29 | Paschalisschool | 'S-GRAVENHAGE |  | site onbereikbaar (connectie geweigerd op www.nldata.nl/paschalis, http en zonder www gepr |
-| 30 | Protestants Christelijke Basisschool De Vuurtoren | 'S-GRAVENHAGE | https://www.cbsdevuurtoren.nl/contact | alleen persoonlijk e-mailadres gevonden (mkok@scoh.nl), geen algemeen info/directie/admini |
+| # | School | Plaats | Website | Waarom geen adres | Uitkomst (3 nov) |
+|---|---|---|---|---|---|
+| 1 | Christelijke Basisschool De Vijverhof | LEIDSCHENDAM | http://www.nldata.nl/vijverhof | site onbereikbaar (connectie geweigerd) | e-mail gevonden: info@devijverhof.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar; nieuwe site devijverhof.nl) |
+| 2 | Rooms Katholieke Protestants Christelijke Samenwerkingsschool Emmaus | LEIDSCHENDAM | http://samenwerkingsschoolemmaus.nl | site onbereikbaar (domeinnaam niet te herleiden, DNS-fout) | e-mail gevonden: info@emmaus.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar; nieuwe site swsemmaus.nl) |
+| 3 | Katholieke Basisschool De Jonge Wereld | 'S-GRAVENHAGE | https://www.nldata.nl/djwereld | site onbereikbaar (connectie geweigerd) | e-mail gevonden: info@djwereld.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 4 | Jan V Nassauschool voor Protestants Christelijk Basisonderwijs | 'S-GRAVENHAGE | https://kindcentrumo3.nl/contact | site verwijst door naar kindcentrumo3.nl; e-mailadres verborgen achter spambot/javascript- | e-mail gevonden: info@kindcentrumo3.nl |
+| 5 | Springbok International | 'S-GRAVENHAGE | https://obsdespringbok.nl | domein geparkeerd/te koop (Nameshift.com), geen echte schoolsite bereikbaar | e-mail gevonden: obs@springbokinternational.nl (via dehaagsescholen.nl/locaties-van-scholen; oud domein te koop, nieuwe site springbokinternational.nl) |
+| 6 | De Horizon Christelijke School voor Basisonderwijs | 'S-GRAVENHAGE | https://nldata.nl/horizon | site onbereikbaar (connectie geweigerd) | e-mail gevonden: horizon@scoh.nl (via scoh.nl locatiepagina; nldata.nl onbereikbaar; nieuwe site dehorizondenhaag.nl) |
+| 7 | Jeroen | 'S-GRAVENHAGE | https://nldata.nl/jeroen | site onbereikbaar (connectie geweigerd) | e-mail gevonden: info@jeroenschool.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar; site basisschooljeroen.nl) |
+| 8 | Diamant | 'S-GRAVENHAGE | https://www.scolucas.nl/vuurvlinder | site onbereikbaar (connection timeout) | e-mail gevonden: info@bsvuurvlinder.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar; Diamant, Diamanthorst 181a) |
+| 9 | Zuidwalschool | 'S-GRAVENHAGE | https://zuidwalschool.nl/home/contact/ | site levert geen leesbare inhoud (JS-pagina toont alleen skip-link, geen e-mailadres zicht | e-mail gevonden: info@zuidwalschool.nl (directeur: w.ruitenbeek@zuidwalschool.nl, niet gebruiken) |
+| 10 | Ds D.A. van den Boschschool voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | https://www.vdboschschool.nl/ | site onbereikbaar (SSL-certificaatfout: cert hoort bij *.troublefree.nl, niet bij vdboschs | e-mail gevonden: bosch@scoh.nl (via scoh.nl, KC Da Vinci - Ds. D.A. van der Boschschool; eigen site onbereikbaar) |
+| 11 | De Regenboog | 'S-GRAVENHAGE | http://www.nldata.nl/regenboog | site onbereikbaar (connectie geweigerd, meerdere pogingen http en https) | e-mail gevonden: info@regenboog.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar; Linnaeusstraat 12 Den Haag — controleer of dit de juiste Regenboog is) |
+| 12 | Dr M M Den Hertogschool voor Christelijk Basis  Onderwijs | 'S-GRAVENHAGE | https://www.denhertogschool.nl/ | site onbereikbaar (DNS-fout, domein lost niet op) | e-mail gevonden: kcwondersteboven@scoh.nl (via scoh.nl, KC Wondersteboven - Dr. M.M. den Hertogschool; oude domein DNS-fout) |
+| 13 | Prot Chr Basisschool De Vlieger | 'S-GRAVENHAGE | http://www.nldata.nl/devlieger | site onbereikbaar (timeout/connection refused, zowel http als https) | e-mail gevonden: info@pcbsdevlieger.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 14 | IKEC De Waterlelie | LEIDSCHENDAM | https://www.ikecdewaterlelie.nl/contact/ | geen e-mail op homepage zichtbaar; alleen contactpagina-link gevonden, inhoud niet opgehaa | site onbereikbaar (contactpagina 502/504; homepage zonder e-mail/formulier) |
+| 15 | Carolusschool | 'S-GRAVENHAGE | www.nldata.nl/carolus | site onbereikbaar (connection refused, meerdere keren + http geprobeerd) | e-mail gevonden: info@carolus.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 16 | Anne Frank Wereldschool | 'S-GRAVENHAGE | https://www.obs-annefrank.nl/contact/ | site redirect naar obs-annefrank.nl; geen e-mail op homepage, alleen telefoon + link naar  | e-mail gevonden: administratie@annefrankwereldschool.nl |
+| 17 | De Triangel | 'S-GRAVENHAGE | https://www.triangeldenhaag.nl/ | geen e-mail zichtbaar op homepage; contactpagina kon niet worden opgehaald (herhaalde fout | e-mail gevonden: info@triangel.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 18 | Paul Krugersch voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | www.nldata.nl/kruger | site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused) | e-mail gevonden: kruger@scoh.nl (kruger.scoh.nl/Contact-met-school) |
+| 19 | Startpunt International | 'S-GRAVENHAGE | www.obshetstartpunt.nl | site onbereikbaar (verlopen SSL-certificaat, herhaald geprobeerd) | e-mail gevonden: directie@startpuntinternational.nl (nieuwe site startpuntinternational.nl; oud domein = placeholder) |
+| 20 | IC Basisschool Statenkwartier | 'S-GRAVENHAGE | www.nldata.nl/statenkwartier | site onbereikbaar (zelfde nldata.nl-domein als Carolusschool, connection refused) | e-mail gevonden: info@statenkwartier.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 21 | Kindcentrum Bezuidenhout | 'S-GRAVENHAGE | www.kindcentrumbezuidenhout.nl | site onbereikbaar (verlopen SSL-certificaat) | site onbereikbaar (SSL-fout; 'Binnenkort online!') |
+| 22 | Oranje Nassauschool voor Christelijk Basisonderwijs | 'S-GRAVENHAGE | www.scoh.nl/nassau-o | opgegeven pad geeft 404; juiste scoh.nl-pad niet teruggevonden via scoh.nl-navigatie | e-mail gevonden: oranjenassau@scoh.nl (via scoh.nl locatiepagina) |
+| 23 | KC Trampoline | LEIDSCHENDAM | https://www.kindcentrumtrampoline.nl/team | alleen persoonlijk e-mailadres directeur zichtbaar (clourier@trampoline.lucasonderwijs.nl) | e-mail gevonden: info@trampoline.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; eigen site heeft geen formulier, alleen persoonlijke adressen — directeur clourier@… niet gebruikt) |
+| 24 | Openbare Basisschool de Margriet | LEIDSCHENDAM | https://www.obs-demargriet.nl/contact/ | alleen contactformulier en telefoonnummer, geen e-mailadres zichtbaar | site onbereikbaar (504 Gateway Time-out, 3 nov ~16:50) |
+| 25 | Christelijke Basisschool De Ark | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/deark, ook zonder www en via http g | e-mail gevonden: ark@scoh.nl (via scoh.nl locatiepagina; site dearkdenhaag.nl) |
+| 26 | Christelijke Basisschool De Ontmoeting | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/ontmoeting, ook zonder www en via h | e-mail gevonden: ontmoeting@scoh.nl (via scoh.nl locatiepagina; site cbsdeontmoeting.nl) |
+| 27 | Basisschool Grote Beer | 'S-GRAVENHAGE |  | site onbereikbaar (connection refused op www.nldata.nl/grotebeer, ook zonder www en via ht | e-mail gevonden: info@grotebeer.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 28 | Het Lichtbaken | 'S-GRAVENHAGE |  | site onbereikbaar (connectie geweigerd op www.nldata.nl/hetlichtbaken, http en zonder www  | e-mail gevonden: info@lichtbaken.lucasonderwijs.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 29 | Paschalisschool | 'S-GRAVENHAGE |  | site onbereikbaar (connectie geweigerd op www.nldata.nl/paschalis, http en zonder www gepr | e-mail gevonden: info@paschalis.nl (via lucasonderwijs.nl/scholen; opgegeven site onbereikbaar) |
+| 30 | Protestants Christelijke Basisschool De Vuurtoren | 'S-GRAVENHAGE | https://www.cbsdevuurtoren.nl/contact | alleen persoonlijk e-mailadres gevonden (mkok@scoh.nl), geen algemeen info/directie/admini | e-mail gevonden: vuurtoren@scoh.nl (via scoh.nl locatiepagina; mkok@scoh.nl = persoonlijk, niet gebruikt) |

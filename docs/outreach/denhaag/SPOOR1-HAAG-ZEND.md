@@ -1,7 +1,10 @@
 # Spoor 1 — Haaglanden (Den Haag · Rijswijk · Leidschendam-Voorburg) · verzenddoc
 
 > Aangemaakt 3 nov 2026 uit SPOOR1-HAAG.md (69 contactpunten, 62 unieke adressen; 4 al eerder benaderd via opvolgbronnen → weggelaten). Formaat van `scripts/outreach-send-doc.mjs`: kop Onderwerp, kop Tekst met [ORGANISATIE], adrestabel onder Adressen. Beeld als bijlage: Leerkwartier-dossiersOoievaarspasLeerkwartier-Ooievaarspas-600x400.png (zoals Leergeld Den Haag). Meetlink: `leerkwartier.app/?utm_source=haaglanden` → bron `deel:haaglanden`.
-> Regels: geen code in de mail (OOIEVAAR2027 is van de gemeente), geen "blijvend", 2031 alleen bij "oefenen", niets fysieks beloven. **Status: CONCEPT, wacht op Marks "stuur maar".** Tempo 60/werkdag.
+> Regels: geen code in de mail (OOIEVAAR2027 is van de gemeente), geen "blijvend", 2031 alleen bij "oefenen", niets fysieks beloven. **Status: ✅ Mark "stuur maar" di 3 nov 16:10.** Tempo 60/werkdag; dagbudget 3 nov al gebruikt door scholen-golf dag 1 (60) en wo 4 nov door dag 2 (58) → verzending **do 5 nov (60) + vr 6 nov (2)** via Windows-taak "Leerkwartier spoor 1 Haaglanden" (08:15, BULK_DAGMAX=60).
+
+## Bijlage
+- C:/Users/mark-/Desktop/Leerkwartier-dossiers/Ooievaarspas/Leerkwartier-Ooievaarspas-600x400.png | Leerkwartier-Ooievaarspas.png
 
 ## Onderwerp
 Gratis oefenen voor kinderen uit Den Haag: iets om door te geven aan jullie gezinnen?

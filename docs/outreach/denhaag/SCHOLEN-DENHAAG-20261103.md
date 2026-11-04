@@ -1,6 +1,6 @@
 # Scholen Den Haag, Rijswijk, Leidschendam-Voorburg — golf "Doorstroomtoets + Ooievaarspas" (3 nov 2026)
 
-Koers Mark 3 nov: van binnenuit naar buiten — gemeente (Ooievaarspas), Leergeld Den Haag en alle basisscholen in het Ooievaarspas-gebied. Adressen: DUO-vestigingenlijst (171, 167 met site), e-mails door agenten site-geverifieerd (`emails_chunk_*.tsv`). Tempo 60 per werkdag via Resend/hallo@. Status: ✅ DAG 1 VERSTUURD di 3 nov 2026 ~10:40 (rij 1-60, 60/60 OK, Mark "stuur maar"); dag 2 wo 4 nov rij 61-118. Lijst: 118 scholen (Den Haag 90, Rijswijk 15, Leidschendam 4, Voorburg 9); verzenden in twee dagen (60 + 58). Script: `scripts/outreach-send-scholen.mjs <max> docs/outreach/denhaag/SCHOLEN-DENHAAG-20261103.md <skip>`.
+Koers Mark 3 nov: van binnenuit naar buiten — gemeente (Ooievaarspas), Leergeld Den Haag en alle basisscholen in het Ooievaarspas-gebied. Adressen: DUO-vestigingenlijst (171, 167 met site), e-mails door agenten site-geverifieerd (`emails_chunk_*.tsv`). Tempo 60 per werkdag via Resend/hallo@. Status: ✅ DAG 1 VERSTUURD di 3 nov 2026 ~10:40 (rij 1-60, 60/60 OK, Mark "stuur maar"); ✅ DAG 2 VERSTUURD wo 4 nov 2026 ~15:00 (rij 61-118, 58/58 OK); **dag 3 vr 6 nov rij 119-145** (27 scholen uit SCHOLEN-ZONDER-EMAIL.md, adressen 3 nov via bestuurssites gevonden; do 5 nov is voor spoor 1 Haaglanden). Lijst: 145 scholen; verzenden in drie dagen (60 + 58 + 27). Script: `scripts/outreach-send-scholen.mjs <max> docs/outreach/denhaag/SCHOLEN-DENHAAG-20261103.md <skip>`.
 
 Uitgesloten: 30 scholen zonder vindbaar adres (nldata.nl-sites weigerden verbinding, verlopen certificaten, alleen contactformulier), 4 dubbele vestigingen (zelfde adres), 13 scholen die al in de opvolgbronnen-db staan (LOWAN-nieuwkomersmails) en 1 adres met afwijkend domein (@website.scoh.nl).
 
@@ -155,6 +155,33 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 | 116 | Kindcentrum Cascade | Voorburg | info@kccascade.nl |
 | 117 | Professor Casimirschool | Voorburg | info@profcasimirschool.nl |
 | 118 | Protestants Christelijke Basisschool Groen van Prinsterer | Voorburg | info@groenschool.lucasonderwijs.nl |
+| 119 | Christelijke Basisschool De Vijverhof | Leidschendam | info@devijverhof.nl |
+| 120 | Samenwerkingsschool Emmaus | Leidschendam | info@emmaus.lucasonderwijs.nl |
+| 121 | Katholieke Basisschool De Jonge Wereld | Den Haag | info@djwereld.lucasonderwijs.nl |
+| 122 | Jan van Nassauschool (Kindcentrum O3) | Den Haag | info@kindcentrumo3.nl |
+| 123 | Springbok International | Den Haag | obs@springbokinternational.nl |
+| 124 | De Horizon | Den Haag | horizon@scoh.nl |
+| 125 | Basisschool Jeroen | Den Haag | info@jeroenschool.lucasonderwijs.nl |
+| 126 | Diamant (Vuurvlinder) | Den Haag | info@bsvuurvlinder.nl |
+| 127 | Zuidwalschool | Den Haag | info@zuidwalschool.nl |
+| 128 | Ds. D.A. van den Boschschool (KC Da Vinci) | Den Haag | bosch@scoh.nl |
+| 129 | De Regenboog | Den Haag | info@regenboog.lucasonderwijs.nl |
+| 130 | Dr. M.M. den Hertogschool (KC Wondersteboven) | Den Haag | kcwondersteboven@scoh.nl |
+| 131 | De Vlieger | Den Haag | info@pcbsdevlieger.nl |
+| 132 | Carolusschool | Den Haag | info@carolus.lucasonderwijs.nl |
+| 133 | Anne Frank Wereldschool | Den Haag | administratie@annefrankwereldschool.nl |
+| 134 | De Triangel | Den Haag | info@triangel.lucasonderwijs.nl |
+| 135 | Paul Krugerschool | Den Haag | kruger@scoh.nl |
+| 136 | Startpunt International | Den Haag | directie@startpuntinternational.nl |
+| 137 | IC Basisschool Statenkwartier | Den Haag | info@statenkwartier.lucasonderwijs.nl |
+| 138 | Oranje Nassauschool | Den Haag | oranjenassau@scoh.nl |
+| 139 | KC Trampoline | Leidschendam | info@trampoline.lucasonderwijs.nl |
+| 140 | De Ark | Den Haag | ark@scoh.nl |
+| 141 | De Ontmoeting | Den Haag | ontmoeting@scoh.nl |
+| 142 | Basisschool Grote Beer | Den Haag | info@grotebeer.lucasonderwijs.nl |
+| 143 | Het Lichtbaken | Den Haag | info@lichtbaken.lucasonderwijs.nl |
+| 144 | Paschalisschool | Den Haag | info@paschalis.nl |
+| 145 | De Vuurtoren | Den Haag | vuurtoren@scoh.nl |
 
 ## Niet in deze golf (al eerder gemaild via LOWAN/opvolgbronnen, of afwijkend adres)
 
@@ -237,3 +264,63 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 58 · Montessori Kindcentrum John F. Kennedy · info@mkcjfk.nl · OK · 01a1a08b-04a8-74fe-a263-1cb4e0f1c07c
   - 59 · Montessorischool Leidschenveen · info@mslv.nl · OK · 01a1a08b-0a59-7dde-92de-3dd3dffffba1
   - 60 · Montessorischool Waalsdorp · administratie@waalsdorp.nl · OK · 01a1a08b-1034-7a96-bbaa-aa3db9f4c5ec
+
+- **4-11-2026, 15:01:33** — via Resend (hallo@leerkwartier.app), 58/58 verstuurd (rij 61-118).
+  - 61 · Nutsbasisschool Laan van Poot · info@nutsschool.nl · OK · 01a1a6dc-20b9-775d-b116-6dabeec0ab06
+  - 62 · Nutsbasisschool M.M. Boldingh · info@nutsschoolboldingh.nl · OK · 01a1a6dc-27b9-7788-9eba-c9ea56567a34
+  - 63 · Nutsbasisschool Zorgvliet · info@nutsschoolzorgvliet.nl · OK · 01a1a6dc-2dae-7285-b1f5-109815925275
+  - 64 · O G Heldringsch Christelijke Basis Onderwijs · heldring@scoh.nl · OK · 01a1a6dc-337d-7bc8-95ec-3f8017c9eef5
+  - 65 · Openbare Dalton Basisschool Waterland · directie@obswaterland.nl · OK · 01a1a6dc-3962-7779-9140-fe1a5c845626
+  - 66 · Prinses Catharina-Amaliaschool · info@obspca.nl · OK · 01a1a6dc-3f4a-7ce2-a486-1e6378cdc79f
+  - 67 · Protestants Christelijke Basisschool De Oranjeschool · oranje@scoh.nl · OK · 01a1a6dc-4526-7632-9007-27793d4beea5
+  - 68 · Protestants Christelijke Basisschool Willem de Zwijger · administratie@wdzscheveningen.nl · OK · 01a1a6dc-4b0f-7604-aebb-9b0951bdfc9e
+  - 69 · RK Basisschool Christoffel · christoffel@laurentiusstichting.nl · OK · 01a1a6dc-50d8-780b-985e-b72bf251f16d
+  - 70 · RKBS De Bras · algemeen@basisschooldebras.nl · OK · 01a1a6dc-56ac-7ba6-bc32-5a42825cab35
+  - 71 · Rooms Katholieke Basisschool De Fontein · info@fontein.nl · OK · 01a1a6dc-5c72-7e2f-9619-433eb4ee4e77
+  - 72 · Rooms Katholieke Basisschool De Paradijsvogel · info@paradijsvogel.lucasonderwijs.nl · OK · 01a1a6dc-622a-7396-8032-3dfee7dbbecc
+  - 73 · Rooms Katholieke Basisschool De Parkiet · info@parkiet.lucasonderwijs.nl · OK · 01a1a6dc-6801-74cc-8bbe-a4f27d63b392
+  - 74 · Schoolvereniging Wolters · administratie@schoolverenigingwolters.nl · OK · 01a1a6dc-6dbf-7e5e-9f62-469ea5fe220c
+  - 75 · V Hoogstratensch Christelijk Basisonderwijs · hoogstraten@scoh.nl · OK · 01a1a6dc-738f-7329-bee5-813e4482c8cc
+  - 76 · Vrijeschool Wonnebald · administratie.wonnebald@samenwerkendevrijescholen.nl · OK · 01a1a6dc-796d-77ad-a616-43ecbf0d553b
+  - 77 · Waalse Louise De Coligny School voor Christelijk Basisonderwijs · wlc@scoh.nl · OK · 01a1a6dc-7f4a-7f12-a7b4-329f8279c4a4
+  - 78 · Zonnestraal · info.zonnestraal@octant.nl · OK · 01a1a6dc-8510-79d3-b327-a8e36b9a09ea
+  - 79 · Algemene Hindoeschool · info@vahon.nl · OK · 01a1a6dc-8ae7-7bd4-99e6-245e2d0b72d7
+  - 80 · De La Reyschool · info@delareyschool.nl · OK · 01a1a6dc-90ca-7af1-8094-95ba6118f138
+  - 81 · Ds Dj Karressch Christelijke Basisonderwijs · karres@scoh.nl · OK · 01a1a6dc-96c5-7566-9221-6fcc7a767f41
+  - 82 · Openbare Basisschool De Gelderlandschool · de@gelderlandschool.nl · OK · 01a1a6dc-9c76-7a8d-90a7-645baa20072e
+  - 83 · Rosa-School · rosabasisschool@laurentiusstichting.nl · OK · 01a1a6dc-a249-7df0-9f3d-18bf7a887ee6
+  - 84 · Al Qoeba · info@alqoeba.nl · OK · 01a1a6dc-a806-72ad-ab96-8db8b2c02818
+  - 85 · Dr J A Gerth V Wijksch voor Christelijk Basis Onderwijs · gvw@scoh.nl · OK · 01a1a6dc-adcb-7ca1-a7f5-7059f7fdfe38
+  - 86 · Het Galjoen · directie@obshetgaljoen.nl · OK · 01a1a6dc-b392-71f0-8819-3c617f8a756f
+  - 87 · Obs Dr Willem Drees · info@wdrees.nl · OK · 01a1a6dc-b958-73ae-8865-c91ab40e31a6
+  - 88 · Prinses Marijkeschool · info@prinsesmarijkeschool.nl · OK · 01a1a6dc-bf23-7c70-85b6-9d79f83e3827
+  - 89 · Rooms Katholieke Basisschool De Buutplaats · info@bsdebuutplaats.nl · OK · 01a1a6dc-c4fa-7b7e-8261-a0345fd7ae31
+  - 90 · Shri Vishnu School · info@shrivishnu.nl · OK · 01a1a6dc-cac1-72d0-8b61-5f31732db812
+  - 91 · Basisschool 't Prisma · directie@hetprisma.nl · OK · 01a1a6dc-d081-7f32-8fe4-de71bca4506a
+  - 92 · Basisschool De Piramide · contact@bsdepiramide.nl · OK · 01a1a6dc-d653-778c-8ed2-9c9ced5b1ea4
+  - 93 · Basisschool Kronenburgh · directie@basisschoolkronenburgh.nl · OK · 01a1a6dc-dc54-741e-af57-87fc8eaf5aad
+  - 94 · Basisschool Steenvoorde · administratie@steenvoordeschool.nl · OK · 01a1a6dc-e29c-7820-b01f-3d10ff05c12d
+  - 95 · CBS Melodie · info@cbsmelodie.nl · OK · 01a1a6dc-e8e7-7914-aa4b-9bdabbecc54b
+  - 96 · De Akker · deakker@levwn.nl · OK · 01a1a6dc-eeb6-7906-9827-47226631c5c1
+  - 97 · Godfried Bomansschool · godfriedbomans@laurentiusstichting.nl · OK · 01a1a6dc-f472-7d13-bd6b-cf8b4567a5be
+  - 98 · Het Kristal · directie@bshetkristal.nl · OK · 01a1a6dc-fa32-74f3-9808-32b010b01ab0
+  - 99 · Kindcentrum Buitenrijck · info@kcbuitenrijck.nl · OK · 01a1a6dd-0013-7421-a848-fc5cf94a8255
+  - 100 · Kindcentrum Snijders · info@kcsnijders.nl · OK · 01a1a6dd-0612-78a7-91e4-73ee04ade882
+  - 101 · Mariaschool voor Katholiek Basisonderwijs · mariarijswijk@laurentiusstichting.nl · OK · 01a1a6dd-0bdc-7b4d-badc-0824676a7ad7
+  - 102 · Montessori Parkrijk · directie@montessorischoolparkrijk.nl · OK · 01a1a6dd-1193-7138-8b86-f9bba8885648
+  - 103 · Prins Mauritsschool · info@pms-rijswijk.nl · OK · 01a1a6dd-1748-748f-9529-f4617e235aa3
+  - 104 · Rooms Katholieke Petrusschool voor Basisonderwijs · petrus@laurentiusstichting.nl · OK · 01a1a6dd-1d22-77da-a073-68bc8a7d050a
+  - 105 · Wethouder Brederodeschool · directie@brederodeschool.nl · OK · 01a1a6dd-2307-71fe-ae7d-e9de5ad20bb3
+  - 106 · MMiXX · info@ikcmmixx.nl · OK · 01a1a6dd-28b8-7c77-b230-ad4aa15aee49
+  - 107 · Openbare Dalton Basisschool de Tandem · info@detandem.nl · OK · 01a1a6dd-2e72-7ec1-90ee-1e8134ace2af
+  - 108 · Protestants Christelijke Basisschool De Zonnewijzer · mail@dezonnewijzer.nl · OK · 01a1a6dd-3438-79d7-9f5a-bd36659b8b82
+  - 109 · Roomskatholieke Basisschool Maria Bernadette · directie@marberna.nl · OK · 01a1a6dd-39ed-7558-a93f-38a9f7ddf1fc
+  - 110 · Basisschool De Lusthof · algemeen@lusthofschool.nl · OK · 01a1a6dd-3fa1-7a94-8316-afa3331dbba7
+  - 111 · Basisschool Essesteijn · info@essesteijn.nl · OK · 01a1a6dd-4566-7349-b7ae-265c946e5821
+  - 112 · Basisschool Nieuw Vreugd en Rust · info@mnvr.nl · OK · 01a1a6dd-4b2a-7984-8fc0-5d1ab028872e
+  - 113 · Basisschool St Maartens · directie@sintmaartensschool.nl · OK · 01a1a6dd-50fe-745a-9d80-3809e9481dbb
+  - 114 · De Parachute · info@deparachute.nl · OK · 01a1a6dd-56b3-7423-8f69-eebf9271bd4a
+  - 115 · KC de Telescoop · info@kcdetelescoop.nl · OK · 01a1a6dd-5c72-7aa4-8b5d-ec03ece7d9ed
+  - 116 · Kindcentrum Cascade · info@kccascade.nl · OK · 01a1a6dd-6224-700a-a785-369b0367375a
+  - 117 · Professor Casimirschool · info@profcasimirschool.nl · OK · 01a1a6dd-67cf-7b97-b25f-445357cce2d3
+  - 118 · Protestants Christelijke Basisschool Groen van Prinsterer · info@groenschool.lucasonderwijs.nl · OK · 01a1a6dd-6d8d-7245-81d4-516af608c24b
