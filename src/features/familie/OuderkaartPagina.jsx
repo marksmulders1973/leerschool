@@ -30,6 +30,7 @@ const PRESETS = [
   { id: "tafels", label: "✖️ Tafels" },
   { id: "spelling-ei-ij", label: "📝 Spelling ei/ij" },
   { id: "kommagetallen", label: "🔢 Kommagetallen" },
+  { id: "verhoudingstabel", label: "📐 Verhoudingstabel" },
 ];
 
 function schoon(s) {
