@@ -147,16 +147,22 @@ export function partnerFamilieTotLabel(tot, en = false) {
 // Pro (leerkracht-tier) én los kwartier-tegoed vallen hier nadrukkelijk buiten.
 // NIET inkorten/limiteren/van einddatum voorzien zonder een nieuwe schriftelijke
 // afspraak met bureau Ooievaarspas. Volledige afspraak: docs/AFSPRAKEN-OOIEVAARSPAS.md.
-const BLIJVENDE_CODE_PREFIX = "OOIEVAAR";
+// Mark-besluit 5 nov 2026 ("elk jaar een nieuwe code voor de gemeente Den Haag"):
+// de Ooievaarspas-code is NIET meer blijvend. OOIEVAAR2027 geldt t/m 31-12-2027
+// (partner_codes.familie_tot); in december vraagt Mark de gemeente een nieuwe
+// jaarcode (OOIEVAAR2028) te plaatsen. Reden: de code stond openbaar op Facebook,
+// een eeuwige belofte aan iedereen die hem ziet is niet te dragen (5-jaar-regel).
+const OOIEVAAR_PREFIX = "OOIEVAAR";
+const OOIEVAAR_FALLBACK_TOT = "2027-12-31";
 
 // Tot wanneer geeft de actieve partner-code gratis Familie?
-// null = blijvend (geen einddatum); anders een ISO-datum.
+// null = blijvend (geen einddatum, sinds 5 nov 2026 door geen enkele code meer gebruikt); anders een ISO-datum.
 export function partnerFamilieTot() {
   // Server-waarde (partner_codes.familie_tot) heeft voorrang als die bekend is.
   const srv = partnerRechtCache();
   if (srv && srv.recht) return srv.blijvend ? null : (srv.familie_tot || PARTNER_PRO_TOT);
   const code = ls.get(KEY_CODE) || "";
-  if (code.startsWith(BLIJVENDE_CODE_PREFIX)) return null;
+  if (code.startsWith(OOIEVAAR_PREFIX)) return OOIEVAAR_FALLBACK_TOT;
   return PARTNER_PRO_TOT;
 }
 

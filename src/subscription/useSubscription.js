@@ -11,9 +11,9 @@ import { haalPartnerRecht, partnerRechtCache } from "../features/referral/partne
 
 // Partner-code-honorering (prijsplan Mark 25 jul 2026): een geclaimde
 // partner-plek geeft het Familie-niveau (parent_pro) gratis — tot
-// partner_codes.familie_tot (31-12-2027 voor gewone codes), BLIJVEND (null)
-// voor OOIEVAAR*-codes: dat is op 26 jul 2026 schriftelijk toegezegd aan de
-// gemeente Den Haag in het getekende "vriend van de Ooievaarspas"-formulier.
+// partner_codes.familie_tot (31-12-2028 voor gewone codes; OOIEVAAR2027 t/m
+// 31-12-2027 sinds Mark-besluit 5 nov 2026: jaarcode, elk jaar een nieuwe voor
+// de gemeente Den Haag — "blijvend" (null) wordt door geen code meer gebruikt).
 // F2 (Fable-review 2 sep 2026): het recht komt van de SERVER
 // (RPC mijn_partner_recht, gebonden aan het (anonieme) Supabase-account +
 // oude apparaat-claims), niet meer uit twee localStorage-sleutels — die

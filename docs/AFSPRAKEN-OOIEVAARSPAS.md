@@ -109,3 +109,18 @@ bundelhoogte bepaalt daarmee direct de Ooievaarspas-exposure — kies hem bewust
   uitgeknipte ooievaar. **Alleen dít bestand gebruiken** voor de Ooievaarspas; geen eigen bewerking.
 - **Plaatsing op hun kanalen:** Esther levert de tekst aan bij de website-/socials-collega's met het
   verzoek te plaatsen **vanaf 1 november 2026** (mail 5 okt 08:40).
+
+## 🔁 Besluit Mark 5 nov 2026 — jaarcode in plaats van "blijvend"
+
+De gemeente plaatste de post op do 5 nov ~10:00 op Facebook mét de kale link `?partner=OOIEVAAR2027`.
+Daarmee is de code openbaar (ook voor niet-pashouders) en stond in de app "blijvend gratis" voor
+iedereen die hem zag. Mark: *"we kunnen het ook nu delen en als het uit de hand loopt elk jaar een
+nieuwe code aanmaken voor de gemeente Den Haag"* → **jaarcode-model**:
+- `partner_codes.familie_tot` voor OOIEVAAR2027 = **2027-12-31** (was null); de RPC `mijn_partner_recht`
+  leidt `blijvend` af uit `familie_tot is null`, dus geen migratie nodig.
+- App v1053 "108": `partnerFamilieTot()` geeft voor OOIEVAAR* niet meer `null` (fallback 2027-12-31);
+  erescherm zegt "gratis tot en met 31 december 2027. Elk jaar krijgt de Ooievaarspas een nieuwe code voor het jaar erna."
+- **December 2026 (Mark/Claude):** Esther vragen de link/code te vervangen door OOIEVAAR2028 (zelfde
+  afspraak, nieuw jaar). Pashouders die in 2027 claimden, claimen in 2028 opnieuw met de nieuwe code.
+- Afspraak met de gemeente blijft heel: pashouders krijgen Familie gratis zolang de vriendschap loopt;
+  de code wisselt alleen per jaar. Eventuele uitleg aan Esther = informatieplicht, geen toestemming nodig.
