@@ -61,6 +61,8 @@ export const SNELKOPPELINGEN = [
     woorden: ["begrijpend lezen", "tekst begrijpen", "leesvragen", "lezen"] },
   { id: "tafels", emoji: "✖️", label: "Tafels oefenen", uitleg: "Alle tafels, met trucs en tempo.", pad: "/tafels",
     woorden: ["tafels", "tafel", "keersommen", "vermenigvuldigen", "tafel van", "keer"] },
+  { id: "verhoudingstabellen", emoji: "📐", label: "Verhoudingstabellen (print, groep 8)", uitleg: "Werkblad met uitleg, voorbeeld, 8 sommen en antwoorden.", pad: "/verhoudingstabellen-oefenblad.html",
+    woorden: ["verhoudingstabel", "verhoudingstabellen", "verhoudingen printen", "verhoudingen werkblad", "verhoudingstabel oefenen"] },
   { id: "tafelbladen", emoji: "🖨️", label: "Tafelbladen (print)", uitleg: "Werkbladen met tafels om te printen.", pad: "/tafelbladen",
     woorden: ["tafelbladen", "tafels printen", "tafelblad"] },
   { id: "redactiesommen", emoji: "🧮", label: "Verhaaltjessommen", uitleg: "Redactiesommen: het verhaal lezen en de som eruit halen.", pad: "/redactiesommen",

@@ -569,7 +569,12 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
     const s = [];
     // 27 okt 2026 (kliktest groep 3): het toetsen-kaartje ("In groep 7 en 8 oefen je hier de Doorstroomtoets…
     // echte eindexamens vmbo/havo/vwo") zegt een kind van groep 3-6 niets → alleen vanaf groep 7.
-    const shows = klas ? [] : SHOWCASES.filter((id) => id !== "toetsen" || groep >= 7);
+    // 5 nov 2026 (gebruiksanalyse punt 3): geen kaartjes meer tússen de vijf vragen. Meting 28 dagen:
+    // 312 starts, 112 haalden "klaar"; 55 kliks op de vier tussenkaartjes in totaal. Vijf vragen +
+    // vier kaartjes = negen keer "Verder" vóór je klaar bent; de klaar-kaart heeft dezelfde tegels.
+    // SHOWCASES/ShowcaseKaart blijven bestaan voor de klaar-kaart en een eventuele terugkeer.
+    const shows = [];
+    void SHOWCASES;
     vragen.forEach((v, i) => {
       s.push({ type: "vraag", vraag: v, nummer: i + 1 });
       if (shows.length && i < vragen.length - 1) s.push({ type: "show", id: shows.shift() });
@@ -672,7 +677,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
         <p style={{ ...S.showTekst, marginTop: 0 }}>
           {klas
             ? (totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep + ". Tik je antwoord. Fout? Dan krijg je uitleg." : "Even wachten op de eerste vraag…")
-            : (totaalVragen > 0 ? totaalVragen + " korte vragen" : "Even kijken wat Leerkwartier kan") + ". Tussendoor zie je wat je hier kunt doen. Stoppen mag altijd."}
+            : (totaalVragen > 0 ? totaalVragen + " korte vragen" : "Even kijken wat Leerkwartier kan") + " voor jouw groep. Stoppen mag altijd."}
         </p>
       )}
 

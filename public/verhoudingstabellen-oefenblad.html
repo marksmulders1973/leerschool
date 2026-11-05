@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verhoudingstabellen oefenen groep 8 — printbaar werkblad met uitleg · Leerkwartier</title>
+<meta name="description" content="Gratis printbaar oefenblad verhoudingstabellen voor groep 8: uitleg in drie stappen, een uitgewerkt voorbeeld, 8 sommen met steeds andere getallen en een antwoordblad. Zoals op de Doorstroomtoets.">
+<link rel="canonical" href="https://leerkwartier.app/verhoudingstabellen-oefenblad.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Verhoudingstabellen oefenen groep 8 — printbaar werkblad">
+<meta property="og:description" content="Uitleg, uitgewerkt voorbeeld, 8 sommen met andere getallen en antwoorden. Gratis, elke keer nieuwe sommen.">
+<meta property="og:url" content="https://leerkwartier.app/verhoudingstabellen-oefenblad.html">
+<meta property="og:image" content="https://leerkwartier.app/social/deel-start.jpg">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "LearningResource",
+  "name": "Verhoudingstabellen oefenblad (groep 8)",
+  "description": "Printbaar werkblad met uitleg, uitgewerkt voorbeeld, 8 sommen met steeds andere getallen en een antwoordblad.",
+  "url": "https://leerkwartier.app/verhoudingstabellen-oefenblad.html",
+  "inLanguage": "nl-NL", "educationalLevel": "groep 8 basisschool", "learningResourceType": "Worksheet", "isAccessibleForFree": true }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "Wat is een verhoudingstabel?", "acceptedAnswer": { "@type": "Answer", "text": "Een tabel met twee rijen die bij elkaar horen, bijvoorbeeld minuten en auto's. Als je de ene rij keer of gedeeld door een getal doet, doe je dat ook met de andere rij. Zo reken je van een bekende verhouding naar een nieuwe." } },
+  { "@type": "Question", "name": "Hoe los je een som met een verhoudingstabel op?", "acceptedAnswer": { "@type": "Answer", "text": "Stap 1: zet de twee getallen die bij elkaar horen onder elkaar. Stap 2: deel allebei door hetzelfde getal tot je bij 1 bent (of bij een handig getal). Stap 3: vermenigvuldig allebei met het getal dat je moet weten. Schrijf de pijlen met ':' en '×' boven de tabel." } },
+  { "@type": "Question", "name": "Voor welke groep is dit werkblad?", "acceptedAnswer": { "@type": "Answer", "text": "Groep 8. Verhoudingstabellen komen veel voor op de Doorstroomtoets. Op leerkwartier.app/verhoudingstabellen-oefenblad.html krijg je elke keer nieuwe getallen en een antwoordblad." } }
+] }
+</script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#14283c;background:#eef2f7}
+  .balk{position:sticky;top:0;z-index:5;background:#0d1b2e;color:#fff;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .balk b{font-size:17px;margin-right:auto}
+  .balk button,.balk a{border:none;border-radius:999px;padding:9px 16px;font-weight:800;font-size:14px;cursor:pointer;text-decoration:none}
+  .balk .print{background:#ffd54f;color:#1a1a00}
+  .balk .nieuw{background:rgba(255,255,255,.14);color:#fff}
+  .balk a{color:#9fb3cc;font-weight:600;padding:9px 6px}
+  .blad{background:#fff;width:210mm;min-height:296mm;margin:16px auto;padding:16mm 16mm 14mm;box-shadow:0 2px 14px rgba(0,0,0,.12);position:relative;page-break-after:always}
+  .blad:last-of-type{page-break-after:auto}
+  .kop{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #14283c;padding-bottom:6px;margin-bottom:12px}
+  .kop h1{font-size:20px;margin:0}
+  .kop span{font-size:12px;color:#5a6775}
+  .naam{font-size:13px;margin:0 0 14px;color:#3a4658}
+  .naam i{display:inline-block;border-bottom:1px solid #14283c;width:170px;height:14px;vertical-align:bottom;margin:0 14px 0 4px}
+  h2{font-size:16px;margin:16px 0 6px;color:#1f4a1d}
+  p{font-size:13.5px;line-height:1.5;margin:0 0 8px}
+  .stappen{counter-reset:s;padding:0;margin:0 0 10px;list-style:none}
+  .stappen li{counter-increment:s;position:relative;padding-left:30px;font-size:13.5px;line-height:1.5;margin-bottom:5px}
+  .stappen li::before{content:counter(s);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:#7ab52d;color:#fff;font-weight:800;text-align:center;line-height:22px;font-size:13px}
+  .vt{border-collapse:collapse;margin:6px 0 4px;font-size:14px}
+  .vt td{border:1.5px solid #14283c;min-width:58px;height:30px;text-align:center;padding:0 8px}
+  .vt td.lab{text-align:left;font-weight:700;border-left:none;border-top:none;border-bottom:none;background:none;padding-left:0;min-width:92px}
+  .vt td.lab2{border:none;min-width:0;padding:0 4px}
+  .vt tr.pijl td{border:none;height:18px;font-size:12px;font-weight:800;color:#b3261e;padding:0}
+  .vt td.ant{background:#fff7cc;font-weight:800}
+  .vb{background:#f2f8ec;border:1.5px solid #bcd99a;border-radius:10px;padding:10px 12px;margin:6px 0 12px}
+  .opg{margin:0 0 14px;page-break-inside:avoid}
+  .opg .nr{display:inline-block;width:22px;height:22px;border-radius:50%;background:#14283c;color:#fff;font-weight:800;text-align:center;line-height:22px;font-size:12.5px;margin-right:6px}
+  .opg p{display:inline}
+  .opg .vt{margin-top:8px}
+  .opg .vt td{min-width:64px;height:34px}
+  .tip{font-size:12.5px;color:#5a6775;border-left:3px solid #ffd54f;padding-left:8px;margin:8px 0 0}
+  .voet{position:absolute;left:16mm;right:16mm;bottom:8mm;font-size:11px;color:#5a6775;display:flex;justify-content:space-between;border-top:1px solid #d5dbe4;padding-top:5px}
+  .antw .opg{margin-bottom:10px}
+  .antw .opg p{display:inline}
+  .uitleg-web{max-width:210mm;margin:0 auto;padding:14px 16mm 40px;font-size:13.5px;color:#3a4658}
+  @media screen and (max-width:760px){.blad{width:100%;min-height:0;padding:14px 12px;margin:10px 0}.voet{position:static;margin-top:16px}.uitleg-web{padding:14px}}
+  @media print{
+    body{background:#fff}.balk,.uitleg-web{display:none}
+    .blad{width:auto;min-height:0;margin:0;padding:12mm 14mm 16mm;box-shadow:none}
+    .voet{position:static;margin-top:14px}
+    @page{size:A4;margin:0}
+  }
+</style>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="balk">
+  <b>Verhoudingstabellen · groep 8</b>
+  <button class="nieuw" id="nieuw" type="button">🎲 Andere sommen</button>
+  <button class="print" type="button" onclick="window.print()">🖨️ Print</button>
+  <a href="/">leerkwartier.app</a>
+</div>
+
+<!-- Blad 1: uitleg + uitgewerkt voorbeeld -->
+<section class="blad">
+  <div class="kop"><h1>Verhoudingstabellen — zo werkt het</h1><span>Leerkwartier · groep 8</span></div>
+  <p class="naam">Naam: <i></i> Datum: <i></i></p>
+
+  <h2>Wat is een verhoudingstabel?</h2>
+  <p>Een tabel met twee rijen die bij elkaar horen, bijvoorbeeld <b>minuten</b> en <b>auto's</b>. Wat je met de ene rij doet (keer of gedeeld door), doe je óók met de andere rij. Zo reken je van wat je wél weet naar wat je wilt weten.</p>
+
+  <h2>In drie stappen</h2>
+  <ol class="stappen">
+    <li><b>Zet neer wat je weet.</b> De twee getallen die bij elkaar horen komen onder elkaar.</li>
+    <li><b>Ga naar 1.</b> Deel allebei de rijen door hetzelfde getal, tot er in de rij die je weet een 1 staat. (Soms is een ander handig getal sneller, bijvoorbeeld 10.)</li>
+    <li><b>Ga naar het getal dat je moet weten.</b> Vermenigvuldig allebei de rijen met dat getal. Schrijf de pijlen erboven: <b style="color:#b3261e">: 26</b> en <b style="color:#b3261e">× 17</b>.</li>
+  </ol>
+
+  <h2>Uitgewerkt voorbeeld</h2>
+  <div class="vb">
+    <p><b>Iedere 130 minuten komen er 26 auto's langs. Hoeveel minuten gaan voorbij als er 17 auto's zijn langsgekomen?</b></p>
+    <p>Ik weet: 130 minuten ↔ 26 auto's. Ik moet weten: hoeveel minuten bij 17 auto's. De auto's-rij is dus de rij waar ik mee stuur.</p>
+    <table class="vt">
+      <tr class="pijl"><td class="lab2"></td><td></td><td>: 26 →</td><td></td><td>× 17 →</td><td></td></tr>
+      <tr><td class="lab">minuten</td><td>130</td><td class="lab2"></td><td>5</td><td class="lab2"></td><td class="ant">85</td></tr>
+      <tr><td class="lab">auto's</td><td>26</td><td class="lab2"></td><td>1</td><td class="lab2"></td><td>17</td></tr>
+    </table>
+    <p>Stap 2: 26 auto's : 26 = 1 auto, dus ook 130 minuten : 26 = <b>5 minuten</b> per auto.<br>Stap 3: 1 auto × 17 = 17 auto's, dus ook 5 minuten × 17 = <b>85 minuten</b>.</p>
+    <p><b>Antwoord: 85 minuten.</b></p>
+  </div>
+
+  <h2>Andersom kan ook</h2>
+  <div class="vb">
+    <p><b>Iedere 30 minuten komen er 120 auto's langs. Hoeveel auto's komen er langs in 12 minuten?</b></p>
+    <p>Nu moet ik iets weten bij <b>12 minuten</b>, dus de minuten-rij stuurt: 30 : 30 = 1 minuut, dan × 12.</p>
+    <table class="vt">
+      <tr class="pijl"><td class="lab2"></td><td></td><td>: 30 →</td><td></td><td>× 12 →</td><td></td></tr>
+      <tr><td class="lab">minuten</td><td>30</td><td class="lab2"></td><td>1</td><td class="lab2"></td><td>12</td></tr>
+      <tr><td class="lab">auto's</td><td>120</td><td class="lab2"></td><td>4</td><td class="lab2"></td><td class="ant">48</td></tr>
+    </table>
+    <p>120 : 30 = <b>4 auto's</b> per minuut. 4 × 12 = <b>48 auto's</b>.</p>
+  </div>
+
+  <p class="tip">Tip: lees de vraag en kijk <b>welke rij je moet invullen</b>. De ándere rij is de rij waar je mee naar 1 gaat. Controleer: klopt het ongeveer? 17 auto's is iets meer dan de helft van 26, dus het antwoord moet iets meer dan de helft van 130 zijn. 85 klopt.</p>
+  <div class="voet"><span>Een kwartier per dag leren, een leven lang slimmer.</span><span>leerkwartier.app/verhoudingstabellen-oefenblad.html</span></div>
+</section>
+
+<!-- Blad 2 en 3: sommen -->
+<section class="blad" id="blad-a">
+  <div class="kop"><h1>Oefenblad verhoudingstabellen</h1><span>groep 8 · set <span class="setnr"></span> · sommen 1-4</span></div>
+  <p class="naam">Naam: <i></i> Datum: <i></i></p>
+  <div id="sommen-a"></div>
+  <div class="voet"><span>Een kwartier per dag leren, een leven lang slimmer.</span><span>leerkwartier.app</span></div>
+</section>
+<section class="blad" id="blad-b">
+  <div class="kop"><h1>Oefenblad verhoudingstabellen</h1><span>groep 8 · set <span class="setnr"></span> · sommen 5-8</span></div>
+  <div id="sommen-b"></div>
+  <div class="voet"><span>Een kwartier per dag leren, een leven lang slimmer.</span><span>leerkwartier.app</span></div>
+</section>
+
+<!-- Blad 4: antwoorden -->
+<section class="blad antw">
+  <div class="kop"><h1>Antwoorden</h1><span>groep 8 · set <span class="setnr"></span> · voor wie nakijkt</span></div>
+  <p>Bij elke som staat de tussenstap (naar 1) en het antwoord. Een andere handige tussenstap is ook goed, als het antwoord klopt.</p>
+  <div id="antwoorden"></div>
+  <div class="voet"><span>Een kwartier per dag leren, een leven lang slimmer.</span><span>leerkwartier.app</span></div>
+</section>
+
+<div class="uitleg-web">
+  <p><b>Voor thuis:</b> elke keer dat je op "Andere sommen" klikt krijg je een nieuwe set met andere getallen. Het setnummer staat op het blad, zodat je dezelfde set later terug kunt halen via <code>?set=nummer</code>. Zit je kind in groep 7? Dan kan dit blad ook, de getallen zijn hetzelfde soort. Meer oefenen met uitleg bij elke vraag: <a href="/leren?q=verhoudingen">verhoudingen in de app</a> (gratis, geen account).</p>
+</div>
+
+<script>
+(function () {
+  // Vaste set per nummer (mulberry32), zodat een geprint blad en het antwoordblad bij elkaar horen.
+  function rng(seed) { let a = seed >>> 0; return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const q = new URLSearchParams(location.search);
+  let set = parseInt(q.get("set"), 10);
+  if (!set || set < 1 || set > 9999) set = 1 + Math.floor(Math.random() * 9999);
+  const r = rng(set * 7919);
+  const kies = (arr) => arr[Math.floor(r() * arr.length)];
+  const fmt = (n) => Number.isInteger(n) ? String(n) : String(Math.round(n * 100) / 100).replace(".", ",");
+  const euro = (n) => "€ " + (Number.isInteger(n) ? n + ",-" : fmt(n).replace(/,(\d)$/, ",$10"));
+  const toon = (lab, x) => (lab === "euro" ? euro(x) : fmt(x));
+
+  // Contexten: rij A hoort bij rij B. k = hoeveel A per 1 B.
+  const CTX = [
+    { a: "minuten", b: "auto's", zin: (A, B) => "Iedere " + A + " minuten komen er " + B + " auto's langs.", vraagA: (C) => "Hoeveel minuten gaan voorbij als er " + C + " auto's zijn langsgekomen?", vraagB: (C) => "Hoeveel auto's komen er langs in " + C + " minuten?", k: [3, 4, 5, 6, 8], bs: [12, 15, 18, 22, 24, 26, 35] },
+    { a: "fietsen", b: "huishoudens", zin: (A, B) => "In " + B + " huishoudens staan " + A + " fietsen voor de deur.", vraagA: (C) => "Hoeveel fietsen heb je in totaal bij " + C + " huishoudens?", vraagB: (C) => "Bij hoeveel huishoudens horen " + C + " fietsen?", k: [2, 3, 2.5, 1.5], bs: [12, 14, 16, 18, 20, 22, 24] },
+    { a: "euro", b: "brieven", zin: (A, B) => "Voor " + B + " brieven ben je " + euro(A) + " kwijt aan postzegels.", vraagA: (C) => "Hoeveel kost het om " + C + " brieven te versturen?", vraagB: (C) => "Hoeveel brieven kun je versturen met " + euro(C) + "?", k: [1.5, 2, 2.5, 4], bs: [6, 8, 12, 15, 20, 25, 27] },
+    { a: "kilometer", b: "liter", zin: (A, B) => "Een auto rijdt " + A + " kilometer op " + B + " liter benzine.", vraagA: (C) => "Hoeveel kilometer kan de auto rijden op " + C + " liter?", vraagB: (C) => "Hoeveel liter is er nodig voor " + C + " kilometer?", k: [12, 14, 15, 16, 18, 20], bs: [4, 5, 6, 8, 10, 12] },
+    { a: "gram meel", b: "koekjes", zin: (A, B) => "Voor " + B + " koekjes heb je " + A + " gram meel nodig.", vraagA: (C) => "Hoeveel gram meel heb je nodig voor " + C + " koekjes?", vraagB: (C) => "Hoeveel koekjes kun je bakken van " + C + " gram meel?", k: [10, 12, 15, 20, 25], bs: [8, 12, 15, 16, 20, 24, 30] },
+    { a: "bladzijden", b: "minuten", zin: (A, B) => "Sem leest " + A + " bladzijden in " + B + " minuten.", vraagA: (C) => "Hoeveel bladzijden leest Sem in " + C + " minuten?", vraagB: (C) => "Hoeveel minuten doet Sem over " + C + " bladzijden?", k: [1.5, 2, 2.5, 3], bs: [10, 12, 15, 20, 24, 30] },
+    { a: "euro", b: "pakken sap", zin: (A, B) => B + " pakken sap kosten samen " + euro(A) + ".", vraagA: (C) => "Hoeveel kosten " + C + " pakken sap?", vraagB: (C) => "Hoeveel pakken sap krijg je voor " + euro(C) + "?", k: [1.5, 2, 2.5, 3.5], bs: [4, 6, 8, 10, 12, 15] },
+    { a: "meter", b: "stappen", zin: (A, B) => "Noor loopt " + A + " meter in " + B + " stappen.", vraagA: (C) => "Hoeveel meter loopt Noor in " + C + " stappen?", vraagB: (C) => "Hoeveel stappen heeft Noor nodig voor " + C + " meter?", k: [0.5, 0.6, 0.75, 0.8], bs: [20, 30, 40, 50, 60, 80] },
+  ];
+
+  // Netjes: aantallen (auto's, fietsen, koekjes…) blijven hele getallen; alleen euro mag op ,50 eindigen.
+  const net = (ctx, x) => { const y = Math.round(x * 100) / 100; return ctx.a === "euro" ? Number.isInteger(y * 2) : Number.isInteger(y); };
+  function maakSom(ctx) {
+    const k = kies(ctx.k), B = kies(ctx.bs);
+    const A = Math.round(k * B * 100) / 100;
+    const AA = ctx.a === "euro" ? A : fmt(A);
+    const kand = [7, 9, 11, 13, 14, 17, 19, 21, 23, 25, 30, 31, 35, 40].filter((c) => c !== B);
+    if (r() < 0.55) {
+      // Vraag naar A bij een nieuw aantal B (zoals op het werkblad van school).
+      const Cs = kand.filter((c) => net(ctx, k * c));
+      const C = Cs.length ? kies(Cs) : B * 2;
+      const antwoord = Math.round(k * C * 100) / 100;
+      return { ctx, A, B, k, C, geef: "B", vraag: ctx.zin(AA, B) + " " + ctx.vraagA(C), antwoord,
+        deel: B, keer: C, tussen: [k, 1], eind: [antwoord, C] };
+    }
+    // Vraag naar B bij een nieuw aantal A: kies m (aantal B), geef C = k·m.
+    const ms = kand.filter((m) => net(ctx, k * m));
+    const m = ms.length ? kies(ms) : B * 2;
+    const C = Math.round(k * m * 100) / 100;
+    const CC = ctx.a === "euro" ? C : fmt(C);
+    const perA = 1 / k;
+    const handig = Number.isInteger(perA * 4); // B per 1 A is een net getal → naar 1 A
+    return { ctx, A, B, k, C, geef: "A", vraag: ctx.zin(AA, B) + " " + ctx.vraagB(CC), antwoord: m,
+      deel: handig ? A : B, keer: handig ? C : m, tussen: handig ? [1, Math.round(perA * 1000) / 1000] : [k, 1], eind: [C, m], viaB: !handig };
+  }
+
+  const sommen = CTX.slice().sort(() => r() - 0.5).map(maakSom);
+
+  function tabelLeeg(s) {
+    const a = s.ctx.a, b = s.ctx.b;
+    return '<table class="vt">'
+      + '<tr class="pijl"><td class="lab2"></td><td></td><td>→</td><td></td><td>→</td><td></td></tr>'
+      + '<tr><td class="lab">' + a + '</td><td>' + toon(a, s.A) + '</td><td class="lab2"></td><td></td><td class="lab2"></td><td>' + (s.geef === "A" ? toon(a, s.C) : "") + '</td></tr>'
+      + '<tr><td class="lab">' + b + '</td><td>' + fmt(s.B) + '</td><td class="lab2"></td><td></td><td class="lab2"></td><td>' + (s.geef === "B" ? fmt(s.C) : "") + '</td></tr>'
+      + '</table>';
+  }
+  function tabelVol(s) {
+    const a = s.ctx.a, b = s.ctx.b, antA = s.geef === "B";
+    return '<table class="vt">'
+      + '<tr class="pijl"><td class="lab2"></td><td></td><td>: ' + fmt(s.deel) + ' →</td><td></td><td>× ' + fmt(s.keer) + ' →</td><td></td></tr>'
+      + '<tr><td class="lab">' + a + '</td><td>' + toon(a, s.A) + '</td><td class="lab2"></td><td>' + toon(a, s.tussen[0]) + '</td><td class="lab2"></td><td class="' + (antA ? "ant" : "") + '">' + toon(a, s.eind[0]) + '</td></tr>'
+      + '<tr><td class="lab">' + b + '</td><td>' + fmt(s.B) + '</td><td class="lab2"></td><td>' + fmt(s.tussen[1]) + '</td><td class="lab2"></td><td class="' + (antA ? "" : "ant") + '">' + fmt(s.eind[1]) + '</td></tr>'
+      + '</table>';
+  }
+  const opg = (s, i) => '<div class="opg"><span class="nr">' + (i + 1) + '</span><p>' + s.vraag + '</p>' + tabelLeeg(s) + '</div>';
+  const ant = (s, i) => {
+    const a = s.ctx.a, b = s.ctx.b;
+    const antw = s.geef === "B" ? (a === "euro" ? euro(s.antwoord) : fmt(s.antwoord) + " " + a) : fmt(s.antwoord) + " " + b;
+    let stap;
+    if (s.geef === "B") stap = fmt(s.B) + " " + b + " : " + fmt(s.deel) + " = 1, dus " + toon(a, s.A) + " : " + fmt(s.deel) + " = " + toon(a, s.k) + " per 1. Dan × " + fmt(s.keer) + ".";
+    else if (s.viaB) stap = "Eerst per 1: " + toon(a, s.A) + " : " + fmt(s.B) + " = " + toon(a, s.k) + ". Hoe vaak past " + toon(a, s.k) + " in " + toon(a, s.C) + "? " + fmt(s.antwoord) + " keer.";
+    else stap = toon(a, s.A) + " : " + fmt(s.deel) + " = 1, dus " + fmt(s.B) + " : " + fmt(s.deel) + " = " + fmt(s.tussen[1]) + " per 1. Dan × " + fmt(s.keer) + ".";
+    return '<div class="opg"><span class="nr">' + (i + 1) + '</span><p><b>' + antw + '</b> — ' + stap + '</p>' + tabelVol(s) + '</div>';
+  };
+  document.getElementById("sommen-a").innerHTML = sommen.slice(0, 4).map(opg).join("");
+  document.getElementById("sommen-b").innerHTML = sommen.slice(4, 8).map((s, i) => opg(s, i + 4)).join("");
+  document.getElementById("antwoorden").innerHTML = sommen.map(ant).join("");
+  document.querySelectorAll(".setnr").forEach((el) => { el.textContent = set; });
+  if (!q.get("set")) { try { history.replaceState(null, "", "?set=" + set); } catch (e) { /* */ } }
+  document.getElementById("nieuw").addEventListener("click", function () { location.search = "?set=" + (1 + Math.floor(Math.random() * 9999)); });
+})();
+</script>
+</body>
+</html>

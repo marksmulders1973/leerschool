@@ -24,7 +24,7 @@ import { maxJaar } from "../shared/voNiveau.js";
 // gewoon bestaan (gebeuren bij Start gratis / account).
 // (De gele Deel-actie-knop "nog X van 50 plekken" stond hier tot 6 sep 2026 — Mark: "dat kan ook wel weg".)
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onKlas, onNieuwkomers }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onStartKwartier = null, onKlas, onNieuwkomers }) {
   // Idee AR (23 sep 2026): klasgolf-schakelaar. Ziet de server ≥15 nieuwe apparaten
   // binnen 10 minuten op een schooldag (RPC klasgolf_actief), dan toont home het
   // volgende uur bovenaan de klas-strook → /klas. Geen nieuwe voordeur; het blokje
@@ -471,7 +471,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             blijft op home). 26 okt: als echt invulveld (`veld`) i.p.v. een gedempte regel;
             de ouder-agent: "een ouder met een flyer vindt de code niet binnen 5 seconden".
             Ná invullen blijft de dikke "code actief"-bevestiging. */}
-        {step === "role" && <CodeBalk veld />}
+        {step === "role" && <CodeBalk veld onOefenen={onStartKwartier} />}
 
         {/* Zoekbalk — "wat wil je oefenen?"; groep-zoekopdrachten ("groep 6") vinden
             paden op groep-bereik (LearnPathsHub) + de losse pagina's (snelkoppelingen). */}

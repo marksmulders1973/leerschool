@@ -1863,6 +1863,7 @@ export default function App() {
           onSearchPaths={(q) => { setLearnFilterSubject(null); setLearnInitialSearch(q); setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onMyMastery={() => setPage("my-mastery")}
           onMijnPagina={() => setPage("mijn-pagina")}
+          onStartKwartier={() => setPage("start-kwartier")} /* 5 nov 2026: na de opwarmset op het ere-scherm meteen door */
           onPickPath={(id) => {
             // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.
             setActiveLearnPathId(id);

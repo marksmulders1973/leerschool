@@ -19,6 +19,7 @@ import { track } from "../utils.js";
 import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { straksIcs } from "../features/referral/straksMetJeKind.js";
+import { EER_OPWARM } from "./eerOpwarmVragen.js";
 
 // .ics-afspraak (vandaag 19:00, of morgen als het al na 18:30 is) met de link + code erin.
 function zetInAgenda(code) {
@@ -38,44 +39,85 @@ function zetInAgenda(code) {
 // zagen dit scherm, 1 deed daarna een vraag. Het scherm praatte tegen de ouder ("u"), maar de enige
 // knop was voor het kind. Nu: (1) kind erbij → meteen één opwarmvraag op het scherm; (2) ouder
 // zonder kind → de link (mét code) naar zichzelf sturen, zodat het gezinspakket later alsnog start.
-const EER_VRAAG = {
-  nl: { q: "Welk woord hoort er niet bij?", opties: ["appel", "peer", "stoel", "banaan"], goed: 2, hint: "Drie woorden kun je eten. Welke niet?", uitleg: "Appel, peer en banaan zijn fruit. Een stoel niet." },
-  en: { q: "Which word does not belong?", opties: ["apple", "pear", "chair", "banana"], goed: 2, hint: "You can eat three of them. Which one not?", uitleg: "Apple, pear and banana are fruit. A chair is not." },
-};
-
-function EerVraag({ code, en, donker, onVerder }) {
-  const v = en ? EER_VRAAG.en : EER_VRAAG.nl;
+// 🔥 5 nov 2026 (gebruiksanalyse punt 3, "de eerste 5 vragen"): meting 28 dagen — 105 apparaten
+// stopten na precies één vraag, 85 daarvan hier: één opwarmvraag, dan "Verder oefenen" → startpagina.
+// Nu vijf korte vragen achter elkaar (eerOpwarmVragen.js), daarna meteen door naar het start-kwartier
+// (onOefenen) in plaats van naar de startpagina. Fout gekozen? Hint en nog een keer; na twee keer fout
+// het goede antwoord en gewoon door. Meting: partner_eer_vraag {nummer} + partner_eer_set_klaar.
+function EerOpwarmset({ code, en, donker, onKlaar }) {
+  const set = en ? EER_OPWARM.en : EER_OPWARM.nl;
+  const [nr, setNr] = useState(0);
   const [gekozen, setGekozen] = useState(null);
+  const [fouten, setFouten] = useState(0);
+  const [goedTotaal, setGoedTotaal] = useState(0);
+  const [klaar, setKlaar] = useState(false);
+  const v = set[nr];
   const goed = gekozen === v.goed;
+  const door = goed || fouten >= 2;
   const kies = (i) => {
-    if (gekozen === v.goed) return;
-    const eerste = gekozen === null;
+    if (door) return;
+    const eerste = gekozen === null && fouten === 0;
     setGekozen(i);
+    const isGoed = i === v.goed;
+    if (!isGoed) setFouten((f) => f + 1);
     if (!eerste) return;
-    try { track("question_answered", { bron: "erescherm", pad: "opwarm-erescherm", is_correct: i === v.goed, code }); } catch { /* */ }
-    try { track("partner_eer_vraag", { code, goed: i === v.goed }); } catch { /* */ }
+    if (isGoed) setGoedTotaal((g) => g + 1);
+    try { track("question_answered", { bron: "erescherm", pad: "opwarm-erescherm", is_correct: isGoed, code, nummer: nr + 1 }); } catch { /* */ }
+    try { track("partner_eer_vraag", { code, goed: isGoed, nummer: nr + 1 }); } catch { /* */ }
     try { telAntwoordVoorVriend(); } catch { /* */ } // telt mee voor het activeren van de gezinsplek (na 3 antwoorden)
   };
+  const volgende = () => {
+    if (nr + 1 < set.length) { setNr(nr + 1); setGekozen(null); setFouten(0); try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } return; }
+    setKlaar(true);
+    try { track("partner_eer_set_klaar", { code, goed: goedTotaal, totaal: set.length }); } catch { /* */ }
+  };
   const kaart = { background: donker ? "rgba(255,255,255,0.08)" : "#fff", border: "2px solid " + (donker ? "rgba(255,255,255,0.18)" : "#d5e6c2"), borderRadius: 14, padding: "14px 16px", marginTop: 12 };
+  const groteKnop = { marginTop: 12, width: "100%", border: "none", borderRadius: 14, padding: "14px", font: "800 17px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", cursor: "pointer" };
+  const stipjes = (
+    <div style={{ display: "flex", gap: 5, marginBottom: 10 }} aria-hidden="true">
+      {set.map((_, i) => <div key={i} style={{ height: 6, flex: 1, borderRadius: 3, background: i < nr || klaar ? "#7ab52d" : i === nr ? (donker ? "#fff" : "#14283c") : (donker ? "rgba(255,255,255,0.25)" : "#d5e6c2") }} />)}
+    </div>
+  );
+  if (klaar) {
+    return (
+      <div style={kaart}>
+        {stipjes}
+        <div style={{ font: "800 20px/1.3 system-ui", color: donker ? "#fff" : "#14283c" }}>{en ? "🎉 Five out of five done!" : "🎉 Vijf van de vijf gedaan!"}</div>
+        <div style={{ font: "600 14.5px/1.5 system-ui", color: donker ? "#dce5ee" : "#3a4658", marginTop: 6 }}>
+          {en ? `${goedTotaal} right the first time. Now questions for your own class, free, no account needed.` : `${goedTotaal} meteen goed. Nu vragen voor jouw eigen groep, gratis en zonder account.`}
+        </div>
+        <button type="button" onClick={onKlaar} style={groteKnop}>{en ? "▶ Keep practising" : "▶ Verder oefenen"}</button>
+      </div>
+    );
+  }
   return (
     <div style={kaart}>
+      {stipjes}
+      <div style={{ font: "700 12.5px system-ui", color: donker ? "#b9c6d4" : "#5a6775", marginBottom: 4 }}>{en ? `Question ${nr + 1} of ${set.length}` : `Vraag ${nr + 1} van ${set.length}`}</div>
       <div style={{ font: "800 17px/1.35 system-ui", color: donker ? "#fff" : "#14283c", marginBottom: 10 }}>{v.q}</div>
       <div style={{ display: "grid", gap: 8 }}>
         {v.opties.map((o, i) => {
-          const kleur = gekozen === null ? (donker ? "rgba(255,255,255,0.1)" : "#f6faf2") : i === gekozen ? (i === v.goed ? "#d7f5df" : "#fde0dd") : (donker ? "rgba(255,255,255,0.1)" : "#f6faf2");
+          const toonGoed = door && i === v.goed;
+          const kleur = toonGoed ? "#d7f5df" : gekozen === i ? "#fde0dd" : (donker ? "rgba(255,255,255,0.1)" : "#f6faf2");
           return (
-            <button key={o} type="button" onClick={() => kies(i)} style={{ textAlign: "left", border: "2px solid " + (donker ? "rgba(255,255,255,0.25)" : "#cfe0bb"), borderRadius: 12, padding: "11px 14px", font: "700 16px system-ui", color: gekozen !== null && i === gekozen ? "#14283c" : (donker ? "#fff" : "#14283c"), background: kleur, cursor: goed ? "default" : "pointer" }}>{o}</button>
+            <button key={o} type="button" onClick={() => kies(i)} style={{ textAlign: "left", border: "2px solid " + (toonGoed ? "#7ab52d" : donker ? "rgba(255,255,255,0.25)" : "#cfe0bb"), borderRadius: 12, padding: "11px 14px", font: "700 16px system-ui", color: (toonGoed || gekozen === i) ? "#14283c" : (donker ? "#fff" : "#14283c"), background: kleur, cursor: door ? "default" : "pointer" }}>
+              {o}
+            </button>
           );
         })}
       </div>
       {gekozen !== null && (
         <div style={{ marginTop: 10, font: "600 14.5px/1.5 system-ui", color: goed ? "#1b7f3b" : "#b3261e" }}>
-          {goed ? (en ? "Well done! ✅ " : "Goed zo! ✅ ") + v.uitleg : (en ? "Not quite. " : "Nog niet. ") + v.hint}
+          {goed
+            ? (en ? "Well done! ✅ " : "Goed zo! ✅ ") + v.uitleg
+            : fouten >= 2
+              ? (en ? "The right answer is: " : "Het goede antwoord is: ") + v.opties[v.goed] + ". " + v.uitleg
+              : (en ? "Not quite. " : "Nog niet. ") + v.hint}
         </div>
       )}
-      {goed && (
-        <button type="button" onClick={onVerder} style={{ marginTop: 12, width: "100%", border: "none", borderRadius: 14, padding: "14px", font: "800 17px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", cursor: "pointer" }}>
-          {en ? "▶ Keep practising" : "▶ Verder oefenen"}
+      {door && (
+        <button type="button" onClick={volgende} style={groteKnop}>
+          {nr + 1 < set.length ? (en ? "Next →" : "Volgende →") : (en ? "Finish ✓" : "Klaar ✓")}
         </button>
       )}
     </div>
@@ -143,7 +185,7 @@ const KEY_EER = "lk_partner_eer_gezien";
 // hoek, badge + groet + belofte + grote groene knop. De gemeente (OOIEVAAR*)
 // krijgt de navy-look van het origineel; andere partners dezelfde opbouw in
 // de warme lichte stijl met hún logo.
-function EerScherm({ code, onVerder }) {
+function EerScherm({ code, onVerder, onOefenen }) {
   const naam = naamVoor(code);
   const isOP = code.startsWith("OOIEVAAR");
   const isEN = code.startsWith("SABA"); // Saba-gezinnen zijn Engelstalig → Engels ere-scherm
@@ -203,7 +245,7 @@ function EerScherm({ code, onVerder }) {
             de vouw, achter logo + kop + belofte. Eerst doen, dan lezen (regel 29 sep "vraag eerst").
             Meetpunt: partner_eer_vraag / partner_welkom_toon per code (Apeldoorn vóór: 47%). */}
         <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 16 }}>{isEN ? "Try one question right away:" : "Probeer meteen één vraag:"}</div>
-        <EerVraag code={code} en={isEN} donker={donker} onVerder={onVerder} />
+        <EerOpwarmset code={code} en={isEN} donker={donker} onKlaar={onOefenen || onVerder} />
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
           <div style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
@@ -241,7 +283,7 @@ function EerScherm({ code, onVerder }) {
 // `veld` (26 okt 2026, startpagina-vereenvoudiging): het invulveld staat meteen open,
 // met één korte kop en één zin over wat de code oplevert — een ouder met een flyer
 // moet 'm binnen vijf seconden zien (ouder-agent 26 okt). Stand 2 blijft gelijk.
-export default function CodeBalk({ rustig = false, veld = false }) {
+export default function CodeBalk({ rustig = false, veld = false, onOefenen = null }) {
   // 👀 Preview-modus (Mark 27 aug: "ik wil alle ere-pagina's persoonlijk zien
   // en goedkeuren"): /?erescherm=CODE toont het ere-scherm van die code ALTIJD,
   // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
@@ -376,7 +418,7 @@ export default function CodeBalk({ rustig = false, veld = false }) {
 
   if (testEer) return <EerScherm code={testEer} onVerder={() => setTestEer(null)} />;
 
-  if (eer && actief) return <EerScherm code={actief} onVerder={sluitEer} />;
+  if (eer && actief) return <EerScherm code={actief} onVerder={sluitEer} onOefenen={onOefenen ? () => { sluitEer(); try { track("partner_eer_naar_start", { code: actief }); } catch { /* */ } onOefenen(); } : null} />;
 
   // Stand 2 — code actief: pas NU weten we van wie de code is (Mark 27 aug:
   // "de banner is voor iedereen hetzelfde; pas na invullen het welkom") →
