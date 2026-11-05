@@ -8,7 +8,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { Box3, Vector3, SRGBColorSpace } from "three";
 import { SkeletonUtils } from "three-stdlib";
 import BlockyCharacter from "./BlockyCharacter.jsx";
-import { BLOCKY_BY_ID } from "./AssetRegistry.js";
+import { BLOCKY_BY_ID, DEFAULT_AVATAR, parseAvatarUrl } from "./AssetRegistry.js";
 
 // Clip op naam vinden (Quaternius: "HumanArmature|Man_Walk" etc.): exact, anders
 // eindigt-op-keyword.
@@ -25,8 +25,11 @@ function kies(names, ...voorkeur) {
 // Blok-poppetjes ("blocky:<id>") hebben geen model-bestand: puur procedureel.
 // Aparte tak vóór de GLTF-hooks (hook-regels), zelfde props-API.
 export default function CharacterModel({ url, movingRef, targetHeight = 1.65, bouwt = false }) {
-  const m = /^blocky:(.+)$/.exec(url || "");
-  if (m) return <BlockyCharacter palette={BLOCKY_BY_ID[m[1]]} movingRef={movingRef} targetHeight={targetHeight} bouwt={bouwt} />;
+  if (/^blocky:/.test(url || "")) {
+    // 5 nov 2026: eigen kleuren reizen mee in de url (?shirt=…); onbekend id → standaard.
+    const p = parseAvatarUrl(url);
+    return <BlockyCharacter palette={p ? p.palette : BLOCKY_BY_ID[DEFAULT_AVATAR]} movingRef={movingRef} targetHeight={targetHeight} bouwt={bouwt} />;
+  }
   return <GltfCharacter url={url} movingRef={movingRef} targetHeight={targetHeight} />;
 }
 

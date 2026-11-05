@@ -10,7 +10,7 @@ import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
 import { meldParkAan } from "../data/repos/galerijRepo";
 import { applyDailyLogin, applyKwartierReward, inkomstenPerDag, groeiBabies, verwaarloosCheck, dagenVerschil, vandaag, BABY_BONUS, MAX_DAGEN_INKOMST, loonkostenPerDag, VERKOPER_LOON, VERKOPER_LOON_EURO, KWARTIER_REWARD, PARK_INKOMST_CAP_PER_DAG } from "../features/zoo/zooEconomy";
-import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, isManipuleerbaar, maatConfig, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR } from "../features/zoo/AssetRegistry";
+import { PLAATSBARE_DIEREN, PLAATSBARE_BOUWWERKEN, PLAATSBARE_ATTRACTIES, PLAATSBARE_LEERPLEIN, PLAATSBARE_HEKKEN, PLAATSBARE_NATUUR, PLAATSBARE_BLOKKEN, isBlok, getAsset, cellsVan, isManipuleerbaar, maatConfig, KRAAM_SOORTEN, KRAAM_KEYS, KRAAM_PRODUCTEN, CHARACTERS, CHARACTER_BY_ID, DEFAULT_AVATAR, AVATAR_KLEURVELDEN, BLOCKY_BY_ID, maakAvatarUrl, schoneAvatarKleuren } from "../features/zoo/AssetRegistry";
 import BlokPreview from "../features/zoo/BlokPreview.jsx";
 import { HALF, CELL, KUB, footprint, cellKey, cellToWorld } from "../features/zoo/grid";
 import { serialize as serTerrain, deserialize as deserTerrain } from "../features/zoo/terrain";
@@ -1165,11 +1165,24 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   }, [loaded, meta]);
 
   // Gekozen speler-poppetje (avatar). Opgeslagen in meta.owned.avatar.
-  const avatarId = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatar) || DEFAULT_AVATAR;
-  const avatarUrl = (CHARACTER_BY_ID[avatarId] || CHARACTERS[0]).url;
+  const avatarIdRuw = (meta?.owned && !Array.isArray(meta.owned) && meta.owned.avatar) || DEFAULT_AVATAR;
+  const avatarId = CHARACTER_BY_ID[avatarIdRuw] ? avatarIdRuw : DEFAULT_AVATAR; // oude keuzes (3D-held) → blok-Sem
+  // 🎨 Eigen kleuren (Mark 5 nov 2026): meta.owned.avatarKleuren = { shirt, broek, … }.
+  // Ze zitten in de avatar-url, zodat ook medespelers ze zien.
+  const avatarKleuren = schoneAvatarKleuren(meta?.owned && !Array.isArray(meta.owned) ? meta.owned.avatarKleuren : null);
+  const avatarUrl = maakAvatarUrl(avatarId, avatarKleuren);
+  const avatarPalet = { ...(BLOCKY_BY_ID[avatarId] || BLOCKY_BY_ID[DEFAULT_AVATAR]), ...avatarKleuren };
   const kiesAvatar = (id) => {
-    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatar: id } }; });
+    // Nieuw poppetje = frisse start: eigen kleuren gaan mee weg (voorspelbaar voor een kind).
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatar: id, avatarKleuren: {} } }; });
     flits("Poppetje gekozen ✓");
+  };
+  const zetAvatarKleur = (veld, kleur) => {
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; const k = schoneAvatarKleuren(o.avatarKleuren); return { ...m, owned: { ...o, avatarKleuren: { ...k, [veld]: kleur } } }; });
+    try { track("avatar_kleur_bewaard", { veld, poppetje: avatarId }); } catch { /* */ }
+  };
+  const resetAvatarKleuren = () => {
+    setMeta((m) => { if (!m) return m; const o = (m.owned && !Array.isArray(m.owned)) ? m.owned : {}; return { ...m, owned: { ...o, avatarKleuren: {} } }; });
   };
   // Eigen naam voor je poppetje (Mark 4 nov 2026: "ze moeten ook een eigen naam
   // kunnen geven"). Opgeslagen in meta.owned.avatarNaam; staat boven je poppetje
@@ -1356,6 +1369,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   const plaatsOpVakje = (cell, punt) => {
     if (!placing) return;
+    try { track("park_plaats", { asset: placing.assetId || null, pakket: placing.pakket || null, verplaatst: placing.moveIdx != null }); } catch { /* */ }
     const KLIM = HALF * CELL - 1;
     // 🏠 Bouwpakket: rol de blauwdruk (in kubussen) uit rond het klikpunt.
     if (placing.pakket) {
@@ -1420,6 +1434,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // tegen een kubus-vlak aan). Zwevende kubussen mogen (overhang, brug).
   const plaatsBlokOp = ({ kx, kz, kh, fx = 0, fz = 0 }) => {
     if (!placing) return;
+    if (!placing.pakket) telMijlpaal("blok", { asset: placing.assetId || null });
     if (placing.pakket) {
       // Pakket-anker een gebouw-helft extra vooruit, zodat je er niet ín staat.
       const schuif = { huis: 7, toren: 5, hok: 6 }[placing.pakket] || 6;
@@ -1506,7 +1521,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
   // 🔺 Inhoud-vormen in het park kun je stap-voor-stap groter/kleiner maken;
   // de zwevende maten + inhoud + formule veranderen live mee (Mark 16 aug).
+  // 📊 5 nov 2026 (Mark: "voeg die events ook toe"): bouwen, hakken en verven meten.
+  // Blokken gaan met tientallen per minuut → alleen mijlpalen (1, 10, 50, 100, 250, 500
+  // per sessie) als event, anders loopt de events-tabel vol met één bouwsessie.
+  // Alles anoniem (apparaat-kenmerk), zelfde categorie als de bestaande park-events
+  // en gedekt door de privacyverklaring ("welke knoppen en onderdelen worden gebruikt").
+  const bouwTelRef = useRef({ blok: 0, hak: 0 });
+  const telMijlpaal = (soort, props) => {
+    const n = (bouwTelRef.current[soort] = (bouwTelRef.current[soort] || 0) + 1);
+    if ([1, 10, 50, 100, 250, 500].includes(n)) { try { track(`park_${soort}`, { ...props, n }); } catch { /* */ } }
+  };
   const wijzigMaat = (idx, delta) => {
+    // 5 nov 2026 (Mark: "is te meten of ooit iemand de kubus groter/kleiner maakte?") → ja, vanaf nu.
+    try { const it = placedItems[idx]; if (it) track("park_maat", { asset: it.assetId, delta }); } catch { /* */ }
     setPlacedItems((items) => items.map((it, i) => {
       if (i !== idx) return it;
       // Per object een eigen bereik (Mark 17 aug): piramide 4..11, kleuren-kubus
@@ -2320,7 +2347,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
             <div style={menuKop}>🏡 Mijn park</div>
             <div style={menuGrid}>
-              <MenuTegel emoji="👤" label="Mijn poppetje kiezen" fn={() => setPanel("karakter")} />
+              <MenuTegel emoji="👤" label="Mijn poppetje kiezen of kleuren" fn={() => setPanel("karakter")} />
               {/* 4 nov 2026 (Mark): tijdens het spel van speler wisselen → "Wie oefent er?" op Mijn. */}
               {onWisselSpeler && <MenuTegel emoji="🔁" label="Andere speler" fn={() => { setPanel(null); onWisselSpeler(); }} />}
               <MenuTegel emoji="🐾" label="Kies je maatje" fn={openBuddyPicker} />
@@ -2483,6 +2510,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onPlace={plaatsOpVakje}
           onPlaceBlok={plaatsBlokOp}
           onHakBlok={(k) => {
+            telMijlpaal("hak", { asset: k.assetId || null });
             if (k.assetId) pakIn(k.assetId);
             setPlacedItems((items) => {
               const idx = items.findIndex((it) => isBlok(it.assetId) && it.kx === k.kx && it.kz === k.kz && (it.kh || 0) === (k.kh || 0));
@@ -2495,7 +2523,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onClearSelection={sluitSelectie}
           onBuy={buyApi.onBuy}
           kramen={kramen}
-          onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); flits("Onderdeel gekleurd ✓"); }}
+          onPickPart={(idx, grp) => { setHuisKleur(idx, grp, brushColor); try { track("park_verf", { onderdeel: grp || null }); } catch { /* */ } flits("Onderdeel gekleurd ✓"); }}
           onHouseParts={setHouseParts}
           paintCursor={colorMode && selIsHuis ? verfCursor(brushColor) : null}
           colorEditIdx={colorMode && selIsHuis ? selectedIdx : -1}
@@ -3717,12 +3745,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* Karakter-kiezer: kies je eigen poppetje (jongens/meisjes). */}
       {panel === "karakter" && (
         <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", maxHeight: "92vh", overflowY: "auto", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>👤 Kies je poppetje</h2>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>👤 Mijn poppetje</h2>
               <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
             </div>
-            <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Dit is het poppetje waarmee jij door je park loopt. Kies er een uit {CHARACTERS.length}.</p>
+            <p style={{ font: "500 13.5px system-ui", color: "#555", marginTop: 0 }}>Dit is het poppetje waarmee jij door je park loopt. Geef het een naam, kies je kleuren, of kies een ander poppetje uit {CHARACTERS.length}.</p>
             <label style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, font: "700 13px system-ui", color: "#234" }}>
               Naam van je poppetje
               <input
@@ -3734,8 +3762,44 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 style={{ flex: 1, minWidth: 0, padding: "7px 10px", borderRadius: 10, border: "2px solid #d8d2c0", font: "600 14px system-ui", color: "#234", background: "#fff" }}
               />
             </label>
+            {/* 🎨 5 nov 2026 (Mark): "bewerk mijn poppetje" — kleuren per onderdeel, met het poppetje live ernaast. */}
+            <div style={{ display: "flex", gap: 12, alignItems: "flex-start", background: "#f5f3ea", border: "2px solid #e7e3d6", borderRadius: 14, padding: "10px 12px", marginBottom: 10 }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, minWidth: 72 }}>
+                <BlokPreview palette={avatarPalet} size={56} />
+                <span style={{ font: "800 12px system-ui", color: "#234", textAlign: "center" }}>{spelerNaam || CHARACTER_BY_ID[avatarId]?.name}</span>
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+                  <span style={{ font: "800 13px system-ui", color: "#234" }}>🎨 Bewerk mijn poppetje</span>
+                  {Object.keys(avatarKleuren).length > 0 && (
+                    <button onClick={resetAvatarKleuren} style={{ border: "none", borderRadius: 999, padding: "4px 10px", font: "700 11.5px system-ui", color: "#234", background: "#e7e3d6", cursor: "pointer" }}>Terug naar standaard</button>
+                  )}
+                </div>
+                {AVATAR_KLEURVELDEN.map((veld) => (
+                  <div key={veld.key} style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
+                    <span style={{ font: "700 11.5px system-ui", color: "#555", width: 58, flexShrink: 0 }}>{veld.label}</span>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                      {veld.kleuren.map((kleur) => {
+                        const actief = (avatarPalet[veld.key] || "").toLowerCase() === kleur;
+                        return (
+                          <button
+                            key={kleur}
+                            onClick={() => zetAvatarKleur(veld.key, kleur)}
+                            aria-label={`${veld.label} ${kleur}`}
+                            aria-pressed={actief}
+                            title={veld.label}
+                            style={{ width: 22, height: 22, borderRadius: 7, border: actief ? "3px solid #2e7d32" : "2px solid rgba(0,0,0,.18)", background: kleur, cursor: "pointer", padding: 0, boxSizing: "border-box" }}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{ font: "800 13px system-ui", color: "#234", marginBottom: 6 }}>Of kies een ander poppetje</div>
             {/* 4 nov 2026: 30 poppetjes met echt voorbeeldplaatje (geen emoticon). */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(84px, 1fr))", gap: 8, maxHeight: "62vh", overflowY: "auto", paddingRight: 4 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(84px, 1fr))", gap: 8, maxHeight: "40vh", overflowY: "auto", paddingRight: 4 }}>
               {CHARACTERS.map((c) => (
                 <button key={c.id} onClick={() => kiesAvatar(c.id)} aria-label={`Poppetje ${c.name}`} aria-pressed={avatarId === c.id} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: "8px 4px 6px", borderRadius: 12, border: avatarId === c.id ? "3px solid #2e7d32" : "2px solid #e7e3d6", background: avatarId === c.id ? "#eaf6e8" : "#f5f3ea", cursor: "pointer", font: "800 12.5px system-ui", color: "#234" }}>
                   {c.blocky ? <BlokPreview palette={c.blocky} size={38} /> : <span style={{ height: 61, display: "grid", placeItems: "center", font: "800 11px system-ui", color: "#5b3d00" }}>3D</span>}

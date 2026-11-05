@@ -403,17 +403,58 @@ export const CHARACTERS = [
   { id: "blokZara", name: "Zara", url: "blocky:blokZara", blocky: { huid: "#c98d5f", haar: "#26160a", shirt: "#ab47bc", broek: "#1b2e5b", schoen: "#2a2a2e", stijl: "staartjes", bril: true } },
   { id: "blokOlivier", name: "Olivier", url: "blocky:blokOlivier", blocky: { huid: "#f0c8a0", haar: "#3a2415", shirt: "#fb8c00", broek: "#35485c", schoen: "#1f2022", stijl: "muts", muts: "#1e88e5" } },
   { id: "blokJasmijn", name: "Jasmijn", url: "blocky:blokJasmijn", blocky: { huid: "#8d5a3a", haar: "#15110d", shirt: "#ef5350", broek: "#3f3a55", schoen: "#2a2a2a", stijl: "lang" } },
-  // Held (Mark 1 jul): eigen figuur uit een tekening → 3D via Stable Fast 3D,
-  // gerigd via Mixamo (Walk + Idle). Blijft — Mark's eigen creatie.
-  { id: "heldMj", name: "Held", url: "/models/zoo/people/held-mj.glb" },
   // De Quaternius "echte" mens-modellen (girl1-4/boy1-4) zijn 2 jul verwijderd
-  // (Mark: alles blok-stijl). Oude keuzes vallen automatisch terug op blok-Sem.
+  // (Mark: alles blok-stijl). De 3D-held (held-mj.glb, Mark 1 jul) is 5 nov 2026
+  // uit de kiezer gehaald (Mark: "ziet er niet uit"); het bestand blijft staan
+  // voor medespelers met een oude versie. Oude keuzes vallen terug op blok-Sem.
 ];
 export const CHARACTER_BY_ID = Object.fromEntries(CHARACTERS.map((c) => [c.id, c]));
-// Blok-Sem (rood shirt + pet, knipoog naar de held) = nieuwe standaard in de
-// blok-wereld; de held + Quaternius-poppetjes blijven gewoon kiesbaar.
+// Blok-Sem (rood shirt + pet) = standaard in de blok-wereld.
 export const DEFAULT_AVATAR = "blokSem";
 export const BLOCKY_BY_ID = Object.fromEntries(CHARACTERS.filter((c) => c.blocky).map((c) => [c.id, c.blocky]));
+
+// 🎨 Eigen kleuren per poppetje (Mark 5 nov 2026: "bewerk mijn poppetje, net als
+// je profiel maar dan met deze poppetjes"). Het kind kiest een poppetje en mag
+// daarna shirt, broek, schoenen, haar en huid zelf kleuren uit vaste paletten
+// (rustig, geen vrije kleurkiezer). De keuze reist mee in de avatar-url
+// ("blocky:<id>?shirt=e2574c&…"), zodat medespelers dezelfde kleuren zien
+// zonder een nieuw relay-veld. Alleen bekende velden + geldige hex komen door.
+export const AVATAR_KLEURVELDEN = [
+  { key: "shirt", label: "Shirt", kleuren: ["#e2574c", "#ff8a3d", "#f2b134", "#ffd600", "#3ba55d", "#00bfa5", "#26c6da", "#4a90d9", "#1e88e5", "#7c4dff", "#b06ad8", "#f06292", "#ec407a", "#8d6e63", "#f5f5f5", "#26292e"] },
+  { key: "broek", label: "Broek", kleuren: ["#26292e", "#37474f", "#1b2e5b", "#2c3e50", "#35485c", "#2e4638", "#3f3a55", "#4a3f6b", "#6a1b9a", "#c62828", "#ef6c00", "#2e7d32", "#5d4037", "#9e9e9e", "#eceff1", "#f8bbd0"] },
+  { key: "schoen", label: "Schoenen", kleuren: ["#17181a", "#26292c", "#3a2a25", "#5d4037", "#1b2e5b", "#c62828", "#ef6c00", "#2e7d32", "#f5f5f5", "#ffd600", "#f06292", "#7c4dff"] },
+  { key: "haar", label: "Haar", kleuren: ["#0d0b0a", "#101418", "#1c1c1e", "#26160a", "#3a2415", "#4a3320", "#6a4228", "#7a4a20", "#b8452c", "#c2452d", "#d6a94a", "#e8b830", "#f1e4b5", "#9e9e9e", "#4a90d9", "#f06292"] },
+  { key: "huid", label: "Huid", kleuren: ["#5e3a25", "#6b4226", "#8d5a3a", "#a66f44", "#b07248", "#b8865a", "#c98d5f", "#c9956a", "#e8bd93", "#f0c8a0", "#f2d2b0", "#f5d9c4"] },
+];
+const KLEURVELD_KEYS = new Set(AVATAR_KLEURVELDEN.map((f) => f.key));
+const HEX6 = /^#[0-9a-f]{6}$/i;
+// Houdt alleen bekende velden met een geldige #rrggbb-kleur over.
+export function schoneAvatarKleuren(kleuren) {
+  const uit = {};
+  if (!kleuren || typeof kleuren !== "object") return uit;
+  for (const [k, v] of Object.entries(kleuren)) {
+    if (KLEURVELD_KEYS.has(k) && typeof v === "string" && HEX6.test(v)) uit[k] = v.toLowerCase();
+  }
+  return uit;
+}
+export function maakAvatarUrl(id, kleuren) {
+  const basis = BLOCKY_BY_ID[id] ? id : DEFAULT_AVATAR;
+  const s = schoneAvatarKleuren(kleuren);
+  const q = AVATAR_KLEURVELDEN.filter((f) => s[f.key]).map((f) => `${f.key}=${s[f.key].slice(1)}`).join("&");
+  return `blocky:${basis}${q ? `?${q}` : ""}`;
+}
+// "blocky:blokSem?shirt=ffd600" → { id, palette } (palette = basis + eigen kleuren).
+// Onbekend poppetje → null (de aanroeper kiest dan de standaard).
+export function parseAvatarUrl(url) {
+  const m = /^blocky:([A-Za-z0-9_]+)(?:\?([^#]*))?$/.exec(String(url || ""));
+  if (!m || !BLOCKY_BY_ID[m[1]]) return null;
+  const extra = {};
+  for (const deel of (m[2] || "").split("&")) {
+    const [k, v] = deel.split("=");
+    if (k && v && KLEURVELD_KEYS.has(k) && /^[0-9a-f]{6}$/i.test(v)) extra[k] = "#" + v.toLowerCase();
+  }
+  return { id: m[1], palette: { ...BLOCKY_BY_ID[m[1]], ...extra } };
+}
 
 export function allModelUrls() {
   return [...new Set(Object.values(ZOO_ASSETS).map((a) => a.url))];
