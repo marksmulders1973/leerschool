@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prijzen Leerkwartier — gratis tot 2027 | Doorstroomtoets + examens oefenen</title>
+<title>Prijzen Leerkwartier — oefenen gratis t/m 2031, Familie € 39 per jaar</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -17,7 +17,7 @@
 <meta name="description" content="Leerkwartier is in 2026 helemaal gratis. Vanaf januari 2027: Familie per gezin — €39 voor 12 maanden, één keer betalen en het stopt vanzelf. Voor scholen gratis, gegarandeerd t/m 2031.">
 <link rel="canonical" href="https://leerkwartier.app/abonnement.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Prijzen Leerkwartier — gratis tot 2027">
+<meta property="og:title" content="Prijzen Leerkwartier — oefenen gratis t/m 2031, Familie € 39 per jaar">
 <meta property="og:description" content="Leerkwartier is in 2026 helemaal gratis. Vanaf januari 2027: Familie per gezin — €39 voor 12 maanden, één keer betalen en het stopt vanzelf. Voor scholen is Leerkwartier gratis, gegarandeerd t/m 2031.">
 <meta property="og:url" content="https://leerkwartier.app/abonnement.html">
 <meta property="og:site_name" content="Leerkwartier">
@@ -95,6 +95,13 @@
   .lk-vink li::before { content: "✓"; position: absolute; left: 0; top: 4px; width: 21px; height: 21px; border-radius: 50%; background: #00c853; color: #fff; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; }
   #koop-blok button { width: 100%; max-width: 380px; padding: 15px 18px; border-radius: 14px; border: none; background: #ffd54f; color: #0b1224; font-size: 1.1em; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #c9a227; }
   #koop-blok button:active { transform: translateY(2px); box-shadow: 0 2px 0 #c9a227; }
+  /* 5 nov 2026: vóór januari is de lijst de hoofdknop (geel), Familie-kopen de tweede (omlijnd). Na 1 jan draait het om. */
+  #koop-blok { display: flex; flex-direction: column; gap: 10px; max-width: 380px; }
+  #koop-blok .koop-lijst { display: block; width: 100%; box-sizing: border-box; padding: 15px 18px; border-radius: 14px; background: #ffd54f; color: #0b1224; font-size: 1.1em; font-weight: 900; text-align: center; text-decoration: none; box-shadow: 0 4px 0 #c9a227; }
+  #koop-blok .koop-lijst:active { transform: translateY(2px); box-shadow: 0 2px 0 #c9a227; }
+  #koop-blok:not(.na-januari) button.koop { background: transparent; color: #ffd54f; border: 2px solid #ffd54f; box-shadow: none; font-size: 1em; padding: 12px 18px; }
+  #koop-blok.na-januari { flex-direction: column-reverse; }
+  #koop-blok.na-januari .koop-lijst { background: transparent; color: #ffd54f; border: 2px solid #ffd54f; box-shadow: none; font-size: 1em; padding: 12px 18px; }
   .lk-onder-knop { margin-top: 8px; font-size: .92em; font-weight: 700; color: #69f0ae; }
   #koop-msg { margin-top: 6px; font-size: .9em; }
   .lk-klein { margin: 10px 0 0; font-size: .8em; opacity: .75; }
@@ -140,10 +147,15 @@
       <li>Voor het hele gezin, tot 3 kinderen</li>
       <li>Geen abonnement: het stopt vanzelf</li>
     </ul>
+    <!-- 5 nov 2026 (marketeer-ronde): tot 1 januari 2027 is alles gratis, dus de hoofdknop is
+         de lijst voor januari; "Kies Familie" blijft als tweede knop werken. Vanaf 1 januari
+         draait het script hieronder de volgorde om (class na-januari). -->
     <div id="koop-blok">
+      <a href="#waitlist" class="koop-lijst" id="koop-lijst">Zet me op de lijst voor januari →</a>
       <button type="button" class="koop" data-plan="jaar">Kies Familie — € 39</button>
     </div>
-    <div class="lk-onder-knop">Nu is alles nog gratis. Betaal je nu, dan gaat je jaar pas in op 1 januari 2027.<br>Niet tevreden? Mail ons binnen 14 dagen na betalen, dan krijg je je geld terug.</div>
+    <div class="lk-onder-knop" id="onder-knop-vooraf">Tot 1 januari 2027 is alles gratis. Familie start in januari: je krijgt dan één mailtje en kunt het eerst een week proberen.<br>Betaal je nu alvast? Dan loopt je jaar van 1 januari 2027 tot 1 januari 2028. Niet tevreden? Mail ons binnen 14 dagen, dan krijg je je geld terug.</div>
+    <div class="lk-onder-knop" id="onder-knop-na" hidden>Niet tevreden? Mail ons binnen 14 dagen na betalen, dan krijg je je geld terug.</div>
     <div id="koop-msg"></div>
     <p class="lk-klein">Nooit reclame. Betalen met iDEAL/Wero of kaart, je krijgt een factuur per mail.
       Code gekregen van je gemeente of een organisatie? <a href="/">Vul die eerst in</a>, dan hoef je niet te betalen.
@@ -214,9 +226,9 @@
 </details>
 
 <div class="lk-waitlist" id="waitlist">
-  <h2 style="margin-top: 0">📬 Liever eerst rustig nadenken?</h2>
+  <h2 style="margin-top: 0">📬 Hou me op de hoogte voor januari</h2>
   <p style="margin: .5em 0">
-    Laat je e-mailadres achter. Vóór 1 januari krijg je één mailtje met wat Familie voor jouw gezin doet. Geen spam.
+    Laat je e-mailadres achter. Vóór 1 januari krijg je één mailtje: wat Familie voor jouw gezin doet en hoe je het eerst een week probeert. Geen spam.
   </p>
   <form id="waitlist-form">
     <input type="email" name="email" placeholder="je@email.nl" required aria-label="E-mailadres">
@@ -334,6 +346,17 @@
     }
     if (q.get("betaald") !== "1" && location.hash === "#familie") { var fk = document.getElementById("familie"); if (fk) setTimeout(function(){ fk.scrollIntoView({ behavior: "smooth", block: "start" }); }, 150); }
     if (q.get("geannuleerd") === "1") msg.textContent = "Betaling afgebroken. Niets gebeurd.";
+    // 5 nov 2026: vanaf 1 januari 2027 wordt "Kies Familie" vanzelf weer de hoofdknop.
+    if (Date.now() >= Date.parse("2027-01-01T00:00:00+01:00")) {
+      var kb2 = document.getElementById("koop-blok"); if (kb2) kb2.classList.add("na-januari");
+      var ov = document.getElementById("onder-knop-vooraf"), on = document.getElementById("onder-knop-na");
+      if (ov) ov.hidden = true; if (on) on.hidden = false;
+    }
+    var kl = document.getElementById("koop-lijst");
+    if (kl) kl.addEventListener("click", function () {
+      try { if (window.va) window.va("event", { name: "prijs_lijst_klik" }); } catch (e) {}
+      var wl = document.getElementById("waitlist"); if (wl) { setTimeout(function () { var i = wl.querySelector("input[type=email]"); if (i) i.focus(); }, 500); }
+    });
     document.querySelectorAll("button.koop").forEach(function (b) {
       b.addEventListener("click", async function () {
         msg.textContent = "Even bezig…";
@@ -371,7 +394,7 @@
           "Content-Type": "application/json",
           "Prefer": "return=minimal"
         },
-        body: JSON.stringify({ email: email, plan: plan })
+        body: JSON.stringify({ email: email, plan: plan, source: "abonnement" })
       });
       if (resp.ok || resp.status === 201 || resp.status === 204) {
         msg.textContent = "✓ Bedankt! Je hoort het als eerste.";

@@ -18,6 +18,8 @@ import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
 import { kwartierStand, huidigBlok, blokKlaar, stopKwartier, startKwartierPlan } from "./kwartier.js";
 import TrouweGastKaart from "../account/TrouweGastKaart.jsx";
+import ThuisMailKaart from "./ThuisMailKaart.jsx";
+import DeelTrotsKnop from "../../components/DeelTrotsKnop.jsx";
 import { meldKwartierKlaar, meldGevoel } from "../niveau/signalen.js";
 
 const S = {
@@ -181,6 +183,23 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
         <div style={{ marginTop: 12 }}>
           <TrouweGastKaart userName={userName} onNaamInvullen={onNaamInvullen} plek="kwartier" />
         </div>
+        {/* 📲 Deelknop op het trotsmoment (5 nov 2026, marketeer-ronde): 271 apparaten
+            maakten in 28 dagen een kwartier af, 8 deelden iets — de deelknop zat alleen in
+            de 15-minuten-toast, die hier zelden valt. Nu hier, in de woorden van het kind.
+            Meting: kwartier_gedeeld met plek "eindscherm". */}
+        {totaal > 0 && (
+          <div style={{ marginTop: 12 }}>
+            <DeelTrotsKnop
+              plek="eindscherm"
+              utm="kind"
+              label="📲 Laat thuis zien wat je deed"
+              tekst={`Ik heb vandaag mijn kwartier gedaan op Leerkwartier: ${goed} van de ${totaal} goed 🎉 Oefen ook mee, het is gratis:`}
+              style={{ padding: "12px 14px", fontSize: 15, background: "var(--color-bg-elevated)", color: "var(--color-text)", border: "1px solid var(--color-border-soft)" }}
+            />
+          </div>
+        )}
+        {/* 📬 Thuis-mail ná ≥3 bezoekdagen (5 nov 2026): de ouder komt zo in beeld. */}
+        <ThuisMailKaart userName={userName} userLevel={userLevel} />
         {startsetRest ? (
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
             <Button size="lg" onClick={nogTien}>▶ Nog {Math.min(STARTSET_PER_KEER, startsetRest.rest)} → maak je set af</Button>

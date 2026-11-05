@@ -455,6 +455,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
+        {/* Bewijsregel (5 nov 2026, marketeer-ronde): één rustige regel onder de knop,
+            geen kaart, geen knop (regel 30 sep). Partner-zin volgens Mark 5 nov: alleen
+            "gedeeld door", niets over wat gezinnen krijgen. */}
+        {step === "role" && (
+          <p style={{
+            margin: "8px auto 0", maxWidth: 560, padding: "0 12px", textAlign: "center",
+            fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.62)",
+          }}>
+            Gedeeld door de gemeente Den Haag · elke maand oefenen hier honderden kinderen
+          </p>
+        )}
+
         {/* 🎟️ Code-veld (Mark 27 aug: de handmatige code-ingang — afspraak met Den Haag —
             blijft op home). 26 okt: als echt invulveld (`veld`) i.p.v. een gedempte regel;
             de ouder-agent: "een ouder met een flyer vindt de code niet binnen 5 seconden".
@@ -895,7 +907,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.8)",
               marginBottom: 10, lineHeight: 1.25,
             }}>
-              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>500+</strong>bezoekers per maand</div>
+              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>1.000+</strong>bezoekers per maand</div>
               <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>18.000+</strong>oefenvragen</div>
               <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>48</strong>echte examens</div>
             </div>

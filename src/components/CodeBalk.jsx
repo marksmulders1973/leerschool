@@ -190,6 +190,14 @@ function EerScherm({ code, onVerder }) {
             ? <>How wonderful that you found us through <strong style={{ color: "#0a7d43" }}>the Queen Wilhelmina Library</strong>.</>
             : <>Wat fijn dat je ons hebt gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
         </p>
+        {/* Bewijsregel (5 nov 2026): op de partnerlanding haakt de helft af zonder iets te doen.
+            Eén regel vertrouwen, niet bij de Ooievaarspas zelf (die ís de gemeente). */}
+        {!isOP && (
+          <p style={{ font: "500 13px/1.5 system-ui", color: donker ? "rgba(255,255,255,0.62)" : "#5a6775", margin: "6px 0 0" }}>
+            {isEN ? "Also shared by the City of The Hague · hundreds of children practise here every month"
+              : "Ook gedeeld door de gemeente Den Haag · elke maand oefenen hier honderden kinderen"}
+          </p>
+        )}
         {/* 4 nov 2026 (gebruiksanalyse): de vraag staat nu BOVEN de belofte-kaart. Meting 14 dagen
             Apeldoorn: 128 zagen dit scherm, 60 beantwoordden de vraag — die stond op een telefoon onder
             de vouw, achter logo + kop + belofte. Eerst doen, dan lezen (regel 29 sep "vraag eerst").

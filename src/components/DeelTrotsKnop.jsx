@@ -16,17 +16,22 @@ import { getDayStreak } from "../shared/dailyGoal.js";
 // Standaard-styling past op een gekleurde (groene) felicitatie-achtergrond:
 // witte pil met donkere tekst. `onShared` wordt aangeroepen na een geslaagde
 // deel-actie (bv. om de toast te sluiten).
-export default function DeelTrotsKnop({ onShared }) {
+//
+// 5 nov 2026 (marketeer-ronde): dezelfde knop ook op het eindscherm van het
+// kwartier van vandaag — dáár zit het kind zelf achter het scherm, dus de tekst,
+// het label en de utm-bron zijn per plek instelbaar (`tekst`, `label`, `utm`,
+// `plek`, `style`). Meting blijft één event: kwartier_gedeeld, met `plek`.
+export default function DeelTrotsKnop({ onShared, tekst: tekstProp, label, utm = "trots", plek = "toast", style: extraStyle }) {
   const [gekopieerd, setGekopieerd] = useState(false);
   const streak = (() => { try { return getDayStreak().current || 0; } catch { return 0; } })();
 
-  const url = `https://${BRAND.domain}/?ref=${getMyRefCode()}&utm_source=trots`;
+  const url = `https://${BRAND.domain}/?ref=${getMyRefCode()}&utm_source=${encodeURIComponent(utm)}`;
   const streakDeel = streak > 1 ? ` (dag ${streak} op rij! 🔥)` : "";
-  const tekst = `Mijn kind oefende vandaag 15 minuten voor de Doorstroomtoets${streakDeel} met ${BRAND.name} 🎯 Gratis, een kwartier per dag leren, een leven lang slimmer:`;
+  const tekst = tekstProp || `Mijn kind oefende vandaag 15 minuten voor de Doorstroomtoets${streakDeel} met ${BRAND.name} 🎯 Gratis, een kwartier per dag leren, een leven lang slimmer:`;
 
   const deel = async () => {
     const heeftNative = typeof navigator !== "undefined" && typeof navigator.share === "function";
-    track("kwartier_gedeeld", { streak, via: heeftNative ? "native" : "fallback" });
+    track("kwartier_gedeeld", { streak, via: heeftNative ? "native" : "fallback", plek });
     if (heeftNative) {
       try { await navigator.share({ title: BRAND.name, text: tekst, url }); onShared?.(); return; }
       catch { /* geannuleerd of niet ondersteund → val terug */ }
@@ -50,9 +55,10 @@ export default function DeelTrotsKnop({ onShared }) {
         width: "100%", padding: "9px 12px", borderRadius: 10, cursor: "pointer",
         border: "none", background: "rgba(255,255,255,0.92)", color: "#0d1b2e",
         fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800,
+        ...(extraStyle || {}),
       }}
     >
-      {gekopieerd ? "✓ Link gekopieerd — plak 'm in een oudergroep!" : "📲 Trots? Tip een andere ouder"}
+      {gekopieerd ? "✓ Link gekopieerd — plak 'm in een groep!" : (label || "📲 Trots? Tip een andere ouder")}
     </button>
   );
 }
