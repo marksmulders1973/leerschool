@@ -70,6 +70,7 @@ export const PARTNER_NAMEN = {
   BREDA2027: "Voedselbank Breda",
   BUURTGEZINNEN2027: "Buurtgezinnen",
   DONGEN2027: "Voedselbank Dongen",
+  SPEELGOEDBEURS2027: "Speelgoedbeurs Den Haag", // 5 nov 2026: deelpakket (scripts/maak-deelpakket.mjs)
   DEMEERN2027: "Speelgoedbank De Meern", // 21 okt 2026: spoor 1, Jolanda Borst zei ja
   QUIETMAASTRICHT2027: "Quiet Maastricht", // 24 okt 2026: spoor 1, Leon zei ja (gesloten Facebookgroep, begin december)
   // 27 okt 2026 (Mark "doe de passen"): stadspassen en kindpakketten, Den Haag-model; Familie gratis t/m 31-12-2028

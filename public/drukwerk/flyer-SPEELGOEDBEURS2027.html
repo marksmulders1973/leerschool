@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Leerkwartier — gratis oefenen voor de Doorstroomtoets (Speelgoedbeurs Den Haag)</title>
+  <style>
+    /* B1-flyer deelpakket (sjabloon 21 okt 2026, uit de De-Meern-flyer; Alkmaar-recept):
+       korte zinnen, grote letters, geen organisatie-teksten. */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#e8ecf1;color:#1a2332;padding:24px}
+    .vel{background:#fff;max-width:760px;margin:0 auto;padding:44px 52px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.15)}
+    .kop{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px}
+    .merk{display:flex;align-items:center;gap:12px}
+    .merk .logo{height:76px;width:76px;display:block;flex:0 0 auto}
+    .merk .naam{font-size:30px;font-weight:800;color:#0a7d43;letter-spacing:-0.5px}
+    .partner-logo img{height:84px;width:auto;display:block}
+    .payoff{font-size:15px;color:#5a6775;margin-bottom:24px}
+    h1{font-size:28px;line-height:1.3;margin-bottom:16px}
+    p{font-size:16.5px;line-height:1.7;color:#3a4658;margin-bottom:12px}
+    ul{list-style:none;margin-bottom:14px}
+    ul li{font-size:16px;color:#3a4658;padding:5px 0 5px 28px;position:relative;line-height:1.55}
+    ul li::before{content:"✓";position:absolute;left:0;color:#00a852;font-weight:700;font-size:18px}
+    h2{font-size:18px;color:#0a7d43;margin:20px 0 8px}
+    .qr-blok{display:flex;gap:22px;align-items:center;background:#fff8e6;border:2px solid #f0d489;border-radius:14px;padding:18px 22px;margin:20px 0}
+    .qr-blok img{width:150px;height:150px;flex-shrink:0}
+    .qr-blok h2{margin:0 0 8px;color:#8a6400;font-size:19px}
+    .qr-blok p{margin-bottom:8px;font-size:15.5px}
+    .qr-code-badge{display:inline-block;background:#8a6400;color:#fff;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:8px;font-size:15px}
+    .qr-url{font-size:13px;color:#8893a3;word-break:break-all}
+    .steun{display:flex;align-items:center;gap:14px;background:#f2f6fb;border:1.5px solid #c9d9ec;border-radius:12px;padding:12px 18px;margin:18px 0}
+    .steun img{height:40px;flex-shrink:0}
+    .steun p{margin:0;font-size:15px;line-height:1.55}
+    .url{display:block;text-align:center;background:#0a7d43;color:#fff;font-size:24px;font-weight:800;padding:15px;border-radius:12px;margin:20px 0 6px;letter-spacing:0.3px;text-decoration:none}
+    .url-sub{text-align:center;font-size:14px;color:#5a6775;margin-bottom:14px}
+    .voet{margin-top:22px;padding-top:12px;border-top:1px solid #e3e8ee;font-size:12.5px;color:#8893a3;line-height:1.6}
+    @media print{
+      /* 1-pagina-garantie (partner-pakket 2.0) — 12 aug 2026, Teresa-les: moet op 1 A4 passen. */
+      @page{size:A4;margin:0}
+      body{background:#fff;padding:0}
+      .vel{box-shadow:none;border-radius:0;max-width:none;padding:9mm 15mm}
+      .kop{margin-bottom:2px}
+      .merk .logo{height:66px;width:66px}
+      .merk .naam{font-size:27px}
+      .partner-logo img{height:160px;width:auto}
+      .feest{font-size:12px;padding:3px 11px;margin-bottom:5px}
+      h1{font-size:24px;margin-bottom:10px}
+      p{font-size:14.5px;line-height:1.55;margin-bottom:9px}
+      ul{margin-bottom:8px}
+      ul li{font-size:14px;line-height:1.5;padding:3px 0 3px 26px}
+      ul li::before{font-size:15px}
+      h2{font-size:16.5px;margin:13px 0 6px}
+      .payoff{margin-bottom:14px;font-size:13px}
+      .qr-blok{padding:14px 18px;margin:14px 0;gap:18px}
+      .qr-blok img{width:126px;height:126px}
+      .qr-blok p{font-size:14px;margin-bottom:6px}
+      .qr-blok h2{margin:0 0 6px;font-size:16.5px}
+      .qr-url{font-size:11px}
+      .steun{padding:10px 15px;margin:13px 0}
+      .steun img{height:36px}
+      .steun p{font-size:14px}
+      .url{font-size:20px;padding:12px;margin:13px 0 5px}
+      .url-sub{font-size:12.5px;margin-bottom:8px}
+      .voet{margin-top:10px;padding-top:7px;font-size:11px}
+    }
+  </style>
+</head>
+<body>
+  <div class="vel">
+    <div class="kop">
+      <div class="merk"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <defs> <radialGradient id="lkbg" cx="50%" cy="40%" r="70%"> <stop offset="0%" stop-color="#14304a"/> <stop offset="100%" stop-color="#0a1c2e"/> </radialGradient> <linearGradient id="lkkwart" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" stop-color="#8fd431"/> <stop offset="100%" stop-color="#68b31f"/> </linearGradient> </defs> <rect width="512" height="512" rx="100" fill="url(#lkbg)"/> <path d="M176,344 L176,192 Q176,176 192,176 L328,176 A168,168 0 0 1 176,344 Z" fill="url(#lkkwart)" transform="rotate(90 260 260)"/> </svg><span class="naam">Leerkwartier</span></div>
+      <div class="partner-logo"><img src="logo-speelgoedbeurs-denhaag.png" alt="Logo Speelgoedbeurs Den Haag" /></div>
+    </div>
+    <div class="payoff">Een kwartier per dag leren, een leven lang slimmer.</div>
+
+    <h1>Gratis oefenen voor school</h1>
+    <p>Zit uw kind op de basisschool, in groep 3 tot en met 8? Rekenen, taal en lezen oefenen helpt. In groep 8 ook voor de Doorstroomtoets.</p>
+    <p><strong>Daarom is er Leerkwartier.</strong> Een app waar uw kind gratis kan oefenen. Elke dag een kwartier is genoeg.</p>
+
+    <div class="qr-blok">
+      <img src="data:image/png;base64,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" alt="QR-code naar leerkwartier.app" />
+      <div>
+        <p style="margin:10px 0 0;text-align:center"><span style="display:block;font-size:16px;color:#3a4658;margin-bottom:6px">Uw code:</span><span class="qr-code-badge" style="font-size:30px;padding:8px 20px;letter-spacing:2px">SPEELGOEDBEURS2027</span></p></div>
+    </div>
+
+    <h2>Wat kan uw kind doen in de app?</h2>
+    <ul>
+      <li><strong>Rekenen, taal en lezen</strong> oefenen voor de eigen groep. In groep 8 ook een <strong>oefentoets</strong> die lijkt op de Doorstroomtoets.</li>
+      <li>Elke dag een <strong>nieuwe vraag</strong> oefenen. Met uitleg.</li>
+      <li>Snapt uw kind iets niet? De app <strong>legt het uit</strong>. In makkelijke woorden. Net zo lang tot het lukt.</li>
+      <li>Ook <strong>werkbladen om te printen</strong>. Handig als internet thuis niet goed werkt.</li>
+    </ul>
+
+    <h2>Eerlijk en veilig</h2>
+    <ul>
+      <li>Oefenen is gratis, tot en met 2031. Met deze code zijn ook alle extra's van het Familie-pakket gratis, tot en met 31 december 2028.</li>
+      <li>Geen reclame.</li>
+      <li>Wij vragen niet om uw gegevens. Wij verkopen ook niets door.</li>
+    </ul>
+
+    <div class="steun">
+      <img src="logo-speelgoedbeurs-denhaag.png" alt="Logo Speelgoedbeurs Den Haag" />
+      <p><strong>Speelgoedbeurs Den Haag heeft deze aanbieding voor u kunnen regelen.</strong> Het is echt gratis voor u.</p>
+    </div>
+
+    <a class="url" href="https://leerkwartier.app/?partner=SPEELGOEDBEURS2027">leerkwartier.app</a>
+    
+
+    
+  </div>
+</body>
+</html>
