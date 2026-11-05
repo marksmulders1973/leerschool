@@ -147,8 +147,18 @@
   <div class="voet"><span>Een kwartier per dag leren, een leven lang slimmer.</span><span>leerkwartier.app</span></div>
 </section>
 
-<div class="uitleg-web">
-  <p><b>Voor thuis:</b> elke keer dat je op "Andere sommen" klikt krijg je een nieuwe set met andere getallen. Het setnummer staat op het blad, zodat je dezelfde set later terug kunt halen via <code>?set=nummer</code>. Zit je kind in groep 7? Dan kan dit blad ook, de getallen zijn hetzelfde soort. Meer oefenen met uitleg bij elke vraag: <a href="/leren?q=verhoudingen">verhoudingen in de app</a> (gratis, geen account).</p>
+<div class="uitleg-web" id="mailblok">
+  <div style="background:#fff;border:1.5px solid #bcd99a;border-radius:12px;padding:14px 16px;margin:0 0 14px">
+    <div style="font-weight:800;font-size:15px;margin-bottom:4px">📬 Later printen? Stuur dit blad naar je mail</div>
+    <div style="margin-bottom:8px">Je krijgt één mailtje met de link naar precies deze set (set <span class="setnr"></span>), klaar om te printen.</div>
+    <form id="mailform" style="display:flex;gap:8px;flex-wrap:wrap">
+      <input type="email" name="email" placeholder="je@email.nl" required aria-label="E-mailadres" style="flex:1 1 200px;padding:10px 12px;border:1.5px solid #cfe0bb;border-radius:10px;font-size:15px">
+      <button type="submit" style="border:none;border-radius:10px;padding:10px 16px;background:#7ab52d;color:#fff;font-weight:800;font-size:14.5px;cursor:pointer">Stuur</button>
+    </form>
+    <div id="mailmsg" aria-live="polite" style="font-size:13px;margin-top:6px;min-height:1.2em"></div>
+  </div>
+  <p><b>Liever de uitleg op het scherm?</b> Dezelfde uitleg staat als gewone pagina in de app: <a href="/ouderkaart?kaart=verhoudingstabel">verhoudingstabel, zo leg je het uit</a>. Oefenen met uitleg bij elke vraag: <a href="/leren?q=verhoudingen">verhoudingen in de app</a> (gratis, geen account).</p>
+  <p><b>Voor thuis:</b> elke keer dat je op "Andere sommen" klikt krijg je een nieuwe set met andere getallen. Het setnummer staat op het blad, zodat je dezelfde set later terug kunt halen via <code>?set=nummer</code>. Zit je kind in groep 7? Dan kan dit blad ook, de getallen zijn hetzelfde soort.</p>
 </div>
 
 <script>
@@ -236,6 +246,19 @@
   document.querySelectorAll(".setnr").forEach((el) => { el.textContent = set; });
   if (!q.get("set")) { try { history.replaceState(null, "", "?set=" + set); } catch (e) { /* */ } }
   document.getElementById("nieuw").addEventListener("click", function () { location.search = "?set=" + (1 + Math.floor(Math.random() * 9999)); });
+  document.getElementById("mailform").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var msg = document.getElementById("mailmsg");
+    var email = e.target.email.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = "Vul een geldig e-mailadres in."; return; }
+    msg.textContent = "Even bezig…";
+    try {
+      var r = await fetch("/api/send-oefenblad", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: email, vak: "verhoudingstabellen", set: set }) });
+      if (r.ok) { msg.textContent = "✓ Verstuurd. Kijk in je mail (soms in ongewenste post)."; e.target.reset(); }
+      else if (r.status === 429) { msg.textContent = "Even wachten, je hebt net al een blad gevraagd."; }
+      else { msg.textContent = "Ging niet door. Probeer het later nog eens, of print de pagina direct."; }
+    } catch (err) { msg.textContent = "Ging niet door. Probeer het later nog eens, of print de pagina direct."; }
+  });
 })();
 </script>
 </body>

@@ -184,6 +184,31 @@ export const OUDERKAARTEN = {
       { woord: "honderdsten", uitleg: "het tweede cijfer achter de komma (0,01)" },
     ],
   },
+  // ── 8. Verhoudingstabel (5 nov 2026, groep 8 — zie Brians schoolwerkblad) ──
+  verhoudingstabel: {
+    titel: "Verhoudingstabel",
+    emoji: "📐",
+    intro:
+      "Een verhoudingstabel is een tabel met twee rijen die bij elkaar horen, bijvoorbeeld minuten en auto's. Wat je met de ene rij doet (keer of gedeeld door), doe je óók met de andere rij. Zo reken je van wat je weet naar wat je wilt weten. Op de Doorstroomtoets komt dit heel vaak voor.",
+    stappen: [
+      { titel: "Zet neer wat je weet", tekst: "De twee getallen die bij elkaar horen komen onder elkaar: 130 minuten boven 26 auto's." },
+      { titel: "Ga naar 1", tekst: "Deel allebei de rijen door hetzelfde getal, tot in de rij die je kent een 1 staat. 26 auto's : 26 = 1 auto, dus ook 130 minuten : 26 = 5 minuten. Schrijf ': 26' boven de tabel." },
+      { titel: "Ga naar het getal dat je moet weten", tekst: "Vermenigvuldig allebei de rijen met dat getal. 1 auto × 17 = 17 auto's, dus 5 minuten × 17 = 85 minuten. Schrijf '× 17' erboven." },
+      { titel: "Controleer of het ongeveer klopt", tekst: "17 auto's is iets meer dan de helft van 26, dus het antwoord moet iets meer dan de helft van 130 zijn. 85 klopt." },
+    ],
+    zegDit:
+      "Welke rij moet je invullen? De andere rij is de rij waar je mee naar 1 gaat. Wat je links doet, doe je rechts ook.",
+    valkuil:
+      "Kinderen gaan naar 1 in de verkeerde rij, of doen de bewerking maar aan één kant. Laat je kind de pijlen (': 26', '× 17') altijd boven de tabel schrijven: dan zie je meteen of beide rijen hetzelfde kregen.",
+    voorbeeld:
+      "Doe samen: iedere 30 minuten komen er 120 auto's langs. Hoeveel auto's in 12 minuten? Minuten sturen: 30 : 30 = 1, dus 120 : 30 = 4 auto's per minuut. Dan × 12: 48 auto's.",
+    woorden: [
+      { woord: "verhouding", uitleg: "hoe twee hoeveelheden zich tot elkaar verhouden (130 minuten bij 26 auto's)" },
+      { woord: "naar 1 gaan", uitleg: "delen tot er in de bekende rij een 1 staat; dan weet je wat er bij 1 hoort" },
+      { woord: "pijlen", uitleg: "': 26' en '× 17' boven de tabel: de bewerking die je op beide rijen doet" },
+    ],
+    print: { label: "Printbaar oefenblad met uitleg, 8 sommen en antwoorden (groep 8)", url: "/verhoudingstabellen-oefenblad.html" },
+  },
 };
 
 // Leerpad-id's (die de ≥2-fout-trigger meestuurt) → curatie-sleutel, zodat de
@@ -199,6 +224,9 @@ const ALIASES = {
   "spelling-ei-ij-au-ou": "spelling-ei-ij",
   "werkwoordsspelling-dt": "werkwoordspelling",
   "kommagetallen-po": "kommagetallen",
+  "verhoudingen-po": "verhoudingstabel",
+  verhoudingen: "verhoudingstabel",
+  verhoudingstabellen: "verhoudingstabel",
 };
 
 // Geeft { titel, emoji, kaart } terug als er curatie bestaat voor dit id
@@ -218,6 +246,7 @@ export function getOuderkaart(id) {
       valkuil: k.valkuil,
       voorbeeld: k.voorbeeld,
       woorden: k.woorden || [],
+      print: k.print || null,
     },
   };
 }

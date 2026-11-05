@@ -35,7 +35,7 @@ async function sb(path, opts, base, key) {
 
 // Insert (of pak bestaande) lead in upgrade_waitlist en geef de unsubscribe_token terug.
 // We zetten last_sent_at/sent_count zodat de dagelijkse cron geen dubbele welkomstmail stuurt.
-async function upsertLead(email, base, key) {
+async function upsertLead(email, base, key, plan = "wereldbol", source = "topocheck") {
   try {
     const ins = await sb(
       "upgrade_waitlist",
@@ -43,7 +43,7 @@ async function upsertLead(email, base, key) {
         method: "POST",
         headers: { Prefer: "return=representation" },
         body: JSON.stringify({
-          email, plan: "wereldbol", source: "topocheck",
+          email, plan, source,
           consent_at: new Date().toISOString(),
           last_sent_at: new Date().toISOString(), sent_count: 1,
         }),
@@ -123,6 +123,47 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
   return { onderwerp, html, text };
 }
 
+// 🖨️ 5 nov 2026 (Mark: "zorg dat we het print ook sturen als het nodig is"): het werkblad
+// verhoudingstabellen (groep 8) per mail — een link naar precies deze set (?set=N), met de
+// vier bladen benoemd. Zelfde double opt-in voor de wekelijkse set als het topografie-blad.
+function bouwWerkbladMail({ set, token }) {
+  const uit = `${SITE}/api/unsubscribe?token=${encodeURIComponent(token || "")}`;
+  const bevestig = `${SITE}/api/bevestig?token=${encodeURIComponent(token || "")}`;
+  const blad = `${SITE}/verhoudingstabellen-oefenblad.html?set=${encodeURIComponent(set)}&utm_source=email&utm_campaign=verhoudingstabellen`;
+  const onderwerp = `🖨️ Je werkblad verhoudingstabellen (groep 8, set ${set})`;
+  const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
+  <div style="max-width:560px;margin:0 auto;padding:28px 22px;">
+    <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;">Leerkwartier</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:18px;">Een kwartier per dag leren, een leven lang slimmer.</div>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 6px;">Hoi,</p>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 16px;">Hier is het <strong>werkblad verhoudingstabellen</strong> voor groep 8, set ${esc(set)}. Open de link en kies <strong>Print</strong>: je krijgt vier bladen.</p>
+    <ul style="font-size:14.5px;line-height:1.7;color:#cdd6e5;margin:0 0 18px;padding-left:20px;">
+      <li>Blad 1: uitleg in drie stappen + twee uitgewerkte voorbeelden</li>
+      <li>Blad 2 en 3: acht sommen met lege tabellen</li>
+      <li>Blad 4: de antwoorden met de tussenstap, voor wie nakijkt</li>
+    </ul>
+    <a href="${esc(blad)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin:0 0 18px;">🖨️ Open en print het werkblad</a>
+    <p style="font-size:13.5px;line-height:1.6;color:#9fb0c6;margin:0 0 18px;">Andere getallen nodig? Op de pagina staat de knop "Andere sommen". Het setnummer staat op elk blad, zodat de antwoorden bij de sommen horen.</p>
+    <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
+      <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je élke week een nieuwe oefenset?</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
+      <a href="${esc(bevestig)}" style="display:inline-block;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:10px;">✅ Ja, elke week een oefenset</a>
+    </div>
+    ${mailTaglineHtml()}
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${esc(uit)}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
+  </div></body></html>`;
+  const text = `Hoi,
+
+Hier is het werkblad verhoudingstabellen (groep 8, set ${set}). Open en print: ${blad}
+
+Blad 1 uitleg + voorbeelden · blad 2-3 acht sommen · blad 4 antwoorden.
+
+Elke week een nieuwe oefenset? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}
+Uitschrijven: ${uit}
+Leerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
+  return { onderwerp, html, text };
+}
+
 // Bug-jacht 7/7: dit endpoint stuurt e-mail naar een door de klant opgegeven
 // adres én registreert consent — de oude ongeankerde origin-check (matchte ook
 // leerkwartier.app.evil.com en liet lege origins door) maakte het een open
@@ -175,11 +216,15 @@ export default async function handler(req, res) {
   const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-  const vragen = vakDef.bouw(foutIds);
+  const werkblad = vak === "verhoudingstabellen";
+  const set = Math.min(9999, Math.max(1, parseInt(body?.set, 10) || 1));
+  const vragen = werkblad ? [] : vakDef.bouw(foutIds);
   let token = "";
-  if (base && key) token = await upsertLead(email, base, key);
+  if (base && key) token = await upsertLead(email, base, key, werkblad ? "oefenpakket" : "wereldbol", werkblad ? "verhoudingstabellen" : "topocheck");
 
-  const { onderwerp, html, text } = bouwMail({ vakLabel: vakDef.label, score, totaal, vragen, token });
+  const { onderwerp, html, text } = werkblad
+    ? bouwWerkbladMail({ set, token })
+    : bouwMail({ vakLabel: vakDef.label, score, totaal, vragen, token });
 
   try {
     const r = await fetch("https://api.resend.com/emails", {

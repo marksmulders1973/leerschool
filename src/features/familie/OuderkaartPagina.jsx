@@ -13,6 +13,7 @@
 // idea_studiebol_premium_printbare_hulp + project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 import { useState, useEffect, useRef, useMemo } from "react";
+import { track } from "../../utils.js";
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import PrintKnoppen from "../../shared/ui/PrintKnoppen.jsx";
 import { FamilieMeer, FamiliePill } from "./familieUi.jsx";
@@ -258,6 +259,12 @@ bèta
             {kaart.voorbeeld && (
               <div style={{ fontSize: 15, lineHeight: 1.55, color: "#222", marginBottom: 8 }}>
                 <b>🤝 Doe samen dit voorbeeld:</b> {kaart.voorbeeld}
+              </div>
+            )}
+            {kaart.print && (
+              // 5 nov 2026: bij een kaart met een printbaar oefenblad (verhoudingstabel) één regel ernaartoe.
+              <div style={{ fontSize: 15, lineHeight: 1.55, marginBottom: 12 }}>
+                <a href={kaart.print.url} onClick={() => { try { track("ouderkaart_print_link", { kaart: pathId }); } catch { /* */ } }} style={{ color: "#0a7d3c", fontWeight: 700 }}>🖨️ {kaart.print.label} →</a>
               </div>
             )}
 

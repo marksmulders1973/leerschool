@@ -26,7 +26,7 @@ const esc = (s) =>
   String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 // Concepten in vaste, zinnige volgorde (Marks 3 preview-kaarten eerst).
-const VOLGORDE = ["breuken", "staartdeling", "werkwoordspelling", "delen", "tafels", "spelling-ei-ij", "kommagetallen"];
+const VOLGORDE = ["breuken", "staartdeling", "werkwoordspelling", "delen", "tafels", "spelling-ei-ij", "kommagetallen", "verhoudingstabel"];
 const concepten = VOLGORDE.filter((id) => OUDERKAARTEN[id]).map((id) => ({ id, ...OUDERKAARTEN[id] }));
 
 // ── Structured data ──────────────────────────────────────────────────────
