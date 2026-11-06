@@ -177,6 +177,9 @@ Vanaf januari 2027 worden de Familie-extra's betaald. Prijs: **€39 per gezin (
   kunt zeggen, de veelgemaakte fout en een voorbeeld om samen te doen. Elke
   uitleg is ook een printbare kaart (leerkwartier.app/ouderkaart). Met HowTo-
   structured data per onderwerp — het antwoord op "hoe leg ik ... uit aan mijn kind".
+- [Werkbladen basisschool (groep 3-8)](https://leerkwartier.app/werkbladen.html): ruim 140 printbare
+  werkbladen per onderwerp (rekenen, taal, spelling, begrijpend lezen, wereldoriëntatie), elk met
+  uitleg in het kort, oefenvragen en antwoordblad; per werkblad een eigen pagina onder /werkblad/.
 - [Verhoudingstabellen oefenblad (groep 8)](https://leerkwartier.app/verhoudingstabellen-oefenblad.html):
   printbaar werkblad met uitleg in drie stappen, uitgewerkt voorbeeld, 8 sommen met
   steeds andere getallen (?set=N) en een antwoordblad. Doorstroomtoets-kern.
