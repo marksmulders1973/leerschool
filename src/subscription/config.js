@@ -20,7 +20,8 @@
 // 10 betalende klanten). Alles staat klaar: proefweek (api/checkout-session.js ?action=proefweek),
 // FamiliePoort op de Familie-pagina's, copy die omklapt via voorLancering(). Ook omzetten bij het
 // aanzetten: POORT_AAN in public/abonnement.html (statische pagina leest deze constante niet).
-export const PAYWALL_ACTIVE = false;
+// ✅ AAN sinds 6 nov 2026 ~15:50 (Mark: "1 en 2 ok" op de actie 'zeg "zet de poort aan"').
+export const PAYWALL_ACTIVE = true;
 
 // Provisional release-doel — bij die datum echte gating overwegen.
 export const PAYWALL_PLANNED_GO_LIVE = "2027-01-15"; // Toets-piek 2027

@@ -129,11 +129,13 @@ function CodeInvoer() {
 }
 
 export default function PakketUitleg({ open, onClose }) {
+  // 6 nov 2026 (poort aan): het huidige pakket komt uit de echte stand (partnercode, proefweek, betaald).
+  const sub = useSubscription();
   if (!open) return null;
   // Zolang de betaalmuur uit staat heeft IEDEREEN gewoon alles gratis — dan is
   // "Gratis" het eerlijke huidige pakket. Zodra de muur live gaat toont dit het
   // echte betaalde niveau (later te koppelen aan useSubscription).
-  const huidigLabel = PAYWALL_ACTIVE ? "je betaalde pakket" : "Gratis";
+  const huidigLabel = PAYWALL_ACTIVE && sub.isPremium ? (sub.plan === "proefweek" ? "Familie (proefweek)" : "Familie") : "Gratis";
 
   return (
     <div

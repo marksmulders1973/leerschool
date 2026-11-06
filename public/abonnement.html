@@ -326,7 +326,7 @@
   // 🚪 POORT_AAN (6 nov 2026): zet op true TEGELIJK met PAYWALL_ACTIVE in src/subscription/config.js.
   // Dan: "Kies Familie" wordt de hoofdknop, de lijst-knop wordt "Probeer een week gratis" en de
   // januari-teksten verdwijnen. Deze statische pagina kan de constante uit de app niet lezen.
-  var POORT_AAN = false;
+  var POORT_AAN = true; // aan sinds 6 nov 2026, tegelijk met PAYWALL_ACTIVE
   (function () {
     var q = new URLSearchParams(location.search), msg = document.getElementById("koop-msg");
     function sessie() {

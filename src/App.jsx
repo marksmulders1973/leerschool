@@ -1122,18 +1122,14 @@ export default function App() {
           questions = shuffle(poolRows.map(poolRowToQuestion)).slice(0, poolCount);
         } else {
           // Stap 2: pool te klein — val terug op AI-generatie
-          // AI-limiet check: gratis gebruikers max 5 AI-quiz sessies per dag
-          const FREE_AI_DAILY_LIMIT = 5;
+          // 6 nov 2026 (poort aan): de oude "max 5 AI-quiz-sessies per dag, daarna naar de pro-pagina"
+          // is weg — oefenen is gratis zonder daglimiet (belofte t/m 2031). We tellen alleen nog mee.
           const isProUser = isLaunchPromoActive() || (subscription?.tier && subscription.tier !== "free");
           if (!isProUser) {
             try {
               const today = new Date().toISOString().split("T")[0];
               const aiUsage = JSON.parse(localStorage.getItem("ls_ai_usage") || '{"date":"","count":0}');
               const todayCount = aiUsage.date === today ? aiUsage.count : 0;
-              if (todayCount >= FREE_AI_DAILY_LIMIT) {
-                setPage("pro");
-                return;
-              }
               localStorage.setItem("ls_ai_usage", JSON.stringify({ date: today, count: todayCount + 1 }));
             } catch {}
           }
