@@ -158,3 +158,8 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 59 · Scouting Ferguson · info@scoutingferguson.nl · OK · 01a1abe0-14d4-744a-b91a-f72797b36fba
   - 60 · Scouting Hubertus-Brandaan · voorzitter@hubertus-brandaan.nl · OK · 01a1abe0-1b06-7dd6-b152-0cc5d8e8bb6f
 - **5-11-2026, 14:22:34** — klaar: 60/60 verstuurd (OK-regels staan hierboven).
+
+- **6-11-2026, 08:53:47** — via Resend (hallo@leerkwartier.app), per mail gelogd:
+  - 61 · Speelgoedruil Rijswijk · speelgoedruilrijswijk@gmail.nl · OK · 01a1afd9-792e-7517-ad86-52328a772f94
+  - 62 · Villa Paagman (Paagman) · info@paagman.nl · OK · 01a1afd9-7faf-76fd-8379-00016c8d87ef
+- **6-11-2026, 08:53:50** — klaar: 2/2 verstuurd (OK-regels staan hierboven).

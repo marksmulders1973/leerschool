@@ -324,3 +324,32 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 116 · Kindcentrum Cascade · info@kccascade.nl · OK · 01a1a6dd-6224-700a-a785-369b0367375a
   - 117 · Professor Casimirschool · info@profcasimirschool.nl · OK · 01a1a6dd-67cf-7b97-b25f-445357cce2d3
   - 118 · Protestants Christelijke Basisschool Groen van Prinsterer · info@groenschool.lucasonderwijs.nl · OK · 01a1a6dd-6d8d-7245-81d4-516af608c24b
+
+- **6-11-2026, 09:03:26** — via Resend (hallo@leerkwartier.app), 27/27 verstuurd (rij 119-145).
+  - 119 · Christelijke Basisschool De Vijverhof · info@devijverhof.nl · OK · 01a1afe1-b5b9-7b12-8ed3-1d7485631a21
+  - 120 · Samenwerkingsschool Emmaus · info@emmaus.lucasonderwijs.nl · OK · 01a1afe1-bb80-7de4-9a2a-e9362cfdb23e
+  - 121 · Katholieke Basisschool De Jonge Wereld · info@djwereld.lucasonderwijs.nl · OK · 01a1afe1-c13a-7a41-b58b-2533c61de4fa
+  - 122 · Jan van Nassauschool (Kindcentrum O3) · info@kindcentrumo3.nl · OK · 01a1afe1-c6fb-7576-8d5c-6ec832878eee
+  - 123 · Springbok International · obs@springbokinternational.nl · OK · 01a1afe1-ccbd-7930-9690-71c71204c204
+  - 124 · De Horizon · horizon@scoh.nl · OK · 01a1afe1-d277-7471-80dd-bb96ffa41980
+  - 125 · Basisschool Jeroen · info@jeroenschool.lucasonderwijs.nl · OK · 01a1afe1-d830-7618-bd95-d9424c39f52c
+  - 126 · Diamant (Vuurvlinder) · info@bsvuurvlinder.nl · OK · 01a1afe1-dde9-7041-98c1-ce209c1e17d1
+  - 127 · Zuidwalschool · info@zuidwalschool.nl · OK · 01a1afe1-e3a3-7e89-9dfa-d5eb872619bc
+  - 128 · Ds. D.A. van den Boschschool (KC Da Vinci) · bosch@scoh.nl · OK · 01a1afe1-e966-7256-8c85-848879ebbd76
+  - 129 · De Regenboog · info@regenboog.lucasonderwijs.nl · OK · 01a1afe1-ef22-7aac-8844-4b0e122705c1
+  - 130 · Dr. M.M. den Hertogschool (KC Wondersteboven) · kcwondersteboven@scoh.nl · OK · 01a1afe1-f4e4-70b5-b8b6-cc531c576cde
+  - 131 · De Vlieger · info@pcbsdevlieger.nl · OK · 01a1afe1-fa9a-7a09-89fd-7ea2048d5d53
+  - 132 · Carolusschool · info@carolus.lucasonderwijs.nl · OK · 01a1afe2-0072-7f01-b2ee-d3accd70b729
+  - 133 · Anne Frank Wereldschool · administratie@annefrankwereldschool.nl · OK · 01a1afe2-0637-7d81-9109-03b675c67085
+  - 134 · De Triangel · info@triangel.lucasonderwijs.nl · OK · 01a1afe2-0c26-79d7-90c1-4768a5e4d984
+  - 135 · Paul Krugerschool · kruger@scoh.nl · OK · 01a1afe2-11c7-7159-b886-1de416a0505d
+  - 136 · Startpunt International · directie@startpuntinternational.nl · OK · 01a1afe2-1776-7617-8745-d0e5c73168ef
+  - 137 · IC Basisschool Statenkwartier · info@statenkwartier.lucasonderwijs.nl · OK · 01a1afe2-1d25-7d0b-a487-d6b22a877c2a
+  - 138 · Oranje Nassauschool · oranjenassau@scoh.nl · OK · 01a1afe2-22dc-720c-bd54-a48fe9821c98
+  - 139 · KC Trampoline · info@trampoline.lucasonderwijs.nl · OK · 01a1afe2-2893-73a8-aa76-30489481bf2b
+  - 140 · De Ark · ark@scoh.nl · OK · 01a1afe2-2e49-7e8b-9fd7-6d64b543567e
+  - 141 · De Ontmoeting · ontmoeting@scoh.nl · OK · 01a1afe2-3400-7b14-bf81-eac00856d342
+  - 142 · Basisschool Grote Beer · info@grotebeer.lucasonderwijs.nl · OK · 01a1afe2-39b7-7a78-9b6b-db9160498969
+  - 143 · Het Lichtbaken · info@lichtbaken.lucasonderwijs.nl · OK · 01a1afe2-3f71-7223-a8c0-70dacd51e705
+  - 144 · Paschalisschool · info@paschalis.nl · OK · 01a1afe2-4540-7f2d-854f-88cd40bf23c3
+  - 145 · De Vuurtoren · vuurtoren@scoh.nl · OK · 01a1afe2-4b01-74f6-9d0e-fd615e42d609

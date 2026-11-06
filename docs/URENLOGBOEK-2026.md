@@ -31,6 +31,12 @@
 
 ---
 
+## Week 45 (ma 2 nov – zo 8 nov) — ⚠️ weken 41-44 ontbreken nog (reconstructie uit git/verzendlogs volgt als voorstel)
+| Dag | Uren | Wat | Bewijs |
+|---|---|---|---|
+| do 5 nov | 7,0 | Ooievaarspas dag 1 + jaarcode, Speelgoedbeurs-pakket en antwoord, marketeer-ronde (v1057), eerste 5 vragen (v1058), werkblad verhoudingstabellen + ouderkaart + mail (v1059-1060), dagrapport | git 14:31–21:52 (14 commits), Resend-log 18:05, sessie tot 00:30 |
+| do 5 nov | 1,0 | offline 15 %-vuistregel (gesprekken, Brians werkblad bekeken) | vuistregel Mark 28 aug |
+
 ## Week 40 (ma 28 sep – zo 4 okt)
 
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
