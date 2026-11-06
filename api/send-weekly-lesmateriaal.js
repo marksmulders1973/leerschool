@@ -425,6 +425,16 @@ export default async function handler(req, res) {
     doorstroomCountdown = { sent: 0, reden: "doorstroom-countdown-fout: " + String(e).slice(0, 80) };
   }
 
+  // 📬 Proefweek dag 6 (6 nov 2026): dagelijks, idempotent via proefweek_mails; no-op zolang de poort uit staat.
+  let proefweekDag6 = null;
+  try {
+    const { stuurProefweekDag6Mails } = await import("./_lib/proefweek-mail.js");
+    proefweekDag6 = await stuurProefweekDag6Mails({ base, key, RESEND, FROM, maxMails: Math.max(0, Math.min(20, budget)) });
+    budget -= proefweekDag6?.sent || 0;
+  } catch (e) {
+    proefweekDag6 = { sent: 0, reden: "proefweek-dag6-fout: " + String(e).slice(0, 80) };
+  }
+
   // Drempel: alleen wie nog nooit (last_sent_at null) of >DAGEN_TUSSEN dagen
   // geleden mail kreeg, en niet is uitgeschreven, en op de lesmateriaal-lijst staat.
   const drempel = new Date(Date.now() - DAGEN_TUSSEN * 86400000).toISOString();
@@ -456,7 +466,7 @@ export default async function handler(req, res) {
     const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0) + (doorstroomCountdown?.sent || 0);
     const extraFouten = [...(kwartiercheckWeek?.fouten || []), ...(doorstroomCountdown?.fouten || [])];
     await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan, vergeten: await zoekVergetenPlannen(base, key), bevestiging: await zoekBevestigingsStand(base, key) });
-    return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, doorstroomCountdown, reason: "niemand-due" });
+    return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, doorstroomCountdown, proefweekDag6, reason: "niemand-due" });
   }
 
   const oefenvraag = kiesOefenvraag();
@@ -552,5 +562,5 @@ export default async function handler(req, res) {
     vergeten: await zoekVergetenPlannen(base, key),
     bevestiging: await zoekBevestigingsStand(base, key),
   });
-  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, backup, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, proefweekDag6, backup, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }

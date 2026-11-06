@@ -8,6 +8,9 @@
 // gratis-claim-regel. Familie/Pro zijn optionele extra's, geen verplichting.
 //
 // Eén bron van waarheid: pas je 'm hier aan, dan verandert 'ie in alle mails.
+// 6 nov 2026 (poort): de Familie-regel kent de poort — staat die aan, dan is de
+// vroege-vogel-zin weg en begint de regel met de proefweek.
+import { PAYWALL_ACTIVE } from "../../src/subscription/config.js";
 
 export const MAIL_TAGLINE_TEXT =
   "De basis van Leerkwartier — oefenen en uitleg — is gratis, gegarandeerd t/m 2031, en die belofte verlengen we telkens. leerkwartier.app";
@@ -32,12 +35,20 @@ export function familieUrl(plek) {
   return `https://leerkwartier.app/abonnement.html?van=${encodeURIComponent(plek)}#familie`;
 }
 
-export function familieRegelText(plek, nu = Date.now()) {
+export function familieRegelText(plek, nu = Date.now(), poortAan = PAYWALL_ACTIVE) {
+  if (poortAan) {
+    return `Meer uit Leerkwartier halen? Probeer Familie een week gratis, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf. ${familieUrl(plek)}`;
+  }
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
   return `Meer uit Leerkwartier halen? Kies Familie: € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.${vroeg} ${familieUrl(plek)}`;
 }
 
-export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now() } = {}) {
+export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now(), poortAan = PAYWALL_ACTIVE } = {}) {
+  if (poortAan) {
+    return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
+      `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Probeer Familie een week gratis</a>, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.` +
+      `</p>`;
+  }
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
   return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
     `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Kies Familie: € 39 voor 12 maanden, per gezin</a> — geen abonnement, stopt vanzelf.${vroeg}` +
