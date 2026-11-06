@@ -17,7 +17,7 @@ import { useState, useEffect, useRef } from "react";
 import { getProFeature, getLaag, PRO_MODEL, LAAG_KLEUREN, trackProSeen, trackProUse } from "./proPlan.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
-import FamilieAfsluiten from "./FamilieAfsluiten.jsx";
+import FamilieAfsluiten, { voorLancering } from "./FamilieAfsluiten.jsx";
 
 // Kleine groene "● Gratis"-tegenhanger: zet 'm naast gratis onderdelen die in
 // hetzelfde scherm staan als betaalde extra's, zodat het verschil zichtbaar is.
@@ -103,9 +103,10 @@ export default function ProBadge({ feature, showFree = true, size = "sm", kind =
         <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: kleur.dot }} />
         {laagNaam}
       </button>
+      {/* 6 nov 2026: "nu gratis" alleen zolang de poort uit staat; daarna "week gratis proberen". */}
       {showFree && (
         <span style={{ fontFamily: "var(--font-body)", fontSize: fontSize - 0.5, fontWeight: 700, color: "#69f0ae", whiteSpace: "nowrap" }}>
-          nu gratis
+          {voorLancering() ? "nu gratis" : "week gratis proberen"}
         </span>
       )}
 
@@ -123,7 +124,7 @@ export default function ProBadge({ feature, showFree = true, size = "sm", kind =
           <span style={{ display: "flex", alignItems: "center", gap: 7, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: kleur.tekst, marginBottom: 6 }}>
             <span aria-hidden="true" style={{ fontSize: 16 }}>{f.icon}</span> {f.label}
             <span style={{ fontSize: 10, fontWeight: 700, color: "#69f0ae", marginLeft: "auto" }}>
-              {f.status === "live" ? "✓ nu gratis" : "binnenkort"}
+              {f.status === "live" ? (voorLancering() ? "✓ nu gratis" : "✓ live") : "binnenkort"}
             </span>
           </span>
           <span style={{ display: "block", fontSize: 12.5, color: "rgba(255,255,255,0.8)", lineHeight: 1.5, marginBottom: 8 }}>
@@ -133,7 +134,7 @@ export default function ProBadge({ feature, showFree = true, size = "sm", kind =
           {kind ? (
             // Kind-modus: geen prijzen, geen wachtlijst, geen koopdruk.
             <span style={{ display: "block", fontSize: 11.5, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
-              Dit is nu gratis om uit te proberen. Wil je er meer over weten?
+              {voorLancering() ? "Dit is nu gratis om uit te proberen." : "Dit hoort bij het Familie-pakket."} Wil je er meer over weten?
               Vraag je ouder of verzorger.
             </span>
           ) : (

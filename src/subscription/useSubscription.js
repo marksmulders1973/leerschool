@@ -114,7 +114,7 @@ export function useSubscription(authUser = null) {
       try {
         const { data, error } = await supabase
           .from("subscriptions")
-          .select("tier, valid_until")
+          .select("tier, valid_until, plan")
           .eq("user_id", authUser.id)
           .maybeSingle();
         if (cancelled) return;
@@ -143,6 +143,8 @@ export function useSubscription(authUser = null) {
           isPaid: valid && isPremium,
           paywallActive: true,
           expiresAt: valid ? (data.valid_until || null) : (grant ? grant.expiresAt : null),
+          // 6 nov 2026: proefweek herkenbaar (UI toont "Familie (proefweek)" + koopknop).
+          plan: valid ? (data.plan || null) : null,
         };
         writeCache(out);
         setState({ ...out, loading: false });

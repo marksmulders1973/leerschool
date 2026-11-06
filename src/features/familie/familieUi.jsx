@@ -8,14 +8,14 @@
 // losse eilandjes te zijn. Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
-import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
+import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
 
 // Tier-stip (Mark 9 aug: overal de juiste stip): goud = Familie, met de
 // eerlijke "nu gratis"-toevoeging. Zelfde kleurtaal als ProBadge/LAAG_KLEUREN.
 export function FamiliePill({ style }) {
   return (
     <span
-      title="Hoort straks bij het Familie-pakket · nu gratis om uit te proberen"
+      title={voorLancering() ? "Hoort straks bij het Familie-pakket · nu gratis om uit te proberen" : "Hoort bij het Familie-pakket · eerst een week gratis proberen"}
       style={{
         display: "inline-flex", alignItems: "center", gap: 5, padding: "2px 9px", borderRadius: 20,
         border: "1px solid rgba(255,183,77,0.5)", background: "rgba(255,183,77,0.14)", color: "#ffce80",
@@ -25,7 +25,8 @@ export function FamiliePill({ style }) {
     >
       <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffd54f" }} />
       Familie
-      <span style={{ fontWeight: 700, color: "#69f0ae" }}>· nu gratis</span>
+      {/* 6 nov 2026: "nu gratis" alleen zolang de poort uit staat. */}
+      {voorLancering() && <span style={{ fontWeight: 700, color: "#69f0ae" }}>· nu gratis</span>}
     </span>
   );
 }

@@ -10,7 +10,8 @@ import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
 import DoorstroomtoetsLogo from "../../components/DoorstroomtoetsLogo.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
-import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
+import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
+import { useSubscription } from "../../subscription/useSubscription.js";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { track } from "../../utils.js";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
@@ -105,7 +106,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       return next;
     });
   };
-  const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
+  // 6 nov 2026 (poort): de hook honoreert óók partnercodes (Ooievaarspas e.d.) en de einddatum;
+  // de ruwe subscriptions-rij uit useAuth kent geen partnerrecht en geen verlopen-check.
+  const subHook = useSubscription(authUser);
+  const isPro = isLaunchPromoActive() || subHook.isPremium || (subscription?.tier === "parent_pro" && (!subscription?.valid_until || new Date(subscription.valid_until) > new Date()));
   const [children, setChildren] = useState([]);
   // Openstaande koppelcodes (link_codes zonder used_at, nog geldig) = de
   // "wacht op je kind"-kaarten. Samen met `children` vormen ze de plek-status
@@ -748,7 +752,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", padding: "10px 14px", borderRadius: 12, background: "rgba(255,183,77,0.06)", border: "1px solid rgba(255,183,77,0.22)" }}>
         <ProBadge feature="parent-dashboard" size="md" onInfo={onUpgrade} />
         <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
-          Dit ouder-inzicht hoort straks bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
+          {voorLancering()
+            ? <>Dit ouder-inzicht hoort straks bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.</>
+            : <>Dit ouder-inzicht hoort bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>eerst een week gratis proberen</strong>.</>}
           {" "}<FamilieAfsluiten plek="ouderlabel" variant="link" />
         </span>
       </div>
@@ -945,7 +951,13 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     <button onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Totaaloverzicht van ${naam}: resultaten per vak, elke toets tot op de vraag, en wat de volgende stap is`} style={pill({ border: "1px solid rgba(105,240,174,0.5)", background: "rgba(105,240,174,0.12)", color: "#69f0ae" })}>
                       overzicht
                     </button>
-                    {onKlaarzetten && (
+                    {/* 6 nov 2026 (poort): klaarzetten hoort bij Familie — zonder Familie wijst de knop naar de Familie-kaart hieronder. */}
+                    {onKlaarzetten && !isPro && (
+                      <button onClick={(e) => { e.stopPropagation(); try { track("klaarzet_poort", {}); } catch { /* */ } try { document.getElementById("familie-poort-kaart")?.scrollIntoView({ behavior: "smooth", block: "center" }); } catch { /* */ } }} title="Lessen klaarzetten hoort bij Familie — probeer het een week gratis" style={pill({ border: "1px solid rgba(255,213,79,0.5)", color: "#ffd54f" })}>
+                        🔒 zet lessen klaar
+                      </button>
+                    )}
+                    {onKlaarzetten && isPro && (
                       <button onClick={(e) => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }} title={`Blader door de app en zet lessen klaar voor ${naam}`} style={pill({ border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2" })}>
                         zet lessen klaar
                       </button>
@@ -1314,10 +1326,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
       {/* Familie-gate (9 aug: was "Ouder Pro" in blauw — verkeerde laag én
           verkeerde kleur; ouder-inzicht = Familie = goud, zie proPlan LAGEN). */}
       {!isPro && (
-        <div style={{ borderRadius: 16, border: "2px solid rgba(255,183,77,0.45)", background: "rgba(255,183,77,0.08)", padding: "16px 18px" }}>
+        <div id="familie-poort-kaart" style={{ borderRadius: 16, border: "2px solid rgba(255,183,77,0.45)", background: "rgba(255,183,77,0.08)", padding: "16px 18px" }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#ffce80", marginBottom: 4, display: "flex", alignItems: "center", gap: 7 }}>
             <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#ffd54f", display: "inline-block" }} />
-            Familie — nu gratis · vanaf 2027 een betaalde extra
+            {voorLancering() ? "Familie — nu gratis · vanaf 2027 een betaalde extra" : "Familie — eerst een week gratis proberen"}
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
             Volg de voortgang van je kind, zie scores per vak en bereid de Doorstroomtoets voor.

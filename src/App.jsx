@@ -7,6 +7,8 @@ import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate
 import { noteerKlasQrBezoek } from "./shared/klasQr.js";
 import { toetsCodeUitUrl } from "./shared/urlCode.js";
 import { noteerBezoekdag } from "./features/account/trouweGast.js";
+// 🚪 Poort op de Familie-pagina's (6 nov 2026) — doet niets zolang PAYWALL_ACTIVE uit staat.
+import { FamiliePoort } from "./subscription/PaywallGate.jsx";
 
 // Eager imports: alleen wat élke gebruiker direct ziet of nodig heeft.
 import LoadingOverlay from "./components/LoadingOverlay.jsx";
@@ -2692,17 +2694,18 @@ export default function App() {
       {/* Familie-preview (geheim): hub + paraatheidsmeter + oefenboekje. */}
       {/* Familie-extra's — bèta-live (Mark 1 aug: deel-voor-deel, niet meer geheim). */}
       {page === "familie" && <FamilieHub setPage={familieSetPage} />}
-      {page === "paraatheid" && <Paraatheidsmeter setPage={familieSetPage} />}
-      {page === "oefenboekje" && <OefenboekjePagina setPage={familieSetPage} />}
+      {/* 6 nov 2026: FamiliePoort — kaart met proefweek-knop zodra de poort aan staat; kind-rol krijgt geen koopdruk. */}
+      {page === "paraatheid" && <FamiliePoort feature="paraatheid" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><Paraatheidsmeter setPage={familieSetPage} /></FamiliePoort>}
+      {page === "oefenboekje" && <FamiliePoort feature="oefenboekje" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><OefenboekjePagina setPage={familieSetPage} /></FamiliePoort>}
       {/* Idee 60 (6 nov 2026): werkblad van één leerpad, gratis, vanaf elk leerpad. */}
       {page === "print-pad" && <PrintPadPagina setPage={setPage} />}
-      {page === "diploma" && <DiplomaPagina setPage={familieSetPage} />}
-      {page === "ouderkaart" && <OuderkaartPagina setPage={familieSetPage} />}
+      {page === "diploma" && <FamiliePoort feature="diploma" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><DiplomaPagina setPage={familieSetPage} /></FamiliePoort>}
+      {page === "ouderkaart" && <FamiliePoort feature="ouderkaart" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><OuderkaartPagina setPage={familieSetPage} /></FamiliePoort>}
       {page === "ouderadvies" && ouderadviesZichtbaar() && (
         <OuderAdvies authUser={authUser} onTerug={() => setPage("home")}
             onOefenen={(naam, id) => { wisselProfiel(naam); setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("ouderadvies"); setPage("learn-path"); }} />
       )}
-      {page === "weekschema" && <WeekschemaPagina setPage={familieSetPage} />}
+      {page === "weekschema" && <FamiliePoort feature="weekschema" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><WeekschemaPagina setPage={familieSetPage} /></FamiliePoort>}
       {page === "trots" && <TrotsMomentPagina setPage={familieSetPage} />}
       {page === "vonk" && <VonkPagina setPage={familieSetPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}

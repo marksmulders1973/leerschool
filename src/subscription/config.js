@@ -16,6 +16,10 @@
 //
 // Tot stap 1: iedereen is gratis `parent_pro` (alles open, geen quota).
 
+// 🚪 6 nov 2026: de poort gaat pas aan na Marks woord "zet de poort aan" (staande opdracht
+// 10 betalende klanten). Alles staat klaar: proefweek (api/checkout-session.js ?action=proefweek),
+// FamiliePoort op de Familie-pagina's, copy die omklapt via voorLancering(). Ook omzetten bij het
+// aanzetten: POORT_AAN in public/abonnement.html (statische pagina leest deze constante niet).
 export const PAYWALL_ACTIVE = false;
 
 // Provisional release-doel — bij die datum echte gating overwegen.
@@ -43,6 +47,15 @@ export const FEATURE_GATES = {
   // voor klas-oefenen, toetsen, werkbladen, voortgang, logo of export.
   "weekrapport": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "kwartierplan": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  // 6 nov 2026 (poort + proefweek): de Familie-pagina's uit familieFeatures.js. Niet gegate:
+  // trots-momenten (kind ziet ze tijdens het oefenen) en de weekmail zelf (die krijgt een upsell).
+  "paraatheid": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "oefenboekje": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "ouderkaart": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "weekschema": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "diploma": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "klaarzetten": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  "dictee-school": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).

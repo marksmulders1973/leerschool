@@ -13,12 +13,16 @@ import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { partnerRechtCache, haalPartnerRecht } from "../features/referral/partnerCode.js";
+import { PAYWALL_ACTIVE } from "./config.js";
+import ProefweekKnop from "./ProefweekKnop.jsx";
 
 export const FAMILIE_URL = "/abonnement.html";
 export const FAMILIE_START = "2027-01-01T00:00:00+01:00";
 export const FAMILIE_PRIJS = "€ 39 voor 12 maanden";
 
-export const voorLancering = () => Date.now() < Date.parse(FAMILIE_START);
+// 6 nov 2026: staat de poort aan, dan is de "vroege vogel"-periode voorbij, ook vóór 1 januari.
+export const voorLancering = () => !PAYWALL_ACTIVE && Date.now() < Date.parse(FAMILIE_START);
+export const poortAan = () => PAYWALL_ACTIVE;
 export const familieHref = (plek) => `${FAMILIE_URL}?van=${encodeURIComponent(plek || "app")}#familie`;
 
 const datumNL = (d) => new Date(d).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
@@ -47,9 +51,10 @@ export function useFamilieStatus() {
         const uid = s?.session?.user?.id;
         if (!uid) return;
         const { data } = await supabase.from("subscriptions")
-          .select("valid_until,bron,status").eq("user_id", uid).eq("bron", "stripe").maybeSingle();
+          .select("valid_until,bron,status,plan").eq("user_id", uid).maybeSingle();
         if (data && data.status === "active" && data.valid_until && new Date(data.valid_until) > new Date()) {
-          if (!weg) setStatus({ soort: "betaald", tot: data.valid_until });
+          // 6 nov 2026: proefweek apart — die mag wél een koopknop erbij krijgen.
+          if (!weg) setStatus({ soort: data.plan === "proefweek" ? "proef" : "betaald", tot: data.valid_until });
         }
       } catch {}
     })();
@@ -72,7 +77,27 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
   if (kind) return null;
 
   const goud = "#ffd54f";
+  const href = familieHref(plek);
+  const klik = () => track("familie_klik", { plek: plek || "app", variant });
   if (status !== "open") {
+    // Proefweek loopt: zeg het, en bied het jaar aan (één keer, stopt vanzelf).
+    if (status.soort === "proef") {
+      if (variant === "link") {
+        return (
+          <a href={href} onClick={klik} style={{ color: goud, fontWeight: 800, textDecoration: "underline", textUnderlineOffset: 3, ...style }}>
+            Proefweek loopt t/m {datumNL(status.tot)} · Kies Familie ({FAMILIE_PRIJS}) →
+          </a>
+        );
+      }
+      return (
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.8)", ...style }}>
+          <div style={{ color: "#69f0ae", fontWeight: 700, marginBottom: 6 }}>✓ Je proefweek loopt t/m {datumNL(status.tot)}.</div>
+          <a href={href} onClick={klik} style={{ display: "inline-block", padding: "9px 16px", borderRadius: 10, background: goud, color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800, textDecoration: "none" }}>
+            Kies Familie — {FAMILIE_PRIJS}
+          </a>
+        </div>
+      );
+    }
     if (variant === "link") return null; // inline: niets verkopen aan wie het al heeft
     const zin = status.soort === "partner"
       ? `Je hebt Familie al — gratis via je code${status.tot ? ` t/m ${datumNL(status.tot)}` : ""}.`
@@ -82,12 +107,12 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
     );
   }
 
-  const href = familieHref(plek);
-  const klik = () => track("familie_klik", { plek: plek || "app", variant });
   const label = tekst || (variant === "link" ? `Kies Familie (${FAMILIE_PRIJS}) →` : `Kies Familie — ${FAMILIE_PRIJS}`);
   const vroeg = voorLancering()
     ? "Tot 1 januari is alles gratis. Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027."
-    : "Eén keer betalen, stopt vanzelf. Per gezin, niet per kind.";
+    : poortAan()
+      ? "Eerst een week gratis proberen, zonder betaalgegevens. Daarna € 39 voor 12 maanden: één keer betalen, stopt vanzelf. Per gezin, niet per kind."
+      : "Eén keer betalen, stopt vanzelf. Per gezin, niet per kind.";
 
   if (variant === "link") {
     return (
@@ -98,10 +123,14 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
   }
   if (variant === "knop") {
     return (
-      <a href={href} onClick={klik} style={{
-        display: "inline-block", padding: "10px 18px", borderRadius: 10, background: goud, color: "#0b1224",
-        fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, textDecoration: "none", ...style,
-      }}>{label}</a>
+      <span style={{ display: "inline-flex", gap: 10, flexWrap: "wrap", alignItems: "flex-start" }}>
+        <ProefweekKnop plek={plek || "app"} />
+        <a href={href} onClick={klik} style={{
+          display: "inline-block", padding: "10px 18px", borderRadius: 10, background: poortAan() ? "transparent" : goud, color: poortAan() ? goud : "#0b1224",
+          border: poortAan() ? `2px solid ${goud}` : "none",
+          fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, textDecoration: "none", ...style,
+        }}>{label}</a>
+      </span>
     );
   }
   return (
@@ -112,10 +141,14 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", lineHeight: 1.5, marginBottom: 10 }}>
         {vroeg}
       </div>
-      <a href={href} onClick={klik} style={{
-        display: "inline-block", padding: "9px 16px", borderRadius: 10, background: goud, color: "#0b1224",
-        fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800, textDecoration: "none",
-      }}>{label}</a>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "flex-start" }}>
+        <ProefweekKnop plek={plek || "app"} />
+        <a href={href} onClick={klik} style={{
+          display: "inline-block", padding: "9px 16px", borderRadius: 10, background: poortAan() ? "transparent" : goud, color: poortAan() ? goud : "#0b1224",
+          border: poortAan() ? `2px solid ${goud}` : "none",
+          fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800, textDecoration: "none",
+        }}>{label}</a>
+      </div>
     </div>
   );
 }

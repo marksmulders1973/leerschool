@@ -31,7 +31,7 @@ import { startsetVoortgang } from "../learn/startsets.js";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
-import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
+import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
@@ -1293,7 +1293,7 @@ export default function MijnPagina({
   // Abonnement-info. PAYWALL staat uit → tier "free", en dat zeggen we
   // eerlijk gekwalificeerd: "in 2026 is alles open" (geen kale gratis-claim).
   const tier = subscription?.tier || "free";
-  const tierLabel = tier === "parent_pro" ? "Familie" : tier === "teacher_pro" ? "School" : "Gratis"; // "School" sinds 2 okt 2026 (gratis t/m 2031)
+  const tierLabel = tier === "parent_pro" ? (subscription?.plan === "proefweek" ? "Familie (proefweek)" : "Familie") : tier === "teacher_pro" ? "School" : "Gratis"; // "School" sinds 2 okt 2026 (gratis t/m 2031)
   const geldigTot = subscription?.valid_until
     ? new Date(subscription.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })
     : null;
@@ -2959,7 +2959,7 @@ export default function MijnPagina({
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>
                 <div style={{ marginBottom: 6 }}>
                   <strong style={{ color: "#69f0ae" }}>{tierLabel}</strong>
-                  {tier === "free" && <> — in 2026 is alles vrij te gebruiken.</>}
+                  {tier === "free" && (voorLancering() ? <> — in 2026 is alles vrij te gebruiken.</> : <> — oefenen is gratis; Familie kun je een week proberen.</>)}
                   {geldigTot && <> — geldig tot {geldigTot}.</>}
                 </div>
                 {/* Mark 30 sep 2026: Familie afsluiten — alleen voor ouder of verzorger, nooit voor het kind. */}
@@ -3077,7 +3077,7 @@ export default function MijnPagina({
                 <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,213,79,0.3)", background: kaartBg("rgba(255,213,79,0.06)") }}>
                   <div style={eyebrowStijl}>Jouw pakket</div>
                   <div style={kaartTitelStijl}>
-                    Nu: <span style={{ color: "#69f0ae" }}>{tierLabel}</span> — in 2026 gratis te gebruiken
+                    Nu: <span style={{ color: "#69f0ae" }}>{tierLabel}</span>{voorLancering() ? " — in 2026 gratis te gebruiken" : ""}
                   </div>
                   <div style={{ fontSize: 13, color: "var(--color-text)", lineHeight: 1.6, margin: "6px 0 10px" }}>
                     Later komt <strong>{pitch.naam}</strong> met: {pitch.punten.join(" · ")}. Zolang we bouwen blijft alles gratis.

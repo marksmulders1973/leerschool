@@ -84,7 +84,10 @@ export function useAuth() {
           .eq("user_id", u.id)
           .maybeSingle()
           .then(({ data }) => {
-            if (data) setSubscription(data);
+            if (!data) return;
+            // 6 nov 2026 (poort/proefweek): een verlopen rij (proefweek voorbij, jaar om) telt als gratis.
+            const verlopen = data.valid_until && new Date(data.valid_until) <= new Date();
+            setSubscription(verlopen ? { ...data, tier: "free", verlopen: true } : data);
           })
           .catch(() => {});
         supabase

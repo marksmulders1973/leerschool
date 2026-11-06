@@ -4,6 +4,7 @@
 //   POST ?action=checkout  { plan, userId, email }  → Stripe Checkout-URL
 //   POST ?action=portal    { userId }               → Stripe Customer Portal-URL (opzeggen, kaart, facturen)
 //   POST ?action=webhook   (Stripe → ons)           → subscriptions + payments bijwerken
+//   POST ?action=proefweek (Authorization: Bearer <supabase-token>) → 7 dagen Familie, één keer per account (6 nov 2026)
 //
 // Geen npm-pakket: Stripe's REST-API via fetch + handtekening-check via Web
 // Crypto, zodat dit op de edge-runtime draait zonder extra dependency.
@@ -30,6 +31,10 @@
 // docs/BETALING-PLAN.md): env-vars zetten en STRIPE_ACTIVE=true.
 
 import { guardRequest } from "./_guard.js";
+// 🚪 De poort (6 nov 2026, staande opdracht "10 betalende klanten"): zolang PAYWALL_ACTIVE uit staat is
+// alles gratis en gaan betaalde maanden pas in op FAMILIE_START. Zet Mark de poort aan ("zet de poort
+// aan"), dan geldt: vroege-vogel-regel weg (12 maanden vanaf betalen) en de proefweek gaat open.
+import { PAYWALL_ACTIVE } from "../src/subscription/config.js";
 
 export const config = { runtime: "edge", maxDuration: 20 };
 
@@ -43,7 +48,10 @@ const PROEF_EURO = process.env.STRIPE_PROEF_EURO === "1";
 // 🐦 Vroege vogel (Mark 30 sep 2026): tot de lancering is Familie voor iedereen gratis. Wie vóór de lancering
 // afsluit, betaalt niet voor gratis maanden: de 12 maanden gaan pas in op FAMILIE_START. De €1-proef (test1) niet.
 const KOR_START = Date.parse(process.env.KOR_START || "2027-01-01T00:00:00+01:00");
-const FAMILIE_START = Date.parse(process.env.FAMILIE_START || "2027-01-01T00:00:00+01:00");
+// Poort aan → 0: betaalde maanden starten meteen (geen gratis maanden meer om voor te wachten).
+const FAMILIE_START = PAYWALL_ACTIVE ? 0 : Date.parse(process.env.FAMILIE_START || "2027-01-01T00:00:00+01:00");
+// 🧪 Proefweek (6 nov 2026): 7 dagen Familie zonder betaalgegevens, één keer per account.
+export const PROEFWEEK_DAGEN = 7;
 const SITE = process.env.SITE_URL || "https://leerkwartier.app";
 const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // t/m 31 juli (NL zomertijd)
 
@@ -95,6 +103,14 @@ function sb() {
       const u = await r.json();
       return u && u.email && !u.is_anonymous ? { email: u.email } : null;
     },
+    // Wie is de aanvrager? Uit het Supabase-toegangstoken (Authorization: Bearer …), niet uit de body.
+    async userVanToken(token) {
+      if (!token) return null;
+      const r = await fetch(`${base}/auth/v1/user`, { headers: { apikey: key, Authorization: `Bearer ${token}` } });
+      if (!r.ok) return null;
+      const u = await r.json();
+      return u && u.id ? { id: u.id, email: u.email || null, anoniem: !!u.is_anonymous } : null;
+    },
     async heeftPartnerCode(userId) {
       const r = await fetch(`${base}/rest/v1/partner_claims?user_id=eq.${encodeURIComponent(userId)}&select=code&limit=1`, { headers: h });
       if (!r.ok) return false;
@@ -112,7 +128,7 @@ function sb() {
       return true;
     },
     async subscriptionByUser(userId) {
-      const r = await fetch(`${base}/rest/v1/subscriptions?user_id=eq.${encodeURIComponent(userId)}&select=stripe_customer_id,plan,status,valid_until`, { headers: h });
+      const r = await fetch(`${base}/rest/v1/subscriptions?user_id=eq.${encodeURIComponent(userId)}&select=stripe_customer_id,plan,status,valid_until,trial_started_at,bron`, { headers: h });
       const rows = r.ok ? await r.json() : [];
       return rows[0] || null;
     },
@@ -138,6 +154,30 @@ async function checkHandtekening(rawBody, header, secret) {
   return diff === 0;
 }
 
+// ── Proefweek-besluit (puur, getest in src/subscription/proefweek.test.js) ──
+// Regels (Mark 5 nov: "Vanaf 2027 kun je Familie een week gratis proberen, zonder betaalgegevens"):
+//   · alleen als de poort aan staat (anders is alles al gratis)
+//   · alleen een echt account met e-mailadres (anders verdwijnt de week bij een ander apparaat)
+//   · niet wie Familie al heeft (betaald en nog geldig, of via een partnercode)
+//   · één keer per account (trial_started_at) — ook als de week al voorbij is
+export function beoordeelProefweek({ poortAan = PAYWALL_ACTIVE, account, bestaand, partner, nu = Date.now() }) {
+  if (!poortAan) return { status: 400, error: "Nu is alles nog gratis, ook Familie. Een proefweek is pas nodig zodra Familie betaald wordt." };
+  if (!account) return { status: 400, error: "Log eerst in met je e-mailadres (via Mijn pagina), dan koppelen we de proefweek aan jouw account en werkt hij op al je apparaten.", login: "/mijn" };
+  if (partner) return { status: 409, error: "Je hebt het Familie-pakket al, gratis via je partnercode.", alActief: true };
+  const tot = bestaand?.valid_until ? Date.parse(bestaand.valid_until) : 0;
+  if (bestaand?.status === "active" && tot > nu && bestaand?.plan !== "proefweek") {
+    return { status: 409, error: "Je hebt het Familie-pakket al. Een proefweek is dan niet nodig.", alActief: true };
+  }
+  if (bestaand?.trial_started_at) {
+    const loopt = bestaand.plan === "proefweek" && tot > nu;
+    return loopt
+      ? { status: 409, error: `Je proefweek loopt nog t/m ${new Date(tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long", timeZone: "Europe/Amsterdam" })}.`, alActief: true, valid_until: new Date(tot).toISOString() }
+      : { status: 409, error: "Je proefweek is al gebruikt. Familie kost € 39 voor 12 maanden en stopt vanzelf.", gebruikt: true };
+  }
+  const valid_until = new Date(nu + PROEFWEEK_DAGEN * 86400e3).toISOString();
+  return { status: 200, row: { tier: "parent_pro", plan: "proefweek", status: "active", bron: "proefweek", valid_until, trial_started_at: new Date(nu).toISOString() } };
+}
+
 export default async function handler(req) {
   const url = new URL(req.url);
   const action = url.searchParams.get("action") || "checkout";
@@ -153,6 +193,24 @@ export default async function handler(req) {
   const testToken = process.env.STRIPE_TEST_TOKEN;
   // Webhooks altijd door (ondertekend door Stripe, hieronder gecontroleerd) — ook live, bv. de €1-proefbetaallink.
   const testDeur = action === "webhook" || (testSleutel && !!testToken && req.headers.get("x-lk-stripe-test") === testToken);
+  // 🧪 Proefweek: geen Stripe nodig, dus vóór de Stripe-deur. Aanvrager = eigenaar van het toegangstoken.
+  if (action === "proefweek") {
+    try {
+      const token = String(req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
+      const db = sb();
+      const u = await db.userVanToken(token);
+      const account = u && u.email && !u.anoniem ? u : null;
+      const bestaand = account ? await db.subscriptionByUser(account.id) : null;
+      const partner = account ? await db.heeftPartnerCode(account.id) : false;
+      const besluit = beoordeelProefweek({ account, bestaand, partner });
+      if (besluit.status !== 200) { const { status, ...rest } = besluit; return json(rest, status); }
+      await db.upsertSubscription({ user_id: account.id, ...besluit.row });
+      return json({ ok: true, valid_until: besluit.row.valid_until, dagen: PROEFWEEK_DAGEN });
+    } catch (e) {
+      return json({ error: String(e?.message || e) }, 500);
+    }
+  }
+
   if (!STRIPE_ACTIVE && !testDeur) {
     return json({
       error: "Betalen is nog niet beschikbaar. De basis blijft gratis (gegarandeerd t/m 2031); het Familie-pakket komt rond januari 2027. Schrijf je in op de wachtlijst via /abonnement.html.",

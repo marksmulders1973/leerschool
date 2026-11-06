@@ -152,8 +152,11 @@
          draait het script hieronder de volgorde om (class na-januari). -->
     <div id="koop-blok">
       <a href="#waitlist" class="koop-lijst" id="koop-lijst">Zet me op de lijst voor januari →</a>
+      <!-- 6 nov 2026: proefweek-knop, verborgen tot POORT_AAN (script onderaan) -->
+      <button type="button" class="koop-lijst" id="proef-knop" style="display:none">Probeer een week gratis</button>
       <button type="button" class="koop" data-plan="jaar">Kies Familie — € 39</button>
     </div>
+    <div class="lk-onder-knop" id="onder-knop-proef" hidden>Een week gratis proberen, zonder betaalgegevens. Daarna € 39 voor 12 maanden: één keer betalen, stopt vanzelf.<br>Niet tevreden na betalen? Mail ons binnen 14 dagen, dan krijg je je geld terug.</div>
     <div class="lk-onder-knop" id="onder-knop-vooraf">Tot 1 januari 2027 is alles gratis. Familie start in januari: je krijgt dan één mailtje en kunt het eerst een week proberen.<br>Betaal je nu alvast? Dan loopt je jaar van 1 januari 2027 tot 1 januari 2028. Niet tevreden? Mail ons binnen 14 dagen, dan krijg je je geld terug.</div>
     <div class="lk-onder-knop" id="onder-knop-na" hidden>Niet tevreden? Mail ons binnen 14 dagen na betalen, dan krijg je je geld terug.</div>
     <div id="koop-msg"></div>
@@ -203,14 +206,16 @@
 
 <details class="lk-meer">
   <summary>Meer uitleg over Familie</summary>
-  <p>🐦 <strong>Vroege vogel:</strong> tot 1 januari 2027 is alles nog voor iedereen gratis. Sluit je nu al af,
+  <p id="uitleg-vroege-vogel">🐦 <strong>Vroege vogel:</strong> tot 1 januari 2027 is alles nog voor iedereen gratis. Sluit je nu al af,
     dan gaan je 12 maanden pas in op <strong>1 januari 2027</strong>. Je betaalt dus nooit voor maanden die toch al gratis zijn.</p>
   <p><strong>Eén keer betalen, het stopt vanzelf.</strong> Er is niets om op te zeggen. Vóór het einde krijg je een mailtje;
     wil je door, dan kies je zelf voor een nieuw jaar, voor € 31.</p>
   <p><strong>Per gezin, niet per kind:</strong> tot 3 kinderen. Meer kinderen?
     <a href="mailto:hallo@leerkwartier.app?subject=Familie%20voor%20meer%20dan%203%20kinderen">Mail ons</a>, dan regelen we het zonder meerprijs.</p>
-  <p><strong>Eerst proberen?</strong> Tot 1 januari 2027 is alles gratis, dus je kunt Familie nu al uitproberen.
+  <p id="uitleg-proberen-vooraf"><strong>Eerst proberen?</strong> Tot 1 januari 2027 is alles gratis, dus je kunt Familie nu al uitproberen.
     Vanaf 2027 kun je Familie <strong>een week gratis proberen</strong>, zonder betaalgegevens. Na die week stopt het vanzelf.</p>
+  <p id="uitleg-proberen-poort" hidden><strong>Eerst proberen?</strong> Je kunt Familie <strong>een week gratis proberen</strong>, zonder betaalgegevens.
+    Log in met je e-mailadres (via Mijn pagina) en tik op "Probeer een week gratis". Na die week stopt het vanzelf; je betaalt alleen als je zelf voor het jaar kiest.</p>
   <p><strong>14 dagen bedenktijd:</strong> niet tevreden? Mail ons binnen 14 dagen en je krijgt alles terug, zonder vragen.</p>
   <p><strong>Alles in Familie:</strong></p>
   <ul class="lk-features">
@@ -226,8 +231,8 @@
 </details>
 
 <div class="lk-waitlist" id="waitlist">
-  <h2 style="margin-top: 0">📬 Hou me op de hoogte voor januari</h2>
-  <p style="margin: .5em 0">
+  <h2 style="margin-top: 0" id="waitlist-kop">📬 Hou me op de hoogte voor januari</h2>
+  <p style="margin: .5em 0" id="waitlist-tekst">
     Laat je e-mailadres achter. Vóór 1 januari krijg je één mailtje: wat Familie voor jouw gezin doet en hoe je het eerst een week probeert. Geen spam.
   </p>
   <form id="waitlist-form">
@@ -318,12 +323,52 @@
 <script>
   // 💳 Koop-knoppen (9 sep 2026): roepen /api/checkout-session aan. Zolang Stripe
   // niet actief is, antwoordt de server 503 met de wachtlijst-uitleg.
+  // 🚪 POORT_AAN (6 nov 2026): zet op true TEGELIJK met PAYWALL_ACTIVE in src/subscription/config.js.
+  // Dan: "Kies Familie" wordt de hoofdknop, de lijst-knop wordt "Probeer een week gratis" en de
+  // januari-teksten verdwijnen. Deze statische pagina kan de constante uit de app niet lezen.
+  var POORT_AAN = false;
   (function () {
     var q = new URLSearchParams(location.search), msg = document.getElementById("koop-msg");
+    function sessie() {
+      try { var raw = localStorage.getItem("sb-uxqnzrymyjbcpuzqktdm-auth-token"); var s = raw ? JSON.parse(raw) : {}; var u = s.user || {};
+        return { token: s.access_token || null, uid: (u.id && u.email && !u.is_anonymous) ? u.id : null, mail: u.email || null }; } catch (e) { return { token: null, uid: null, mail: null }; }
+    }
+    if (POORT_AAN) {
+      var kb0 = document.getElementById("koop-blok"); if (kb0) kb0.classList.add("na-januari");
+      var kl0 = document.getElementById("koop-lijst"); if (kl0) kl0.style.display = "none";
+      var pk = document.getElementById("proef-knop"); if (pk) pk.style.display = "";
+      ["onder-knop-vooraf", "uitleg-vroege-vogel", "uitleg-proberen-vooraf"].forEach(function (id) { var el = document.getElementById(id); if (el) el.hidden = true; });
+      ["onder-knop-proef", "uitleg-proberen-poort"].forEach(function (id) { var el = document.getElementById(id); if (el) el.hidden = false; });
+      var wk = document.getElementById("waitlist-kop"); if (wk) wk.textContent = "📬 Liever eerst meer weten?";
+      var wt = document.getElementById("waitlist-tekst"); if (wt) wt.textContent = "Laat je e-mailadres achter, dan krijg je één mailtje: wat Familie voor jouw gezin doet en hoe de proefweek werkt. Geen spam.";
+      if (pk) pk.addEventListener("click", async function () {
+        msg.textContent = "Even bezig…";
+        try { if (window.va) window.va("event", { name: "proefweek_klik", data: { plek: "prijspagina" } }); } catch (e) {}
+        var s = sessie();
+        if (!s.token || !s.uid) {
+          msg.textContent = "Log eerst in met je e-mailadres, dan hoort de proefweek bij jouw account en werkt hij op al je apparaten.";
+          var a0 = document.createElement("a"); a0.href = "/mijn"; a0.textContent = " Naar Mijn pagina →"; a0.style.color = "inherit"; a0.style.fontWeight = "800"; msg.appendChild(a0);
+          return;
+        }
+        try {
+          var r0 = await fetch("/api/checkout-session?action=proefweek", { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + s.token }, body: "{}" });
+          var d0 = await r0.json();
+          if (d0.ok) {
+            try { localStorage.removeItem("lk_subscription_v1"); } catch (e) {}
+            var tot = new Date(d0.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+            msg.textContent = "Je proefweek staat aan t/m " + tot + ". Veel plezier!";
+            var a1 = document.createElement("a"); a1.href = "/ouder"; a1.textContent = " Naar je ouderpagina →"; a1.style.color = "inherit"; a1.style.fontWeight = "800"; msg.appendChild(a1);
+            return;
+          }
+          msg.textContent = d0.error || "Dat ging niet door.";
+          if (d0.login) { var a2 = document.createElement("a"); a2.href = d0.login; a2.textContent = " Naar Mijn pagina →"; a2.style.color = "inherit"; a2.style.fontWeight = "800"; msg.appendChild(a2); }
+        } catch (e) { msg.textContent = "Ging niet door — probeer het later nog eens."; }
+      });
+    }
     // 💛 Bedankt-melding na betalen (Mark 30 sep 2026): een echt "bedankt", niet alleen een regeltje.
     if (q.get("betaald") === "1") {
       var proef = q.get("plan") === "test1";
-      var vroeg = !proef && Date.now() < Date.parse("2027-01-01T00:00:00+01:00");
+      var vroeg = !proef && !POORT_AAN && Date.now() < Date.parse("2027-01-01T00:00:00+01:00");
       var duur = proef ? "Je proef-Familie staat aan: 30 dagen."
         : vroeg ? "Tot 1 januari is alles nog gratis. Jouw 12 maanden Familie lopen daarna van 1 januari 2027 tot 1 januari 2028."
         : "Je Familie-pakket staat aan: 12 maanden, en het stopt vanzelf.";
@@ -347,7 +392,7 @@
     if (q.get("betaald") !== "1" && location.hash === "#familie") { var fk = document.getElementById("familie"); if (fk) setTimeout(function(){ fk.scrollIntoView({ behavior: "smooth", block: "start" }); }, 150); }
     if (q.get("geannuleerd") === "1") msg.textContent = "Betaling afgebroken. Niets gebeurd.";
     // 5 nov 2026: vanaf 1 januari 2027 wordt "Kies Familie" vanzelf weer de hoofdknop.
-    if (Date.now() >= Date.parse("2027-01-01T00:00:00+01:00")) {
+    if (!POORT_AAN && Date.now() >= Date.parse("2027-01-01T00:00:00+01:00")) {
       var kb2 = document.getElementById("koop-blok"); if (kb2) kb2.classList.add("na-januari");
       var ov = document.getElementById("onder-knop-vooraf"), on = document.getElementById("onder-knop-na");
       if (ov) ov.hidden = true; if (on) on.hidden = false;

@@ -10,7 +10,9 @@ export const LAUNCH_PROMO_END = new Date("2027-01-01T00:00:00");
 // blijft de promo actief, óók ná 1-1-2027. Anders klapte op nieuwjaarsdag de
 // Familie-poort in OuderInzicht/App dicht terwijl er nog geen betaalroute was
 // (drie losse bronnen: deze datum, PAYWALL_ACTIVE en de subscriptions-tabel).
-export const isLaunchPromoActive = () => !PAYWALL_ACTIVE || Date.now() < LAUNCH_PROMO_END.getTime();
+// 6 nov 2026 (poort): zodra PAYWALL_ACTIVE aan staat is de promo voorbij, óók vóór 1-1-2027 —
+// de poort aanzetten betekent "Familie wordt betaald, met een proefweek", niet "wachten tot januari".
+export const isLaunchPromoActive = () => !PAYWALL_ACTIVE;
 export const LAUNCH_PROMO_SHORT = "🎉 Dit jaar gratis wegens lancering";
 export const LAUNCH_PROMO_LONG = "Alle Familie-extra's gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
 
