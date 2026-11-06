@@ -2,6 +2,17 @@
 
 > Lees dit eerst. Overrides default-gedrag.
 
+## 🔴🔴🔴 STAANDE OPDRACHT (Mark 6 nov 2026): 10 BETALENDE KLANTEN — elke dag bovenaan
+
+> Mark, 6 nov 2026 (remote): "doe alles in je macht zelfstandig tot ik 10 betalende klanten heb, zet dat dagelijks bovenaan je taak."
+> Dit staat boven alle andere prioriteiten tot de teller op 10 staat. Dagrapport opent met de teller.
+
+- **Teller** = betalingen in `payments` die geen test zijn (plan ≠ test1, e-mail niet van het huishouden), plus getekende partnerinkoop (gezinnen × prijs). Stand 6 nov: **0 / 10**.
+- **Elke sessie, vóór al het andere:** (1) teller + wat gisteren bewoog in de trechter (prijspagina → proefweek → betaald); (2) één concrete zet richting een betaling doen of klaarzetten; (3) pas daarna de rest van het dagrapport.
+- **Wat Claude zelf mag doen** (binnen de bestaande regels): poort- en proefweek-code bouwen en testen; de koopvraag op de juiste momenten in de app zetten (vrijdagrapport, ouderpagina, dag 6 van de proefweek, einde partnercode); conversie meten en bijsturen; outreach-concepten schrijven en, ná Marks "stuur maar" op een tekst, versturen in het vaste tempo (60/werkdag); partnerpakketten klaarzetten.
+- **Wat Mark moet zeggen:** "zet de poort aan" (PAYWALL_ACTIVE) · "stuur maar" per nieuwe tekst · elk geldbedrag voor advertenties (standaard: € 0).
+- **Harde grenzen blijven:** nooit stille verlenging, proefweek zonder betaalgegevens, partnercodes houden alles, oefenen gratis t/m 2031, geen concurrent bij naam, eerst tonen dan beloven.
+
 ## Visie
 
 **Leerkwartier** = "een kwartier per dag leren, een leven lang slimmer." Voorheen Studiebol.
