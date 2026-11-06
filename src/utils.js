@@ -67,6 +67,14 @@ export function maakKindGroep(level, schoolType = "") {
 }
 export function zetKindGroep(level, schoolType = "") { _kindGroep = maakKindGroep(level, schoolType); }
 export function huidigeKindGroep() { return _kindGroep; }
+// Meetgat (gebruiksanalyse 4 nov 2026, punt 2): 28% van de oefenende apparaten heeft geen profiel-
+// groep. Zit er in het event zelf een ÉÉN-groeps-niveau ("groep 8", "8", "klas 2" — de toets of
+// quiz die het kind koos), dan is dat de beste benadering. Bereiken ("groep6-8") tellen niet mee.
+export function kindGroepUitInhoud(level, schoolType = "") {
+  const s = String(level ?? "").trim().toLowerCase();
+  if (!/^(groep|klas)\s*\d{1,2}$/.test(s) && !/^\d{1,2}$/.test(s)) return null;
+  return maakKindGroep(s, schoolType);
+}
 
 function _cleanProps(p) {
   if (!p || typeof p !== "object") return null;
@@ -163,6 +171,11 @@ export function track(event, params = {}) {
     const uid = _deviceId();
     if (uid) cleaned.uid = uid;
     if (_kindGroep && cleaned.kind_groep == null) cleaned.kind_groep = _kindGroep;
+    // Geen profielgroep? Dan de groep van de gekozen toets/quiz, gemarkeerd als afgeleid (6 nov 2026).
+    if (cleaned.kind_groep == null && cleaned.level != null) {
+      const g = kindGroepUitInhoud(cleaned.level);
+      if (g) { cleaned.kind_groep = g; cleaned.kind_groep_bron = "inhoud"; }
+    }
     // Bundle-versie op élk event (9 aug): oude gecachte PWA-tabbladen sturen
     // events uit verouderde code (het quiz_id-raadsel van 7 aug) — met dit
     // stempel is "welke bundle stuurde dit?" voortaan één query.
