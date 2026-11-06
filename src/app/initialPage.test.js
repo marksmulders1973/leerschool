@@ -64,3 +64,15 @@ describe("GO_PARAM_TO_PAGE", () => {
     }
   });
 });
+
+describe("parseInitialPage — ?pad= op het oefenboekje (idee 60, 6 nov 2026)", () => {
+  it("laat /oefenboekje?pad=… bij het boekje (valt terug op home → pageForPath)", () => {
+    expect(parseInitialPage({ pathname: "/oefenboekje", search: "?pad=delen-po" })).toBe("home");
+  });
+  it("houdt de gewone leerpad-deeplink op /", () => {
+    expect(parseInitialPage({ pathname: "/", search: "?pad=delen-po" })).toBe("learn-path");
+  });
+  it("werkblad-route gebruikt ?werkblad= en wordt niet gekaapt", () => {
+    expect(parseInitialPage({ pathname: "/print/pad", search: "?werkblad=verhoudingen-po" })).toBe("home");
+  });
+});

@@ -48,7 +48,7 @@ function huidigeSpelerNaam() {
 }
 
 // Kleine markdown-opschoner voor print (vet/cursief-tekens weg, $-latex kaal).
-function schoon(s) {
+export function schoon(s) {
   return String(s ?? "")
     .replace(/\*\*/g, "")
     .replace(/(^|[^\w])[*_]([^*_]+)[*_]/g, "$1$2")
@@ -58,7 +58,7 @@ function schoon(s) {
 
 // Bouw de oefenitems uit de checks van een pad: platgeslagen, max N, met een
 // nette vraag + opties + juist antwoord + korte uitleg voor het antwoordblad.
-function bouwItems(path, max = 12) {
+export function bouwItems(path, max = 12) {
   if (!path || !Array.isArray(path.steps)) return [];
   const items = [];
   for (const step of path.steps) {
@@ -94,7 +94,7 @@ function bouwItems(path, max = 12) {
 }
 
 // Eerste bruikbare uitgewerkte voorbeeld (voor de "zo doe je het"-box vooraan).
-function eersteVoorbeeld(path) {
+export function eersteVoorbeeld(path) {
   if (!path || !Array.isArray(path.steps)) return "";
   for (const step of path.steps) {
     const checks = step.checks || (step.check ? [step.check] : []);

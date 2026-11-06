@@ -90,6 +90,7 @@ const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.js
 // Familie-abonnement — GEHEIME preview-laag (Mark 31 jul). Alles achter
 // familiePreviewVisible(): hub + paraatheidsmeter + oefenboekje op maat.
 const OefenboekjePagina = lazy(() => import("./features/oefenboekje/OefenboekjePagina.jsx"));
+const PrintPadPagina = lazy(() => import("./features/oefenboekje/PrintPadPagina.jsx"));
 const FamilieHub = lazy(() => import("./features/familie/FamilieHub.jsx"));
 const Paraatheidsmeter = lazy(() => import("./features/familie/Paraatheidsmeter.jsx"));
 const DiplomaPagina = lazy(() => import("./features/familie/DiplomaPagina.jsx"));
@@ -2693,6 +2694,8 @@ export default function App() {
       {page === "familie" && <FamilieHub setPage={familieSetPage} />}
       {page === "paraatheid" && <Paraatheidsmeter setPage={familieSetPage} />}
       {page === "oefenboekje" && <OefenboekjePagina setPage={familieSetPage} />}
+      {/* Idee 60 (6 nov 2026): werkblad van één leerpad, gratis, vanaf elk leerpad. */}
+      {page === "print-pad" && <PrintPadPagina setPage={setPage} />}
       {page === "diploma" && <DiplomaPagina setPage={familieSetPage} />}
       {page === "ouderkaart" && <OuderkaartPagina setPage={familieSetPage} />}
       {page === "ouderadvies" && ouderadviesZichtbaar() && (

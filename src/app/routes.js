@@ -60,6 +60,8 @@ export const PAGE_TO_PATH = {
   paraatheid: "/familie/paraatheid",
   // Oefenboekje op maat — PROTOTYPE, geheim (alleen via ?boekje=1/?familie=1 of admin).
   oefenboekje: "/oefenboekje",
+  // Werkblad van één leerpad — idee 60 (Mark 6 nov 2026 "goed idee"): gratis, op elk leerpad. Param ?werkblad=<id> (niet ?pad=, dat is de globale deeplink).
+  "print-pad": "/print/pad",
   // Printbaar diploma — feature 8, geheim (alleen via ?familie=1 of admin).
   diploma: "/diploma",
   // Ouderkaart "zo leg je 't uit" — feature 3, geheim (alleen via ?familie=1 of admin).

@@ -32,6 +32,7 @@ import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import OuderkaartTrigger from "../familie/OuderkaartTrigger.jsx";
 import OefenboekjeTrigger from "../oefenboekje/OefenboekjeTrigger.jsx";
+import PrintPadLink from "../oefenboekje/PrintPadLink.jsx";
 import LegUit from "../familie/LegUit.jsx";
 import TrotsMoment, { trotsVoorResultaat } from "../familie/TrotsMoment.jsx";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
@@ -1166,6 +1167,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             conceptTitel={path.title}
             fouten={sess.tries > 0 ? sess.tries - sess.correct : 0}
           />
+          {/* Idee 60 (6 nov 2026): altijd een werkblad van dit leerpad kunnen printen. */}
+          <PrintPadLink pathId={path.id} plek="klaar" />
           {/* Familie (bèta): "Leg het uit" — Feynman (typen + milde AI-check). Niet bij examens. */}
           {!(path.id || "").startsWith("examen-") && (
             <LegUit
@@ -2488,6 +2491,8 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             )}
           </button></SteunTekst>
         )}
+        {/* Idee 60 (6 nov 2026): werkblad printen, ook vóór je begint (ouder, juf). */}
+        {loaded && <PrintPadLink pathId={path.id} plek="overzicht" klein />}
         {loaded && firstUnfinishedIdx === null && (
           <div style={{ ...cardStyle(C.good), marginTop: 0, marginBottom: 18, textAlign: "center" }}>
             <div style={{ fontSize: 32, marginBottom: 6 }}>🎉</div>

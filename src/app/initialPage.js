@@ -47,7 +47,9 @@ export function parseLeerpadId(search = "") {
 export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (parsePvpJoinCode(pathname)) return "pvp-lobby";
   if (parseVraagId(pathname)) return "vraag";
-  if (parseLeerpadId(search)) return "learn-path";
+  // ?pad=<id> is de leerpad-deeplink — behalve op pagina's die zélf ?pad= gebruiken
+  // (6 nov 2026, gevonden bij idee 60: /oefenboekje?pad=… opende het leerpad i.p.v. het boekje).
+  if (parseLeerpadId(search) && !/^\/oefenboekje(\/|$)/.test(pathname)) return "learn-path";
   if (/^\/actie(\/|$)/.test(pathname)) return "actie";
   if (/^\/dank(\/|$)/.test(pathname)) return "dank";
   if (/^\/vandaag(\/|$)/.test(pathname)) return "vandaag";
