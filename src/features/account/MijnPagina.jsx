@@ -537,6 +537,80 @@ export default function MijnPagina({
   // 💛 Voor jou klaargezet (Mark 15 aug): lessen die een ouder/verzorger via
   // de klaarzet-modus koos, cross-device opgehaald op naam. Live bij wijziging.
   const [thuisKlaargezet, setThuisKlaargezet] = useState([]);
+  // 💛 Klaargezet (gebruiksanalyse 4 nov 2026, punt 5): de kaart stond onderaan het kinderscherm
+  // (62 klaargezet, 3 gedaan). Nu direct onder Begin, hooguit 3 open items (één ouder zette er 59
+  // klaar), de rest achter "alles tonen". Meting: klaargezet_gezien (1× per dag per naam) en
+  // klaargezet_start (tik op Start), naast de bestaande vandaag_start reden=klaargezet.
+  const [klaargezetAlles, setKlaargezetAlles] = useState(false);
+  useEffect(() => {
+    const open = thuisKlaargezet.filter((k) => !k.gedaan);
+    if (!open.length || !player) return;
+    try {
+      const sleutel = `lk_klaargezet_gezien:${player.toLowerCase()}`;
+      const vandaag = new Date().toISOString().slice(0, 10);
+      if (localStorage.getItem(sleutel) === vandaag) return;
+      localStorage.setItem(sleutel, vandaag);
+      track("klaargezet_gezien", { open: open.length, school: open.some((k) => k.bron === "leraar") ? 1 : 0 });
+    } catch { /* meting is een extraatje */ }
+  }, [thuisKlaargezet, player]);
+  const renderKlaargezetKaart = () => {
+    if (!thuisKlaargezet.length) return null;
+    const open = thuisKlaargezet.filter((k) => !k.gedaan);
+    const gedaanLijst = thuisKlaargezet.filter((k) => k.gedaan);
+    const MAX = 3;
+    const lijst = klaargezetAlles ? [...open, ...gedaanLijst] : open.slice(0, MAX);
+    const verborgen = thuisKlaargezet.length - lijst.length;
+    return (
+      <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
+        <div style={eyebrowStijl}>Van thuis of school</div>
+        <div style={kaartTitelStijl}>💛 Speciaal voor jou klaargezet{open.length > MAX && !klaargezetAlles ? ` · ${open.length} te doen` : ""}</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
+          {lijst.map((it) => {
+            const vanSchool = it.bron === "leraar";
+            return (
+            <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)", textDecoration: it.gedaan ? "line-through" : "none" }}>
+                  {it.titel || "Een les"}
+                </div>
+                <div style={{ fontSize: 11, color: vanSchool ? "#8ec9ff" : "#ff9fb2", fontWeight: 700 }}>
+                  {vanSchool ? "🍎 van je juf of meester" : "💛 van thuis"}
+                </div>
+                {it.gedaan && <div style={{ fontSize: 11.5, color: "#69f0ae", fontWeight: 700 }}>✓ Gedaan — knap!</div>}
+              </div>
+              {!it.gedaan && (
+                <button
+                  onClick={() => { try { track("klaargezet_start", { pad: it.path_id, school: vanSchool ? 1 : 0 }); } catch { /* */ } onPickPath && onPickPath(it.path_id); }}
+                  style={{ flexShrink: 0, padding: "7px 14px", borderRadius: 9, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontWeight: 800, fontSize: 13 }}
+                >
+                  Start
+                </button>
+              )}
+              <button
+                onClick={() => markeerGedaan(it.id, player, !it.gedaan, it.bron)}
+                title={it.gedaan ? "Toch nog niet af? Tik om terug te zetten" : "Klaar? Tik om af te vinken"}
+                aria-label={it.gedaan ? "Terugzetten" : "Afvinken"}
+                style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", cursor: "pointer", border: it.gedaan ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(255,255,255,0.25)", background: it.gedaan ? "rgba(105,240,174,0.2)" : "transparent", color: it.gedaan ? "#69f0ae" : "rgba(255,255,255,0.5)", fontWeight: 800 }}
+              >
+                ✓
+              </button>
+            </div>
+            );
+          })}
+        </div>
+        {verborgen > 0 && (
+          <button type="button" onClick={() => { setKlaargezetAlles(true); try { track("klaargezet_alles", { verborgen }); } catch { /* */ } }}
+            style={{ display: "block", margin: "8px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5 }}>
+            nog {verborgen} {verborgen === 1 ? "les" : "lessen"} tonen
+          </button>
+        )}
+        <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 10, lineHeight: 1.45 }}>
+          Thuis of op school koos iemand deze lessen speciaal voor jou. Doe ze wanneer je wilt — geen haast.
+        </div>
+      </Card>
+    );
+  };
   useEffect(() => {
     if (!player) { setThuisKlaargezet([]); return; }
     let cancel = false;
@@ -2232,6 +2306,9 @@ export default function MijnPagina({
 
             {/* Vakscherm open (27 okt 2026): dan alleen dat scherm, de rest van het kinderscherm even niet. */}
             {!(vakOpen && groep) && (<>
+            {/* ── 💛 Voor jou klaargezet (Mark 15 aug; sinds 6 nov 2026 hier, direct onder Begin): lessen die
+                iemand thuis of op school koos. Cadeau-gevoel, geen huiswerk-druk; alleen als er echt iets staat. ── */}
+            {renderKlaargezetKaart()}
             {/* ── Je vakken: alleen de vakken van deze groep, als tegels mét rapportcijfer ("Rekenen · groep 5").
                 De tegels zíjn het rapport; het papieren rapport staat één tik verderop. ── */}
             {!loading && rapportVakken.length > 0 && (
@@ -2287,55 +2364,7 @@ export default function MijnPagina({
             <TrouweGastKaart userName={userName} onNaamInvullen={onNaamInvullen} plek="mijn" />
             <KoppelcodeBanner userName={userName} />
 
-            {/* ── 💛 Voor jou klaargezet (Mark 15 aug): lessen die iemand thuis
-                via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;
-                "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
-                gezin). Alleen tonen als er echt iets klaarstaat. ── */}
-            {/* Lege staat weg (Mark 26 okt 2026, eenvoud): "Voor jou klaargezet" verschijnt alleen als er echt iets klaarstaat. */}
-            {thuisKlaargezet.length > 0 && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
-                <div style={eyebrowStijl}>Van thuis of school</div>
-                <div style={kaartTitelStijl}>💛 Speciaal voor jou klaargezet</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
-                  {thuisKlaargezet.map((it) => {
-                    const vanSchool = it.bron === "leraar";
-                    return (
-                    <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", opacity: it.gedaan ? 0.6 : 1 }}>
-                      <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)", textDecoration: it.gedaan ? "line-through" : "none" }}>
-                          {it.titel || "Een les"}
-                        </div>
-                        <div style={{ fontSize: 11, color: vanSchool ? "#8ec9ff" : "#ff9fb2", fontWeight: 700 }}>
-                          {vanSchool ? "🍎 van je juf of meester" : "💛 van thuis"}
-                        </div>
-                        {it.gedaan && <div style={{ fontSize: 11.5, color: "#69f0ae", fontWeight: 700 }}>✓ Gedaan — knap!</div>}
-                      </div>
-                      {!it.gedaan && (
-                        <button
-                          onClick={() => onPickPath && onPickPath(it.path_id)}
-                          style={{ flexShrink: 0, padding: "7px 14px", borderRadius: 9, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#ff6987,#ff9fb2)", color: "#3a0d18", fontWeight: 800, fontSize: 12.5, fontFamily: "var(--font-display)" }}
-                        >
-                          Start
-                        </button>
-                      )}
-                      <button
-                        onClick={() => markeerGedaan(it.id, player, !it.gedaan, it.bron)}
-                        title={it.gedaan ? "Toch nog niet af? Tik om terug te zetten" : "Klaar? Tik om af te vinken"}
-                        aria-label={it.gedaan ? "Terugzetten" : "Afvinken"}
-                        style={{ flexShrink: 0, width: 30, height: 30, borderRadius: "50%", cursor: "pointer", border: it.gedaan ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(255,255,255,0.25)", background: it.gedaan ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.05)", color: it.gedaan ? "#69f0ae" : "var(--color-text-muted, #8899aa)", fontSize: 14, fontWeight: 800 }}
-                      >
-                        ✓
-                      </button>
-                    </div>
-                    );
-                  })}
-                </div>
-                <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 10, lineHeight: 1.45 }}>
-                  Thuis of op school koos iemand deze lessen speciaal voor jou. Doe ze wanneer je wilt — geen haast.
-                </div>
-              </Card>
-            )}
+            {/* 💛 Klaargezet-kaart staat sinds 6 nov 2026 direct onder Begin (zie renderKlaargezetKaart). */}
 
 
 
