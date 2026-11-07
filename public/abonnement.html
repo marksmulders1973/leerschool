@@ -327,6 +327,32 @@
   // Dan: "Kies Familie" wordt de hoofdknop, de lijst-knop wordt "Probeer een week gratis" en de
   // januari-teksten verdwijnen. Deze statische pagina kan de constante uit de app niet lezen.
   var POORT_AAN = true; // aan sinds 6 nov 2026, tegelijk met PAYWALL_ACTIVE
+  // 📏 Eigen meting (7 nov 2026): Vercel-events zijn op het Hobby-plan niet uit te lezen, dus deze
+  // statische pagina schrijft dezelfde eerstepartij-events als track() in de app (tabel events,
+  // zelfde apparaat-id lk_uid, zelfde interne-check). Zo is de trechter prijspagina → proefweek →
+  // koop-klik gewoon in Supabase te tellen.
+  function lkMeet(naam, props) {
+    try {
+      if (navigator.webdriver || localStorage.getItem("lk_internal") === "1") return;
+      var q0 = new URLSearchParams(location.search);
+      if (q0.get("ic") === "1") { localStorage.setItem("lk_internal", "1"); return; }
+      var uid = localStorage.getItem("lk_uid");
+      if (!uid) { uid = "u_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("lk_uid", uid); }
+      var ses = null; try { ses = sessionStorage.getItem("lk_s"); if (!ses) { ses = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem("lk_s", ses); } } catch (e) {}
+      var bron = q0.get("utm_source");
+      if (!bron && document.referrer) { try { var h = new URL(document.referrer).hostname.toLowerCase(); bron = h.indexOf("leerkwartier") >= 0 ? "leerkwartier.app" : h.indexOf("facebook") >= 0 ? "fb" : h.indexOf("instagram") >= 0 ? "ig" : h.indexOf("threads") >= 0 ? "threads" : h.indexOf("google.") >= 0 ? "google" : h.slice(0, 40); } catch (e) {} }
+      var p = Object.assign({ uid: uid, plek: "prijspagina", poort: POORT_AAN, app_v: 1063 }, props || {});
+      var van = q0.get("van"); if (van) p.van = String(van).slice(0, 40);
+      var cmp = q0.get("utm_campaign"); if (cmp) p.utm_campaign = String(cmp).slice(0, 60);
+      fetch("https://uxqnzrymyjbcpuzqktdm.supabase.co/rest/v1/events", {
+        method: "POST", keepalive: true,
+        headers: { apikey: LK_ANON, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ name: naam, props: p, path: location.pathname.slice(0, 120), source: bron || null, session: ses })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  var LK_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4cW56cnlteWpiY3B1enFrdGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzODAyNTMsImV4cCI6MjA5MDk1NjI1M30._7eQMG3QV4lqOn_M02hFjsRQ3JfH0xAn5ylNTmBKEP8";
+  lkMeet("prijspagina_open");
   (function () {
     var q = new URLSearchParams(location.search), msg = document.getElementById("koop-msg");
     function sessie() {
@@ -344,8 +370,10 @@
       if (pk) pk.addEventListener("click", async function () {
         msg.textContent = "Even bezig…";
         try { if (window.va) window.va("event", { name: "proefweek_klik", data: { plek: "prijspagina" } }); } catch (e) {}
+        lkMeet("proefweek_klik");
         var s = sessie();
         if (!s.token || !s.uid) {
+          lkMeet("proefweek_login_nodig");
           msg.textContent = "Log eerst in met je e-mailadres, dan hoort de proefweek bij jouw account en werkt hij op al je apparaten.";
           var a0 = document.createElement("a"); a0.href = "/mijn"; a0.textContent = " Naar Mijn pagina →"; a0.style.color = "inherit"; a0.style.fontWeight = "800"; msg.appendChild(a0);
           return;
@@ -355,11 +383,13 @@
           var d0 = await r0.json();
           if (d0.ok) {
             try { localStorage.removeItem("lk_subscription_v1"); } catch (e) {}
+            lkMeet("proefweek_gestart", { dagen: 7 });
             var tot = new Date(d0.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
             msg.textContent = "Je proefweek staat aan t/m " + tot + ". Veel plezier!";
             var a1 = document.createElement("a"); a1.href = "/ouder"; a1.textContent = " Naar je ouderpagina →"; a1.style.color = "inherit"; a1.style.fontWeight = "800"; msg.appendChild(a1);
             return;
           }
+          lkMeet("proefweek_geweigerd", { reden: d0.gebruikt ? "gebruikt" : d0.alActief ? "al_actief" : String(r0.status) });
           msg.textContent = d0.error || "Dat ging niet door.";
           if (d0.login) { var a2 = document.createElement("a"); a2.href = d0.login; a2.textContent = " Naar Mijn pagina →"; a2.style.color = "inherit"; a2.style.fontWeight = "800"; msg.appendChild(a2); }
         } catch (e) { msg.textContent = "Ging niet door — probeer het later nog eens."; }
@@ -400,16 +430,18 @@
     var kl = document.getElementById("koop-lijst");
     if (kl) kl.addEventListener("click", function () {
       try { if (window.va) window.va("event", { name: "prijs_lijst_klik" }); } catch (e) {}
+      lkMeet("prijs_lijst_klik");
       var wl = document.getElementById("waitlist"); if (wl) { setTimeout(function () { var i = wl.querySelector("input[type=email]"); if (i) i.focus(); }, 500); }
     });
     document.querySelectorAll("button.koop").forEach(function (b) {
       b.addEventListener("click", async function () {
         msg.textContent = "Even bezig…";
+        lkMeet("familie_klik", { plan: b.dataset.plan || "jaar" });
         try {
           var uid = null, mail = null; try { var raw = localStorage.getItem("sb-uxqnzrymyjbcpuzqktdm-auth-token"); var u = raw ? (JSON.parse(raw).user || {}) : {}; uid = (u.id && u.email && !u.is_anonymous) ? u.id : null; mail = u.email || null; } catch (e) {}
           var r = await fetch("/api/checkout-session?action=checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ plan: b.dataset.plan, userId: uid, email: mail }) });
           var d = await r.json();
-          if (d.url) { location.href = d.url; return; }
+          if (d.url) { lkMeet("familie_naar_betalen", { plan: b.dataset.plan || "jaar" }); location.href = d.url; return; }
           msg.textContent = d.error || "Nog niet beschikbaar.";
           if (d.login) { var a = document.createElement("a"); a.href = d.login; a.textContent = " Naar Mijn pagina →"; a.style.color = "inherit"; a.style.fontWeight = "800"; msg.appendChild(a); }
         } catch (e) { msg.textContent = "Ging niet door — probeer het later nog eens."; }
@@ -443,6 +475,7 @@
       });
       if (resp.ok || resp.status === 201 || resp.status === 204) {
         msg.textContent = "✓ Bedankt! Je hoort het als eerste.";
+        lkMeet("prijs_lijst_aangemeld");
         msg.style.color = "#00e676";
         form.reset();
       } else {
