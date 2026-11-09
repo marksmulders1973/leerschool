@@ -200,3 +200,47 @@ leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
   - 58 · Leergeld Nijkerk · stichting@leergeldnijkerk.nl · OK · 01a1b14e-f495-78bd-8e00-e67278dbe13d
   - 59 · Leergeld Nijmegen · info@leergeldnijmegen.nl · OK · 01a1b14e-fa5a-7bf9-924b-4f909e316bab
   - 60 · Leergeld Noord Drenthe · assen@leergeldnoorddrenthe.nl · OK · 01a1b14f-0019-7dc0-a9df-1cf9037b057a
+
+- **9-11-2026, 06:32:24** — via Resend (hallo@leerkwartier.app), 42/42 verstuurd (rij 61-102).
+  - 61 · Leergeld Noord-Veluwe · info@leergeldnoordveluwe.nl · OK · 01a1beca-2de1-7bd5-9081-7a533adacea0
+  - 62 · Leergeld Noord-West Brabant · info@leergeldnoordwestbrabant.nl · OK · 01a1beca-33db-7bca-9786-4a18553520b2
+  - 63 · Leergeld Noordoostpolder · info@leergeldnoordoostpolder.nl · OK · 01a1beca-396d-7196-9eec-6b2c53b3b200
+  - 64 · Leergeld Nuenen · leergeld@onsnet.nu · OK · 01a1beca-3f42-7d45-847d-aa776fa7ec4f
+  - 65 · Leergeld Oldenzaal · info@leergeldoldenzaal.nl · OK · 01a1beca-44f3-76df-9734-4c629041591c
+  - 66 · Leergeld Oost Achterhoek · info-leergeldachterhoek@lgoa.nl · OK · 01a1beca-4aaa-739f-9d8b-d4f10c241c5d
+  - 67 · Leergeld Oosterschelderegio · info@leergeldoosterschelderegio.nl · OK · 01a1beca-5065-7145-8d2f-160fbfce9329
+  - 68 · Leergeld Oss Bernheze · info@leergeldossbernheze.nl · OK · 01a1beca-5618-74b2-89a2-f0fbf0bb46fd
+  - 69 · Leergeld Parkstad · info@leergeldparkstad.nl · OK · 01a1beca-5bca-72b1-8788-85c71232a004
+  - 70 · Leergeld Peel en Maas · info@leergeldpeelenmaas.nl · OK · 01a1beca-617d-7dcd-a81e-0047f14fa61b
+  - 71 · Leergeld Randmeren · info@leergeldrandmeren.nl · OK · 01a1beca-673a-7730-9db9-795d0b706f15
+  - 72 · Leergeld Roermond en omstreken · info@leergeldroermondeo.nl · OK · 01a1beca-6cf4-76ef-aba1-68c2597e2af6
+  - 73 · Leergeld Roosendaal · leergeld.rsd@kpnmail.nl · OK · 01a1beca-72ac-7a8e-989c-07a17a358131
+  - 74 · Leergeld Soest-Baarn · coordinator@leergeld-sb.nl · OK · 01a1beca-786a-705a-add3-17e2796b60ac
+  - 75 · Leergeld Stichtse Vecht · info@leergeldstichtsevecht.nl · OK · 01a1beca-7dfa-74c4-b45c-adb4aa069b85
+  - 76 · Leergeld Tilburg · info@leergeldtilburg.nl · OK · 01a1beca-83aa-757d-9396-1aa615679562
+  - 77 · Leergeld Tubbergen · info@leergeldtubbergen.nl · OK · 01a1beca-895e-7224-ae50-bdeff62efc14
+  - 78 · Leergeld Utrecht · info@leergeldutrecht.nl · OK · 01a1beca-8f27-71f1-b1a0-e27fbffa207b
+  - 79 · Leergeld Valkenswaard en Omstreken · info@leergeldvalkenswaard-waalre.nl · OK · 01a1beca-94df-789c-b26a-871850249e6d
+  - 80 · Leergeld Veenendaal en Renswoude · coordinator@leergeldveenendaal.nl · OK · 01a1beca-9a8a-7c84-8488-314672fe4722
+  - 81 · Leergeld Veldhoven en De Kempen · info@leergeldvdk.nl · OK · 01a1beca-a040-71ac-9c11-3120f1db91e4
+  - 82 · Leergeld Venlo · info@leergeldvenlo.nl · OK · 01a1beca-a5f2-79f6-8ee3-1e1abcd23a83
+  - 83 · Leergeld Venray · info@leergeldvenray.nl · OK · 01a1beca-aba3-72ca-84de-fc6ebc03c6cb
+  - 84 · Leergeld Vianen · coordinator@leergeldvianen.nl · OK · 01a1beca-b139-73a9-824c-1ae5a1d621dd
+  - 85 · Leergeld Voorschoten · info@leergeld-voorschoten.nl · OK · 01a1beca-b713-7034-9594-3922fe8dad47
+  - 86 · Leergeld Vught · info@leergeldvught.nl · OK · 01a1beca-bcc6-7460-8ddd-1da589c74986
+  - 87 · Leergeld Waalwijk · info@leergeldwaalwijk.nl · OK · 01a1beca-c262-79f6-9e03-388960a24f28
+  - 88 · Leergeld Waddinxveen · info@leergeldwaddinxveen.nl · OK · 01a1beca-c81d-752a-bf0a-214000c8359b
+  - 89 · Leergeld Walcheren · leergeldwalcheren@planet.nl · OK · 01a1beca-cdb7-776b-b440-32e626347c6d
+  - 90 · Leergeld Wassenaar · info@leergeldwassenaar.nl · OK · 01a1beca-d372-7699-9d38-101775c52bde
+  - 91 · Leergeld Weert · info@leergeldweert.nl · OK · 01a1beca-d91f-7c7c-a5d8-1dcffe02339d
+  - 92 · Leergeld West Betuwe · leergeldwestbetuwe@gmail.com · OK · 01a1beca-deb9-71e8-a849-04a8f91e6d80
+  - 93 · Leergeld West-Brabant Oost · info@leergeldwbo.nl · OK · 01a1beca-e464-7d7d-83b1-5ade6ab7bd41
+  - 94 · Leergeld West-Friesland · info@leergeldwestfriesland.nl · OK · 01a1beca-ea17-7abf-8061-163044b6138c
+  - 95 · Leergeld Westelijke Mijnstreek · stichting-leergeldwm@planet.nl · OK · 01a1beca-efe6-7751-956a-56a77fd33a4b
+  - 96 · Leergeld Westerkwartier-Noordenveld · info@wn.leergeld.nl · OK · 01a1beca-f5a2-7a9d-bb8d-a87c4c2956c7
+  - 97 · Leergeld Zaanstad · leergeldzaanstad@gmail.com · OK · 01a1beca-fb5f-7cdc-9c10-31f0f17d4482
+  - 98 · Leergeld Zeeuws-Vlaanderen · info@leergeldzvl.nl · OK · 01a1becb-010d-70fa-b8db-2e9259189e02
+  - 99 · Leergeld Zuid-Holland Midden · info@leergeldzhm.nl · OK · 01a1becb-06be-7059-9b19-e50715509c69
+  - 100 · Leergeld Zuid-Oost Groningen · info@leergeldzuidoostgroningen.nl · OK · 01a1becb-0c6f-7a44-99c9-491c0772b433
+  - 101 · Leergeld Zuidwest Friesland · info@leergeldzwf.nl · OK · 01a1becb-1224-7b7a-aafb-15c382380d92
+  - 102 · Leergeld Zutphen · info@leergeldzutphen.nl · OK · 01a1becb-17d9-7e8c-b0cd-0c7cbdcbd0b9
