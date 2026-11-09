@@ -382,6 +382,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 {BRAND.name}
               </div>
             </div>
+            {/* Mark 9 nov 2026: "ik wil de slagzin houden … kleine letters achter het logo" → als vast deel van het logo. */}
+            <div style={{
+              fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#ffd54f",
+              margin: "-2px 0 4px", opacity: 0, animation: "lk-mark-slogan 0.7s ease-out 0.9s forwards",
+            }}>
+              {BRAND.slogan}
+            </div>
             {/* 🧭 9 nov 2026 (Mark: "de meeste mensen zien niet in één zicht wat de bedoeling van de app is";
                 onderzoek: 50 % van de nieuwe bezoekers zonder code deed hier niets). De kop zegt nu wát en voor
                 wie; de slogan staat onderaan het eerste blok. */}
@@ -389,7 +396,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               margin: "10px 0 8px", fontFamily: "var(--font-display)", fontSize: 27, fontWeight: 800,
               lineHeight: 1.15, color: "#fff",
             }}>
-              Elke dag een kwartier oefenen voor <span style={{ color: "#ffd54f", whiteSpace: "nowrap" }}>groep 3 t/m 8</span>
+              De gratis oefenapp voor <span style={{ color: "#ffd54f", whiteSpace: "nowrap" }}>groep 3 t/m 8</span>
             </h1>
             {/* Eén eerlijke regel (ouder-agent 26 okt: "gratis" en "geen account" stonden
                 pas onder de foto's in kleine grijze tekst). Gratis-claim netjes afgebakend:
@@ -399,9 +406,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "rgba(255,255,255,0.85)", marginBottom: 6,
               display: "flex", alignItems: "center", justifyContent: "center", gap: 6, flexWrap: "wrap",
             }}>
-              <span>Rekenen, taal en de Doorstroomtoets. <strong style={{ color: "#69f0ae" }}>Gratis</strong>, zonder account. Bij een fout antwoord krijg je geen antwoord voorgekauwd, maar een vraag terug.</span>
+              <span>Elke dag een kwartier rekenen, taal en de Doorstroomtoets. Zonder account. Bij een fout antwoord krijg je geen antwoord voorgekauwd, maar een vraag terug.</span>
               {/* Voorlees-oortje (Mark 25 jul): ook de ouder die moeite heeft met lezen moet de belofte kunnen hóren. */}
-              <VoorleesBlok tekst={`Elke dag een kwartier oefenen voor groep 3 tot en met 8. Rekenen, taal en de Doorstroomtoets. Gratis, zonder account. Tik op een vak om te beginnen, of vul de code van je flyer of pas in.`} accent="#ffd54f" />
+              <VoorleesBlok tekst={`${BRAND.slogan} De gratis oefenapp voor groep 3 tot en met 8. Elke dag een kwartier rekenen, taal en de Doorstroomtoets. Zonder account. Tik op een vak om te beginnen, of vul de code van je flyer of pas in.`} accent="#ffd54f" />
             </div>
           </div>
         )}
@@ -535,9 +542,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ display: "flex", justifyContent: "flex-end", margin: "8px 4px 0" }}>
               <button type="button" onClick={() => { track("home_rol_foto", { rol: "student", via: "link" }); handleRoleClick("student"); }}
                 style={{ ...rolLinkStijl, fontSize: 13 }}>vmbo · havo · vwo →</button>
-            </div>
-            <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 14, color: "#ffd54f", opacity: 0.85, margin: "10px 0 0" }}>
-              {BRAND.slogan}
             </div>
           </div>
         )}
