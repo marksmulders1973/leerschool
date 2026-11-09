@@ -2,6 +2,9 @@ import { useState } from "react";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import { LAAG_KLEUREN } from "../subscription/proPlan.js";
 import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
+// 9 nov 2026: deze import ontbrak sinds de poort aanging (v1067, 6 nov) → "useSubscription is not defined",
+// het hele leerling-startscherm (student-home) viel om. Gevonden in de kliktocht van de weekplanner.
+import { useSubscription } from "../subscription/useSubscription.js";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 
 // Pakket-uitleg (Mark 31 jul, na 5-agent-panel): kraakhelder + eerlijk laten
