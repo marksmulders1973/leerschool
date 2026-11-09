@@ -24,11 +24,28 @@ import _traverse from "@babel/traverse";
 
 const traverse = _traverse.default || _traverse;
 
-// Namen die de browser, de service worker of de bouwomgeving levert. Alles wat Node zelf kent
-// (console, fetch, URL, setTimeout, process …) komt er automatisch bij via globalThis.
+// Namen die de taal, de browser, de service worker of de bouwomgeving levert. Bewust een VASTE lijst en
+// niet "wat deze Node-versie kent": op 9 nov 2026 faalde de testronde op GitHub (Node 20) op `WebSocket`,
+// terwijl het lokaal en op Vercel (Node 24) goed ging, omdat Node 24 die naam zelf heeft en Node 20 niet.
 const BEKEND = new Set([
-  ...Object.getOwnPropertyNames(globalThis),
-  "window", "document", "localStorage", "sessionStorage", "navigator", "location", "history", "screen",
+  // de taal zelf
+  "undefined", "NaN", "Infinity", "globalThis", "arguments", "eval", "Object", "Function", "Array", "String", "Number",
+  "Boolean", "Symbol", "BigInt", "Math", "JSON", "Date", "RegExp", "Promise", "Proxy", "Reflect", "Map", "Set", "WeakMap",
+  "WeakSet", "WeakRef", "FinalizationRegistry", "Iterator", "Intl", "Atomics", "WebAssembly", "Error", "TypeError",
+  "RangeError", "SyntaxError", "ReferenceError", "EvalError", "URIError", "AggregateError", "ArrayBuffer",
+  "SharedArrayBuffer", "DataView", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array",
+  "Int32Array", "Uint32Array", "Float32Array", "Float64Array", "BigInt64Array", "BigUint64Array", "parseInt",
+  "parseFloat", "isNaN", "isFinite", "encodeURIComponent", "decodeURIComponent", "encodeURI", "decodeURI", "escape", "unescape",
+  // browser én Node
+  "console", "fetch", "Headers", "Request", "Response", "FormData", "URL", "URLSearchParams", "Blob", "File",
+  "AbortController", "AbortSignal", "TextEncoder", "TextDecoder", "Event", "EventTarget", "CustomEvent", "MessageChannel",
+  "BroadcastChannel", "DOMException", "crypto", "performance", "structuredClone", "queueMicrotask", "setTimeout",
+  "clearTimeout", "setInterval", "clearInterval", "setImmediate", "clearImmediate", "atob", "btoa", "WebSocket",
+  "EventSource", "CloseEvent", "navigator",
+  // alleen Node (api/ en scripts)
+  "process", "Buffer",
+  // alleen browser
+  "window", "document", "localStorage", "sessionStorage", "Storage", "location", "history", "screen",
   "alert", "confirm", "prompt", "matchMedia", "getComputedStyle", "requestAnimationFrame", "cancelAnimationFrame",
   "requestIdleCallback", "cancelIdleCallback", "scrollTo", "scrollY", "innerWidth", "innerHeight", "devicePixelRatio",
   "addEventListener", "removeEventListener", "dispatchEvent", "open", "close", "print", "self", "top", "parent", "caches",

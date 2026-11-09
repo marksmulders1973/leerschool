@@ -27,6 +27,15 @@ export default function Pakket({ open }) {
     expect(namen(`export const A = () => <div><Knop label="x" /></div>;`)).toEqual(["Knop"]);
   });
 
+  it("hangt niet af van de Node-versie: WebSocket en Buffer zijn bekend, een eigen verzinsel op globalThis niet", () => {
+    // 9 nov 2026: Node 24 kent WebSocket zelf, Node 20 (de testronde op GitHub) niet → daar faalde de poort.
+    globalThis.__alleenInDezeNode = 1;
+    try {
+      expect(namen(`export const s = () => new WebSocket("wss://x"); export const b = Buffer.from("a"); export const c = structuredClone({});`)).toEqual([]);
+      expect(namen(`export const x = __alleenInDezeNode + 1;`)).toEqual(["__alleenInDezeNode"]);
+    } finally { delete globalThis.__alleenInDezeNode; }
+  });
+
   it("gewone code: imports, parameters, browser-namen en html-tags zijn geen fout", () => {
     const code = `import React, { useEffect } from "react";
 import { track as meet } from "./utils.js";
