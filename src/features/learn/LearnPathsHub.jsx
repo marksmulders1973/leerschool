@@ -354,6 +354,19 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   // Wanneer filterSubject van bovenaf komt (bv. vanuit Oefenen-tab Leren-knop)
   // skip de grid en spring direct naar de detail-view voor dat vak.
   const [selectedSubject, setSelectedSubject] = useState(null);
+  // 9 nov 2026: bij de omzetting naar het vak-grid (2 mei) verdween deze inklap-status, maar de lijst
+  // gebruikt hem nog zodra er meer dan één vak tegelijk open staat (Leren-knop op /oefenen: Rekenen =
+  // rekenen + wiskunde, Spelling = spelling + taal …) → "expandedSubjects is not defined", scherm viel om.
+  // Nu: alle vakken open, tik op de vak-kop klapt in of uit.
+  const [ingeklapteVakken, setIngeklapteVakken] = useState(() => new Set());
+  const expandedSubjects = { has: (subj) => !ingeklapteVakken.has(subj) };
+  const toggleSubject = (subj) =>
+    setIngeklapteVakken((prev) => {
+      const next = new Set(prev);
+      if (next.has(subj)) next.delete(subj);
+      else next.add(subj);
+      return next;
+    });
 
   // Bij wisseling van filterSubject van buitenaf (bv. user kiest ander vak via
   // bottom-nav of breadcrumb) selectedSubject resetten zodat we niet vasthangen.

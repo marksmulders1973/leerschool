@@ -269,7 +269,7 @@ direct fixen in dezelfde sessie; bevindingen kort aan Mark melden.
 
 ### Self-test tussen taken (verplicht)
 Na elke afgewerkte taak voor je verder gaat:
-1. **Build groen**: `npx vite build` faalt = stoppen + fixen.
+1. **Build groen**: `npm run build` faalt = stoppen + fixen. (Niet kaal `npx vite build`: dat slaat de poorten in `prebuild` over, waaronder sinds 9 nov 2026 `scripts/check-vergeten-namen.mjs` — vergeten import of weggehaalde naam; los te draaien met `npm run lint:namen`.)
 2. **Eigen review**: open random vraag uit wat je net wijzigde. Maak hem expliciet fout. Gaat de uitlegPad-flow open zoals bedoeld?
 3. **Bij UI-wijziging**: Playwright screenshot van de nieuwe staat + zelf bekijken of het past bij STOPLIST + Leerkwartier-test.
 4. **Bij data-wijziging**: audit-script run (`scripts/auditKennisgraaf.js` zodra die bestaat) — geen broken `leerpadLink` of `prerequisites`.
