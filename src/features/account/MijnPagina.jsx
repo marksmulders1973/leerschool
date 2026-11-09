@@ -30,6 +30,7 @@ import { startsetSleutel, startsetVan, startsetBlok, startsetPortie, startsetOmv
 import { startsetVoortgang } from "../learn/startsets.js";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import FamilieVoorU from "../familie/FamilieVoorU.jsx";
+import KindWeekplanKaart from "./KindWeekplanKaart.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
@@ -2312,6 +2313,8 @@ export default function MijnPagina({
             {!(vakOpen && groep) && (<>
             {/* ── 💛 Voor jou klaargezet (Mark 15 aug; sinds 6 nov 2026 hier, direct onder Begin): lessen die
                 iemand thuis of op school koos. Cadeau-gevoel, geen huiswerk-druk; alleen als er echt iets staat. ── */}
+            {/* 📅 Weekplanner (9 nov 2026): wat thuis voor vandaag is klaargezet, plus de week. */}
+            <KindWeekplanKaart player={player} onPickPath={onPickPath} onVandaagKwartier={onVandaagKwartier} />
             {renderKlaargezetKaart()}
             {/* ── Je vakken: alleen de vakken van deze groep, als tegels mét rapportcijfer ("Rekenen · groep 5").
                 De tegels zíjn het rapport; het papieren rapport staat één tik verderop. ── */}

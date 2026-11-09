@@ -81,6 +81,8 @@ function probeerKwartierTeMelden(g) {
   cur.gemeld = true;
   write(cur);
   try { track("kwartier_reached", { min: Math.floor((cur.seconds || 0) / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
+  // 📅 Weekplanner (9 nov 2026): "Charley kiest" van vandaag telt als gedaan zodra het kwartier vol is.
+  try { import("./weekplan.js").then((m) => m.kwartierVolVoorPlan()).catch(() => {}); } catch { /* */ }
 }
 
 // Kwam het eerste leermoment pas ná de vijftien minuten, dan vuurt het event

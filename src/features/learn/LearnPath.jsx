@@ -1,3 +1,4 @@
+import { lesAfVoorPlan } from "../../shared/weekplan.js";
 import { useState, useEffect, useMemo, useRef, useCallback, useContext } from "react";
 import supabase from "../../supabase";
 import { metLinkId } from "../../shared/koppeling.js";
@@ -552,6 +553,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       rijen.filter((it) => it.path_id === pathId && !it.gedaan)
         .forEach((it) => { markeerGedaan(it.id, player, true, it.bron).catch(() => {}); });
     }).catch(() => {});
+    // 📅 Weekplanner (9 nov 2026): staat deze les vandaag gepland, dan ook daar op gedaan.
+    lesAfVoorPlan(player, pathId);
     return () => { stop = true; };
   }, [mode, player, pathId, naamloos]);
   // SH3 — exact hervatten: kom je binnen op dezelfde plek (zelfde pad + stap),

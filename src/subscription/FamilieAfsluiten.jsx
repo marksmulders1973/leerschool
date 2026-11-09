@@ -111,8 +111,8 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
   const vroeg = voorLancering()
     ? "Tot 1 januari is alles gratis. Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027."
     : poortAan()
-      ? "Eerst een week gratis proberen, zonder betaalgegevens. Daarna € 39 voor 12 maanden: één keer betalen, stopt vanzelf. Per gezin, niet per kind."
-      : "Eén keer betalen, stopt vanzelf. Per gezin, niet per kind.";
+      ? "Eerst een week gratis proberen, zonder betaalgegevens. Daarna € 39 voor 12 maanden: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf."
+      : "Eén pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf.";
 
   if (variant === "link") {
     return (
@@ -136,7 +136,7 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
   return (
     <div style={{ borderRadius: 14, border: "1.5px solid rgba(255,213,79,0.45)", background: "rgba(255,213,79,0.08)", padding: "12px 14px", ...style }}>
       <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffce80", marginBottom: 4 }}>
-        Dit hoort bij Familie
+        Dit hoort bij het Familie-pakket
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", lineHeight: 1.5, marginBottom: 10 }}>
         {vroeg}

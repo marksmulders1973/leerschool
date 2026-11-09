@@ -1,3 +1,4 @@
+import WeekPlanner from "./WeekPlanner.jsx";
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
 import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
@@ -1366,6 +1367,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           {/* Kwartierplan (sessie 1, 2026-07-07): doel + startfoto. Bewust
               BOVEN de scores — juist bij een vers gekoppeld kind zonder
               scores is dit de logische eerste actie voor de ouder. */}
+          {/* 📅 Weekplanner (idee 66, Mark 9 nov 2026): per dag één kwartier, ma t/m zo. Boven het oude Kwartierplan. */}
+          <WeekPlanner linkId={selectedChildVerified?.id || null} childName={selectedChild} groep={selectedChildVerified?.groep || null} isPro={isPro} />
           <KwartierplanSectie authUser={authUser} childName={selectedChild} linkId={selectedChildVerified?.id || null} />
 
           {/* 🏆 Diploma-kast van dit kind (12 aug): zelfde kast als op /mijn,
