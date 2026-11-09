@@ -45,7 +45,8 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
   const rijen = rapportRijen(vakken);
   if (rijen.length === 0) return null;
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+    // 9 nov 2026 (Mark: "rekedijk groot"): kleinere blokjes; 2 naast elkaar op de telefoon, 4-5 op de computer.
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 8 }}>
       {rijen.map((v) => {
         const meta = vakMeta(v.subj);
         const vast = v.cijfer !== null && (v.attempts || 0) >= VAST_VRAGEN;
@@ -61,19 +62,19 @@ export function VakTegels({ vakken, niveauLabel, vakMeta, onVak, startsetStand =
             onClick={() => { try { track("mijn_vaktegel", { vak: v.subj, cijfer: v.cijfer }); } catch { /* */ } onVak(v.subj); }}
             title={`Oefen ${v.titel}`}
             style={{
-              display: "flex", flexDirection: "column", gap: 5, minHeight: 96, padding: "12px 12px 10px", textAlign: "left", cursor: "pointer",
-              borderRadius: 16, border: "1px solid rgba(255,255,255,0.08)", background: "var(--color-bg-elevated, #1A2541)", color: "var(--color-text)",
+              display: "flex", flexDirection: "column", gap: 3, minHeight: 0, padding: "9px 11px 9px", textAlign: "left", cursor: "pointer",
+              borderRadius: 14, border: "1px solid rgba(255,255,255,0.08)", background: "var(--color-bg-elevated, #1A2541)", color: "var(--color-text)",
               fontFamily: "var(--font-body)",
             }}>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 600, color: "var(--color-text-strong, #fff)", lineHeight: 1.2 }}>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "var(--color-text-strong, #fff)", lineHeight: 1.2 }}>
               <span aria-hidden="true">{meta.emoji} </span>{v.titel}
             </span>
-            <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>{niveauLabel}</span>
+            {/* 9 nov 2026: "groep 7" stond al in de kop boven de blokjes → weg (kleinere blokjes). */}
             {v.cijfer !== null ? (
-              <span style={{ fontFamily: HAND, fontSize: 30, lineHeight: 1, fontWeight: 700, color: cijferKleur(v.cijfer, "scherm"), opacity: vast ? 1 : 0.8, fontVariantNumeric: "tabular-nums" }}>
+              <span style={{ fontFamily: HAND, fontSize: 22, lineHeight: 1, fontWeight: 700, color: cijferKleur(v.cijfer, "scherm"), opacity: vast ? 1 : 0.8, fontVariantNumeric: "tabular-nums" }}>
                 {toonCijfer(v.cijfer)}
               </span>
-            ) : (
+            ) : (ssOpen || schoolAan) ? null : (
               <span style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>nog geen cijfer</span>
             )}
             <span style={{ display: "flex", alignItems: "center", gap: 8, marginTop: "auto", fontSize: 11.5, fontWeight: 700, color: "var(--color-text-subtle, #828FAC)" }}>

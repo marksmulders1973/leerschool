@@ -24,7 +24,7 @@ import { maxJaar } from "../shared/voNiveau.js";
 // gewoon bestaan (gebeuren bij Start gratis / account).
 // (De gele Deel-actie-knop "nog X van 50 plekken" stond hier tot 6 sep 2026 — Mark: "dat kan ook wel weg".)
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onStartKwartier = null, onKlas, onNieuwkomers }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onStartKwartier = null, onStartVak = null, onKlas, onNieuwkomers }) {
   // Idee AR (23 sep 2026): klasgolf-schakelaar. Ziet de server ≥15 nieuwe apparaten
   // binnen 10 minuten op een schooldag (RPC klasgolf_actief), dan toont home het
   // volgende uur bovenaan de klas-strook → /klas. Geen nieuwe voordeur; het blokje
@@ -372,23 +372,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               }} aria-hidden="true">
                 <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
               </svg>
-              <h1 style={{
+              <div style={{
                 margin: 0,
                 fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                fontSize: 30, fontWeight: 800, color: "#fff",
+                fontSize: 24, fontWeight: 800, color: "#fff",
                 letterSpacing: "-0.01em", opacity: 0,
                 animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
               }}>
                 {BRAND.name}
-              </h1>
+              </div>
             </div>
-            <div style={{
-              fontFamily: "var(--font-display)", fontSize: 15.5, fontWeight: 700,
-              color: "#ffd54f", marginBottom: 6, opacity: 0,
-              animation: "lk-mark-slogan 0.7s ease-out 0.9s forwards",
+            {/* 🧭 9 nov 2026 (Mark: "de meeste mensen zien niet in één zicht wat de bedoeling van de app is";
+                onderzoek: 50 % van de nieuwe bezoekers zonder code deed hier niets). De kop zegt nu wát en voor
+                wie; de slogan staat onderaan het eerste blok. */}
+            <h1 style={{
+              margin: "10px 0 8px", fontFamily: "var(--font-display)", fontSize: 27, fontWeight: 800,
+              lineHeight: 1.15, color: "#fff",
             }}>
-              {BRAND.slogan}
-            </div>
+              Elke dag een kwartier oefenen voor <span style={{ color: "#ffd54f", whiteSpace: "nowrap" }}>groep 3 t/m 8</span>
+            </h1>
             {/* Eén eerlijke regel (ouder-agent 26 okt: "gratis" en "geen account" stonden
                 pas onder de foto's in kleine grijze tekst). Gratis-claim netjes afgebakend:
                 oefenen is gratis; de Familie-extra's via een code — zie het code-veld. */}
@@ -397,27 +399,65 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "rgba(255,255,255,0.85)", marginBottom: 6,
               display: "flex", alignItems: "center", justifyContent: "center", gap: 6, flexWrap: "wrap",
             }}>
-              <span>Gratis oefenen voor groep 3 t/m 8 en de Doorstroomtoets. Geen account, geen abonnement.</span>
+              <span>Rekenen, taal en de Doorstroomtoets. <strong style={{ color: "#69f0ae" }}>Gratis</strong>, zonder account. Bij een fout antwoord krijg je geen antwoord voorgekauwd, maar een vraag terug.</span>
               {/* Voorlees-oortje (Mark 25 jul): ook de ouder die moeite heeft met lezen moet de belofte kunnen hóren. */}
-              <VoorleesBlok tekst={`${BRAND.slogan} Gratis oefenen voor groep 3 tot en met 8 en de Doorstroomtoets. Geen account, geen abonnement. Tik op leerling of student, of vul de code van je flyer of pas in.`} accent="#ffd54f" />
+              <VoorleesBlok tekst={`Elke dag een kwartier oefenen voor groep 3 tot en met 8. Rekenen, taal en de Doorstroomtoets. Gratis, zonder account. Tik op een vak om te beginnen, of vul de code van je flyer of pas in.`} accent="#ffd54f" />
             </div>
           </div>
         )}
 
-        {/* 📸 De twee kinderen (Mark 30 sep 2026: "die kinderfoto's zijn een beetje de identiteit
-            van de app geworden"). 26 okt omhoog naar het eerste scherm: de meest getikte ingang. */}
+        {/* 🧭 Vak-knoppen (Mark 9 nov 2026, voorbeeld goedgekeurd: "ja beter, maak maar"). Vervangen de twee
+            kinderfoto's als ingang: elke knop start het start-kwartier met vragen uit dát vak (groep met één tik,
+            daarna meteen vragen). Pictogram = gekleurd blokje met tekens, geen emoji (regel 11 sep).
+            Meten: home_vak_knop { vak } → startkwartier_start { vak } → question_answered. */}
         {step === "role" && (
-          <div className="lk-content-wide" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, maxWidth: 520, margin: "8px auto 0" }}>
-            {[["leerling", "/model-leerling.png", "Leerling", "basisschool · groep 3 t/m 8"], ["student", "/model-student.jpg", "Student", "vmbo · havo · vwo"]].map(([rol, src, kop, sub]) => (
-              <button key={rol} type="button" onClick={() => { track("home_rol_foto", { rol }); handleRoleClick(rol); }} aria-label={`Ik ben ${kop.toLowerCase()} — ${sub}`}
-                style={{ padding: 0, border: "1px solid rgba(255,255,255,0.14)", borderRadius: 18, overflow: "hidden", background: "rgba(255,255,255,0.05)", cursor: "pointer", textAlign: "left", fontFamily: "inherit", color: "inherit" }}>
-                <img src={src} alt="" style={{ display: "block", width: "100%", aspectRatio: "4 / 3", objectFit: "cover" }} />
-                <div style={{ padding: "8px 10px 10px" }}>
-                  <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, color: "#ffd54f" }}>{kop}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>{sub}</div>
-                </div>
-              </button>
-            ))}
+          <div className="lk-content-wide" style={{ maxWidth: 560, margin: "6px auto 0", padding: "0 2px", boxSizing: "border-box" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#fff", margin: "0 0 10px 2px" }}>
+              Waar wil je mee beginnen?
+            </div>
+            <div className="lk-vak-knoppen" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              {[
+                ["rekenen", "12", "#00c853", "Rekenen", "tafels, breuken, procenten"],
+                ["taal", "Aa", "#5aa9ff", "Taal", "woordsoorten, zinnen"],
+                ["spelling", "ei", "#b39dff", "Spelling", "werkwoorden, ei/ij"],
+                ["lezen", "?!", "#ff9f5a", "Lezen", "begrijpend lezen"],
+                ["doorstroomtoets", "8", "#ffd54f", "Doorstroomtoets oefenen", "groep 8 · de toets is eind januari, begin februari"],
+              ].map(([vak, teken, kleur, titel, sub]) => {
+                const breed = vak === "doorstroomtoets";
+                return (
+                  <button key={vak} type="button"
+                    className={breed ? "lk-vak-breed" : undefined}
+                    onClick={() => {
+                      track("home_vak_knop", { vak });
+                      if (onStartVak) onStartVak(vak); else if (onStartKwartier) onStartKwartier(); else handleOefenenClick();
+                    }}
+                    style={{
+                      gridColumn: breed ? "1 / -1" : undefined,
+                      display: "flex", alignItems: "center", gap: 12, padding: "13px 14px", borderRadius: 16, cursor: "pointer",
+                      textAlign: "left", fontFamily: "var(--font-display)", color: "#fff",
+                      border: breed ? "1.5px solid rgba(255,213,79,0.55)" : "1.5px solid rgba(255,255,255,0.10)",
+                      background: breed ? "linear-gradient(135deg, rgba(255,213,79,0.16), var(--color-bg-elevated, #1A2541))" : "var(--color-bg-elevated, #1A2541)",
+                    }}>
+                    <span aria-hidden="true" style={{
+                      flexShrink: 0, width: 38, height: 38, borderRadius: 12, background: kleur, color: "#0b1224",
+                      display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 800,
+                    }}>{teken}</span>
+                    <span style={{ minWidth: 0 }}>
+                      <span style={{ display: "block", fontSize: 17, fontWeight: 700, lineHeight: 1.2 }}>{titel}</span>
+                      <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, color: "rgba(255,255,255,0.62)", marginTop: 2 }}>{sub}</span>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", margin: "10px 0 0", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,0.62)" }}>
+              {["Groep kiezen met één tik", "Meteen een vraag", "Niets invullen"].map((t) => (
+                <span key={t} style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                  <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#69f0ae" }} />{t}
+                </span>
+              ))}
+            </div>
+            <style>{"@media (min-width: 900px) { .lk-vak-knoppen { grid-template-columns: repeat(4, 1fr) !important; } }"}</style>
           </div>
         )}
 
@@ -425,7 +465,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             (Mark 11 aug: "zet mijn persoonlijke pagina zichtbaar op de home");
             nieuw = eerste kwartier — /mijn toont dan de lege staat met startknop
             (v648). Alleen als onMijnPagina ontbreekt: de oude oefen-route. */}
-        {step === "role" && (() => {
+        {step === "role" && (userName || "").trim() && (() => {
+          // 9 nov 2026: alleen nog voor wie al een naam heeft ("Welkom terug"); nieuwe bezoekers beginnen bij een vak.
           const naam = (userName || "").trim();
           const ga = () => {
             track(naam ? "home_cta_mijn_pagina" : "home_cta_eerste_kwartier");
@@ -465,6 +506,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           }}>
             Gedeeld door de gemeente Den Haag · elke maand oefenen hier honderden kinderen
           </p>
+        )}
+
+        {/* 👪 Ouder-ingang (9 nov 2026): een eigen regel i.p.v. een klein tekstlinkje onderaan. */}
+        {step === "role" && onOuderDashboard && (
+          <div className="lk-content-wide" style={{ maxWidth: 560, margin: "14px auto 0" }}>
+            <button type="button" onClick={() => { track("home_cta_ouder", { plek: "ouder-regel" }); onOuderDashboard(); }}
+              style={{
+                width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12,
+                padding: "13px 16px", borderRadius: 16, cursor: "pointer", textAlign: "left",
+                border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)", color: "#fff",
+              }}>
+              <span style={{ minWidth: 0 }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700 }}>Ik ben ouder of verzorger</span>
+                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.68)", marginTop: 2 }}>Zien hoe het gaat en een les klaarzetten</span>
+              </span>
+              <span style={{ flexShrink: 0, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffd54f" }}>Zo werkt het →</span>
+            </button>
+            <div style={{ display: "flex", justifyContent: "flex-end", margin: "8px 4px 0" }}>
+              <button type="button" onClick={() => { track("home_rol_foto", { rol: "student", via: "link" }); handleRoleClick("student"); }}
+                style={{ ...rolLinkStijl, fontSize: 13 }}>vmbo · havo · vwo →</button>
+            </div>
+            <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 14, color: "#ffd54f", opacity: 0.85, margin: "10px 0 0" }}>
+              {BRAND.slogan}
+            </div>
+          </div>
         )}
 
         {/* 🎟️ Code-veld (Mark 27 aug: de handmatige code-ingang — afspraak met Den Haag —
@@ -549,12 +615,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             color: "rgba(255,255,255,0.6)", textAlign: "center",
             margin: "10px auto 18px", maxWidth: 560, padding: "0 12px",
           }}>
-            {onOuderDashboard && (
-              <>
-                <button type="button" style={rolLinkStijl} onClick={() => { track("home_cta_ouder"); onOuderDashboard(); }}>Ouder of verzorger</button>
-                <span aria-hidden="true"> · </span>
-              </>
-            )}
             <button type="button" style={rolLinkStijl} onClick={() => { track("home_rol_link", { rol: "leerkracht" }); handleFeatureClick("leerkrachten"); }}>Leerkracht</button>
           </div>
         )}

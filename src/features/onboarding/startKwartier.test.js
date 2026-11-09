@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
-import { parseGroep, kiesStartPaden, verweefVragen } from "./startKwartier.js";
+import { parseGroep, kiesStartPaden, verweefVragen, START_VAKKEN } from "./startKwartier.js";
 
 describe("parseGroep", () => {
   it("leest losse cijfers en groep-strings", () => {
@@ -26,6 +26,19 @@ describe("kiesStartPaden", () => {
       expect(paden.length).toBeGreaterThanOrEqual(2);
       for (const id of paden) expect(ids.has(id), `${id} (groep ${g}) ontbreekt in manifest`).toBe(true);
     }
+  });
+  it("vak-knoppen: per vak en groep alleen bestaande paden", () => {
+    for (const vak of START_VAKKEN) {
+      for (let g = 1; g <= 8; g++) {
+        const paden = kiesStartPaden(String(g), vak);
+        expect(paden.length, `${vak} groep ${g}`).toBeGreaterThanOrEqual(1);
+        for (const id of paden) expect(ids.has(id), `${id} (${vak}, groep ${g}) ontbreekt in manifest`).toBe(true);
+      }
+    }
+  });
+  it("Doorstroomtoets = altijd de groep 8-paden; onbekend vak = gewone mix", () => {
+    expect(kiesStartPaden("7", "doorstroomtoets")).toEqual(kiesStartPaden("8"));
+    expect(kiesStartPaden("6", "bestaatniet")).toEqual(kiesStartPaden("6"));
   });
   it("valt terug op groep 6 bij onbekend niveau", () => {
     expect(kiesStartPaden(undefined)).toEqual(kiesStartPaden("6"));

@@ -310,6 +310,9 @@ export default function App() {
   const [page, setPage] = useState(initialPage);
   // /klas (idee AM, 22 sep 2026): groep uit ?g=6|7|8 (juf zet die in de link),
   // anders 7; 'ronde' dwingt een verse set vragen af bij "Nog een rondje".
+  // 🧭 Vak-knop op de startpagina (9 nov 2026): het gekozen vak voor het start-kwartier.
+  const [startVak, setStartVak] = useState(null);
+  useEffect(() => { if (page !== "start-kwartier" && startVak) setStartVak(null); }, [page, startVak]);
   const [klasGroep, setKlasGroep] = useState(() => {
     try { const g = parseInt(new URLSearchParams(window.location.search).get("g"), 10); return [6, 7, 8].includes(g) ? g : 7; } catch { return 7; }
   });
@@ -1863,6 +1866,7 @@ export default function App() {
           onMyMastery={() => setPage("my-mastery")}
           onMijnPagina={() => setPage("mijn-pagina")}
           onStartKwartier={() => setPage("start-kwartier")} /* 5 nov 2026: na de opwarmset op het ere-scherm meteen door */
+          onStartVak={(v) => { setStartVak(v); setPage("start-kwartier"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }}
           onPickPath={(id) => {
             // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.
             setActiveLearnPathId(id);
@@ -2735,7 +2739,8 @@ export default function App() {
       )}
       {page === "start-kwartier" && (
         <StartKwartier
-          key={"start-" + (userLevel || "")}
+          key={"start-" + (userLevel || "") + "-" + (startVak || "")}
+          vak={startVak}
           userName={userName}
           userLevel={userLevel || (/[?&](k|g)=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
           authUser={authUser}

@@ -44,6 +44,8 @@ export function onderwerpVan(v) {
   const id = String(v?.pathId || "");
   // Volgorde telt: specifiek vóór algemeen (Mark 26 okt 2026: boven een Engels-vraag stond "Taal").
   if (/engels|english/.test(id)) return "Engels";
+  // 9 nov 2026: vak-knop "Spelling" op de startpagina → boven een spellingvraag ook "Spelling", niet "Taal".
+  if (/spelling|werkwoord-tijden|ei-ij-au-ou/.test(id)) return "Spelling";
   // 27 okt 2026 (kliktest groep 5): "kaartlezen-po" viel op /lezen/ en heette "Lezen" → wereld-vakken vóór lezen.
   if (/geschied|tijdvak|oudheid|ontdekking|industriele|koude-oorlog|politiek|kunstenaars|bekende-|olympische|klassieke-muziek|boeken-literatuur/.test(id)) return "Geschiedenis";
   if (/schaal-kaart/.test(id)) return "Rekenen";
@@ -83,8 +85,44 @@ const PADEN_PER_GROEP = {
   8: ["doorstroomtoets-taal-g8", "doorstroomtoets-rekenen-g8", "cito-strategieen-groep8", "lange-toets-teksten-g8-po"],
 };
 
-export function kiesStartPaden(level) {
+// 🧭 Vak-knoppen op de startpagina (Mark 9 nov 2026, "ja beter, maak maar"): een nieuwe bezoeker
+// kiest eerst een vak; het start-kwartier haalt de vragen dan alleen uit dat vak. Alle id's staan in
+// pathManifest.generated.json (gecheckt in startKwartier.test.js). Doorstroomtoets = altijd de
+// groep 8-toetspaden, ook voor een groep 7 die alvast wil oefenen.
+export const START_VAKKEN = ["rekenen", "taal", "spelling", "lezen", "doorstroomtoets"];
+const KLEUTER = ["tellen-kleuters-po", "rijmen-letters-kleuters-po"];
+const PADEN_PER_VAK = {
+  rekenen: {
+    1: ["tellen-kleuters-po"], 2: ["tellen-kleuters-po"],
+    3: ["getallen-tot-20-po", "klokkijken"], 4: ["tafels-po", "klokkijken"],
+    5: ["tafels-po", "delen-po", "geld-rekenen"], 6: ["breuken-po", "kommagetallen-po", "cijferend-rekenen"],
+    7: ["procenten-po", "breuken-po", "kommagetallen-po"], 8: ["doorstroomtoets-rekenen-g8", "procenten-po", "omzetten-breuk-procent-komma-po"],
+  },
+  taal: {
+    1: ["rijmen-letters-kleuters-po"], 2: ["rijmen-letters-kleuters-po"],
+    3: ["taal-leren-lezen-g3"], 4: ["taal-woorden-zinnen-g4"],
+    5: ["taal-woorden-zinnen-g4", "synoniemen-tegenstellingen-po", "woordsoorten-po"], 6: ["woordsoorten-po", "woordenschat-po", "spreekwoorden-uitdrukkingen-po"],
+    7: ["woordsoorten-po", "zinsontleding-onderwerp-persoonsvorm-po", "woordenschat-po"], 8: ["doorstroomtoets-taal-g8", "zinsontleding-onderwerp-persoonsvorm-po", "signaalwoorden-verbanden-po"],
+  },
+  spelling: {
+    1: ["rijmen-letters-kleuters-po"], 2: ["rijmen-letters-kleuters-po"],
+    3: ["spelling-eerste-woorden-g3"], 4: ["spelling-ei-ij-au-ou"],
+    5: ["spelling-ei-ij-au-ou", "werkwoordsspelling-dt"], 6: ["werkwoordsspelling-dt", "spelling-ei-ij-au-ou", "spelling-overige-po"],
+    7: ["werkwoordsspelling-dt", "spelling-overige-po", "werkwoord-tijden-po"], 8: ["werkwoordsspelling-dt", "spelling-overige-po", "werkwoord-tijden-po"],
+  },
+  lezen: {
+    1: ["rijmen-letters-kleuters-po"], 2: ["rijmen-letters-kleuters-po"],
+    3: ["taal-leren-lezen-g3"], 4: ["korte-teksten-snappen-g4"],
+    5: ["korte-teksten-snappen-g4", "begrijpend-lezen-teksten-po"], 6: ["begrijpend-lezen-teksten-po", "samenvatten-hoofdgedachte-po", "verwijswoorden-begrijpend-lezen-po"],
+    7: ["samenvatten-hoofdgedachte-po", "begrijpend-lezen-strategie", "signaalwoorden-verbanden-po"], 8: ["lange-toets-teksten-g8-po", "begrijpend-lezen-strategie", "samenvatten-hoofdgedachte-po"],
+  },
+};
+
+export function kiesStartPaden(level, vak = null) {
   const g = parseGroep(level) ?? 6;
+  if (vak === "doorstroomtoets") return PADEN_PER_GROEP[8].slice();
+  const perVak = vak && PADEN_PER_VAK[vak];
+  if (perVak) return (perVak[g] || KLEUTER).slice();
   return PADEN_PER_GROEP[g].slice();
 }
 
@@ -112,8 +150,8 @@ export function verweefVragen(perPad, aantal = AANTAL_VRAGEN) {
 // telefoon). Nu: het eerste pad apart laden en meteen via `onEerste` teruggeven,
 // zodat vraag 1 er binnen een paar seconden staat; de rest komt erachteraan.
 // Vraag 1 blijft dezelfde (verweefVragen begint altijd met perPad[0][0]).
-export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste } = {}) {
-  const paden = kiesStartPaden(level);
+export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste, vak = null } = {}) {
+  const paden = kiesStartPaden(level, vak);
   // Het eerste pad levert vraag 1: alleen uit de eerste 2 stappen (de makkelijkste), zodat een nieuwe
   // leerling met een succesje begint (idee BF, 26 sep 2026). De andere paden blijven willekeurig.
   const laad = async (pathId, eerstePad = false) => {
@@ -124,9 +162,16 @@ export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste 
       return [];
     }
   };
+  const eerste = laad(paden[0], true);
+  // Gekozen vak (9 nov 2026): geen algemene opwarmvraag ("Welk getal komt na 4?" na een tik op Spelling
+  // klopt niet); vraag 1 komt uit de eerste twee stappen van het eerste vak-pad, dus ook een succesje.
+  if (vak) {
+    if (onEerste) eerste.then((lijst) => { if (lijst.length) onEerste(verweefVragen([lijst], aantal)); }).catch(() => {});
+    const perPad = await Promise.all([eerste, ...paden.slice(1).map((p) => laad(p))]);
+    return verweefVragen(perPad, aantal);
+  }
   // Vraag 1 = de vaste opwarmvraag (staat er meteen, zonder laden); daarna aantal-1 uit de paden.
   const opwarm = opwarmVraag(parseGroep(level) ?? 6);
-  const eerste = laad(paden[0], true);
   if (onEerste) {
     onEerste([opwarm]);
     eerste.then((lijst) => { if (lijst.length) onEerste([opwarm, ...verweefVragen([lijst], aantal - 1)]); }).catch(() => {});

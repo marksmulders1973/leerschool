@@ -506,7 +506,7 @@ function KlaarKaart({ goed, totaal, groep, userName, onGa, klas = false }) {
 // geen 'start-kwartier gedaan'-vlag; groep uit de URL of de groepskiezer;
 // eigen events klas_open / klas_vraag / klas_klaar / klas_naar_juf zodat het
 // dagrapport klasgebruik los van het start-kwartier kan tellen (klasgolf.sql).
-export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep, onKiesGroep = null }) {
+export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep, onKiesGroep = null, vak = null }) {
   // Groep-poort (Mark 26 okt 2026, "ook zonder account verplicht een groep invullen"): een gast
   // zonder groep kreeg hier stil groep 6. Geeft App een onKiesGroep mee en is er geen groep, dan
   // eerst kiezen; App rendert dit scherm met key=userLevel, dus na de keuze laadt het opnieuw
@@ -532,14 +532,15 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const afgemeldRef = useRef(false);
 
   useEffect(() => {
-    if (poort) { track("startkwartier_groep_poort", {}); return undefined; }
+    if (poort) { track("startkwartier_groep_poort", vak ? { vak } : {}); return undefined; }
     let dood = false;
-    track(klas ? "klas_open" : "startkwartier_start", { groep, level: String(userLevel || "") });
+    track(klas ? "klas_open" : "startkwartier_start", { groep, level: String(userLevel || ""), ...(vak ? { vak } : {}) });
     const t0 = Date.now();
     let eersteGezet = false;
     // Idee 4 (10 sep 2026): vraag 1 zodra het eerste pad binnen is; meting
     // startkwartier_laad (ms tot de eerste vraag / tot alles) voor het dagrapport.
     bouwStartVragen(userLevel, undefined, {
+      vak: klas ? null : vak,
       onEerste: (v) => {
         if (dood || eersteGezet) return;
         eersteGezet = true;
