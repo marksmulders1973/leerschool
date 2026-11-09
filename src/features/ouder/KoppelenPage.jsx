@@ -310,7 +310,7 @@ export default function KoppelenPage({ userName = "", onNaamInvullen, onKlaar, o
               <Stap nr={1} titel="Log in op het ouder-overzicht">
                 <div style={{ ...F.sub, fontSize: 13 }}>Met Google of met je e-mailadres (je krijgt een inloglink per mail). Alleen het ouder-overzicht vraagt een account; je kind heeft er geen nodig.</div>
                 <MiniScherm>
-                  {mini.regel("Volg je kind", "#fff")}
+                  {mini.regel("Volg de voortgang van je kind", "#fff")}
                   {mini.knop("Inloggen met Google", "#fff", "#333")}
                   {mini.knop("Inloglink per e-mail", "rgba(255,255,255,0.12)", "#fff")}
                 </MiniScherm>

@@ -36,7 +36,7 @@ const groepVanRol = (role) => (role === "ouder" ? "ouder" : role === "teacher" ?
 
 const ROL_KNOPPEN = [
   { key: "leerling", label: "Leerling", uitleg: "Ik oefen zelf" },
-  { key: "ouder", label: "Ouder of verzorger", uitleg: "Ik volg mijn kind" },
+  { key: "ouder", label: "Ouder of verzorger", uitleg: "Ik volg de voortgang van mijn kind" },
   { key: "teacher", label: "Leerkracht", uitleg: "Ik heb een klas" },
 ];
 

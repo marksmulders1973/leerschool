@@ -646,7 +646,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     return (
       <div style={{ padding: embedded ? "8px 0" : 32, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
         <div style={{ fontSize: 56 }}>👨‍👩‍👧</div>
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)" }}>Volg je kind — voor ouders en verzorgers</div>
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)" }}>Volg de voortgang van je kind — voor ouders en verzorgers</div>
         <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "rgba(255,255,255,0.5)", maxWidth: 280, lineHeight: 1.6 }}>
           Log in met Google om de voortgang van je kind te bekijken, je kind te koppelen en het weekrapport in te stellen.
         </div>
