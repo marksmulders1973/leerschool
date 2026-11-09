@@ -20,6 +20,7 @@ import { createRequire } from "module";
 import { createHash } from "node:crypto";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 import { mailTaglineHtml, familieRegelHtml, familieRegelText, familieVoorUHtml } from "./_lib/mail-tagline.js";
+import { maakProefLink } from "./_lib/proeflink.js";
 
 import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 // JSON via createRequire: een kale ESM-JSON-import vereist import-attributes
@@ -129,6 +130,18 @@ async function heeftFamilieAl(kinderen, base, key) {
   } catch {
     return true;
   }
+}
+
+// 🔗 Ouder-account van deze mail (eerste parent_user_id van de koppelingen), voor de proefweek-link.
+async function ouderUid(kinderen, base, key) {
+  try {
+    const linkIds = [...kinderen.values()].map((k) => k?.linkId).filter(Boolean);
+    if (!linkIds.length) return null;
+    const r = await sb(`parent_child_links?id=in.(${linkIds.map(encodeURIComponent).join(",")})&select=parent_user_id&order=created_at.asc`, { method: "GET" }, base, key);
+    if (!r.ok) return null;
+    const rows = await r.json();
+    return (Array.isArray(rows) ? rows : []).map((x) => x.parent_user_id).find(Boolean) || null;
+  } catch { return null; }
 }
 
 // Alle mastery-rijen van één kind. Scoping (bug-jacht 11 jul): als de
@@ -264,7 +277,7 @@ function maakKindSectie(childName, rows) {
   return { html, text };
 }
 
-function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, toonFamilie = false) {
+function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, toonFamilie = false, proefToken = null) {
   const dashboard = `${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport-stand`;
   const onderwerp = "📊 Weekrapport: zo ging het leren deze week";
 
@@ -313,11 +326,11 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
     ${reageerHtml}
     ${meningHtml}
     ${deelHtml}
-    ${toonFamilie ? familieVoorUHtml("ouder-rapport") : ""}
+    ${toonFamilie ? familieVoorUHtml("ouder-rapport", { proefToken }) : ""}
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (knopje 'weekrapport aan' bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\nWat vind jij van Leerkwartier? Vertel het in één zin door te antwoorden; met jouw toestemming zetten we hem (alleen met je voornaam) op de site.\n\n${deelText}${toonFamilie ? `\n\n${familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\nWat vind jij van Leerkwartier? Vertel het in één zin door te antwoorden; met jouw toestemming zetten we hem (alleen met je voornaam) op de site.\n\n${deelText}${toonFamilie ? `\n\n${proefToken ? `Het Familie-pakket een week gratis proberen, zonder inloggen en zonder betaalgegevens: https://leerkwartier.app/abonnement.html?van=ouder-rapport&proeflink=${encodeURIComponent(proefToken)}#familie` : familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
   return { onderwerp, html, text };
 }
 
@@ -374,7 +387,9 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       const niveauSectie = await haalNiveauSectie(adres, base, key);
       const vriendCode = await haalVriendencode(adres, base, key);
       const toonFamilie = !(await heeftFamilieAl(kinderen, base, key));
-      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode, toonFamilie);
+      // 🔗 9 nov 2026: proefweek met één tik vanuit de mail, voor dít ouder-account.
+      const proefToken = toonFamilie ? await maakProefLink(await ouderUid(kinderen, base, key)).catch(() => null) : null;
+      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode, toonFamilie, proefToken);
       // Partner-mail: kopie naar het tweede adres als het geldig is en niet
       // gelijk aan het ouder-adres (geen dubbele bezorging).
       const r = await fetch("https://api.resend.com/emails", {

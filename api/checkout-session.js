@@ -5,6 +5,7 @@
 //   POST ?action=portal    { userId }               → Stripe Customer Portal-URL (opzeggen, kaart, facturen)
 //   POST ?action=webhook   (Stripe → ons)           → subscriptions + payments bijwerken
 //   POST ?action=proefweek (Authorization: Bearer <supabase-token>) → 7 dagen Familie, één keer per account (6 nov 2026)
+//        óf body { proeflink } uit het weekrapport (9 nov 2026, api/_lib/proeflink.js) als dit apparaat niet is ingelogd
 //
 // Geen npm-pakket: Stripe's REST-API via fetch + handtekening-check via Web
 // Crypto, zodat dit op de edge-runtime draait zonder extra dependency.
@@ -31,6 +32,7 @@
 // docs/BETALING-PLAN.md): env-vars zetten en STRIPE_ACTIVE=true.
 
 import { guardRequest } from "./_guard.js";
+import { leesProefLink } from "./_lib/proeflink.js";
 // 🚪 De poort (6 nov 2026, staande opdracht "10 betalende klanten"): zolang PAYWALL_ACTIVE uit staat is
 // alles gratis en gaan betaalde maanden pas in op FAMILIE_START. Zet Mark de poort aan ("zet de poort
 // aan"), dan geldt: vroege-vogel-regel weg (12 maanden vanaf betalen) en de proefweek gaat open.
@@ -101,7 +103,7 @@ function sb() {
       const r = await fetch(`${base}/auth/v1/admin/users/${encodeURIComponent(userId)}`, { headers: h });
       if (!r.ok) return null;
       const u = await r.json();
-      return u && u.email && !u.is_anonymous ? { email: u.email } : null;
+      return u && u.email && !u.is_anonymous ? { id: userId, email: u.email } : null;
     },
     // Wie is de aanvrager? Uit het Supabase-toegangstoken (Authorization: Bearer …), niet uit de body.
     async userVanToken(token) {
@@ -199,7 +201,14 @@ export default async function handler(req) {
       const token = String(req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
       const db = sb();
       const u = await db.userVanToken(token);
-      const account = u && u.email && !u.anoniem ? u : null;
+      let account = u && u.email && !u.anoniem ? u : null;
+      // 🔗 9 nov 2026: geen (echte) sessie op dit apparaat, maar wel een ondertekende code uit het
+      // weekrapport → de proefweek hoort bij dat ouder-account (api/_lib/proeflink.js).
+      if (!account) {
+        const body = await req.json().catch(() => ({}));
+        const uidUitLink = await leesProefLink(body && body.proeflink);
+        if (uidUitLink) account = await db.echtAccount(uidUitLink);
+      }
       const bestaand = account ? await db.subscriptionByUser(account.id) : null;
       const partner = account ? await db.heeftPartnerCode(account.id) : false;
       const besluit = beoordeelProefweek({ account, bestaand, partner });

@@ -341,7 +341,7 @@
       var ses = null; try { ses = sessionStorage.getItem("lk_s"); if (!ses) { ses = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem("lk_s", ses); } } catch (e) {}
       var bron = q0.get("utm_source");
       if (!bron && document.referrer) { try { var h = new URL(document.referrer).hostname.toLowerCase(); bron = h.indexOf("leerkwartier") >= 0 ? "leerkwartier.app" : h.indexOf("facebook") >= 0 ? "fb" : h.indexOf("instagram") >= 0 ? "ig" : h.indexOf("threads") >= 0 ? "threads" : h.indexOf("google.") >= 0 ? "google" : h.slice(0, 40); } catch (e) {} }
-      var p = Object.assign({ uid: uid, plek: "prijspagina", poort: POORT_AAN, app_v: 1063 }, props || {});
+      var p = Object.assign({ uid: uid, plek: "prijspagina", poort: POORT_AAN, app_v: 1066 }, props || {});
       var van = q0.get("van"); if (van) p.van = String(van).slice(0, 40);
       var cmp = q0.get("utm_campaign"); if (cmp) p.utm_campaign = String(cmp).slice(0, 60);
       fetch("https://uxqnzrymyjbcpuzqktdm.supabase.co/rest/v1/events", {
@@ -367,11 +367,37 @@
       ["onder-knop-proef", "uitleg-proberen-poort"].forEach(function (id) { var el = document.getElementById(id); if (el) el.hidden = false; });
       var wk = document.getElementById("waitlist-kop"); if (wk) wk.textContent = "📬 Liever eerst meer weten?";
       var wt = document.getElementById("waitlist-tekst"); if (wt) wt.textContent = "Laat je e-mailadres achter, dan krijg je één mailtje: wat Familie voor jouw gezin doet en hoe de proefweek werkt. Geen spam.";
+      // 🔗 9 nov 2026: knop uit het weekrapport (?proeflink=…) → geen inloggen nodig; de ondertekende
+      // code hoort bij het ouder-account dat de mail kreeg (api/_lib/proeflink.js). Pas na een tik
+      // van de ouder zelf, zodat mailscanners die de link openen niets starten.
+      var proefLink = q.get("proeflink");
+      if (proefLink && pk) {
+        pk.textContent = "Start mijn gratis proefweek";
+        lkMeet("proeflink_open");
+        setTimeout(function () { try { pk.scrollIntoView({ behavior: "smooth", block: "center" }); } catch (e) {} }, 300);
+      }
       if (pk) pk.addEventListener("click", async function () {
         msg.textContent = "Even bezig…";
         try { if (window.va) window.va("event", { name: "proefweek_klik", data: { plek: "prijspagina" } }); } catch (e) {}
-        lkMeet("proefweek_klik");
+        lkMeet("proefweek_klik", proefLink ? { via: "mail-link" } : null);
         var s = sessie();
+        if ((!s.token || !s.uid) && proefLink) {
+          try {
+            var rl = await fetch("/api/checkout-session?action=proefweek", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ proeflink: proefLink }) });
+            var dl = await rl.json();
+            if (dl.ok) {
+              lkMeet("proefweek_gestart", { dagen: 7, via: "mail-link" });
+              try { history.replaceState(null, "", location.pathname + "#familie"); } catch (e) {}
+              var totl = new Date(dl.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+              msg.textContent = "Je proefweek staat aan t/m " + totl + ". Log op je telefoon of tablet in met het e-mailadres waarop je het weekrapport kreeg, dan zie je alles.";
+              var al = document.createElement("a"); al.href = "/ouder"; al.textContent = " Naar je ouderpagina →"; al.style.color = "inherit"; al.style.fontWeight = "800"; msg.appendChild(al);
+              pk.style.display = "none";
+              return;
+            }
+            lkMeet("proefweek_geweigerd", { reden: dl.gebruikt ? "gebruikt" : dl.alActief ? "al_actief" : dl.login ? "link_ongeldig" : String(rl.status), via: "mail-link" });
+            if (!dl.login) { msg.textContent = dl.error || "Dat ging niet door."; return; }
+          } catch (e) { msg.textContent = "Ging niet door — probeer het later nog eens."; return; }
+        }
         if (!s.token || !s.uid) {
           lkMeet("proefweek_login_nodig");
           msg.textContent = "Log eerst in met je e-mailadres, dan hoort de proefweek bij jouw account en werkt hij op al je apparaten.";
