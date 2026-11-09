@@ -4,6 +4,7 @@
 // Nu blijft de schade beperkt tot het park, met een kindvriendelijke melding
 // en een echte tweede kans. Patroon = TeaserErrorBoundary (HomePage.jsx).
 import { Component } from "react";
+import { meldFout } from "../../app/meldFout.js";
 
 export default class ParkErrorBoundary extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class ParkErrorBoundary extends Component {
   componentDidCatch(error) {
     // eslint-disable-next-line no-console
     console.warn("[park] scene-fout opgevangen:", error?.message);
+    meldFout(error, "park");
   }
 
   render() {

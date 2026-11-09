@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { meldFout } from "./meldFout.js";
 
 /**
  * ErrorBoundary — vangt runtime errors die anders een witte pagina geven.
@@ -79,6 +80,15 @@ export async function recoverFromChunkError(error) {
   return true;
 }
 
+// 🧪 Zelf testen (9 nov 2026): leerkwartier.app/?testfout=1 laat het "Iets ging mis"-scherm expres zien,
+// zodat te controleren is dat het meetpunt `app_fout` aankomt. De melding begint met "testfout", zo
+// blijft hij buiten de telling in het dagrapport. "Naar home" brengt je er weer uit.
+export const TESTFOUT_MELDING = "testfout: zo ziet een omgevallen scherm eruit";
+function TestFout() {
+  if (typeof window !== "undefined" && /[?&]testfout=1(?:&|$)/.test(window.location.search)) throw new Error(TESTFOUT_MELDING);
+  return null;
+}
+
 export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
@@ -92,6 +102,8 @@ export default class ErrorBoundary extends Component {
   componentDidCatch(error, errorInfo) {
     // eslint-disable-next-line no-console
     console.error("[ErrorBoundary] caught:", error, errorInfo);
+    // 📟 Meetpunt `app_fout` (9 nov 2026): een omgevallen scherm is voortaan zichtbaar in het dagrapport.
+    meldFout(error, "app", isChunkLoadError(error));
     if (isChunkLoadError(error)) {
       // Probeer automatisch te herstellen (SW + cache wipe + reload).
       this.setState({ recovering: true });
@@ -244,6 +256,11 @@ export default class ErrorBoundary extends Component {
       );
     }
 
-    return this.props.children;
+    return (
+      <>
+        <TestFout />
+        {this.props.children}
+      </>
+    );
   }
 }

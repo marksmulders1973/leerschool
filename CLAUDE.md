@@ -111,8 +111,22 @@ ORDER BY pc.slapend, gescand_uniek DESC, pc.code;
 - **Testcode:** `PRO2027` — Mark's persoonlijke partner-code (max 25, alleen voor Mark + bekenden, nóóit publiceren/op flyers). Scan-flow naspelen: `leerkwartier.app/?partner=PRO2027` (ere-scherm → 3 proef-vragen → plek actief). Handmatig typen kan ook via de code-balk.
 - **Reset:** `leerkwartier.app/?codereset=1` — haalt de vastgezette code van het apparaat, daarna kan hij opnieuw testen.
 - **Ere-scherm-preview (zonder iets vast te zetten):** `leerkwartier.app/?erescherm=CODE` — werkt voor élke code.
+- **Foutscherm + meetpunt:** `leerkwartier.app/?testfout=1` — laat "Iets ging mis" expres zien en schrijft `app_fout` weg (melding "testfout…", telt niet mee). "Naar home" brengt je eruit.
 - **Overige zelf-test-ingangen:** takenlijst-demo deelcode `TAAK24` · leerkracht-kant `/leerkracht` · ouder-kant `/ouder` · weekpakket via Mark's meesterscode.
 PRO2027 verschijnt vanzelf in de code-teller-tabel — daar altijd als "🧪 test (Mark)" labelen zodat de cijfers niet vervuilen.
+
+**📟 Omgevallen schermen in élk dagrapport (Mark 9 nov 2026: "ja leg de foutmelding vast als meetpunt").** Aanleiding: twee schermen vielen in productie om zonder dat iemand het wist (leerling-startscherm 6-9 nov door een vergeten import; Leren-knop op /oefenen sinds 2 mei). Sinds v1076 schrijft de foutvanger (`src/app/ErrorBoundary.jsx` + `ParkErrorBoundary`, via `src/app/meldFout.js`) bij elk "Iets ging mis"-scherm één event `app_fout` weg: `fout` (melding, max 60 tekens), `soort`, `chunk` (bestand zonder hash), `plek` (app/park), `herstel=1` bij een laadfout na een uitrol die de app zelf herstelt; pagina staat in `path`, bouwversie in `app_v`. Per sessie telt dezelfde melding één keer. In het dagrapport (blok 6, en bij ≥1 echte fout ook in blok 1 als actie): aantal + apparaten 24u/7d per melding; **0 = één regel "📟 Omgevallen schermen: 0"**. Een nieuwe melding met `herstel` leeg en `plek='app'` = een scherm dat stuk is → dezelfde sessie uitzoeken en herstellen. Zelf testen: `leerkwartier.app/?testfout=1` (melding begint met "testfout", telt niet mee).
+```sql
+SELECT props->>'fout' AS fout, props->>'soort' AS soort, props->>'chunk' AS chunk, props->>'plek' AS plek,
+  path, max((props->>'app_v')::int) AS laatste_versie,
+  count(*) FILTER (WHERE created_at >= now()-interval '24 hours') AS n_24u,
+  count(*) AS n_7d, count(DISTINCT props->>'uid') AS apparaten_7d,
+  to_char(max(created_at) AT TIME ZONE 'Europe/Amsterdam','DD-MM HH24:MI') AS laatste
+FROM events_mens
+WHERE name='app_fout' AND created_at >= now()-interval '7 days'
+  AND props->>'herstel' IS NULL AND coalesce(props->>'fout','') NOT LIKE 'testfout%'
+GROUP BY 1,2,3,4,5 ORDER BY n_7d DESC;
+```
 
 **📡 Code-radar in élk dagrapport (idee #74 stap 1, Mark-go 25 aug — "laat óók zien wat er buiten de partner-codes gebeurt").** Naast de flyer-teller hierboven twee radar-query's draaien, zodat deel-/claim-/test-codes niet meer alleen bij toeval opvallen:
 ```sql
