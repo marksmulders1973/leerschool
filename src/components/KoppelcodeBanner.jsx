@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { koppelingVoor } from "../shared/koppeling.js";
 import { claimKoppelcode, normaliseerKoppelcode, koppelFoutTekst } from "../shared/koppelcode.js";
+import { bewaarKoppeling } from "../shared/koppeling.js";
 
 // P0-3 (4-agent-audit 2026-05-18): kind-zijde van de WhatsApp-koppelcode-flow.
 //
@@ -59,6 +60,13 @@ export default function KoppelcodeBanner({ userName }) {
     if (r.ok) {
       // Koppeling-identiteit (2 sep 2026): claimKoppelcode bewaart het link_id op
       // dit toestel, zodat elke score/stap voortaan aan déze koppeling hangt.
+      // 9 nov 2026: staat er een naam óp de code ("Brian") en heet dit profiel anders ("Bri"), dan bewaart
+      // claimKoppelcode de koppeling onder de naam van de code. Dit profiel oefent onder de eigen naam,
+      // dus zonder deze regel ging al het werk zonder koppeling de deur uit en zag thuis niets.
+      const eigen = String(userName || "").trim();
+      if (eigen && r.linkId && String(r.childName || "").trim().toLowerCase() !== eigen.toLowerCase()) {
+        try { bewaarKoppeling({ naam: eigen, linkId: r.linkId, rol: r.rol, vanWie: r.vanWie }); } catch { /* */ }
+      }
       setMsg({ ok: true, rol: r.rol, vanWie: r.vanWie });
       setCode("");
     } else if (r.fout === "leeg") {
@@ -73,6 +81,8 @@ export default function KoppelcodeBanner({ userName }) {
       // 🩺 Koppelhulp (23 okt 2026): typfout → de bijna-goede code alvast invullen.
       setCode(r.suggestie);
       setMsg({ ok: false, text: `Bijna goed! Bedoel je ${r.suggestie}? Die staat nu ingevuld: tik nog een keer op koppelen.` });
+    } else if (r.fout === "teVeel" || r.fout === "maxKinderen") {
+      setMsg({ ok: false, text: koppelFoutTekst(r.fout, userName) });
     } else if (["gebruiktAnderToestel", "gebruiktAnder", "bestaatNiet"].includes(r.fout)) {
       setMsg({ ok: false, text: `${koppelFoutTekst(r.fout, userName)} Hulp nodig? Ga naar leerkwartier.app/koppelen.` });
     } else {

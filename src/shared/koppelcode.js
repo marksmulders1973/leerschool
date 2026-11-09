@@ -39,8 +39,10 @@ export function verbodenTekens(ruw) {
  *  typfout               — bestaat niet, maar er is precies één vrije code die één teken scheelt
  *  bestaatNiet           — bestaat niet en lijkt nergens op
  *  geenVerbinding        — code is wél geldig, de claim faalde om een andere reden
+ *  teVeel                — te veel mislukte pogingen in een uur (rem tegen raden, 9 nov 2026)
  */
 export function foutUitDiagnose(diag, alGekoppeldHier = false) {
+  if (diag?.te_veel) return "teVeel";
   const s = diag?.status;
   if (s === "gebruikt") {
     if (diag.zelfde_naam) return alGekoppeldHier ? "alGekoppeld" : "gebruiktAnderToestel";
@@ -66,6 +68,8 @@ export function koppelFoutTekst(fout, n = "") {
     // 27 okt 2026: nieuwe antwoorden van claim_link_code (migratie koppel_privacy).
     case "maxKinderen": return "Bij dit account staan al drie kinderen. Vraag thuis om er eerst één weg te halen in het ouder-overzicht.";
     case "naamLeeg": return "Typ eerst je naam.";
+    // 9 nov 2026: de server remt raden af (30 mislukte pogingen per uur per toestel).
+    case "teVeel": return "Dat was te vaak een code die niet klopt. Wacht een uur, of vraag thuis om de link: dan staat de goede code al ingevuld.";
     default: return "Dat lukte niet. Probeer het nog eens.";
   }
 }
@@ -95,6 +99,7 @@ export async function claimKoppelcode(ruweCode, naam) {
       return { ok: true, rol, vanWie: String(data.van_wie || "").trim(), linkId: data.link_id, childName: naamServer };
     }
     if (data?.error === "max_kinderen") return { ok: false, fout: "maxKinderen" };
+    if (data?.error === "te_veel_pogingen") return { ok: false, fout: "teVeel" };
     if (data?.error === "naam_leeg") return { ok: false, fout: "naamLeeg" };
     if (data?.error === "code_invalid_or_expired") {
       const hier = !!(koppelingVoor(kind)?.ouder || koppelingVoor(kind)?.leraar);

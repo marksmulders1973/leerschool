@@ -77,3 +77,49 @@ antwoord, goed/fout). Geen persoonsgegevens buiten de al zichtbare
 speler-naam, maar wel meer dan een score. Bij een privacy-ronde: `detail`
 uit de publieke select halen (aparte tabel met koppeling-policy, of een
 view zonder die kolom voor het bord).
+
+## Doorlichting 9 nov 2026 (Mark: "kun je de koppelcode helemaal doorlichten en evt verbeteren?")
+
+Werkwijze: eerst de echte data (27 koppelingen, 54 codes), dan de LIVE functies uit de database (niet de
+migratiebestanden), dan de app-code. Server-wijzigingen getest met gesimuleerde sessies in een
+teruggedraaide transactie (`docs/sql/koppel_harding_test.sql`) en daarna live met een echt kind-toestel.
+
+**Hersteld (migratie `20261109_koppel_harding.sql`, live sinds 9 nov ~22:20):**
+1. Raden had geen rem: `claim_link_code` en `koppel_diagnose` waren onbeperkt aan te roepen, ook zonder
+   sessie. Nu 30 mislukte pogingen per uur per sessie, of zonder sessie per adres (`cf-connecting-ip`; een
+   meegestuurde `X-Forwarded-For` wordt genegeerd, nagekeken). Antwoord `te_veel_pogingen`.
+2. Eén code kon door twee toestellen tegelijk gebruikt worden (lezen en daarna pas afboeken). Nu boekt één
+   UPDATE de code af; wie te laat is krijgt een nette weigering, hetzelfde toestel krijgt "gelukt".
+3. `gezin_koppelingen_overnemen` keek niet of het oude uid een anonieme toestel-sessie was: wie het uid
+   van een echt ouder-account kende kon diens koppelingen overnemen. Nu alleen van anonieme sessies.
+4. `koppel_mijn_data` hing eigen werk aan élke koppeling waarvan je het id kende. Nu eerst `kind_hoort_bij`.
+5. App: code met een naam erop ("Brian") ingevoerd via de balk op de eigen pagina door een profiel met een
+   andere naam ("Bri") → koppeling stond onder "Brian", het profiel oefende zonder koppeling. De balk
+   bewaart de koppeling nu ook onder de eigen profielnaam.
+
+**Bekende grenzen die blijven (bewust, of nog te beslissen):**
+- **De koppeling woont in het toestel** (`lk_koppelingen` in localStorage). Een tweede toestel met hetzelfde
+  ouder-account en een kindprofiel met dezelfde naam schrijft zónder link_id (gezien: 1 gezin, 3 rijen in
+  een maand). De ouder ziet die rijen via de naam-terugval, maar alleen bij exact dezelfde schrijfwijze.
+  Oplossing zou een trigger zijn die bij `user_id = ouder` + naam van een eigen kind het link_id invult.
+- **Toestel-slot zonder sleutel-herstel.** Krijgt een kind-toestel een nieuwe anonieme sessie (browser
+  gewist, of het kind logt later in met een account), dan houdt het toestel de koppeling lokaal, maar
+  `kind_hoort_bij` zegt nee: klaargezet, weekplan en berichten van thuis blijven stil leeg, terwijl het
+  oefenwerk wél bij de ouder aankomt. Geen geval gevonden bij echte gezinnen (2 testgevallen). Als het
+  gaat spelen: het toestel laten merken dat de server "nee" zegt en dan om een nieuwe code vragen.
+- **Eerste toestel wint** bij een koppeling zonder toestel (10 oude koppelingen). Geen van die tien staat
+  in het scorebord, dus het link_id is niet bekend bij buitenstaanders. Strenger maken sluit een
+  terugkerend kind stil buiten; daarom gelaten.
+- **Scorebord is openbaar inclusief `user_id` en `link_id`.** Daardoor is een link_id geen geheim, en is
+  "het oude uid kennen" (overnemen) een zwak bewijs zodra een ouder zonder account op dezelfde sessie laat
+  oefenen. Nu 0 zulke rijen. Netter: `user_id`/`link_id` niet meer aan anon tonen (view of kolomrechten).
+- **Oefenwerk schrijven met een link_id wordt niet gecontroleerd** (insert-policy `true` op leaderboard):
+  wie een link_id kent kan rijen in andermans ouder-overzicht zetten. Controleren kan, maar een kind met
+  een nieuwe sessie zou dan helemaal niets meer kunnen opslaan; hangt samen met het toestel-slot hierboven.
+- **Ouder kan zelf een verified koppeling aanmaken** (policy ALL op eigen rijen). Levert geen inzage op in
+  andermans werk via link_id; wel via de naam-terugval op het openbare scorebord (naamgenoten), bekend.
+
+**Cijfers 9 nov (nulmeting voor de volgende keer):** 25 verified koppelingen (20 echte ouders); bij 12 van
+die 20 is na het koppelen geen enkele rij met link_id binnengekomen. 54 codes: 24 gebruikt, 22 open, 8
+verlopen; 18 van de 20 gebruikte codes sinds 12 okt binnen een uur gebruikt, wat na een uur nog open staat
+wordt vrijwel nooit meer gebruikt (17 van de 22 open codes zijn ouder dan een week).
