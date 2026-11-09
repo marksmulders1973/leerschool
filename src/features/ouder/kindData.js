@@ -22,6 +22,17 @@ export async function haalScoresVoorKind(link, { select, subject = null, limit =
   // leerkracht leeg terwijl de rij er wel stond.
   const naam = link?.child_name || link?.student_name;
   if (!naam) return [];
+  // 🔒 Scorebord dichtzetten, stap 1 (9 nov 2026, docs/KOPPELING-GRENZEN.md): lezen via de functie
+  // scores_voor_koppeling, die zelf nakijkt of jij de ouder/leerkracht van deze koppeling bent en de twee
+  // bronnen (link_id + oude rijen op naam) al samenvoegt. In stap 2 gaan user_id en link_id op het
+  // scorebord dicht en werkt de oude query hieronder niet meer; tot dan is die de terugval (ook bij een
+  // leeg antwoord, zodat er in deze stap niets verandert aan wat je ziet).
+  if (link.id) {
+    try {
+      const { data, error } = await supabase.rpc("scores_voor_koppeling", { p_link_id: link.id, p_subject: subject || null, p_limit: limit, p_oud: true });
+      if (!error && Array.isArray(data) && data.length > 0) return data;
+    } catch { /* terugval hieronder */ }
+  }
   const bouw = () => {
     let q = supabase.from("leaderboard").select(select);
     if (subject) q = q.eq("subject", subject);

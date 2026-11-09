@@ -8,6 +8,20 @@ import { metLinkId } from "../../shared/koppeling.js";
 // account) filtert App.jsx de uid-rijen op naam óf koppeling — anders kreeg
 // het kind de toetsen van de ouder in z'n eigen voortgang.
 const SYNC_COLS = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at, link_id";
+// 🔒 Scorebord dichtzetten, stap 1 (9 nov 2026, docs/KOPPELING-GRENZEN.md): de rijen van de eigen sessie
+// komen via de functie mijn_scores (mét link_id, dat is je eigen koppeling). De rijen op naam zijn
+// openbaar; daar hoort geen link_id bij (App.jsx gebruikt link_id alleen bij de rijen van de eigen sessie).
+const NAAM_COLS = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
+
+async function eigenRijen(userId, limit) {
+  try {
+    const { data, error } = await supabase.rpc("mijn_scores", { p_limit: limit });
+    if (!error && Array.isArray(data)) return { data };
+  } catch { /* terugval */ }
+  // Terugval tot stap 2: de oude query op user_id.
+  return supabase.from("leaderboard").select(SYNC_COLS).eq("user_id", userId)
+    .order("completed_at", { ascending: false }).limit(limit);
+}
 
 /**
  * Sync van leaderboard naar lokale studentProgress: zorgt dat levels/voortgang
@@ -27,14 +41,11 @@ export async function loadLeaderboardForPlayer({ userId, playerName, limit = 500
   const naam = (playerName || "").trim();
   const queries = [];
   if (userId) {
-    queries.push(
-      supabase.from("leaderboard").select(SYNC_COLS).eq("user_id", userId)
-        .order("completed_at", { ascending: false }).limit(limit)
-    );
+    queries.push(eigenRijen(userId, limit));
   }
   if (naam.length >= 2) {
     queries.push(
-      supabase.from("leaderboard").select(SYNC_COLS).ilike("player_name", naam)
+      supabase.from("leaderboard").select(NAAM_COLS).ilike("player_name", naam)
         .order("completed_at", { ascending: false }).limit(limit)
     );
   }

@@ -1,6 +1,6 @@
 # Herinnering: je koppelcode staat nog klaar — CONCEPT (9 nov 2026)
 
-**Status:** concept, niet verstuurd. Wacht op Marks "stuur maar" op deze tekst.
+**Status:** ✅ Mark "stuur maar" (9 nov 2026, avond). **Ingepland via Resend voor di 10 nov 16:30** (na schooltijd; om 23:00 versturen had geen zin, het kind moet erbij zijn). 7 ontvangers, 14 codes; in de database gemarkeerd met `link_codes.herinnerd_at` (kolom toegevoegd 9 nov). Afzender hallo@, antwoorden op hallo@. Adressen staan bewust niet in dit bestand.
 
 ## Waarom
 
@@ -63,3 +63,8 @@ Elke code is voor één kind en blijft geldig tot hij is ingevoerd." Stap 1 toon
    aangeroepen via een GitHub-workflow zoals het weekrapport; kolom `link_codes.herinnerd_at` zodat een
    ouder hem nooit twee keer krijgt.
 3. Meten: codes gebruikt binnen 7 dagen na de herinnering, tegen de nulmeting (na een uur vrijwel 0).
+
+## Meetpunt
+
+Di 17 nov: hoeveel van de 14 gemarkeerde codes zijn gebruikt? Query: `select count(*) filter (where used_at is not null), count(*) from link_codes where herinnerd_at is not null;` Nulmeting: 0 van 14, codes 4 tot 22 dagen oud.
+Het automatische vervolg (één dag na het maken van een code) is nog niet gebouwd.

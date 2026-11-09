@@ -149,3 +149,19 @@ vragen de twee kolommen niet op), en alles aan de serverkant (functies, api met 
 grenzen hierboven (eerste toestel wint, werk in andermans overzicht schrijven, zwak bewijs bij overnemen).
 Kanttekening: id's die tot nu toe openbaar stonden, kunnen al zijn gelezen; voor de 17 rijen met link_id
 gaat het om een handvol koppelingen, grotendeels van het eigen huishouden.
+
+**Stap 1 gebouwd 9 nov 2026 (v1077, migratie `20261109_scorebord_leesfuncties.sql`, functies live):**
+`mijn_scores(limiet)` en `scores_voor_koppeling(link, vak, limiet, oud)`; de app leest daarop in
+`kindData.js`, `KoppelKaarten.jsx` (Kindkaart) en `leaderboardRepo.js` (sync), met de oude query als
+terugval; de rijen op naam vragen geen `link_id` meer op; `EchteCijfers` telt op `id`. Getest: 7 gevallen
+met gesimuleerde sessies (ouder 11 = 11 verwacht, kind-toestel 11, vreemde 0, leerkracht 1 = 1, andere
+ouder op leerkracht-koppeling 0, eigen scores 61 = 61, geen toestel erbij geschreven) en live met een echte
+ouder-sessie op de nieuwe build (beide functies antwoord 200, ouder-overzicht opent).
+Afwijking van het plan: `scores_voor_koppeling` roept bewust niet `kind_hoort_bij()` aan, omdat die bij een
+koppeling zonder toestel het eerste toestel inschrijft; een leesfunctie mag dat niet doen (in de eerste
+testronde kwam een vreemde ouder zo bij een leerkracht-koppeling binnen).
+**Stap 2 staat open:** kolomrechten intrekken zodra vrijwel niemand meer op `app_v` < 1077 zit:
+`select props->>'app_v', count(distinct props->>'uid') from events_mens where created_at > now()-interval '3 days' group by 1 order by 1 desc;`
+Let op bij stap 2: de terugval-query's geven dan een fout en dus een lege lijst; wie op een koppeling
+zonder geregistreerd toestel zit (10 oude koppelingen) ziet de Kindkaart dan leeg tot het toestel zich
+via de eigen pagina heeft gemeld.

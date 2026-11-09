@@ -178,7 +178,15 @@ export function Kindkaart({ kind, linkId, ingelogd, kleur = "#ffb74d", onTerug, 
     (async () => {
       if (!linkId) { setData({ geenLink: true, scores: [], perPad: {}, klaar: [] }); return; }
       const [sc, lp, kl] = await Promise.all([
-        supabase.from("leaderboard").select("id, subject, percentage, completed_at, time_taken, detail").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(80),
+        // 🔒 Scorebord dichtzetten, stap 1 (9 nov 2026): eerst via de leesfunctie (zonder de oude rijen op naam,
+        // net als de query die hier stond); bij een fout of leeg antwoord de oude query als terugval.
+        (async () => {
+          try {
+            const r = await supabase.rpc("scores_voor_koppeling", { p_link_id: linkId, p_subject: null, p_limit: 80, p_oud: false });
+            if (!r.error && Array.isArray(r.data) && r.data.length > 0) return { data: r.data };
+          } catch { /* terugval */ }
+          return supabase.from("leaderboard").select("id, subject, percentage, completed_at, time_taken, detail").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(80);
+        })(),
         supabase.from("learn_progress").select("learn_path_id, step_idx, completed_at").eq("link_id", linkId).order("completed_at", { ascending: false }).limit(300),
         ingelogd ? haalKlaargezetVoorLink(linkId, "ouder") : Promise.resolve([]),
       ].map((p) => Promise.resolve(p).catch(() => ({ data: [] }))));

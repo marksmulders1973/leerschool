@@ -46,7 +46,8 @@ export default function EchteCijfers() {
         // Drie parallelle counts via {count: 'exact', head: true} — alleen
         // het aantal, geen rijen. Snel + lichtgewicht.
         const [toetsenRes, stappenRes, sharesRes] = await Promise.all([
-          supabase.from("leaderboard").select("*", { count: "exact", head: true }),
+          // "id" en niet "*": in stap 2 van het dichtzetten (docs/KOPPELING-GRENZEN.md) mag niet elke kolom meer gelezen worden.
+          supabase.from("leaderboard").select("id", { count: "exact", head: true }),
           supabase.from("learn_progress").select("*", { count: "exact", head: true }),
           supabase.from("share_events").select("*", { count: "exact", head: true }),
         ]);
