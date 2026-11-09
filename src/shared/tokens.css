@@ -216,3 +216,20 @@ select:focus-visible,
     scroll-behavior: auto !important;
   }
 }
+
+/* Keuzelijstjes (Mark 9 nov 2026, foto van /mijn: "witte letters tegen witte achtergrond").
+ * Een <select> erft de lichte tekstkleur van het donkere thema, maar Chrome op Windows tekent
+ * de uitgeklapte lijst wit. De opties krijgen daarom overal zelf een donkere achtergrond en
+ * lichte tekst; dan is de lijst leesbaar, ongeacht de stijl van het lijstje zelf. */
+select option,
+select optgroup {
+  background-color: #13213a;
+  color: #e8edf5;
+}
+select option:checked {
+  background-color: #1e5bc6;
+  color: #ffffff;
+}
+select option:disabled {
+  color: #7d8aa0;
+}
