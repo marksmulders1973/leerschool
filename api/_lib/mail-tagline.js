@@ -46,7 +46,7 @@ export function familieRegelText(plek, nu = Date.now(), poortAan = PAYWALL_ACTIV
 export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now(), poortAan = PAYWALL_ACTIVE } = {}) {
   if (poortAan) {
     return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
-      `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Probeer Familie een week gratis</a>, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.` +
+      `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Probeer het Familie-pakket een week gratis</a>, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.` +
       `</p>`;
   }
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
@@ -72,12 +72,12 @@ export function familieVoorUHtml(plek, { poortAan = PAYWALL_ACTIVE } = {}) {
     `<td style="vertical-align:top;padding:3px 0;font-size:13.5px;line-height:1.5;color:#e8edf5;"><strong style="color:#fff;">${kop}</strong> ${tekst}</td></tr>`
   ).join("");
   return `<div style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(255,213,79,0.45);background:rgba(255,213,79,0.08);">` +
-    `<div style="font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#ffce80;margin-bottom:4px;">● Familie · voor ouders</div>` +
-    `<div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:6px;">Dit betekent Familie voor u</div>` +
-    `<p style="font-size:13px;line-height:1.5;color:#a9b6c8;margin:0 0 8px;">Oefenen blijft gratis voor elk kind, met of zonder Familie. Familie is er voor ú:</p>` +
+    `<div style="font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#ffce80;margin-bottom:4px;">● Familie-pakket · voor ouders</div>` +
+    `<div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:6px;">Dit betekent het Familie-pakket voor u</div>` +
+    `<p style="font-size:13px;line-height:1.5;color:#a9b6c8;margin:0 0 8px;">Oefenen is en blijft gratis voor elk kind. Het Familie-pakket is er voor ú:</p>` +
     `<table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 10px;">${punten}</table>` +
-    `<p style="font-size:12.5px;line-height:1.5;color:#a9b6c8;margin:0 0 10px;">€ 39 voor 12 maanden, per gezin (tot 3 kinderen). Eén keer betalen, stopt vanzelf.</p>` +
-    `<a href="${familieUrl(plek)}" style="display:inline-block;padding:10px 18px;border-radius:10px;background:#ffd54f;color:#0b1224;font-size:14px;font-weight:800;text-decoration:none;">Probeer Familie een week gratis</a>` +
-    `<div style="font-size:11.5px;color:#8899aa;margin-top:6px;">Zonder betaalgegevens. Code van uw gemeente of een organisatie? Dan is Familie gratis.</div>` +
+    `<p style="font-size:12.5px;line-height:1.5;color:#a9b6c8;margin:0 0 10px;">€ 39 voor 12 maanden: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf.</p>` +
+    `<a href="${familieUrl(plek)}" style="display:inline-block;padding:10px 18px;border-radius:10px;background:#ffd54f;color:#0b1224;font-size:14px;font-weight:800;text-decoration:none;">Probeer het Familie-pakket een week gratis</a>` +
+    `<div style="font-size:11.5px;color:#8899aa;margin-top:6px;">Zonder betaalgegevens. Code van uw gemeente of een organisatie? Dan krijgt u het Familie-pakket gratis.</div>` +
     `</div>`;
 }

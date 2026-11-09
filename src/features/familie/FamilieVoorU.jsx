@@ -18,7 +18,7 @@ export const FAMILIE_VOOR_U = [
   ["Het kwartier loopt zonder gezeur.", "U zet een les klaar, uw kind ziet “Vandaag staat klaar”. Weekschema voor de koelkast om af te vinken."],
   ["U kunt het thuis uitleggen.", "Een kaart in gewone woorden, Charley legt onbeperkt uit, en het dictee met de woorden van school."],
 ];
-export const FAMILIE_VOOR_U_PRIJS = "€ 39 voor 12 maanden, per gezin (tot 3 kinderen). Eén keer betalen, stopt vanzelf. Eerst een week gratis proberen, zonder betaalgegevens.";
+export const FAMILIE_VOOR_U_PRIJS = "€ 39 voor 12 maanden: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf. Eerst een week gratis proberen, zonder betaalgegevens.";
 
 const GOUD = "#ffd54f";
 
@@ -46,13 +46,13 @@ export default function FamilieVoorU({ plek = "ouder", style }) {
     >
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
         <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: GOUD, flexShrink: 0 }} />
-        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "#ffce80" }}>Familie · voor ouders</span>
+        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "#ffce80" }}>Familie-pakket · voor ouders</span>
       </div>
       <h2 id="familie-voor-u-kop" style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 900, margin: "0 0 6px", color: "var(--color-text-strong, #fff)", lineHeight: 1.2 }}>
-        Dit betekent Familie voor u
+        Dit betekent het Familie-pakket voor u
       </h2>
       <p style={{ fontSize: 13.5, lineHeight: 1.55, margin: "0 0 10px", color: "var(--color-text-muted, #a9b6c8)" }}>
-        Oefenen blijft gratis voor elk kind, met of zonder Familie. Familie is er voor ú:
+        Oefenen is en blijft gratis voor elk kind. Het Familie-pakket is er voor ú:
       </p>
       <ol style={{ listStyle: "none", margin: "0 0 12px", padding: 0, display: "grid", gap: 8 }}>
         {FAMILIE_VOOR_U.map(([kop, tekst], i) => (
@@ -72,8 +72,8 @@ export default function FamilieVoorU({ plek = "ouder", style }) {
       </p>
       <FamilieAfsluiten plek={plek === "ouder" ? "familie-voor-u" : `familie-voor-u-${plek}`} variant="knop" />
       <p style={{ fontSize: 12, lineHeight: 1.5, margin: "12px 0 0", color: "var(--color-text-muted, #8899aa)" }}>
-        Code gekregen van uw gemeente of een organisatie? Dan is Familie gratis: vul de code in op de startpagina.{" "}
-        <a href={familieHref("familie-voor-u-meer")} style={{ color: GOUD, fontWeight: 700 }}>Alles over Familie →</a>
+        Code gekregen van uw gemeente of een organisatie? Dan krijgt u het Familie-pakket gratis: vul de code in op de startpagina.{" "}
+        <a href={familieHref("familie-voor-u-meer")} style={{ color: GOUD, fontWeight: 700 }}>Alles over het Familie-pakket →</a>
       </p>
     </section>
   );
