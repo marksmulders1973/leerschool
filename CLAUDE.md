@@ -35,7 +35,7 @@
 
 ### 📏 Welke telling is het hoofdcijfer (Mark 25 sep 2026: "sep 1347, klopt dat exact?" → "ja doe alle drie")
 
-- **Hoofdcijfer = unieke apparaten uit `events_mens`** (= `events_echt` mín mailscanner-golven: view `scanner_uids`, ≥8 apparaten binnen ±3 min met ≤4 "openen"-events in ≤30 s). Nooit meer ruwe `events` of `events_echt` voor tellingen van mensen; sommen/kwartier mogen via beide (scanners maken geen sommen).
+- **Hoofdcijfer = unieke apparaten uit `events_mens`** (= `events_echt` mín linkcontroles van social-platforms (view `linkcheck_uids`, sinds 9 nov 2026: eerste hit via een post-link binnen 2 min na de eerste hit van die post, ≤4 passieve events in ≤30 s) én mín mailscanner-golven: view `scanner_uids`, ≥8 apparaten binnen ±3 min met ≤4 "openen"-events in ≤30 s). Nooit meer ruwe `events` of `events_echt` voor tellingen van mensen; sommen/kwartier mogen via beide (scanners maken geen sommen).
 - **Hosting-dashboard (Vercel "visitors") alleen als vergelijking eronder**, altijd mét periode ("t/m 23 sep") en de kanttekening dat Vercel per dag telt (dezelfde persoon op 5 dagen ≈ 5 bezoekers) → geen aantal mensen.
 - In de jaarlijn: groene staaf = apparaten (events_mens); hosting-cijfer als klein grijs getal/lijntje.
 - Nulmeting 25 sep: sep 1.110 → **1.066** mens · aug 472 → **377** · do 24 sep 130 → **98**. 139 scanner-apparaten totaal (bulkmail-momenten 9 aug, 18 aug, 31 aug, 1 sep, 24 sep).
