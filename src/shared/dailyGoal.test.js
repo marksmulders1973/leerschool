@@ -1,5 +1,10 @@
-import { describe, it, expect } from "vitest";
-import { mergeDailyGoalStates, DEFAULT_TARGET_SECONDS } from "./dailyGoal.js";
+import { describe, it, expect, vi } from "vitest";
+
+vi.mock("../supabase.js", () => ({ default: {} }));
+vi.mock("../utils.js", () => ({ track: () => {} }));
+
+import { mergeDailyGoalStates, DEFAULT_TARGET_SECONDS, addSeconds, kwartierVolVoor } from "./dailyGoal.js";
+import { meldLeermoment } from "./leermoment.js";
 
 const VANDAAG = "2026-07-15";
 const GISTEREN = "2026-07-14";
@@ -58,5 +63,37 @@ describe("mergeDailyGoalStates (A8.3 cross-device)", () => {
 
     const cloudZelfde = { goal_day: null, goal_seconds: 0, kwartier_streak: 5, kwartier_streak_best: 5, kwartier_last_day: GISTEREN };
     expect(mergeDailyGoalStates(lokaal, cloudZelfde, VANDAAG).streak.current).toBe(5);
+  });
+});
+
+describe("kwartier per kind (weekplanner, 9 nov 2026)", () => {
+  const profiel = (name) => localStorage.setItem("ls_user", JSON.stringify({ name }));
+  it("twee kinderen op een tablet: alleen wie zelf een kwartier oefende telt", () => {
+    localStorage.clear();
+    profiel("Testkind A");
+    addSeconds(600);
+    profiel("Testkind B");
+    addSeconds(600); // het toestel staat nu op 20 min, geen van beiden op 15
+    meldLeermoment();
+    expect(kwartierVolVoor("Testkind A")).toBe(false);
+    expect(kwartierVolVoor("Testkind B")).toBe(false);
+    addSeconds(300);
+    expect(kwartierVolVoor("testkind b")).toBe(true);
+    expect(kwartierVolVoor("Testkind A")).toBe(false);
+    expect(kwartierVolVoor("")).toBe(false);
+  });
+  it("zonder leermoment geen kwartier, ook niet na 15 minuten", () => {
+    localStorage.clear();
+    profiel("Testkind C");
+    addSeconds(900);
+    expect(kwartierVolVoor("Testkind C")).toBe(false);
+    meldLeermoment();
+    expect(kwartierVolVoor("Testkind C")).toBe(true);
+  });
+  it("de per-kind-telling overleeft het samenvoegen met de cloud-stand", () => {
+    const lokaal = { goal: { date: VANDAAG, seconds: 300, target: DEFAULT_TARGET_SECONDS, completed: false, celebratedAt: null, perNaam: { a: 300 } }, streak: { lastCompletedDate: null, current: 0, best: 0 } };
+    const m = mergeDailyGoalStates(lokaal, { goal_day: VANDAAG, goal_seconds: 700 }, VANDAAG);
+    expect(m.goal.seconds).toBe(700);
+    expect(m.goal.perNaam).toEqual({ a: 300 });
   });
 });

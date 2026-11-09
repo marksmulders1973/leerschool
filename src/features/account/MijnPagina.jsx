@@ -26,7 +26,7 @@ import { leesNuOpSchool, zetNuOpSchool, actieveKeuzes, schoolBlok, isVerlopen, p
 import VakScherm from "./VakScherm.jsx";
 import Rapport, { MeesterOpmerking, rapportRijen } from "./Rapport.jsx";
 import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
-import { startsetSleutel, startsetVan, startsetBlok, startsetPortie, startsetOmvang } from "../learn/startsetsData.js";
+import { startsetSleutel, startsetVan, startsetBlok, startsetPortie, startsetOmvang, STARTSET_PER_KEER } from "../learn/startsetsData.js";
 import { startsetVoortgang } from "../learn/startsets.js";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
 import FamilieVoorU from "../familie/FamilieVoorU.jsx";
@@ -2314,7 +2314,18 @@ export default function MijnPagina({
             {/* ── 💛 Voor jou klaargezet (Mark 15 aug; sinds 6 nov 2026 hier, direct onder Begin): lessen die
                 iemand thuis of op school koos. Cadeau-gevoel, geen huiswerk-druk; alleen als er echt iets staat. ── */}
             {/* 📅 Weekplanner (9 nov 2026): wat thuis voor vandaag is klaargezet, plus de week. */}
-            <KindWeekplanKaart player={player} onPickPath={onPickPath} onVandaagKwartier={onVandaagKwartier} />
+            <KindWeekplanKaart player={player} onPickPath={onPickPath} onVandaagKwartier={onVandaagKwartier}
+              onStartset={(sleutel) => {
+                // Thuis klaargezet: "de eerste 20 vragen" van een vak → een kwartier met de volgende portie.
+                const s = startsetVan(sleutel);
+                const st = startsetStand[sleutel];
+                // Set al af (of van een andere groep, dus niet geladen): gewoon een volle portie; de set begint dan vooraan.
+                const blok = s ? startsetBlok(sleutel, st && !st.klaar ? startsetPortie(st) : STARTSET_PER_KEER) : null;
+                if (blok && onVandaagKwartier) {
+                  startKwartierPlan({ level: userLevel, reden: "startset", uitleg: `${s.titel}: ${startsetOmvang(startsetStand[sleutel]?.totaal || 20)}`, blokjes: [{ ...blok, vanPlan: true, voor: player }] });
+                }
+                if (onVandaagKwartier) onVandaagKwartier();
+              }} />
             {renderKlaargezetKaart()}
             {/* ── Je vakken: alleen de vakken van deze groep, als tegels mét rapportcijfer ("Rekenen · groep 5").
                 De tegels zíjn het rapport; het papieren rapport staat één tik verderop. ── */}

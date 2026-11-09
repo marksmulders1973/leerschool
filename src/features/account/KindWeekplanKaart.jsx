@@ -1,25 +1,43 @@
 // 📅 "Vandaag staat klaar" (weekplanner, idee 66, Mark 9 nov 2026). Het kind ziet alleen het kwartier
 // van vandaag dat thuis is klaargezet, plus een strookje met de week (groen = gedaan). Geen takenlijst.
-// Les → opent het leerpad; "Charley kiest" → het gewone dagkwartier (de vandaag-motor kiest).
+// Les → opent het leerpad; "eerste 20 vragen" → een kwartier met die vragen; "Charley kiest" → het gewone
+// dagkwartier (de vandaag-motor kiest). Bij het openen haalt de kaart een gemist vinkje in: is het
+// kwartier van dit kind vandaag vol, of het klaargezette vragenrondje af, dan gaat de dag op gedaan.
 import { useEffect, useState } from "react";
 import { track } from "../../utils.js";
+import { kwartierStand } from "../vandaag/kwartier.js";
 import {
   haalWeekplanVoorKind, vandaagUitPlan, markeerPlanGedaan, maandagVan, weekDagen, vandaagIso, WEEKPLAN_EVENT,
+  perDagUitPlan, startsetUit, werkPlanBij,
 } from "../../shared/weekplan.js";
 
-export default function KindWeekplanKaart({ player, onPickPath, onVandaagKwartier }) {
+/** De startset waarvan dit kind vandaag het klaargezette rondje afmaakte (of null). */
+function startsetVanPlanKlaar(player) {
+  try {
+    const k = kwartierStand();
+    const b = k?.klaar ? (k.blokjes || []).find((x) => x?.vanPlan && x.startset) : null;
+    return b && String(b.voor || "") === String(player || "") ? b.startset : null;
+  } catch { return null; }
+}
+
+export default function KindWeekplanKaart({ player, onPickPath, onVandaagKwartier, onStartset }) {
   const [rijen, setRijen] = useState(null);
   useEffect(() => {
     if (!player) return undefined;
     let weg = false;
-    const laad = () => haalWeekplanVoorKind(player).then((r) => { if (!weg) setRijen(r); }).catch(() => {});
+    const laad = () => haalWeekplanVoorKind(player).then((r) => {
+      if (weg) return;
+      setRijen(r);
+      // Inhalen: werkPlanBij meldt zelf (WEEKPLAN_EVENT) als er iets op gedaan ging → de kaart laadt opnieuw.
+      werkPlanBij(player, r, { startsetKlaar: startsetVanPlanKlaar(player) }).catch(() => {});
+    }).catch(() => {});
     laad();
     window.addEventListener(WEEKPLAN_EVENT, laad);
     return () => { weg = true; window.removeEventListener(WEEKPLAN_EVENT, laad); };
   }, [player]);
 
   const dagen = weekDagen(maandagVan(new Date()));
-  const perDag = Object.fromEntries((rijen || []).map((r) => [r.dag, r]));
+  const perDag = perDagUitPlan(rijen || []);
   const dezeWeek = dagen.some((d) => perDag[d.iso]);
   const item = vandaagUitPlan(rijen || []);
   useEffect(() => {
@@ -32,7 +50,9 @@ export default function KindWeekplanKaart({ player, onPickPath, onVandaagKwartie
 
   const start = () => {
     try { track("planner_kind_start", { soort: item.soort }); } catch { /* */ }
-    if (item.soort === "les" && item.path_id && onPickPath) onPickPath(item.path_id);
+    const set = item.soort === "les" ? startsetUit(item.path_id) : null;
+    if (set && onStartset) onStartset(set);
+    else if (item.soort === "les" && item.path_id && !String(item.path_id).startsWith("startset:") && onPickPath) onPickPath(item.path_id);
     else if (onVandaagKwartier) onVandaagKwartier();
   };
 

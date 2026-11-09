@@ -36,6 +36,10 @@ export function blokKlaar(resultaat) {
   if (k.klaar) {
     const goed = k.resultaten.reduce((s, r) => s + (r?.goed || 0), 0), totaal = k.resultaten.reduce((s, r) => s + (r?.totaal || 0), 0);
     try { track("vandaag_klaar", { reden: k.reden, goed, totaal, sec: Math.round((Date.now() - k.gestart) / 1000) }); } catch { /* */ }
+    // 📅 Weekplanner: was dit het thuis klaargezette rondje "eerste 20 vragen", dan telt de dag als gedaan.
+    // Hier en niet alleen op /mijn: "Nog 10" en "Nog een rondje" vervangen of wissen deze stand.
+    const vanPlan = (k.blokjes || []).find((b) => b?.vanPlan && b.startset);
+    if (vanPlan) { try { import("../../shared/weekplan.js").then((m) => m.startsetRondjeKlaar(vanPlan.voor, vanPlan.startset)).catch(() => {}); } catch { /* */ } }
   }
   return k;
 }

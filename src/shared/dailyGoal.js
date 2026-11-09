@@ -81,14 +81,37 @@ function probeerKwartierTeMelden(g) {
   cur.gemeld = true;
   write(cur);
   try { track("kwartier_reached", { min: Math.floor((cur.seconds || 0) / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
-  // 📅 Weekplanner (9 nov 2026): "Charley kiest" van vandaag telt als gedaan zodra het kwartier vol is.
+}
+
+// 📅 Weekplanner (9 nov 2026, herzien dezelfde avond): de dag van het weekplan telt als gedaan zodra
+// dít kind vandaag een kwartier oefende. De dagteller hierboven is per toestel; twee kinderen op één
+// tablet delen die. Daarom telt `perNaam` de seconden per actief profiel mee, en hangt het vinkje
+// daaraan en niet aan `kwartier_reached` (dat vuurt één keer per dag per toestel).
+function actieveNaam() {
+  try { return String(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim().toLowerCase(); } catch { return ""; }
+}
+/** Oefende dit kind vandaag op dit toestel een vol kwartier, met minstens één leermoment? */
+export function kwartierVolVoor(naam) {
+  const n = String(naam || "").trim().toLowerCase();
+  if (!n) return false;
+  const g = getDailyGoal();
+  return (g.perNaam?.[n] || 0) >= (g.target || DEFAULT_TARGET_SECONDS) && leermomentVandaag();
+}
+// Eén keer per dag per kind het weekplan bijwerken; de kaart op /mijn haalt een gemiste keer in.
+function probeerPlanTeMelden(g) {
+  const cur = g || getDailyGoal();
+  const n = actieveNaam();
+  if (!n || cur.planGemeld?.[n]) return;
+  if ((cur.perNaam?.[n] || 0) < (cur.target || DEFAULT_TARGET_SECONDS) || !leermomentVandaag()) return;
+  cur.planGemeld = { ...(cur.planGemeld || {}), [n]: true };
+  write(cur);
   try { import("./weekplan.js").then((m) => m.kwartierVolVoorPlan()).catch(() => {}); } catch { /* */ }
 }
 
 // Kwam het eerste leermoment pas ná de vijftien minuten, dan vuurt het event
 // alsnog op dat moment.
 if (typeof window !== "undefined") {
-  onLeermoment(() => { try { probeerKwartierTeMelden(); } catch { /* */ } });
+  onLeermoment(() => { try { probeerKwartierTeMelden(); probeerPlanTeMelden(); } catch { /* */ } });
 }
 
 // Voeg N seconden toe aan de teller. Wordt aangeroepen door de tracking-tick
@@ -99,6 +122,8 @@ export function addSeconds(deltaSeconds) {
   const cur = getDailyGoal();
   const deelVoor = deelVan(cur.seconds);
   cur.seconds = (cur.seconds || 0) + deltaSeconds;
+  const naamNu = actieveNaam();
+  if (naamNu) cur.perNaam = { ...(cur.perNaam || {}), [naamNu]: (cur.perNaam?.[naamNu] || 0) + deltaSeconds };
   let netVoltooid = false;
   // 🪜 deel 1 of 2 net gehaald → event voor de trechter (deel 3 = kwartier_reached hieronder)
   const deelNa = deelVan(cur.seconds);
@@ -123,6 +148,7 @@ export function addSeconds(deltaSeconds) {
     // zonder één vraag niet. Zie shared/leermoment.js.
     probeerKwartierTeMelden(cur);
   }
+  try { probeerPlanTeMelden(cur); } catch { /* het weekplan mag de telling nooit breken */ }
   write(cur);
   // A8.3: naar Supabase (bij voltooien direct, anders max 1×/minuut)
   pushCloud(netVoltooid);
@@ -333,6 +359,9 @@ export function mergeDailyGoalStates(local, cloud, today) {
           target: local.goal.target || DEFAULT_TARGET_SECONDS,
           completed: false,
           celebratedAt: local.goal.date === today ? local.goal.celebratedAt || null : null,
+          // per-kind-telling en weekplan-vlag zijn van dit toestel: bij dezelfde dag blijven ze staan
+          ...(local.goal.date === today && local.goal.perNaam ? { perNaam: local.goal.perNaam } : {}),
+          ...(local.goal.date === today && local.goal.planGemeld ? { planGemeld: local.goal.planGemeld } : {}),
         };
         merged.goal.completed = merged.goal.seconds >= merged.goal.target;
       }

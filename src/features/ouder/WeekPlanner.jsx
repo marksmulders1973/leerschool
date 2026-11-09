@@ -44,6 +44,7 @@ export default function WeekPlanner({ linkId, childName, groep, isPro }) {
   const [vak, setVak] = useState("rekenen");
   const [bezig, setBezig] = useState(false);
   const [melding, setMelding] = useState("");
+  const [kopieMis, setKopieMis] = useState(false);
   const g = groepNr(groep);
 
   const laad = useCallback(async () => {
@@ -133,7 +134,7 @@ export default function WeekPlanner({ linkId, childName, groep, isPro }) {
               <div style={{ margin: "-2px 0 10px", padding: "12px", borderRadius: 14, background: "#13213a", border: "1px solid rgba(255,255,255,0.1)" }}>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, color: "#fff", marginBottom: 8 }}>{d.lang.charAt(0).toUpperCase() + d.lang.slice(1)}</div>
                 <button type="button" disabled={bezig} onClick={() => kies(d.iso, { soort: "charley" })} style={S.keuze(true)}>
-                  <span>Laat Charley kiezen<span style={{ display: "block", fontSize: 11, color: "#8fa0bb" }}>pakt wat het lastigst ging; telt als gedaan na een vol kwartier</span></span>
+                  <span>Laat Charley kiezen<span style={{ display: "block", fontSize: 11, color: "#8fa0bb" }}>pakt wat het lastigst ging</span></span>
                   <span style={{ color: "#69f0ae", fontFamily: "var(--font-display)" }}>kies</span>
                 </button>
                 <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase", color: "#8fa0bb", margin: "10px 0 6px" }}>Of kies zelf een les</div>
@@ -145,7 +146,7 @@ export default function WeekPlanner({ linkId, childName, groep, isPro }) {
                 {lessen.length === 0 && <div style={{ fontSize: 12.5, color: "#8fa0bb", margin: "4px 0 8px" }}>Voor deze groep staat hier nog niets; kies een ander vak of laat Charley kiezen.</div>}
                 {lessen.map((l) => (
                   <button key={l.id} type="button" disabled={bezig} onClick={() => kies(d.iso, { soort: "les", id: l.id, titel: l.titel, emoji: l.emoji })} style={S.keuze(false)}>
-                    <span style={{ minWidth: 0 }}>{l.titel}<span style={{ display: "block", fontSize: 11, color: "#8fa0bb" }}>{l.minuten} min</span></span>
+                    <span style={{ minWidth: 0 }}>{l.titel}<span style={{ display: "block", fontSize: 11, color: "#8fa0bb" }}>{l.regel || `${l.minuten} min`}</span></span>
                     <span style={{ color: "#69f0ae", fontFamily: "var(--font-display)" }}>kies</span>
                   </button>
                 ))}
@@ -165,13 +166,14 @@ export default function WeekPlanner({ linkId, childName, groep, isPro }) {
         {rijen.length > 0 && weekOffset === 0 && (
           <button type="button" disabled={bezig} style={S.knop} onClick={async () => {
             setBezig(true); const r = await kopieerNaarVolgendeWeek(linkId, rijen); setBezig(false);
-            setMelding(r.ok ? "Volgende week staat er hetzelfde in. Je kunt elke dag nog aanpassen." : "Dat lukte even niet.");
+            setKopieMis(!r.ok);
+            setMelding(r.ok ? "Volgende week staat er hetzelfde in. Je kunt elke dag nog aanpassen." : "Dat lukte even niet. Probeer het nog eens.");
           }}>Zelfde week ook volgende week</button>
         )}
       </div>
-      {melding && !open && <div role="status" style={{ fontSize: 12.5, color: "#69f0ae", marginTop: 8 }}>{melding}</div>}
+      {melding && !open && <div role="status" style={{ fontSize: 12.5, color: kopieMis ? "#ffb74d" : "#69f0ae", marginTop: 8 }}>{melding}</div>}
       <p style={{ fontSize: 11.5, color: "#8fa0bb", margin: "10px 0 0", lineHeight: 1.5 }}>
-        {naam} ziet op de eigen pagina alleen wat er vandaag klaarstaat. Een les telt als gedaan zodra {naam} hem afmaakt.
+        {naam} ziet op de eigen pagina alleen wat er vandaag klaarstaat. Een dag telt als gedaan zodra {naam} die dag een kwartier heeft geoefend of de les af heeft.
       </p>
     </div>
   );
