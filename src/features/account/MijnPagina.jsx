@@ -29,6 +29,7 @@ import { GroepDropdown, VakTegels, WerkAan } from "./JouwGroep.jsx";
 import { startsetSleutel, startsetVan, startsetBlok, startsetPortie, startsetOmvang } from "../learn/startsetsData.js";
 import { startsetVoortgang } from "../learn/startsets.js";
 import FamilieTegels from "../familie/FamilieTegels.jsx";
+import FamilieVoorU from "../familie/FamilieVoorU.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
@@ -3094,6 +3095,8 @@ export default function MijnPagina({
                 </div>
               </Card>
             )}
+            {/* 💛 "Dit betekent Familie voor u" (Mark 9 nov 2026) — uitkomst-taal boven de tegels; verbergt zichzelf als het gezin Familie al heeft. */}
+            {rolKey === "ouder" && <FamilieVoorU plek="mijn" style={{ marginBottom: "var(--space-4)" }} />}
             {rolKey === "ouder" && <FamilieTegels onNaar={onNaar} onOuderDashboard={onOuderDashboard} />}
             {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
                 Alleen voor de leraar-rol; paywall staat UIT tot 2027. Ouders

@@ -54,3 +54,30 @@ export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu
     `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Kies Familie: € 39 voor 12 maanden, per gezin</a> — geen abonnement, stopt vanzelf.${vroeg}` +
     `</p>`;
 }
+
+// 💛 "Dit betekent Familie voor u" (Mark 9 nov 2026) — zelfde drie zinnen als
+// src/features/familie/FamilieVoorU.jsx (daar is de bron; hier gekopieerd omdat de
+// mail-functies geen React importeren). Alleen als de poort aan staat; daarvoor de
+// gewone regel. Links in mails altijd mét .html.
+export const FAMILIE_VOOR_U_MAIL = [
+  ["U weet waar uw kind staat.", "Per onderdeel groen, oranje of rood, en elke vrijdag dit weekrapport."],
+  ["Het kwartier loopt zonder gezeur.", "U zet een les klaar, uw kind ziet “Vandaag staat klaar”. Weekschema voor de koelkast om af te vinken."],
+  ["U kunt het thuis uitleggen.", "Een kaart in gewone woorden, Charley legt onbeperkt uit, en het dictee met de woorden van school."],
+];
+
+export function familieVoorUHtml(plek, { poortAan = PAYWALL_ACTIVE } = {}) {
+  if (!poortAan) return familieRegelHtml(plek, { poortAan });
+  const punten = FAMILIE_VOOR_U_MAIL.map(([kop, tekst], i) =>
+    `<tr><td style="width:26px;vertical-align:top;padding:3px 8px 3px 0;"><span style="display:inline-block;width:22px;height:22px;line-height:22px;border-radius:11px;background:#ffd54f;color:#0b1224;font-size:12px;font-weight:900;text-align:center;">${i + 1}</span></td>` +
+    `<td style="vertical-align:top;padding:3px 0;font-size:13.5px;line-height:1.5;color:#e8edf5;"><strong style="color:#fff;">${kop}</strong> ${tekst}</td></tr>`
+  ).join("");
+  return `<div style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(255,213,79,0.45);background:rgba(255,213,79,0.08);">` +
+    `<div style="font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#ffce80;margin-bottom:4px;">● Familie · voor ouders</div>` +
+    `<div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:6px;">Dit betekent Familie voor u</div>` +
+    `<p style="font-size:13px;line-height:1.5;color:#a9b6c8;margin:0 0 8px;">Oefenen blijft gratis voor elk kind, met of zonder Familie. Familie is er voor ú:</p>` +
+    `<table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 10px;">${punten}</table>` +
+    `<p style="font-size:12.5px;line-height:1.5;color:#a9b6c8;margin:0 0 10px;">€ 39 voor 12 maanden, per gezin (tot 3 kinderen). Eén keer betalen, stopt vanzelf.</p>` +
+    `<a href="${familieUrl(plek)}" style="display:inline-block;padding:10px 18px;border-radius:10px;background:#ffd54f;color:#0b1224;font-size:14px;font-weight:800;text-decoration:none;">Probeer Familie een week gratis</a>` +
+    `<div style="font-size:11.5px;color:#8899aa;margin-top:6px;">Zonder betaalgegevens. Code van uw gemeente of een organisatie? Dan is Familie gratis.</div>` +
+    `</div>`;
+}

@@ -1,6 +1,7 @@
 import Header from "./Header.jsx";
 import OuderInzicht from "../features/ouder/OuderInzicht.jsx";
 import DeelKlasAppKnop from "./DeelKlasAppKnop.jsx";
+import FamilieVoorU from "../features/familie/FamilieVoorU.jsx";
 
 // Dunne pagina-wrapper (14 aug): de ouder-functionaliteit zelf leeft in het
 // gedeelde <OuderInzicht> (ook ingebouwd op /mijn). Hier alleen de pagina-
@@ -19,6 +20,8 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         onHierOefenen={onHierOefenen}
         onOpenLes={onOpenLes}
       />
+      {/* 💛 "Dit betekent Familie voor u" (Mark 9 nov 2026): uitkomst-taal voor de ouder, onder het inzicht-blok. */}
+      <div style={{ padding: "0 16px 16px", maxWidth: 760, margin: "0 auto" }}><FamilieVoorU plek="ouder" /></div>
       {/* Groeiplan punt 4 (21 okt 2026): alleen hier op /ouder, niet in het op /mijn ingebouwde blok. */}
       <div style={{ padding: "0 16px 32px" }}><DeelKlasAppKnop plek="ouder-dashboard" /></div>
     </div>

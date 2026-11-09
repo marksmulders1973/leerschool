@@ -19,7 +19,7 @@
 import { createRequire } from "module";
 import { createHash } from "node:crypto";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
-import { mailTaglineHtml, familieRegelHtml, familieRegelText } from "./_lib/mail-tagline.js";
+import { mailTaglineHtml, familieRegelHtml, familieRegelText, familieVoorUHtml } from "./_lib/mail-tagline.js";
 
 import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 // JSON via createRequire: een kale ESM-JSON-import vereist import-attributes
@@ -313,7 +313,7 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
     ${reageerHtml}
     ${meningHtml}
     ${deelHtml}
-    ${toonFamilie ? familieRegelHtml("ouder-rapport") : ""}
+    ${toonFamilie ? familieVoorUHtml("ouder-rapport") : ""}
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (knopje 'weekrapport aan' bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
