@@ -450,6 +450,15 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 );
               })}
             </div>
+            {/* Mark 9 nov 2026 ("ik zie niet veel vakken"): laten zien dat er meer is dan deze vijf. */}
+            {onLearnPathsHub && (
+              <div style={{ textAlign: "right", margin: "10px 4px 0" }}>
+                <button type="button" onClick={() => { track("home_alle_vakken"); onLearnPathsHub(); }}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#5aa9ff", textDecoration: "underline", textUnderlineOffset: 3 }}>
+                  Alle vakken en onderwerpen →
+                </button>
+              </div>
+            )}
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", margin: "10px 0 0", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,0.62)" }}>
               {["Groep kiezen met één tik", "Meteen een vraag", "Niets invullen"].map((t) => (
                 <span key={t} style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
