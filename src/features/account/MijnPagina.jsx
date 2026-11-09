@@ -807,7 +807,10 @@ export default function MijnPagina({
       const namen = JSON.parse(localStorage.getItem("lk_namen") || "[]");
       if (!player && Array.isArray(namen) && namen.length === 0 && leesGastVoortgang(pathManifest).heeftIets) return false;
     } catch { /* */ }
-    return true;
+    // 9 nov 2026 (Mark, foto van de app: "ik open nog steeds telkens hier — ik wil op home of op mijn pagina
+    // landen"): is er al een actief profiel, dan meteen Mijn pagina van dat profiel. Kiezen kan via "wissel".
+    // De kiezer opent vanzelf alleen nog als er nog geen profiel is. (Vervangt de regel van 1 okt 2026.)
+    return !player;
   });
   const [wieNieuw, setWieNieuw] = useState(false);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
