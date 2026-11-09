@@ -123,3 +123,29 @@ teruggedraaide transactie (`docs/sql/koppel_harding_test.sql`) en daarna live me
 die 20 is na het koppelen geen enkele rij met link_id binnengekomen. 54 codes: 24 gebruikt, 22 open, 8
 verlopen; 18 van de 20 gebruikte codes sinds 12 okt binnen een uur gebruikt, wat na een uur nog open staat
 wordt vrijwel nooit meer gebruikt (17 van de 22 open codes zijn ouder dan een week).
+
+## Scorebord dichtzetten voor interne id's — uitgezocht 9 nov 2026 (nog niet gebouwd)
+
+**Nu:** `leaderboard` is voor iedereen leesbaar (policy `true`), inclusief de kolommen `user_id` en `link_id`.
+246 rijen, 227 met user_id, 17 met link_id. Geen views op de tabel, geen realtime.
+
+**Wat het raakt.** Kolomrechten intrekken (`revoke select (user_id, link_id)`) breekt elke leesactie die op
+die kolommen filtert of `select *` doet; Postgres staat filteren zonder leesrecht niet toe:
+- `src/data/repos/leaderboardRepo.js:31` — eigen scores ophalen op `user_id` (sync tussen toestellen);
+- `src/features/ouder/kindData.js:31-33` — ouder/leerkracht leest op `link_id`, plus oude rijen op `user_id`;
+- `src/features/account/KoppelKaarten.jsx:181` — Kindkaart leest op `link_id`;
+- `src/components/EchteCijfers.jsx:49` — telt met `select("*")`.
+Niet geraakt: het openbare scorebord, diploma-kast, leerkracht-overzichten (lezen op naam of toets-id en
+vragen de twee kolommen niet op), en alles aan de serverkant (functies, api met service-sleutel).
+
+**Aanpak in twee stappen** (anders valt het ouder-overzicht leeg bij wie nog een oude app-versie open heeft):
+1. Drie leesfuncties in de database: `mijn_scores()` (rijen van de eigen sessie), `scores_voor_koppeling(link)`
+   (alleen de ouder/leerkracht van die koppeling of een toestel dat erbij hoort; ook de oude rijen zonder
+   link_id), en de teller in EchteCijfers op `select("id")`. App leest via die functies. Uitrollen.
+2. Een week later, als vrijwel niemand meer op de oude versie zit (te zien aan `app_v` in events):
+   kolomrechten intrekken. Vooraf en achteraf dezelfde kliktocht: ouder-overzicht, Kindkaart, sync.
+
+**Wat het oplevert:** een link_id is dan geen openbaar gegeven meer. Daarmee vervallen in de praktijk drie
+grenzen hierboven (eerste toestel wint, werk in andermans overzicht schrijven, zwak bewijs bij overnemen).
+Kanttekening: id's die tot nu toe openbaar stonden, kunnen al zijn gelezen; voor de 17 rijen met link_id
+gaat het om een handvol koppelingen, grotendeels van het eigen huishouden.
