@@ -1,6 +1,6 @@
 # Woningcorporaties — onderzoek (22 sep 2026), concept nog te schrijven
 
-**Status:** ONDERZOEK KLAAR, concept-mail volgt volgende sessie. Niets verstuurd. Nieuw spoor, nooit benaderd.
+**Status:** ✅ versie 2 verstuurd di 10 nov 2026 naar 6 corporaties (log onderaan). Versie 1 (23 sep) is nooit verstuurd.
 
 ## Waarom dit spoor
 Huurders van corporaties zijn precies onze gezinnen. Corporaties hebben bewonersbladen (gratis vermelding) en sinds 1-1-2022 geen wettelijk maximum meer op leefbaarheidsuitgaven. Een leer-app is géén kerntaak (onderwijs = gemeente/school), maar past onder "woonmaatschappelijk werk / achter-de-voordeur" en bewonersinitiatieven zolang het via bewoners of buurtteams loopt en om eigen huurders gaat (Woningwet art. 45 lid 2f; BTIV art. 51; Aw: "activiteiten waarvoor anderen verantwoordelijk zijn horen niet tot het werkdomein").
@@ -67,7 +67,7 @@ Een kwartier per dag leren, een leven lang slimmer.
 **Checks:** geen partnernamen, geen bedankt.html-link, niets fysieks beloofd (stukje + beeld + QR = digitaal), geen demo, geen bezoek. Gratis-claim: oefenen is afgebakend tot en met 2031; de extra's via de code lopen tot eind 2028 (besluit 23 sep: codes van vóór 1-1-2027).
 **Wat Mark moet beslissen (zie ⚠️ hierboven):** ingang 1 alleen (advies ja) · code per corporatie (advies ja) · test met 2 (Staedion + Woonstad) of batch 8. Daarna: codes aanmaken + flyer-PDF per code + ere-scherm, dan versturen.
 
-## Concept-mail versie 2 — di 10 nov 2026 (Mark: "ik heb meer partners nodig") — NIETS VERSTUURD, wacht op "stuur maar"
+## Concept-mail versie 2 — di 10 nov 2026 (Mark: "ik heb meer partners nodig") — ✅ VERSTUURD 10 nov (Mark "stuur maar")
 
 Verschil met 23 sep: nu met de twee cijfers uit de goedgekeurde Leergeld-bewijsmail (6 nov), groep 3 t/m 8, haakje Doorstroomtoets 25 jan-12 feb 2027, code pas na een ja, contact via hallo@ zonder telefoonnummer.
 
@@ -97,3 +97,12 @@ Leerkwartier — Een kwartier per dag leren, een leven lang slimmer.
 leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
 
 **Ontvangers (8, uit de tabel hierboven; adressen eerst opnieuw op de eigen site nakijken, ze zijn van 22 sep):** Staedion (Den Haag) · Eigen Haard (Amsterdam) · Portaal (Utrecht e.o.) · Woonstad Rotterdam (formulier) · Woonin (Utrecht) · Woonbedrijf (Eindhoven) · Stadgenoot (Amsterdam) · Lefier (Groningen/Emmen). Bij Staedion past de Ooievaarspas-zin extra goed (zelfde stad).
+
+### Verzendlog versie 2
+- **10-11-2026, 09:46:53** — via Resend (hallo@leerkwartier.app), 6/6 verstuurd (Mark "stuur maar" 10 nov).
+  - Staedion · pers@staedion.nl · OK · 01a1c4a3-631d-7c30-bcbd-835aa12e980e
+  - Eigen Haard · pers@eigenhaard.nl · OK · 01a1c4a3-68ea-7237-ba3d-cd76bc16f8c9
+  - Portaal · communicatie@portaal.nl · OK · 01a1c4a3-6ea9-704e-9b47-87c86bcccd77
+  - Woonin · communicatie@woonin.nl · OK · 01a1c4a3-7474-74be-8411-48bd67acd79e
+  - Woonbedrijf · nieuws@woonbedrijf.com · OK · 01a1c4a3-7a35-7d5a-9a2c-a363fd991e5b
+  - Lefier · l.vandijken@lefier.nl · OK · 01a1c4a3-7ff9-7050-a6f8-eb2c2eb3cc46
