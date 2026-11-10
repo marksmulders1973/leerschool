@@ -66,3 +66,34 @@ Een kwartier per dag leren, een leven lang slimmer.
 
 **Checks:** geen partnernamen, geen bedankt.html-link, niets fysieks beloofd (stukje + beeld + QR = digitaal), geen demo, geen bezoek. Gratis-claim: oefenen is afgebakend tot en met 2031; de extra's via de code lopen tot eind 2028 (besluit 23 sep: codes van vóór 1-1-2027).
 **Wat Mark moet beslissen (zie ⚠️ hierboven):** ingang 1 alleen (advies ja) · code per corporatie (advies ja) · test met 2 (Staedion + Woonstad) of batch 8. Daarna: codes aanmaken + flyer-PDF per code + ere-scherm, dan versturen.
+
+## Concept-mail versie 2 — di 10 nov 2026 (Mark: "ik heb meer partners nodig") — NIETS VERSTUURD, wacht op "stuur maar"
+
+Verschil met 23 sep: nu met de twee cijfers uit de goedgekeurde Leergeld-bewijsmail (6 nov), groep 3 t/m 8, haakje Doorstroomtoets 25 jan-12 feb 2027, code pas na een ja, contact via hallo@ zonder telefoonnummer.
+
+**Onderwerp:** Kant-en-klaar stukje voor [blad]: gratis oefenen voor de kinderen van uw huurders
+
+Beste communicatieteam van [Corporatie],
+
+Ik ben Mark Smulders, maker van Leerkwartier (leerkwartier.app): een Nederlandse oefen-app waarmee kinderen van groep 3 tot en met 8 elke dag een kwartier oefenen met rekenen, taal en de Doorstroomtoets. Het oefenen is gratis, zonder account en zonder reclame, gegarandeerd tot en met 2031.
+
+Ik schrijf u omdat veel gezinnen die hier het meest aan hebben, bij een corporatie huren. Bijles kost al snel tientallen euro's per uur. Dit kost een gezin niets.
+
+Wat er gebeurt als een organisatie het doorgeeft aan haar eigen gezinnen:
+
+- Een Leergeld-stichting zette één blokje over Leerkwartier in haar nieuwsbrief. Resultaat: 144 gezinnen kwamen binnen, 39 activeerden het gratis gezinspakket.
+- De gemeente Den Haag deelde Leerkwartier op de Facebookpagina van de Ooievaarspas. Op de eerste dag kwamen 32 gezinnen binnen.
+
+Mijn vraag: past een korte vermelding in [blad] of in uw huurdersnieuwsbrief? Van 25 januari tot en met 12 februari maken alle kinderen in groep 8 de Doorstroomtoets; een nummer in december of januari komt dus op het goede moment. Ik lever een stukje van vier zinnen met beeld en QR-code, en pas het aan op uw huisstijl als u dat wilt.
+
+Zegt u ja, dan maak ik een eigen code voor [Corporatie]. Daarmee krijgen uw huurders naast het gratis oefenen ook het Familie-pakket (weekrapport voor thuis, uitleg door de AI-buddy, dictee met de woorden van school), gratis tot en met 31 december 2028. U hoort daarna van mij hoeveel gezinnen ermee zijn gestart.
+
+Het kost u niets en u zit nergens aan vast. Is dit niet bij u belegd, dan hoor ik graag wie ik beter kan mailen.
+
+Hartelijke groet,
+
+Mark Smulders
+Leerkwartier — Een kwartier per dag leren, een leven lang slimmer.
+leerkwartier.app · hallo@leerkwartier.app · KvK 42176244
+
+**Ontvangers (8, uit de tabel hierboven; adressen eerst opnieuw op de eigen site nakijken, ze zijn van 22 sep):** Staedion (Den Haag) · Eigen Haard (Amsterdam) · Portaal (Utrecht e.o.) · Woonstad Rotterdam (formulier) · Woonin (Utrecht) · Woonbedrijf (Eindhoven) · Stadgenoot (Amsterdam) · Lefier (Groningen/Emmen). Bij Staedion past de Ooievaarspas-zin extra goed (zelfde stad).
