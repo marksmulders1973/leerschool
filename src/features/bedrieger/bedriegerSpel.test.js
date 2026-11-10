@@ -73,6 +73,34 @@ describe("bedriegerspel", () => {
     }
   });
 
+  it("wie begint gaat de kring rond in de volgorde van de namen, en is nooit de bedrieger", () => {
+    for (let spel = 0; spel < 10; spel++) {
+      const { app } = nieuwSpel();
+      klik(app, "Start spel");
+      const bedriegers = [];
+      for (let ronde = 0; ronde < 9; ronde++) {
+        const u = deelUit(app);
+        bedriegers.push(u.bedrieger);
+        const k = ronde % NAMEN.length;
+        expect(app.querySelector(".start-name").textContent).toBe(NAMEN[k]);
+        expect(u.bedrieger).not.toBe(NAMEN[k]);
+        const rij = [1, 2, 3].map((d) => NAMEN[(k + d) % NAMEN.length]);
+        expect(app.querySelector(".order").textContent).toBe("Daarna: " + rij.join(" → "));
+        klik(app, "Tijd om te stemmen");
+        klik(app, "Niet stemmen, meteen onthullen");
+        klik(app, "Nieuwe ronde");
+      }
+      // eerlijk blijft het ook: niemand twee rondes achter elkaar, en in 8 rondes iedereen 1 tot 3 keer
+      // (precies 2 kan niet altijd: wie begint wordt die ronde overgeslagen en schuift een ronde op)
+      for (let i = 1; i < bedriegers.length; i++) expect(bedriegers[i]).not.toBe(bedriegers[i - 1]);
+      for (const n of NAMEN) {
+        const keer = bedriegers.slice(0, 8).filter((b) => b === n).length;
+        expect(keer).toBeGreaterThanOrEqual(1);
+        expect(keer).toBeLessThanOrEqual(3);
+      }
+    }
+  });
+
   it("tips: elke speler een andere, en alleen bij makkelijke woorden", () => {
     for (let ronde = 0; ronde < 20; ronde++) {
       let s = nieuwSpel([1]);

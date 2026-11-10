@@ -68,17 +68,34 @@ export function startBedrieger(app, opties) {
     for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
     return a;
   }
-  function pickBedriegers(names){
+  // De beginner van de ronde (vaste beurt, zie startRound) kent altijd het woord: die wordt deze
+  // ronde overgeslagen en blijft bovenaan de zak liggen, zodat de beurt daarna alsnog komt.
+  function pickBedriegers(names, starter){
     var key = names.join("|")+"#"+S.bedriegers;
     if(S.bagKey!==key){ S.bagKey=key; S.bag=[]; S.lastImps=[]; }
     var imps = [];
-    while(imps.length<S.bedriegers){
-      if(!S.bag.length){
-        S.bag = shuffle(names.map(function(_,i){return i;}).filter(function(i){return imps.indexOf(i)===-1;}));
-        var top = S.bag.length-1;
-        if(top>0 && S.lastImps.indexOf(S.bag[top])>-1){ var t=S.bag[0]; S.bag[0]=S.bag[top]; S.bag[top]=t; }
+    // Bovenste in de zak die mag: niet de beginner, niet al gekozen, en (streng) niet wie de vorige
+    // ronde bedrieger was, zodat niemand twee rondes achter elkaar aan de beurt is.
+    function zoek(streng){
+      for(var j=S.bag.length-1;j>=0;j--){
+        var i = S.bag[j];
+        if(i!==starter && imps.indexOf(i)===-1 && (!streng || S.lastImps.indexOf(i)===-1)) return j;
       }
-      imps.push(S.bag.pop());
+      return -1;
+    }
+    // Afwisselen alleen als er dan nog iets te raden blijft: met 3 spelers zou "niet de beginner en
+    // niet die van net" precies één speler overlaten, en dan weet iedereen wie het is.
+    var wissel = names.length-1-S.lastImps.length >= S.bedriegers+1;
+    while(imps.length<S.bedriegers){
+      var k = zoek(wissel);
+      if(k===-1){
+        // Zak bijvullen; wie nog uit de vorige zak moest komen blijft bovenop liggen.
+        var rest = S.bag.filter(function(i,p){ return S.bag.indexOf(i)===p; });
+        S.bag = shuffle(names.map(function(_,i){return i;})).concat(rest);
+        k = zoek(wissel);
+        if(k===-1) k = zoek(false);
+      }
+      imps.push(S.bag.splice(k,1)[0]);
     }
     S.lastImps = imps.slice();
     return imps;
@@ -110,9 +127,14 @@ export function startBedrieger(app, opties) {
     var choice = pick(fresh);
     S.used[choice.e[0]+"|"+choice.cat] = true;
     var cat = choice.cat, entry = choice.e;
-    var imps = pickBedriegers(names);
-    var order = names.map(function(_,i){return i;});
-    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:verdeelTips(entry[2],names.length,imps), showTips:S.tips && entry[3]===1, imps:imps, i:0, shown:false, starter:pick(order.filter(function(i){return imps.indexOf(i)===-1;})), hint:S.hint, verdacht:null, uitkomst:null};
+    // Wie begint gaat de kring rond in de volgorde van de namenlijst (Mark 10 nov 2026): ronde 1 de
+    // eerste naam, ronde 2 de tweede, enzovoort. Andere namen = opnieuw bij de eerste.
+    var beurtKey = names.join("|");
+    if(S.beurtKey!==beurtKey){ S.beurtKey = beurtKey; S.beurt = 0; }
+    var starter = S.beurt % names.length;
+    S.beurt++;
+    var imps = pickBedriegers(names, starter);
+    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:verdeelTips(entry[2],names.length,imps), showTips:S.tips && entry[3]===1, imps:imps, i:0, shown:false, starter:starter, hint:S.hint, verdacht:null, uitkomst:null};
     meld("bedrieger_ronde",{spelers:names.length,bedriegers:S.bedriegers,niveaus:S.levels.slice().sort().join("")});
     S.screen = "pass";
     render();
