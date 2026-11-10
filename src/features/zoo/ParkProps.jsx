@@ -1784,6 +1784,7 @@ const BEDANK_PARTNERS = [
   "SMALLINGERLAND2027", "ENSCHEDE2027", "PURMEREND2027", "APELDOORN2027",
   "HAARLEMMERMEER2027", "DEMEERN2027",
   "SPEELGOEDBEURS2027",
+  "HEUSDEN2027",
 ];
 const ZEPPELIN_VLOOT = [
   // (De Leerkwartier-zeppelin met logo-doek is de bestuurbare InstapZeppelin in
