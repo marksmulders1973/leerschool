@@ -1,6 +1,6 @@
 # Deelpakket Stichting Leergeld Heusden — HEUSDEN2027 (concept, 2026-11-10)
 
-> NIET versturen zonder "stuur maar" van Mark op deze tekst.
+> ✅ VERSTUURD di 10 nov 2026 ~17:25 na Marks "stuur maar" (Resend 01a1c643-43ac-7553-a76c-805090c56481, script scripts/outreach/stuur-heusden-20261110.mjs). Hieronder de verstuurde tekst.
 > Antwoord in zijn thread (Gmail-thread 1a1c505109622771, zijn mail van di 10 nov 11:14) vanaf hallo@, aan info@leergeldheusden.nl.
 > Bijlage: public/drukwerk/flyer-HEUSDEN2027.pdf. Voorbeeldscript: scripts/outreach/stuur-speelgoedbeurs-20261105.mjs.
 > Vóór verzenden: de pagina deelpakket-HEUSDEN2027.html moet live staan (uitrol) en `?erescherm=HEUSDEN2027` nagekeken.
