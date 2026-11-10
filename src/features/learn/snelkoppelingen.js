@@ -16,8 +16,10 @@ export const SNELKOPPELINGEN = [
   // 3 okt 2026: "groep 3/groep 4/beginners" eruit (mengde gewone groep-3-zoekers met nieuwkomers); NT2-woorden erbij.
   { id: "nieuwkomers", emoji: "🌍", label: "Startpunt voor nieuwkomers", uitleg: "Voor kinderen die nog Nederlands leren: eerste woorden, klaszinnen, rekenen en lezen, met voorlezen en steun in zes talen.", pad: "/nieuwkomers",
     woorden: ["welkomnieuwkomer", "nieuwkomer", "nieuwkomers", "nieuw in nederland", "new", "learn dutch", "dutch", "english", "startpunt", "nt2", "nederlands leren", "taalklas", "schakelklas", "anderstalig", "anderstalige", "isk", "okan", "vluchteling", "oekraïens", "oekraiens", "arabisch", "turks", "roemeens", "bulgaars", "eerste woorden"] },
-  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Het Park: bouwen, dieren en leren bij elke plek.", pad: "/dierentuin",
+  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Kies: het Park of Wie is de bedrieger?", pad: "/spelletje",
     woorden: ["spelletje", "spelletjes", "game"] },
+  { id: "bedrieger", emoji: "🕵️", label: "Wie is de bedrieger?", uitleg: "Woordspel voor 3 tot 12 spelers op één telefoon: iedereen krijgt hetzelfde woord, behalve de bedrieger.", pad: "/spelletje/bedrieger",
+    woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "woordspel", "gezelschapsspel", "among us", "verrader"] },
   { id: "park", emoji: "🐾", label: "Mijn Park", uitleg: "Je eigen 3D-park: bouwen, dieren, leren bij elke plek.", pad: "/dierentuin",
     woorden: ["park", "mijn park", "dierentuin", "zoo", "bouwen", "dieren", "spel", "spelen", "munten", "zeppelin", "vulkaan", "auto", "kabelbaan"] },
   { id: "samen", emoji: "🏫", label: "Samen bouwen met een parkcode", uitleg: "Eén code, iedereen in hetzelfde park. Ook met de hele klas.", pad: "/dierentuin",

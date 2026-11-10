@@ -28,6 +28,8 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
+const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
+const BedriegerSpel = lazy(() => import("./features/bedrieger/BedriegerSpel.jsx"));
 const NieuwkomersPage = lazy(() => import("./components/NieuwkomersPage.jsx"));
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
@@ -201,6 +203,7 @@ const BOTTOMNAV_PAGES = new Set([
   "redactiesommen", "spelling", "woordenschat", "begrijpend-lezen",
   "create-quiz", "quiz-preview", "class-manager", "lobby",
   "ouder-dashboard",
+  "spelletje", // keuzescherm Park/Bedrieger (10 nov 2026); het bedriegerspel zelf is schermvullend, zonder balk
 ]);
 
 // Pagina's waar de 15-min sessie-timer telt. Niet op home (wachtruimte)
@@ -1738,6 +1741,18 @@ export default function App() {
               setPage("start-kwartier");
               try { window.scrollTo({ top: 0 }); } catch { /* */ }
             }} />
+        </Suspense>
+      )}
+      {page === "spelletje" && (
+        <Suspense fallback={<PageLoader />}>
+          {/* Een kind met naam gaat terug naar zijn eigen pagina, niet naar de startpagina (kliktest 27 okt). */}
+          <SpelletjeKeuze onPark={() => setPage("zoo")} onBedrieger={() => setPage("bedrieger")}
+            onHome={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
+        </Suspense>
+      )}
+      {page === "bedrieger" && (
+        <Suspense fallback={<PageLoader />}>
+          <BedriegerSpel onTerug={() => setPage("spelletje")} />
         </Suspense>
       )}
       {page === "zoo" && (

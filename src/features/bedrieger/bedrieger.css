@@ -1,0 +1,97 @@
+/* 🕵️ Wie is de bedrieger? — stijl van Marks spelbestand (10 nov 2026), alles onder .bdg zodat de rest
+   van de app er niets van merkt. Gemaakt uit het losse bestand; opmaak ongewijzigd. */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;600;700&display=swap");
+.bdg{
+  --table:#10282b;
+  --table-2:#18393d;
+  --paper:#f2ead8;
+  --ink:#1a1714;
+  --stamp:#e5392b;
+  --mint:#8fd4b8;
+  --muted:#8fa7a6;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+.bdg, .bdg *{box-sizing:border-box;margin:0}
+.bdg{
+  background:var(--table);
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.4;
+  -webkit-tap-highlight-color:transparent;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+.bdg .bdg-app{min-height:100%;max-width:480px;margin:0 auto;padding:20px 16px 28px;display:flex;flex-direction:column;gap:18px}
+.bdg h1,.bdg h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+.bdg h1{font-size:64px;line-height:.95}
+.bdg h1 span{color:var(--stamp)}
+.bdg h2{font-size:34px;line-height:1}
+.bdg .sub{color:var(--muted)}
+.bdg .label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.bdg .section{display:flex;flex-direction:column;gap:10px}
+.bdg .rows{display:flex;flex-direction:column;gap:8px}
+.bdg .row{display:flex;gap:8px}
+.bdg input[type=text]{
+  flex:1;min-width:0;background:var(--table-2);border:2px solid transparent;color:var(--paper);
+  font:600 17px var(--body);padding:13px 14px;border-radius:10px;
+}
+.bdg input[type=text]::placeholder{color:#6e8685}
+.bdg input[type=text]:focus-visible{outline:none;border-color:var(--mint)}
+.bdg button{font:700 17px var(--body);cursor:pointer;border:0;border-radius:10px;color:inherit}
+.bdg button:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
+.bdg .icon{width:48px;background:var(--table-2);color:var(--muted);font-size:22px}
+.bdg .ghost{background:var(--table-2);color:var(--paper);padding:13px 14px}
+.bdg .primary{background:var(--stamp);color:#fff;padding:17px 18px;font-size:20px;letter-spacing:.02em}
+.bdg .primary:disabled{background:var(--table-2);color:#6e8685;cursor:not-allowed}
+.bdg .paper-btn{background:var(--paper);color:var(--ink);padding:17px 18px;font-size:20px}
+.bdg .chips{display:flex;flex-wrap:wrap;gap:8px}
+.bdg .chip{background:var(--table-2);color:var(--muted);padding:10px 14px;border-radius:99px;font-size:15px;border:2px solid transparent}
+.bdg .chip[aria-pressed=true]{background:transparent;color:var(--mint);border-color:var(--mint)}
+.bdg .switch{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--table-2);padding:12px 14px;border-radius:10px;width:100%;text-align:left}
+.bdg .switch b{display:block;font-size:16px}
+.bdg .switch small{color:var(--muted);font-weight:400;font-size:14px}
+.bdg .pill{flex:none;width:46px;height:28px;border-radius:99px;background:#0c1d1f;position:relative}
+.bdg .pill::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--muted);transition:transform .15s}
+.bdg .switch[aria-pressed=true] .pill{background:var(--mint)}
+.bdg .switch[aria-pressed=true] .pill::after{transform:translateX(18px);background:var(--ink)}
+.bdg .stepper{display:flex;align-items:center;gap:12px}
+.bdg .stepper button{width:48px;height:48px;background:var(--table-2);font-size:24px}
+.bdg .stepper output{font-family:var(--display);font-size:34px;min-width:36px;text-align:center}
+.bdg .stage{flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;text-align:center}
+.bdg .pass-name{font-family:var(--display);font-size:72px;line-height:1;text-transform:uppercase;word-break:break-word}
+.bdg .counter{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.bdg .card{
+  background:var(--paper);color:var(--ink);border-radius:14px;padding:30px 20px 34px;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  box-shadow:0 2px 0 #cfc5ac,0 18px 40px -12px rgba(0,0,0,.6);
+  background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(26,23,20,.07) 31px 32px);
+}
+.bdg .card .kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6d6455}
+.bdg .card .word{font-family:var(--display);font-size:56px;line-height:1.02;text-transform:uppercase;word-break:break-word}
+.bdg .card .hint{font-weight:600;color:#6d6455}
+.bdg .card.imp .word{
+  color:var(--stamp);border:5px solid var(--stamp);padding:6px 16px 8px;border-radius:6px;
+  transform:rotate(-4deg);font-size:50px;margin:8px 0;
+}
+.bdg .start-name{font-family:var(--display);font-size:56px;text-transform:uppercase;color:var(--mint);line-height:1}
+.bdg .rule{background:var(--table-2);border-radius:10px;padding:14px 16px;text-align:left;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.bdg .rule li{margin-left:18px}
+.bdg .bad-list{display:flex;flex-direction:column;gap:6px}
+.bdg .bad{font-family:var(--display);font-size:60px;line-height:1;text-transform:uppercase;color:var(--stamp)}
+.bdg .actions{display:flex;flex-direction:column;gap:10px}
+.bdg .err{color:#ffb3aa;font-size:15px;font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  .bdg .card.imp .word{animation:bdg-stamp .28s ease-out}
+  @keyframes bdg-stamp{from{transform:rotate(-4deg) scale(1.5);opacity:0}to{transform:rotate(-4deg) scale(1);opacity:1}}
+}
+.bdg .card .pic{font-size:88px;line-height:1;margin-bottom:2px}
+.bdg .card .tips{margin-top:10px;padding-top:14px;border-top:2px dashed rgba(26,23,20,.25);width:100%;display:flex;flex-direction:column;gap:6px}
+.bdg .card .tips b{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#6d6455}
+.bdg .card .tips span{font-weight:600;font-size:17px}
+.bdg .sel-row{display:flex;gap:14px}
+.bdg .sel-row button{background:none;color:var(--muted);font-size:14px;padding:0;text-decoration:underline}
+.bdg{min-height:100dvh;line-height:1.4}
+.bdg .bdg-app{min-height:100dvh}
+.bdg .bdg-terug{align-self:flex-start;background:none;color:var(--muted);font-size:15px;padding:4px 0}

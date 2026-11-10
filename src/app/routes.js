@@ -94,6 +94,9 @@ export const PAGE_TO_PATH = {
   // Zookwartier "Mijn Park" — 3D verzamel-dierentuin als beloningsspel (lazy
   // three.js). Verving 2026-06-20 de oude spellen-hub; /spellen + /spel = aliassen.
   zoo: "/dierentuin",
+  // 10 nov 2026 (Mark): keuzescherm Park / Bedrieger achter de knop Spelletje, en het woordspel zelf.
+  spelletje: "/spelletje",
+  bedrieger: "/spelletje/bedrieger",
   // Nieuwkomer-pakket (24 sep 2026): losse pagina, code NIEUWKOMER in de codebalk landt hier.
   nieuwkomers: "/nieuwkomers",
   // 🌍 Park-galerij — openbare (gemodereerde) showcase van kinder-parken (17 aug).
@@ -150,9 +153,6 @@ const PATH_ALIASES = {
   // in de app nog klikbaar.
   "/spel": "zoo",
   "/spellen": "zoo",
-  // 27 okt 2026 (Mark: "het hele bedrieger-element eruit, wel het park houden"): het keuzescherm
-  // Park/Bedrieger is weg; /spelletje opent weer gewoon het park.
-  "/spelletje": "zoo",
   "/leaderboard": "leaderboard",
 };
 
