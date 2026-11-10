@@ -91,6 +91,15 @@ export function startBedrieger(app, opties) {
     return out;
   }
 
+  // Elke speler één tip, zo verdeeld dat spelers zo min mogelijk dezelfde zien: wie een tip van de
+  // ander herkent, weet anders meteen dat die ander niet de bedrieger is. Een woord heeft drie tips;
+  // pas vanaf vijf spelers krijgen twee spelers dezelfde.
+  function verdeelTips(tips, aantal, imps){
+    var zak = shuffle(tips.slice()), uit = [], k = 0;
+    for(var i=0;i<aantal;i++) uit.push(imps.indexOf(i)>-1 ? null : zak[k++ % zak.length]);
+    return uit;
+  }
+
   function startRound(){
     var names = cleanNames();
     var all = pool();
@@ -101,7 +110,7 @@ export function startBedrieger(app, opties) {
     var cat = choice.cat, entry = choice.e;
     var imps = pickBedriegers(names);
     var order = names.map(function(_,i){return i;});
-    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:entry[2], showTips:S.tips, imps:imps, i:0, shown:false, starter:Math.floor(Math.random()*names.length), hint:S.hint};
+    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:verdeelTips(entry[2],names.length,imps), showTips:S.tips && entry[3]===1, imps:imps, i:0, shown:false, starter:Math.floor(Math.random()*names.length), hint:S.hint};
     meld("bedrieger_ronde",{spelers:names.length,bedriegers:S.bedriegers,niveaus:S.levels.slice().sort().join("")});
     S.screen = "pass";
     render();
@@ -193,7 +202,7 @@ export function startBedrieger(app, opties) {
     ]);
 
     var tips = el("button",{class:"switch","aria-pressed":S.tips?"true":"false",onclick:function(){ S.tips=!S.tips; persist(); render(); }},[
-      el("span",{},[el("b",{text:"Tips voor omschrijven"}),el("small",{text:"Voorbeelden op de kaart, behalve voor de bedrieger"})]),
+      el("span",{},[el("b",{text:"Tips voor omschrijven"}),el("small",{text:"Elke speler een andere tip, alleen bij makkelijke woorden"})]),
       el("span",{class:"pill"})
     ]);
     var err = el("p",{class:"err",id:"err"});
@@ -241,7 +250,7 @@ export function startBedrieger(app, opties) {
         el("div",{class:"pic",text:r.emoji,"aria-hidden":"true"}),
         el("div",{class:"word",text:r.word}),
         el("div",{class:"hint",text:"Verklap het niet."}),
-        r.showTips ? el("div",{class:"tips"},[el("b",{text:"Je zou kunnen zeggen"})].concat(r.tips.map(function(t){return el("span",{text:"• "+t});}))) : null
+        r.showTips ? el("div",{class:"tips"},[el("b",{text:"Je zou kunnen zeggen"})].concat([el("span",{text:r.tips[r.i]})])) : null
       ]);
     }
     app.appendChild(el("div",{class:"stage"},[

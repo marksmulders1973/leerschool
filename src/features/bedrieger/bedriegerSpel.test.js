@@ -56,6 +56,32 @@ describe("bedriegerspel", () => {
     expect(JSON.stringify(meldingen)).not.toMatch(/Anna|Bram|Cato|Daan/);
   });
 
+  it("tips: elke speler een andere, de bedrieger geen, en alleen bij makkelijke woorden", () => {
+    const speel = (levels) => {
+      localStorage.setItem("bedrieger-v1", JSON.stringify({ players: ["Anna", "Bram", "Cato", "Daan"], levels }));
+      const el = document.createElement("div");
+      document.body.appendChild(el);
+      startBedrieger(el, {});
+      klik(el, "Start spel");
+      const tips = [];
+      for (let i = 0; i < 4; i++) {
+        klik(el, "Toon mijn kaart");
+        const kaart = el.querySelector(".card");
+        const eigen = [...kaart.querySelectorAll(".tips span")].map((s) => s.textContent);
+        if (kaart.classList.contains("imp")) expect(eigen).toEqual([]);
+        else tips.push(eigen);
+        klik(el, i === 3 ? "Verberg en begin met praten" : "Verberg en geef door");
+      }
+      return tips;
+    };
+    for (let ronde = 0; ronde < 20; ronde++) {
+      const makkelijk = speel([1]);
+      expect(makkelijk.every((t) => t.length === 1)).toBe(true);
+      expect(new Set(makkelijk.map((t) => t[0])).size).toBe(3);
+      expect(speel([2, 3, 4]).every((t) => t.length === 0)).toBe(true);
+    }
+  });
+
   it("nergens staat nog 'imposter' op het scherm, en Terug werkt", () => {
     expect(app.textContent.toLowerCase()).not.toContain("imposter");
     klik(app, "← Terug");
