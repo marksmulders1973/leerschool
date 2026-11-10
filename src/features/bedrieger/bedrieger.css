@@ -95,3 +95,11 @@
 .bdg{min-height:100dvh;line-height:1.4}
 .bdg .bdg-app{min-height:100dvh}
 .bdg .bdg-terug{align-self:flex-start;background:none;color:var(--muted);font-size:15px;padding:4px 0}
+/* 10 nov 2026: stemmen, volgorde en stand */
+.bdg .names{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bdg .names button{padding:16px 10px;font-size:18px;word-break:break-word}
+.bdg .order{color:var(--muted);font-size:15px}
+.bdg .bdg-link{background:none;color:var(--muted);font-size:14px;font-weight:600;text-decoration:underline;padding:6px 0}
+.bdg .stand{background:var(--table-2);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;text-align:left}
+.bdg .stand-rij{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600}
+.bdg .stand-rij b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--mint)}

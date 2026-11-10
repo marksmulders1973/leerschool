@@ -1,6 +1,8 @@
 // 🕵️ Wie is de bedrieger? — woordspel voor 3 tot 12 spelers op één telefoon (Mark, 10 nov 2026).
-// Dit is Marks losse spelbestand, vrijwel letterlijk overgenomen: alleen de naam (imposter → bedrieger,
-// afspraak 15 sep 2026), drie woorden (druiven, café, darts), een terugknop en twee meetpunten zijn anders.
+// Basis: Marks losse spelbestand (opmaak, woordenlijst, kaarten). Sinds 10 nov 2026 hier verder gebouwd
+// (Mark: "doe maar wat je denkt wat beter is"): andere tip per speler, een beginner die het woord kent,
+// de spreekvolgorde, stemmen, een laatste kans voor de betrapte bedrieger en een stand over de rondes.
+// Dit bestand is nu de bron; het losse bestand opnieuw omzetten zou dat overschrijven.
 // Gewone DOM-code, geen React: BedriegerSpel.jsx geeft het element waarin het spel zichzelf tekent.
 // Namen van spelers blijven op het toestel (localStorage) en gaan niet mee in de meetpunten.
 
@@ -110,7 +112,7 @@ export function startBedrieger(app, opties) {
     var cat = choice.cat, entry = choice.e;
     var imps = pickBedriegers(names);
     var order = names.map(function(_,i){return i;});
-    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:verdeelTips(entry[2],names.length,imps), showTips:S.tips && entry[3]===1, imps:imps, i:0, shown:false, starter:Math.floor(Math.random()*names.length), hint:S.hint};
+    S.round = {names:names, cat:cat, word:entry[0], emoji:entry[1], tips:verdeelTips(entry[2],names.length,imps), showTips:S.tips && entry[3]===1, imps:imps, i:0, shown:false, starter:pick(order.filter(function(i){return imps.indexOf(i)===-1;})), hint:S.hint, verdacht:null, uitkomst:null};
     meld("bedrieger_ronde",{spelers:names.length,bedriegers:S.bedriegers,niveaus:S.levels.slice().sort().join("")});
     S.screen = "pass";
     render();
@@ -123,6 +125,8 @@ export function startBedrieger(app, opties) {
     else if(S.screen==="pass") renderPass();
     else if(S.screen==="card") renderCard();
     else if(S.screen==="play") renderPlay();
+    else if(S.screen==="vote") renderVote();
+    else if(S.screen==="guess") renderGuess();
     else if(S.screen==="reveal") renderReveal();
   }
 
@@ -269,22 +273,90 @@ export function startBedrieger(app, opties) {
       el("li",{text:"Beschrijf het woord om de beurt, in één zin of één woord."}),
       el("li",{text:"Niet te duidelijk, anders weet de bedrieger het."}),
       el("li",{text:"Niet te vaag, anders ben je zelf verdacht."}),
-      el("li",{text:"Na een paar rondes stemmen jullie wie de bedrieger is."})
+      el("li",{text:"Iedereen twee keer geweest? Dan stemmen jullie."})
     ]);
+    var rij = r.names.map(function(_,k){ return r.names[(r.starter+k)%r.names.length]; });
     app.appendChild(el("div",{class:"stage"},[
       el("div",{class:"counter",text:r.imps.length>1?"Er zijn "+r.imps.length+" bedriegers":"Er is 1 bedrieger"}),
       el("p",{class:"sub",text:"Deze speler begint"}),
       el("div",{class:"start-name",text:r.names[r.starter]}),
+      el("p",{class:"order",text:"Daarna: "+rij.slice(1).join(" → ")}),
       rules,
-      el("button",{class:"primary",text:"Onthul de bedrieger",onclick:function(){ meld("bedrieger_onthuld",{spelers:r.names.length}); S.screen="reveal"; render(); }})
+      el("button",{class:"primary",text:"Tijd om te stemmen",onclick:function(){ S.screen="vote"; render(); }})
+    ]));
+  }
+
+  // De ronde afsluiten: punten verdelen en één meetpunt (zonder namen).
+  //   ontsnapt  = de groep wees de verkeerde aan      → elke bedrieger 2 punten
+  //   geraden   = betrapt, maar het woord geraden     → elke bedrieger 1 punt
+  //   betrapt   = betrapt en het woord niet geraden   → alle anderen 1 punt
+  //   overgeslagen = niet gestemd                     → geen punten
+  function sluitRonde(uitkomst){
+    var r = S.round;
+    r.uitkomst = uitkomst;
+    S.scores = S.scores || {};
+    r.names.forEach(function(n,i){
+      var isImp = r.imps.indexOf(i)>-1, erbij = 0;
+      if(uitkomst==="ontsnapt" && isImp) erbij = 2;
+      else if(uitkomst==="geraden" && isImp) erbij = 1;
+      else if(uitkomst==="betrapt" && !isImp) erbij = 1;
+      S.scores[n] = (S.scores[n]||0) + erbij;
+    });
+    meld("bedrieger_onthuld",{spelers:r.names.length,uitkomst:uitkomst});
+    S.screen = "reveal";
+    render();
+  }
+
+  function renderVote(){
+    var r = S.round;
+    var namen = el("div",{class:"names"});
+    r.names.forEach(function(n,i){
+      namen.appendChild(el("button",{class:"ghost",text:n,onclick:function(){
+        r.verdacht = i;
+        if(r.imps.indexOf(i)>-1){ S.screen="guess"; render(); }
+        else sluitRonde("ontsnapt");
+      }}));
+    });
+    app.appendChild(el("div",{class:"stage"},[
+      el("div",{class:"counter",text:"Stemmen"}),
+      el("h2",{text:"Wie is de bedrieger?"}),
+      el("p",{class:"sub",text:"Tel samen tot drie en wijs allemaal tegelijk iemand aan. Tik op wie de meeste vingers kreeg. Gelijk? Stem dan opnieuw."}),
+      namen,
+      el("button",{class:"bdg-link",text:"Niet stemmen, meteen onthullen",onclick:function(){ sluitRonde("overgeslagen"); }})
+    ]));
+  }
+
+  function renderGuess(){
+    var r = S.round;
+    app.appendChild(el("div",{class:"stage"},[
+      el("div",{class:"counter",text:"Betrapt"}),
+      el("div",{class:"bad",text:r.names[r.verdacht]}),
+      el("h2",{text:"Laatste kans"}),
+      el("p",{class:"sub",text:r.names[r.verdacht]+", zeg hardop welk woord het was. De anderen zeggen of het klopt."}),
+      el("div",{class:"actions"},[
+        el("button",{class:"paper-btn",text:"Goed geraden",onclick:function(){ sluitRonde("geraden"); }}),
+        el("button",{class:"primary",text:"Niet geraden",onclick:function(){ sluitRonde("betrapt"); }})
+      ])
     ]));
   }
 
   function renderReveal(){
     var r = S.round;
+    var kop = {
+      ontsnapt: ["Ontsnapt", r.verdacht!=null ? r.names[r.verdacht]+" was het niet. 2 punten voor de bedrieger." : ""],
+      geraden: ["Betrapt, maar geraden", "Het woord was goed. 1 punt voor de bedrieger."],
+      betrapt: ["Betrapt", "Het woord niet geraden. 1 punt voor alle anderen."]
+    }[r.uitkomst];
+    var stand = r.names.map(function(n){ return [n,(S.scores||{})[n]||0]; }).sort(function(a,b){ return b[1]-a[1]; });
+    var heeftStand = stand.some(function(s){ return s[1]>0; });
+    var standBlok = heeftStand ? el("div",{class:"stand"},[el("div",{class:"label",text:"Stand"})].concat(stand.map(function(s){
+      return el("div",{class:"stand-rij"},[el("span",{text:s[0]}),el("b",{text:String(s[1])})]);
+    }))) : null;
     var list = el("div",{class:"bad-list"});
     r.imps.forEach(function(i){ list.appendChild(el("div",{class:"bad",text:r.names[i]})); });
     app.appendChild(el("div",{class:"stage"},[
+      kop ? el("div",{class:"counter",text:kop[0]}) : null,
+      kop && kop[1] ? el("p",{class:"sub",text:kop[1]}) : null,
       el("p",{class:"sub",text:r.imps.length>1?"De bedriegers waren":"De bedrieger was"}),
       list,
       el("div",{class:"card"},[
@@ -292,9 +364,11 @@ export function startBedrieger(app, opties) {
         el("div",{class:"pic",text:r.emoji,"aria-hidden":"true"}),
         el("div",{class:"word",text:r.word})
       ]),
+      standBlok,
       el("div",{class:"actions"},[
         el("button",{class:"primary",text:"Nieuwe ronde",onclick:startRound}),
-        el("button",{class:"ghost",text:"Andere spelers of instellingen",onclick:function(){ S.screen="setup"; render(); }})
+        el("button",{class:"ghost",text:"Andere spelers of instellingen",onclick:function(){ S.screen="setup"; render(); }}),
+        heeftStand ? el("button",{class:"bdg-link",text:"Stand op nul",onclick:function(){ S.scores={}; render(); }}) : null
       ])
     ]));
   }
