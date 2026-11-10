@@ -1752,7 +1752,8 @@ export default function App() {
       )}
       {page === "bedrieger" && (
         <Suspense fallback={<PageLoader />}>
-          <BedriegerSpel onTerug={() => setPage("spelletje")} />
+          <BedriegerSpel onTerug={() => setPage("spelletje")}
+            onHome={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
         </Suspense>
       )}
       {page === "zoo" && (

@@ -140,6 +140,28 @@ describe("bedriegerspel", () => {
     expect(meldingen[1][1].uitkomst).toBe("overgeslagen");
   });
 
+  it("stoppen en home kunnen op elk scherm; midden in een ronde pas na een tweede tik", () => {
+    document.body.replaceChildren();
+    localStorage.setItem("bedrieger-v1", JSON.stringify({ players: NAMEN }));
+    const app = document.createElement("div");
+    document.body.appendChild(app);
+    const uit = [];
+    startBedrieger(app, { onTerug: () => uit.push("terug"), onHome: () => uit.push("home") });
+    klik(app, "Home");
+    expect(uit).toEqual(["home"]); // op het instelscherm meteen
+    klik(app, "Start spel");
+    klik(app, "Home");
+    expect(uit).toEqual(["home"]); // eerste tik in een ronde doet nog niets
+    klik(app, "Zeker? Tik nog eens");
+    expect(uit).toEqual(["home", "home"]);
+    klik(app, "Toon mijn kaart");
+    klik(app, "✕ Stoppen");
+    expect(app.querySelector(".card")).not.toBeNull();
+    klik(app, "Zeker? Tik nog eens");
+    expect(app.querySelector("#start")).not.toBeNull(); // terug op het instelscherm, namen staan er nog
+    expect([...app.querySelectorAll("input")].map((i) => i.value)).toEqual(NAMEN);
+  });
+
   it("nergens staat nog 'imposter' op het scherm, en Terug werkt", () => {
     const { app, meldingen } = nieuwSpel();
     expect(app.textContent.toLowerCase()).not.toContain("imposter");

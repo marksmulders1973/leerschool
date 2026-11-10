@@ -6,16 +6,19 @@ import { track } from "../../utils.js";
 import { startBedrieger } from "./bedriegerSpel.js";
 import "./bedrieger.css";
 
-export default function BedriegerSpel({ onTerug }) {
+export default function BedriegerSpel({ onTerug, onHome }) {
   const plek = useRef(null);
   const terugRef = useRef(onTerug);
   terugRef.current = onTerug;
+  const homeRef = useRef(onHome);
+  homeRef.current = onHome;
   useEffect(() => {
     const el = plek.current;
     if (!el) return undefined;
     try { track("bedrieger_open"); } catch { /* meten mag het spel nooit breken */ }
     startBedrieger(el, {
       onTerug: () => terugRef.current && terugRef.current(),
+      onHome: () => homeRef.current && homeRef.current(),
       meld: (naam, extra) => { try { track(naam, extra); } catch { /* */ } },
     });
     return () => { el.replaceChildren(); };

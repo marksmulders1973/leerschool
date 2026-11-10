@@ -118,9 +118,30 @@ export function startBedrieger(app, opties) {
     render();
   }
 
+  // Bovenbalk op elk scherm (Mark 10 nov 2026: "ik kan niet makkelijk uit het spel stoppen of naar home").
+  // Midden in een ronde vraagt een knop eerst om een tweede tik: de telefoon gaat rond en een
+  // verkeerde tik mag de ronde niet weggooien.
+  function balkKnop(tekst, actie, eerstVragen){
+    var zeker = false, knop = el("button",{class:"bdg-terug",text:tekst,onclick:function(){
+      if(!eerstVragen || zeker){ actie(); return; }
+      zeker = true; knop.textContent = "Zeker? Tik nog eens";
+      setTimeout(function(){ zeker = false; knop.textContent = tekst; }, 3000);
+    }});
+    return knop;
+  }
+  function balk(){
+    var inRonde = S.screen!=="setup" && S.screen!=="reveal";
+    var links = S.screen==="setup"
+      ? (opties.onTerug ? balkKnop("← Terug", opties.onTerug, false) : null)
+      : balkKnop("✕ Stoppen", function(){ S.screen="setup"; render(); }, inRonde);
+    var rechts = opties.onHome ? balkKnop("Home", opties.onHome, inRonde) : null;
+    return el("div",{class:"bdg-balk"},[links || el("span"), rechts]);
+  }
+
   function render(){
     app.replaceChildren();
     window.scrollTo(0,0);
+    app.appendChild(balk());
     if(S.screen==="setup") renderSetup();
     else if(S.screen==="pass") renderPass();
     else if(S.screen==="card") renderCard();
@@ -221,7 +242,6 @@ export function startBedrieger(app, opties) {
 
     function updateStart(){ var e=document.getElementById("err"); if(e) e.textContent=""; }
 
-    if(opties.onTerug) app.appendChild(el("button",{class:"bdg-terug",text:"← Terug",onclick:opties.onTerug}));
     app.append(head, players, cats, levels, imp, hint, tips, err, start);
   }
 
