@@ -43,3 +43,17 @@ describe("omgevallen scherm als meetpunt", () => {
     expect(gemeld.map((g) => g[1].fout)).toEqual(["onbekende fout", "los tekstje"]);
   });
 });
+
+// 11 nov 2026: laadfout na een uitrol die als "leeg scherm-bestand" binnenkomt.
+import { isChunkLoadError } from "./ErrorBoundary.jsx";
+describe("isChunkLoadError herkent ook het lege scherm-bestand na een uitrol", () => {
+  it("Chrome- en Safari-variant van 11 nov", () => {
+    expect(isChunkLoadError(new TypeError("Cannot read properties of undefined (reading 'default')"))).toBe(true);
+    expect(isChunkLoadError(new TypeError("undefined is not an object (evaluating 'f._result.default')"))).toBe(true);
+  });
+  it("een gewone programmeerfout blijft een echte fout", () => {
+    expect(isChunkLoadError(new TypeError("k.replaceChildren is not a function"))).toBe(false);
+    expect(isChunkLoadError(new ReferenceError("React is not defined"))).toBe(false);
+    expect(isChunkLoadError(new TypeError("Cannot read properties of undefined (reading 'map')"))).toBe(false);
+  });
+});

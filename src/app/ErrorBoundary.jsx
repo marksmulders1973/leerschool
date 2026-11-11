@@ -28,7 +28,14 @@ export function isChunkLoadError(error) {
     msg.includes("chunkloaderror") ||
     msg.includes("importing a module script failed") ||
     // Safari-variant
-    msg.includes("module specifier")
+    msg.includes("module specifier") ||
+    // 11 nov 2026: een lui geladen scherm waarvan het bestand na een uitrol niet meer klopt, komt bij
+    // React binnen als "leeg": Chrome zegt "Cannot read properties of undefined (reading 'default')",
+    // Safari "undefined is not an object (evaluating 'f._result.default')". Drie keer gezien op 11 nov
+    // (/ouder 06:55, /dierentuin 18:57, /spelletje 19:17), steeds vlak na een uitrol. Zelfde herstel
+    // als de andere laadfouten: cache legen en opnieuw laden, hooguit een paar keer.
+    msg.includes("(reading 'default')") ||
+    msg.includes("_result.default")
   );
 }
 
