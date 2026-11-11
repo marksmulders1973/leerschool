@@ -7,7 +7,26 @@
 import { useEffect, useRef, useState } from "react";
 import { track } from "../../utils.js";
 import { partnerHeader } from "../referral/partnerCode.js";
+import supabase from "../../supabase.js";
+import { useCanUseFeature } from "../../subscription/useSubscription.js";
+import ProefweekKnop from "../../subscription/ProefweekKnop.jsx";
 import ScanIcoon from "./ScanIcoon.jsx";
+
+// 🎟️ Mark 11 nov 2026: "4 gratis proefscans, dan betalen." De server telt (api/scan-huiswerk.js);
+// hier onthouden we alleen de laatste stand die de server meldde, om het vooraf te kunnen tonen.
+const GRATIS_PROEFSCANS = 4;
+const PROEF = "lk_scan_proef";
+function leesProef() {
+  try { const n = Number(JSON.parse(localStorage.getItem(PROEF) || "null")?.gebruikt); return Number.isFinite(n) && n > 0 ? n : 0; } catch { return 0; }
+}
+function bewaarProef(n) { try { localStorage.setItem(PROEF, JSON.stringify({ gebruikt: n })); } catch { /* */ } }
+async function inlogKop() {
+  try {
+    const { data } = (await supabase.auth?.getSession?.()) || {};
+    const token = data?.session?.access_token;
+    return token ? { Authorization: `Bearer ${token}` } : {};
+  } catch { return {}; }
+}
 
 const LANGSTE_ZIJDE = 1568; // groter leest de AI niet beter, het kost alleen meer
 const BEWAAR = "lk_scan_laatste"; // alleen de uitkomst (doelen), nooit de foto; weg als het tabblad sluit
@@ -45,7 +64,7 @@ async function verkleinFoto(bestand) {
 }
 
 const FOUT_TEKST = {
-  "op-voor-vandaag": { kop: "Dat waren er genoeg voor vandaag", tekst: "Je hebt vandaag al vijf bladen gescand. Morgen kan het weer." },
+  "op-voor-vandaag": { kop: "Dat waren er genoeg voor vandaag", tekst: "Je hebt vandaag al veel bladen gescand. Morgen kan het weer." },
   "geen-schoolwerk": { kop: "Ik zie geen blad van school", tekst: "Maak een foto van je werkblad of van de bladzijde uit je boek. Zorg dat de tekst goed te lezen is." },
   "geen-doelen": { kop: "Ik kan je blad niet goed lezen", tekst: "Probeer het nog een keer: leg het blad plat, met genoeg licht, en zet het hele blad op de foto." },
   "foto-niet-leesbaar": { kop: "Deze foto kan ik niet openen", tekst: "Kies een andere foto, of maak een nieuwe met de camera." },
@@ -53,8 +72,16 @@ const FOUT_TEKST = {
   anders: { kop: "Dat lukte niet", tekst: "Er ging iets mis bij het lezen van je blad. Probeer het nog een keer." },
 };
 
-export default function ScanHuiswerk({ onOpenLes, onTerug }) {
+export default function ScanHuiswerk({ onOpenLes, onTerug, authUser = null, kind = false }) {
   const [stand, setStand] = useState("start"); // start | bezig | klaar | fout
+  const [proefGebruikt, setProefGebruikt] = useState(leesProef);
+  // Heeft dit gezin het Familie-pakket (betaald, proefweek of partnercode)? Dan geen teller en geen poort.
+  const { allowed: familie, paywallActive, loading: rechtLaden } = useCanUseFeature("scan-huiswerk", authUser);
+  const telt = paywallActive && !familie && !rechtLaden;
+  const proefOver = Math.max(0, GRATIS_PROEFSCANS - proefGebruikt);
+  const [poortVanServer, setPoortVanServer] = useState(false); // de server zei: proefscans op (gaat voor op wat de browser denkt)
+  const proefOp = poortVanServer || (telt && proefOver === 0);
+  const zetProef = (n) => { if (Number.isFinite(n)) { setProefGebruikt(n); bewaarProef(n); } };
   const [uitkomst, setUitkomst] = useState(null);
   const [fout, setFout] = useState("anders");
   const cameraRef = useRef(null);
@@ -83,15 +110,28 @@ export default function ScanHuiswerk({ onOpenLes, onTerug }) {
     try {
       const resp = await fetch("/api/scan-huiswerk", {
         method: "POST",
-        headers: { "Content-Type": "application/json", ...partnerHeader() },
+        headers: { "Content-Type": "application/json", ...partnerHeader(), ...(await inlogKop()) },
         body: JSON.stringify({ beeld, uid: apparaatId() }),
       });
       const data = await resp.json().catch(() => ({}));
+      if (data?.proef) zetProef(Number(data.proef.gebruikt));
+      if (resp.status === 402) {
+        // De vier proefscans zijn op: terug naar het beginscherm, daar staat nu de kaart van het Familie-pakket.
+        zetProef(Math.max(GRATIS_PROEFSCANS, Number(data?.proef?.gebruikt) || 0));
+        try { track("scan_poort", { waar: "na-foto" }); } catch { /* */ }
+        setPoortVanServer(true);
+        setStand("start");
+        return;
+      }
       if (!resp.ok) { toonFout(data?.error === "op-voor-vandaag" || data?.error === "druk" ? data.error : "anders"); return; }
       if (!data.schoolwerk) { toonFout("geen-schoolwerk"); return; }
       if (!data.doelen?.length) { toonFout("geen-doelen"); return; }
       const metLes = data.doelen.filter((d) => d.les).length;
       try { track("scan_klaar", { doelen: data.doelen.length, met_les: metLes, vak: data.vak || "", groep: data.groep || "" }); } catch { /* */ }
+      // 📚 Leren van wat er gescand wordt (Mark 11 nov 2026): per doel één regel met het onderwerp in onze
+      // eigen woorden en de les die erbij gekozen is. Geen foto, geen tekst van het blad, geen namen.
+      // Zo zien we welke stof kinderen van school meekrijgen en waar een eigen les met eigen sommen bij moet.
+      data.doelen.forEach((d) => { try { track("scan_doel", { doel: d.doel, les: d.les || "", onderdeel: d.onderdeel || "", vak: data.vak || "", groep: data.groep || "" }); } catch { /* */ } });
       // Vraag naar lessen die we nog niet hebben: zo zien we wat kinderen van school meekrijgen.
       data.doelen.filter((d) => !d.les).forEach((d) => { try { track("scan_geen_les", { doel: d.doel, vak: data.vak || "", groep: data.groep || "" }); } catch { /* */ } });
       setUitkomst(data);
@@ -131,7 +171,31 @@ export default function ScanHuiswerk({ onOpenLes, onTerug }) {
           <h1 style={{ fontSize: "clamp(24px, 6vw, 32px)", fontWeight: 900, margin: 0, color: "#fff" }}>Scan je huiswerk</h1>
         </div>
 
-        {stand === "start" && (
+        {stand === "start" && proefOp && (
+          <div role="region" aria-label="Scan je huiswerk hoort bij het Familie-pakket" style={{ background: "linear-gradient(135deg, #1e2a45, #1a2540)", border: "1px solid rgba(255, 213, 79, 0.4)", borderRadius: 16, padding: "20px 18px", display: "flex", flexDirection: "column", gap: 12, textAlign: "center", alignItems: "center" }}>
+            <h2 style={{ fontSize: 20, fontWeight: 900, margin: 0, color: "#ffd54f" }}>Je vier gratis scans zijn op</h2>
+            {kind ? (
+              <p style={{ ...klein, fontSize: 16, color: "var(--color-text, #E6EBF5)" }}>
+                Meer bladen scannen kan met het Familie-pakket. Vraag je ouder of verzorger of jullie dat erbij nemen.
+              </p>
+            ) : (
+              <>
+                <p style={{ ...klein, fontSize: 16, color: "var(--color-text, #E6EBF5)" }}>
+                  Meer bladen scannen hoort bij het Familie-pakket: € 39 voor 12 maanden, voor het hele gezin (tot 3 kinderen). Eén keer betalen, het stopt vanzelf.
+                </p>
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start" }}>
+                  <ProefweekKnop plek="poort:scan-huiswerk" />
+                  <a href="/abonnement.html#familie" onClick={() => { try { track("scan_poort_klik", { doel: "abonnement" }); } catch { /* */ } }} style={{ display: "inline-block", padding: "10px 18px", background: "linear-gradient(135deg, #ff6b35, #ff8c42)", color: "#fff", fontWeight: 700, fontSize: 14, borderRadius: 10, textDecoration: "none" }}>
+                    Bekijk het Familie-pakket — € 39 per jaar
+                  </a>
+                </div>
+              </>
+            )}
+            <p style={klein}>Oefenen zelf blijft gratis, gegarandeerd t/m 2031. De lessen van je eerdere scans kun je gewoon blijven doen.</p>
+          </div>
+        )}
+
+        {stand === "start" && !proefOp && (
           <>
             <p style={{ ...klein, fontSize: 17, color: "var(--color-text, #E6EBF5)" }}>
               Snap je een blad van school niet? Maak er een foto van. Dan leggen we het uit en overhoren we je.
@@ -142,6 +206,12 @@ export default function ScanHuiswerk({ onOpenLes, onTerug }) {
             <button type="button" style={rustig} onClick={() => kiesRef.current?.click()}>Kies een foto die je al hebt</button>
             <input ref={cameraRef} type="file" accept="image/*" capture="environment" onChange={kiesBestand} style={{ display: "none" }} data-testid="scan-camera" />
             <input ref={kiesRef} type="file" accept="image/*" onChange={kiesBestand} style={{ display: "none" }} data-testid="scan-kies" />
+            {telt && (
+              <p style={{ ...klein, color: "#ffd54f", fontWeight: 700 }}>
+                {proefOver === GRATIS_PROEFSCANS ? "Je mag vier bladen gratis proberen." : proefOver === 1 ? "Nog 1 gratis scan over." : `Nog ${proefOver} gratis scans over.`}
+                {!kind && " Daarna hoort scannen bij het Familie-pakket."}
+              </p>
+            )}
             <p style={klein}>Leg het blad plat neer en zet het hele blad op de foto.</p>
             <p style={klein}>We bewaren je foto niet. Zet liever geen namen of gezichten op de foto.</p>
           </>

@@ -1,11 +1,11 @@
 // 📷 Scan je huiswerk — proefvlag (Mark 11 nov 2026).
-// De knop in de onderbalk staat alleen aan op apparaten waar hij is aangezet, zodat we de functie
-// eerst zelf met echte bladen kunnen proberen voordat elk kind hem ziet.
+// Begon als proef op apparaten waar hij was aangezet; staat sinds de avond van 11 nov voor iedereen aan.
+// De schakelaar blijft: VOOR_IEDEREEN op false zet de knop in één regel terug naar "alleen met de link".
 //   aanzetten:  leerkwartier.app/scan-huiswerk?scan=1
 //   uitzetten:  leerkwartier.app/?scan=0
 // Voor iedereen aanzetten = hieronder VOOR_IEDEREEN op true zetten.
 const SLEUTEL = "lk_scan_aan";
-const VOOR_IEDEREEN = false;
+const VOOR_IEDEREEN = true; // 11 nov 2026 (Mark): knop voor iedereen, vier gratis proefscans, daarna het Familie-pakket
 
 function leesUrl() {
   if (typeof window === "undefined") return;

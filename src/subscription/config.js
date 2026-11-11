@@ -57,6 +57,9 @@ export const FEATURE_GATES = {
   "diploma": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "klaarzetten": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "dictee-school": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  // 📷 Scan je huiswerk (Mark 11 nov 2026: "4 gratis proefscans, dan betalen"). De vier proefscans
+  // telt de server per apparaat (api/scan-huiswerk.js); daarna hoort scannen bij het Familie-pakket.
+  "scan-huiswerk": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).

@@ -22,7 +22,11 @@ export const config = { runtime: "edge", maxDuration: 30 };
 
 const MODEL = "claude-haiku-4-5-20251001";
 const MAX_BEELD_TEKENS = 2_800_000; // ± 2 MB foto als base64; de app verkleint tot ± 0,5 MB
-export const SCANS_PER_APPARAAT_PER_DAG = 5;
+export const SCANS_PER_APPARAAT_PER_DAG = 5; // zonder het Familie-pakket (speelt alleen binnen de vier proefscans)
+const SCANS_FAMILIE_PER_DAG = 10; // met het Familie-pakket: ruim, maar niet eindeloos (kosten)
+// 🎟️ Mark 11 nov 2026: "4 gratis proefscans, dan betalen." Vier scans per apparaat, voor altijd geteld
+// (niet per dag); daarna hoort scannen bij het Familie-pakket (betaald, proefweek of partnercode).
+export const GRATIS_PROEFSCANS = 4;
 const SCANS_TOTAAL_PER_DAG = 300; // ± € 0,015 per scan → hooguit ± € 4,50 per dag
 const MAX_DOELEN = 6;
 
@@ -31,9 +35,12 @@ const json = (data, status = 200) =>
 
 const LES = new Map(CATALOGUS.map((l) => [l.id, l]));
 
-const LESSENLIJST = CATALOGUS.map(
-  (l) => `${l.id} | ${l.titel} | ${l.vak} | ${l.niveau} | ${l.onderdelen.map((o, i) => `${i + 1}. ${o}`).join(" ; ")}`,
-).join("\n");
+const regel = (l) => `${l.id} | ${l.titel} | ${l.vak} | ${l.niveau} | ${l.onderdelen.map((o, i) => `${i + 1}. ${o}`).join(" ; ")}`;
+// Lessen die een blok uit een rekenboek volgen staan apart en bovenaan: die passen doel voor doel
+// bij zo'n blad. (Eerste proef 11 nov: in één lange lijst koos de AI steeds de algemene les.)
+const isBlokLes = (l) => /\bblok\b/i.test(l.titel);
+const BLOKLESSEN = CATALOGUS.filter(isBlokLes).map(regel).join("\n");
+const LESSENLIJST = CATALOGUS.filter((l) => !isBlokLes(l)).map(regel).join("\n");
 
 const SYSTEM = [
   "Je helpt een kind van de basisschool (groep 3 t/m 8) in de Nederlandse leer-app Leerkwartier.",
@@ -49,7 +56,7 @@ const SYSTEM = [
   "- Maximaal 6 doelen. Staan er genummerde doelen op het blad, houd dan die volgorde aan. Staan er alleen sommen, groepeer ze per soort.",
   "- 'doel': één korte zin in gewone kindertaal, hooguit 12 woorden, die begint met een werkwoord en zonder punt aan het eind (bijvoorbeeld 'Schatten met ronde getallen'). Gebruik woorden die een kind van 10 kent: 'kommagetallen' in plaats van 'decimale getallen', 'keer-sommen' in plaats van 'vermenigvuldigingen'.",
   "- 'les': het id uit de lessenlijst, precies overgenomen. 'onderdeel': het nummer van het best passende onderdeel van die les.",
-  "- Sommige lessen volgen een blok uit een rekenboek (titel met 'blok' en een groep). Past een onderdeel van zo'n les precies bij het doel op het blad en klopt de groep? Kies dan dát onderdeel, vóór een algemene les over hetzelfde onderwerp. Past het onderdeel niet precies, kies dan gewoon de algemene les.",
+  "- Kijk EERST in de BLOK-LESSEN. Staat daar een les voor dezelfde groep waarvan een onderdeel over hetzelfde gaat als het doel op het blad? Kies dan dat onderdeel: het volgt de aanpak van het schoolboek. Alleen als geen onderdeel van een blok-les past, kies je uit de ALGEMENE LESSEN.",
   "- Kies een les alleen als hij ECHT over hetzelfde gaat en bij de groep van het blad past. Twijfel je? Geef les=null en onderdeel=null. Liever geen les dan een verkeerde.",
   "- Het onderdeel 'Overhoring' of 'Eindopdracht' kies je nooit voor een los doel.",
   "- 'groep': het leerjaar dat op het blad staat of waar de stof bij past (3 t/m 8), of null als je het niet weet.",
@@ -57,7 +64,12 @@ const SYSTEM = [
   "Antwoord met ALLEEN dit JSON, zonder tekst eromheen:",
   '{"schoolwerk":true,"vak":"rekenen","groep":8,"titel":"korte titel van het blad","doelen":[{"doel":"...","les":"id-of-null","onderdeel":1}]}',
   "",
-  "LESSENLIJST (id | titel | vak | niveau | onderdelen):",
+  "Elke regel: id | titel | vak | niveau | onderdelen",
+  "",
+  "BLOK-LESSEN (hier eerst kijken):",
+  BLOKLESSEN || "(geen)",
+  "",
+  "ALGEMENE LESSEN:",
   LESSENLIJST,
 ].join("\n");
 
@@ -102,6 +114,59 @@ export function controleerAntwoord(ruw) {
   return uit;
 }
 
+// ── Wie mag scannen? ────────────────────────────────────────────────────────
+const SB = () => ({
+  base: process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL,
+  anon: process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY,
+  service: process.env.SUPABASE_SERVICE_ROLE_KEY,
+});
+
+// Heeft dit account het Familie-pakket? Betaald, proefweek of partnercode: dezelfde drie wegen als
+// src/subscription/useSubscription.js, maar door de server nagevraagd (niet te vervalsen in de browser).
+async function heeftFamilie(req, uid) {
+  const { base, anon, service } = SB();
+  const token = String(req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
+  if (!base || !anon || !token) return false;
+  const metToken = { apikey: anon, Authorization: `Bearer ${token}` };
+  try {
+    const u = await fetch(`${base}/auth/v1/user`, { headers: metToken });
+    const userId = u.ok ? (await u.json())?.id : null;
+    if (!userId) return false;
+    if (service) {
+      const r = await fetch(`${base}/rest/v1/subscriptions?user_id=eq.${encodeURIComponent(userId)}&select=tier,valid_until`, {
+        headers: { apikey: service, Authorization: `Bearer ${service}` },
+      });
+      const rij = r.ok ? (await r.json())?.[0] : null;
+      if (rij && (rij.tier === "parent_pro" || rij.tier === "teacher_pro") && (!rij.valid_until || new Date(rij.valid_until) > new Date())) return true;
+    }
+    const p = await fetch(`${base}/rest/v1/rpc/mijn_partner_recht`, {
+      method: "POST",
+      headers: { ...metToken, "Content-Type": "application/json" },
+      body: JSON.stringify({ p_visitor: uid }),
+    });
+    const recht = p.ok ? await p.json() : null;
+    if (recht?.recht) {
+      const tot = recht.blijvend ? null : recht.familie_tot || null;
+      if (!tot || new Date(tot) >= new Date(new Date().toISOString().slice(0, 10))) return true;
+    }
+  } catch { /* bij twijfel: geen Familie-pakket; de proefscans blijven dan wel werken */ }
+  return false;
+}
+
+// Hoeveel scans deed dit apparaat ooit? Telt de dagrijen `uid:scan:<uid>` in ai_call_quota op.
+// Lukt het tellen niet, dan null: de scan gaat dan door (de dagplafonds blijven gelden).
+async function scansOoit(uid) {
+  const { base, service } = SB();
+  if (!base || !service) return null;
+  try {
+    const r = await fetch(`${base}/rest/v1/ai_call_quota?endpoint=eq.${encodeURIComponent("uid:scan:" + uid)}&select=count`, {
+      headers: { apikey: service, Authorization: `Bearer ${service}` },
+    });
+    if (!r.ok) return null;
+    return (await r.json()).reduce((som, x) => som + (Number(x.count) || 0), 0);
+  } catch { return null; }
+}
+
 export default async function handler(req) {
   if (req.method !== "POST") return json({ error: "Alleen POST" }, 405);
   const geblokt = guardRequest(req);
@@ -119,9 +184,18 @@ export default async function handler(req) {
   const uid = String(body?.uid || "");
   if (!/^[A-Za-z0-9_-]{6,64}$/.test(uid)) return json({ error: "ongeldig" }, 400);
 
+  // 🎟️ Zonder het Familie-pakket: vier proefscans per apparaat. Zijn die op, dan gaat er geen foto naar de AI.
+  const familie = await heeftFamilie(req, uid);
+  let proef = null;
+  if (!familie) {
+    const gedaan = await scansOoit(uid);
+    if (gedaan != null && gedaan >= GRATIS_PROEFSCANS) return json({ error: "proef-op", proef: { gebruikt: gedaan, max: GRATIS_PROEFSCANS } }, 402);
+    if (gedaan != null) proef = { gebruikt: gedaan + 1, max: GRATIS_PROEFSCANS };
+  }
+
   // Eerst het plafond per apparaat (anders eet één apparaat het dagplafond van iedereen op), dan het totaal.
   const perApparaat = await dailyQuotaCheck(`uid:scan:${uid}`, {
-    limit: SCANS_PER_APPARAAT_PER_DAG,
+    limit: familie ? SCANS_FAMILIE_PER_DAG : SCANS_PER_APPARAAT_PER_DAG,
     bericht: "op-voor-vandaag",
   });
   if (perApparaat) return json({ error: "op-voor-vandaag" }, 429);
@@ -158,8 +232,8 @@ export default async function handler(req) {
     const gevonden = tekst.match(/\{[\s\S]*\}/);
     let ruw = null;
     try { ruw = gevonden ? JSON.parse(gevonden[0]) : null; } catch { ruw = null; }
-    if (!ruw) return json({ error: "niet-gelezen" }, 502);
-    return json(controleerAntwoord(ruw));
+    if (!ruw) return json({ error: "niet-gelezen", proef }, 502);
+    return json({ ...controleerAntwoord(ruw), familie, proef });
   } catch (e) {
     console.warn("[scan-huiswerk] mislukt:", e?.message);
     return json({ error: "ai-fout" }, 502);

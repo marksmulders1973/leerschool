@@ -184,6 +184,17 @@ export const PRO_FEATURES = {
       "op school komt. (Het dictee met onze eigen woorden blijft gratis.)",
     status: "live",
   },
+  "scan-huiswerk": {
+    id: "scan-huiswerk",
+    icon: "📷",
+    label: "Scan je huiswerk",
+    laag: "familie",
+    blurb:
+      "Snapt je kind een blad van school niet? Maak er een foto van: de app " +
+      "leest welke doelen erop staan en zet bij elk doel de uitleg en de " +
+      "oefenvragen klaar. (De eerste vier bladen zijn gratis om te proberen.)",
+    status: "live",
+  },
   // ── Gate-only ids (config.js FEATURE_GATES) — entries hier zorgen dat de
   //    LockedPreview straks de júiste laag-kleur toont (9 aug id-sync). ──
   "unlimited-paths": {

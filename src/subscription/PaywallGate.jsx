@@ -69,6 +69,7 @@ const FEATURE_LABELS = {
   "diploma": "Printbaar diploma",
   "klaarzetten": "Klaarzetten voor je kind",
   "dictee-school": "Dictee met de woorden van school",
+  "scan-huiswerk": "Scan je huiswerk",
 };
 
 const FEATURE_BLURBS = {

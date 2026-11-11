@@ -1756,6 +1756,8 @@ export default function App() {
         <Suspense fallback={<PageLoader />}>
           {/* 📷 Scan je huiswerk: na de foto opent de gekozen les op het juiste onderdeel; terug uit de les = terug bij de lijst met doelen. */}
           <ScanHuiswerk
+            authUser={authUser}
+            kind={!!(userName || "").trim() && role !== "ouder" && role !== "teacher" && role !== "leerkracht"}
             onOpenLes={(id, stepIdx) => { setActiveLearnPathId(id); setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : 0); setLearnPathReturnPage("scan-huiswerk"); setPage("learn-path"); }}
             onTerug={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
         </Suspense>
