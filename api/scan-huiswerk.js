@@ -153,17 +153,21 @@ async function heeftFamilie(req, uid) {
   return false;
 }
 
-// Hoeveel scans deed dit apparaat ooit? Telt de dagrijen `uid:scan:<uid>` in ai_call_quota op.
-// Lukt het tellen niet, dan null: de scan gaat dan door (de dagplafonds blijven gelden).
+// Hoeveel scans deed dit apparaat ooit? De databasefunctie scan_proef_teller telt de dagrijen
+// `uid:scan:<uid>` op (supabase/migrations/20261111_scan_proef_teller.sql). Lukt het tellen niet of
+// komt er geen gewoon getal terug, dan null: de scan gaat dan door (de dagplafonds blijven gelden).
 async function scansOoit(uid) {
   const { base, service } = SB();
   if (!base || !service) return null;
   try {
-    const r = await fetch(`${base}/rest/v1/ai_call_quota?endpoint=eq.${encodeURIComponent("uid:scan:" + uid)}&select=count`, {
-      headers: { apikey: service, Authorization: `Bearer ${service}` },
+    const r = await fetch(`${base}/rest/v1/rpc/scan_proef_teller`, {
+      method: "POST",
+      headers: { apikey: service, Authorization: `Bearer ${service}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ p_uid: uid }),
     });
     if (!r.ok) return null;
-    return (await r.json()).reduce((som, x) => som + (Number(x.count) || 0), 0);
+    const n = await r.json();
+    return typeof n === "number" && Number.isFinite(n) && n >= 0 ? n : null;
   } catch { return null; }
 }
 
