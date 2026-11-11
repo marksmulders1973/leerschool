@@ -21,7 +21,7 @@ export default function BedriegerSpel({ onTerug, onHome }) {
       onHome: () => homeRef.current && homeRef.current(),
       meld: (naam, extra) => { try { track(naam, extra); } catch { /* */ } },
     });
-    return () => { el.replaceChildren(); };
+    return () => { while (el.firstChild) el.removeChild(el.firstChild); };
   }, []);
   return (
     <div className="bdg">

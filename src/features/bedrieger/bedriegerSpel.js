@@ -161,7 +161,8 @@ export function startBedrieger(app, opties) {
   }
 
   function render(){
-    app.replaceChildren();
+    // Niet replaceChildren(): oudere telefoons (Safari tot 14, oude Android-browsers) kennen dat niet en dan viel het spel om (app_fout 11 nov).
+    while (app.firstChild) app.removeChild(app.firstChild);
     window.scrollTo(0,0);
     app.appendChild(balk());
     if(S.screen==="setup") renderSetup();
