@@ -1,6 +1,8 @@
 # Januari-campagne Doorstroomtoets — CONCEPT (10 nov 2026)
 
 **Status:** concept, niets verstuurd. Elke tekst wacht op Marks "stuur maar" op díe tekst.
+Geparkeerd op 10 nov, **door Mark uit de parkeerstand gehaald op 11 nov 2026**. Doel erbij sinds 11 nov: de
+campagne is de test of ouders betalen (voorstel meetlat: 10-15 betalende gezinnen op 1 februari 2027).
 
 ## Het idee in één zin
 
