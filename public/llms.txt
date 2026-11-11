@@ -48,11 +48,11 @@ van Leerkwartier en heeft geen relatie met dat bedrijf.
 - **Middelbare school (VMBO/MAVO, HAVO, VWO)**: wiskunde, aardrijkskunde, geschiedenis, biologie, scheikunde, natuurkunde, economie, Engels, Frans, Duits, maatschappijleer, en informatica (algoritmen & pseudocode, programmeren in Python-stijl, databases & SQL, netwerken & internet, hardware & besturingssysteem, AI & machine learning, cybersecurity & encryptie).
 - **VMBO-examens**: authentieke examenvragen uit examenblad.nl (o.a. economie, Engels, geschiedenis) met didactische uitleg per vraag.
 
-## Voor ouders en verzorgers — Familie-extra's (bèta, gratis in 2026)
+## Voor ouders en verzorgers — het Familie-pakket (betaald, eerst een week gratis proberen)
 
 Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (hoe staat mijn kind ervoor?), printbare oefenboekjes en uitleg-kaarten op maat, een koelkast-weekschema, een wekelijkse voortgangsmail, trots-momenten en een printbaar diploma.
 
-Vanaf januari 2027 worden de Familie-extra's betaald. Prijs: **€39 per gezin (niet per kind, tot 3 kinderen; meer kinderen op aanvraag zonder meerprijs) voor 12 maanden**, gerekend vanaf de dag van betalen — één keer betalen en het stopt vanzelf: geen abonnement, geen automatische verlenging. Een extra jaar erbij kost €31 en kies je zelf. Oefenen zelf blijft gratis (gegarandeerd t/m 2031). Details: https://leerkwartier.app/abonnement.html
+De hulpmiddelen voor thuis horen bij het Familie-pakket. Je kunt het een week gratis proberen, zonder betaalgegevens. Prijs: **€39 per gezin (niet per kind, tot 3 kinderen; meer kinderen op aanvraag zonder meerprijs) voor 12 maanden**, gerekend vanaf de dag van betalen — één keer betalen en het stopt vanzelf: geen abonnement, geen automatische verlenging. Een extra jaar erbij kost €31 en kies je zelf. Oefenen zelf blijft gratis (gegarandeerd t/m 2031). Details: https://leerkwartier.app/abonnement.html
 
 ## Hoofdpagina's
 
@@ -132,7 +132,7 @@ Vanaf januari 2027 worden de Familie-extra's betaald. Prijs: **€39 per gezin (
 - [Gratis alternatief voor Squla &amp; Junior Einstein](https://leerkwartier.app/gratis-alternatief-squla.html):
   voor ouders die een gratis of goedkoper alternatief zoeken voor betaalde
   oefen-apps (zonder abonnement/stilzwijgende verlenging). Vergelijkingstabel
-  + uitleg "hoe zeg ik Squla op". Leerkwartier = gratis in 2026, geen abonnement.
+  + uitleg "hoe zeg ik Squla op". Leerkwartier = gratis oefenen, geen abonnement.
 - [Doorstroomtoets IEP oefenen](https://leerkwartier.app/doorstroomtoets-iep.html):
   oefenen toegespitst op de IEP-toets (Bureau ICE).
 - [Doorstroomtoets Route 8 oefenen](https://leerkwartier.app/doorstroomtoets-route-8.html):
@@ -441,8 +441,8 @@ De basis is gratis — gegarandeerd tot en met 2031, en die belofte verlengen
 we telkens. Het oefenen voor de Doorstroomtoets — rekenen, taal, begrijpend
 lezen, studievaardigheden, de complete oefentoets en de uitleg op 3 niveaus —
 kost niets. Je hebt geen account nodig en hoeft geen betaalgegevens in te
-vullen. In 2026 is alles gratis; vanaf 2027 is er één optionele extra voor
-thuis: Familie (€39 per gezin voor 12 maanden, onder meer een uitgebreid
+vullen. Er is één optionele extra voor
+thuis: het Familie-pakket (€39 per gezin voor 12 maanden, onder meer een uitgebreid
 voortgangsoverzicht en weekrapport), maar het oefenen zelf blijft gratis,
 gegarandeerd t/m 2031. Voor scholen is Leerkwartier gratis, zodat
 leerkrachten het ook in de klas kunnen gebruiken — gegarandeerd t/m 2031. Gezinnen met een laag inkomen krijgen ook die extra's kosteloos via

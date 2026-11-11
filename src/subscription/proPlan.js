@@ -92,16 +92,16 @@ export const LAAG_KLEUREN = {
 // (conform feedback_gratis_belofte_gekwalificeerd: nooit "altijd gratis";
 // gratis-garantie max 5 jaar vooruit — nu t/m 2031, telkens verlengd).
 export const PRO_MODEL = {
-  nu: "Nu nog gratis",
-  belofte: "Gratis & onbeperkt t/m 2026",
-  later: "Vanaf 2027 een betaalde extra",
-  kort: "Nu gratis · vanaf 2027 betaald",
+  nu: "Oefenen is gratis",
+  belofte: "Oefenen gratis, gegarandeerd t/m 2031",
+  later: "Een betaalde extra voor thuis",
+  kort: "Oefenen gratis · het Familie-pakket is betaald",
   uitleg:
     "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — gegarandeerd " +
     "t/m 2031, en die belofte verlengen we telkens — ook voor " +
     "leerkrachten die met hun klas oefenen. Voor scholen is Leerkwartier " +
     "gratis (gegarandeerd t/m 2031), zodat leerkrachten het ook in de klas " +
-    "kunnen gebruiken. Vanaf 2027 is er één extra voor thuis: Familie (één " +
+    "kunnen gebruiken. Er is één extra voor thuis: het Familie-pakket (één " +
     "klein bedrag per gezín — voortgang volgen, weekrapport, hele toets " +
     "oefenen met de klok; € 39 voor 12 maanden, één keer betalen, stopt vanzelf).",
 };
