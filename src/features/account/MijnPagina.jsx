@@ -3258,7 +3258,7 @@ export default function MijnPagina({
           </>
         )}
 
-        {/* 14 okt 2026: Play Store-testers werven, alleen op Android buiten de Play-app (TesterOproep.jsx). */}
+        {/* 11 nov 2026: kaart "staat in de Play Store", alleen op Android buiten de Play-app (TesterOproep.jsx; was t/m 10 nov de tester-oproep). */}
         <TesterOproep plek="mijn" />
         <MeerTegels onGa={(doel) => onOpenHub?.(doel)} />
       </div>
