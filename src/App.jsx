@@ -30,6 +30,7 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
 const BedriegerSpel = lazy(() => import("./features/bedrieger/BedriegerSpel.jsx"));
+const ScanHuiswerk = lazy(() => import("./features/scan/ScanHuiswerk.jsx")); // 📷 foto van een blad van school → de les erbij (11 nov 2026)
 const NieuwkomersPage = lazy(() => import("./components/NieuwkomersPage.jsx"));
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
@@ -204,6 +205,7 @@ const BOTTOMNAV_PAGES = new Set([
   "create-quiz", "quiz-preview", "class-manager", "lobby",
   "ouder-dashboard",
   "spelletje", // keuzescherm Park/Bedrieger (10 nov 2026); het bedriegerspel zelf is schermvullend, zonder balk
+  "scan-huiswerk", // 📷 Scan je huiswerk (11 nov 2026)
 ]);
 
 // Pagina's waar de 15-min sessie-timer telt. Niet op home (wachtruimte)
@@ -1748,6 +1750,14 @@ export default function App() {
           {/* Een kind met naam gaat terug naar zijn eigen pagina, niet naar de startpagina (kliktest 27 okt). */}
           <SpelletjeKeuze onPark={() => setPage("zoo")} onBedrieger={() => setPage("bedrieger")}
             onHome={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
+        </Suspense>
+      )}
+      {page === "scan-huiswerk" && (
+        <Suspense fallback={<PageLoader />}>
+          {/* 📷 Scan je huiswerk: na de foto opent de gekozen les op het juiste onderdeel; terug uit de les = terug bij de lijst met doelen. */}
+          <ScanHuiswerk
+            onOpenLes={(id, stepIdx) => { setActiveLearnPathId(id); setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : 0); setLearnPathReturnPage("scan-huiswerk"); setPage("learn-path"); }}
+            onTerug={(userName || "").trim() && role !== "ouder" && role !== "teacher" ? () => { try { sessionStorage.setItem("lk_wie_net", userName || ""); } catch { /* */ } setPage("mijn-pagina"); } : goHome} />
         </Suspense>
       )}
       {page === "bedrieger" && (

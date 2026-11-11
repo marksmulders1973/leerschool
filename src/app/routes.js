@@ -97,6 +97,8 @@ export const PAGE_TO_PATH = {
   // 10 nov 2026 (Mark): keuzescherm Park / Bedrieger achter de knop Spelletje, en het woordspel zelf.
   spelletje: "/spelletje",
   bedrieger: "/spelletje/bedrieger",
+  // 📷 Scan je huiswerk (11 nov 2026): foto van een blad van school → de les erbij.
+  "scan-huiswerk": "/scan-huiswerk",
   // Nieuwkomer-pakket (24 sep 2026): losse pagina, code NIEUWKOMER in de codebalk landt hier.
   nieuwkomers: "/nieuwkomers",
   // 🌍 Park-galerij — openbare (gemodereerde) showcase van kinder-parken (17 aug).

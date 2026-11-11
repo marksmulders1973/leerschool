@@ -19,6 +19,10 @@ import { pathToFileURL } from "url";
 
 const ROOT = path.resolve(process.cwd(), "src/learnPaths");
 const OUT_FILE = path.join(ROOT, "pathManifest.generated.json");
+// 📷 Scan je huiswerk (11 nov 2026): compacte lijst van de basisschool-lessen mét hun onderdelen,
+// voor api/scan-huiswerk.js. De AI kiest bij een gefotografeerd blad de les en het onderdeel uit
+// déze lijst (nagekeken inhoud) en verzint dus zelf geen uitleg of sommen.
+const SCAN_FILE = path.resolve(process.cwd(), "api/_lib/scanCatalogus.generated.js");
 
 // .jsx-paden (bv. ruimtemeetkunde met 3D-componenten) kan Node niet direct
 // importeren — JSX is geen geldige Node-syntax. We bundelen ze met esbuild naar
@@ -75,6 +79,7 @@ async function main() {
   );
 
   const manifest = [];
+  const scanCatalogus = [];
   for (const file of files) {
     const full = path.join(ROOT, file);
     try {
@@ -117,6 +122,15 @@ async function main() {
         chapterCount: Array.isArray(p.chapters) ? p.chapters.length : 0,
         estimatedMinutes,
       });
+      if (/groep/i.test(String(p.level || "")) && !String(p.id).startsWith("examen-") && !/nieuwkomers/i.test(String(p.id))) {
+        scanCatalogus.push({
+          id: p.id,
+          titel: String(p.title || p.id).slice(0, 90),
+          vak: p.subject || "overig",
+          niveau: p.level || "",
+          onderdelen: steps.map((st) => String(st?.title || "").slice(0, 60)),
+        });
+      }
     } catch (e) {
       console.warn(`[buildPathManifest] skip ${file}: ${e.message}`);
     }
@@ -125,6 +139,9 @@ async function main() {
   manifest.sort((a, b) => a.id.localeCompare(b.id));
   fs.writeFileSync(OUT_FILE, JSON.stringify(manifest, null, 2) + "\n", "utf8");
   console.log(`✓ ${manifest.length} paden → ${path.relative(process.cwd(), OUT_FILE)}`);
+  scanCatalogus.sort((a, b) => a.id.localeCompare(b.id));
+  fs.writeFileSync(SCAN_FILE, "// Gegenereerd door scripts/buildPathManifest.mjs — niet met de hand wijzigen." + String.fromCharCode(10) + "export default " + JSON.stringify(scanCatalogus) + ";" + String.fromCharCode(10), "utf8");
+  console.log(`✓ ${scanCatalogus.length} basisschool-lessen → ${path.relative(process.cwd(), SCAN_FILE)} (${(fs.statSync(SCAN_FILE).size / 1024).toFixed(1)} kB)`);
   const bytes = fs.statSync(OUT_FILE).size;
   console.log(`  bestand-grootte: ${(bytes / 1024).toFixed(1)} kB`);
 }

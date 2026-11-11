@@ -6759,6 +6759,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "rekenen-blok1-groep8",
+    "file": "./rekenenBlok1Groep8.js",
+    "title": "Rekenen blok 1 (groep 8)",
+    "subject": "rekenen",
+    "level": "groep8",
+    "emoji": "🎯",
+    "referentieNiveau": "1F",
+    "sloThema": "Getallen en verbanden — schatten, kommagetallen vermenigvuldigen, breuken ↔ kommagetallen, lijndiagram",
+    "triggerKeywords": [
+      "blok 1 groep 8",
+      "doelen blok 1",
+      "rekenen blok 1",
+      "schattend rekenen",
+      "schatten ronde getallen",
+      "vermenigvuldigen met kommagetallen",
+      "komma plaatsen",
+      "decimale getallen vermenigvuldigen",
+      "breuken omzetten kommagetal",
+      "breuken en kommagetallen vergelijken",
+      "van klein naar groot",
+      "lijndiagram"
+    ],
+    "intro": "De vier doelen van blok 1 in groep 8, stap voor stap: schatten met ronde getallen, keer-sommen met kommagetallen, breuken en kommagetallen vergelijken, en een lijndiagram aflezen. Bij elk doel uitleg ",
+    "stepCount": 5,
+    "checkCount": 48,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "rekenen-met-letters",
     "file": "./rekenenMetLetters.js",
     "title": "Rekenen met letters (algebra-basis)",

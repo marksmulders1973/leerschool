@@ -1,6 +1,8 @@
 import { track } from "../utils.js";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
+import { scanZichtbaar } from "../features/scan/scanVlag.js";
+import ScanIcoon from "../features/scan/ScanIcoon.jsx";
 
 // Bottom-tabs nav (Duolingo-style). Maand 1 snoei (visie-bewaker 2026-05-10):
 // alleen 3 tabs zichtbaar. UX-fix 2026-05-17: tabs heroverwogen na user-feedback.
@@ -82,7 +84,20 @@ function kindTabs(groep) {
   return tabs;
 }
 
+// 📷 Scan je huiswerk (Mark 11 nov 2026: "een icoon naast Spelletje met 'scan je huiswerk'").
+// Staat direct ná Spelletje. Voorlopig alleen op apparaten met de proefvlag (features/scan/scanVlag.js).
+// Het label loopt over twee regels, anders past het niet naast vijf andere knoppen op een telefoon.
+const SCAN_TAB = { id: "scan", label: "Scan je huiswerk", tweeRegels: ["Scan je", "huiswerk"], iconNode: <ScanIcoon size={24} />, target: "scan-huiswerk" };
+function metScanTab(tabs) {
+  if (!scanZichtbaar()) return tabs;
+  const i = tabs.findIndex((t) => t.id === "park");
+  const uit = [...tabs];
+  uit.splice(i >= 0 ? i + 1 : uit.length, 0, SCAN_TAB);
+  return uit;
+}
+
 function bepaalActieveTab(page) {
+  if (page === "scan-huiswerk") return "scan";
   if (page === "rapport") return "rapport";
   if (page === "meer") return "meer";
   // student-home telt NIET als "Home" (Mark 7 aug 2026): de Home-tab lichtte
@@ -110,7 +125,7 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role, lev
   // Kind op de basisschool (groep 1-8, geen ouder/leerkracht/middelbare school) → de eenvoudige balk.
   const groep = !schoolType && /^\d+$/.test(String(level || "")) ? Number(level) : 0;
   const isKind = groep >= 1 && groep <= 8 && !isTeacher && role !== "ouder" && role !== "student";
-  const ALL_TABS = isKind ? kindTabs(groep) : maakTabs(isTeacher);
+  const ALL_TABS = metScanTab(isKind ? kindTabs(groep) : maakTabs(isTeacher));
   // Filter game-related tabs voor niet-ingelogden als feature-flag aanstaat
   const gameZichtbaar = gameVisibleForUser(authUser, urlHasGameDeepLink());
   const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);
@@ -147,6 +162,7 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role, lev
               key={tab.id}
               type="button"
               aria-current={isActief ? "page" : undefined}
+              aria-label={tab.tweeRegels ? tab.label : undefined}
               onClick={() => kies(tab)}
               style={{
                 flex: 1,
@@ -198,7 +214,9 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role, lev
               >
                 {tab.iconNode || tab.emoji}
               </span>
-              <span style={{ whiteSpace: "nowrap" }}>{tab.label}</span>
+              {tab.tweeRegels
+                ? <span style={{ whiteSpace: "nowrap", lineHeight: 1.1, textAlign: "center" }}>{tab.tweeRegels[0]}<br />{tab.tweeRegels[1]}</span>
+                : <span style={{ whiteSpace: "nowrap" }}>{tab.label}</span>}
             </button>
           );
         })}
