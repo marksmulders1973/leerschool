@@ -202,7 +202,7 @@ export default function DicteesPage({ setPage } = {}) {
 
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Gratis spelling-dictees printen (voorlees-dictee per regel) — " + BRAND.name;
+    document.title = "Spelling-dictees printen (voorlees-dictee per regel) — " + BRAND.name;
     const style = document.createElement("style");
     style.textContent = PRINT_CSS;
     document.head.appendChild(style);
@@ -238,8 +238,8 @@ export default function DicteesPage({ setPage } = {}) {
           🔤 Spelling-dictees — jij leest voor, je kind schrijft
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
-          Negen voorlees-dictees van elk 10 woorden: zes gratis per spellingregel (ei/ij, au/ou, d/t,
-          bomen/bommen, verkleinwoorden, weetwoorden) en drie 💛 Familie-dictees{" "}
+          Negen voorlees-dictees van elk 10 woorden: zes per spellingregel (ei/ij, au/ou, d/t,
+          bomen/bommen, verkleinwoorden, weetwoorden) en drie over{" "}
           <strong style={{ color: "var(--color-text, #e8edf5)" }}>werkwoordspelling</strong> (stam + t, &apos;t kofschip, voltooid
           deelwoord). Jij krijgt een <strong style={{ color: "var(--color-text, #e8edf5)" }}>voorleesblad
           mét de regel</strong>, je kind een <strong style={{ color: "var(--color-text, #e8edf5)" }}>invulblad met schrijflijnen</strong>.
@@ -266,9 +266,8 @@ export default function DicteesPage({ setPage } = {}) {
             bèta-gratis (zelfde model als Leesladder 2 / Redactiebladen D-E). */}
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
           <FamiliePill />
-          <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
           <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
-            De 💛-dictees (werkwoordspelling, groep 7-8) horen straks bij het Familie-pakket.
+            De 💛-dictees gaan over werkwoordspelling (groep 7-8).
           </span>
           <FamilieAfsluiten plek="dictees" variant="link" style={{ fontSize: 12.5 }} />
         </div>

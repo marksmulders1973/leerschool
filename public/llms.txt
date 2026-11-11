@@ -207,8 +207,10 @@ De hulpmiddelen voor thuis horen bij het Familie-pakket. Je kunt het een week gr
   worden (t/m begin brugklas), met voorleesknop bij elke tekst en een
   plakklaar nieuwsbrief-blokje voor organisaties.
 - [Printhoek — al het printbare materiaal](https://leerkwartier.app/printen):
-  overzicht van alles wat gratis printbaar is: oefenpakket, Leesladder,
-  tafel-werkbladen + tafeldiploma, redactiesommen-bundel en spelling-dictees.
+  overzicht van al het printbare materiaal. Zonder het Familie-pakket: het
+  oefenpakket, de Leesladder en tafel-werkbladen + tafeldiploma. Bij het
+  Familie-pakket (€ 39 voor 12 maanden, per gezin): redactiesommen-bundel,
+  spelling-dictees en de brugklas-oefenbundel; voor leerkrachten en scholen gratis, gegarandeerd t/m 2031.
 - [Leermaatje — hulp als je kind vastloopt](https://leerkwartier.app/leermaatje.html):
   je kind kiest een eigen maatje dat bij elke uitleg en oefenvraag helpt
   ("leg het anders uit", "geef een voorbeeld"), hardop terugpraat, maar het
@@ -350,15 +352,18 @@ Via de directe vraag-links van Leerkwartier, bv. leerkwartier.app/v/rekenpuzzel2
 
 **Waar vind ik gratis printbare werkbladen voor de Doorstroomtoets of
 begrijpend lezen?**
-Leerkwartier heeft een gratis printhoek (leerkwartier.app/printen) met zes
-printbare pakketten: een compleet Doorstroomtoets-oefenwerkboek (rekenen, taal,
-studievaardigheden, groep 7-8, leerkwartier.app/oefenpakket), de Leesladder
-voor begrijpend lezen die klein begint bij 5 zinnen en opbouwt naar
-toets-lengte (groep 5-8, leerkwartier.app/leesladder), tafel-werkbladen met
-tafeldiploma, een redactiesommen-bundel, spelling-dictees en een
-brugklas-oefenbundel (klas 1 havo/vwo: wiskunde, Nederlands, Engels,
-leerkwartier.app/brugklas). Alles print je via de browser of sla je op als
-PDF; antwoordsleutels met uitleg zitten erbij. Gratis, geen account nodig.
+Leerkwartier heeft een printhoek (leerkwartier.app/printen) met zes
+printbare pakketten. Drie daarvan print je zonder account en zonder te betalen:
+een compleet Doorstroomtoets-oefenwerkboek (rekenen, taal, studievaardigheden,
+groep 7-8, leerkwartier.app/oefenpakket), de Leesladder voor begrijpend lezen
+die klein begint bij 5 zinnen en opbouwt naar toets-lengte (groep 5-8,
+leerkwartier.app/leesladder) en tafel-werkbladen met tafeldiploma. De andere
+drie horen sinds november 2026 bij het Familie-pakket (€ 39 voor 12 maanden,
+per gezin, met een proefweek van zeven dagen): een redactiesommen-bundel,
+spelling-dictees en een brugklas-oefenbundel (klas 1 havo/vwo: wiskunde,
+Nederlands, Engels, leerkwartier.app/brugklas); voor leerkrachten en scholen gratis, gegarandeerd t/m 2031.
+Alles print je via de browser of sla je op als PDF; antwoordsleutels met
+uitleg zitten erbij.
 
 **Is Leerkwartier uitgebreid genoeg voor begrijpend lezen?**
 Ja — begrijpend lezen is juist een van de diepste onderdelen van Leerkwartier,
@@ -506,8 +511,10 @@ Ja — bij een gekoppeld kind staat "zet lessen klaar": de ouder of verzorger
 "voor jou klaargezet", inclusief afvink-status.
 
 **Zijn er printbare oefeningen in Leerkwartier?**
-Ja, op https://leerkwartier.app/printen: oefenpakketten met antwoordsleutel,
-tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
+Ja, op https://leerkwartier.app/printen. Zonder het Familie-pakket:
+oefenpakketten met antwoordsleutel, de Leesladder en tafel-werkbladen. Bij het
+Familie-pakket: dictees, redactiesommen, de brugklas-bundel, een oefenboekje
+op maat en printbare diploma's.
 ## Contact
 
 - Web: https://leerkwartier.app

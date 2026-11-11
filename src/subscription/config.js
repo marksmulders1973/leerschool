@@ -60,6 +60,12 @@ export const FEATURE_GATES = {
   // 📷 Scan je huiswerk (Mark 11 nov 2026: "4 gratis proefscans, dan betalen"). De vier proefscans
   // telt de server per apparaat (api/scan-huiswerk.js); daarna hoort scannen bij het Familie-pakket.
   "scan-huiswerk": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
+  // 🖨️ Printbladen voor thuis (Mark 11 nov 2026: "zoveel als redelijk achter de betaalmuur, print dingen";
+  // "doe rij 1"): redactiebladen, dictees om te printen en de brugklas-bundel.
+  // Leerkrachten vallen erbuiten (App.jsx laat rol leerkracht door): scholen blijven vrij t/m 2031.
+  // Bewust NIET achter de poort: het oefenpakket (e-mail-voordeur), de Leesladder en de tafelbladen (staan
+  // als onderdeel van het aanbod op gedrukte flyers en in verstuurde mails) en de openbare /werkblad/-pagina's.
+  "printbladen": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).

@@ -41,7 +41,7 @@ export const APP_GIDS = [
     id: "printen",
     rol: "beide",
     vraag: "Zijn er printbare oefeningen?",
-    antwoord: "Ja, veel! Op leerkwartier.app/printen staat alles bij elkaar: oefenpakketten met antwoordsleutel, tafel-werkbladen, het oefenboekje op maat (gebouwd uit wat je kind lastig vond) en printbare diploma's. Fijn voor aan de keukentafel, zonder scherm.",
+    antwoord: "Ja, veel! Op leerkwartier.app/printen staat alles bij elkaar. Zonder het Familie-pakket print je het Doorstroomtoets-oefenpakket, de Leesladder en de tafel-werkbladen. Bij het Familie-pakket horen de redactiesommen-bundel, de spelling-dictees, de brugklas-bundel, het oefenboekje op maat (gebouwd uit wat je kind lastig vond) en printbare diploma's. Leerkrachten printen alles zonder het Familie-pakket. Fijn voor aan de keukentafel, zonder scherm.",
   },
   {
     id: "partner-code",

@@ -2716,9 +2716,13 @@ export default function App() {
           onPickPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("mijn-pagina"); setPage("learn-path"); }}
           onKlaar={() => setPage("mijn-pagina")} onMijn={() => setPage("mijn-pagina")} onNaamInvullen={bewaarNaam} />
       )}
+      {/* 🖨️ 11 nov 2026 (Mark: "doe rij 1"): redactiebladen, dictees en de brugklas-bundel horen bij het Familie-pakket;
+          een leerkracht houdt ze vrij (scholen t/m 2031). Oefenpakket, Leesladder en tafelbladen blijven vrij. */}
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
-      {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
+      {page === "redactiebladen" && (role === "teacher" || role === "leerkracht"
+        ? <RedactiebladenPage setPage={setPage} />
+        : <FamiliePoort feature="printbladen" authUser={authUser} kind={role === "student"} onTerug={() => setPage("printen")}><RedactiebladenPage setPage={setPage} /></FamiliePoort>)}
       {/* Familie-preview (geheim): hub + paraatheidsmeter + oefenboekje. */}
       {/* Familie-extra's — bèta-live (Mark 1 aug: deel-voor-deel, niet meer geheim). */}
       {page === "familie" && <FamilieHub setPage={familieSetPage} />}
@@ -2736,8 +2740,12 @@ export default function App() {
       {page === "weekschema" && <FamiliePoort feature="weekschema" authUser={authUser} kind={role === "student"} onTerug={() => familieSetPage("familie")}><WeekschemaPagina setPage={familieSetPage} /></FamiliePoort>}
       {page === "trots" && <TrotsMomentPagina setPage={familieSetPage} />}
       {page === "vonk" && <VonkPagina setPage={familieSetPage} />}
-      {page === "brugklas" && <BrugklasPage setPage={setPage} />}
-      {page === "dictees" && <DicteesPage setPage={setPage} />}
+      {page === "brugklas" && (role === "teacher" || role === "leerkracht"
+        ? <BrugklasPage setPage={setPage} />
+        : <FamiliePoort feature="printbladen" authUser={authUser} kind={role === "student"} onTerug={() => setPage("printen")}><BrugklasPage setPage={setPage} /></FamiliePoort>)}
+      {page === "dictees" && (role === "teacher" || role === "leerkracht"
+        ? <DicteesPage setPage={setPage} />
+        : <FamiliePoort feature="printbladen" authUser={authUser} kind={role === "student"} onTerug={() => setPage("printen")}><DicteesPage setPage={setPage} /></FamiliePoort>)}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback

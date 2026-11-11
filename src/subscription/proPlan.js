@@ -195,6 +195,18 @@ export const PRO_FEATURES = {
       "oefenvragen klaar. (De eerste vier bladen zijn gratis om te proberen.)",
     status: "live",
   },
+  "printbladen": {
+    id: "printbladen",
+    icon: "🖨️",
+    label: "Printbladen voor thuis",
+    laag: "familie",
+    blurb:
+      "De redactiesommen-bundel, spelling-dictees om voor te lezen en de " +
+      "brugklas-oefenbundel: kies, print en oefen aan de keukentafel, met " +
+      "antwoorden erbij. (Het oefenpakket, de Leesladder en de tafel-" +
+      "werkbladen print je zonder het Familie-pakket.)",
+    status: "live",
+  },
   // ── Gate-only ids (config.js FEATURE_GATES) — entries hier zorgen dat de
   //    LockedPreview straks de júiste laag-kleur toont (9 aug id-sync). ──
   "unlimited-paths": {
@@ -274,7 +286,7 @@ export const PRO_GRATIS_BASIS = [
   "Echte examenvragen oefenen mét uitleg",
   "Voorkennis-keten: per examenvraag zien welke basiskennis eronder ligt",
   "Echte VMBO-examens inzien én downloaden als PDF",
-  "Printbare oefenbladen mee naar huis (oefenpakket, leesladder, tafels, dictees)",
+  "Printbare oefenbladen mee naar huis (oefenpakket, leesladder en tafels)",
   "Vraag van de dag & het scorebord",
   // 2 okt 2026: scholen gratis t/m 2031 — de klas-kant hoort bij de basis.
   "Leerkrachten en scholen: alles voor de klas — oefeningen klaarzetten, onbeperkt toetsen, werkbladen, voortgang per leerling, digibord en eigen schoollogo",

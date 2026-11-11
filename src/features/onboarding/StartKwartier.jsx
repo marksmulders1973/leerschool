@@ -217,7 +217,7 @@ function ShowcaseKaart({ id, groep, onGa, onVerder }) {
           <div>
             <h3 style={S.showKop}>Liever aan tafel? Print een pakket.</h3>
             <p style={S.showTekst}>
-              Tafelbladen, dictees, redactiesommen, de Leesladder en een compleet oefenpakket. Gratis, direct printen, met antwoordblad.
+              Een compleet oefenpakket, de Leesladder en tafelbladen: direct printen, met antwoordblad. Dictees en redactiesommen horen bij het Familie-pakket.
             </p>
           </div>
         </div>

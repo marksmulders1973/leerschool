@@ -12,7 +12,6 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
-import { GratisBadge } from "../subscription/ProBadge.jsx";
 import { FamiliePill } from "../features/familie/familieUi.jsx";
 import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 import redactiePad from "../learnPaths/redactiesommen.js";
@@ -118,7 +117,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
 
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Gratis redactiesommen-bundel (printbaar) — verhaaltjessommen oefenen — " + BRAND.name;
+    document.title = "Redactiesommen-bundel (printbaar) — verhaaltjessommen oefenen — " + BRAND.name;
     const style = document.createElement("style");
     style.textContent = PRINT_CSS;
     document.head.appendChild(style);
@@ -200,7 +199,6 @@ export default function RedactiebladenPage({ setPage } = {}) {
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           📝 Redactiesommen-bundel — verhaaltjessommen op papier
-          <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Verhaaltjessommen zijn hét struikelblok bij rekenen: het rekenen lukt wel, het
@@ -221,7 +219,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
                 🔑 Samen nakijken — mét uitleg per som?
               </div>
               <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, marginBottom: 12, lineHeight: 1.55 }}>
-                De bundel print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>gratis</strong>. Vul je e-mail in en je
+                De bundel print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>direct</strong>. Vul je e-mail in en je
                 krijgt er meteen bij: <strong style={{ color: "var(--color-text, #e8edf5)" }}>de antwoordsleutel met korte uitleg per som</strong> +
                 elke week een nieuw oefenkwartiertje.
               </div>
@@ -262,14 +260,13 @@ export default function RedactiebladenPage({ setPage } = {}) {
           {!versieInfo.gratis && (
             <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
               <FamiliePill />
-              <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
-              <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Deze versie hoort straks bij het Familie-pakket.</span>
+              <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Een van de extra versies bij het Familie-pakket.</span>
               <FamilieAfsluiten plek="redactiebladen" variant="link" style={{ fontSize: 12.5 }} />
             </div>
           )}
           {versie === "C" && (
             <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)", fontSize: 13, lineHeight: 1.55, color: "var(--color-text, #e8edf5)" }}>
-              💛 <strong>Klaar met A t/m C?</strong> Versies D en E (geld, kommagetallen, tijd en verhoudingen) horen bij het Familie-pakket — <strong>nu in de bèta gratis te proberen</strong>. Versies F t/m J volgen.
+              💛 <strong>Klaar met A t/m C?</strong> Versies D en E (geld, kommagetallen, tijd en verhoudingen) liggen ook voor je klaar. Versies F t/m J volgen.
             </div>
           )}
         </div>

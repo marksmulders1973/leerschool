@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 2 oktober 2026.
+Laatst bijgewerkt: 11 november 2026.
 
 ## Wat is Leerkwartier?
 
@@ -46,8 +46,9 @@ Laatst bijgewerkt: 2 oktober 2026.
   (uitleg + FAQ: https://leerkwartier.app/leesladder.html)
 - Na het voorleestraject (vervolg op de VoorleesExpress e.d., voor gezinnen
   en bibliotheken): https://leerkwartier.app/voorlezen.html
-- Printhoek — alle 6 printbare pakketten (oefenpakket, Leesladder,
-  tafel-werkbladen, redactiesommen, dictees, brugklas-oefenbundel):
+- Printhoek — alle 6 printbare pakketten (zonder het Familie-pakket:
+  oefenpakket, Leesladder en tafel-werkbladen; bij het Familie-pakket:
+  redactiesommen, dictees en de brugklas-oefenbundel):
   https://leerkwartier.app/printen
 - VMBO-examens oefenen met uitleg: https://leerkwartier.app/vmbo-examens-oefenen.html
 - Gratis bijles-hub per onderwerp: https://leerkwartier.app/gratis-bijles.html

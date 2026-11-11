@@ -11,7 +11,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["dictee", "dictees", "dictée", "diktee", "dikte", "charley", "luisteren en schrijven", "woorden schrijven", "spellingdictee", "woordjes"] },
   { id: "werkwoorden", emoji: "🔤", label: "Werkwoordspellingtest", uitleg: "Zoals op school: zin met een gat, jij typt de goede werkwoordsvorm (t.t., v.t., voltooid deelwoord).", pad: "/werkwoorden",
     woorden: ["werkwoorden", "werkwoordspelling", "werkwoordspellingtest", "werkwoordentest", "d of t", "dt", "kofschip", "voltooid deelwoord", "verleden tijd", "tegenwoordige tijd", "vervoegen", "stam"] },
-  { id: "dictees-print", emoji: "🖨️", label: "Dictees om te printen", uitleg: "Voorleesblad voor thuis + invulblad voor het kind, per spellingregel.", pad: "/dictees",
+  { id: "dictees-print", emoji: "🖨️", label: "Dictees om te printen", uitleg: "Voorleesblad voor thuis + invulblad voor het kind, per spellingregel. Hoort bij het Familie-pakket.", pad: "/dictees",
     woorden: ["dictee printen", "dictees", "voorleesblad", "dictee thuis", "printdictee"] },
   // 3 okt 2026: "groep 3/groep 4/beginners" eruit (mengde gewone groep-3-zoekers met nieuwkomers); NT2-woorden erbij.
   { id: "nieuwkomers", emoji: "🌍", label: "Startpunt voor nieuwkomers", uitleg: "Voor kinderen die nog Nederlands leren: eerste woorden, klaszinnen, rekenen en lezen, met voorlezen en steun in zes talen.", pad: "/nieuwkomers",
@@ -73,7 +73,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["spelling", "spellen", "spellingregels", "d of t", "werkwoorden", "werkwoordspelling"] },
   { id: "woordenschat", emoji: "🔤", label: "Woordenschat", uitleg: "Moeilijke woorden leren met betekenis en zin.", pad: "/woordenschat",
     woorden: ["woordenschat", "moeilijke woorden", "betekenis", "woorden leren", "synoniemen"] },
-  { id: "brugklas", emoji: "🎒", label: "Brugklas-bundel", uitleg: "Oefenbundel voor klas 1 havo/vwo.", pad: "/brugklas",
+  { id: "brugklas", emoji: "🎒", label: "Brugklas-bundel", uitleg: "Oefenbundel voor klas 1 havo/vwo om te printen. Hoort bij het Familie-pakket.", pad: "/brugklas",
     woorden: ["brugklas", "klas 1", "middelbare school", "eerste klas", "voortgezet onderwijs"] },
   { id: "weekschema", emoji: "🗓️", label: "Weekschema voor op de koelkast", uitleg: "Een kwartier per dag, in een printbaar schema.", pad: "/weekschema",
     woorden: ["weekschema", "koelkast", "planning", "schema", "rooster", "weekplanning"] },

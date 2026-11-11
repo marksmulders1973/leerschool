@@ -70,6 +70,7 @@ const FEATURE_LABELS = {
   "klaarzetten": "Klaarzetten voor je kind",
   "dictee-school": "Dictee met de woorden van school",
   "scan-huiswerk": "Scan je huiswerk",
+  "printbladen": "Printbladen voor thuis",
 };
 
 const FEATURE_BLURBS = {

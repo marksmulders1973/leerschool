@@ -14,7 +14,6 @@ import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
-import { GratisBadge } from "../subscription/ProBadge.jsx";
 import BRUGKLAS_HOOFDSTUKKEN from "./brugklasData.js";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -80,7 +79,7 @@ export default function BrugklasPage({ setPage } = {}) {
 
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Gratis brugklas-oefenbundel (printbaar) — klas 1 havo/vwo — " + BRAND.name;
+    document.title = "Brugklas-oefenbundel (printbaar) — klas 1 havo/vwo — " + BRAND.name;
     const style = document.createElement("style");
     style.textContent = PRINT_CSS;
     document.head.appendChild(style);
@@ -138,12 +137,11 @@ export default function BrugklasPage({ setPage } = {}) {
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           🎒 Brugklas-oefenbundel — klas 1 havo/vwo
-          <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Toetsweek in de brugklas? Deze bundel bevat <strong style={{ color: "var(--color-text, #e8edf5)" }}>{totaal} oefenvragen</strong> over
           de drie vakken waar in klas 1 het vaakst een toets van komt: <strong style={{ color: "var(--color-text, #e8edf5)" }}>wiskunde,
-          Nederlands en Engels</strong>. Print 'm gratis, maak de vragen met de pen, en kijk samen na met de
+          Nederlands en Engels</strong>. Print 'm, maak de vragen met de pen, en kijk samen na met de
           antwoordsleutel — bij elk antwoord staat een korte uitleg.
         </p>
 
@@ -159,7 +157,7 @@ export default function BrugklasPage({ setPage } = {}) {
                 🔑 Samen nakijken — mét uitleg per vraag?
               </div>
               <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, marginBottom: 12, lineHeight: 1.55 }}>
-                De bundel print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>gratis</strong>. Vul je e-mail in en je
+                De bundel print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>direct</strong>. Vul je e-mail in en je
                 krijgt er meteen bij: <strong style={{ color: "var(--color-text, #e8edf5)" }}>de antwoordsleutel met korte uitleg per vraag</strong> +
                 elke week een nieuw oefenkwartiertje.
               </div>

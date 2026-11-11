@@ -42,6 +42,11 @@ const GRATIS = [
     tekst: "Kies je tafels en print werkbladen (op volgorde, door elkaar, deelsommen), een mix-blad, een 5-minuten-tempo-toets en een invulbaar tafeldiploma. Elke keer verse sommen.",
     accent: "#ffb300",
   },
+];
+
+// ── Laag 1b: printbladen die bij het Familie-pakket horen (Mark 11 nov 2026: "doe rij 1") ──
+// Leerkrachten houden ze vrij (App.jsx laat rol leerkracht door de poort).
+const PRINTBLADEN = [
   {
     page: "redactiebladen",
     emoji: "📝",
@@ -150,7 +155,7 @@ export default function PrintHubPage({ setPage } = {}) {
 
       {/* ── Laag 1: gratis ─────────────────────────────────────── */}
       <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 10px" }}>
-        <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>6 gratis printbare pakketten</h2>
+        <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>3 gratis printbare pakketten</h2>
         <GratisBadge size="sm" />
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 14 }}>
@@ -185,11 +190,24 @@ export default function PrintHubPage({ setPage } = {}) {
         <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0, alignSelf: "center" }}>→</span>
       </a>
 
-      {/* ── Laag 2: Familie ────────────────────────────────────── */}
-      <SlotKop kleur="#ffb300" titel="Op maat — met Familie" chip="Familie" />
+      {/* ── Laag 1b: printbladen bij het Familie-pakket (11 nov 2026) ── */}
+      <SlotKop kleur="#ffb300" titel="Printbladen — met het Familie-pakket" chip="Familie" />
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
-        Persoonlijk, afgestemd op jóuw kind. Deze horen bij <strong style={{ color: "#ffd54f" }}>Familie</strong> (vanaf 2027).
-        Tijdens de bèta kun je ze nu al gratis proberen.{" "}
+        Kies, print en oefen aan de keukentafel. Deze horen bij <strong style={{ color: "#ffd54f" }}>het Familie-pakket</strong>;
+        met de proefweek kun je ze zeven dagen uitproberen. Ben je leerkracht? Dan print je ze zonder het Familie-pakket.{" "}
+        <FamilieAfsluiten plek="printhub-bladen" variant="link" />
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
+        {PRINTBLADEN.map((p) => (
+          <Tegel key={p.page} p={p} slot chip="Familie" onClick={() => kies(p.page)} />
+        ))}
+      </div>
+
+      {/* ── Laag 2: Familie ────────────────────────────────────── */}
+      <SlotKop kleur="#ffb300" titel="Op maat — met het Familie-pakket" chip="Familie" />
+      <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
+        Persoonlijk, afgestemd op jóuw kind. Deze horen bij <strong style={{ color: "#ffd54f" }}>het Familie-pakket</strong>;
+        met de proefweek kun je ze zeven dagen uitproberen.{" "}
         <FamilieAfsluiten plek="printhub" variant="link" />
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
