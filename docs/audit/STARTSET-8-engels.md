@@ -1,125 +1,125 @@
 # Startset Engels · groep 8 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-11-06. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-11-15. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Good morning**?
-- ✅ Goedemorgen
 - ▫️ Welterusten
-- ▫️ Tot ziens
+- ✅ Goedemorgen
 - ▫️ Hallo
+- ▫️ Tot ziens
 
 ## 2. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 1)
 Vraag: Wat betekent **Goodbye**?
 - ▫️ Hallo
 - ▫️ Dank je
-- ▫️ Hoe gaat het?
 - ✅ Tot ziens
+- ▫️ Hoe gaat het?
 
 ## 3. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **red**?
 - ▫️ blauw
+- ▫️ geel
 - ▫️ groen
 - ✅ rood
-- ▫️ geel
 
 ## 4. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 3)
 Vraag: Wat betekent **black**?
-- ▫️ wit
-- ▫️ bruin
-- ✅ zwart
 - ▫️ blauw
+- ▫️ bruin
+- ▫️ wit
+- ✅ zwart
 
 ## 5. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 7)
 Vraag: Wat betekent **eye**?
-- ▫️ oor
 - ▫️ mond
-- ▫️ neus
 - ✅ oog
+- ▫️ neus
+- ▫️ oor
 
 ## 6. Woordenschat Engels — basis (groep 6-8) (woordenschat-engels-po, stap 7)
 Vraag: Wat betekent **finger**?
-- ▫️ arm
 - ✅ vinger
 - ▫️ voet
 - ▫️ hand
+- ▫️ arm
 
 ## 7. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **book**?
 - ▫️ bookes
-- ▫️ book
-- ✅ books
 - ▫️ booken
+- ✅ books
+- ▫️ book
 
 ## 8. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 2)
 Vraag: Wat is het meervoud van **box**?
-- ▫️ boxs
-- ▫️ box
-- ▫️ boxen
 - ✅ boxes
+- ▫️ boxs
+- ▫️ boxen
+- ▫️ box
 
 ## 9. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'I __ books.' (read)
-- ▫️ reads
 - ▫️ reading
-- ▫️ readed
 - ✅ read
+- ▫️ readed
+- ▫️ reads
 
 ## 10. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'She __ the piano.' (play)
 - ▫️ played
+- ▫️ play
 - ✅ plays
 - ▫️ playing
-- ▫️ play
 
 ## 11. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'We __ to school.' (go)
-- ▫️ gone
 - ✅ go
 - ▫️ goes
+- ▫️ gone
 - ▫️ going
 
 ## 12. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 5)
 Vraag: Vul in: 'He __ chess.' (play)
-- ▫️ play
 - ▫️ played
-- ▫️ playing
+- ▫️ play
 - ✅ plays
+- ▫️ playing
 
 ## 13. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de vraag af: *'__ you like apples?'*
+- ▫️ Are
 - ▫️ Does
 - ✅ Do
 - ▫️ Is
-- ▫️ Are
 
 ## 14. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de vraag af: *'__ she play tennis?'*
-- ▫️ Are
-- ✅ Does
 - ▫️ Do
+- ✅ Does
+- ▫️ Are
 - ▫️ Is
 
 ## 15. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Maak de ontkenning af: *'I __ like fish.'*
+- ▫️ am not
+- ▫️ isn't
 - ▫️ doesn't
 - ✅ don't
-- ▫️ isn't
-- ▫️ am not
 
 ## 16. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 6)
 Vraag: Wat betekent **Where**?
-- ✅ waar
-- ▫️ waarom
-- ▫️ wat
 - ▫️ wanneer
+- ▫️ waarom
+- ✅ waar
+- ▫️ wat
 
 ## 17. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Welke is **fout**?
-- ▫️ She plays piano.
-- ✅ She play piano.
 - ▫️ I play piano.
 - ▫️ They play piano.
+- ▫️ She plays piano.
+- ✅ She play piano.
 
 ## 18. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Vul in: '__ apple a day keeps the doctor away.'
@@ -130,14 +130,14 @@ Vraag: Vul in: '__ apple a day keeps the doctor away.'
 
 ## 19. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Wat is het meervoud van **woman**?
-- ▫️ womens
 - ✅ women
+- ▫️ womens
 - ▫️ woman
 - ▫️ womans
 
 ## 20. Basis-grammatica Engels (groep 6-8) (basis-grammatica-engels-po, stap 7)
 Vraag: Vul in: 'My brother __ tall.' (to be)
-- ▫️ are
-- ✅ is
 - ▫️ be
+- ✅ is
+- ▫️ are
 - ▫️ am

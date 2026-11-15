@@ -9,6 +9,7 @@ import { Suspense, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { Box3, Vector3 } from "three";
+import Klein3DVangnet from "./Klein3DVangnet.jsx";
 
 function SpinModel({ url }) {
   const { scene } = useGLTF(url);
@@ -29,7 +30,17 @@ function SpinModel({ url }) {
   );
 }
 
-export default function MaatjeMini3D({ url, size = 64 }) {
+// Vangnet eromheen: op een toestel zonder 3D blijft het vakje leeg in plaats van dat het
+// hele scherm omvalt (zie Klein3DVangnet).
+export default function MaatjeMini3D(props) {
+  return (
+    <Klein3DVangnet fallback={props.fallback ?? <span style={{ display: "block", width: props.size ?? 64, height: props.size ?? 64 }} />}>
+      <MiniCanvas {...props} />
+    </Klein3DVangnet>
+  );
+}
+
+function MiniCanvas({ url, size = 64 }) {
   return (
     <Canvas
       camera={{ position: [0, 0, 2.7], fov: 32 }}

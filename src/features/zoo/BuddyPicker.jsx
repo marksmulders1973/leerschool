@@ -71,7 +71,7 @@ export default function BuddyPicker({ open, onClose, geleerdeStappen = 0, curren
                 {b.model && beschikbaar ? (
                   <div style={{ width: 70, height: 70, margin: "0 auto" }}>
                     <Suspense fallback={<div style={{ fontSize: 44, lineHeight: "70px" }}>{b.emoji}</div>}>
-                      <MaatjeMini3D url={b.model} size={70} />
+                      <MaatjeMini3D url={b.model} size={70} fallback={<div style={{ fontSize: 44, lineHeight: "70px" }}>{b.emoji}</div>} />
                     </Suspense>
                   </div>
                 ) : (

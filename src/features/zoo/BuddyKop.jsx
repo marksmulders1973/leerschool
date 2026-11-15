@@ -11,6 +11,7 @@
 // Let op: het portret overlapt bewust ~30% BOVEN de opgegeven size. De parent
 // mag daar geen overflow:hidden afknippen (AITutor/PlayQuiz-headers hebben lucht).
 import { Suspense, lazy } from "react";
+import Klein3DVangnet from "./Klein3DVangnet.jsx";
 
 const CharleyHead = lazy(() => import("./CharleyHead.jsx"));
 const VonkHead = lazy(() => import("./VonkHead.jsx"));
@@ -50,6 +51,12 @@ export default function BuddyKop({ buddy, size = 84, praat = false }) {
   // path() knipt (net als circle(50%) hiervoor) een WebGL-canvas wél betrouwbaar.
   const keyhole = `M ${R - rClip} ${cy} A ${rClip} ${rClip} 0 0 0 ${R + rClip} ${cy} L ${R + rClip} 0 L ${R - rClip} 0 Z`;
 
+  const emojiKop = (
+    <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: size * 0.5, lineHeight: 1 }}>
+      {buddy?.emoji}
+    </span>
+  );
+
   return (
     <div aria-hidden="true" style={{ width: size, height: size, position: "relative", flexShrink: 0 }}>
       {/* medaillon-schijf: maatje-kleuren + gloed in de accent-kleur */}
@@ -79,15 +86,12 @@ export default function BuddyKop({ buddy, size = 84, praat = false }) {
       {Kop ? (
         <div style={{ position: "absolute", left: 0, bottom: 0, width: size, height: H, clipPath: `path("${keyhole}")` }}>
           <div style={{ position: "absolute", left: (size - kop) / 2, bottom: lift, width: kop, height: kop }}>
-            <Suspense
-              fallback={
-                <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: size * 0.5, lineHeight: 1 }}>
-                  {buddy.emoji}
-                </span>
-              }
-            >
-              <Kop size={kop} praat={praat} rim={glow} />
-            </Suspense>
+            {/* Vangnet: kan het toestel geen 3D tekenen, dan de emoji in plaats van een omgevallen scherm. */}
+            <Klein3DVangnet fallback={emojiKop}>
+              <Suspense fallback={emojiKop}>
+                <Kop size={kop} praat={praat} rim={glow} />
+              </Suspense>
+            </Klein3DVangnet>
           </div>
         </div>
       ) : (

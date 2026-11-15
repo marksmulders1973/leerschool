@@ -1,125 +1,125 @@
 # Startset Engels · groep 5 — de eerste 20 vragen
 
-Gegenereerd door src/features/learn/startsets.test.js op 2026-11-06. Bron: startsetsData.js. Aantal: 20.
+Gegenereerd door src/features/learn/startsets.test.js op 2026-11-15. Bron: startsetsData.js. Aantal: 20.
 
 ## 1. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 1)
 Vraag: Wat zeg je in het Engels als je iemand **begroet**?
 - ▫️ Bye
-- ✅ Hello
 - ▫️ Please
+- ✅ Hello
 - ▫️ No
 
 ## 2. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 1)
 Vraag: Wat betekent **Thank you**?
-- ▫️ Tot ziens
+- ▫️ Goedemorgen
 - ▫️ Alsjeblieft
 - ✅ Dank je wel
-- ▫️ Goedemorgen
+- ▫️ Tot ziens
 
 ## 3. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 1)
 Vraag: Je gaat naar huis. Wat zeg je?
-- ▫️ Hello!
-- ▫️ Yes!
 - ✅ Bye!
+- ▫️ Yes!
+- ▫️ Hello!
 - ▫️ Thank you!
 
 ## 4. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 1)
 Vraag: Hoe zeg je *'Mijn naam is Sam'* in het Engels?
-- ▫️ I am Sam is.
-- ✅ My name is Sam.
 - ▫️ Name is Sam my.
+- ✅ My name is Sam.
 - ▫️ Sam name my.
+- ▫️ I am Sam is.
 
 ## 5. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 1)
 Vraag: Wat betekent **Yes**?
-- ▫️ Nee
-- ✅ Ja
 - ▫️ Alsjeblieft
 - ▫️ Dag
+- ✅ Ja
+- ▫️ Nee
 
 ## 6. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 2)
 Vraag: Welke kleur is **blue**?
 - ▫️ groen
-- ▫️ zwart
 - ▫️ geel
 - ✅ blauw
+- ▫️ zwart
 
 ## 7. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 2)
 Vraag: Hoe zeg je **geel** in het Engels?
-- ▫️ green
 - ▫️ red
-- ✅ yellow
 - ▫️ white
+- ✅ yellow
+- ▫️ green
 
 ## 8. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 2)
 Vraag: Wat is **three**?
 - ▫️ 2
 - ✅ 3
-- ▫️ 8
 - ▫️ 10
+- ▫️ 8
 
 ## 9. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 2)
 Vraag: Tel in het Engels: one, two, three, four, **…**?
+- ▫️ ten
 - ✅ five
 - ▫️ six
 - ▫️ seven
-- ▫️ ten
 
 ## 10. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 2)
 Vraag: Wat betekent **two green frogs**?
+- ▫️ twee groene honden
 - ▫️ drie groene kikkers
 - ✅ twee groene kikkers
-- ▫️ twee groene honden
 - ▫️ twee rode kikkers
 
 ## 11. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 3)
 Vraag: Welk dier is een **dog**?
+- ▫️ vis
+- ✅ hond
 - ▫️ kat
 - ▫️ koe
-- ✅ hond
-- ▫️ vis
 
 ## 12. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 3)
 Vraag: Hoe zeg je **paard** in het Engels?
-- ▫️ house
-- ▫️ mouse
 - ▫️ pig
+- ▫️ mouse
 - ✅ horse
+- ▫️ house
 
 ## 13. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 3)
 Vraag: Welk dier zegt **mieuw**? Kies het Engelse woord.
-- ▫️ bird
-- ▫️ cow
-- ▫️ sheep
 - ✅ cat
+- ▫️ bird
+- ▫️ sheep
+- ▫️ cow
 
 ## 14. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 3)
 Vraag: Wat betekent **I have a rabbit**?
-- ▫️ Ik heb een kikker
-- ✅ Ik heb een konijn
-- ▫️ Jij hebt een konijn
 - ▫️ Ik zie een konijn
+- ✅ Ik heb een konijn
+- ▫️ Ik heb een kikker
+- ▫️ Jij hebt een konijn
 
 ## 15. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 3)
 Vraag: Welk woord hoort **niet** bij de dieren?
-- ▫️ bird
-- ✅ blue
 - ▫️ fish
 - ▫️ mouse
+- ✅ blue
+- ▫️ bird
 
 ## 16. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 4)
 Vraag: Wat is een **pencil**?
-- ▫️ boek
 - ▫️ pen
 - ✅ potlood
+- ▫️ boek
 - ▫️ tas
 
 ## 17. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 4)
 Vraag: De juf zegt: **Sit down.** Wat doe je?
-- ▫️ Je doet je boek open
-- ✅ Je gaat zitten
 - ▫️ Je gaat naar buiten
 - ▫️ Je gaat staan
+- ▫️ Je doet je boek open
+- ✅ Je gaat zitten
 
 ## 18. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 4)
 Vraag: Hoe zeg je **juf of meester** in het Engels?
@@ -130,14 +130,14 @@ Vraag: Hoe zeg je **juf of meester** in het Engels?
 
 ## 19. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 4)
 Vraag: Wat betekent **Open your book**?
-- ▫️ Doe de deur open
-- ▫️ Lees je boek
 - ▫️ Pak je tas
+- ▫️ Lees je boek
 - ✅ Doe je boek open
+- ▫️ Doe de deur open
 
 ## 20. Engels — eerste woorden en zinnetjes (groep 5) (engels-eerste-woorden-g5, stap 4)
 Vraag: Welk woord hoort bij een **raam**?
 - ▫️ table
-- ▫️ chair
 - ▫️ door
+- ▫️ chair
 - ✅ window
