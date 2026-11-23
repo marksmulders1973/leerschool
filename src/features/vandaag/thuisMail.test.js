@@ -4,7 +4,7 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 vi.mock("../../supabase.js", () => ({ default: { rpc: vi.fn() } }));
 vi.mock("../../auth.js", () => ({ ensureSession: vi.fn() }));
 
-import { thuisMailTonen } from "./ThuisMailKaart.jsx";
+import { thuisMailTonen, thuisScanLink } from "./ThuisMailKaart.jsx";
 
 function zetDagen(n) {
   const dagen = [];
@@ -40,14 +40,37 @@ describe("ThuisMailKaart — wanneer tonen", () => {
 
   it("na 'klaar' nooit meer; max 3 keer met 3 dagen ertussen", () => {
     zetDagen(4);
+    localStorage.setItem("lk_thuis_mail_v2", JSON.stringify({ klaar: true }));
+    expect(thuisMailTonen("Noor")).toBe(false);
+    localStorage.setItem("lk_thuis_mail_v2", JSON.stringify({ keer: 3, laatst: 0 }));
+    expect(thuisMailTonen("Noor")).toBe(false);
+    localStorage.setItem("lk_thuis_mail_v2", JSON.stringify({ keer: 1, laatst: Date.now() - 1000 }));
+    expect(thuisMailTonen("Noor")).toBe(false);
+    localStorage.setItem("lk_thuis_mail_v2", JSON.stringify({ keer: 1, laatst: Date.now() - 4 * 24 * 3600 * 1000 }));
+    expect(thuisMailTonen("Noor")).toBe(true);
+  });
+});
+
+describe("ThuisMailKaart — code voor thuis (idee 89, 23 nov 2026)", () => {
+  beforeEach(() => { localStorage.clear(); });
+  it("wie bij de oude kaart klaar was (adres gestuurd of 'liever niet'), krijgt de nieuwe niet", () => {
+    zetDagen(4);
     localStorage.setItem("lk_thuis_mail_v1", JSON.stringify({ klaar: true }));
     expect(thuisMailTonen("Noor")).toBe(false);
-    localStorage.setItem("lk_thuis_mail_v1", JSON.stringify({ keer: 3, laatst: 0 }));
-    expect(thuisMailTonen("Noor")).toBe(false);
-    localStorage.setItem("lk_thuis_mail_v1", JSON.stringify({ keer: 1, laatst: Date.now() - 1000 }));
-    expect(thuisMailTonen("Noor")).toBe(false);
-    localStorage.setItem("lk_thuis_mail_v1", JSON.stringify({ keer: 1, laatst: Date.now() - 4 * 24 * 3600 * 1000 }));
+  });
+  it("wie de oude kaart alleen zag, krijgt de nieuwe wel (teller begint opnieuw)", () => {
+    zetDagen(4);
+    localStorage.setItem("lk_thuis_mail_v1", JSON.stringify({ keer: 3, laatst: Date.now() }));
     expect(thuisMailTonen("Noor")).toBe(true);
+  });
+  it("de scanlink draagt code, naam en de score van vandaag", () => {
+    const u = new URL(thuisScanLink("abc.123.def", "Noor de Vries", 8, 10));
+    expect(u.origin + u.pathname).toBe("https://leerkwartier.app/thuis.html");
+    expect(u.searchParams.get("t")).toBe("abc.123.def");
+    expect(u.searchParams.get("n")).toBe("Noor de Vries");
+    expect(u.searchParams.get("g")).toBe("8");
+    expect(u.searchParams.get("v")).toBe("10");
+    expect(new URL(thuisScanLink("abc", "Noor")).searchParams.has("g")).toBe(false);
   });
 });
 

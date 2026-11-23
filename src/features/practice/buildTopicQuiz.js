@@ -31,14 +31,30 @@ function shuffle(arr) {
 // "Werk jij hard?" een tabel met "jij → werkt" die juist naar het foute antwoord wees. En op het digibord
 // viel het hele taalsetje van groep 6-7 weg, omdat elke vraag een (stap)plaatje had.
 const VERWIJST_NAAR_PLAATJE = /tabel|kaart|grafiek|plaatje|tekening|figuur|afbeelding|hieronder|hierboven|diagram|klok|getallenlijn|schema|staaf|cirkel/i;
-const STAP_MET_TEKST = /(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i;
+// 23 nov 2026 (melding 18 nov, tabellen-grafieken deel 2): "In een tabel over gelezen boeken staat:
+// Sanne … Daan …" kreeg de ijsjes-tabel van het deel erboven, want het woord "tabel" stond erin.
+// Een vraag over "een tabel / een kaart / een grafiek" draagt zijn eigen gegevens of gaat over het
+// begrip; alleen een vraag die naar "de tabel", "het plaatje", "hieronder" wijst hoort bij het plaatje.
+const EIGEN_GEGEVENS = /\b(een|elke|iedere)\s+(\S+\s+)?(tabel|kaart|grafiek|lijngrafiek|staafdiagram|cirkeldiagram|diagram|schema|tekening|figuur|klok|getallenlijn|cirkel)/i;
+const WIJST_NAAR_STAP = /hieronder|hierboven|plaatje|afbeelding|\bkijk (in|op|naar)\b|\b(de|het|deze|dit)\s+(\S+\s+)?(tabel|kaart|grafiek|lijngrafiek|staafdiagram|cirkeldiagram|tekening|figuur|diagram|klok|getallenlijn|schema|cirkel)\b/i;
+export function vraagWilStapPlaatje(q) {
+  const t = String(q || "").replace(/\*\*/g, "");
+  if (!VERWIJST_NAAR_PLAATJE.test(t)) return false;
+  if (EIGEN_GEGEVENS.test(t) && !WIJST_NAAR_STAP.test(t)) return false;
+  return true;
+}
+const STAP_MET_TEKST =/(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i;
 
 // `groep` (8 okt 2026, Mark: "zit je in groep 5, dan alleen groep-5-stof"): stappen en vragen met
 // `vanafGroep` hoger dan de groep van het kind vallen weg. Zonder groep (middelbare school, of
 // onbekend) blijft alles staan. Valt alles weg, dan toch het hele pad (liever iets dan niets).
 // `zoek` (27 okt 2026, Nu op school "Wereldoorlogen"): alleen vragen waarvan de tekst op deze regex past —
 // voor een tijdvak dat maar een deel van een stap beslaat. Levert het te weinig op, dan toch de hele stap.
-export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing", groep = null, zoek = null }) {
+// `moeilijker` (idee 90, 23 nov 2026): het kind zei twee keer "te makkelijk" → vragen uit de tweede
+// helft van de delen (daar staat de lastigste stof) en stof van één groep hoger mag mee. Zijn er
+// daar te weinig vragen, dan gewoon het hele onderdeel.
+export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing", groep: groepKind = null, zoek = null, moeilijker = false }) {
+  const groep = moeilijker && groepKind ? Math.min(8, groepKind + 1) : groepKind;
   const pad = await getLearnPath(pathId);
   if (!pad) {
     throw new Error(`buildTopicQuiz: leerpad '${pathId}' niet gevonden`);
@@ -56,7 +72,7 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
     // bij weetjes-paden (tijdvakken) zou de hele stap-uitleg mét het antwoord boven de vraag komen. Een stap
     // waarvan de vragen een lijst/tabel uit de uitleg nodig hebben, geeft die expliciet mee via `leesTekst`.
     const metTekst = !!s.leesTekst || STAP_MET_TEKST.test(String(s.explanation || ""));
-    return (s.checks || []).filter(pastBijGroep).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
+    return (s.checks || []).filter(pastBijGroep).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || vraagWilStapPlaatje(c.q)) ? s.svg : null) || null,
       // Vraag hoort bij een leestekst in de stap-uitleg (kliktest 26 sep 2026: "Wat heb je nodig om de
       // armband te maken?" stond zonder tekst op het digibord). Klassikaal slaat zulke vragen over.
       stapTekst: metTekst || undefined,
@@ -84,6 +100,12 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   if (valide.length === 0) {
     throw new Error(`buildTopicQuiz: geen geldige vragen in '${pathId}'`);
   }
+  let isMoeilijker = false;
+  if (moeilijker && !stapIndexen && !alleenEersteStappen && alle.length >= 2) {
+    const vanaf = Math.ceil(alle.length / 2);
+    const laat = valide.filter((c) => c.stapIdx >= vanaf);
+    if (laat.length >= Math.max(5, aantal || 5)) { valide = laat; isMoeilijker = true; }
+  }
   // 👀 Nieuwe vragen eerst (Mark 8 okt 2026): eerst wat dit apparaat nog nooit beantwoordde,
   // dan de langst geleden geziene. Binnen "nieuw" blijft de (geschudde) volgorde staan.
   // "Gezien" wordt pas gezet bij het beantwoorden (VandaagKwartier, start-kwartier), niet hier:
@@ -105,6 +127,7 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
     topicPathId: pathId,
     timePerQuestion: 0, // oefen-modus = geen timer-druk
     questionCount: questions.length,
+    moeilijker: isMoeilijker,
   };
   return { quiz, questions };
 }

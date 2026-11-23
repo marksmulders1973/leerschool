@@ -26,21 +26,23 @@ async function teken(tekst, secret) {
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-export async function maakProefLink(userId, { secret = process.env.WEEKPAKKET_SECRET, nu = Date.now(), dagen = PROEFLINK_DAGEN } = {}) {
+// `voorvoegsel` (23 nov 2026): dezelfde ondertekening voor een ander doel (thuis-scan, idee 89);
+// een code met het ene voorvoegsel is nooit geldig voor het andere.
+export async function maakProefLink(userId, { secret = process.env.WEEKPAKKET_SECRET, nu = Date.now(), dagen = PROEFLINK_DAGEN, voorvoegsel = VOORVOEGSEL } = {}) {
   if (!secret || !userId || !UUID.test(userId)) return null;
   const exp = Math.floor(nu / 1000) + dagen * 86400;
-  return `${userId}.${exp}.${await teken(`${VOORVOEGSEL}|${userId}|${exp}`, secret)}`;
+  return `${userId}.${exp}.${await teken(`${voorvoegsel}|${userId}|${exp}`, secret)}`;
 }
 
 // → user_id als de code klopt en niet verlopen is, anders null.
-export async function leesProefLink(token, { secret = process.env.WEEKPAKKET_SECRET, nu = Date.now() } = {}) {
+export async function leesProefLink(token, { secret = process.env.WEEKPAKKET_SECRET, nu = Date.now(), voorvoegsel = VOORVOEGSEL } = {}) {
   if (!secret || typeof token !== "string" || token.length > 120) return null;
   const delen = token.split(".");
   if (delen.length !== 3) return null;
   const [userId, expTekst, sig] = delen;
   if (!UUID.test(userId) || !/^\d{9,11}$/.test(expTekst) || !/^[0-9a-f]{32}$/.test(sig)) return null;
   if (Number(expTekst) * 1000 < nu) return null;
-  const verwacht = await teken(`${VOORVOEGSEL}|${userId}|${expTekst}`, secret);
+  const verwacht = await teken(`${voorvoegsel}|${userId}|${expTekst}`, secret);
   let diff = 0;
   for (let i = 0; i < 32; i++) diff |= verwacht.charCodeAt(i) ^ sig.charCodeAt(i);
   return diff === 0 ? userId : null;

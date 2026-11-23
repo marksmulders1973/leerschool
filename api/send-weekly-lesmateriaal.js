@@ -397,6 +397,16 @@ export default async function handler(req, res) {
       ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM });
       budget -= ouderRapport?.sent || 0;
     }
+    // 🛟 Vangnet (idee 88, 23 nov 2026): het weekrapport van vr 20 nov ging niet weg en niemand
+    // merkte het tot het dagrapport. Deze ochtendronde loopt wél elke dag op tijd: op zaterdag
+    // kijkt hij of de stempel op vrijdag (of later) staat en verstuurt het rapport anders alsnog.
+    if (weekdag === "zaterdag") {
+      const { stuurOuderRapporten } = await import("./send-ouder-rapport.js");
+      const gisteren = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+      ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM, nietAlsSinds: gisteren });
+      if (ouderRapport) ouderRapport.vangnet = true;
+      budget -= ouderRapport?.sent || 0;
+    }
     // 🧭 Kwartiercheck-vervolgreeks (Mark 28 jul): ook op maandag — week 2-4
     // van het persoonlijke oefenplan, zwakste onderwerpen eerst.
     if (weekdag === "maandag") {

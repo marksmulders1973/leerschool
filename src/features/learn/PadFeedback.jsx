@@ -16,6 +16,7 @@ import { useState } from "react";
 import { track } from "../../utils.js";
 import Uitdaging from "./Uitdaging.jsx";
 import { bouwTreden } from "./uitdagingLadder.js";
+import { meldGevoel } from "../niveau/signalen.js";
 
 // Mark 15 okt 2026: "makkelijk is niet iets waar ik iets aan heb" — makkelijk kan
 // fijn óf saai betekenen. Daarom "te makkelijk / precies goed / te moeilijk" (nieuwe
@@ -65,6 +66,8 @@ export default function PadFeedback({ pathId, stepIdx = null, plek = "deel", acc
   };
   const kiesNiveau = (k) => {
     setNiveau(k); meld({ niveau: k });
+    // Idee 90 (23 nov 2026): onthouden op dit toestel, zodat de Vandaag-knop er iets mee doet.
+    try { meldGevoel(k === "te-makkelijk" ? "te makkelijk" : k === "te-moeilijk" ? "te moeilijk" : "goed", { bron: "pad", stil: true }); } catch { /* */ }
     if (k !== "te-makkelijk" || !path) return;
     const t = bouwTreden(path, stepIdx);
     if (!t.length) return;

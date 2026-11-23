@@ -77,11 +77,30 @@ export function meldAntwoord({ pathId = null, correct, ms = null, hints = 0, wee
 }
 
 /** Het kind zelf: "te makkelijk" | "goed" | "te moeilijk" — na een kwartier of een check. */
-export function meldGevoel(gevoel, { bron = null, vak = null } = {}) {
+export function meldGevoel(gevoel, { bron = null, vak = null, stil = false } = {}) {
   const s = lees();
   s.gevoel = [...(s.gevoel || []), { t: Date.now(), gevoel, bron, vak }].slice(-30);
   schrijf(s);
+  // `stil` (23 nov 2026): alleen onthouden op dit toestel; de aanroeper meldt zelf al een event (pad_feedback).
+  if (stil) return;
   try { track("niveau_gevoel", { gevoel, bron, vak, groep: kindGroep(), kwartieren: s.kwartieren || 0 }); } catch { /* */ }
+}
+
+// 🪜 "Te makkelijk" onthouden (idee 90, 23 nov 2026). In vier weken tikten 48 apparaten 180 keer
+// "te makkelijk"; twee trouwe kinderen 25 en 23 keer. De app schreef het op en deed er niets mee.
+// Regel: twee keer "te makkelijk" in de laatste 28 dagen, zonder een "te moeilijk" erna → de
+// Vandaag-knop kiest vragen uit de latere delen van een onderdeel en van één groep hoger.
+// Eén keer "te moeilijk" zet het terug. Puur op dit toestel (lk_niveau).
+const MOEILIJKER_DAGEN = 28;
+export function wilMoeilijker(nu = Date.now(), stand = null) {
+  const lijst = (((stand || lees()).gevoel) || []).filter((x) => x && nu - x.t < MOEILIJKER_DAGEN * 86400000);
+  let makkelijk = 0;
+  for (let i = lijst.length - 1; i >= 0; i--) {
+    const g = String(lijst[i].gevoel || "");
+    if (/moeilijk/.test(g)) break;
+    if (/makkelijk/.test(g)) makkelijk++;
+  }
+  return makkelijk >= 2;
 }
 
 /** Kwartier afgerond: telt mee; elk 3e kwartier vragen we hoe het kind het vond. */

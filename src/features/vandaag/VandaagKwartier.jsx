@@ -20,7 +20,7 @@ import { kwartierStand, huidigBlok, blokKlaar, stopKwartier, startKwartierPlan }
 import TrouweGastKaart from "../account/TrouweGastKaart.jsx";
 import ThuisMailKaart from "./ThuisMailKaart.jsx";
 import DeelTrotsKnop from "../../components/DeelTrotsKnop.jsx";
-import { meldKwartierKlaar, meldGevoel } from "../niveau/signalen.js";
+import { meldKwartierKlaar, meldGevoel, wilMoeilijker } from "../niveau/signalen.js";
 
 const S = {
   wrap: { maxWidth: 560, margin: "0 auto", padding: "12px 14px 96px", color: "var(--color-text)", fontFamily: "var(--font-body)" },
@@ -42,8 +42,9 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
     const laad = blok.startset
       ? startsetVolgende(blok.startset, blok.n)
       // 🏫 Nu op school (26 okt 2026): een blokje kan op één stap van het pad wijzen (bv. het tijdvak "ridders").
-      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null, stapIndexen: blok.stapIndexen || null, zoek: blok.zoek || null })
-        .then(({ quiz, questions }) => questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title })));
+      // 🪜 Idee 90 (23 nov 2026): twee keer "te makkelijk" gezegd → vragen uit de latere delen.
+      : buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null, stapIndexen: blok.stapIndexen || null, zoek: blok.zoek || null, moeilijker: wilMoeilijker() })
+        .then(({ quiz, questions }) => questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title, moeilijker: quiz.moeilijker || undefined })));
     laad.then((vragen) => { if (!dood) setVragen(vragen); })
       .catch(() => { if (!dood) setVragen([]); });
     return () => { dood = true; };
@@ -52,6 +53,10 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
   if (!vragen.length) return <Card variant="study" padding="md"><p style={{ margin: "0 0 10px" }}>Dit onderwerp laadt nu even niet.</p><Button onClick={() => onKlaar({ goed: 0, totaal: 0, overgeslagen: true })}>Volgende blokje →</Button></Card>;
   const v = vragen[i];
   return (
+    <>
+    {v.moeilijker && i === 0 && (
+      <p style={{ fontSize: 13.5, color: "var(--color-text-muted)", margin: "0 0 8px" }}>Je vond het te makkelijk. Daarom krijg je nu <b>moeilijkere vragen</b>.</p>
+    )}
     <VraagKaart
       key={i}
       bron="vandaag"
@@ -62,7 +67,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
         score.current = { goed: score.current.goed + (goed ? 1 : 0), totaal: score.current.totaal + 1 };
         // 🎯 Meting startsets (Mark 26 okt 2026, "kunnen we meten of de nieuwe methode gebruikt wordt?"):
         // elk antwoord draagt de startset-sleutel; het antwoord dat de set van 20 volmaakt vuurt startset_klaar.
-        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed, startset: blok.startset || undefined, school: blok.school || undefined }); } catch { /* */ }
+        try { track("question_answered", { bron: "vandaag", pad: v.pathId, vraag: v.geziensleutel ? String(v.geziensleutel).split("|")[1] : undefined, is_correct: goed, startset: blok.startset || undefined, school: blok.school || undefined, moeilijker: v.moeilijker ? 1 : undefined }); } catch { /* */ }
         try { recordAnswerForPath({ playerName: userName || "Speler", pathId: v.pathId, isCorrect: goed, userId: authUser?.id || null }); } catch { /* */ }
         try { telAntwoordVoorVriend(); } catch { /* */ }
         // 👀 Beantwoord = gezien → volgende keer eerst andere vragen uit dit pad (geziendeVragen.js).
@@ -76,6 +81,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
       }}
       onVerder={() => { if (i + 1 < vragen.length) setI(i + 1); else onKlaar(score.current); }}
     />
+    </>
   );
 }
 
@@ -160,7 +166,7 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
         </div>
         {vraagGevoel && (
           <Card variant="study" padding="md">
-            <div style={{ fontWeight: 800, marginBottom: 8 }}>{gevoel ? "Dank je! Daar leert de app van." : "Hoe waren de vragen vandaag?"}</div>
+            <div style={{ fontWeight: 800, marginBottom: 8 }}>{gevoel ? (gevoel === "te makkelijk" && wilMoeilijker() ? "Dank je! De volgende keer krijg je moeilijkere vragen." : "Dank je! Daar leert de app van.") : "Hoe waren de vragen vandaag?"}</div>
             {!gevoel && (
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 {["te makkelijk", "goed", "te moeilijk"].map((g) => (
@@ -199,7 +205,7 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
           </div>
         )}
         {/* 📬 Thuis-mail ná ≥3 bezoekdagen (5 nov 2026): de ouder komt zo in beeld. */}
-        <ThuisMailKaart userName={userName} userLevel={userLevel} />
+        <ThuisMailKaart userName={userName} userLevel={userLevel} goed={totaal ? goed : null} totaal={totaal || null} />
         {startsetRest ? (
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
             <Button size="lg" onClick={nogTien}>▶ Nog {Math.min(STARTSET_PER_KEER, startsetRest.rest)} → maak je set af</Button>

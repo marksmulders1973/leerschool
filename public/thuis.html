@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Meekijken met je kind · Leerkwartier</title>
+<link rel="icon" href="/favicon.ico">
+<!--
+  Thuis-scan (idee 89, 23 nov 2026). Een kind laat na het kwartier een QR-code zien; de ouder of
+  verzorger scant die met de eigen telefoon en komt hier. Vier weken lang vroegen we het kind om
+  "het e-mailadres van thuis": 25 keer getoond, 1 keer ingevuld. Hier vult thuis het zelf in.
+  ?t = ondertekende code van het toestel van het kind (14 dagen geldig), ?n = voornaam,
+  ?g / ?v = goed / totaal van vandaag (alleen om te tonen; komt van het toestel van het kind).
+  POST /api/partner-uitnodiging { thuiscode, email } → bevestig-mail. Zonder tik in die mail
+  gebeurt er niets.
+-->
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#eef2f6;color:#1a2332;line-height:1.5}
+  .vel{max-width:480px;margin:0 auto;padding:22px 18px 40px}
+  .kop{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .kop img{height:38px;width:38px;border-radius:8px;background:#fff;object-fit:contain}
+  .kop b{font-size:19px}
+  .kaart{background:#fff;border-radius:16px;padding:20px 18px;box-shadow:0 4px 18px rgba(20,35,60,.08);margin-bottom:14px}
+  h1{font-size:23px;line-height:1.25;margin:0 0 8px}
+  p{margin:0 0 12px;font-size:16px}
+  .score{display:inline-block;background:#e7f6ec;color:#0a7d43;border:1px solid #bfe3cd;border-radius:999px;padding:4px 12px;font-weight:700;font-size:15px;margin-bottom:12px}
+  label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+  input[type=email]{width:100%;padding:13px 12px;font-size:17px;border:1.5px solid #c5cfdb;border-radius:12px;margin-bottom:10px}
+  input[type=email]:focus{outline:3px solid #bfe3cd;border-color:#0a7d43}
+  button{width:100%;padding:14px;font-size:17px;font-weight:800;color:#fff;background:#0a7d43;border:0;border-radius:12px;cursor:pointer}
+  button[disabled]{opacity:.6}
+  .klein{font-size:13.5px;color:#5d6b82;margin:10px 0 0}
+  .fout{color:#b3261e;font-size:14.5px;margin:0 0 10px;font-weight:600}
+  ul{margin:0 0 12px;padding-left:20px;font-size:15.5px}
+  li{margin-bottom:4px}
+  a.knop2{display:block;text-align:center;padding:12px;border:1.5px solid #0a7d43;color:#0a7d43;border-radius:12px;font-weight:800;text-decoration:none;font-size:16px}
+  .voet{text-align:center;font-size:13px;color:#5d6b82;margin-top:18px}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="vel">
+  <div class="kop"><img src="/logo.jpg" alt=""><b>Leerkwartier</b></div>
+
+  <div class="kaart" id="blok-vraag">
+    <h1 id="titel">Je kind oefent op Leerkwartier</h1>
+    <div class="score" id="score" hidden></div>
+    <p id="uitleg">Wil je elke vrijdag in één mailtje zien wat er geoefend is, wat al goed gaat en wat aandacht verdient?</p>
+    <form id="formulier" novalidate>
+      <label for="email">Jouw e-mailadres</label>
+      <input type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="naam@voorbeeld.nl" required>
+      <p class="fout" id="fout" hidden></p>
+      <button type="submit" id="knop">Stuur mij het weekrapport</button>
+    </form>
+    <p class="klein">Je krijgt eerst één mail om je adres te bevestigen. Tik je daar niet op, dan hoor je verder niets van ons. Afmelden kan in elke mail.</p>
+  </div>
+
+  <div class="kaart" id="blok-klaar" hidden>
+    <h1>Kijk in je mail</h1>
+    <p>We hebben een mail gestuurd naar <b id="adres"></b>. Tik daarin op <b>Ja, stuur het weekrapport</b>. Vanaf dan krijg je elke vrijdag om vier uur een kort overzicht.</p>
+    <p class="klein">Niets gekregen? Kijk bij ongewenste mail, of vul je adres hieronder nog een keer in.</p>
+    <p style="margin-top:12px"><a href="#" id="opnieuw">Ander adres invullen</a></p>
+  </div>
+
+  <div class="kaart" id="blok-verlopen" hidden>
+    <h1>Deze code werkt niet meer</h1>
+    <p>Een code is twee weken geldig. Laat je kind na het oefenen opnieuw op <b>Laat de code zien</b> tikken en scan de nieuwe code.</p>
+  </div>
+
+  <div class="kaart">
+    <p style="font-weight:700;margin-bottom:6px">Wat is Leerkwartier?</p>
+    <ul>
+      <li>Een kwartier per dag oefenen: rekenen, taal, spelling en lezen, van groep 3 tot en met 8.</li>
+      <li>Oefenen voor de Doorstroomtoets van groep 8, met uitleg bij elke fout.</li>
+      <li>Oefenen is gratis, zonder reclame.</li>
+    </ul>
+    <p style="margin-bottom:10px">Voor thuis is er het Familie-pakket: volg en help je kinderen (tot drie), één prijs per gezin. Je kunt het een week gratis proberen, zonder betaalgegevens.</p>
+    <a class="knop2" id="familie" href="/abonnement.html?van=thuis-scan#familie">Bekijk het Familie-pakket</a>
+  </div>
+
+  <p class="voet">Een kwartier per dag leren, een leven lang slimmer.<br><a href="/privacy.html" style="color:#5d6b82">Privacy</a> · <a href="mailto:hallo@leerkwartier.app" style="color:#5d6b82">hallo@leerkwartier.app</a></p>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var code = (q.get("t") || "").slice(0, 120);
+  var naam = (q.get("n") || "").replace(/[<>&"]/g, "").trim().slice(0, 30);
+  var goed = parseInt(q.get("g"), 10), totaal = parseInt(q.get("v"), 10);
+  var LK_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4cW56cnlteWpiY3B1enFrdGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzODAyNTMsImV4cCI6MjA5MDk1NjI1M30._7eQMG3QV4lqOn_M02hFjsRQ3JfH0xAn5ylNTmBKEP8";
+  function el(id) { return document.getElementById(id); }
+
+  // Zelfde eerstepartij-meting als de prijspagina (events-tabel, apparaat-id lk_uid).
+  function meet(naamEvent, props) {
+    try {
+      if (navigator.webdriver || localStorage.getItem("lk_internal") === "1") return;
+      if (q.get("ic") === "1") { localStorage.setItem("lk_internal", "1"); return; }
+      var uid = localStorage.getItem("lk_uid");
+      if (!uid) { uid = "u_" + Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem("lk_uid", uid); }
+      var ses = null; try { ses = sessionStorage.getItem("lk_s"); if (!ses) { ses = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem("lk_s", ses); } } catch (e) {}
+      var p = { uid: uid, plek: "thuis-scan", met_code: !!code };
+      for (var k in (props || {})) p[k] = props[k];
+      fetch("https://uxqnzrymyjbcpuzqktdm.supabase.co/rest/v1/events", {
+        method: "POST", keepalive: true,
+        headers: { apikey: LK_ANON, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ name: naamEvent, props: p, path: location.pathname.slice(0, 120), source: "thuis-scan", session: ses })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  if (naam) {
+    el("titel").textContent = naam + " oefent op Leerkwartier";
+    el("uitleg").textContent = "Wil je elke vrijdag in één mailtje zien wat " + naam + " oefende, wat al goed gaat en wat aandacht verdient?";
+    document.title = "Meekijken met " + naam + " · Leerkwartier";
+  }
+  if (totaal > 0 && goed >= 0 && goed <= totaal && totaal <= 60) {
+    el("score").textContent = "Vandaag: " + goed + " van de " + totaal + " vragen goed";
+    el("score").hidden = false;
+  }
+  if (!code) {
+    // Zonder code (iemand typte het adres): geen formulier dat nergens heen kan.
+    el("formulier").hidden = true;
+    el("uitleg").textContent = "Laat je kind na het oefenen op 'Laat de code zien' tikken en scan de code met je telefoon. Dan kun je hier het weekrapport aanzetten.";
+  }
+  meet("thuis_scan_open", {});
+
+  function toonFout(t) { el("fout").textContent = t; el("fout").hidden = false; }
+  el("formulier").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var adres = el("email").value.trim().toLowerCase();
+    el("fout").hidden = true;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(adres)) { toonFout("Dat e-mailadres klopt nog niet helemaal."); return; }
+    el("knop").disabled = true; el("knop").textContent = "Even bezig…";
+    fetch("/api/partner-uitnodiging", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ thuiscode: code, email: adres }) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { status: r.status, j: j }; }); })
+      .then(function (uit) {
+        el("knop").disabled = false; el("knop").textContent = "Stuur mij het weekrapport";
+        if (uit.status === 200 && uit.j && uit.j.ok) {
+          el("adres").textContent = adres;
+          el("blok-vraag").hidden = true; el("blok-klaar").hidden = false;
+          meet("thuis_scan_mail", {});
+          return;
+        }
+        var fout = (uit.j && uit.j.error) || ("http-" + uit.status);
+        meet("thuis_scan_fout", { reden: String(fout).slice(0, 40) });
+        if (fout === "code-ongeldig" || fout === "geen-koppeling") { el("blok-vraag").hidden = true; el("blok-verlopen").hidden = false; return; }
+        if (fout === "email") { toonFout("Dat e-mailadres klopt nog niet helemaal."); return; }
+        toonFout("Dat lukte nu even niet. Probeer het over een minuut nog eens.");
+      })
+      .catch(function () {
+        el("knop").disabled = false; el("knop").textContent = "Stuur mij het weekrapport";
+        meet("thuis_scan_fout", { reden: "netwerk" });
+        toonFout("Geen verbinding. Probeer het nog eens.");
+      });
+  });
+  el("opnieuw").addEventListener("click", function (e) { e.preventDefault(); el("blok-klaar").hidden = true; el("blok-vraag").hidden = false; el("email").focus(); });
+  el("familie").addEventListener("click", function () { meet("thuis_scan_familie_klik", {}); });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

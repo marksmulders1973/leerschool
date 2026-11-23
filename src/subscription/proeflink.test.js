@@ -37,3 +37,23 @@ describe("proefweek-link", () => {
     expect(await maakProefLink("geen-uuid", { secret: S, nu: NU })).toBeNull();
   });
 });
+
+// 23 nov 2026 (idee 89): dezelfde ondertekening met een eigen voorvoegsel voor de thuis-scan.
+describe("voorvoegsel houdt de soorten codes uit elkaar", () => {
+  const secret = "test-geheim-voor-voorvoegsel";
+  const uid = "11111111-2222-3333-4444-555555555555";
+  it("een thuiscode is geen proeflink en andersom", async () => {
+    const thuis = await maakProefLink(uid, { secret, voorvoegsel: "leerkwartier-thuislink", dagen: 14 });
+    const proef = await maakProefLink(uid, { secret });
+    expect(await leesProefLink(thuis, { secret, voorvoegsel: "leerkwartier-thuislink" })).toBe(uid);
+    expect(await leesProefLink(thuis, { secret })).toBe(null);
+    expect(await leesProefLink(proef, { secret, voorvoegsel: "leerkwartier-thuislink" })).toBe(null);
+    expect(await leesProefLink(proef, { secret })).toBe(uid);
+  });
+  it("een thuiscode verloopt na 14 dagen", async () => {
+    const nu = 1795430000000;
+    const thuis = await maakProefLink(uid, { secret, nu, voorvoegsel: "leerkwartier-thuislink", dagen: 14 });
+    expect(await leesProefLink(thuis, { secret, nu: nu + 13 * 86400000, voorvoegsel: "leerkwartier-thuislink" })).toBe(uid);
+    expect(await leesProefLink(thuis, { secret, nu: nu + 15 * 86400000, voorvoegsel: "leerkwartier-thuislink" })).toBe(null);
+  });
+});

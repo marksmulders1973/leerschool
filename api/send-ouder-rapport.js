@@ -17,7 +17,7 @@
 // aangeraakt (last_seen in de weekvenster), geen verzonnen week-tellingen.
 
 import { createRequire } from "module";
-import { createHash } from "node:crypto";
+import { createHash, timingSafeEqual } from "node:crypto";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 import { mailTaglineHtml, familieRegelHtml, familieRegelText, familieVoorUHtml } from "./_lib/mail-tagline.js";
 import { maakProefLink } from "./_lib/proeflink.js";
@@ -336,7 +336,9 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
 
 // ── Kern: verstuur alle rapporten. Wordt maandags aangeroepen vanuit de
 //    dagelijkse lesmateriaal-cron, of handmatig via de handler hieronder. ──
-export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = false }) {
+// `nietAlsSinds` (23 nov 2026, vangnet): datum JJJJ-MM-DD; staat de stempel op of na die dag,
+// dan is het rapport van deze week al weg en gebeurt er niets (zaterdagochtend-vangnet).
+export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = false, nietAlsSinds = null }) {
   // Dubbel-versturen afvangen (cron kan herstarten): admin_meta-datumstempel.
   const vandaagStr = new Date().toISOString().slice(0, 10);
   if (!force) {
@@ -345,6 +347,9 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       const rows = await r.json();
       if (Array.isArray(rows) && rows[0]?.value === vandaagStr) {
         return { sent: 0, kandidaten: 0, reden: "vandaag-al-verstuurd" };
+      }
+      if (nietAlsSinds && Array.isArray(rows) && String(rows[0]?.value || "") >= nietAlsSinds) {
+        return { sent: 0, kandidaten: 0, reden: "deze-week-al-verstuurd" };
       }
     } catch { /* stempel onleesbaar → gewoon doorgaan */ }
   }
@@ -455,12 +460,35 @@ export default async function handler(req, res) {
   // Fail-closed (audit 16-07): ontbreekt CRON_SECRET, dan is het endpoint DICHT
   // — voorheen viel de hele check weg en kon iedereen mass-mails triggeren.
   if (!secret) return res.status(500).json({ error: "cron_secret_missing" });
-  if (auth !== `Bearer ${secret}` && keyParam !== secret) {
-    return res.status(401).json({ error: "unauthorized" });
-  }
   const base = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // 🕓 Database-klok (idee 84, 23 nov 2026): de GitHub-planner startte drie vrijdagen op rij uren
+  // te laat (20 nov: 22:40, buiten het venster → niets verstuurd). pg_cron in de database loopt
+  // wél op tijd en roept dit eindpunt aan met een eigen sleutel in de kop `x-db-klok`. Die sleutel
+  // staat in admin_meta (alleen de servicerol kan erbij). Via deze deur gaat er alleen iets weg op
+  // vrijdag tussen 16:00 en 21:59 Amsterdamse tijd; `force` werkt hier niet.
+  let viaDbKlok = false;
+  if (auth !== `Bearer ${secret}` && keyParam !== secret) {
+    const tok = String(req.headers["x-db-klok"] || "");
+    if (tok.length >= 32 && base && key) {
+      try {
+        const r = await sb(`admin_meta?key=eq.weekrapport_klok_token&select=value`, { method: "GET" }, base, key);
+        const rows = await r.json();
+        const echt = String((Array.isArray(rows) && rows[0]?.value) || "");
+        const a = createHash("sha256").update(tok).digest();
+        const b = createHash("sha256").update(echt).digest();
+        viaDbKlok = echt.length >= 32 && timingSafeEqual(a, b);
+      } catch { viaDbKlok = false; }
+    }
+    if (!viaDbKlok) return res.status(401).json({ error: "unauthorized" });
+  }
   if (!base || !key) return res.status(500).json({ error: "supabase-config-missing" });
+  if (viaDbKlok && req.query?.droog !== "1") {
+    const nu = new Date();
+    const dag = nu.toLocaleDateString("nl-NL", { weekday: "long", timeZone: "Europe/Amsterdam" });
+    const uur = Number(nu.toLocaleTimeString("nl-NL", { hour: "2-digit", hour12: false, timeZone: "Europe/Amsterdam" }).slice(0, 2));
+    if (dag !== "vrijdag" || uur < 16 || uur > 21) return res.status(200).json({ ok: true, sent: 0, reden: "buiten-venster", dag, uur });
+  }
   const RESEND = process.env.RESEND_API_KEY;
   const FROM = process.env.EMAIL_FROM || "Leerkwartier <hallo@leerkwartier.app>";
   if (!RESEND) return res.status(200).json({ ok: true, sent: 0, reason: "resend-uit" });
@@ -473,6 +501,6 @@ export default async function handler(req, res) {
       return res.status(200).json({ droog: true, kandidaten: Array.isArray(paren) ? paren.length : null, resend: !!RESEND });
     } catch (e) { return res.status(500).json({ droog: true, fout: String(e).slice(0, 120) }); }
   }
-  const uitslag = await stuurOuderRapporten({ base, key, RESEND, FROM, force: req.query?.force === "1" });
+  const uitslag = await stuurOuderRapporten({ base, key, RESEND, FROM, force: !viaDbKlok && req.query?.force === "1" });
   return res.status(200).json({ ok: true, ...uitslag });
 }
