@@ -43,16 +43,27 @@ function apparaatId() {
 async function verkleinFoto(bestand) {
   const url = URL.createObjectURL(bestand);
   try {
-    const img = await new Promise((ok, fout) => {
-      const el = new Image();
-      el.onload = () => ok(el);
-      el.onerror = () => fout(new Error("foto-niet-leesbaar"));
-      el.src = url;
-    });
-    const schaal = Math.min(1, LANGSTE_ZIJDE / Math.max(img.naturalWidth, img.naturalHeight));
+    let img;
+    try {
+      img = await new Promise((ok, fout) => {
+        const el = new Image();
+        el.onload = () => ok(el);
+        el.onerror = () => fout(new Error("foto-niet-leesbaar"));
+        el.src = url;
+      });
+    } catch (e) {
+      // 23 nov 2026: de eerste scan van buiten (zo 22 nov) strandde hier twee keer. Tweede weg:
+      // sommige toestellen openen een foto wél via createImageBitmap (andere decoder).
+      if (typeof createImageBitmap !== "function") throw e;
+      try { img = await createImageBitmap(bestand); } catch { throw e; }
+    }
+    const breedte = img.naturalWidth || img.width;
+    const hoogte = img.naturalHeight || img.height;
+    if (!breedte || !hoogte) throw new Error("foto-niet-leesbaar");
+    const schaal = Math.min(1, LANGSTE_ZIJDE / Math.max(breedte, hoogte));
     const canvas = document.createElement("canvas");
-    canvas.width = Math.max(1, Math.round(img.naturalWidth * schaal));
-    canvas.height = Math.max(1, Math.round(img.naturalHeight * schaal));
+    canvas.width = Math.max(1, Math.round(breedte * schaal));
+    canvas.height = Math.max(1, Math.round(hoogte * schaal));
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -106,7 +117,12 @@ export default function ScanHuiswerk({ onOpenLes, onTerug, authUser = null, kind
     if (!bestand) return;
     setStand("bezig");
     let beeld;
-    try { beeld = await verkleinFoto(bestand); } catch { toonFout("foto-niet-leesbaar"); return; }
+    try { beeld = await verkleinFoto(bestand); } catch {
+      toonFout("foto-niet-leesbaar");
+      // Soort en grootte van het bestand erbij, zodat we zien wát niet opent (bv. image/heic van een iPhone).
+      try { track("scan_bestand", { type: String(bestand.type || "onbekend").slice(0, 40), kb: Math.round((bestand.size || 0) / 1024), ext: String(bestand.name || "").split(".").pop().toLowerCase().slice(0, 8) }); } catch { /* */ }
+      return;
+    }
     try {
       const resp = await fetch("/api/scan-huiswerk", {
         method: "POST",
