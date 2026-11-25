@@ -37,6 +37,7 @@ import { leesProefLink } from "./_lib/proeflink.js";
 // alles gratis en gaan betaalde maanden pas in op FAMILIE_START. Zet Mark de poort aan ("zet de poort
 // aan"), dan geldt: vroege-vogel-regel weg (12 maanden vanaf betalen) en de proefweek gaat open.
 import { PAYWALL_ACTIVE } from "../src/subscription/config.js";
+import { ACTIE, actieLoopt, familiePrijs } from "../src/subscription/actie.js";
 
 export const config = { runtime: "edge", maxDuration: 20 };
 
@@ -174,7 +175,7 @@ export function beoordeelProefweek({ poortAan = PAYWALL_ACTIVE, account, bestaan
     const loopt = bestaand.plan === "proefweek" && tot > nu;
     return loopt
       ? { status: 409, error: `Je proefweek loopt nog t/m ${new Date(tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long", timeZone: "Europe/Amsterdam" })}.`, alActief: true, valid_until: new Date(tot).toISOString() }
-      : { status: 409, error: "Je proefweek is al gebruikt. Familie kost € 39 voor 12 maanden en stopt vanzelf.", gebruikt: true };
+      : { status: 409, error: `Je proefweek is al gebruikt. Familie kost ${familiePrijs(nu)} en stopt vanzelf.`, gebruikt: true };
   }
   const valid_until = new Date(nu + PROEFWEEK_DAGEN * 86400e3).toISOString();
   return { status: 200, row: { tier: "parent_pro", plan: "proefweek", status: "active", bron: "proefweek", valid_until, trial_started_at: new Date(nu).toISOString() } };
@@ -256,9 +257,15 @@ export default async function handler(req) {
       const nlDatum = (ms) => new Date(ms).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Amsterdam" });
       const geldigStart = Math.max(Date.now(), plan === "test1" ? 0 : FAMILIE_START, bestaand?.valid_until ? Date.parse(bestaand.valid_until) : 0);
       const geldigTekst = p.dagen ? `${nlDatum(geldigStart)} t/m ${nlDatum(geldigStart + p.dagen * 86400e3 - 86400e3)}` : null;
+      const actiePrijs = (plan === "jaar" || plan === "seizoenspas") && actieLoopt();
       const session = await stripe("checkout/sessions", {
         mode: p.mode,
-        line_items: [{ price: p.price(), quantity: 1 }],
+        // 🎯 Doorstroomtoets-actie (25 nov 2026): tijdens de actie rekent het eerste jaar het actiebedrag, als
+        // losse prijs in deze ene betaling (geen nieuw prijsobject nodig). Verlengen (jaar_verleng) en de
+        // proef-euro blijven zoals ze zijn. Na de einddatum geldt vanzelf weer STRIPE_PRICE_JAAR.
+        line_items: [actiePrijs
+          ? { quantity: 1, price_data: { currency: "eur", unit_amount: ACTIE.cents, product_data: { name: `Familie-pakket Leerkwartier, 12 maanden (${ACTIE.naam})` } } }
+          : { price: p.price(), quantity: 1 }],
         success_url: `${SITE}/abonnement.html?betaald=1&plan=${plan}${geldigTekst ? `&geldig=${encodeURIComponent(geldigTekst)}` : ""}`,
         cancel_url: `${SITE}/abonnement.html?geannuleerd=1`,
         client_reference_id: userId,
@@ -282,10 +289,10 @@ export default async function handler(req) {
             : "Btw vrijgesteld op grond van de kleineondernemersregeling (KOR). ")
             + "Leerkwartier · KvK 42176244 · Lijsterbeslaan 7, 4171 AS Herwijnen · 14 dagen bedenktijd, voorwaarden: leerkwartier.app/voorwaarden.html",
         } } : undefined,
-        metadata: { userId, plan, geldig: geldigTekst || "" },
+        metadata: { userId, plan, geldig: geldigTekst || "", actie: actiePrijs ? ACTIE.naam : "" },
         subscription_data: p.mode === "subscription" ? { metadata: { userId, plan } } : undefined,
       });
-      return json({ url: session.url });
+      return json({ url: session.url, bedrag_cents: session.amount_total ?? null, plan });
     }
 
     if (action === "portal") {

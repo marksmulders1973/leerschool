@@ -11,6 +11,7 @@ import usePwaInstall from "../shared/usePwaInstall.js";
 import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 import EmailLogin from "../auth/EmailLogin.jsx";
 import { maxJaar } from "../shared/voNiveau.js";
+import { ActieOuderRegel } from "../subscription/FamilieAfsluiten.jsx";
 
 // Opgeruimd 26 okt 2026 (startpagina-vereenvoudiging, agent-inventaris): de
 // 3D-teaser, EchteCijfers, TeaserErrorBoundary, TICKER_ITEMS en de onboarding-
@@ -1015,6 +1016,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* Tegels + delen/volgen (4 okt 2026 herschikt). Voorheen één rij "Deel of volg
             ons" met 7 rondjes waarin WhatsApp en Facebook dubbel leken; nu twee
             gelabelde rijen: delen (stuurt een link door) en volgen (onze kanalen). */}
+        {/* 🎯 25 nov 2026: één regel voor de ouder tijdens de Doorstroomtoets-actie (geen prijs, geen knop). */}
+        {step === "role" && <ActieOuderRegel plek="home" />}
         {step === "role" && meerOpen && (
           <div className="lk-content-wide" style={{
             margin: "0 auto", maxWidth: 520,

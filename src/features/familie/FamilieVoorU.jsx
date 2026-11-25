@@ -12,13 +12,15 @@
 import { useEffect, useRef } from "react";
 import FamilieAfsluiten, { useFamilieStatus, familieHref } from "../../subscription/FamilieAfsluiten.jsx";
 import { track } from "../../utils.js";
+import { actieLoopt } from "../../subscription/actie.js";
 
 export const FAMILIE_VOOR_U = [
   ["U weet waar uw kind staat.", "Per onderdeel groen, oranje of rood, en elke vrijdag een weekrapport in uw mail."],
   ["Het kwartier loopt zonder gezeur.", "U zet een les klaar, uw kind ziet “Vandaag staat klaar”. Weekschema voor de koelkast om af te vinken."],
   ["U kunt het thuis uitleggen.", "Een kaart in gewone woorden, Charley legt onbeperkt uit, en het dictee met de woorden van school."],
 ];
-export const FAMILIE_VOOR_U_PRIJS = "€ 39 voor 12 maanden: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf. Eerst een week gratis proberen, zonder betaalgegevens.";
+// Tijdens de Doorstroomtoets-actie staat de prijs in de actieregel boven de knoppen (FamilieAfsluiten), niet twee keer.
+export const FAMILIE_VOOR_U_PRIJS = (actieLoopt() ? "E" : "€ 39 voor 12 maanden: e") + "én pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf. Eerst een week gratis proberen, zonder betaalgegevens.";
 
 const GOUD = "#ffd54f";
 

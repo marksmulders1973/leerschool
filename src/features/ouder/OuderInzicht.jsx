@@ -26,6 +26,7 @@ import KoppelcodesBlok from "./KoppelcodesBlok.jsx";
 import { bewaarVoorkeur, voorkeurSamenvatting } from "../vandaag/voorkeur.js";
 import { koppelingVoor } from "../../shared/koppeling.js";
 import EmailLogin from "../../auth/EmailLogin.jsx";
+import { familiePrijsZin } from "../../subscription/actie.js";
 
 // 🏠 Gezinsstart (30 sep 2026): het moment waarop het weekrapport de deur uit
 // gaat, op één plek — staat in de blokken "Weekrapport" en in de wizard.
@@ -1334,7 +1335,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
             Volg de voortgang van je kind, zie scores per vak en bereid de Doorstroomtoets voor.
-            Eén prijs per gezín, niet per kind: € 39 voor 12 maanden, en het stopt vanzelf.
+            Eén prijs per gezín, niet per kind: {familiePrijsZin()}, en het stopt vanzelf.
           </div>
           <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#ffd54f", color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Meer info & aanmelden →

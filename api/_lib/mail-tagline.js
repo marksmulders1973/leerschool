@@ -11,6 +11,7 @@
 // 6 nov 2026 (poort): de Familie-regel kent de poort — staat die aan, dan is de
 // vroege-vogel-zin weg en begint de regel met de proefweek.
 import { PAYWALL_ACTIVE } from "../../src/subscription/config.js";
+import { familiePrijsZin } from "../../src/subscription/actie.js";
 
 export const MAIL_TAGLINE_TEXT =
   "De basis van Leerkwartier — oefenen en uitleg — is gratis, gegarandeerd t/m 2031, en die belofte verlengen we telkens. leerkwartier.app";
@@ -37,7 +38,7 @@ export function familieUrl(plek) {
 
 export function familieRegelText(plek, nu = Date.now(), poortAan = PAYWALL_ACTIVE) {
   if (poortAan) {
-    return `Meer uit Leerkwartier halen? Probeer Familie een week gratis, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf. ${familieUrl(plek)}`;
+    return `Meer uit Leerkwartier halen? Probeer Familie een week gratis, zonder betaalgegevens. Daarna ${familiePrijsZin(nu)}, per gezin — geen abonnement, stopt vanzelf. ${familieUrl(plek)}`;
   }
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
   return `Meer uit Leerkwartier halen? Kies Familie: € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.${vroeg} ${familieUrl(plek)}`;
@@ -46,7 +47,7 @@ export function familieRegelText(plek, nu = Date.now(), poortAan = PAYWALL_ACTIV
 export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now(), poortAan = PAYWALL_ACTIVE } = {}) {
   if (poortAan) {
     return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
-      `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Probeer het Familie-pakket een week gratis</a>, zonder betaalgegevens. Daarna € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.` +
+      `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Probeer het Familie-pakket een week gratis</a>, zonder betaalgegevens. Daarna ${familiePrijsZin(nu)}, per gezin — geen abonnement, stopt vanzelf.` +
       `</p>`;
   }
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
@@ -65,7 +66,7 @@ export const FAMILIE_VOOR_U_MAIL = [
   ["U kunt het thuis uitleggen.", "Een kaart in gewone woorden, Charley legt onbeperkt uit, en het dictee met de woorden van school."],
 ];
 
-export function familieVoorUHtml(plek, { poortAan = PAYWALL_ACTIVE, proefToken = null } = {}) {
+export function familieVoorUHtml(plek, { poortAan = PAYWALL_ACTIVE, proefToken = null, nu = Date.now() } = {}) {
   if (!poortAan) return familieRegelHtml(plek, { poortAan });
   const punten = FAMILIE_VOOR_U_MAIL.map(([kop, tekst], i) =>
     `<tr><td style="width:26px;vertical-align:top;padding:3px 8px 3px 0;"><span style="display:inline-block;width:22px;height:22px;line-height:22px;border-radius:11px;background:#ffd54f;color:#0b1224;font-size:12px;font-weight:900;text-align:center;">${i + 1}</span></td>` +
@@ -76,7 +77,7 @@ export function familieVoorUHtml(plek, { poortAan = PAYWALL_ACTIVE, proefToken =
     `<div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:6px;">Dit betekent het Familie-pakket voor u</div>` +
     `<p style="font-size:13px;line-height:1.5;color:#a9b6c8;margin:0 0 8px;">Oefenen is en blijft gratis voor elk kind. Het Familie-pakket is er voor ú:</p>` +
     `<table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 10px;">${punten}</table>` +
-    `<p style="font-size:12.5px;line-height:1.5;color:#a9b6c8;margin:0 0 10px;">€ 39 voor 12 maanden: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf.</p>` +
+    `<p style="font-size:12.5px;line-height:1.5;color:#a9b6c8;margin:0 0 10px;">Eerst een week gratis proberen. Daarna <strong style="color:#fff;">${familiePrijsZin(nu)}</strong>: één pakket voor het hele gezin, tot 3 kinderen. Eén keer betalen, stopt vanzelf.</p>` +
     `<a href="${proefToken ? `https://leerkwartier.app/abonnement.html?van=${encodeURIComponent(plek)}&proeflink=${encodeURIComponent(proefToken)}#familie` : familieUrl(plek)}" style="display:inline-block;padding:10px 18px;border-radius:10px;background:#ffd54f;color:#0b1224;font-size:14px;font-weight:800;text-decoration:none;">${proefToken ? "Start uw gratis proefweek" : "Probeer het Familie-pakket een week gratis"}</a>` +
     `<div style="font-size:11.5px;color:#8899aa;margin-top:6px;">${proefToken ? "Eén tik op de pagina die opent, geen inloggen nodig. " : ""}Zonder betaalgegevens. Code van uw gemeente of een organisatie? Dan krijgt u het Familie-pakket gratis.</div>` +
     `</div>`;

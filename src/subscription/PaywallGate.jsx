@@ -13,6 +13,7 @@
 import { useCanUseFeature } from "./useSubscription.js";
 import { getProFeature, getLaag, LAAG_KLEUREN } from "./proPlan.js";
 import ProefweekKnop from "./ProefweekKnop.jsx";
+import { familiePrijsZin, familiePrijsKort } from "./actie.js";
 
 const styles = {
   card: {
@@ -132,7 +133,7 @@ function LockedPreview({ feature, kind, children }) {
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start" }}>
             <ProefweekKnop plek={`poort:${feature}`} />
             <a href="/abonnement.html#familie" style={{ ...styles.cta, padding: "10px 18px", fontSize: 13 }}>
-              Bekijk {laagNaam} — € 39 per jaar
+              Bekijk {laagNaam} — {familiePrijsKort()}
             </a>
           </div>
         )}
@@ -174,12 +175,12 @@ export function FamiliePoort({ feature, authUser = null, children, onTerug, kind
           ) : (
             <>
               <div style={{ ...styles.body, fontSize: 13, color: "rgba(255,255,255,0.7)", marginBottom: 12 }}>
-                Familie is € 39 voor 12 maanden, voor het hele gezin (tot 3 kinderen). Eén keer betalen, het stopt vanzelf.
+                Familie is {familiePrijsZin()}, voor het hele gezin (tot 3 kinderen). Eén keer betalen, het stopt vanzelf.
                 Oefenen zelf blijft gratis, gegarandeerd t/m 2031.
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "flex-start" }}>
                 <ProefweekKnop plek={`poort:${feature}`} />
-                <a href="/abonnement.html#familie" style={{ ...styles.cta, padding: "10px 18px", fontSize: 13 }}>Bekijk Familie — € 39 per jaar</a>
+                <a href="/abonnement.html#familie" style={{ ...styles.cta, padding: "10px 18px", fontSize: 13 }}>Bekijk Familie — {familiePrijsKort()}</a>
               </div>
             </>
           )}

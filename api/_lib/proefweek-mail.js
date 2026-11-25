@@ -9,6 +9,7 @@
 // de tabel proefweek_mails (user_id + soort). Zonder poort (PAYWALL_ACTIVE uit)
 // bestaan er geen proefweek-rijen, dus de run is dan een no-op.
 import { mailTaglineHtml, familieUrl } from "./mail-tagline.js";
+import { familiePrijs, familiePrijsZin, actieLoopt, ACTIE } from "../../src/subscription/actie.js";
 
 const SITE = "https://leerkwartier.app";
 const DAG = 86400e3;
@@ -22,7 +23,7 @@ function datumNL(iso) {
 }
 
 // Puur: bouwt onderwerp/html/text. `kinderen` = [{ naam, onderwerpen, dagen }] (mag leeg).
-export function bouwProefweekMail({ validUntil, kinderen = [] }) {
+export function bouwProefweekMail({ validUntil, kinderen = [], nu = Date.now() }) {
   const tot = datumNL(validUntil);
   const url = familieUrl("proefweek-dag6");
   const onderwerp = "Je proefweek stopt morgen — zo ging het";
@@ -44,14 +45,14 @@ export function bouwProefweekMail({ validUntil, kinderen = [] }) {
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">Hoi! Je Familie-proefweek loopt t/m <strong style="color:#fff;">${tot}</strong>. Daarna stopt hij vanzelf. Je hoeft niets te doen als je het hierbij laat: oefenen blijft gratis, gegarandeerd t/m 2031.</p>
     ${week}
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 18px;">Wil je het ouder-overzicht, het vrijdagrapport, klaarzetten en onbeperkte uitleg van Charley houden? Dan is dit het moment.</p>
-    <a href="${url}" style="display:block;text-align:center;background:#ffd54f;color:#0b1224;text-decoration:none;font-weight:800;font-size:16px;padding:14px 18px;border-radius:12px;margin:0 0 10px;">Kies Familie — € 39 voor 12 maanden</a>
-    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 22px;text-align:center;">Per gezin, tot 3 kinderen. Eén keer betalen, geen abonnement: het stopt na 12 maanden vanzelf. Niet tevreden? Binnen 14 dagen je geld terug.</p>
+    <a href="${url}" style="display:block;text-align:center;background:#ffd54f;color:#0b1224;text-decoration:none;font-weight:800;font-size:16px;padding:14px 18px;border-radius:12px;margin:0 0 10px;">Kies Familie — ${familiePrijs(nu)}</a>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 22px;text-align:center;">${actieLoopt(nu) ? `${ACTIE.naam}: t/m ${ACTIE.eindKort} ${ACTIE.prijs} in plaats van ${ACTIE.normaal}. ` : ""}Per gezin, tot 3 kinderen. Eén keer betalen, geen abonnement: het stopt na 12 maanden vanzelf. Niet tevreden? Binnen 14 dagen je geld terug.</p>
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 18px;">Krapper bij kas? Veel gemeenten en stichtingen geven een code waarmee Familie gratis is. Of mail ons: <a href="mailto:hallo@leerkwartier.app" style="color:#ffd54f;">hallo@leerkwartier.app</a>, we zoeken samen een oplossing.</p>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:8px 0 0;">Je krijgt deze ene mail omdat je op leerkwartier.app een proefweek van Familie startte. Er volgt geen tweede.</p>
   </div></body></html>`;
 
-  const text = `Je proefweek stopt morgen\n\nJe Familie-proefweek loopt t/m ${tot}. Daarna stopt hij vanzelf. Je hoeft niets te doen als je het hierbij laat: oefenen blijft gratis, gegarandeerd t/m 2031.\n\n${kindTekst ? "Deze week in Leerkwartier:\n" + kindTekst + "\n\n" : ""}Wil je het ouder-overzicht, het vrijdagrapport, klaarzetten en onbeperkte uitleg van Charley houden? Kies Familie: € 39 voor 12 maanden, per gezin, stopt vanzelf.\n${url}\n\nKrapper bij kas? Mail hallo@leerkwartier.app, we zoeken samen een oplossing.\n\n${SITE}`;
+  const text = `Je proefweek stopt morgen\n\nJe Familie-proefweek loopt t/m ${tot}. Daarna stopt hij vanzelf. Je hoeft niets te doen als je het hierbij laat: oefenen blijft gratis, gegarandeerd t/m 2031.\n\n${kindTekst ? "Deze week in Leerkwartier:\n" + kindTekst + "\n\n" : ""}Wil je het ouder-overzicht, het vrijdagrapport, klaarzetten en onbeperkte uitleg van Charley houden? Kies Familie: ${familiePrijsZin(nu)}, per gezin, stopt vanzelf.\n${url}\n\nKrapper bij kas? Mail hallo@leerkwartier.app, we zoeken samen een oplossing.\n\n${SITE}`;
   return { onderwerp, html, text };
 }
 

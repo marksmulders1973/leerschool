@@ -12,6 +12,7 @@ import { PRO_GRATIS_BASIS } from "../../subscription/proPlan.js";
 import { FamiliePill } from "./familieUi.jsx";
 import FamilieAfsluiten, { voorLancering } from "../../subscription/FamilieAfsluiten.jsx";
 import { FEATURES } from "./familieFeatures.js";
+import { familiePrijsZin } from "../../subscription/actie.js";
 export { FEATURES };
 
 // De 8 gekozen Familie-haken (Mark 31 jul). status: 'klaar' | 'bouw'.
@@ -40,7 +41,7 @@ bèta
           ) : (
             <> Probeer het eerst een week gratis, zonder betaalgegevens. Daarna kost Familie{" "}</>
           )}
-          <b>€ 39 voor 12 maanden, voor het hele gezin</b> — één keer betalen, stopt vanzelf. Oefenen zelf blijft gratis, gegarandeerd t/m 2031.
+          <b>{familiePrijsZin()}, voor het hele gezin</b> — één keer betalen, stopt vanzelf. Oefenen zelf blijft gratis, gegarandeerd t/m 2031.
         </p>
         <div style={{ marginBottom: 12 }}>
           <FamilieAfsluiten plek="familiehub" variant="knop" />

@@ -22,14 +22,21 @@ describe("isDag6", () => {
 
 describe("bouwProefweekMail", () => {
   it("noemt de einddatum, de prijs, 'stopt vanzelf' en de koop-link met .html", () => {
-    const m = bouwProefweekMail({ validUntil: "2026-11-11T10:00:00Z", kinderen: [{ naam: "Sam", onderwerpen: 5, dagen: 4 }, { naam: "Noor", onderwerpen: 0, dagen: 0 }] });
+    const m = bouwProefweekMail({ validUntil: "2027-03-11T10:00:00Z", nu: Date.parse("2027-03-10T08:00:00Z"), kinderen: [{ naam: "Sam", onderwerpen: 5, dagen: 4 }, { naam: "Noor", onderwerpen: 0, dagen: 0 }] });
     expect(m.onderwerp).toMatch(/proefweek stopt morgen/);
     expect(m.html).toContain("€ 39 voor 12 maanden");
+    expect(m.html).not.toContain("19,50"); // na de actie staat de gewone prijs er weer
     expect(m.html).toContain("stopt hij vanzelf");
     expect(m.html).toContain("abonnement.html?van=proefweek-dag6#familie");
     expect(m.html).toContain("Sam: 5 onderwerpen geoefend op 4 dagen");
     expect(m.html).not.toContain("Noor:"); // niet-actieve kinderen niet opsommen
     expect(m.text).toContain("Sam: 5 onderwerpen geoefend op 4 dagen");
+  });
+  it("tijdens de Doorstroomtoets-actie: actieprijs, gewone prijs en einddatum erbij", () => {
+    const m = bouwProefweekMail({ validUntil: "2026-12-11T10:00:00Z", nu: Date.parse("2026-12-10T08:00:00Z") });
+    expect(m.html).toContain("Kies Familie — € 19,50 voor 12 maanden");
+    expect(m.html).toContain("t/m 12 februari € 19,50 in plaats van € 39");
+    expect(m.text).toContain("€ 19,50 in plaats van € 39 voor 12 maanden");
   });
   it("zonder oefenen: vriendelijke regel, geen lege lijst", () => {
     const m = bouwProefweekMail({ validUntil: "2026-11-11T10:00:00Z", kinderen: [] });

@@ -4,6 +4,7 @@
 // De AI kiest alleen uit onze eigen, nagekeken lessen (api/scan-huiswerk.js); hij legt zelf niets uit
 // en maakt geen sommen. De foto wordt verkleind in de browser, één keer verstuurd en nergens bewaard.
 // Ontwerpregel "vraag eerst, tekst waar nodig": na de foto komt eerst de vraag "Wat wil je oefenen?".
+import { familiePrijsZin, familiePrijsKort } from "../../subscription/actie.js";
 import { useEffect, useRef, useState } from "react";
 import { track } from "../../utils.js";
 import { partnerHeader } from "../referral/partnerCode.js";
@@ -197,12 +198,12 @@ export default function ScanHuiswerk({ onOpenLes, onTerug, authUser = null, kind
             ) : (
               <>
                 <p style={{ ...klein, fontSize: 16, color: "var(--color-text, #E6EBF5)" }}>
-                  Meer bladen scannen hoort bij het Familie-pakket: € 39 voor 12 maanden, voor het hele gezin (tot 3 kinderen). Eén keer betalen, het stopt vanzelf.
+                  Meer bladen scannen hoort bij het Familie-pakket: {familiePrijsZin()}, voor het hele gezin (tot 3 kinderen). Eén keer betalen, het stopt vanzelf.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start" }}>
                   <ProefweekKnop plek="poort:scan-huiswerk" />
                   <a href="/abonnement.html#familie" onClick={() => { try { track("scan_poort_klik", { doel: "abonnement" }); } catch { /* */ } }} style={{ display: "inline-block", padding: "10px 18px", background: "linear-gradient(135deg, #ff6b35, #ff8c42)", color: "#fff", fontWeight: 700, fontSize: 14, borderRadius: 10, textDecoration: "none" }}>
-                    Bekijk het Familie-pakket — € 39 per jaar
+                    Bekijk het Familie-pakket — {familiePrijsKort()}
                   </a>
                 </div>
               </>
