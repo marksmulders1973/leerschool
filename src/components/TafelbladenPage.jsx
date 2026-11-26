@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from "react";
 import { BRAND } from "../brand.js";
 import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
+import { getStartTafel } from "../app/initialPage.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { FamiliePill } from "../features/familie/familieUi.jsx";
 import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
@@ -63,7 +64,8 @@ function shuffle(arr, rng) {
 const ALLE_TAFELS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default function TafelbladenPage({ setPage } = {}) {
-  const [gekozen, setGekozen] = useState([2, 3, 4, 5, 10]);
+  // /tafelbladen?tafel=7 (vanaf de zoekpagina "tafel van 7"): alleen die tafel staat aangevinkt.
+  const [gekozen, setGekozen] = useState(() => { const t = getStartTafel(); return t ? [t] : [2, 3, 4, 5, 10]; });
   const [metDelen, setMetDelen] = useState(true);
   const [metTempo, setMetTempo] = useState(true);
   // 💛 Familie-modi (Mark-go 28 aug 2026, versie-ladder printpakketten):

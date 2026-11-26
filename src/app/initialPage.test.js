@@ -76,3 +76,23 @@ describe("parseInitialPage — ?pad= op het oefenboekje (idee 60, 6 nov 2026)", 
     expect(parseInitialPage({ pathname: "/print/pad", search: "?werkblad=verhoudingen-po" })).toBe("home");
   });
 });
+
+describe("startkeuze vanaf de zoekpagina's (tafel, groep)", () => {
+  it("leest ?tafel=1..12 en weigert de rest", async () => {
+    const { parseStartTafel } = await import("./initialPage.js");
+    expect(parseStartTafel("?go=tafels&tafel=7")).toBe(7);
+    expect(parseStartTafel("?tafel=12")).toBe(12);
+    expect(parseStartTafel("?tafel=0")).toBeNull();
+    expect(parseStartTafel("?tafel=13")).toBeNull();
+    expect(parseStartTafel("?tafel=7a")).toBeNull();
+    expect(parseStartTafel("")).toBeNull();
+  });
+
+  it("leest ?groep=3..8 alleen bij go=kwartiercheck", async () => {
+    const { parseStartGroep } = await import("./initialPage.js");
+    expect(parseStartGroep("?go=kwartiercheck&groep=5")).toBe("5");
+    expect(parseStartGroep("?go=kwartiercheck&groep=2")).toBeNull();
+    expect(parseStartGroep("?go=kwartiercheck")).toBeNull();
+    expect(parseStartGroep("?groep=6")).toBeNull();
+  });
+});

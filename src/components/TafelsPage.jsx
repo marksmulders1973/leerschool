@@ -1,4 +1,5 @@
 import Header from "./Header.jsx";
+import { getStartTafel } from "../app/initialPage.js";
 
 export default function TafelsPage({ userName, studentProgress = [], onStart, onBack, onHome }) {
   // Bereken voortgang per tafel voor deze leerling
@@ -26,6 +27,9 @@ export default function TafelsPage({ userName, studentProgress = [], onStart, on
     return results.sort((a, b) => new Date(b.completedAt) - new Date(a.completedAt))[0].percentage;
   };
 
+  // /?go=tafels&tafel=7 (vanaf de zoekpagina "tafel van 7"): één grote startknop voor die tafel.
+  const startTafel = getStartTafel();
+
   const total = 12;
   const done  = Array.from({ length: total }, (_, i) => getTafelStatus(i + 1)).filter(s => s === "green").length;
 
@@ -33,6 +37,19 @@ export default function TafelsPage({ userName, studentProgress = [], onStart, on
     <div style={{ minHeight: "100dvh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
       <Header title="Tafels oefenen" subtitle="Groep 3 t/m 6" onBack={onBack} onHome={onHome} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 16px 32px" }}>
+
+        {startTafel && (
+          <button
+            onClick={() => onStart(startTafel)}
+            style={{
+              width: "100%", padding: "18px 0", marginBottom: 16, borderRadius: 14, cursor: "pointer",
+              background: "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)", border: "none", color: "#06211a",
+              fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700,
+            }}
+          >
+            Start de tafel van {startTafel}
+          </button>
+        )}
 
         {/* Voortgangsbalk */}
         <div style={{ marginBottom: 20, padding: "14px 16px", background: "#1a2a3a", borderRadius: 14, border: "1px solid rgba(255,255,255,0.08)" }}>

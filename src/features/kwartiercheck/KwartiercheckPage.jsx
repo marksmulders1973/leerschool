@@ -9,6 +9,7 @@ import DeelKlasAppKnop from "../../components/DeelKlasAppKnop.jsx";
 import { meldAntwoord, meldGevoel } from "../niveau/signalen.js";
 import { getVragenVoorConcept, nieuweVolgorde } from "./questions.js";
 import { track } from "../../utils.js";
+import { getStartGroep } from "../../app/initialPage.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
 
@@ -624,7 +625,8 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
 export default function KwartiercheckPage({ emailVanIntro, onHome }) {
   const [stap, setStap] = useState("intro"); // "intro" | "quiz" | "resultaat"
   const [naam, setNaam] = useState("");
-  const [groep, setGroep] = useState("8");
+  // ?go=kwartiercheck&groep=5 (vanaf de zoekpagina "toets groep 5"): die groep staat al gekozen.
+  const [groep, setGroep] = useState(() => getStartGroep() || "8");
   const [scores, setScores] = useState(null);
 
   const handleStart = (n, g) => {
@@ -665,7 +667,7 @@ export default function KwartiercheckPage({ emailVanIntro, onHome }) {
         <IntroScherm
           email={emailVanIntro || ""}
           naam=""
-          groep="8"
+          groep={groep}
           onStart={handleStart}
         />
       )}

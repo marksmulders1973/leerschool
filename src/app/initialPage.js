@@ -63,6 +63,41 @@ export function parseInitialPage({ pathname = "", search = "" } = {}) {
   return "home";
 }
 
+// ?tafel=<1-12> en ?groep=<3-8> — startkeuze vanaf de zoekpagina's "tafel van 7" en
+// "toets groep 5" (26 nov 2026). De router schrijft de URL meteen om naar het pad van de
+// pagina, dus de zoekreeks wordt hier bij het laden van de module vastgehouden.
+export function parseStartTafel(search = "") {
+  try {
+    const t = new URLSearchParams(search).get("tafel");
+    if (!t || !/^\d{1,2}$/.test(t)) return null;
+    const n = Number(t);
+    return n >= 1 && n <= 12 ? n : null;
+  } catch { return null; }
+}
+
+export function parseStartGroep(search = "") {
+  try {
+    const sp = new URLSearchParams(search);
+    if (sp.get("go") !== "kwartiercheck") return null;
+    const g = sp.get("groep");
+    return g && /^[3-8]$/.test(g) ? g : null;
+  } catch { return null; }
+}
+
+// De keuze gaat ook in sessionStorage: na een uitrol herlaadt de app zichzelf één keer op het
+// nieuwe pad (/tafels), en dan is de zoekreeks weg (26 nov 2026, gezien bij de eerste test).
+const START_SLEUTEL = "lk_start_keuze";
+const START_SEARCH = (() => {
+  if (typeof window === "undefined") return "";
+  const nu = window.location.search || "";
+  try {
+    if (parseStartTafel(nu) || parseStartGroep(nu)) { window.sessionStorage.setItem(START_SLEUTEL, nu); return nu; }
+    return window.sessionStorage.getItem(START_SLEUTEL) || "";
+  } catch { return nu; }
+})();
+export function getStartTafel() { return parseStartTafel(START_SEARCH); }
+export function getStartGroep() { return parseStartGroep(START_SEARCH); }
+
 export function getInitialPvpJoinCode() {
   if (typeof window === "undefined") return null;
   return parsePvpJoinCode(window.location.pathname);

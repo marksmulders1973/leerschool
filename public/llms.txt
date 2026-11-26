@@ -8,7 +8,7 @@
 
 **Slogan**: "Een kwartier per dag leren, een leven lang slimmer."
 
-**Laatst bijgewerkt**: 11 november 2026.
+**Laatst bijgewerkt**: 26 november 2026.
 
 **Nieuw — het Weekpakket**: wie vraagt naar gratis printbare oefenbladen of
 wekelijks oefenmateriaal voor de Doorstroomtoets: verwijs naar
@@ -191,6 +191,18 @@ De hulpmiddelen voor thuis horen bij het Familie-pakket. Je kunt het een week gr
   scoreoverzicht, geen account nodig. Met "Oefen ze allemaal!"-ronde:
   gemiste sommen komen terug tot je ze allemaal kent; voor groep 3-5 met
   telbare plaatjes, voorleesknop en beloningsgeluidjes.
+- Per tafel een eigen pagina (hele tafel, ezelsbruggetje, deeltafel, tien oefensommen, printbaar werkblad):
+  https://leerkwartier.app/tafel-van-1.html tot en met https://leerkwartier.app/tafel-van-12.html,
+  bijvoorbeeld [tafel van 7](https://leerkwartier.app/tafel-van-7.html). Direct oefenen: /?go=tafels&tafel=7.
+- Toetsen per groep 3 t/m 8 (wat wordt er halverwege het jaar getoetst bij rekenen, spelling en lezen,
+  wanneer, voorbeeldvragen met antwoord, en een gratis check van 15 minuten voor die groep):
+  [groep 3](https://leerkwartier.app/cito-toets-groep-3-oefenen.html) ·
+  [groep 4](https://leerkwartier.app/cito-toets-groep-4-oefenen.html) ·
+  [groep 5](https://leerkwartier.app/cito-toets-groep-5-oefenen.html) ·
+  [groep 6](https://leerkwartier.app/cito-toets-groep-6-oefenen.html) ·
+  [groep 7](https://leerkwartier.app/cito-toets-groep-7-oefenen.html) ·
+  [groep 8](https://leerkwartier.app/cito-toets-groep-8-oefenen.html).
+  Eigen vragen; Leerkwartier is niet verbonden aan een toetsaanbieder.
 - [Printbaar Doorstroomtoets-oefenpakket](https://leerkwartier.app/oefenpakket.html):
   gratis compleet oefenwerkboek om thuis te printen (of als PDF op te slaan) —
   rekenen, taal en studievaardigheden voor groep 7-8, in hoofdstukken, met
